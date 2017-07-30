@@ -528,6 +528,19 @@ a.pagination-item:hover {
 .theme-base-0d #sidebar-checkbox:checked ~ .sidebar-toggle {
   background-color: #6a9fb5;
 }
+.theme-base-0d .sidebar-toggle:before {
+  background-image: -webkit-linear-gradient(to bottom, #6a9fb5, #6a9fb5 20%, #fff 20%, #fff 40%, #6a9fb5 40%, #6a9fb5 60%, #fff 60%, #fff 80%, #6a9fb5 80%, #6a9fb5 100%);
+  background-image:    -moz-linear-gradient(to bottom, #6a9fb5, #6a9fb5 20%, #fff 20%, #fff 40%, #6a9fb5 40%, #6a9fb5 60%, #fff 60%, #fff 80%, #6a9fb5 80%, #6a9fb5 100%);
+  background-image:     -ms-linear-gradient(to bottom, #6a9fb5, #6a9fb5 20%, #fff 20%, #fff 40%, #6a9fb5 40%, #6a9fb5 60%, #fff 60%, #fff 80%, #6a9fb5 80%, #6a9fb5 100%);
+  background-image:         linear-gradient(to bottom, #6a9fb5, #6a9fb5 20%, #fff 20%, #fff 40%, #6a9fb5 40%, #6a9fb5 60%, #fff 60%, #fff 80%, #6a9fb5 80%, #6a9fb5 100%);
+}
+.sidebar-toggle:active:before,
+#sidebar-checkbox:checked ~ .sidebar-toggle:before {
+  background-image: -webkit-linear-gradient(to bottom, #fff, #fff 20%, #6a9fb5 20%, #6a9fb5 40%, #fff 40%, #fff 60%, #6a9fb5 60%, #6a9fb5 80%, #fff 80%, #fff 100%);
+  background-image:    -moz-linear-gradient(to bottom, #fff, #fff 20%, #6a9fb5 20%, #6a9fb5 40%, #fff 40%, #fff 60%, #6a9fb5 60%, #6a9fb5 80%, #fff 80%, #fff 100%);
+  background-image:     -ms-linear-gradient(to bottom, #fff, #fff 20%, #6a9fb5 20%, #6a9fb5 40%, #fff 40%, #fff 60%, #6a9fb5 60%, #6a9fb5 80%, #fff 80%, #fff 100%);
+  background-image:         linear-gradient(to bottom, #fff, #fff 20%, #6a9fb5 20%, #6a9fb5 40%, #fff 40%, #fff 60%, #6a9fb5 60%, #6a9fb5 80%, #fff 80%, #fff 100%);
+}
 .theme-base-0d .container a,
 .theme-base-0d .sidebar-toggle,
 .theme-base-0d .related-posts li a:hover {
