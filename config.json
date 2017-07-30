@@ -16,5 +16,8 @@
         "TwitterUser": "scott_lowe",
         "LinkedInUser": "scottslowe",
         "Description": "Offering technical posts and how-to articles from an IT pro specializing in cloud computing, networking, and virtualization, all with an open source view"
+    },
+    "blackfriday": {
+        "fractions": false
     }
 }
