@@ -1,0 +1,40 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p><img src="/public/img/orbits-thumb.gif" alt="Orbits" width="128" height="128" /></p>
+    <p>{{ .Site.Params.Description }}</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item {{ if eq .URL "/" }} active {{ end }}" href="/">Home</a>
+    <a class="sidebar-nav-item {{ if eq .URL "/post/" }} active {{ end }}" href="/post">Posts</a>
+
+    {{ $thisperma := .Permalink }}
+    {{ range .Site.Pages.ByWeight }}
+      {{ if isset .Params "sidebar" }}
+        <a class="sidebar-nav-item {{ if eq .Permalink $thisperma }} active {{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end }}
+    {{ end }}
+
+    <a class="sidebar-nav-item" href="{{ .Site.Params.Github.Url }}/archive/{{ .Site.Params.Github.Head }}.zip">Download</a>
+    <a class="sidebar-nav-item" href="{{ .Site.Params.Github.Url }}">GitHub project</a>
+    <span class="sidebar-nav-item">Currently on {{ .Site.Params.Github.Head }}</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      <a href="https://github.com/{{ .Site.Params.author.github }}"><i class="fa fa-github fa-3x"></i></a>
+      <a href="https://twitter.com/{{ .Site.Params.author.twitter }}"><i class="fa fa-twitter fa-3x"></i></a>
+      <a href="https://www.linkedin.com/in/{{ .Site.Params.author.linkedin }}"><i class="fa fa-linkedin-square fa-3x"></i></a>
+      <a href="http://feeds.scottlowe.org/slowe/content/feed/"><i class="fa fa-rss fa-3x"></i></a>
+    </p>
+  </div>
+
+  <div class="sidebar-item">
+    <p>&copy; {{ .Site.LastChange.Year }}. All rights reserved.</p>
+  </div>
+</div>
