@@ -11,18 +11,10 @@
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item {{ if eq .URL "/" }} active {{ end }}" href="/">Home</a>
-    <a class="sidebar-nav-item {{ if eq .URL "/post/" }} active {{ end }}" href="/post">Posts</a>
-
-    {{ $thisperma := .Permalink }}
-    {{ range .Site.Pages.ByWeight }}
-      {{ if isset .Params "sidebar" }}
-        <a class="sidebar-nav-item {{ if eq .Permalink $thisperma }} active {{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
-      {{ end }}
-    {{ end }}
-
-    <a class="sidebar-nav-item" href="{{ .Site.Params.Github.Url }}/archive/{{ .Site.Params.Github.Head }}.zip">Download</a>
-    <a class="sidebar-nav-item" href="{{ .Site.Params.Github.Url }}">GitHub project</a>
-    <span class="sidebar-nav-item">Currently on {{ .Site.Params.Github.Head }}</span>
+    <a class="sidebar-nav-item" href="/about/">About</a>
+    <a class="sidebar-nav-item {{ if eq .URL "/post/" }} active {{ end }}" href="/post">Site Archives</a>
+    <a class="sidebar-nav-item" href="/categories/">Post Categories</a>
+    <a class="sidebar-nav-item" href="/tags/">Content Tags</a>
   </nav>
 
   <div class="sidebar-item">
