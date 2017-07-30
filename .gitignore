@@ -11,5 +11,5 @@
 .AppleDB
 .AppleDesktop
 *~
-public
-public/*
+output
+output/*
