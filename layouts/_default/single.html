@@ -1,0 +1,34 @@
+{{ partial "default_head.html" . }}
+
+<div class="post">
+  <h1 class="post-title">{{ .Title }}</h1>
+  <span class="post-date">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }} &middot; Filed in <a href="/categories/{{ .Params.Categories | lower }}">{{ .Params.Categories }}</a></span>
+  {{ .Content }}
+
+  <h3>Metadata and Navigation</h3>
+  <span class="post-meta">
+  {{ range .Params.tags }}<i class="fa fa-tag" aria-hidden="true"></i>&#160;<a href="/tags/{{ . | lower }}">{{ . }}</a> {{ end }}
+
+  {{ with .PrevInSection }}
+  <br />
+  <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous Post: <a href="{{ .Permalink }}">{{ .Title }}</a>
+  {{ end }}
+  
+  {{ with .NextInSection }}
+  <br />
+   <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Next Post: <a href="{{ .Permalink }}">{{ .Title }}</a>
+  {{ end }}
+  </span>
+</div>
+
+<div class="related">
+  <h3>Related Posts</h3>
+  <ul class="related-posts">
+    {{ range first 3 ( where ( where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags ) "Permalink" "!=" .Permalink ) }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+
+
+{{ partial "default_foot.html" . }}
