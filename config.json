@@ -15,7 +15,8 @@
         "GitHubUser": "lowescott",
         "TwitterUser": "scott_lowe",
         "LinkedInUser": "scottslowe",
-        "Description": "Offering technical posts and how-to articles from an IT pro specializing in cloud computing, networking, and virtualization, all with an open source view"
+        "Description": "Offering technical posts and how-to articles from an IT pro specializing in cloud computing, networking, and virtualization, all with an open source view",
+        "DateForm": "2 Jan 2006"
     },
     "blackfriday": {
         "fractions": false
