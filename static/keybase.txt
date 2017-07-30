@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/scottslowe
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.scottlowe.org
+  * I am scottslowe (https://keybase.io/scottslowe) on keybase.
+  * I have a public key with fingerprint CBDD 65F2 AE16 39E4 90F8  AF9D 7DC8 E023 D0E9 42DC
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01019f97075f294ab580bdb51a08560642ba5db3ac65181c50f234a9bedb14f29b380a",
+            "fingerprint": "cbdd65f2ae1639e490f8af9d7dc8e023d0e942dc",
+            "host": "keybase.io",
+            "key_id": "7dc8e023d0e942dc",
+            "kid": "01019f97075f294ab580bdb51a08560642ba5db3ac65181c50f234a9bedb14f29b380a",
+            "uid": "93f6adb16696c24c64b4caf81ec4f919",
+            "username": "scottslowe"
+        },
+        "service": {
+            "hostname": "blog.scottlowe.org",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1455332033,
+    "expire_in": 157680000,
+    "prev": "45f9d211a75a2abd9f3e5b9b3496f239fe4a595d546fde68b0f564d31bcee107",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.51
+Comment: https://keybase.io/crypto
+
+yMIrAnicrVJbbA1BGD69uFXc74lLLRHSavYyM2fniISQeGpF3YpyMrMze86mp7un
+u9tTJcSlLhGpqJIg1BPSRoJ6IOJwxAOKCBG3iJemQRFKtXGfbXjzaF4m8//f9/3/
+92VuDMkJ5WU1Ni340pEZtyWrLdNUHVqRPpLZKFGH1UqRjVIF77t4gnHPj1ZYTIpI
+siIr2MRhOQxNFQNCoS5TRqFCZB0iGQGVEsioRgwEFV0xoGyqGiCYckYVIChU02Ui
+FUqmZce4m3Qt2xeyBmUMCUXCFaRhDrBs6sTELMwMncuqxmSOgcoMQYw7XsAQy1Hi
+8SLLETXxiPat9w/8f967uk8OayYiooMQRoYKDAQoMIipK9wAJlZwAPS4a5NKLtCe
+4fi+l3BquLSpUBL1lGXwINrAyx8MTTixoj5ggCty3JjQSLqO7xhOQvTjvp/0IgHf
+r00GhBpOo3+kotSymchTMFLc9SzHliKKQBq+FWgrAEJNU2VNK5T4+qTl8qgVIGAY
+6bI4wRyeEpIAishVRSFhSFRCGTY1DqmwDjAScWCTAwIxZBAgk3GkU9mECDBNoQbn
+ihyWAnNVtiNFxCSfxALrVswmfrUrnF+/Vp4bysoL9e+XHfyzUN6g4X9/X33ngF98
+wqju6bQ3f1Pp0P4Fnx42vFhemz2xy5syO/fj9cpoYmHr4Nz4qarmNYfKDmbSKe6f
+2zv/ytTHx1bMLWm417V0m92ojb59srb0dPjenPbtlx9duNt17kedfbZyzOcX7adK
+W3rqsitLxqQfjG9dS6e/mVd2dl/npBm3yn+u3B0tS/eszoz9GlXRmw7tg1/8fnfd
+iZFbR9AUuJrz4cnI82jdqqHD4vXf302uGHL84q4fzTtn5ieaNs/rvL/vaOPRHb3l
+W3Y93fPqzpJvr9/ud9/VvNp/sa20+3B87pkDi3sWSvWLns++uTx852WxlW77Nr/u
++8CPLS/bkleXDbwkP2vls55dm9Z7F28o+A2NJlAv
+=wwAf
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/scottslowe
+
+==================================================================
