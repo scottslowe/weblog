@@ -1,0 +1,15 @@
+{{ partial "default_head.html" . }}
+
+<div class="post">
+  <h1 class="post-title">{{ .Title }}</h1>
+  {{ range (where .Site.Pages "Section" "post").GroupByDate "2006" }}
+  <h2>{{ .Key }}</h2>
+    <ul id="list">
+      {{ range .Pages }}
+        {{ .Render "li" }}
+      {{ end }}
+    </ul>
+  {{ end }}
+</div>
+
+{{ partial "default_foot.html" . }}
