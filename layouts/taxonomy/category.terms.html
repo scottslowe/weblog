@@ -1,0 +1,12 @@
+{{ partial "default_head.html" . }}
+
+<div class="post">
+  <h1 class="post-title">Post Categories</h1>
+  <ul id="list">
+      {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+      <li><a href="/categories/{{ $name | urlize }}">{{ $name | title }}</a></li>
+      {{ end }}
+  </ul>
+</div>
+
+{{ partial "default_foot.html" . }}

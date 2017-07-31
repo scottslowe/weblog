@@ -1,7 +1,8 @@
 {{ partial "default_head.html" . }}
 
 <div class="post">
-  <h1 class="post-title">All Posts Tagged &ldquo;{{ .Title }}&rdquo;</h1>
+  <h1 class="post-title">All Posts With Tag &ldquo;{{ .Title }}&rdquo;</h1>
+  <span class="post-date"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back to <a href="/tags/">Content Tags</a></span>
   <ul id="list">
     {{ range .Data.Pages }}
       {{ .Render "li" }}

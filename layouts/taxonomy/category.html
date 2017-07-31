@@ -2,6 +2,7 @@
 
 <div class="post">
   <h1 class="post-title">All Posts in Category &ldquo;{{ .Title }}&rdquo;</h1>
+  <span class="post-date"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back to <a href="/categories/">Post Categories</a></span>
   <ul id="list">
     {{ range .Data.Pages }}
       {{ .Render "li" }}
