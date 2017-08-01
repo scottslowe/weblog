@@ -144,4 +144,4 @@ If you'd like to give this a try in your own OpenStack environment, feel free to
 [link-6]: http://www.vagrantup.com/
 [link-7]: http://www.ansible.com/
 [link-8]: https://www.docker.com/products/docker-machine
-[xref-1]: {% post_url 2015-11-25-intro-to-terraform %}
+[xref-1]: {{< relref "2015-11-25-intro-to-terraform.md" >}}

@@ -110,5 +110,5 @@ That's enough for this time around. See you next time around! Until then, feel f
 [link-29]: http://blog.senasosa.com/2015/12/nsx-manager-backup-and-restore.html
 [link-30]: http://planetvm.net/blog/?p=2952
 [link-31]: https://twitter.com/scott_lowe
-[xref-1]: {% post_url 2016-01-08-full-stack-journey-ep001 %}
-[xref-2]: {% post_url 2015-05-06-quick-intro-lxd %}
+[xref-1]: {{< relref "2016-01-08-full-stack-journey-ep001.md" >}}
+[xref-2]: {{< relref "2015-05-06-quick-intro-lxd.md" >}}

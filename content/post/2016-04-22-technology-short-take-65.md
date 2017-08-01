@@ -115,4 +115,4 @@ It's time to wrap up now, or I'll never get this thing published. Happy Friday e
 [link-30]: http://frankdenneman.nl/2016/04/21/managing-your-virtual-datacenter-and-home-lab-with-a-mac/
 [link-31]: http://www.boche.net/blog/index.php/2016/04/04/vcenter-server-6-appliance-fsck-failed/
 [link-32]: http://www.lucd.info/2016/04/22/closer-look-get-esxcli-v2/
-[xref-1]: {% post_url 2016-03-17-on-topic-of-lock-in %}
+[xref-1]: {{< relref "2016-03-17-on-topic-of-lock-in.md" >}}

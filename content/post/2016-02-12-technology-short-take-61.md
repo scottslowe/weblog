@@ -116,4 +116,4 @@ Despite the fact that I'm trying to publish these Short Takes more frequently, I
 [link-36]: https://blog.architecting.it/2016/01/12/has-s3-become-the-de-facto-api-standard/
 [link-37]: https://blog.architecting.it/2016/02/02/is-it-time-for-vmware-to-open-source-the-esx-hypervisor/
 
-[xref-1]: {% post_url 2016-02-03-full-stack-journey-ep002 %}
+[xref-1]: {{< relref "2016-02-03-full-stack-journey-ep002.md" >}}

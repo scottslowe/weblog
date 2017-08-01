@@ -37,9 +37,9 @@ Anyway, there you have it. Feel free to [contact me on Twitter][link-5] if you h
 [link-3]: https://github.com/lowescott
 [link-4]: http://vsensei.expert/index.html
 [link-5]: https://twitter.com/scott_lowe
-[xref-1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[xref-2]: {% post_url 2013-02-07-looking-ahead-my-2013-projects %}
-[xref-3]: {% post_url 2015-01-16-looking-ahead-2015-projects %}
-[xref-4]: {% post_url 2015-12-31-looking-back-2015-project-report-card %}
-[xref-5]: {% post_url 2015-12-28-next-gen-network-engineering-skills %}
-[xref-6]: {% post_url 2016-01-07-launching-new-podcast %}
+[xref-1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[xref-2]: {{< relref "2013-02-07-looking-ahead-my-2013-projects.md" >}}
+[xref-3]: {{< relref "2015-01-16-looking-ahead-2015-projects.md" >}}
+[xref-4]: {{< relref "2015-12-31-looking-back-2015-project-report-card.md" >}}
+[xref-5]: {{< relref "2015-12-28-next-gen-network-engineering-skills.md" >}}
+[xref-6]: {{< relref "2016-01-07-launching-new-podcast.md" >}}

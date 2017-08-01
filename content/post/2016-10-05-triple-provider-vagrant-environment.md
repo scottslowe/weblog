@@ -145,6 +145,6 @@ If you'd like to play around with a sample environment, have a look in the `mult
 [link-3]: https://www.virtualbox.org/
 [link-4]: https://aws.amazon.com/
 [link-5]: http://www.vmware.com/products/fusion.html
-[xref-1]: {% post_url 2016-09-15-using-vagrant-with-aws %}
-[xref-2]: {% post_url 2016-01-14-improved-way-yaml-vagrant %}
-[xref-3]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
+[xref-1]: {{< relref "2016-09-15-using-vagrant-with-aws.md" >}}
+[xref-2]: {{< relref "2016-01-14-improved-way-yaml-vagrant.md" >}}
+[xref-3]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}

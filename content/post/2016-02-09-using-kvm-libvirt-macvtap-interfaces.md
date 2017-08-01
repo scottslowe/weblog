@@ -80,6 +80,6 @@ If you're interested in playing with this but don't want to spend a bunch of tim
 [link-8]: https://www.debian.org/
 [link-9]: http://www.ubuntu.com/
 [link-10]: https://www.centos.org/
-[xref-1]: {% post_url 2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu %}
-[xref-2]: {% post_url 2012-08-21-working-with-kvm-guests %}
-[xref-3]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
+[xref-1]: {{< relref "2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu.md" >}}
+[xref-2]: {{< relref "2012-08-21-working-with-kvm-guests.md" >}}
+[xref-3]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}

@@ -113,4 +113,4 @@ I hope the rest of your 2016 is pleasant, uneventful, and enjoyable! Happy New Y
 [link-26]: http://billho.website/?p=801
 [link-27]: http://noshut.ru/2016/12/brvirt-when-brctl-meets-virsh/
 [link-28]: https://github.com/hellt/brvirt
-[xref-1]: {% post_url 2007-02-16-terminal-services-client %}
+[xref-1]: {{< relref "2007-02-16-terminal-services-client.md" >}}

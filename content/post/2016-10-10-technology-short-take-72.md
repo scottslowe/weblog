@@ -127,7 +127,7 @@ That's it for TST #72; thanks for reading! I hope you found something useful (or
 [link-31]: https://linuxcontainers.org/lxd/news/
 [link-32]: https://www.linkedin.com/pulse/self-service-demand-network-infrastructure-jason-edelman
 [link-33]: https://skyportblog.com/2016/10/04/vmwares-goldilocks-security-lost-in-the-woods/
-[xref-1]: {% post_url 2015-02-06-quick-intro-to-consul %}
-[xref-2]: {% post_url 2015-11-25-intro-to-terraform %}
-[xref-3]: {% post_url 2016-08-12-technology-short-take-70 %}
-[xref-4]: {% post_url 2015-11-11-handy-cli-tool-json %}
+[xref-1]: {{< relref "2015-02-06-quick-intro-to-consul.md" >}}
+[xref-2]: {{< relref "2015-11-25-intro-to-terraform.md" >}}
+[xref-3]: {{< relref "2016-08-12-technology-short-take-70.md" >}}
+[xref-4]: {{< relref "2015-11-11-handy-cli-tool-json.md" >}}

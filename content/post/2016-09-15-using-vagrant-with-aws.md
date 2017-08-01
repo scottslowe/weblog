@@ -110,9 +110,9 @@ Additionally, see the documentation for [the `vagrant-aws` plugin on GitHub][lin
 [link-7]: https://github.com/mitchellh/vagrant-aws
 [link-8]: https://aws.amazon.com/cloudformation/
 [link-9]: https://www.terraform.io/
-[xref-1]: {% post_url 2015-09-28-using-vagrant-with-openstack %}
-[xref-2]: {% post_url 2015-09-24-using-docker-machine-with-openstack %}
-[xref-3]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
-[xref-4]: {% post_url 2015-11-25-intro-to-terraform %}
-[xref-5]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
-[xref-6]: {% post_url 2016-01-14-improved-way-yaml-vagrant %}
+[xref-1]: {{< relref "2015-09-28-using-vagrant-with-openstack.md" >}}
+[xref-2]: {{< relref "2015-09-24-using-docker-machine-with-openstack.md" >}}
+[xref-3]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
+[xref-4]: {{< relref "2015-11-25-intro-to-terraform.md" >}}
+[xref-5]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}
+[xref-6]: {{< relref "2016-01-14-improved-way-yaml-vagrant.md" >}}

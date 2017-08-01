@@ -37,4 +37,4 @@ Once you add this directive to your Git configuration, then the next time you ne
 [link-2]: https://wiki.gnome.org/action/show/Projects/GnomeKeyring
 [link-3]: https://wiki.gnome.org/Apps/Seahorse
 [link-4]: https://www.getfedora.com/
-[xref-1]: {% post_url 2016-11-21-gnome-keyring-git-credential-helper %}
+[xref-1]: {{< relref "2016-11-21-gnome-keyring-git-credential-helper.md" >}}

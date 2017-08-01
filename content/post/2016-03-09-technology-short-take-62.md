@@ -120,4 +120,4 @@ That's a wrap, folks! I fear if I include anything more I might cause some heads
 [link-33]: http://martinfowler.com/bliki/InfrastructureAsCode.html
 [link-34]: http://www.git-tower.com/p/mac-dev-survey
 [link-35]: http://www.git-tower.com/
-[xref-1]: {% post_url 2014-10-08-technology-short-take-45 %}
+[xref-1]: {{< relref "2014-10-08-technology-short-take-45.md" >}}

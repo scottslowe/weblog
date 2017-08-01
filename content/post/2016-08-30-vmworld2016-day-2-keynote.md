@@ -58,4 +58,4 @@ Li shares that VSAN will be the default storage platform for VIC and Photon Plat
 [link-1]: https://github.com/vmware/photon-controller
 [link-2]: https://github.com/vmware/vic
 [link-3]: https://github.com/vmware/harbor
-[xref-1]: {% post_url 2016-08-29-vmworld2016-day-1-keynote %}
+[xref-1]: {{< relref "2016-08-29-vmworld2016-day-1-keynote.md" >}}

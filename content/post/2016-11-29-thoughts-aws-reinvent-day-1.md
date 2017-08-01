@@ -29,6 +29,6 @@ That's it from day 1 here at re:Invent. I'll have more liveblogging tomorrow, so
 
 
 [link-1]: http://blog.scottlowe.org/tags/#reInvent2016
-[xref-1]: {% post_url 2016-11-29-scaling-first-10mil-users %}
-[xref-2]: {% post_url 2016-11-29-hybrid-bridging-gap-to-cloud %}
-[xref-3]: {% post_url 2016-11-29-getting-bang-buck-ec2 %}
+[xref-1]: {{< relref "2016-11-29-scaling-first-10mil-users.md" >}}
+[xref-2]: {{< relref "2016-11-29-hybrid-bridging-gap-to-cloud.md" >}}
+[xref-3]: {{< relref "2016-11-29-getting-bang-buck-ec2.md" >}}

@@ -86,4 +86,4 @@ _The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change_ v
 [link-22]: http://classcblock.com/
 [link-23]: https://soundcloud.com/fullstackjourney
 [link-24]: https://itunes.apple.com/us/podcast/full-stack-journey/id1073172158?mt=2
-[xref-1]: {% post_url 2015-12-28-next-gen-network-engineering-skills %}
+[xref-1]: {{< relref "2015-12-28-next-gen-network-engineering-skills.md" >}}

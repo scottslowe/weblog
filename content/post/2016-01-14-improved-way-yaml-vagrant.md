@@ -84,4 +84,4 @@ With this approach, you're now able to use global Vagrant commands from any dire
 
 [link-1]: http://www.vagrantup.com/
 [link-2]: https://github.com/lowescott/learning-tools
-[xref-1]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
+[xref-1]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}
