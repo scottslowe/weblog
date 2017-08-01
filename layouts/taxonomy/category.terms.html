@@ -2,6 +2,7 @@
 
 <div class="post">
   <h1 class="post-title">Post Categories</h1>
+  <p>Click any of the categories listed below to see all the posts assigned to that category.</p>
   <ul id="list">
       {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
       <li><a href="/categories/{{ $name | urlize }}">{{ $name | title }}</a></li>

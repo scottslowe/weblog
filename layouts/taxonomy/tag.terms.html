@@ -2,6 +2,7 @@
 
 <div class="post">
   <h1 class="post-title">Content Tags</h1>
+  <p>Click any of the tags listed below to see a list of all the posts associated with that tag.</p>
   <ul id="list">
       {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
       <li><a href="/tags/{{ $name | urlize }}">{{ $name | title }}</a></li>
