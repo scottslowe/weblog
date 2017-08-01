@@ -78,7 +78,7 @@ At this point, you should have a fairly clear understanding of how logical netwo
 Thanks for reading, and feel free to post any corrections, clarifications, or questions in the comments below.
 
 [all]: {{ site.url }}/learning-nvp-nsx/
-[p5]: {% post_url 2013-09-06-learning-nvp-part-5-creating-a-logical-network %}
-[p11]: {% post_url 2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics %}
-[p12]: {% post_url 2014-04-25-learning-nsx-part-12-integrating-vmware-nsx-with-openstack %}
-[1]: {% post_url 2013-09-04-introducing-linux-network-namespaces %}
+[p5]: {{< relref "2013-09-06-learning-nvp-part-5-creating-a-logical-network.md" >}}
+[p11]: {{< relref "2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics.md" >}}
+[p12]: {{< relref "2014-04-25-learning-nsx-part-12-integrating-vmware-nsx-with-openstack.md" >}}
+[1]: {{< relref "2013-09-04-introducing-linux-network-namespaces.md" >}}

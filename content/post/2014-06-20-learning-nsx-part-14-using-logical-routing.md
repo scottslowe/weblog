@@ -120,7 +120,7 @@ OpenStack Heat also offers resource types for setting the router's external gate
 That wraps up this post on logical routing with VMware NSX. As always, I welcome your courteous feedback, so feel free to speak up in the comments below. In the next post, I'll spend a bit of time discussing logical routers, gateway servies, and gateway appliances. See you next time!
 
 [all]: {{ site.url }}/learning-nvp-nsx/
-[p9]: {% post_url 2014-02-26-learning-nsx-part-9-adding-a-gateway-service %}
-[p6]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
-[p10]: {% post_url 2014-02-27-learning-nsx-part-10-adding-a-service-node %}
-[1]: {% post_url 2014-05-01-an-introduction-to-openstack-heat %}
+[p9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
+[p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
+[p10]: {{< relref "2014-02-27-learning-nsx-part-10-adding-a-service-node.md" >}}
+[1]: {{< relref "2014-05-01-an-introduction-to-openstack-heat.md" >}}

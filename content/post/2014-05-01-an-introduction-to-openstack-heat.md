@@ -177,4 +177,4 @@ Once you have your Heat template defined, you can then use this template to crea
 
 Kinda nifty, don't you think? Anyway, I hope this brief introduction to OpenStack Heat has proven useful. I do plan on covering some additional topics with OpenStack Heat in the near future, so stay tuned. In the meantime, if you have any questions, corrections, or clarifications, I invite you to add them to the comments below.
 
-[1]: {% post_url 2013-11-08-a-non-programmers-introduction-to-json %}
+[1]: {{< relref "2013-11-08-a-non-programmers-introduction-to-json.md" >}}

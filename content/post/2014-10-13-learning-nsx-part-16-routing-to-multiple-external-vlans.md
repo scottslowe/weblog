@@ -109,12 +109,12 @@ When you're done creating an external network and subnet for each VLAN on the ou
 I hope you find this post to be useful. If you have any questions, corrections, or clarifications, please speak up in the comments. All courteous comments are welcome!
 
 [all]: {{ site.url }}/learning-nvp-nsx/
-[p6]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
-[p9]: {% post_url 2014-02-26-learning-nsx-part-9-adding-a-gateway-service %}
-[p14]: {% post_url 2014-06-20-learning-nsx-part-14-using-logical-routing %}
-[p15]: {% post_url 2014-07-16-learning-nsx-part-15-nsx-gateways-gateway-services-and-logical-routers %}
-[p11]: {% post_url 2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics %}
-[p12]: {% post_url 2014-04-25-learning-nsx-part-12-integrating-vmware-nsx-with-openstack %}
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2012-10-26-link-aggregation-and-vlan-trunking-with-brocade-fastiron-switches %}
-[3]: {% post_url 2008-09-05-vmware-esx-nic-teaming-and-vlan-trunking-with-hp-procurve %}
+[p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
+[p9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
+[p14]: {{< relref "2014-06-20-learning-nsx-part-14-using-logical-routing.md" >}}
+[p15]: {{< relref "2014-07-16-learning-nsx-part-15-nsx-gateways-gateway-services-and-logical-routers.md" >}}
+[p11]: {{< relref "2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics.md" >}}
+[p12]: {{< relref "2014-04-25-learning-nsx-part-12-integrating-vmware-nsx-with-openstack.md" >}}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2012-10-26-link-aggregation-and-vlan-trunking-with-brocade-fastiron-switches.md" >}}
+[3]: {{< relref "2008-09-05-vmware-esx-nic-teaming-and-vlan-trunking-with-hp-procurve.md" >}}

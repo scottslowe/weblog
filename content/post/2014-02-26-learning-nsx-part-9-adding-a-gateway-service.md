@@ -63,11 +63,11 @@ In the next installation of the series, I'll walk you through setting up an NSX 
 
 As always, your feedback is welcome and encouraged, so feel free to speak up in the comments below.
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
-[2]: {% post_url 2013-08-16-learning-nvp-part-2-nvp-controllers %}
-[3]: {% post_url 2013-08-19-learning-nvp-part-3-nvp-manager %}
-[4]: {% post_url 2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp %}
-[5]: {% post_url 2013-09-06-learning-nvp-part-5-creating-a-logical-network %}
-[6]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
-[7]: {% post_url 2013-11-01-learning-nvp-part-7-handling-the-nvp-to-nsx-transition %}
-[8]: {% post_url 2013-12-05-learning-nvp-part-8-an-update-on-the-nvp-to-nsx-transition %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}
+[2]: {{< relref "2013-08-16-learning-nvp-part-2-nvp-controllers.md" >}}
+[3]: {{< relref "2013-08-19-learning-nvp-part-3-nvp-manager.md" >}}
+[4]: {{< relref "2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp.md" >}}
+[5]: {{< relref "2013-09-06-learning-nvp-part-5-creating-a-logical-network.md" >}}
+[6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
+[7]: {{< relref "2013-11-01-learning-nvp-part-7-handling-the-nvp-to-nsx-transition.md" >}}
+[8]: {{< relref "2013-12-05-learning-nvp-part-8-an-update-on-the-nvp-to-nsx-transition.md" >}}

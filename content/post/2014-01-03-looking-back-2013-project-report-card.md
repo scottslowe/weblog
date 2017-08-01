@@ -46,10 +46,10 @@ What's **not** reflected in this project list is the progress I made with unders
 
 Over the next week or two, I'll be reflecting on my progress with my 2013 projects and thinking about what projects I should be taking in 2014. In the meantime, I would love to hear any feedback, suggestions, or thoughts on projects I should consider, technologies that should be incorporated, or learning techniques I should leverage. Feel free to speak up in the comments below.
 
-[1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[2]: {% post_url 2013-01-07-looking-back-2012-project-report-card %}
-[3]: {% post_url 2013-02-07-looking-ahead-my-2013-projects %}
-[4]: {% post_url 2013-10-04-using-puppet-for-ubuntu-cloud-archive-support %}
-[5]: {% post_url 2013-12-17-updating-ubuntu-cloud-archive-support-with-puppet %}
-[6]: {% post_url 2013-10-21-managing-ssh-authorized-keys-with-puppet %}
-[7]: {% post_url 2013-12-18-managing-open-vswitch-with-puppet %}
+[1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[2]: {{< relref "2013-01-07-looking-back-2012-project-report-card.md" >}}
+[3]: {{< relref "2013-02-07-looking-ahead-my-2013-projects.md" >}}
+[4]: {{< relref "2013-10-04-using-puppet-for-ubuntu-cloud-archive-support.md" >}}
+[5]: {{< relref "2013-12-17-updating-ubuntu-cloud-archive-support-with-puppet.md" >}}
+[6]: {{< relref "2013-10-21-managing-ssh-authorized-keys-with-puppet.md" >}}
+[7]: {{< relref "2013-12-18-managing-open-vswitch-with-puppet.md" >}}

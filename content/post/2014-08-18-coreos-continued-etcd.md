@@ -87,7 +87,7 @@ By now, you might be thinking, "OK, this is interesting, but what does it really
 
 I'll be building on some of these concepts in future posts. In the meantime, feel free to post any questions, clarifications, or corrections in the comments below.
 
-[1]: {% post_url 2014-08-01-a-quick-introduction-to-coreos %}
-[2]: {% post_url 2014-08-13-deploying-coreos-on-openstack-using-heat %}
-[3]: {% post_url 2014-02-19-using-curl-to-interact-with-a-restful-api %}
-[4]: {% post_url 2013-11-08-a-non-programmers-introduction-to-json %}
+[1]: {{< relref "2014-08-01-a-quick-introduction-to-coreos.md" >}}
+[2]: {{< relref "2014-08-13-deploying-coreos-on-openstack-using-heat.md" >}}
+[3]: {{< relref "2014-02-19-using-curl-to-interact-with-a-restful-api.md" >}}
+[4]: {{< relref "2013-11-08-a-non-programmers-introduction-to-json.md" >}}

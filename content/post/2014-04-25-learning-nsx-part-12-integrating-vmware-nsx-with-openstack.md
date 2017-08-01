@@ -114,8 +114,8 @@ In the next post, I'll revisit the topic of logical networking and logical switc
 In the meantime, feel free to post any questions, clarifications, or thoughts in the comments below. Please include any vendor affiliations, where applicable; otherwise, all courteous comments are welcome!
 
 [1]: {{ site.url }}/learning-nvp-nsx/
-[2]: {% post_url 2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics %}
-[3]: {% post_url 2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp %}
-[4]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
-[5]: {% post_url 2014-02-26-learning-nsx-part-9-adding-a-gateway-service %}
-[6]: {% post_url 2013-09-06-learning-nvp-part-5-creating-a-logical-network %}
+[2]: {{< relref "2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics.md" >}}
+[3]: {{< relref "2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp.md" >}}
+[4]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
+[5]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
+[6]: {{< relref "2013-09-06-learning-nvp-part-5-creating-a-logical-network.md" >}}

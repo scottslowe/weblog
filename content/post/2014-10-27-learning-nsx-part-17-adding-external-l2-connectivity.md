@@ -112,10 +112,10 @@ If you need to change the mapping between a broadcast domain on the physical net
 I hope you've found this post to be useful. The use of L2 gateways offers administrators and operators a new option for network connectivity for tenants in addition to L3 routing. I'll explore additional options for network connectivity in future posts, so stay tuned. In the meantime, feel free to share any comments, thoughts, or corrections in the comments below.
 
 [all]: {{ site.url }}/learning-nvp-nsx/
-[p6]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
-[p11]: {% post_url 2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics %}
-[p12]: {% post_url 2014-04-25-learning-nsx-part-12-integrating-vmware-nsx-with-openstack %}
-[1]: {% post_url 2013-08-12-introduction-to-networking-part-1-the-basics %}
-[p9]: {% post_url 2014-02-26-learning-nsx-part-9-adding-a-gateway-service %}
-[p15]: {% post_url 2014-07-16-learning-nsx-part-15-nsx-gateways-gateway-services-and-logical-routers %}
-[p16]: {% post_url 2014-10-13-learning-nsx-part-16-routing-to-multiple-external-vlans %}
+[p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
+[p11]: {{< relref "2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics.md" >}}
+[p12]: {{< relref "2014-04-25-learning-nsx-part-12-integrating-vmware-nsx-with-openstack.md" >}}
+[1]: {{< relref "2013-08-12-introduction-to-networking-part-1-the-basics.md" >}}
+[p9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
+[p15]: {{< relref "2014-07-16-learning-nsx-part-15-nsx-gateways-gateway-services-and-logical-routers.md" >}}
+[p16]: {{< relref "2014-10-13-learning-nsx-part-16-routing-to-multiple-external-vlans.md" >}}

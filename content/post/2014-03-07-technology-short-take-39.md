@@ -96,5 +96,5 @@ Welcome to Technology Short Take #39, in which I share a random assortment of li
 
 It's time to wrap up; this post has already run longer than usual. There was just so much information that I want to share with you! I'll be back soon-ish with another post, but until then feel free to join (or start) the conversation by adding your thoughts, ideas, links, or responses in the comments below.
 
-[1]: {% post_url 2009-08-04-netronome-and-io-virtualization %}
-[2]: {% post_url 2010-10-24-netronome-1-year-later %}
+[1]: {{< relref "2009-08-04-netronome-and-io-virtualization.md" >}}
+[2]: {{< relref "2010-10-24-netronome-1-year-later.md" >}}

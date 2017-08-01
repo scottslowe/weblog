@@ -73,4 +73,4 @@ Then you can test network connectivity with our good friend `ping` like this:
 
 I hope this additional information on working with Linux network namespaces is useful. As always, I invite and encourage any questions, thoughts, or corrections in the comments below. All courteous comments are welcome!
 
-[1]: {% post_url 2013-09-04-introducing-linux-network-namespaces %}
+[1]: {{< relref "2013-09-04-introducing-linux-network-namespaces.md" >}}

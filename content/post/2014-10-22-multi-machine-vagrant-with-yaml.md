@@ -84,4 +84,4 @@ Clearly, there's a lot more that could be done with this sort of approach, but I
 
 For an even more supercharged approach, check out [Oh My Vagrant!](https://ttboj.wordpress.com/2014/09/03/introducing-oh-my-vagrant/). It takes the approach I've described here to an entirely new level.
 
-[1]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
+[1]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}

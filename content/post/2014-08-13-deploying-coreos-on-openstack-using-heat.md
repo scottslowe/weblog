@@ -99,6 +99,6 @@ Once you have your template, you can deploy the stack using Heat, and then---aft
 
 Any questions? Corrections? Clarifications? Feel free to start (or join) the discussion below. All courteous comments are welcome.
 
-[1]: {% post_url 2014-05-01-an-introduction-to-openstack-heat %}
-[2]: {% post_url 2014-05-02-another-look-at-an-openstack-heat-template %}
-[3]: {% post_url 2014-08-01-a-quick-introduction-to-coreos %}
+[1]: {{< relref "2014-05-01-an-introduction-to-openstack-heat.md" >}}
+[2]: {{< relref "2014-05-02-another-look-at-an-openstack-heat-template.md" >}}
+[3]: {{< relref "2014-08-01-a-quick-introduction-to-coreos.md" >}}

@@ -28,4 +28,4 @@ Today marked the start of [Dockercon](http://dockercon.com), and Docker, Inc., t
 
 I'm certainly a fan of using Docker (or other container technologies) where it makes sense. I fear, though, that the intense focus (some might say hype) around Docker will lead more than a few organizations down a path of trying to make Docker containers their "be all end all" solution. If that trend grows too large, that could be as damaging (if not more damaging) to Docker than being ignored. Time will tell. In the meantime, I'd strongly recommend getting a grasp on the basics of Docker so that you can better understand how it might fit into your overall solution. (My [introductory post on Docker][1], while a bit dated, might prove useful in that regard.)
 
-[1]: {% post_url 2014-03-11-a-quick-introduction-to-docker %}
+[1]: {{< relref "2014-03-11-a-quick-introduction-to-docker.md" >}}

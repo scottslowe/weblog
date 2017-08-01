@@ -71,5 +71,5 @@ Nothing this time around, but I'll stay tuned for material to include next time.
 
 I have more articles in my bucket labeled "Articles to blog about," but I'll save those for some other time in the interest of keeping this from getting overly long (which it probably already is). Until next time!
 
-[1]: {% post_url 2014-04-16-crossing-the-threshold %}
-[2]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
+[1]: {{< relref "2014-04-16-crossing-the-threshold.md" >}}
+[2]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}

@@ -144,12 +144,12 @@ That's really all there is to it. Given their role, you likely won't have a lot 
 
 As always, feel free to post any questions, comments, thoughts, or ideas below. All courteous comments, with vendor disclosures where applicable, are welcome.
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
-[2]: {% post_url 2013-08-16-learning-nvp-part-2-nvp-controllers %}
-[3]: {% post_url 2013-08-19-learning-nvp-part-3-nvp-manager %}
-[4]: {% post_url 2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp %}
-[5]: {% post_url 2013-09-06-learning-nvp-part-5-creating-a-logical-network %}
-[6]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
-[7]: {% post_url 2013-11-01-learning-nvp-part-7-handling-the-nvp-to-nsx-transition %}
-[8]: {% post_url 2013-12-05-learning-nvp-part-8-an-update-on-the-nvp-to-nsx-transition %}
-[9]: {% post_url 2014-02-26-learning-nsx-part-9-adding-a-gateway-service %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}
+[2]: {{< relref "2013-08-16-learning-nvp-part-2-nvp-controllers.md" >}}
+[3]: {{< relref "2013-08-19-learning-nvp-part-3-nvp-manager.md" >}}
+[4]: {{< relref "2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp.md" >}}
+[5]: {{< relref "2013-09-06-learning-nvp-part-5-creating-a-logical-network.md" >}}
+[6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
+[7]: {{< relref "2013-11-01-learning-nvp-part-7-handling-the-nvp-to-nsx-transition.md" >}}
+[8]: {{< relref "2013-12-05-learning-nvp-part-8-an-update-on-the-nvp-to-nsx-transition.md" >}}
+[9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}

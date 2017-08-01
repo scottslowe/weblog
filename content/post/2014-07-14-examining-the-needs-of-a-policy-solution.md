@@ -35,4 +35,4 @@ The relationship between a policy system and the ecosystem of data center servic
 
 Go have a look at [the second post in the series on policy in the data center](http://networkheresy.com/2014/06/19/on-policy-in-the-data-center-the-solution-space/) and feel free to join in the conversation. You can leave comments here or at the Network Heresy site.
 
-[1]: {% post_url 2014-04-22-kicking-the-policy-discussion-into-high-gear %}
+[1]: {{< relref "2014-04-22-kicking-the-policy-discussion-into-high-gear.md" >}}

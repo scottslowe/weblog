@@ -153,5 +153,5 @@ For additional information and context, here are some links to other articles I 
 
 If you have any questions or need more information, feel free to speak up in the comments below. All courteous comments are welcome!
 
-[1]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
-[2]: {% post_url 2013-05-28-vlan-trunking-to-guest-domains-with-open-vswitch %}
+[1]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}
+[2]: {{< relref "2013-05-28-vlan-trunking-to-guest-domains-with-open-vswitch.md" >}}

@@ -50,4 +50,4 @@ Available [here](http://fletcherpenney.net/multimarkdown/download/), this QuickL
 
 I hope this information is useful to someone. I've found that using Markdown via some of these tools has really helped my productivity; perhaps you will find the same thing. As always, feel free to post any courteous comments, corrections, or clarifications below.
 
-[1]: {% post_url 2013-11-11-making-json-output-more-readable-with-bbedit %}
+[1]: {{< relref "2013-11-11-making-json-output-more-readable-with-bbedit.md" >}}

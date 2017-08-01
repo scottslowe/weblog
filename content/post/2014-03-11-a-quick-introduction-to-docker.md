@@ -127,5 +127,5 @@ For additional information or another perspective on Docker, I recommend taking 
 
 As always, all courteous questions, thoughts, suggestions, or corrections are welcome.
 
-[1]: {% post_url 2013-11-25-a-brief-introduction-to-linux-containers-with-lxc %}
-[2]: {% post_url 2014-02-10-installing-ubuntu-packages-from-a-specific-repository %}
+[1]: {{< relref "2013-11-25-a-brief-introduction-to-linux-containers-with-lxc.md" >}}
+[2]: {{< relref "2014-02-10-installing-ubuntu-packages-from-a-specific-repository.md" >}}
