@@ -49,6 +49,6 @@ I hope this helps clarify some of the questions or issues surrounding the use of
 
 **UPDATE:** There are some additional considerations about how to provision LUNs along with NetApp deduplication that warrant a more in-depth discussion. Look for a follow-up post within the next few days.
 
-[1]: {% post_url 2008-03-31-quick-guide-to-setting-up-netapp-deduplication %}
-[2]: {% post_url 2007-12-05-managing-lun-space-requirements-with-netapp-storage %}
-[3]: {% post_url 2007-05-21-lun-clones-vs-flexclones %}
+[1]: {{< relref "2008-03-31-quick-guide-to-setting-up-netapp-deduplication.md" >}}
+[2]: {{< relref "2007-12-05-managing-lun-space-requirements-with-netapp-storage.md" >}}
+[3]: {{< relref "2007-05-21-lun-clones-vs-flexclones.md" >}}

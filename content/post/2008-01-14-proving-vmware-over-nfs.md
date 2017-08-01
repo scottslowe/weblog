@@ -28,4 +28,4 @@ If NFS is equally as good as Fibre Channel or iSCSI---and personally I agree wit
 
 If you have some insight, please share it in the comments. I'd love to hear everyone's thoughts on the matter.
 
-[1]: {% post_url 2007-09-21-nfs-for-vmware-storage %}
+[1]: {{< relref "2007-09-21-nfs-for-vmware-storage.md" >}}

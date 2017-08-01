@@ -19,4 +19,4 @@ However, an enterprising developer has written a graphical front-end for the ope
 
 Now, if a single developer could write a GUI for Storage VMotion, why didn't VMware take care of this themselves?
 
-[1]: {% post_url 2008-01-07-underwhelmed-by-the-remote-cli %}
+[1]: {{< relref "2008-01-07-underwhelmed-by-the-remote-cli.md" >}}

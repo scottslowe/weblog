@@ -41,4 +41,4 @@ So, to summarize:
 
 I hope this clarifies the interaction between HP VirtualConnect and ESX Server networking. I welcome any further questions or clarifications in the comments below. Thanks!
 
-[1]: {% post_url 2008-01-23-new-article-on-hp-virtualconnect %}
+[1]: {{< relref "2008-01-23-new-article-on-hp-virtualconnect.md" >}}

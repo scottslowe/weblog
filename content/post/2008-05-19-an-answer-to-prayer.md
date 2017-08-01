@@ -30,4 +30,4 @@ Actually, that first statement's not entirely true. I am a bit glad this happene
 
 Once again, thanks to everyone for everything! I appreciate it all. God bless!
 
-[1]: {% post_url 2008-05-16-need-prayer %}
+[1]: {{< relref "2008-05-16-need-prayer.md" >}}

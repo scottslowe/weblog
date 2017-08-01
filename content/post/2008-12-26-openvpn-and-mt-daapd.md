@@ -30,8 +30,8 @@ The fix, in my case at least, was to modify the `/etc/init.d/mDNSResponder` scri
 
 1. First, the "-i eth0" needs to be added to the line that defines the variable $OTHER_MDNSRD_OPTS.
 
-2. Second, double quotes have to be added around the command that actually launces mDNSResponder using the runuser command. Otherwise, the parameter to mDNSResponder is interpreted as a parameter to runuser and causes an error.
+2. Second, double quotes have to be added around the command that actually launches mDNSResponder using the `runuser` command. Otherwise, the parameter to mDNSResponder is interpreted as a parameter to `runuser` and causes an error.
 
 Once I made these changes and restarted both mDNSResponder and mt-daapd, all the systems were able to connect to the shared music library without any further issues. Problem solved!
 
-[1]: {% post_url 2008-11-19-viscosity-a-mac-openvpn-client %}
+[1]: {{< relref "2008-11-19-viscosity-a-mac-openvpn-client.md" >}}

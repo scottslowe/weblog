@@ -35,7 +35,7 @@ A whole lot has been buzzing around in the virtualization space over the last we
 
 I guess that's about it for this week. Thanks for reading!
 
-[1]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
-[2]: {% post_url 2007-05-15-netapp-flexclones-with-vmware-part-1 %}
-[3]: {% post_url 2007-05-17-netapp-flexclones-with-vmware-part-2 %}
-[4]: {% post_url 2007-05-21-lun-clones-vs-flexclones %}
+[1]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}
+[2]: {{< relref "2007-05-15-netapp-flexclones-with-vmware-part-1.md" >}}
+[3]: {{< relref "2007-05-17-netapp-flexclones-with-vmware-part-2.md" >}}
+[4]: {{< relref "2007-05-21-lun-clones-vs-flexclones.md" >}}

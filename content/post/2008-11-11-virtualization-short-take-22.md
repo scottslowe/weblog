@@ -51,5 +51,5 @@ Despite the fact that I'm out of town this week at NetApp Insight, I wanted to g
 
 That does it for this round. Speak up in the comments if you have any interesting or useful links to share with other readers. I'd also be interested in readers' thoughts on the whole Citrix on the iPhone discussion---will it really bring any usefulness?
 
-[1]: {% post_url 2008-06-10-a-discussion-with-jeff-woolsey %}
-[2]: {% post_url 2008-06-16-melio-fs-hyper-v-and-vmware-esx %}
+[1]: {{< relref "2008-06-10-a-discussion-with-jeff-woolsey.md" >}}
+[2]: {{< relref "2008-06-16-melio-fs-hyper-v-and-vmware-esx.md" >}}

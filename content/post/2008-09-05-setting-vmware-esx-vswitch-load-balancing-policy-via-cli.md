@@ -29,4 +29,4 @@ Obviously, users will need to replace vSwitch1 with the appropriate vSwitch that
 
 I hope this is useful!
 
-[1]: {% post_url 2008-09-03-vmware-esx-35-u2-validated-via-svvp %}
+[1]: {{< relref "2008-09-03-vmware-esx-35-u2-validated-via-svvp.md" >}}

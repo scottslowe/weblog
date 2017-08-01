@@ -61,4 +61,4 @@ Recapping the benefits:
 
 I think that's about going to do it for this liveblog; my battery is almost gone. I'll be back with more information as soon as possible!
 
-[1]: {% post_url 2008-06-10-vir367-hyper-v-security-and-best-practices %}
+[1]: {{< relref "2008-06-10-vir367-hyper-v-security-and-best-practices.md" >}}

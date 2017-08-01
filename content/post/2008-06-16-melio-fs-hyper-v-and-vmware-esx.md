@@ -50,5 +50,5 @@ Anyway, this can be a fairly complicated topic to understand and I wanted to try
 
 **UPDATE:** Sanbolic updated me to inform me that they have thus far only tested physical mode RDMs with Melio FS. They are currently in the process of testing virtual mode RDMs.
 
-[1]: {% post_url 2008-06-10-a-discussion-with-jeff-woolsey %}
-[2]: {% post_url 2008-06-11-vir250-advanced-storage-connectivity-for-vms %}
+[1]: {{< relref "2008-06-10-a-discussion-with-jeff-woolsey.md" >}}
+[2]: {{< relref "2008-06-11-vir250-advanced-storage-connectivity-for-vms.md" >}}

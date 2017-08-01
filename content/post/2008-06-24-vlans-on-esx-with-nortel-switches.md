@@ -23,6 +23,6 @@ Not quite. While the configuration seemed correct in all ways, it turns out ther
 
 So, if you're using Nortel switches and having problems with VLANs, double-check this setting.
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2007-11-13-esx-server-and-the-native-vlan %}
-[3]: {% post_url 2007-12-07-new-vlan-article-at-searchvmwarecom %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}
+[3]: {{< relref "2007-12-07-new-vlan-article-at-searchvmwarecom.md" >}}

@@ -25,5 +25,5 @@ I could go on and on. "Every Man" talks to how Christ is the hope of every man. 
 
 If you are looking for music that hits squarely where the real world meets the Christian walk, look no further. _The Altar and The Door_ will provide strong encouragement that Christ's love remains constant, even if we don't.
 
-[1]: {% post_url 2005-09-25-lifesong-by-casting-crowns %}
-[2]: {% post_url 2005-11-22-another-take-on-lifesong %}
+[1]: {{< relref "2005-09-25-lifesong-by-casting-crowns.md" >}}
+[2]: {{< relref "2005-11-22-another-take-on-lifesong.md" >}}

@@ -19,4 +19,4 @@ Everyone who has commented on any of the earlier posts about spouse activities--
 
 (If you've been communicating directly with Crystal, then you're good. Don't worry.)
 
-[1]: {% post_url 2008-08-20-vmworld-2008-spouse-activities-schedule %}
+[1]: {{< relref "2008-08-20-vmworld-2008-spouse-activities-schedule.md" >}}

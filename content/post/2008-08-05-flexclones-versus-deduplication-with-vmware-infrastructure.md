@@ -44,7 +44,7 @@ Looking at these two technologies in that light, one might ask: why use FlexClon
 
 Personally, I'm of the opinion that unless an organization meets one of these criteria, then that organization should look to deduplication instead of FlexClones. Of course, that's just my personal opinion, and I'm open to hear what others have to say about the matter. NetApp gurus, feel free to weigh in.
 
-[1]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
-[2]: {% post_url 2007-05-15-netapp-flexclones-with-vmware-part-1 %}
-[3]: {% post_url 2007-05-17-netapp-flexclones-with-vmware-part-2 %}
-[4]: {% post_url 2007-05-21-lun-clones-vs-flexclones %}
+[1]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}
+[2]: {{< relref "2007-05-15-netapp-flexclones-with-vmware-part-1.md" >}}
+[3]: {{< relref "2007-05-17-netapp-flexclones-with-vmware-part-2.md" >}}
+[4]: {{< relref "2007-05-21-lun-clones-vs-flexclones.md" >}}

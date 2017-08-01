@@ -65,5 +65,5 @@ It's clearly been too long since I published one of these, as I still have other
 
 Like I said, there's just so much information! And now that I'm trying to delve deeper into the storage realm, that's only doubled up on the information I'm trying to manage. Hopefully I've picked out a few gems for you this week. Thanks for reading!
 
-[1]: {% post_url 2008-04-22-esx-server-ip-storage-and-jumbo-frames %}
-[2]: {% post_url 2008-06-11-mgt374-offline-virtual-machine-servicing-tool %}
+[1]: {{< relref "2008-04-22-esx-server-ip-storage-and-jumbo-frames.md" >}}
+[2]: {{< relref "2008-06-11-mgt374-offline-virtual-machine-servicing-tool.md" >}}

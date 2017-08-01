@@ -83,4 +83,4 @@ In response to the second question, an extra set of credentials are required in 
 
 Finally, I've heard mention from several Microsoft employees that VMware does not have intelligent placement. That's not accurate. When DRS is enabled in a cluster of ESX hosts, VirtualCenter will both a) calculate the initial placement of the VM within the cluster and b) use VMotion to dynamically optimize the placement of the VM within the cluster while the VM is running.
 
-[1]: {% post_url 2008-06-11-vir253-microsoft-system-center-vmm-2008-part-1-of-2 %}
+[1]: {{< relref "2008-06-11-vir253-microsoft-system-center-vmm-2008-part-1-of-2.md" >}}

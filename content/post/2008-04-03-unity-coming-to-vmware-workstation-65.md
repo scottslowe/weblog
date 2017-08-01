@@ -21,5 +21,5 @@ It's very cool technology, and it's also very exciting to see VMware bringing th
 
 There's more information on [Workstation's new Unity functionality](http://www.chipx86.com/blog/?p=250) from Christian Hammond, a VMware developer, on [his blog](http://www.chipx86.com/blog/).
 
-[1]: {% post_url 2006-12-26-application-agnosticism %}
-[2]: {% post_url 2006-12-28-personal-computing-as-a-collection-of-vms %}
+[1]: {{< relref "2006-12-26-application-agnosticism.md" >}}
+[2]: {{< relref "2006-12-28-personal-computing-as-a-collection-of-vms.md" >}}

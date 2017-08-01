@@ -21,5 +21,5 @@ Given that the new Interarchy interface was really bugging me---the Finder, at l
 
 Until tonight, that was. I needed to transfer a large number of smaller files up to one of my web sites, and Cyberduck simply dragged. I guess it's the method whereby Cyberduck manages connections that slowed down the process, since it appeared that it checked the connection to the server for each file it was transferring. In any case, I've found that it looks like I'll just have to suffer through Interarchy's new look; the alternative is just too slow.
 
-[1]: {% post_url 2007-01-22-mac-ftpsftp-clients %}
-[2]: {% post_url 2007-01-27-quick-follow-up-on-mac-ftpsftp-clients %}
+[1]: {{< relref "2007-01-22-mac-ftpsftp-clients.md" >}}
+[2]: {{< relref "2007-01-27-quick-follow-up-on-mac-ftpsftp-clients.md" >}}

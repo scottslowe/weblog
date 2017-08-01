@@ -33,4 +33,4 @@ Here are the articles that are currently under development:
 
 That's it for now, although I'm certainly open to other items that pique reader interest. Feel free to submit your suggestions in the comments. Thanks!
 
-[1]: {% post_url 2007-07-10-esx-server-ad-integration %}
+[1]: {{< relref "2007-07-10-esx-server-ad-integration.md" >}}

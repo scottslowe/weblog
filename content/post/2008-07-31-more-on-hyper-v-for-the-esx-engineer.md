@@ -46,11 +46,11 @@ For even more resources, readers can also use [the HyperV tag]({{ site.url }}/ta
 
 Oh, and if you don't have Aaron's RSS feed in your RSS reader, you're missing out. He's producing some really great stuff that you need to be reading. Go subscribe now!
 
-[1]: {% post_url 2008-04-25-my-thoughts-on-the-live-migration-quick-migration-discussion %}
-[2]: {% post_url 2008-06-10-vir367-hyper-v-security-and-best-practices %}
-[3]: {% post_url 2008-06-10-a-discussion-with-jeff-woolsey %}
-[4]: {% post_url 2008-06-11-vir253-microsoft-system-center-vmm-2008-part-1-of-2 %}
-[5]: {% post_url 2008-06-11-vir360-microsoft-system-center-vmm-2008-part-2-of-2 %}
-[6]: {% post_url 2008-06-11-vir250-advanced-storage-connectivity-for-vms %}
-[7]: {% post_url 2008-06-12-vir358-hyper-v-architecture-scenarios-and-networking %}
-[8]: {% post_url 2008-06-12-vir350-system-center-vmm-advanced-integration %}
+[1]: {{< relref "2008-04-25-my-thoughts-on-the-live-migration-quick-migration-discussion.md" >}}
+[2]: {{< relref "2008-06-10-vir367-hyper-v-security-and-best-practices.md" >}}
+[3]: {{< relref "2008-06-10-a-discussion-with-jeff-woolsey.md" >}}
+[4]: {{< relref "2008-06-11-vir253-microsoft-system-center-vmm-2008-part-1-of-2.md" >}}
+[5]: {{< relref "2008-06-11-vir360-microsoft-system-center-vmm-2008-part-2-of-2.md" >}}
+[6]: {{< relref "2008-06-11-vir250-advanced-storage-connectivity-for-vms.md" >}}
+[7]: {{< relref "2008-06-12-vir358-hyper-v-architecture-scenarios-and-networking.md" >}}
+[8]: {{< relref "2008-06-12-vir350-system-center-vmm-advanced-integration.md" >}}

@@ -22,4 +22,4 @@ Judging from Andrew's [work on VI client plugins][1], I'm sure the new book will
 
 Congratulations, Andrew, and good luck with the book!
 
-[1]: {% post_url 2008-02-20-vi-plugin-guide-available %}
+[1]: {{< relref "2008-02-20-vi-plugin-guide-available.md" >}}

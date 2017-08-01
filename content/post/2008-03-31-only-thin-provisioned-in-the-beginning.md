@@ -32,4 +32,4 @@ This is a strong counterpoint to the arguments in favor of using NFS for your VM
 
 So far, I have not found any workaround for this behavior. If anyone knows of a workaround, please share it in the comments. (To be honest, I don't really expect to find one.)
 
-[1]: {% post_url 2008-02-08-virtualization-short-take-1 %}
+[1]: {{< relref "2008-02-08-virtualization-short-take-1.md" >}}

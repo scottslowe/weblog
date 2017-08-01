@@ -43,4 +43,4 @@ That's it for this time around. Thanks for reading!
 
 **UPDATE:** Eric Sloof responded about the updated recommendations regarding VM swap files. The new information was disclosed in session TA2784 at VMworld 2008. See slide 38. Thanks for the information, Eric!
 
-[1]: {% post_url 2007-06-19-more-on-cpu-masking %}
+[1]: {{< relref "2007-06-19-more-on-cpu-masking.md" >}}

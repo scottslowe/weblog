@@ -26,5 +26,5 @@ It's a difficult position. If VMware---or the market leader in other markets, li
 
 I certainly don't envy VMware in their current position. With Citrix, Microsoft, and Virtual Iron all nipping at their heels, their [stock taking a hit](http://www.virtualization.info/2008/03/vmw-stock-price-is-back-at-starting.html), and partner vendors complaining about the functionality they're bundling into their products, it seems as if it's coming from all sides.
 
-[1]: {% post_url 2008-01-07-underwhelmed-by-the-remote-cli %}
-[2]: {% post_url 2007-08-18-vmware-addressing-virtual-security-concerns %}
+[1]: {{< relref "2008-01-07-underwhelmed-by-the-remote-cli.md" >}}
+[2]: {{< relref "2007-08-18-vmware-addressing-virtual-security-concerns.md" >}}

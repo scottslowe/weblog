@@ -33,6 +33,6 @@ Here's some thoughts on a variety of links that passed by me over the last coupl
 
 Well, that wraps it up this time. Thanks for reading!
 
-[1]: {% post_url 2007-09-13-vmworld-2007-day-3-keynote-liveblog %}
-[2]: {% post_url 2007-09-21-nfs-for-vmware-storage %}
-[3]: {% post_url 2008-01-14-proving-vmware-over-nfs %}
+[1]: {{< relref "2007-09-13-vmworld-2007-day-3-keynote-liveblog.md" >}}
+[2]: {{< relref "2007-09-21-nfs-for-vmware-storage.md" >}}
+[3]: {{< relref "2008-01-14-proving-vmware-over-nfs.md" >}}

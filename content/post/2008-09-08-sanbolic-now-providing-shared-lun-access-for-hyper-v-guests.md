@@ -31,4 +31,4 @@ Today's announcement mirrors the announcement in June, where Sanbolic announced 
 
 The full press release is available [here](http://www.sanbolic.com/pdfs/Sanbolic_Press_Release_Hyper-V_Guest_Support_Final.pdf).
 
-[1]: {% post_url 2008-06-16-melio-fs-hyper-v-and-vmware-esx %}
+[1]: {{< relref "2008-06-16-melio-fs-hyper-v-and-vmware-esx.md" >}}

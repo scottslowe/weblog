@@ -41,4 +41,4 @@ Here in Virtualization Short Take #11, I offer to you a collection of virtualiza
 
 I guess that about does it for this round. Thanks for reading, and feel free to share your thoughts in the comments.
 
-[1]: {% post_url 2008-01-07-vmware-ha-clarification %}
+[1]: {{< relref "2008-01-07-vmware-ha-clarification.md" >}}

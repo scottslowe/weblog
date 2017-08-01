@@ -24,4 +24,4 @@ The free "Press Pass" from Microsoft must mean a couple of things:
 
 This will mark my second conference of the year; the first was VMware Partner Exchange 2008 in San Diego last week (my summary of the event [is found here][1]). Of course, then we have the "big daddy" of virtualization events later in the year in Las Vegas: VMworld 2008. I haven't registered yet---I know, I really should register. But since Microsoft was kind enough to provide a free Press Pass to their event, I was kind of hoping VMware would offer a free Press Pass to VMworld as well. So, VMware, what do you think?
 
-[1]: {% post_url 2008-05-08-partner-exchange-wrap-up %}
+[1]: {{< relref "2008-05-08-partner-exchange-wrap-up.md" >}}

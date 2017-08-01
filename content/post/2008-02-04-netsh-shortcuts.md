@@ -49,4 +49,4 @@ In addition, Tom has some good information to share regarding Windows Server 200
 
 Good information, Tom! I appreciate you sharing the information with us. Readers are always welcome---encouraged, in fact---to share this kind of information, either in the comments or via e-mail to me directly.
 
-[1]: {% post_url 2006-07-14-resetting-dns-and-wins-on-dhcp-clients %}
+[1]: {{< relref "2006-07-14-resetting-dns-and-wins-on-dhcp-clients.md" >}}

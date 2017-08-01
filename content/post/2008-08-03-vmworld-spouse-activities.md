@@ -25,4 +25,4 @@ Here are a couple of the options that we're currently tossing around:
 
 So what Crystal needs now is some feedback from readers and readers' spouses as to what direction best suits them. Which of these options is the most attractive? Or would something else entirely, like shopping and getting a pedicure and manicure be better? Any feedback and direction that you can provide would be greatly appreciated.
 
-[1]: {% post_url 2008-06-06-spouses-at-vmworld %}
+[1]: {{< relref "2008-06-06-spouses-at-vmworld.md" >}}

@@ -47,4 +47,4 @@ There are about 10 IPD guides available, with more in the works.
 
 And that's it for today's sessions! I have a few other posts to prepare; I'll try to get them published tonight but it may be tomorrow. Hopefully readers are finding the coverage of the conference helpful. Feel free to add your thoughts in the comments below, and thanks for reading!
 
-[1]: {% post_url 2008-06-10-tech-ed-2008-keynote-liveblog %}
+[1]: {{< relref "2008-06-10-tech-ed-2008-keynote-liveblog.md" >}}

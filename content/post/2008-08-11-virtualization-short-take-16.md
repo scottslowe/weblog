@@ -31,4 +31,4 @@ There's a lot of good information being shared out there! With all due credit to
 
 That's it for now. If any readers have any interesting links they'd like to share, please do so in the comments below. Thanks!
 
-[1]: {% post_url 2008-07-26-vmware-releases-update-2 %}
+[1]: {{< relref "2008-07-26-vmware-releases-update-2.md" >}}

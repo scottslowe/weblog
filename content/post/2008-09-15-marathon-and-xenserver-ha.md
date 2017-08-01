@@ -32,4 +32,4 @@ In the future, everRun VM will be extended again to provide "VM mirroring" funct
 
 The addition of everRun VM to a XenServer 5 implementation can provide some significant features and functionality to help improve business continuity and help minimize downtime due to unplanned migrations.
 
-[1]: {% post_url 2008-09-15-citrix-announces-xenserver-5 %}
+[1]: {{< relref "2008-09-15-citrix-announces-xenserver-5.md" >}}

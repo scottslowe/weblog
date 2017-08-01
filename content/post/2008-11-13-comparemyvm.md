@@ -18,4 +18,4 @@ The idea behind the site, according to VKernel, is to provide a means whereby us
 
 Clearly, the site will only be effective if lots of users contribute information and share their VM configurations. I've been out of town all week so haven't had the opportunity to take a look at the site, but I do plan to do so very shortly. In the meantime, I'd encourage readers to have a look and feel free to report back here in the comments.
 
-[1]: {% post_url 2008-09-03-searchmyvm %}
+[1]: {{< relref "2008-09-03-searchmyvm.md" >}}

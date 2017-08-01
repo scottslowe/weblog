@@ -42,4 +42,4 @@ News, views, events, and commentary from around the virtualization world that st
 
 Also, I'm excited to announce that my blog has been selected for inclusion in a new blog aggregation site, [VirtualizationFeed.com](http://www.virtualizationfeed.com/). Patrick over at Microsoft announced the new site yesterday via the Virtualization Team Blog with [this post](http://blogs.technet.com/virtualization/archive/2008/08/27/Virtualization-Feed-for-Your-RSS-Reader.aspx). I'm thrilled to be included and I hope to be able to continue to deliver quality information. Thanks for reading!
 
-[1]: {% post_url 2007-08-19-the-linux-kernel-binary-modules-and-esx-server %}
+[1]: {{< relref "2007-08-19-the-linux-kernel-binary-modules-and-esx-server.md" >}}

@@ -44,6 +44,6 @@ Once again, here's my take a few virtualization-related stories that have passed
 
 That's it for today. Join in the discussion by adding your 2 cents in the comments below!
 
-[1]: {% post_url 2008-02-28-i-love-it-but-its-not-available %}
-[2]: {% post_url 2008-03-12-microsoft-buying-kidaro %}
-[3]: {% post_url 2008-02-26-vdi-announcements-at-vmworld-europe-2008 %}
+[1]: {{< relref "2008-02-28-i-love-it-but-its-not-available.md" >}}
+[2]: {{< relref "2008-03-12-microsoft-buying-kidaro.md" >}}
+[3]: {{< relref "2008-02-26-vdi-announcements-at-vmworld-europe-2008.md" >}}

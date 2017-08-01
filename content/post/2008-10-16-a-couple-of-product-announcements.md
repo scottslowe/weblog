@@ -21,5 +21,5 @@ Second, Altor Networks---of whom I wrote [here][2] regarding their VNSA---has re
 
 I just wanted to point out those new product releases. Oh, and along the lines of new products, I'm also working on some more in-depth information on Hyper9's search-based management product and application virtualization from Xenocode. Stay tuned.
 
-[1]: {% post_url 2008-09-16-todays-vendor-meetings %}
-[2]: {% post_url 2008-08-26-first-look-altor-networks-vnsa %}
+[1]: {{< relref "2008-09-16-todays-vendor-meetings.md" >}}
+[2]: {{< relref "2008-08-26-first-look-altor-networks-vnsa.md" >}}

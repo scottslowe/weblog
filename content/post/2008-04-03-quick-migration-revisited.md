@@ -22,4 +22,4 @@ Now, I'll grant you that this video was produced by VMware and will quite natura
 
 Microsoft experts and experienced Hyper-V testers/users, I'd love to hear your thoughts and feedback in the comments below. We all know that it's possible to create a demo environment that doesn't follow vendor best practices and therefore puts that vendor in a bad light; was this the case here? Or are these problems with Quick Migration accurate?
 
-[1]: {% post_url 2007-07-23-live-migration-vs-quick-migration %}
+[1]: {{< relref "2007-07-23-live-migration-vs-quick-migration.md" >}}

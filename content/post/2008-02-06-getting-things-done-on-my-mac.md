@@ -27,4 +27,4 @@ Things is still in beta, and while I like some of the features about Things ther
 
 Anyway, I'm still using Things but haven't yet decided whether I'll stick with it or try something new. What is everyone else out there using? Are there others in similar roles and what applications, processes, procedures, etc., do you use to help keep track of your various responsibilities, actions, and deliverables? I'd love to hear everyone's feedback.
 
-[1]: {% post_url 2008-01-21-a-new-role %}
+[1]: {{< relref "2008-01-21-a-new-role.md" >}}

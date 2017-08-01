@@ -20,4 +20,4 @@ A couple of weeks ago, I was [recognized again](http://blogs.storagemonkeys.com/
 
 Now, if I could just figure out how to get to #1...
 
-[1]: {% post_url 2008-07-16-im-honored-too %}
+[1]: {{< relref "2008-07-16-im-honored-too.md" >}}

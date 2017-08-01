@@ -23,4 +23,4 @@ Anyway, I'll be doing my best to provide as much coverage as possible. We don't 
 
 Here's to VMworld 2008!
 
-[1]: {% post_url 2008-09-13-follow-me-on-twitter %}
+[1]: {{< relref "2008-09-13-follow-me-on-twitter.md" >}}

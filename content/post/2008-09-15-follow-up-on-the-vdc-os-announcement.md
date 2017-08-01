@@ -37,5 +37,5 @@ That's quite an impressive list of features slated to be included in VDC-OS. Wha
 
 OK, that's it for now; need to run off for another session. Stay tuned here and on Twitter for more information!
 
-[1]: {% post_url 2008-09-15-vmwares-virtual-datacenter-os %}
-[2]: {% post_url 2007-09-13-vmworld-2007-day-3-keynote-liveblog %}
+[1]: {{< relref "2008-09-15-vmwares-virtual-datacenter-os.md" >}}
+[2]: {{< relref "2007-09-13-vmworld-2007-day-3-keynote-liveblog.md" >}}

@@ -20,4 +20,4 @@ As most everyone knows, the Chapman family recently suffered a tragic loss. Yet,
 
 My wife and I have often talked of adoption. Is it time now for us (not just my wife and me, but all of us), as Christians, to show our own testimony of love?
 
-[1]: {% post_url 2005-05-13-shaohannahs-hope %}
+[1]: {{< relref "2005-05-13-shaohannahs-hope.md" >}}

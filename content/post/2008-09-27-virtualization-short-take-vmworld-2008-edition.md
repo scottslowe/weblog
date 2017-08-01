@@ -36,4 +36,4 @@ This edition of Virtualization Short Takes is mainly a collection of items from 
 
 I think that about wraps up my collection of VMworld 2008-related links. If I've missed anything significant---and I'm sure I have---please feel free to add it in the comments.
 
-[1]: {% post_url 2008-09-17-vmworld-2008-day-2-keynote %}
+[1]: {{< relref "2008-09-17-vmworld-2008-day-2-keynote.md" >}}

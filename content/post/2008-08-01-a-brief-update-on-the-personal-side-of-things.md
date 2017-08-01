@@ -34,5 +34,5 @@ This trial---and I use that term both literally and figuratively---has taught my
 
 My heartfelt thanks go out to everyone who lifted up our family in prayer.
 
-[1]: {% post_url 2007-04-09-call-for-prayer %}
-[2]: {% post_url 2007-04-17-update-on-call-for-prayer %}
+[1]: {{< relref "2007-04-09-call-for-prayer.md" >}}
+[2]: {{< relref "2007-04-17-update-on-call-for-prayer.md" >}}

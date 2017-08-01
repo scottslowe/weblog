@@ -33,6 +33,6 @@ So, if you're thinking about a huge VDI deployment and planning on putting that 
 
 **UPDATE:** Another colleague of mine at NetApp wrote me to clarify that the file-level cloning functionality demonstrated in the video is not, technically speaking, related to FlexClone functionality since FlexClone operates on a per-volume basis. I might argue that they both appear to exploit the same underlying functionality in WAFL, but I don't know that for certain and at that point we're splitting hairs anyway.
 
-[1]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
-[2]: {% post_url 2007-09-13-vmworld-2007-day-3-keynote-liveblog %}
-[3]: {% post_url 2008-02-26-vdi-announcements-at-vmworld-europe-2008 %}
+[1]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}
+[2]: {{< relref "2007-09-13-vmworld-2007-day-3-keynote-liveblog.md" >}}
+[3]: {{< relref "2008-02-26-vdi-announcements-at-vmworld-europe-2008.md" >}}

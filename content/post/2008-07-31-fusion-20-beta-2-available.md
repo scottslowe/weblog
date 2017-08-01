@@ -18,4 +18,4 @@ The best (in my humble opinion) option for virtualization on Mac OS X, VMware Fu
 
 Because this is a beta, I'm not really permitted to provide a review _per se_ of the product, but I can tell you that I am impressed with Fusion's development and I'm particularly glad to see the Fusion team adding more "power user" features, like a command-line interface, and multiple snapshots. Also impressive is the continued host-guest integration such as improvements to Unity, improved 3D and HD video support, and QuickLook integration. Again, this is just further proof of the coming age of [application agnosticism][1].
 
-[1]: {% post_url 2006-12-26-application-agnosticism %}
+[1]: {{< relref "2006-12-26-application-agnosticism.md" >}}

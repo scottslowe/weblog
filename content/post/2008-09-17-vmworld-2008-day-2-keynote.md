@@ -73,4 +73,4 @@ The third and final task for Jerry's demo is to show off policy enforcement. The
 
 Dr. Herrod wraps up the keynote with a summary of the three major initiatives: VDC-OS, vCloud, and vClient. At this point the keynote wraps up.
 
-[1]: {% post_url 2008-09-16-bc2621-fault-tolerant-vms-in-vi-operations-and-best-practices %}
+[1]: {{< relref "2008-09-16-bc2621-fault-tolerant-vms-in-vi-operations-and-best-practices.md" >}}

@@ -18,4 +18,4 @@ A few weeks ago I blogged about [SVVP validation][1] of VMware ESX 3.5 Update 2.
 
 Does anyone have any information to back this up? Or any information on additional CPU architectures and memory configurations that are currently being tested for validation?
 
-[1]: {% post_url 2008-09-03-vmware-esx-35-u2-validated-via-svvp %}
+[1]: {{< relref "2008-09-03-vmware-esx-35-u2-validated-via-svvp.md" >}}

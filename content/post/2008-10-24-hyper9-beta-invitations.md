@@ -21,4 +21,4 @@ Please keep in mind that Hyper9 does have some prerequisites that are required, 
 
 Rich over at VM /ETC has [some screenshots and good coverage](http://vmetc.com/2008/10/23/first-look-at-hyper9-beta-for-vm-etc-readers/) of the product, and I believe that he will have a few beta invitations as well. Good luck!
 
-[1]: {% post_url 2008-09-16-todays-vendor-meetings %}
+[1]: {{< relref "2008-09-16-todays-vendor-meetings.md" >}}

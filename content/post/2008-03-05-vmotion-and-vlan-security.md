@@ -69,5 +69,5 @@ More information and discussion about Xensploit---and protecting against Xensplo
 
 **UPDATE:** I've updated the wording above to more properly reflect the goal behind the use of the `switchport mode access` command, and when it should be used. Colin, thanks for the feedback and clarification!
 
-[1]: {% post_url 2007-11-13-esx-server-and-the-native-vlan %}
-[2]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
+[1]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}
+[2]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}

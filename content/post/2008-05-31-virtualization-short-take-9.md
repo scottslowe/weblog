@@ -40,4 +40,4 @@ Here are some virtualization links I found interesting over the last few days:
 
 Well, that's it for now. If you have links that you'd like to share with me or other readers, feel free to add them in the comments below or put them in my del.icio.us inbox. Thanks for reading!
 
-[1]: {% post_url 2007-12-04-calculating-vmware-ha-failover-capacity %}
+[1]: {{< relref "2007-12-04-calculating-vmware-ha-failover-capacity.md" >}}

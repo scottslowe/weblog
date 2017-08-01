@@ -45,12 +45,12 @@ The next few weeks will be interesting to watch; in particular, I'm interested t
 
 [Its here! Windows Server 2008 Hyper-V is available for download](http://blogs.technet.com/stbnewsbytes/archive/2008/06/26/it-s-here-windows-server-2008-hyper-v-is-available-for-download.aspx)
 
-[1]: {% post_url 2008-06-10-vir367-hyper-v-security-and-best-practices %}
-[2]: {% post_url 2008-06-11-vir250-advanced-storage-connectivity-for-vms %}
-[3]: {% post_url 2008-06-12-vir358-hyper-v-architecture-scenarios-and-networking %}
-[4]: {% post_url 2008-06-12-significant-networking-problem-with-hyper-v %}
-[5]: {% post_url 2008-06-22-hyper-v-clustering-scenarios %}
-[6]: {% post_url 2008-06-23-more-on-hyper-v-and-nic-teaming %}
-[7]: {% post_url 2008-06-11-vir253-microsoft-system-center-vmm-2008-part-1-of-2 %}
-[8]: {% post_url 2008-06-11-vir360-microsoft-system-center-vmm-2008-part-2-of-2 %}
-[9]: {% post_url 2008-06-12-vir350-system-center-vmm-advanced-integration %}
+[1]: {{< relref "2008-06-10-vir367-hyper-v-security-and-best-practices.md" >}}
+[2]: {{< relref "2008-06-11-vir250-advanced-storage-connectivity-for-vms.md" >}}
+[3]: {{< relref "2008-06-12-vir358-hyper-v-architecture-scenarios-and-networking.md" >}}
+[4]: {{< relref "2008-06-12-significant-networking-problem-with-hyper-v.md" >}}
+[5]: {{< relref "2008-06-22-hyper-v-clustering-scenarios.md" >}}
+[6]: {{< relref "2008-06-23-more-on-hyper-v-and-nic-teaming.md" >}}
+[7]: {{< relref "2008-06-11-vir253-microsoft-system-center-vmm-2008-part-1-of-2.md" >}}
+[8]: {{< relref "2008-06-11-vir360-microsoft-system-center-vmm-2008-part-2-of-2.md" >}}
+[9]: {{< relref "2008-06-12-vir350-system-center-vmm-advanced-integration.md" >}}

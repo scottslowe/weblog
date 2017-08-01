@@ -29,4 +29,4 @@ So, here are some changes/updates to the spouse activities:
 
 To help get the word out about these updates, I'll post a tweet to Twitter about this, and Crystal is planning on sending out an e-mail to her list as well.
 
-[1]: {% post_url 2008-08-20-vmworld-2008-spouse-activities-schedule %}
+[1]: {{< relref "2008-08-20-vmworld-2008-spouse-activities-schedule.md" >}}

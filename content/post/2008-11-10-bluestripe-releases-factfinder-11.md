@@ -25,4 +25,4 @@ Improvements in the new version include:
 
 The full press release is available [here as a PDF](http://www.bluestripe.com/intranet/downloadManagerControl.php?mode=getFile&elementID=380&type=5&atomID=164).
 
-[1]: {% post_url 2008-09-16-todays-vendor-meetings %}
+[1]: {{< relref "2008-09-16-todays-vendor-meetings.md" >}}

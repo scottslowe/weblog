@@ -39,4 +39,4 @@ Last week I provided a list of virtualization-related items that had made their 
 
 That's it for this time around, but feel free to share any interesting links and your thoughts on them in the comments!
 
-[1]: {% post_url 2007-12-05-managing-lun-space-requirements-with-netapp-storage %}
+[1]: {{< relref "2007-12-05-managing-lun-space-requirements-with-netapp-storage.md" >}}

@@ -25,4 +25,4 @@ Anyway, that's why VMware doesn't pay me to think. In fact, they don't pay me at
 
 **UPDATE:** I'm writing a book on vSphere! [Check out the details here.][1]
 
-[1]: {% post_url 2009-04-21-mastering-vmware-vsphere-40 %}
+[1]: {{< relref "2009-04-21-mastering-vmware-vsphere-40.md" >}}

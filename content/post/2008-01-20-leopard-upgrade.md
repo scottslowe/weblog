@@ -37,5 +37,5 @@ Spaces is pretty cool; it's nice to have virtual desktops back with Mac OS X aga
 
 I'll post more information as I continue to get accustomed to Leopard; in the meantime, I'd love to hear any feedback from other Leopard users on your experiences. Feel free to put your feedback in the comments below!
 
-[1]: {% post_url 2005-09-30-virtual-desktops-on-mac-os-x %}
-[2]: {% post_url 2007-03-18-virtuedesktops-to-cease-development %}
+[1]: {{< relref "2005-09-30-virtual-desktops-on-mac-os-x.md" >}}
+[2]: {{< relref "2007-03-18-virtuedesktops-to-cease-development.md" >}}

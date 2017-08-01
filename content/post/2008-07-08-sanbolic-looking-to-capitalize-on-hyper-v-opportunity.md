@@ -23,4 +23,4 @@ Kayo FS is described as "VMFS for Hyper-V," providing file level shared access t
 
 The introduction of Kayo FS also removes the key objection to the use of Melio FS for Hyper-V deployments: price. Kayo FS will be priced much lower than Melio FS; this means organizations adopting Hyper-V will be much more likely to swallow the cost of Kayo FS vs. Melio FS.
 
-[1]: {% post_url 2008-06-16-melio-fs-hyper-v-and-vmware-esx %}
+[1]: {{< relref "2008-06-16-melio-fs-hyper-v-and-vmware-esx.md" >}}

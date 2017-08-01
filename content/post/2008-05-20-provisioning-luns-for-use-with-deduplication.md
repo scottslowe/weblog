@@ -22,4 +22,4 @@ The most common configurations I've seen are configurations D (LUN not space res
 
 The only things we need now are for NetApp to a) remove the volume size limitations and b) get us deduplication at the aggregate level. Then we'd really be set!
 
-[1]: {% post_url 2008-04-24-using-netapp-deduplication-with-block-storage %}
+[1]: {{< relref "2008-04-24-using-netapp-deduplication-with-block-storage.md" >}}
