@@ -96,14 +96,14 @@ Given the limitation, I can imagine that a natural question to ask would be, "Wh
 As always, courteous comments are welcome, so feel free to add your questions, thoughts, corrections, or clarifications in the comments below.
 
 
-[1]: {% post_url 2013-02-07-looking-ahead-my-2013-projects %}
-[2]: {% post_url 2013-01-16-building-libvirt-1-0-1-rpms-for-centos-6-3 %}
-[3]: {% post_url 2013-01-22-using-mock-to-build-sanlock-2-4-rpms-for-centos-6-3 %}
-[4]: {% post_url 2013-01-22-using-mock-to-build-libssh2-1-4-1-rpms-for-centos-6-3 %}
-[5]: {% post_url 2013-01-22-using-mock-to-build-libvirt-1-0-1-rpms-for-centos-6-3 %}
-[6]: {% post_url 2013-01-29-puppet-user-accounts-and-configuration-files %}
-[7]: {% post_url 2012-10-04-some-insight-into-open-vswitch-configuration %}
-[8]: {% post_url 2012-10-19-link-aggregation-and-lacp-with-open-vswitch %}
-[9]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
-[10]: {% post_url 2012-10-30-running-host-management-on-open-vswitch %}
-[11]: {% post_url 2012-10-31-layer-3-routing-with-open-vswitch %}
+[1]: {{< relref "2013-02-07-looking-ahead-my-2013-projects.md" >}}
+[2]: {{< relref "2013-01-16-building-libvirt-1-0-1-rpms-for-centos-6-3.md" >}}
+[3]: {{< relref "2013-01-22-using-mock-to-build-sanlock-2-4-rpms-for-centos-6-3.md" >}}
+[4]: {{< relref "2013-01-22-using-mock-to-build-libssh2-1-4-1-rpms-for-centos-6-3.md" >}}
+[5]: {{< relref "2013-01-22-using-mock-to-build-libvirt-1-0-1-rpms-for-centos-6-3.md" >}}
+[6]: {{< relref "2013-01-29-puppet-user-accounts-and-configuration-files.md" >}}
+[7]: {{< relref "2012-10-04-some-insight-into-open-vswitch-configuration.md" >}}
+[8]: {{< relref "2012-10-19-link-aggregation-and-lacp-with-open-vswitch.md" >}}
+[9]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}
+[10]: {{< relref "2012-10-30-running-host-management-on-open-vswitch.md" >}}
+[11]: {{< relref "2012-10-31-layer-3-routing-with-open-vswitch.md" >}}

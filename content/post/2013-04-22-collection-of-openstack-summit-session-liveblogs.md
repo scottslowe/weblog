@@ -34,11 +34,11 @@ I had the pleasure of attending the OpenStack Summit in Portland, OR last week. 
 If anyone has any other liveblog sessions that should be added to this list, drop me a comment and let me know.
 
 
-[1]: {% post_url 2013-04-15-openstack-summit-2013-getting-from-grizzly-to-havana-a-devops-upgrade-pattern %}
-[2]: {% post_url 2013-04-15-openstack-summit-2013-nicira-nvp-deep-dive %}
-[3]: {% post_url 2013-04-15-openstack-summit-2013-considerations-for-building-a-private-cloud-folsom-update %}
-[4]: {% post_url 2013-04-15-openstack-summit-2013-building-ha-openstack-with-puppet-in-20-minutes %}
-[5]: {% post_url 2013-04-16-openstack-summit-2013-openstack-capacity-planning %}
-[6]: {% post_url 2013-04-16-openstack-summit-2013-networking-in-the-cloud-an-sdn-primer %}
-[7]: {% post_url 2013-04-17-openstack-summit-2013-openstack-back-to-the-enterprise-keep-calm-and-boldly-go-on %}
-[8]: {% post_url 2013-04-17-openstack-summit-2013-openstack-high-availability-in-grizzly-and-beyond %}
+[1]: {{< relref "2013-04-15-openstack-summit-2013-getting-from-grizzly-to-havana-a-devops-upgrade-pattern.md" >}}
+[2]: {{< relref "2013-04-15-openstack-summit-2013-nicira-nvp-deep-dive.md" >}}
+[3]: {{< relref "2013-04-15-openstack-summit-2013-considerations-for-building-a-private-cloud-folsom-update.md" >}}
+[4]: {{< relref "2013-04-15-openstack-summit-2013-building-ha-openstack-with-puppet-in-20-minutes.md" >}}
+[5]: {{< relref "2013-04-16-openstack-summit-2013-openstack-capacity-planning.md" >}}
+[6]: {{< relref "2013-04-16-openstack-summit-2013-networking-in-the-cloud-an-sdn-primer.md" >}}
+[7]: {{< relref "2013-04-17-openstack-summit-2013-openstack-back-to-the-enterprise-keep-calm-and-boldly-go-on.md" >}}
+[8]: {{< relref "2013-04-17-openstack-summit-2013-openstack-high-availability-in-grizzly-and-beyond.md" >}}

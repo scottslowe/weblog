@@ -102,4 +102,4 @@ It's such a simple solution I can't believe I didn't see it at first, and when i
 As always, I welcome feedback from readers, so feel free to weigh in with questions, clarifications, or corrections. Courteous comments are always welcome!
 
 
-[1]: {% post_url 2012-11-25-using-puppet-for-account-management %}
+[1]: {{< relref "2012-11-25-using-puppet-for-account-management.md" >}}

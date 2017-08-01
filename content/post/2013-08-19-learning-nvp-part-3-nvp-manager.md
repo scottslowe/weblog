@@ -105,5 +105,5 @@ At this point, you now have a 3-node cluster of NVP controllers and an instance 
 
 Until then, I encourage everyone to post any questions, suggestions, or clarifications in the comments below. Courteous comments are always welcome.
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
-[2]: {% post_url 2013-08-16-learning-nvp-part-2-nvp-controllers %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}
+[2]: {{< relref "2013-08-16-learning-nvp-part-2-nvp-controllers.md" >}}

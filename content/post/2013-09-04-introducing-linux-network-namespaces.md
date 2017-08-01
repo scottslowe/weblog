@@ -111,5 +111,5 @@ Sorry for the confusion!
 
 
 
-[1]: {% post_url 2013-05-29-a-quick-introduction-to-linux-policy-routing %}
-[2]: {% post_url 2013-05-30-a-use-case-for-policy-routing-with-kvm-and-open-vswitch %}
+[1]: {{< relref "2013-05-29-a-quick-introduction-to-linux-policy-routing.md" >}}
+[2]: {{< relref "2013-05-30-a-use-case-for-policy-routing-with-kvm-and-open-vswitch.md" >}}

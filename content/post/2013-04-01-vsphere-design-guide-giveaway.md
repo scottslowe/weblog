@@ -30,4 +30,4 @@ There are a few contest rules you'll want to note:
 
 Aside from the limitation to continental US residents only, this contest is open to anyone, so don't hesitate---enter today!
 
-[1]: {% post_url 2013-03-19-announcing-vmware-vsphere-design-2nd-edition %}
+[1]: {{< relref "2013-03-19-announcing-vmware-vsphere-design-2nd-edition.md" >}}

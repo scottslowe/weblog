@@ -32,4 +32,4 @@ Good friend (and [now colleague][1]) John Troyer asked me via e-mail if I had a 
 
 Naturally, any list like this is incomplete (my apologies if you weren't included, I'm sure it was an oversight not an intentional omission!), so I invite readers to share resources they've found useful in the comments below. Courteous comments are always welcome, although I do ask for disclosure of vendor affiliations where applicable.
 
-[1]: {% post_url 2013-01-25-new-year-new-challenges-new-opportunities %}
+[1]: {{< relref "2013-01-25-new-year-new-challenges-new-opportunities.md" >}}

@@ -77,5 +77,5 @@ There are a number of protocols involved in link aggregation; the most common pr
 
 That's probably enough information for now. If you have any questions about any of the information I've presented here, please feel free to speak up in the comments. I welcome all courteous comments, so join in the discussion!
 
-[1]: {% post_url 2013-08-12-introduction-to-networking-part-1-the-basics %}
-[2]: {% post_url 2012-07-03-vsphere-on-nfs-design-considerations-presentation %}
+[1]: {{< relref "2013-08-12-introduction-to-networking-part-1-the-basics.md" >}}
+[2]: {{< relref "2012-07-03-vsphere-on-nfs-design-considerations-presentation.md" >}}

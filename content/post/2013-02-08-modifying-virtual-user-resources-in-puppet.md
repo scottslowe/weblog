@@ -60,5 +60,5 @@ Yes, I could modify the `accounts::virtual` class to include supplementary group
 Thoughts? Ideas? I'd love to hear your feedback, so speak up in the comments below.
 
 
-[1]: {% post_url 2012-11-25-using-puppet-for-account-management %}
-[2]: {% post_url 2012-07-05-using-puppet-with-multiple-operating-systems %}
+[1]: {{< relref "2012-11-25-using-puppet-for-account-management.md" >}}
+[2]: {{< relref "2012-07-05-using-puppet-with-multiple-operating-systems.md" >}}

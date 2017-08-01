@@ -44,5 +44,5 @@ Then, because it's all written in Markdown, I convert the post to HTML and actua
 
 And that's it! That's the "mystery" behind the Technology Short Take articles. Feel free to post any questions or thoughts you have about my workflow and tools in the comments below. Courteous comments are always welcome.
 
-[1]: {% post_url 2012-12-06-technology-short-take-27 %}
-[2]: {% post_url 2010-05-02-my-current-getting-things-done-setup %}
+[1]: {{< relref "2012-12-06-technology-short-take-27.md" >}}
+[2]: {{< relref "2010-05-02-my-current-getting-things-done-setup.md" >}}

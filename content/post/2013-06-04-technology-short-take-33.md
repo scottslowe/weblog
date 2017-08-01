@@ -99,4 +99,4 @@ Welcome to Technology Short Take #33, the latest in my irregularly-published ser
 
 Time to wrap this up for now; the rest will have to wait until the next Technology Short Take. Until then, feel free to share your thoughts, questions, or rants in the comments below. Courteous comments are always welcome!
 
-[1]: {% post_url 2013-05-03-technology-short-take-32 %}
+[1]: {{< relref "2013-05-03-technology-short-take-32.md" >}}

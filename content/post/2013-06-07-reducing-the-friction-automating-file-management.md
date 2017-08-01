@@ -44,4 +44,4 @@ So what's next? Hazel has the ability to watch a file's activity (based on last 
 
 I'd love to hear any other thoughts readers might have on "reducing the friction" through automating parts of the file management process (either with Hazel or with other tools). Feel free to add your thoughts, ideas, or suggestions in the comments below.
 
-[1]: {% post_url 2013-05-31-reducing-the-friction-bbedit-to-marsedit %}
+[1]: {{< relref "2013-05-31-reducing-the-friction-bbedit-to-marsedit.md" >}}

@@ -127,6 +127,6 @@ In this particular context, it's a bit of a science experiment. However, if you 
 
 Anyway, I hope this is helpful to someone. As always, I welcome feedback and suggestions for improvement, so feel free to speak up in the comments below. Vendor disclosures, where appropriate, are greatly appreciated. Thanks!
 
-[1]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
-[2]: {% post_url 2012-10-30-running-host-management-on-open-vswitch %}
-[3]: {% post_url 2012-08-21-working-with-kvm-guests %}
+[1]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}
+[2]: {{< relref "2012-10-30-running-host-management-on-open-vswitch.md" >}}
+[3]: {{< relref "2012-08-21-working-with-kvm-guests.md" >}}

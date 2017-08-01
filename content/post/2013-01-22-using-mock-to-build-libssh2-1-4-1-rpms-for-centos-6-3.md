@@ -64,4 +64,4 @@ Assuming everything completes successfully (it did on my CentOS 6.3 VM), then yo
 
 Have fun!
 
-[1]: {% post_url 2013-01-22-using-mock-to-build-sanlock-2-4-rpms-for-centos-6-3 %}
+[1]: {{< relref "2013-01-22-using-mock-to-build-sanlock-2-4-rpms-for-centos-6-3.md" >}}

@@ -81,4 +81,4 @@ There are a great deal of other configuration options, naturally; check out `man
 
 I'll have more posts on Linux containers in the future, but this should suffice to at least help you get started. If you have any questions, any suggestions for additional resources other readers should consider, or any feedback on the post, please add your comment below. I'd love to hear from you (courteous comments are always welcome).
 
-[1]: {% post_url 2013-09-04-introducing-linux-network-namespaces %}
+[1]: {{< relref "2013-09-04-introducing-linux-network-namespaces.md" >}}

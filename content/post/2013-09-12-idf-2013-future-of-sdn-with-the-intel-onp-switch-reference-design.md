@@ -50,4 +50,4 @@ Next, Gershon reviews some additional details about the various layers of the ON
 
 At this point, Recep and Gershon provide a quick summary of the key points, and then open the session up for questions and answers.
 
-[1]: {% post_url 2012-09-12-idf-2012-day-1-summary-and-thoughts %}
+[1]: {{< relref "2012-09-12-idf-2012-day-1-summary-and-thoughts.md" >}}

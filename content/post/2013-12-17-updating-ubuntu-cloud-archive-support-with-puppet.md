@@ -37,6 +37,6 @@ As you can see, there is only one small change between the two code snippets: ch
 
 Feel free to speak up in the comments with any questions, suggestions, or corrections.
 
-[1]: {% post_url 2013-10-04-using-puppet-for-ubuntu-cloud-archive-support %}
+[1]: {{< relref "2013-10-04-using-puppet-for-ubuntu-cloud-archive-support.md" >}}
 [gist-1]: https://gist.github.com/lowescott/6827241
 [gist-2]: https://gist.github.com/lowescott/7949509

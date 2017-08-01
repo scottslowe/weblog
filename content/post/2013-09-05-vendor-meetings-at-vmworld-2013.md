@@ -63,4 +63,4 @@ My last meeting of the week was with a couple folks from [SwiftStack](http://www
 
 I really appreciate the time that each company took to meet with me and share the details of their particular solution. One key takeaway for me was that there is still lots of room for innovation. Very cool stuff is ahead of us---it's an exciting time to be in technology!
 
-[1]: {% post_url 2013-06-04-technology-short-take-33 %}
+[1]: {{< relref "2013-06-04-technology-short-take-33.md" >}}

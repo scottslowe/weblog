@@ -127,10 +127,10 @@ Once your VMs are attached to the logical network, assign IP addresses to them (
 
 There's so much more to show you yet, but I'll wrap this up here---this post is already _way_ too long. Feel free to post any questions, corrections, or clarifications in the comments below. Courteous comments (with vendor disclosure, where applicable) are always welcome!
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
-[2]: {% post_url 2013-08-16-learning-nvp-part-2-nvp-controllers %}
-[3]: {% post_url 2013-08-19-learning-nvp-part-3-nvp-manager %}
-[4]: {% post_url 2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp %}
-[5]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
-[6]: {% post_url 2012-11-12-libvirt-ovs-integration-revisited %}
-[7]: {% post_url 2012-08-21-working-with-kvm-guests %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}
+[2]: {{< relref "2013-08-16-learning-nvp-part-2-nvp-controllers.md" >}}
+[3]: {{< relref "2013-08-19-learning-nvp-part-3-nvp-manager.md" >}}
+[4]: {{< relref "2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp.md" >}}
+[5]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}
+[6]: {{< relref "2012-11-12-libvirt-ovs-integration-revisited.md" >}}
+[7]: {{< relref "2012-08-21-working-with-kvm-guests.md" >}}

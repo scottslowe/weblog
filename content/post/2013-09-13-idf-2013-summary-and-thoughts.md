@@ -61,10 +61,10 @@ Anyway, that's it for my IDF 2013 coverage. I hope that some of the information 
 
 _(Disclosure: I work for VMware, but was invited to attend IDF at Intel's expense.)_
 
-[1]: {% post_url 2013-09-10-idf-2013-keynote-day-1 %}
-[2]: {% post_url 2013-09-10-idf-2013-enhancing-openstack-with-intel-technologies %}
-[3]: {% post_url 2013-09-11-idf-2013-keynote-day-2 %}
-[4]: {% post_url 2013-09-11-idf-2013-rack-scale-architecture-for-cloud %}
-[5]: {% post_url 2013-09-11-idf-2013-virtualizing-the-network-to-enable-sdi %}
-[6]: {% post_url 2013-09-12-idf-2013-future-of-sdn-with-the-intel-onp-switch-reference-design %}
-[7]: {% post_url 2013-09-12-idf-2013-enabling-nfvsdn-with-intel-onp-server-reference-design %}
+[1]: {{< relref "2013-09-10-idf-2013-keynote-day-1.md" >}}
+[2]: {{< relref "2013-09-10-idf-2013-enhancing-openstack-with-intel-technologies.md" >}}
+[3]: {{< relref "2013-09-11-idf-2013-keynote-day-2.md" >}}
+[4]: {{< relref "2013-09-11-idf-2013-rack-scale-architecture-for-cloud.md" >}}
+[5]: {{< relref "2013-09-11-idf-2013-virtualizing-the-network-to-enable-sdi.md" >}}
+[6]: {{< relref "2013-09-12-idf-2013-future-of-sdn-with-the-intel-onp-switch-reference-design.md" >}}
+[7]: {{< relref "2013-09-12-idf-2013-enabling-nfvsdn-with-intel-onp-server-reference-design.md" >}}

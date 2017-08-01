@@ -60,6 +60,6 @@ In the bullets above, I mentioned modifying the container's XML definition. In p
 
 Hopefully this post provides some additional details and information on using libvirt to connect Linux containers to OVS. If you have any questions, or if you have more information to share on this topic, please feel free to speak up in the comments below. I encourage and welcome all courteous feedback!
 
-[1]: {% post_url 2013-11-27-linux-containers-via-lxc-and-libvirt %}
-[2]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
-[3]: {% post_url 2013-11-26-lxc-open-vswitch-and-gre-tunnels %}
+[1]: {{< relref "2013-11-27-linux-containers-via-lxc-and-libvirt.md" >}}
+[2]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}
+[3]: {{< relref "2013-11-26-lxc-open-vswitch-and-gre-tunnels.md" >}}

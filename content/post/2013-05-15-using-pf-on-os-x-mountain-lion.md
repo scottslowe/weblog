@@ -151,4 +151,4 @@ Finally, it's important to note that I found a few different web sites helpful d
 It should go without saying, but I'll say it nevertheless: courteous comments are welcome! Feel free to add your thoughts, ideas, questions, or corrections below.
 
 
-[1]: {% post_url 2012-04-05-setting-up-ipfw-on-mac-os-x %}
+[1]: {{< relref "2012-04-05-setting-up-ipfw-on-mac-os-x.md" >}}

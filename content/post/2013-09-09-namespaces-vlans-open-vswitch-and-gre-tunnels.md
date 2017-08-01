@@ -112,7 +112,7 @@ However, the experiment was not a total loss. In figuring out how to tie togethe
 
 In the meantime, feel free to share your thoughts and feedback on this post. What do you think---technically interesting or not? Useful in a real-world scenario or not? All courteous comments (with vendor disclosure, where applicable) are welcome.
 
-[1]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
-[2]: {% post_url 2012-11-12-libvirt-ovs-integration-revisited %}
-[3]: {% post_url 2013-05-07-using-gre-tunnels-with-open-vswitch %}
-[4]: {% post_url 2013-09-04-introducing-linux-network-namespaces %}
+[1]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}
+[2]: {{< relref "2012-11-12-libvirt-ovs-integration-revisited.md" >}}
+[3]: {{< relref "2013-05-07-using-gre-tunnels-with-open-vswitch.md" >}}
+[4]: {{< relref "2013-09-04-introducing-linux-network-namespaces.md" >}}

@@ -92,4 +92,4 @@ Nothing this time around, but I'll stay alert for items to add next time.
 
 I suppose that's enough information for now. As always, courteous comments are welcome, so feel free to add your thoughts in the comments below. Thanks for reading!
 
-[1]: {% post_url 2013-04-22-collection-of-openstack-summit-session-liveblogs %}
+[1]: {{< relref "2013-04-22-collection-of-openstack-summit-session-liveblogs.md" >}}

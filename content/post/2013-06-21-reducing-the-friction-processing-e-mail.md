@@ -96,4 +96,4 @@ When used in conjunction with a good set of rules, I think these scripts can rea
 Of course, this is just how _I_ work, and your own workflow might be very different. I encourage you, though, to examine your workflow and see if there are ways you could "reduce the friction." I hope this post provides some ideas to help make that happen.
 
 
-[1]: {% post_url 2013-06-14-reducing-the-friction-using-keyboard-shortcuts %}
+[1]: {{< relref "2013-06-14-reducing-the-friction-using-keyboard-shortcuts.md" >}}

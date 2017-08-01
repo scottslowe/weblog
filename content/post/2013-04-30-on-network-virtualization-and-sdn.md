@@ -45,6 +45,6 @@ This lack of clarity around "what is SDN vs. what isn't SDN" is part of the reas
 
 Now, if we want to---as an industry---come up with a clearer and more precise definition of SDN, then we can revisit this discussion. In fact, I encourage you to speak up in the comments below with what you might consider would be a useful, clear, precise definition of SDN. Clear definitions and better understanding enable meaningful communication, which can only be beneficial for everyone.
 
-[1]: {% post_url 2013-04-16-network-overlays-vs-network-virtualization %}
-[2]: {% post_url 2013-01-25-new-year-new-challenges-new-opportunities %}
-[3]: {% post_url 2013-04-15-openstack-summit-2013-nicira-nvp-deep-dive %}
+[1]: {{< relref "2013-04-16-network-overlays-vs-network-virtualization.md" >}}
+[2]: {{< relref "2013-01-25-new-year-new-challenges-new-opportunities.md" >}}
+[3]: {{< relref "2013-04-15-openstack-summit-2013-nicira-nvp-deep-dive.md" >}}

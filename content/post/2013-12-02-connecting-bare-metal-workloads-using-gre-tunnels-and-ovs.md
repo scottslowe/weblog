@@ -114,8 +114,8 @@ I still see value in explaining how this works because it provides yet another e
 
 If you have any questions, I encourage you to add them in the comments below. Likewise, if I have overlooked something, made any mistakes, or if I'm just plain wrong, please speak up below (courteously, of course!). I welcome all useful/pertinent feedback and interaction.
 
-[1]: {% post_url 2013-05-07-using-gre-tunnels-with-open-vswitch %}
-[2]: {% post_url 2013-05-15-examining-open-vswitch-traffic-patterns %}
-[3]: {% post_url 2013-10-14-installing-open-vswitch-on-ubuntu-with-puppet %}
-[4]: {% post_url 2012-10-30-running-host-management-on-open-vswitch %}
-[5]: {% post_url 2013-05-29-a-quick-introduction-to-linux-policy-routing %}
+[1]: {{< relref "2013-05-07-using-gre-tunnels-with-open-vswitch.md" >}}
+[2]: {{< relref "2013-05-15-examining-open-vswitch-traffic-patterns.md" >}}
+[3]: {{< relref "2013-10-14-installing-open-vswitch-on-ubuntu-with-puppet.md" >}}
+[4]: {{< relref "2012-10-30-running-host-management-on-open-vswitch.md" >}}
+[5]: {{< relref "2013-05-29-a-quick-introduction-to-linux-policy-routing.md" >}}

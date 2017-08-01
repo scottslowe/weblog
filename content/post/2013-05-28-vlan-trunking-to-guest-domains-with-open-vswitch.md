@@ -125,5 +125,5 @@ I'll have to admit that I can't immediately think of some useful use cases for t
 
 [gist-1]: https://gist.github.com/lowescott/4057683
 [gist-2]: https://gist.github.com/lowescott/5658227
-[1]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
-[2]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
+[1]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}
+[2]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}

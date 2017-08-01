@@ -36,4 +36,4 @@ To all of you: **thank you.**
 
 The list could go on and on and on; if I didn't expressly call your name out, please don't feel bad. My point, though, is this: have you taken the time recently to thank others in your life that have contributed to your success?
 
-[1]: {% post_url 2013-08-26-announcing-mastering-vmware-vsphere-5-5 %}
+[1]: {{< relref "2013-08-26-announcing-mastering-vmware-vsphere-5-5.md" >}}

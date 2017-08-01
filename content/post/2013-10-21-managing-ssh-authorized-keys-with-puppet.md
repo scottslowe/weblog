@@ -138,5 +138,5 @@ The requirement for `Class['accounts::config']` is to ensure that various config
 I freely admit that I'm not a Puppet expert, so there might be better/faster/more efficient ways of doing this. If you _are_ a Puppet expert, please feel free to weigh in below in the comments. I welcome all courteous comments!
 
 
-[1]: {% post_url 2012-11-25-using-puppet-for-account-management %}
-[2]: {% post_url 2013-01-29-puppet-user-accounts-and-configuration-files %}
+[1]: {{< relref "2012-11-25-using-puppet-for-account-management.md" >}}
+[2]: {{< relref "2013-01-29-puppet-user-accounts-and-configuration-files.md" >}}

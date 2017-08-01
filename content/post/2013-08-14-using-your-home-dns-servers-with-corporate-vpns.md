@@ -43,4 +43,4 @@ I use this configuration myself, and I haven't run into any problems with it. Th
 
 Questions? Comments? Clarifications? Feel free to post them in the comments below, where courteous comments are not only welcome, but encouraged.
 
-[1]: {% post_url 2006-01-04-mac-os-x-and-local-domains %}
+[1]: {{< relref "2006-01-04-mac-os-x-and-local-domains.md" >}}

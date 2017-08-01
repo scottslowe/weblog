@@ -30,4 +30,4 @@ Fortunately, the reader contacted me a few days later with the solution. As it t
 
 Once the security context had been reset, the Kerberos authentication via SSH worked as expected. Thanks Tomas!
 
-[1]: {% post_url 2007-01-15-active-directory-integration-index %}
+[1]: {{< relref "2007-01-15-active-directory-integration-index.md" >}}

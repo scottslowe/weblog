@@ -67,4 +67,4 @@ The `-g` parameter is important here; I couldn't make it work without adding thi
 
 If you have any questions, corrections, or additional information to share, please feel free to speak up in the comments below.
 
-[1]: {% post_url 2012-08-21-working-with-kvm-guests %}
+[1]: {{< relref "2012-08-21-working-with-kvm-guests.md" >}}

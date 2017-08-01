@@ -133,4 +133,4 @@ Once the controller cluster is up and running, you're ready to move on to adding
 
 In the meantime, feel free to post any questions or thoughts in the comments below. Courteous comments (with vendor disclosure, where applicable) are always welcome.
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}

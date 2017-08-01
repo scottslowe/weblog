@@ -63,5 +63,5 @@ I still need to do some additional investigation and testing to see how the netw
 
 All courteous feedback and interaction is welcome, so I invite you to start (or join) the discussion via the comments below.
 
-[1]: {% post_url 2013-11-25-a-brief-introduction-to-linux-containers-with-lxc %}
-[2]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
+[1]: {{< relref "2013-11-25-a-brief-introduction-to-linux-containers-with-lxc.md" >}}
+[2]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}
