@@ -27,5 +27,5 @@ So is Layer 2 adjacency for vMotion a requirement, or not? In the end, the answe
 
 In summary, then: vMotion across two different subnets will, in fact, work, but it's not yet supported by VMware. As additional information becomes available---as Duncan indicated, the VMware KB article is going to be updated to avoid misunderstanding---I'll update this post accordingly.
 
-[1]: {% post_url 2010-06-13-the-vmotion-reality %}
-[2]: {% post_url 2010-07-12-vmotion-practicality %}
+[1]: {{< relref "2010-06-13-the-vmotion-reality.md" >}}
+[2]: {{< relref "2010-07-12-vmotion-practicality.md" >}}

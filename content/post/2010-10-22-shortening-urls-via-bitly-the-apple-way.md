@@ -50,4 +50,4 @@ Once you have the AppleScript written, you can then embed it into an Automator w
 
 Again, credit goes to the others who have blazed this trail ahead of me; I'm merely posted my version here in the event it is useful to others. Comments, feedback, and suggestions are always welcome.
 
-[1]: {% post_url 2010-10-20-shortening-urls-via-bitly-from-the-cli %}
+[1]: {{< relref "2010-10-20-shortening-urls-via-bitly-from-the-cli.md" >}}

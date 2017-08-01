@@ -62,5 +62,5 @@ Here are some additional links that I stumbled across, but for which I haven't y
 
 Well, that wraps it up for now. Thanks for reading and feel free to speak out in the comments below.
 
-[1]: {% post_url 2008-01-09-local-logins-refused-in-ad-integration-scenarios %}
-[2]: {% post_url 2007-06-22-link-state-tracking-in-blade-deployments %}
+[1]: {{< relref "2008-01-09-local-logins-refused-in-ad-integration-scenarios.md" >}}
+[2]: {{< relref "2007-06-22-link-state-tracking-in-blade-deployments.md" >}}

@@ -36,5 +36,5 @@ Here's a quick summary, then, of the configurations and the steps required:
 
 If you have any questions or comments, please let me know.
 
-[1]: {% post_url 2010-10-28-recoverpoint-and-vaai-interoperability %}
-[2]: {% post_url 2010-10-29-disabling-vaai-using-the-cli %}
+[1]: {{< relref "2010-10-28-recoverpoint-and-vaai-interoperability.md" >}}
+[2]: {{< relref "2010-10-29-disabling-vaai-using-the-cli.md" >}}

@@ -52,4 +52,4 @@ I do have a few other articles in my "things to read list" that I haven't yet go
 
 That's it for now. I hope that you've found something useful here, and---as always---I'd love to hear your thoughts in the comments below.
 
-[1]: {% post_url 2008-03-31-only-thin-provisioned-in-the-beginning %}
+[1]: {{< relref "2008-03-31-only-thin-provisioned-in-the-beginning.md" >}}

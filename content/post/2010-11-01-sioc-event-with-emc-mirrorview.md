@@ -27,4 +27,4 @@ Feel free to post any comments, questions, or clarifications below.
 
 **UPDATE:** I mention above that it's OK to ignore this event, but in reality it would be prudent to double-check the reason that this event is being logged. If the only reason this event is being generated is due to replication via MirrorView, then the event is benign and you shouldn't be terribly concerned. However, you might find that there are other factors that are generating this event, in which case you should most definitely take action. Be sure to review the VMware KB article and verify that there are not other contributing factors that might be causing this event.
 
-[1]: {% post_url 2010-09-01-ta8233-prioritizing-storage-resource-allocation-using-storage-io-control %}
+[1]: {{< relref "2010-09-01-ta8233-prioritizing-storage-resource-allocation-using-storage-io-control.md" >}}

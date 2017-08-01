@@ -47,5 +47,5 @@ While it's tremendously easy to get information from the consumption layer into 
 
 So, in a nutshell, that's the state of "Getting Things Done" on my Mac today. I'd love to hear from other Mac users on how they are using various applications and tools to help them be effective; perhaps I can learn a few tricks! Feel free to share in the comments.
 
-[1]: {% post_url 2008-02-06-getting-things-done-on-my-mac %}
-[2]: {% post_url 2008-02-16-getting-things-done-on-my-mac-part-ii %}
+[1]: {{< relref "2008-02-06-getting-things-done-on-my-mac.md" >}}
+[2]: {{< relref "2008-02-16-getting-things-done-on-my-mac-part-ii.md" >}}

@@ -32,4 +32,4 @@ And that should do it! Mac OS X will add the second drive to the RAID 1 set and 
 
 I'm still waiting on my Mac Mini to finish the rebuilding process, so I'll update this post if I discover something unusual or find that some additional steps are necessary to make everything work.
 
-[1]: {% post_url 2009-01-02-ubuntu-and-mac-os-x-integration %}
+[1]: {{< relref "2009-01-02-ubuntu-and-mac-os-x-integration.md" >}}

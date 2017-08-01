@@ -20,4 +20,4 @@ I don't know where the person who started this rumor got his information, but he
 
 Feel free to post any additional questions or courteous comments below. I'll answer all relevant questions openly and honestly.
 
-[1]: {% post_url 2008-06-25-no-not-that-scott-lowe %}
+[1]: {{< relref "2008-06-25-no-not-that-scott-lowe.md" >}}

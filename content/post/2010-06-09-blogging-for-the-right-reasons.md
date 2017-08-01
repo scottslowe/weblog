@@ -31,4 +31,4 @@ So if you're going to start a blog, fine. Do it. It's fun (hard work, but fun). 
 
 **UPDATE:** If, for whatever reason, I didn't list your name above, it doesn't mean anything! Those names just jumped out of my head as some of the many virtualization-focused blogs that I follow. In addition, I know the writers of these sites on a more personal basis than the writers of most other sites. There are so many other excellent virtualization sites that I would be remiss to try to list them all. I'll leave that to Eric Siebert!
 
-[1]: {% post_url 2010-06-05-vmware-vexpert-2010-thank-you %}
+[1]: {{< relref "2010-06-05-vmware-vexpert-2010-thank-you.md" >}}

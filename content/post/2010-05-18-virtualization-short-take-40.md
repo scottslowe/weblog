@@ -64,4 +64,4 @@ And to round out this issue of Virtualization Short Takes, here are a few "bonus
 
 That's it for now. I hope you found something useful. Feel free to share more useful links in the comments, and thanks for reading!
 
-[1]: {% post_url 2008-11-17-fcoe-versus-mr-iovhuh %}
+[1]: {{< relref "2008-11-17-fcoe-versus-mr-iovhuh.md" >}}

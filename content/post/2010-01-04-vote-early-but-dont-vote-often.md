@@ -40,15 +40,15 @@ And those are just the _virtualization-related_ posts...I've also expanded into 
 
 So, if you could find it in your hearts to vote for me, I'd certainly appreciate it. Go [vote](http://www.surveygizmo.com/s/222837/pick-your-top-10-favorite-blogs) now!
 
-[1]: {% post_url 2009-01-08-creating-a-bootable-esxi-usb-stick-on-mac-os-x %}
-[2]: {% post_url 2009-06-01-vsphere-virtual-machine-upgrade-process %}
-[3]: {% post_url 2009-05-21-vmware-vsphere-vds-vmkernel-ports-and-jumbo-frames %}
-[4]: {% post_url 2009-06-23-new-user-networking-config-guide %}
-[5]: {% post_url 2009-05-11-introduction-to-nehalem-memory %}
-[6]: {% post_url 2009-07-06-using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect %}
-[7]: {% post_url 2009-07-05-another-reason-not-to-use-pvscsi-or-vmxnet3 %}
-[8]: {% post_url 2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli %}
-[9]: {% post_url 2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli %}
-[10]: {% post_url 2009-12-02-what-is-sr-iov %}
-[11]: {% post_url 2009-08-11-why-no-multi-hop-fcoe %}
-[12]: {% post_url 2009-10-25-setting-up-fcoe-on-a-nexus-5000 %}
+[1]: {{< relref "2009-01-08-creating-a-bootable-esxi-usb-stick-on-mac-os-x.md" >}}
+[2]: {{< relref "2009-06-01-vsphere-virtual-machine-upgrade-process.md" >}}
+[3]: {{< relref "2009-05-21-vmware-vsphere-vds-vmkernel-ports-and-jumbo-frames.md" >}}
+[4]: {{< relref "2009-06-23-new-user-networking-config-guide.md" >}}
+[5]: {{< relref "2009-05-11-introduction-to-nehalem-memory.md" >}}
+[6]: {{< relref "2009-07-06-using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect.md" >}}
+[7]: {{< relref "2009-07-05-another-reason-not-to-use-pvscsi-or-vmxnet3.md" >}}
+[8]: {{< relref "2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli.md" >}}
+[9]: {{< relref "2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli.md" >}}
+[10]: {{< relref "2009-12-02-what-is-sr-iov.md" >}}
+[11]: {{< relref "2009-08-11-why-no-multi-hop-fcoe.md" >}}
+[12]: {{< relref "2009-10-25-setting-up-fcoe-on-a-nexus-5000.md" >}}

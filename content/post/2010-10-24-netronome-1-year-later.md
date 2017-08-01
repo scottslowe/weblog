@@ -25,4 +25,4 @@ Netronome's dual-pronged business model---targeting both OEMs and end users---me
 
 In the spirit of full disclosure, Netronome did not provide any consideration or compensation for this blog post; I wrote it because the technology sounded interesting and I thought it was something about which my readers might be interested in learning more.
 
-[1]: {% post_url 2009-08-04-netronome-and-io-virtualization %}
+[1]: {{< relref "2009-08-04-netronome-and-io-virtualization.md" >}}

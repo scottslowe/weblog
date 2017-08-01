@@ -59,6 +59,6 @@ Once you have Fibre Channel connectivity via the external interfaces, then confi
 
 From that point on, it's only a matter of configuring zones (see here for [help with zones on a Cisco MDS][3]) and presenting storage. Those are different posts for a different day...
 
-[1]: {% post_url 2009-10-25-setting-up-fcoe-on-a-nexus-5000 %}
-[2]: {% post_url 2009-11-27-understanding-npiv-and-npv %}
-[3]: {% post_url 2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli %}
+[1]: {{< relref "2009-10-25-setting-up-fcoe-on-a-nexus-5000.md" >}}
+[2]: {{< relref "2009-11-27-understanding-npiv-and-npv.md" >}}
+[3]: {{< relref "2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli.md" >}}

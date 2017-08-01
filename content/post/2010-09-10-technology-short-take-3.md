@@ -65,6 +65,6 @@ There were a few other links that I collected as well but didn't really have any
 
 That should do it this time around. Thanks for reading, and feel free to suggest additional articles or links that you think other readers would find useful.
 
-[1]: {% post_url 2009-08-11-why-no-multi-hop-fcoe %}
-[2]: {% post_url 2010-04-21-thinking-out-loud-what-is-multi-hop-fcoe %}
-[3]: {% post_url 2010-05-05-creating-ucs-service-profiles-part-1-networking-elements %}
+[1]: {{< relref "2009-08-11-why-no-multi-hop-fcoe.md" >}}
+[2]: {{< relref "2010-04-21-thinking-out-loud-what-is-multi-hop-fcoe.md" >}}
+[3]: {{< relref "2010-05-05-creating-ucs-service-profiles-part-1-networking-elements.md" >}}

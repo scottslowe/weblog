@@ -44,12 +44,12 @@ At this point---if everything is working correctly---then you are done and you s
 
 I hope this helps put the steps involved (all of which I've already written about) in the right order and in the right relationship to each other. If there are any questions, clarifications, or suggestions, please feel free to speak up in the comments.
 
-[1]: {% post_url 2009-08-13-getting-qlogic-gen2-cnas-working-with-esx-4 %}
-[2]: {% post_url 2009-10-25-setting-up-fcoe-on-a-nexus-5000 %}
-[3]: {% post_url 2009-11-03-fcoe-and-vlan-trunking-on-nexus-5000 %}
-[4]: {% post_url 2010-06-28-how-to-configure-npv-on-a-nexus-5000 %}
-[5]: {% post_url 2009-11-27-understanding-npiv-and-npv %}
-[6]: {% post_url 2010-11-30-san-port-channels-from-nexus-5010-to-mds-9134 %}
-[7]: {% post_url 2010-12-08-using-device-aliases-on-a-cisco-mds %}
-[8]: {% post_url 2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli %}
-[9]: {% post_url 2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli %}
+[1]: {{< relref "2009-08-13-getting-qlogic-gen2-cnas-working-with-esx-4.md" >}}
+[2]: {{< relref "2009-10-25-setting-up-fcoe-on-a-nexus-5000.md" >}}
+[3]: {{< relref "2009-11-03-fcoe-and-vlan-trunking-on-nexus-5000.md" >}}
+[4]: {{< relref "2010-06-28-how-to-configure-npv-on-a-nexus-5000.md" >}}
+[5]: {{< relref "2009-11-27-understanding-npiv-and-npv.md" >}}
+[6]: {{< relref "2010-11-30-san-port-channels-from-nexus-5010-to-mds-9134.md" >}}
+[7]: {{< relref "2010-12-08-using-device-aliases-on-a-cisco-mds.md" >}}
+[8]: {{< relref "2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli.md" >}}
+[9]: {{< relref "2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli.md" >}}

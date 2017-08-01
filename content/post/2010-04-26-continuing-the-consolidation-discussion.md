@@ -35,4 +35,4 @@ In the end, I guess my point is that both Steve and Mike have missed the point. 
 
 Courteous comments welcome!
 
-[1]: {% post_url 2010-04-03-the-view-from-the-other-side %}
+[1]: {{< relref "2010-04-03-the-view-from-the-other-side.md" >}}

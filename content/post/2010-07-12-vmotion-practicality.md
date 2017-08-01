@@ -79,5 +79,5 @@ Based on this information, I hope it's clearer that vMotion is, in fact, quite p
 
 If you still disagree (or even if you agree!), feel free to speak up in the comments. Courteous and professional comments (with full disclosure, where applicable) are always welcome.
 
-[1]: {% post_url 2010-06-13-the-vmotion-reality %}
-[2]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
+[1]: {{< relref "2010-06-13-the-vmotion-reality.md" >}}
+[2]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}

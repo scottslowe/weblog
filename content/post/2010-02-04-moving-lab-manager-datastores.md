@@ -35,4 +35,4 @@ So, if you are needing to migrate data in Lab Manager from one datastore to anot
 
 I haven't yet found any information on whether SSMove is also included in Lab Manager 4. (To be fair, I haven't really searched too hard.) If anyone knows, please speak up in the comments.
 
-[1]: {% post_url 2009-10-04-vmware-lab-manager-design-considerations %}
+[1]: {{< relref "2009-10-04-vmware-lab-manager-design-considerations.md" >}}

@@ -39,4 +39,4 @@ Taken in this context and in this view, you can now see that consolidation ratio
 
 Courteous comments are always welcome!
 
-[1]: {% post_url 2010-03-24-virtualization-short-take-37 %}
+[1]: {{< relref "2010-03-24-virtualization-short-take-37.md" >}}

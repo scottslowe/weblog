@@ -36,4 +36,4 @@ Finally, for the sake of completeness, here's how to disable the hardware-accele
 
 I'm still chasing down possible ways to restrict the use of VAAI in a more granular fashion, as using the commands above disable VAAI functionality for the entire VMware ESX/ESXi host. As soon as I have more information, I'll post it here.
 
-[1]: {% post_url 2010-10-28-recoverpoint-and-vaai-interoperability %}
+[1]: {{< relref "2010-10-28-recoverpoint-and-vaai-interoperability.md" >}}

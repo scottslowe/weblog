@@ -96,5 +96,5 @@ Welcome to Technology Short Take #9, the last Technology Short Take for 2010. In
 
 I guess it's time to wrap up now, since I have likely overwhelmed you with a panoply of data center-related tidbits. As always, I encourage your feedback, so please feel free to speak up in the comments. Thanks for reading!
 
-[1]: {% post_url 2010-11-30-san-port-channels-from-nexus-5010-to-mds-9134 %}
-[2]: {% post_url 2009-01-08-creating-a-bootable-esxi-usb-stick-on-mac-os-x %}
+[1]: {{< relref "2010-11-30-san-port-channels-from-nexus-5010-to-mds-9134.md" >}}
+[2]: {{< relref "2009-01-08-creating-a-bootable-esxi-usb-stick-on-mac-os-x.md" >}}

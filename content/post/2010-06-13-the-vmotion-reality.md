@@ -35,4 +35,4 @@ Bump the consolidation ratio up to 16:1 (still only 2:1 VM-to-core ratio on an 8
 
 Clearly, the "limitation" that a single interface on each physical host share a common VLAN isn't a limitation at all. Yes, it is a design consideration to keep in mind. But I would hardly consider it a limitation and I definitely don't think that it's preventing customers from using vMotion in their data centers today. No, Mr. Benik, there's no vMotion myth---only vMotion reality.
 
-[1]: {% post_url 2008-12-19-vmware-esx-networking-articles %}
+[1]: {{< relref "2008-12-19-vmware-esx-networking-articles.md" >}}

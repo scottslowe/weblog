@@ -60,4 +60,4 @@ Please feel free to post any questions or clarifications in the comments below. 
 
 **UPDATE:** RecoverPoint product management has clarified the behavior of the current release; see [my update post][1] for full details.
 
-[1]: {% post_url 2010-11-01-recoverpoint-and-vaai-update %}
+[1]: {{< relref "2010-11-01-recoverpoint-and-vaai-update.md" >}}

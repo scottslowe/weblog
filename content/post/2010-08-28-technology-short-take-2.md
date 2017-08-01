@@ -63,4 +63,4 @@ Welcome to Technology Short Take #2, a collection of links, thoughts, ideas, and
 
 I guess that will do it for this time around. I hope that you've found something useful and, as always, feel free to add more useful links or tidbits in the comments. Thanks for reading!
 
-[1]: {% post_url 2010-02-09-partner-exchange-2010-session-techbc0320 %}
+[1]: {{< relref "2010-02-09-partner-exchange-2010-session-techbc0320.md" >}}
