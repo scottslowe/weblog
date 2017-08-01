@@ -24,4 +24,4 @@ Normally, I wouldn't be too terribly worried about this, but I have to ask mysel
 
 So I need to ask your help. What studying techniques do you guys (and gals!) find useful? If you were in my situation---specifically, let's say you need to acquaint yourself with an entirely new set of products from a new vendor---what techniques would you use in the process? Additionally, what techniques are readers using now to help with certification exams? I have at least two very important certification exams looming on the horizon (one much closer than the other, but both very close), so any tips readers can provide are welcome. Help me become a better student!
 
-[1]: {% post_url 2009-09-15-learning-about-emc-storage %}
+[1]: {{< relref "2009-09-15-learning-about-emc-storage.md" >}}

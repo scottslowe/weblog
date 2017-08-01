@@ -25,5 +25,5 @@ Aaron's already told me that there's more in store for this series of articles, 
 
 So, if you visit bladevault.info and can't find what you're looking for, have a trip over to Aaron's [new blog home](http://blog.aarondelp.com) and look there. Farewell, BladeVault...
 
-[1]: {% post_url 2009-02-04-blades-and-virtualization-arent-mutually-exclusive-part-one-hp-power-sizing %}
-[2]: {% post_url 2009-02-07-blades-and-virtualization-arent-mutually-exclusive-part-two-ibm-power-sizing %}
+[1]: {{< relref "2009-02-04-blades-and-virtualization-arent-mutually-exclusive-part-one-hp-power-sizing.md" >}}
+[2]: {{< relref "2009-02-07-blades-and-virtualization-arent-mutually-exclusive-part-two-ibm-power-sizing.md" >}}

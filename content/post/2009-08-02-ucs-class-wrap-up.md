@@ -69,5 +69,5 @@ Last week's partner boot camp for the Cisco Unified Computing System (UCS) was v
 
 I guess that about does it for now. I'll update this post with more information as I recall/remember it over the next few days. I also encourage other readers who have attended similar UCS events to share any additional points in the comments below.
 
-[1]: {% post_url 2009-07-29-no-such-thing-as-an-end-to-end-fcoe-solution %}
-[2]: {% post_url 2009-07-30-correction-there-might-be-an-end-to-end-fcoe-solution %}
+[1]: {{< relref "2009-07-29-no-such-thing-as-an-end-to-end-fcoe-solution.md" >}}
+[2]: {{< relref "2009-07-30-correction-there-might-be-an-end-to-end-fcoe-solution.md" >}}

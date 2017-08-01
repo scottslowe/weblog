@@ -17,4 +17,4 @@ I'd like to welcome our second sponsor, [Hyper9](http://www.hyper9.com/)! As you
 
 If there are any other companies out there that may be interested in sponsoring the site, I have a few spots still remaining. Feel free to contact me if you want more information.
 
-[1]: {% post_url 2009-03-19-hyper9-goes-ga %}
+[1]: {{< relref "2009-03-19-hyper9-goes-ga.md" >}}

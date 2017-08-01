@@ -46,4 +46,4 @@ After changing the daapd.service file to the version listed above, I restarted A
 
 Still, in the event you're running into the same issue---a Windows installation of iTunes that fails to connect to a shared music library running on Firefly Media Server---then perhaps updating your Avahi configuration will correct the problem.
 
-[1]: {% post_url 2009-01-02-ubuntu-and-mac-os-x-integration %}
+[1]: {{< relref "2009-01-02-ubuntu-and-mac-os-x-integration.md" >}}

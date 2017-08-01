@@ -38,4 +38,4 @@ In summary:
 
 If there are any other subtleties or nuances I've missed, please post them in the comments below so that future readers will benefit. Thank you!
 
-[1]: {% post_url 2009-10-25-setting-up-fcoe-on-a-nexus-5000 %}
+[1]: {{< relref "2009-10-25-setting-up-fcoe-on-a-nexus-5000.md" >}}

@@ -21,4 +21,4 @@ Anyway, she is planning on organizing a set of activities during VMworld 2009 in
 
 If you are interested in helping, I know that Crystal would love to have your help. You can add a comment to this post or contact Crystal via Twitter, whichever works best for you.
 
-[1]: {% post_url 2008-08-20-vmworld-2008-spouse-activities-schedule %}
+[1]: {{< relref "2008-08-20-vmworld-2008-spouse-activities-schedule.md" >}}

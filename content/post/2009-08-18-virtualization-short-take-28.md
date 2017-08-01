@@ -55,4 +55,4 @@ That's all I have this time around for virtualization links. Along the way, I've
 
 Feel free to share your thoughts, perspectives, or other interesting/useful links in the comments. Thanks for reading!
 
-[1]: {% post_url 2009-08-02-ucs-class-wrap-up %}
+[1]: {{< relref "2009-08-02-ucs-class-wrap-up.md" >}}

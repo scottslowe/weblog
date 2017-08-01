@@ -19,4 +19,4 @@ Based on Tony's comments from [the first article][1] I know that he has a number
 
 Either way, Tony, keep up the great work. Hyperspaces is looking good!
 
-[1]: {% post_url 2008-10-28-hyperspaces %}
+[1]: {{< relref "2008-10-28-hyperspaces.md" >}}

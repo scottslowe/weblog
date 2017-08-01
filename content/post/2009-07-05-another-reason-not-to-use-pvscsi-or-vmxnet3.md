@@ -34,4 +34,4 @@ In my opinion, this is a significant enough limitation that I felt it warrants i
 
 [VMware Fault Tolerance Requirements and Limitations](http://communities.vmware.com/blogs/vmroyale/2009/05/18/vmware-fault-tolerance-requirements-and-limitations)
 
-[1]: {% post_url 2009-06-01-vsphere-virtual-machine-upgrade-process %}
+[1]: {{< relref "2009-06-01-vsphere-virtual-machine-upgrade-process.md" >}}

@@ -35,6 +35,6 @@ Think about it for a moment. In a "traditional" VMware environment, architects w
 
 So what _are_ the design considerations for Flex-10 in VMware environments, then? What would drive an architect to specify multiple FlexNICs per LOM instead of just lumping everything together in a single 10Gbps pipe? Is bandwidth the only real consideration? I'd love to hear what others think. Let me hear your thoughts in the comments---thanks!
 
-[1]: {% post_url 2009-07-06-using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect %}
-[2]: {% post_url 2009-07-09-using-multiple-vlans-with-hp-virtual-connect-flex-10 %}
-[3]: {% post_url 2009-07-09-follow-up-about-multiple-vlans-virtual-connect-and-flex-10 %}
+[1]: {{< relref "2009-07-06-using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect.md" >}}
+[2]: {{< relref "2009-07-09-using-multiple-vlans-with-hp-virtual-connect-flex-10.md" >}}
+[3]: {{< relref "2009-07-09-follow-up-about-multiple-vlans-virtual-connect-and-flex-10.md" >}}

@@ -27,4 +27,4 @@ There are a couple of nice tidbits of information in here. For example, I liked 
 
 Anyway, if you're looking for more information on storage alignment, the different levels at which it may occur, and the methods used to fix it at each of these levels, this is an excellent resource that I strongly recommend reading. Does anyone have any pointers to similar documents from other storage vendors?
 
-[1]: {% post_url 2008-12-01-4198-hyper-v-on-netapp-deep-dive %}
+[1]: {{< relref "2008-12-01-4198-hyper-v-on-netapp-deep-dive.md" >}}

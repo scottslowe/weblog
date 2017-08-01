@@ -32,6 +32,6 @@ There were folks there from HP and Intel, and they were all stumped. They had to
 
 So there you have it: you can mix Xeon 5500-based servers in with older servers running previous generations of Xeon CPUs without sacrificing the performance benefits gained from the Xeon 5500.
 
-[1]: {% post_url 2009-04-07-hps-proliant-g6-servers %}
-[2]: {% post_url 2009-06-10-articles-on-cpu-masking-in-vmware-environments %}
-[3]: {% post_url 2007-03-27-new-vmotion-boundary %}
+[1]: {{< relref "2009-04-07-hps-proliant-g6-servers.md" >}}
+[2]: {{< relref "2009-06-10-articles-on-cpu-masking-in-vmware-environments.md" >}}
+[3]: {{< relref "2007-03-27-new-vmotion-boundary.md" >}}

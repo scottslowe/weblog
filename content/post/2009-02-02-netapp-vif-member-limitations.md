@@ -27,5 +27,5 @@ Once we reconfigured the Cisco switches (these were Cisco Catalyst 3750 switches
 
 So, when creating multimode VIFs, be sure to only include NICs from add-in cards **or** the built-in NICs, but not both.
 
-[1]: {% post_url 2007-06-13-cisco-link-aggregation-and-netapp-vifs %}
-[2]: {% post_url 2008-01-08-lacp-with-cisco-switches-and-netapp-vifs %}
+[1]: {{< relref "2007-06-13-cisco-link-aggregation-and-netapp-vifs.md" >}}
+[2]: {{< relref "2008-01-08-lacp-with-cisco-switches-and-netapp-vifs.md" >}}

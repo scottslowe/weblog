@@ -20,4 +20,4 @@ Virtual I/O is getting more attention. [This press release](http://www.chelsio.c
 
 There's no mention of SR-IOV (more information on SR-IOV is available in [this post][1]), so I'm guessing that this is a proprietary technology similar to what HP is using in Virtual Connect Flex-10. The key difference with HP Virtual Connect Flex-10 and the Chelsio solution is that Flex-10 doesn't require _any_ software support in the OS or hypervisor, whereas Chelsio's solution does require software support (as does SR-IOV). Nevertheless, it's clear that I/O virtualization---even relatively simple forms of I/O virtualization such as this---is gaining more and more attention.
 
-[1]: {% post_url 2009-12-02-what-is-sr-iov %}
+[1]: {{< relref "2009-12-02-what-is-sr-iov.md" >}}

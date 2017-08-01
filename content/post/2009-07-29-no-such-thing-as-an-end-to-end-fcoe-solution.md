@@ -33,5 +33,5 @@ Either way, if you're thinking of deploying FCoE today, be sure to keep this in 
 
 Courteous comments and clarifications are welcome!
 
-[1]: {% post_url 2009-07-30-correction-there-might-be-an-end-to-end-fcoe-solution %}
-[2]: {% post_url 2009-07-27-potential-ucs-issue-northbound-fcoe-connectivity %}
+[1]: {{< relref "2009-07-30-correction-there-might-be-an-end-to-end-fcoe-solution.md" >}}
+[2]: {{< relref "2009-07-27-potential-ucs-issue-northbound-fcoe-connectivity.md" >}}

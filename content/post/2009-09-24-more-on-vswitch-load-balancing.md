@@ -51,4 +51,4 @@ If anyone has any other pertinent information or resources on this topic, please
 
 **UPDATE:** Duncan Epping pointed out [an article by Ken Cline from earlier this year](http://kensvirtualreality.wordpress.com/2009/04/05/the-great-vswitch-debatepart-3/) provides the mechanism VMware uses to determine which uplink on a vSwitch will be used. This algorithm performs an XOR operation on the Least Significant Byte (LSB) of the source and destination IP addresses, then finds the modulus of that result and the number of uplinks. Thanks, Duncan and Ken!
 
-[1]: {% post_url 2008-07-16-understanding-nic-utilization-in-vmware-esx %}
+[1]: {{< relref "2008-07-16-understanding-nic-utilization-in-vmware-esx.md" >}}

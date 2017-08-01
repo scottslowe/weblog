@@ -30,8 +30,8 @@ In the meantime, feel free to review these other articles I've written about San
 
 **UPDATE:** Sanbolic issued the official press release today (April 2, 2009; no direct link available for the press release), making the announcement about the free evaluation version of Melio FS for Windows Server 2008 R2 beta users. Visit the [Sanbolic web site](http://www.sanbolic.com/) for more information.
 
-[1]: {% post_url 2009-01-09-sanbolic-optimizes-melio-fs-adds-virtualization-support %}
-[2]: {% post_url 2008-06-16-melio-fs-hyper-v-and-vmware-esx %}
-[3]: {% post_url 2008-07-08-sanbolic-looking-to-capitalize-on-hyper-v-opportunity %}
-[4]: {% post_url 2008-09-08-sanbolic-now-providing-shared-lun-access-for-hyper-v-guests %}
-[5]: {% post_url 2009-01-09-sanbolic-optimizes-melio-fs-adds-virtualization-support %}
+[1]: {{< relref "2009-01-09-sanbolic-optimizes-melio-fs-adds-virtualization-support.md" >}}
+[2]: {{< relref "2008-06-16-melio-fs-hyper-v-and-vmware-esx.md" >}}
+[3]: {{< relref "2008-07-08-sanbolic-looking-to-capitalize-on-hyper-v-opportunity.md" >}}
+[4]: {{< relref "2008-09-08-sanbolic-now-providing-shared-lun-access-for-hyper-v-guests.md" >}}
+[5]: {{< relref "2009-01-09-sanbolic-optimizes-melio-fs-adds-virtualization-support.md" >}}

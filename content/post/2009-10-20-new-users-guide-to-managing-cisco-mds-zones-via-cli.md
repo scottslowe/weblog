@@ -58,4 +58,4 @@ I've marked the matching text in asterisks, so that you can see that the `includ
 
 Cisco MDS experts, feel free to post additional suggestions on managing zones via the CLI in the comments below so that all readers can benefit. Thanks for reading!
 
-[1]: {% post_url 2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli %}
+[1]: {{< relref "2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli.md" >}}

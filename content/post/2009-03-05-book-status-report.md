@@ -18,4 +18,4 @@ I'm also excited that a technical editor has been selected for my book. A number
 
 If you're a reader of VMwareTips.com, then, don't be too dismayed if Rick's excellent technical content slows down a bit over the next few weeks or months. It's just because I've got him busy double-checking all my stuff!
 
-[1]: {% post_url 2009-01-29-im-writing-a-book %}
+[1]: {{< relref "2009-01-29-im-writing-a-book.md" >}}

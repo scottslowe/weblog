@@ -33,4 +33,4 @@ Like everRun VM Lockstep, everRun 2G is expected to be available within the next
 
 Visit the Marathon Technologies web site for more information.
 
-[1]: {% post_url 2008-09-15-marathon-and-xenserver-ha %}
+[1]: {{< relref "2008-09-15-marathon-and-xenserver-ha.md" >}}

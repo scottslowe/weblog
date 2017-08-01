@@ -61,5 +61,5 @@ I also have a whole list of other links that I haven't had the chance to read ye
 
 I guess that's enough for now. If you have any other useful, unique, or interesting virtualization-related links, feel free to share them in the comments. Thanks for reading!
 
-[1]: {% post_url 2009-07-05-another-reason-not-to-use-pvscsi-or-vmxnet3 %}
-[2]: {% post_url 2009-12-02-what-is-sr-iov %}
+[1]: {{< relref "2009-07-05-another-reason-not-to-use-pvscsi-or-vmxnet3.md" >}}
+[2]: {{< relref "2009-12-02-what-is-sr-iov.md" >}}

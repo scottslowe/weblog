@@ -33,4 +33,4 @@ Crystal has been keeping in touch with most everyone via e-mail with this inform
 
 That's it for now. See you in San Francisco!
 
-[1]: {% post_url 2009-07-29-vmworld-2009-spouse-activities-update %}
+[1]: {{< relref "2009-07-29-vmworld-2009-spouse-activities-update.md" >}}

@@ -42,5 +42,5 @@ Welcome back to yet another Virtualization Short Take! Here is a collection of v
 
 That's all for now, folks. Stay tuned for the next installation, where I'll once again share a collection of links about virtualization. Until then, feel free to share your own links in the comments.
 
-[1]: {% post_url 2009-10-23-cutting-yourself-on-the-double-edged-sword %}
-[2]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
+[1]: {{< relref "2009-10-23-cutting-yourself-on-the-double-edged-sword.md" >}}
+[2]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}

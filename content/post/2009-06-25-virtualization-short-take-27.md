@@ -48,4 +48,4 @@ Here's Virtualization Short Take #27, a collection of news, tidbits, thoughts, a
 
 That wraps it up for this edition of Virtualization Short Takes. Feel free to share thoughts, questions, or corrections in the comments, and thanks for reading!
 
-[1]: {% post_url 2009-01-08-creating-a-bootable-esxi-usb-stick-on-mac-os-x %}
+[1]: {{< relref "2009-01-08-creating-a-bootable-esxi-usb-stick-on-mac-os-x.md" >}}

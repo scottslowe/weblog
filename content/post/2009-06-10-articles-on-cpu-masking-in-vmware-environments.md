@@ -23,6 +23,6 @@ Over the last few years I've written a few articles on CPU masking within VMware
 
 Keep in mind that almost all forms of CPU masking are **_unsupported_** by VMware, so use this information at your own risk. However, in non-production environments that don't support Enhanced VMotion Compatibility (EVC), this may be your only option.
 
-[1]: {% post_url 2006-09-25-sneaking-around-vmotion-limitations %}
-[2]: {% post_url 2006-11-23-vmotion-compatibility %}
-[3]: {% post_url 2007-06-19-more-on-cpu-masking %}
+[1]: {{< relref "2006-09-25-sneaking-around-vmotion-limitations.md" >}}
+[2]: {{< relref "2006-11-23-vmotion-compatibility.md" >}}
+[3]: {{< relref "2007-06-19-more-on-cpu-masking.md" >}}

@@ -27,5 +27,5 @@ Yesterday, Sanbolic added support for running Melio FS in guests on Citrix XenSe
 
 Clearly, Sanbolic wants to protect the value of Melio FS as Microsoft prepares to enter the clustered file system market with Cluster Shared Volumes (CSV), included in the R2 beta. It's unclear to me whether CSV is going to be limited to virtualization only, addressing the "one-VM-per-LUN" issue, or whether Microsoft will also support CSV in other applications. By optimizing Melio FS for shared access to objects like virtual disk files and by extending support to run Melio FS in VMs on all the major platforms, Sanbolic hopes to establish Melio FS as a "de facto" standard in Windows-based clustered file systems.
 
-[1]: {% post_url 2008-06-16-melio-fs-hyper-v-and-vmware-esx %}
-[2]: {% post_url 2008-09-08-sanbolic-now-providing-shared-lun-access-for-hyper-v-guests %}
+[1]: {{< relref "2008-06-16-melio-fs-hyper-v-and-vmware-esx.md" >}}
+[2]: {{< relref "2008-09-08-sanbolic-now-providing-shared-lun-access-for-hyper-v-guests.md" >}}

@@ -102,4 +102,4 @@ Here's an example 18 DIMM slot Nehalem configuration:
 
 **A:** You want to populate both sockets if performance is a concern. Adding the second processor not only makes the second set of DIMM sockets available, it also doubles the memory bandwidth.
 
-[1]: {% post_url 2009-04-07-introduction-to-nehalem-cpus %}
+[1]: {{< relref "2009-04-07-introduction-to-nehalem-cpus.md" >}}
