@@ -94,5 +94,5 @@ As always, feel free to hit me up on Twitter (or drop me an e-mail) if you have 
 [link-2]: http://www.vagrantup.com/
 [link-3]: https://github.com/ggiamarchi/vagrant-openstack-provider/
 [link-4]: {{ site.url }}/tags/#Vagrant
-[xref-1]: {% post_url 2015-09-24-using-docker-machine-with-openstack %}
-[xref-2]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
+[xref-1]: {{< relref "2015-09-24-using-docker-machine-with-openstack.md" >}}
+[xref-2]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}

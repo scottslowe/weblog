@@ -49,4 +49,4 @@ Let me close by saying, once again, I agree with many of the recommendations Tyl
 [link-4]: http://blog.codinghorror.com/commandos-infantry-and-police/
 [link-5]: http://blog.gardeviance.org/2012/06/pioneers-settlers-and-town-planners.html
 
-[xref-1]: {% post_url 2013-12-12-no-man-is-an-island %}
+[xref-1]: {{< relref "2013-12-12-no-man-is-an-island.md" >}}

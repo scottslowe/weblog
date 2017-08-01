@@ -38,7 +38,7 @@ So, that's it for my 2015 project list. Now, if I ever get around to adding the 
 
 
 
-[xref-1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[xref-2]: {% post_url 2013-01-07-looking-back-2012-project-report-card %}
-[xref-3]: {% post_url 2013-02-07-looking-ahead-my-2013-projects %}
-[xref-4]: {% post_url 2014-01-03-looking-back-2013-project-report-card %}
+[xref-1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[xref-2]: {{< relref "2013-01-07-looking-back-2012-project-report-card.md" >}}
+[xref-3]: {{< relref "2013-02-07-looking-ahead-my-2013-projects.md" >}}
+[xref-4]: {{< relref "2014-01-03-looking-back-2013-project-report-card.md" >}}

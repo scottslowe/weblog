@@ -104,7 +104,7 @@ I recommend reviewing [this article][link-8], which covers a lot of the same inf
 [link-2]: https://github.com/coreos/rkt/
 [link-3]: https://linuxcontainers.org/lxc/introduction
 [link-4]: https://linuxcontainers.org/lxd/introduction
-[link-5]: {% post_url 2013-11-25-a-brief-introduction-to-linux-containers-with-lxc %}
+[link-5]: {{< relref "2013-11-25-a-brief-introduction-to-linux-containers-with-lxc.md" >}}
 [link-6]: {{ site.url }}/tags/#LXC
 [link-7]: https://github.com/lowescott/learning-tools
 [link-8]: https://insights.ubuntu.com/2015/04/28/getting-started-with-lxd-the-container-lightervisor/

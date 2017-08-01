@@ -48,6 +48,6 @@ Thanks for another awesome year!
 [link-6]: http://shop.oreilly.com/product/0636920042082.do
 [link-7]: https://github.com/lowescott/learning-tools
 [link-8]: https://twitter.com/scott_lowe
-[xref-1]: {% post_url 2015-05-26-bootstrap-servers-ansible %}
-[xref-2]: {% post_url 2015-11-23-bootstrapping-cloud-instances-ansible %}
-[xref-3]: {% post_url 2015-12-28-next-gen-network-engineering-skills %}
+[xref-1]: {{< relref "2015-05-26-bootstrap-servers-ansible.md" >}}
+[xref-2]: {{< relref "2015-11-23-bootstrapping-cloud-instances-ansible.md" >}}
+[xref-3]: {{< relref "2015-12-28-next-gen-network-engineering-skills.md" >}}

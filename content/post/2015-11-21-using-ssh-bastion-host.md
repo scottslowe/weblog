@@ -50,4 +50,4 @@ I found [this article][link-1] to be extraordinarily helpful while working throu
 
 [link-1]: https://10mi2.wordpress.com/2015/01/14/using-ssh-through-a-bastion-host-transparently/
 [link-2]: https://kb.iu.edu/d/aews
-[xref-1]: {% post_url 2016-09-13-ssh-bastion-host-follow-up %}
+[xref-1]: {{< relref "2016-09-13-ssh-bastion-host-follow-up.md" >}}

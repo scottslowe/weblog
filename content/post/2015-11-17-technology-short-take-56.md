@@ -115,7 +115,7 @@ I'd better wrap this up now, before it gets any longer (it's already long enough
 [link-34]: http://www.virtuallyghetto.com/2015/11/docker-container-for-the-ruby-vsphere-console-rvc.html
 [link-35]: http://keepingitclassless.net/2015/10/namespaces-new-access-layer/
 [link-36]: http://captainkvm.com/2015/11/intro-to-heat-templates/
-[xref-1]: {% post_url 2013-09-04-introducing-linux-network-namespaces %}
-[xref-2]: {% post_url 2014-05-01-an-introduction-to-openstack-heat %}
-[xref-3]: {% post_url 2014-05-02-another-look-at-an-openstack-heat-template %}
-[xref-4]: {% post_url 2015-04-23-ubuntu-openstack-heat-cloud-init %}
+[xref-1]: {{< relref "2013-09-04-introducing-linux-network-namespaces.md" >}}
+[xref-2]: {{< relref "2014-05-01-an-introduction-to-openstack-heat.md" >}}
+[xref-3]: {{< relref "2014-05-02-another-look-at-an-openstack-heat-template.md" >}}
+[xref-4]: {{< relref "2015-04-23-ubuntu-openstack-heat-cloud-init.md" >}}

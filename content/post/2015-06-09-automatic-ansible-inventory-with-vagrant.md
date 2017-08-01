@@ -51,4 +51,4 @@ Pretty useful, yes?
 [link-3]: https://www.ruby-lang.org/en/
 [link-4]: http://yaml.org/
 [link-5]: https://github.com/lowescott/learning-tools
-[xref-1]: {% post_url 2015-06-08-using-vagrant-to-learn-ansible %}
+[xref-1]: {{< relref "2015-06-08-using-vagrant-to-learn-ansible.md" >}}

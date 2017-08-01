@@ -93,4 +93,4 @@ Hopefully this information is helpful to someone else out there. RouterOS is act
 [link-1]: http://wiki.mikrotik.com/wiki/Manual:CRS_examples
 [link-2]: http://routerboard.com/CRS226-24G-2SplusIN
 [link-3]: http://wiki.mikrotik.com/wiki/Main_Page
-[xref-1]: {% post_url 2010-12-22-an-introduction-to-the-vplex-cli %}
+[xref-1]: {{< relref "2010-12-22-an-introduction-to-the-vplex-cli.md" >}}

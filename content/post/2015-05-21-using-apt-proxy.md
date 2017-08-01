@@ -29,4 +29,4 @@ On the client side, there are a couple of ways to configure the system. You coul
 
 
 [link-1]: https://www.unix-ag.uni-kl.de/~bloch/acng/
-[link-2]: {% post_url 2013-10-10-using-puppet-to-configure-ubuntu-to-use-apt-cacher-ng %}
+[link-2]: {{< relref "2013-10-10-using-puppet-to-configure-ubuntu-to-use-apt-cacher-ng.md" >}}

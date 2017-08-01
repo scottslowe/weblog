@@ -168,6 +168,6 @@ Finally, I posted resources to help you follow along with this blog post in [my 
 [link-7]: http://nickapedia.com/2014/06/12/docker-vagrant-vmware-fusion-bug/
 [link-8]: https://github.com/lowescott/learning-tools
 
-[xref-1]: {% post_url 2014-03-11-a-quick-introduction-to-docker %}
-[xref-2]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
-[xref-3]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
+[xref-1]: {{< relref "2014-03-11-a-quick-introduction-to-docker.md" >}}
+[xref-2]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
+[xref-3]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}

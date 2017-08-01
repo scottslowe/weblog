@@ -65,5 +65,5 @@ I hope you've found this article helpful. If you have any questions, I would lov
 [link-4]: http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-current/man5/ssh_config.5?query=ssh%5fconfig&arch=i386
 [link-5]: https://twitter.com/scott_lowe
 [link-6]: http://www.openssh.com/txt/release-5.1
-[xref-1]: {% post_url 2015-11-21-using-ssh-bastion-host %}
-[xref-2]: {% post_url 2015-12-04-use-case-ssh-bastion-host %}
+[xref-1]: {{< relref "2015-11-21-using-ssh-bastion-host.md" >}}
+[xref-2]: {{< relref "2015-12-04-use-case-ssh-bastion-host.md" >}}

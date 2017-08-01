@@ -38,4 +38,4 @@ Hopefully this post has provided some insight and information on _when_ and _why
 [link-2]: https://github.com/coreos/etcd
 [link-3]: http://openstack.org/
 [link-4]: https://twitter.com/scott_lowe
-[xref-1]: {% post_url 2015-11-21-using-ssh-bastion-host %}
+[xref-1]: {{< relref "2015-11-21-using-ssh-bastion-host.md" >}}

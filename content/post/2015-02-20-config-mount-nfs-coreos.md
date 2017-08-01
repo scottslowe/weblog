@@ -66,7 +66,7 @@ I know this doesn't seem too complicated (and it isn't, to be honest), but I hop
 [link-5]: http://www.docker.com
 [link-6]: http://freedesktop.org/wiki/Software/systemd/
 [link-7]: https://coreos.com/docs/
-[xref-1]: {% post_url 2014-08-01-a-quick-introduction-to-coreos %}
-[xref-2]: {% post_url 2014-08-18-coreos-continued-etcd %}
-[xref-3]: {% post_url 2014-08-20-coreos-continued-fleet-and-docker %}
-[xref-4]: {% post_url 2015-02-05-vagrant-coreos-etcd-fleet-docker %}
+[xref-1]: {{< relref "2014-08-01-a-quick-introduction-to-coreos.md" >}}
+[xref-2]: {{< relref "2014-08-18-coreos-continued-etcd.md" >}}
+[xref-3]: {{< relref "2014-08-20-coreos-continued-fleet-and-docker.md" >}}
+[xref-4]: {{< relref "2015-02-05-vagrant-coreos-etcd-fleet-docker.md" >}}

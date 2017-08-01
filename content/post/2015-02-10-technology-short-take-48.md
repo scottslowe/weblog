@@ -105,4 +105,4 @@ It's time to wrap up now; this post is already longer than it probably should be
 [link-30]: http://wahlnetwork.com/category/deep-dives/vsphere-6-0-zomg/
 [link-31]: http://www.ntpro.nl/blog/categories/48-vSphere-6
 [link-32]: http://www.boche.net/blog/index.php/2014/12/29/a-common-npiv-problem-with-a-solution/
-[xref-1]: {% post_url 2014-11-07-technology-short-take-46 %}
+[xref-1]: {{< relref "2014-11-07-technology-short-take-46.md" >}}

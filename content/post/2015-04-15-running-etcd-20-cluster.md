@@ -111,4 +111,4 @@ You can find the Upstart script, machine-specific override files, a provisioning
 [link-6]: http://upstart.ubuntu.com/cookbook/#override-files
 [link-7]: https://github.com/coreos/etcd/blob/master/Documentation/clustering.md
 [link-8]: https://www.youtube.com/watch?v=duUTk8xxGbU
-[xref-1]: {% post_url 2014-08-18-coreos-continued-etcd %}
+[xref-1]: {{< relref "2014-08-18-coreos-continued-etcd.md" >}}

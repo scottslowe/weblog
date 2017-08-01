@@ -110,4 +110,4 @@ It's time to wrap up now; this post has already gotten too long. (What can I say
 [link-33]: http://blog.gampel.net/2014/12/openstack-neutron-distributed-virtual.html
 [link-34]: http://blog.gampel.net/2014/12/openstack-dvr2-floating-ips.html
 [link-35]: http://blog.gampel.net/2015/01/openstack-DVR-SNAT.html
-[xref-1]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
+[xref-1]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}

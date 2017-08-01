@@ -108,4 +108,4 @@ Anyway, that's my 2 cents. I hope you found this information to be helpful, and 
 [link-2]: https://docs.docker.com/machine/drivers/generic/
 [link-3]: https://docs.docker.com/machine/
 [link-4]: http://www.openstack.org/
-[xref-1]: {% post_url 2015-08-04-using-vagrant-docker-machine-together %}
+[xref-1]: {{< relref "2015-08-04-using-vagrant-docker-machine-together.md" >}}

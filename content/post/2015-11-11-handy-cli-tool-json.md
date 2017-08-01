@@ -92,5 +92,5 @@ Anyway, there's a ton more that you can do with `jq`, and I'm still discovering 
 [link-3]: http://www.openstack.org/
 [link-4]: https://stedolan.github.io/jq/tutorial/
 [link-5]: https://stedolan.github.io/jq/manual/
-[xref-1]: {% post_url 2013-11-08-a-non-programmers-introduction-to-json %}
-[xref-2]: {% post_url 2014-02-19-using-curl-to-interact-with-a-restful-api %}
+[xref-1]: {{< relref "2013-11-08-a-non-programmers-introduction-to-json.md" >}}
+[xref-2]: {{< relref "2014-02-19-using-curl-to-interact-with-a-restful-api.md" >}}

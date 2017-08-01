@@ -31,4 +31,4 @@ Here's hoping this is useful!
 [link-2]: http://www.vagrantup.com/
 [link-3]: {{ site.url }}/tags/#OVS
 [link-4]: https://github.com/lowescott/learning-tools
-[xref-1]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
+[xref-1]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
