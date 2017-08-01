@@ -97,10 +97,10 @@ This list is by no means comprehensive; there are **tons** more blog posts out t
 
 I guess I should wrap things up now; this post has gotten long enough. It was great to see everyone at VMworld 2012, and I'm looking forward to seeing more of my European friends in Barcelona in just a few short weeks. Thanks for reading!
 
-[1]: {% post_url 2012-08-27-vmworld-2012-keynote-day-1 %}
-[2]: {% post_url 2012-08-27-inf-vsp1423-esxtop-for-advanced-users %}
-[3]: {% post_url 2012-08-28-vmworld-2012-keynote-day-2 %}
-[4]: {% post_url 2012-08-28-app-cap2165-operating-cloud-foundry %}
-[5]: {% post_url 2012-08-28-inf-bco2655-ft-for-smp-vms-tech-preview %}
-[6]: {% post_url 2012-08-30-app-cap2956-inside-the-hadoop-machine %}
-[7]: {% post_url 2011-12-22-otv-and-vxlan-layer-3-connectivity-compared %}
+[1]: {{< relref "2012-08-27-vmworld-2012-keynote-day-1.md" >}}
+[2]: {{< relref "2012-08-27-inf-vsp1423-esxtop-for-advanced-users.md" >}}
+[3]: {{< relref "2012-08-28-vmworld-2012-keynote-day-2.md" >}}
+[4]: {{< relref "2012-08-28-app-cap2165-operating-cloud-foundry.md" >}}
+[5]: {{< relref "2012-08-28-inf-bco2655-ft-for-smp-vms-tech-preview.md" >}}
+[6]: {{< relref "2012-08-30-app-cap2956-inside-the-hadoop-machine.md" >}}
+[7]: {{< relref "2011-12-22-otv-and-vxlan-layer-3-connectivity-compared.md" >}}

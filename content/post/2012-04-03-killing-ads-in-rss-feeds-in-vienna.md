@@ -33,4 +33,4 @@ Once all this is done, save your changes, close all files, and restart Vienna. W
 
 And that should be it! It's really a pretty easy process, once you understand that you have to use a customer-contributed style (you can't do this, as far as I know, with any of the built-in stylesheets).
 
-[1]: {% post_url 2007-07-20-killing-ads-in-rss-feeds-in-netnewswire %}
+[1]: {{< relref "2007-07-20-killing-ads-in-rss-feeds-in-netnewswire.md" >}}

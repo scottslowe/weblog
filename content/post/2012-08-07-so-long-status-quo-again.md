@@ -44,4 +44,4 @@ It's a brave new world, that's for sure. Trust that I'll continue to share lots 
 
 So long, status quo (again)!
 
-[1]: {% post_url 2009-12-28-so-long-status-quo %}
+[1]: {{< relref "2009-12-28-so-long-status-quo.md" >}}

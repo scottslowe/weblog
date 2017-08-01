@@ -47,5 +47,5 @@ That removed `virbr0` from the OVS configuration, leaving only the OVS bridge th
 
 Now that my test system has both OVS and a version of libvirt that supports OVS, the next steps will be to conduct some more in-depth libvirt+OVS tests and document the results. Stay tuned!
 
-[1]: {% post_url 2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3 %}
-[2]: {% post_url 2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu %}
+[1]: {{< relref "2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3.md" >}}
+[2]: {{< relref "2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu.md" >}}

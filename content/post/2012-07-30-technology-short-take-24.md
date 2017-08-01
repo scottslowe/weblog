@@ -59,6 +59,6 @@ Welcome to Technology Short Take #24, another instance of my irregularly-publish
 
 That's it for this time around; feel free to add your own thoughts in the comments below. Courteous comments are always welcome!
 
-[1]: {% post_url 2009-11-27-understanding-npiv-and-npv %}
-[2]: {% post_url 2011-08-29-vsp3205-tech-preview-vstorage-apis %}
-[3]: {% post_url 2012-07-30-designing-vmware-infrastructure-video-training-available %}
+[1]: {{< relref "2009-11-27-understanding-npiv-and-npv.md" >}}
+[2]: {{< relref "2011-08-29-vsp3205-tech-preview-vstorage-apis.md" >}}
+[3]: {{< relref "2012-07-30-designing-vmware-infrastructure-video-training-available.md" >}}

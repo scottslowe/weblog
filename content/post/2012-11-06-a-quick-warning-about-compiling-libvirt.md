@@ -32,6 +32,6 @@ If you are considering following my instructions to compile your own binaries fo
 
 Thanks to Theron Conrey for highlighting the significance of this concern. Be sure to check out Theron's comment on [this article][1] for more information on a potential Ubuntu PPA that might help with this issue.
 
-[1]: {% post_url 2012-11-05-compiling-libvirt-1-0-0-on-ubuntu-12-04-and-12-10 %}
-[2]: {% post_url 2012-09-07-compiling-libvirt-0-10-1-on-ubuntu-12-04 %}
-[3]: {% post_url 2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3 %}
+[1]: {{< relref "2012-11-05-compiling-libvirt-1-0-0-on-ubuntu-12-04-and-12-10.md" >}}
+[2]: {{< relref "2012-09-07-compiling-libvirt-0-10-1-on-ubuntu-12-04.md" >}}
+[3]: {{< relref "2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3.md" >}}

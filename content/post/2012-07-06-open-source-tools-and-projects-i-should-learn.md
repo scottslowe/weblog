@@ -47,5 +47,5 @@ These responses are, by and large, consistent with the feedback that I received 
 
 I'd love to continue to get more feedback, so please take the time to share your thoughts on the "top 5" open source tools/projects you'd recommend for a virtualization/data center guy (like me) to stay relevant and sharp in this fast-moving industry. Courteous comments are always welcome!
 
-[1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[2]: {% post_url 2012-06-25-mid-year-project-update %}
+[1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[2]: {{< relref "2012-06-25-mid-year-project-update.md" >}}

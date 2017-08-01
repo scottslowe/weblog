@@ -117,7 +117,7 @@ In this post, I've shown you how to create libvirt virtual networks that integra
 As usual, I encourage your feedback on this article. If you have questions, thoughts, corrections, or clarifications, you are invited to speak up in the comments below.
 
 
-[1]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
-[2]: {% post_url 2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges %}
-[3]: {% post_url 2012-11-12-libvirt-ovs-integration-revisited %}
-[4]: {% post_url 2012-11-05-compiling-libvirt-1-0-0-on-ubuntu-12-04-and-12-10 %}
+[1]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}
+[2]: {{< relref "2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges.md" >}}
+[3]: {{< relref "2012-11-12-libvirt-ovs-integration-revisited.md" >}}
+[4]: {{< relref "2012-11-05-compiling-libvirt-1-0-0-on-ubuntu-12-04-and-12-10.md" >}}

@@ -24,4 +24,4 @@ Finally, I'm really glad to have a "partner in crime" with these ventures. Shann
 
 Stay tuned to here and to the meetup groups for more details on meeting schedules, speakers, and agendas. There's more coming!
 
-[1]: {% post_url 2012-07-22-seeking-feedback-on-infrastructure-coders-denver %}
+[1]: {{< relref "2012-07-22-seeking-feedback-on-infrastructure-coders-denver.md" >}}

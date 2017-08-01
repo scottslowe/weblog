@@ -38,4 +38,4 @@ While these 8 things aren't going to guarantee that my Mac (or yours, should you
 
 If you have any additional suggestions for helping keep your Mac secure, please feel free to speak up in the comments. Every suggestion can help!
 
-[1]: {% post_url 2012-04-05-setting-up-ipfw-on-mac-os-x %}
+[1]: {{< relref "2012-04-05-setting-up-ipfw-on-mac-os-x.md" >}}

@@ -45,5 +45,5 @@ From there, I was able to run `libvirtd --version` or `virsh --version` to verif
 
 Now, if only the story with Open vSwitch and CentOS 6.3 was as simplebut that is a post for another day. Until then, feel free to speak up in the comments below.
 
-[1]: {% post_url 2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu %}
-[2]: {% post_url 2012-09-06-installing-kvm-on-centos-6-3 %}
+[1]: {{< relref "2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu.md" >}}
+[2]: {{< relref "2012-09-06-installing-kvm-on-centos-6-3.md" >}}

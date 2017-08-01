@@ -21,4 +21,4 @@ Part 1 of this presentation closely mirrors the presentation that I gave in Aust
 Questions, suggestions, clarifications, or corrections are always welcome. Jump right in via the comments below!
 
 [1]: http://www.slideshare.net/lowescott/2012-0213pexbootcamppresodraftv2
-[2]: {% post_url 2012-03-05-presentation-from-australia-vmug-conferences %}
+[2]: {{< relref "2012-03-05-presentation-from-australia-vmug-conferences.md" >}}

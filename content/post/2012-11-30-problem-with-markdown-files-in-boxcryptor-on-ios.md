@@ -27,4 +27,4 @@ To see if this was an iOS-wide problem or a problem limited to BoxCryptor, I tes
 
 Given that I create the vast majority of my content in Markdown, this is a problem. If anyone has any suggestions, I'd love to hear them in the comments. Otherwise, I'll post more here as soon as I learn more or find a workaround.
 
-[1]: {% post_url 2012-11-23-using-encfs-with-dropbox-and-boxcryptor %}
+[1]: {{< relref "2012-11-23-using-encfs-with-dropbox-and-boxcryptor.md" >}}

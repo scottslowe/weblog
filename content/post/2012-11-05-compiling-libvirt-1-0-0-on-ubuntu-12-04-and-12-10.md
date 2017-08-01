@@ -44,4 +44,4 @@ That's it! Now, as others have pointed out, this will create some potential syst
 
 I have a series of new libvirt-related blog posts in the works, so stay tuned for those. In the meantime, feel free to post any questions, corrections, or clarifications in the comments below. Courteous comments are always welcome.
 
-[1]: {% post_url 2012-09-07-compiling-libvirt-0-10-1-on-ubuntu-12-04 %}
+[1]: {{< relref "2012-09-07-compiling-libvirt-0-10-1-on-ubuntu-12-04.md" >}}

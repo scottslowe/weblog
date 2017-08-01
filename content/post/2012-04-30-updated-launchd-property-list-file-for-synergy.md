@@ -40,4 +40,4 @@ Here's the updated property list file:
 
 After making the changes and rebooting, everything seems to work just fine. Thanks for the tip!
 
-[1]: {% post_url 2012-04-24-running-synergy-server-automatically-on-os-x-lion %}
+[1]: {{< relref "2012-04-24-running-synergy-server-automatically-on-os-x-lion.md" >}}

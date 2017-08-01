@@ -47,4 +47,4 @@ Johnson next transitions into a discussion of VF failover using NIC teaming soft
 
 At this point, Johnson wraps up the session with a summary of key Intel initiatives with regard to networking (optimized drivers and initiators, intelligent use of offloads, everything based on open standards) and then opens the floor to questions.
 
-[1]: {% post_url 2012-09-11-coms002-next-generation-cloud-infrastructure-with-data-plane-virtualization %}
+[1]: {{< relref "2012-09-11-coms002-next-generation-cloud-infrastructure-with-data-plane-virtualization.md" >}}

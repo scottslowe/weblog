@@ -39,5 +39,5 @@ Normally, from here you'd continue with setting up a Linux bridge, etc. I stoppe
 
 I hope this helps someone!
 
-[1]: {% post_url 2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu %}
-[2]: {% post_url 2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3 %}
+[1]: {{< relref "2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu.md" >}}
+[2]: {{< relref "2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3.md" >}}

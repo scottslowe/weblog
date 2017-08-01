@@ -41,4 +41,4 @@ The one key takeaway that I have from reading the draft is just how much the "ne
 
 Courteous comments are always welcome; please feel free to speak up in the comments! Also, please disclose affiliations where appropriate; for example, although I work for EMC, these thoughts are mine and mine alone.
 
-[1]: {% post_url 2011-12-02-examining-vxlan %}
+[1]: {{< relref "2011-12-02-examining-vxlan.md" >}}

@@ -46,4 +46,4 @@ Then, in the guest domain configuration, you reference the libvirt virtual netwo
 
 And that's it! Based on my testing, it even appears that you can make this change on the fly, without having to reboot the guest domain. However, I could be wrong---if anyone knows definitively, please speak up in the comments. Any other corrections, clarifications, or questions are also welcome in the comments below.
 
-[1]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
+[1]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}

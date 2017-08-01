@@ -65,4 +65,4 @@ With the configuration file, shell script, and property list file in place, I re
 
 So, if you're in a need to have the Synergy server run automatically on your Mac OS X system, this information should get you up and running. If you have any questions, clarifications, or suggestions for improvements, I encourage you to speak up the comments below.
 
-[1]: {% post_url 2011-11-18-some-oss-with-my-mac-part-1-synergy %}
+[1]: {{< relref "2011-11-18-some-oss-with-my-mac-part-1-synergy.md" >}}

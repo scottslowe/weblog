@@ -48,6 +48,6 @@ That's where things stand, halfway through 2012. Perhaps these goals are ambitio
 
 I welcome any suggestions, thoughts, or criticisms (courteous and constructive, of course!) in the comments below.
 
-[1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[2]: {% post_url 2012-04-06-announcement-vmware-vsphere-training-video %}
-[3]: {% post_url 2008-02-16-getting-things-done-on-my-mac-part-ii %}
+[1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[2]: {{< relref "2012-04-06-announcement-vmware-vsphere-training-video.md" >}}
+[3]: {{< relref "2008-02-16-getting-things-done-on-my-mac-part-ii.md" >}}

@@ -106,4 +106,4 @@ I know that there are NTP modules for Puppet that "take care" of all this sort o
 
 As always, courteous comments are welcome. Feel free to speak up below!
 
-[1]: {% post_url 2012-07-05-using-puppet-with-multiple-operating-systems %}
+[1]: {{< relref "2012-07-05-using-puppet-with-multiple-operating-systems.md" >}}
