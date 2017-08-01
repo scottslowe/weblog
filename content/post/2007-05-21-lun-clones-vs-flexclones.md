@@ -43,4 +43,4 @@ For short-term scenarios, LUN cloning works well and is, as some have pointed ou
 
 I hope this helps clear up some of the differences between using LUN clones and using FlexClones. Add your comments or questions below.
 
-[1]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
+[1]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}

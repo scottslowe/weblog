@@ -37,4 +37,4 @@ In summary, Mendel believes that the benefits of virtualization are only startin
 
 No announcements on VMware Server, though, which was expected by more than a few people.
 
-[1]: {% post_url 2006-11-08-vmworld-2006-day-2-keynote %}
+[1]: {{< relref "2006-11-08-vmworld-2006-day-2-keynote.md" >}}

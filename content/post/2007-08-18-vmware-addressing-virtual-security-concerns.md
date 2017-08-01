@@ -24,5 +24,5 @@ As pointed out in almost all of the articles referenced above, it is anticipated
 
 If VMware does indeed provide the ability for third-party vendors to provide virtual switches for ESX Server and incorporates the Determina technologies into vmKernel, I believe they will have addressed almost all of the security concerns that many people have with highly virtualized environments. Combine this with the [patching solution that will supposedly be included in ESX Server 3.1](http://www.virtualization.info/2007/08/vmware-partners-with-shavlik-for-new.html) (as reported on virtualization.info), and organizations have some compelling security reasons why they **should** virtualize instead of why they should not virtualize.
 
-[1]: {% post_url 2007-03-14-virtual-security-concerns %}
-[2]: {% post_url 2007-07-29-cisco-switches-on-vmware %}
+[1]: {{< relref "2007-03-14-virtual-security-concerns.md" >}}
+[2]: {{< relref "2007-07-29-cisco-switches-on-vmware.md" >}}

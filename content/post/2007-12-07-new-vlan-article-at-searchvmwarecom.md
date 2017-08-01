@@ -27,5 +27,5 @@ Read the [full article](http://searchvmware.techtarget.com/tip/0,289483,sid179_g
 
 Between this latest VLAN article, an [earlier VLAN article](http://searchvmware.techtarget.com/tip/0,289483,sid179_gci1280449,00.html) published on SearchVMware.com, a [VLAN article published here][1] on my site, and the latest [discussion of the use of the native VLAN][2], I'm trying to make sure everyone has the information they need to understand and use VLANs in their VI3 implementation. If there are other networking-related articles you'd like to see, please shoot me an e-mail and let me know, or post your ideas/suggestions in the comments below. Thanks!
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2007-11-13-esx-server-and-the-native-vlan %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}

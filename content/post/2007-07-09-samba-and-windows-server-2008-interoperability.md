@@ -25,5 +25,5 @@ So when it came time to start working on integrating Linux or Solaris into Activ
 
 This [thread on the Samba mailing list](http://www.nabble.com/SPNEGO-in-Samba---Longhorn-Server-interop-issues...-t4021562.html) provides some additional information, and this [Google search](http://www.google.com/search?hl=en&q=not_defined_in_RFC4178&btnG=Search) turns up a few hits that also provide additional information on the problem. Until this particular issue is resolved, we won't be able to use the `net ads join` commands (and potentially some others as well) against Active Directory domains running on Windows Server 2008. Looks like it's back to `ktpass.exe` again!
 
-[1]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
-[2]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
+[1]: {{< relref "2007-04-25-solaris-10-ad-integration-version-3.md" >}}
+[2]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}

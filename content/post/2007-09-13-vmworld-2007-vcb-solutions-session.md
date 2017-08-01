@@ -26,4 +26,4 @@ It was stated again today that there are bad candidates for VMware snapshots---h
 
 I ended up leaving the session early because it turned out that a great deal more of the information that John and Dan were presenting was identical to the information that was presented on Monday at the partner session. This is not a reflection on the presenters, or the session materials; I'd just already seen most, if not all, of the materials before.
 
-[1]: {% post_url 2007-09-10-vmworld-2007-partner-day-sessions %}
+[1]: {{< relref "2007-09-10-vmworld-2007-partner-day-sessions.md" >}}

@@ -54,6 +54,6 @@ Which of these do you suppose should be used in the DN? Full name? No. Display n
 
 How do we avoid this kind of issue? Simple: just use the UPN instead of the full DN. This syntax works just as well and avoids the potential problem of using the wrong name when building the full DN.
 
-[1]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
-[2]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
-[3]: {% post_url 2007-01-15-active-directory-integration-index %}
+[1]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}
+[2]: {{< relref "2007-04-25-solaris-10-ad-integration-version-3.md" >}}
+[3]: {{< relref "2007-01-15-active-directory-integration-index.md" >}}

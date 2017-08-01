@@ -25,4 +25,4 @@ This latest revelation comes hard on the heels of a less-than-favorable review o
 
 **UPDATE:** Thanks to some information from Ben Armstrong in the comments, it appears that the performance impact from the use of virtual IDE disks may not be as significant as suspected. Check out Ben's comment below and read the blog posting referenced in his comment for more information.
 
-[1]: {% post_url 2007-12-27-hyper-v-off-to-a-rocky-start %}
+[1]: {{< relref "2007-12-27-hyper-v-off-to-a-rocky-start.md" >}}

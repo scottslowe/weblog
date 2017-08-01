@@ -112,8 +112,8 @@ What's not addressed in this article? Password management. In this configuration
 I welcome your corrections, additions, or suggestions in the comments below.
 
 
-[1]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
-[2]: {% post_url 2006-11-21-greater-ad-integration-via-nfs-and-automounts %}
-[3]: {% post_url 2007-01-15-active-directory-integration-index %}
-[4]: {% post_url 2007-07-09-samba-and-windows-server-2008-interoperability %}
-[5]: {% post_url 2007-07-09-uac-and-ktpassexe %}
+[1]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}
+[2]: {{< relref "2006-11-21-greater-ad-integration-via-nfs-and-automounts.md" >}}
+[3]: {{< relref "2007-01-15-active-directory-integration-index.md" >}}
+[4]: {{< relref "2007-07-09-samba-and-windows-server-2008-interoperability.md" >}}
+[5]: {{< relref "2007-07-09-uac-and-ktpassexe.md" >}}

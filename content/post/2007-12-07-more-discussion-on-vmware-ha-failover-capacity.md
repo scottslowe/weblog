@@ -34,4 +34,4 @@ In addition, the tech doc recommends the use of more uniform systems in HA clust
 
 I'll be sure to post more information here as soon as I have anything new to share. Likewise, if anyone can shed some definitive information to corroborate VMwarewolf's statements---just to validate them and ensure us that we aren't creating a storm of discussion over nothing---that would be great.
 
-[1]: {% post_url 2007-12-04-calculating-vmware-ha-failover-capacity %}
+[1]: {{< relref "2007-12-04-calculating-vmware-ha-failover-capacity.md" >}}

@@ -23,4 +23,4 @@ In the short period of time since I mentioned the [Virtual Machine MKS Client](h
 
 I'm sure there's more, but that should definitely get you started. It looks like an absolutely fantastic application, but unfortunately I can't use it because it's designed to run on Windows and I primarily use a Mac. Any enterprising MKS programmers out there (per Mike Laverick, apparently there's quite the [MKS programming contest going on](http://www.rtfm-ed.co.uk/?p=408)) want to create an MKS client for Mac OS X?
 
-[1]: {% post_url 2007-07-18-assorted-vmware-tools %}
+[1]: {{< relref "2007-07-18-assorted-vmware-tools.md" >}}

@@ -59,6 +59,6 @@ Don't believe me? From the "Show Me" state? Perform this quick test yourself:
 
 Hopefully, this helps clear up some of the misunderstanding and confusion around the use of VLANs, VLAN trunks, port groups, and the native---or untagged---VLAN. Feel free to hit me up in the comments if you have any questions!
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
-[3]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
+[3]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}

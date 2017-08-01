@@ -25,4 +25,4 @@ Perhaps due to my work in [Linux/UNIX-Active Directory integration][1], but the 
 
 Any feedback or clarification from Linux/UNIX experts out there is welcome. It would be great to be able to include information on how to utilize SSHjail in conjunction with AD integration.
 
-[1]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
+[1]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}

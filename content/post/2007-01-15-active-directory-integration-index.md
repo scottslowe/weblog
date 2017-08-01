@@ -67,15 +67,15 @@ I've grouped the integration articles according to product below.
 
 As new articles are published or existing articles are revised with new versions, I'll update this post accordingly.
 
-[1]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
-[2]: {% post_url 2005-11-22-cisco-pix-vpn-and-active-directory-integration %}
-[3]: {% post_url 2005-12-06-watchguard-firebox-vpn-and-active-directory-integration %}
-[4]: {% post_url 2006-05-01-esx-server-integration-with-active-directory %}
-[5]: {% post_url 2006-10-16-no-broad-openbsd-ad-integration %}
-[6]: {% post_url 2006-12-07-8021x-integration-with-active-directory %}
-[7]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
-[8]: {% post_url 2007-07-09-linux-ad-integration-with-windows-server-2008 %}
-[9]: {% post_url 2007-03-22-sled-integration-into-active-directory %}
-[10]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
-[11]: {% post_url 2007-07-10-esx-server-ad-integration %}
-[12]: {% post_url 2007-07-02-authenticating-to-cisco-ios-via-active-directory %}
+[1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
+[2]: {{< relref "2005-11-22-cisco-pix-vpn-and-active-directory-integration.md" >}}
+[3]: {{< relref "2005-12-06-watchguard-firebox-vpn-and-active-directory-integration.md" >}}
+[4]: {{< relref "2006-05-01-esx-server-integration-with-active-directory.md" >}}
+[5]: {{< relref "2006-10-16-no-broad-openbsd-ad-integration.md" >}}
+[6]: {{< relref "2006-12-07-8021x-integration-with-active-directory.md" >}}
+[7]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}
+[8]: {{< relref "2007-07-09-linux-ad-integration-with-windows-server-2008.md" >}}
+[9]: {{< relref "2007-03-22-sled-integration-into-active-directory.md" >}}
+[10]: {{< relref "2007-04-25-solaris-10-ad-integration-version-3.md" >}}
+[11]: {{< relref "2007-07-10-esx-server-ad-integration.md" >}}
+[12]: {{< relref "2007-07-02-authenticating-to-cisco-ios-via-active-directory.md" >}}

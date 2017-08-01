@@ -24,5 +24,5 @@ The policy had been set to allow both LM and NTLM authentication; when changed t
 
 In any case, since I've been pushing the use of Samba in my [latest integration instructions][1] (Solaris version [here][2]), I thought it might be prudent to mention this feedback. In the event you start seeing some strange delays in your Linux authentication requests, check the Local Security Policy and see if LM authentication is being permitted. That might just be your culprit.
 
-[1]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
-[2]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
+[1]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}
+[2]: {{< relref "2007-04-25-solaris-10-ad-integration-version-3.md" >}}

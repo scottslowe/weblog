@@ -54,4 +54,4 @@ Take that same command and run it on the same server after disabling UAC, and it
 
 If you have a need to integrate Linux and/or UNIX systems into Active Directory for authentication, keep this in mind: you'll need to disable UAC (and reboot the server) before you can use ktpass.exe to map service principals onto accounts.
 
-[1]: {% post_url 2007-07-09-samba-and-windows-server-2008-interoperability %}
+[1]: {{< relref "2007-07-09-samba-and-windows-server-2008-interoperability.md" >}}

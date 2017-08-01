@@ -61,5 +61,5 @@ I suppose you could even do this second procedure from a CIFS client, assuming t
 
 And that's it---there you have two ways of recovering entire VMs using Network Appliance Snapshots. As always, feel free to hit me up in the comments with any questions, thoughts, corrections, or rants (just keep the rants on-topic, please!). Thanks for reading!
 
-[1]: {% post_url 2006-12-30-recovering-data-inside-vms-using-netapp-snapshots %}
-[2]: {% post_url 2007-10-08-vm-file-level-recovery-with-netapp-snapshots %}
+[1]: {{< relref "2006-12-30-recovering-data-inside-vms-using-netapp-snapshots.md" >}}
+[2]: {{< relref "2007-10-08-vm-file-level-recovery-with-netapp-snapshots.md" >}}

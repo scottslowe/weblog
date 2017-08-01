@@ -63,5 +63,5 @@ In any case, I'm sure that my schedule will change as the event draws closer and
 
 **UPDATE:** If you'd like to meet up with me at VMworld, Tuesday is _absolutely_ out of the question. As you can see, I'm already overbooked, and my schedule above still doesn't reflect a few other obligations I have on Tuesday. Ugh! In any case, you'll be able to spot me at VMworld because I'll be wearing personalized polo shirts that have my name on the right chest and my company's logo (e+) on the left chest. Feel free to come up to me and say hi!
 
-[1]: {% post_url 2006-11-23-vmotion-compatibility %}
-[2]: {% post_url 2007-06-19-more-on-cpu-masking %}
+[1]: {{< relref "2006-11-23-vmotion-compatibility.md" >}}
+[2]: {{< relref "2007-06-19-more-on-cpu-masking.md" >}}

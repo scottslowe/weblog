@@ -20,4 +20,4 @@ My family is going through a rough time right now. The details of the specific s
 
 This situation that we are going through will come to a head sometime next week. If you could, please remember my family in your prayers throughout the remainder of this week. My wife and I are praying together with the family nightly, and praying with each other every day. Our friends, our pastors (past and present), Christian co-workers, and fellow church members also have us on their prayer lists. Will you pray as well? I know that through the combined prayer and faith of the believers that my family can emerge through this situation with a powerful testimony to share with others.
 
-[1]: {% post_url 2005-05-11-welcome %}
+[1]: {{< relref "2005-05-11-welcome.md" >}}

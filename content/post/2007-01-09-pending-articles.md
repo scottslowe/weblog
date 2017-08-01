@@ -59,11 +59,11 @@ If you see something on this list you'd like to see sooner rather than later, pl
 
 Enjoy!
 
-[1]: {% post_url 2006-12-30-recovering-data-inside-vms-using-netapp-snapshots %}
-[2]: {% post_url 2006-05-01-esx-server-integration-with-active-directory %}
-[3]: {% post_url 2006-11-21-greater-ad-integration-via-nfs-and-automounts %}
-[4]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
-[5]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
-[6]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
-[7]: {% post_url 2007-05-15-netapp-flexclones-with-vmware-part-1 %}
-[8]: {% post_url 2007-05-17-netapp-flexclones-with-vmware-part-2 %}
+[1]: {{< relref "2006-12-30-recovering-data-inside-vms-using-netapp-snapshots.md" >}}
+[2]: {{< relref "2006-05-01-esx-server-integration-with-active-directory.md" >}}
+[3]: {{< relref "2006-11-21-greater-ad-integration-via-nfs-and-automounts.md" >}}
+[4]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}
+[5]: {{< relref "2007-04-25-solaris-10-ad-integration-version-3.md" >}}
+[6]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}
+[7]: {{< relref "2007-05-15-netapp-flexclones-with-vmware-part-1.md" >}}
+[8]: {{< relref "2007-05-17-netapp-flexclones-with-vmware-part-2.md" >}}

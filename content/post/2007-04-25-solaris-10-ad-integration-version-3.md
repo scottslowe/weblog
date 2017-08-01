@@ -253,8 +253,8 @@ As with previous instructions, these instructions don't address password managem
 This testing was done using Solaris 10 11/06 (Update 3) running on VMware ESX Server 3.0.1. Active Directory was running on a pair of servers with Windows Server 2003 R2, also virtual machines on ESX Server. Authentication testing was performed using SSH from a client system running Mac OS X.
 
 
-[1]: {% post_url 2006-10-16-refined-solaris-10-ad-integration-instructions %}
-[2]: {% post_url 2006-08-15-solaris-10-and-active-directory-integration %}
-[3]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
-[4]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
-[5]: {% post_url 2006-11-21-greater-ad-integration-via-nfs-and-automounts %}
+[1]: {{< relref "2006-10-16-refined-solaris-10-ad-integration-instructions.md" >}}
+[2]: {{< relref "2006-08-15-solaris-10-and-active-directory-integration.md" >}}
+[3]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
+[4]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
+[5]: {{< relref "2006-11-21-greater-ad-integration-via-nfs-and-automounts.md" >}}

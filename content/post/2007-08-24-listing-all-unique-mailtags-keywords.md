@@ -37,4 +37,4 @@ This replaces commas with a newline (the `tr` command), strips out the parenthes
 
 Useful, eh?
 
-[1]: {% post_url 2007-08-23-listing-unique-projects-used-by-mailtags %}
+[1]: {{< relref "2007-08-23-listing-unique-projects-used-by-mailtags.md" >}}

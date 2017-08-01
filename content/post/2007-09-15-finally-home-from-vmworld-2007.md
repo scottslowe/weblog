@@ -30,4 +30,4 @@ Today, we traveled home, stopping off in Chicago along the way. And, for the fir
 
 It was a great trip, and I have tons of photos from yesterday (I may upload them somewhere; I haven't decided yet), but in the end I'm glad to be home. Thanks to everyone who helped make this trip a great one!
 
-[1]: {% post_url 2007-09-10-in-san-francisco-before-vmworld %}
+[1]: {{< relref "2007-09-10-in-san-francisco-before-vmworld.md" >}}

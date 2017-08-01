@@ -35,4 +35,4 @@ Great utility, yes, but almost useless in the logout script because it won't del
 
 Of course, we could adjust the "/d:1" parameter to keep profiles around longer; that would help balance the disk space used and the time it takes to set up a new profile when a user logs in. Depending upon the usage profile in your VDI deployment, this may need to be longer.
 
-[1]: {% post_url 2007-03-27-using-fpk-in-vdi-deployments %}
+[1]: {{< relref "2007-03-27-using-fpk-in-vdi-deployments.md" >}}

@@ -20,4 +20,4 @@ I've blogged many times about Cocoalicious (starting as far back as June of 2005
 
 Personally, I'm pretty thrilled with the application as it is, and have only _one_ feature request: please, please, _PLEASE_ drop the brushed metal interface. Or at least offer us an option to toggle back and forth. I'd love to see a fresh new UI like that used by [Mail.app](http://www.apple.com/macosx/features/mail/) or [NetNewsWire](http://www.newsgator.com/NGOLProduct.aspx?ProdID=NetNewsWire), with the tags in a pane on the left and your bookmarks listed on the right, and a divider (like the one used now) to open, close, or resize the built-in browser. Combine that with a new, modern unified toolbar (not Mail.app's lozenges, please!) and perhaps incorporate some of the tag UIs that have been proposed (like [this one](http://www.tumultco.com/blog/?p=43)), and you've got yourself one killer del.icio.us client.
 
-[1]: {% post_url 2007-01-25-mac-bookmark-managers %}
+[1]: {{< relref "2007-01-25-mac-bookmark-managers.md" >}}

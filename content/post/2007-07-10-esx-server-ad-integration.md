@@ -88,6 +88,6 @@ This configuration will centralize not only authentication for the ESX Servers b
 
 Please feel free to add any corrections or suggestions for improvement in the comments below. Thanks!
 
-[1]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
-[2]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
-[3]: {% post_url 2006-09-08-ldap-based-access-control %}
+[1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
+[2]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}
+[3]: {{< relref "2006-09-08-ldap-based-access-control.md" >}}

@@ -32,4 +32,4 @@ Here are a few other links with related information:
 
 [http://apple.slashdot.org/article.pl?sid=07/10/31/1629236](http://apple.slashdot.org/article.pl?sid=07/10/31/1629236)
 
-[1]: {% post_url 2007-09-27-apple-and-vmwareor-xen %}
+[1]: {{< relref "2007-09-27-apple-and-vmwareor-xen.md" >}}

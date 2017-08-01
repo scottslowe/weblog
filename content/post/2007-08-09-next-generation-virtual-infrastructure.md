@@ -39,4 +39,4 @@ If all these features make it into the shipping product (and I haven't seen or h
 
 I heartily recommend you hop over to [Alessandro's site](http://www.virtualization.info/) and have a look at the full report. Outstanding work, Alessandro!
 
-[1]: {% post_url 2007-07-29-cisco-switches-on-vmware %}
+[1]: {{< relref "2007-07-29-cisco-switches-on-vmware.md" >}}

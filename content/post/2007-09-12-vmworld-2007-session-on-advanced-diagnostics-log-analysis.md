@@ -45,4 +45,4 @@ Shortly after this point, my laptop battery died, and so I was unable to transcr
 
 More posts are on the way, so keep reading, and keep the comments and corrections coming!
 
-[1]: {% post_url 2007-09-12-vmworld-2007-session-on-esx-patch-management %}
+[1]: {{< relref "2007-09-12-vmworld-2007-session-on-esx-patch-management.md" >}}
