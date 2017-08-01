@@ -27,4 +27,4 @@ The standard `dhclient.conf` "request" line looks something like this:
 
 Obviously, this list can be trimmed to pick up only the items that are needed by the server. Another neat trick is using the "prepend" statement; this allows the local client to use a value configured locally, then use the values passed down by the DHCP server. Check the man page for `dhclient.conf` for more detailed information.
 
-[1]: {% post_url 2006-04-03-openbsd-on-esx-server %}
+[1]: {{< relref "2006-04-03-openbsd-on-esx-server.md" >}}

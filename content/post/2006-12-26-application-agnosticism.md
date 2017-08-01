@@ -50,5 +50,5 @@ Take a moment and think about an environment utilizing a virtualization engine w
 
 So there's my thoughts. What about you? Do you buy into the idea of application agnosticism? Or do you think that virtualization on the desktop is headed in a different direction? Speak up in the comments and let me know.
 
-[1]: {% post_url 2006-12-04-macintosh-virtualization-heating-up %}
-[2]: {% post_url 2006-12-22-vmware-fusion-public-beta %}
+[1]: {{< relref "2006-12-04-macintosh-virtualization-heating-up.md" >}}
+[2]: {{< relref "2006-12-22-vmware-fusion-public-beta.md" >}}

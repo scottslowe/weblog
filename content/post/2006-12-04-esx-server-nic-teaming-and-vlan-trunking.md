@@ -101,4 +101,4 @@ I did encounter a couple of weird things during the setup of this configuration 
 
 Hopefully this information will prove useful to those of you out there trying to set up NIC teaming and/or VLAN trunking in your environment. I would recommend taking this one step at a time, not all at once like I did; this will make it easier to troubleshoot problems as you progress through the configuration.
 
-[1]: {% post_url 2006-04-17-vlans-and-port-groups %}
+[1]: {{< relref "2006-04-17-vlans-and-port-groups.md" >}}

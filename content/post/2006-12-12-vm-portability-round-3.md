@@ -35,5 +35,5 @@ Other than some USB and networking-related errors on the first boot (which were 
 
 As I pointed out in my earlier articles on VM portability, this is proof-positive that VMware's virtualization layer provides an excellent vehicle for moving workloads across hardware as well as operating systems. Although I haven't included VMware Workstation on Linux in these tests, I fully expect it would behave in the same fashion as VMware Workstation for Windows. VMware Server should also be very much like, if not identical, to VMware Workstation as well. This gives us a solution that lets us scale workloads from workstation-class hardware, to server-class hardware (but still hosted on a host OS), then to enterprise-class virtual infrastructure (on the bare metal). Good stuff!
 
-[1]: {% post_url 2006-11-29-vm-portability %}
-[2]: {% post_url 2006-12-06-vm-portability-again %}
+[1]: {{< relref "2006-11-29-vm-portability.md" >}}
+[2]: {{< relref "2006-12-06-vm-portability-again.md" >}}

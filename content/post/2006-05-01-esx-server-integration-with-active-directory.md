@@ -79,4 +79,4 @@ I learned a couple of useful tidbits from this experiment. First, it seems viabl
 
 Second, I learned that a computer object (and the whole `ktpass.exe` command to generate the keytab) may not be necessary; I'm going to go back and perform some additional testing to see if that is the case. More information will be posted here as soon as it is available.
 
-[1]: {% post_url 2006-04-27-linux-ad-integration-with-windows-server-2003-r2 %}
+[1]: {{< relref "2006-04-27-linux-ad-integration-with-windows-server-2003-r2.md" >}}

@@ -123,5 +123,5 @@ Now, upon logging in to either Solaris or Linux (I tested this via SSH), you sho
 
 I tested this procedure using Solaris 10 6/06 and CentOS 4.3. These systems were configured for Active Directory integration and native Kerberos logons via SSH. I used Windows Server 2003 R2 Standard Edition for the NFS server, and Windows Server 2003 R2 Standard Edition for the Active Directory domain controllers. All of these systems were created as virtual machines hosted on a [VMware Virtual Infrastructure 3](http://www.vmware.com/products/vi/) server farm with servers running ESX Server 3.0.1.
 
-[1]: {% post_url 2006-10-16-refined-solaris-10-ad-integration-instructions %}
-[2]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
+[1]: {{< relref "2006-10-16-refined-solaris-10-ad-integration-instructions.md" >}}
+[2]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}

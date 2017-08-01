@@ -68,4 +68,4 @@ So far, I've tested this on VMs running Windows Server 2003, Windows 2000 Server
 
 **UPDATE 2:** Thanks to an astute commenter, I've updated the article accordingly to note that bit 1 (the bits are numbered starting with 0) does not need to be masked, since it is the same between the two CPU families.
 
-[1]: {% post_url 2006-11-23-vmotion-compatibility %}
+[1]: {{< relref "2006-11-23-vmotion-compatibility.md" >}}

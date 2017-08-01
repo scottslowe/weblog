@@ -26,4 +26,4 @@ I have a variety of miscellaneous tidbits to mention, in case you haven't alread
 
 * _Virtual Security:_ Joining [Reflex Security](http://www.reflexsecurity.com/) (which [unveiled its Reflex VSA virtual appliance](http://www.reflexsecurity.com/news/reflex_vsa.php) a while ago---I hope to be able to review/demo this product soon and will provide more details here when that happens), [Astaro](http://www.astaro.com/) has [announced the Astaro Security Gateway](http://www.dabcc.com/dabcc/webapplication/aspx/dabcc.content.aspx?intPKText=1887&intPKChannel=13) for VMware. The cool part is that users are encouraged to [download a trial copy](http://www.astaro.com/vmware) from Astaro's web site.
 
-[1]: {% post_url 2006-05-03-opendocument-gets-iso-approval %}
+[1]: {{< relref "2006-05-03-opendocument-gets-iso-approval.md" >}}

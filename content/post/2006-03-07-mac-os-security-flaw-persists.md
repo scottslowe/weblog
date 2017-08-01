@@ -24,4 +24,4 @@ As a result, it is still possible to disguise a file as an innocent type while t
 
 I'll say again [what I've said before][1]: No operating system is immune to these kinds of security problems. I'm very confident that regardless of operating system---Windows, Mac OS X, or Linux---any unsuspecting user can be tricked into executing untrusted code. In the end, it all comes down to educating the users. Unfortunately, Mac users have been so indoctrinated that the Macintosh is immune to viruses and security problems that the user base in now facing an uphill climb. In that regard, at least, Windows users have a plus. (I suspect that as more and more non-technically savvy users start using Linux that the same problem will crop up there as well.)
 
-[1]: {% post_url 2006-02-21-mac-users-must-be-careful-too %}
+[1]: {{< relref "2006-02-21-mac-users-must-be-careful-too.md" >}}

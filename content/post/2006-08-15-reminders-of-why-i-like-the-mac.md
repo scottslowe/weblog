@@ -33,6 +33,6 @@ On Friday, though, I was reminded again of why I love the Mac. At one point in t
 
 Earlier that afternoon I had mounted an NFS volume hosted on a [NetApp](http://www.netapp.com/) device (again utilizing a Kerberos ticket, so no password was required) and had both NFS and CIFS volumes sitting on the Desktop. This in addition to the RDP sessions to the Windows servers, the X11 session to the Solaris server, SSH sessions to various Linux servers (including SSH tunnels), and all the other various applications running. Honestly, I can't recall being that connected to that many different systems using that many different protocols when I used Windows. (That's not a knock against Windows, just an observation.) I love the Mac!
 
-[1]: {% post_url 2005-06-20-why-i-use-a-mac %}
-[2]: {% post_url 2005-06-20-preferred-mac-os-x-applications %}
-[3]: {% post_url 2005-10-06-open-source-on-mac-os-x %}
+[1]: {{< relref "2005-06-20-why-i-use-a-mac.md" >}}
+[2]: {{< relref "2005-06-20-preferred-mac-os-x-applications.md" >}}
+[3]: {{< relref "2005-10-06-open-source-on-mac-os-x.md" >}}

@@ -27,4 +27,4 @@ Finally (as if everything else wasn't enough), I'm hoping to get to delve into [
 
 If anyone has anything specific they'd like to see me touch on, drop me a line via e-mail or add some comments. I can't guarantee I'll be able to get you the information you're seeking, but I do promise to try.
 
-[1]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
+[1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}

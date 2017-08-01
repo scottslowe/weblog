@@ -23,6 +23,6 @@ Other potential solutions include adding the support staff to the local Administ
 
 Microsoft Product Support Services is supposed to get back in touch with me in the next couple of days with some additional information. I'll post more information here as it becomes available.
 
-[1]: {% post_url 2005-09-14-another-funky-ad-issue %}
+[1]: {{< relref "2005-09-14-another-funky-ad-issue.md" >}}
 [2]: http://support.microsoft.com/default.aspx?scid=kb;en-us;905809
 [3]: http://www.exchangeserveradmin.org/ftopic24842_Could_NOT_change_mail_address_after_windows_server_2003_sp1.html

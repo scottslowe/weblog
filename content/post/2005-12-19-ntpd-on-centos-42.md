@@ -21,5 +21,5 @@ The problem is, I kept running into [issues with time synchronization][3] on the
 So I started working with CentOS 4.2 earlier this week, hoping that whatever had plagued me with the previous version wouldn't afflict me this time. Unfortunately, the exact same problem has cropped up again, and I am at a loss trying to figure out why it doesn't work. The output from `ntpq -p` indicates that communication is occurring with the desired time servers, but the NTP daemon still keeps choosing to synchronize with the local clock. SELinux is disabled, so it can't be interfering with NTP (I think that was the problem with the earlier CentOS 4.1 installation), iptables is not running (so it can't be a firewall issue), file permissions and ownership look OK---what could I be missing? If anyone has any ideas, please let me know.
 
 [1]: http://www.centos.org/
-[2]: {% post_url 2005-08-08-brief-impressions-of-centos-41 %}
-[3]: {% post_url 2005-08-16-strange-ntpd-problem-on-centos-41 %}
+[2]: {{< relref "2005-08-08-brief-impressions-of-centos-41.md" >}}
+[3]: {{< relref "2005-08-16-strange-ntpd-problem-on-centos-41.md" >}}

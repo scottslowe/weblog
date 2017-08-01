@@ -20,5 +20,5 @@ Namely describes itself as "Spotlight for applications." Summoned by a quick hot
 
 For me, this perfectly fits the functionality gap between Desktop Manager and Virtue. I initially wrote that I was [switching to Virtue][1] (or at least going to give it a try), and then later stated that I was [moving back to Desktop Manager][2] (because of a lack of Tiger compatibility with Virtue). What didn't get written is that I ended up staying with Virtue (even without Tiger compatibility---that's an issue I'll take up another day). The more I used Virtue, the more I really liked the feature set and the way the application worked. Now, with Namely, I can enjoy Virtue's virtual desktop functionality and get the easy-launch functionality I had with Desktop Manager as well. Sweet!
 
-[1]: {% post_url 2005-09-30-virtual-desktops-on-mac-os-x %}
-[2]: {% post_url 2005-10-04-moving-back-to-desktop-manager %}
+[1]: {{< relref "2005-09-30-virtual-desktops-on-mac-os-x.md" >}}
+[2]: {{< relref "2005-10-04-moving-back-to-desktop-manager.md" >}}

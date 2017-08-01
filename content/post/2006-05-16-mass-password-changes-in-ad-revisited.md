@@ -32,4 +32,4 @@ This command will query all the users in the Accounts OU of the testlab.net AD d
 
 Note that these commands work equally well against Active Directory domains running both Windows 2000 and Windows Server 2003.
 
-[1]: {% post_url 2005-12-08-mass-password-changes-in-active-directory %}
+[1]: {{< relref "2005-12-08-mass-password-changes-in-active-directory.md" >}}

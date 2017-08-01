@@ -25,5 +25,5 @@ That doesn't necessarily mean full-time ministry, and it doesn't mean just going
 
 It means letting our life(song) sing to the Lord.
 
-[1]: {% post_url 2005-09-25-lifesong-by-casting-crowns %}
+[1]: {{< relref "2005-09-25-lifesong-by-casting-crowns.md" >}}
 [2]: http://www.castingcrowns.org/

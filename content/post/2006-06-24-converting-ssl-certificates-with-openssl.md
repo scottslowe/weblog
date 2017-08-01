@@ -35,4 +35,4 @@ The final file is now ready for use with any number of Linux-based applications,
 
 **UPDATE:** It turns out this is a duplicate post, originally covered earlier [here][1]. Sorry!
 
-[1]: {% post_url 2005-12-02-certificate-conversion-using-openssl %}
+[1]: {{< relref "2005-12-02-certificate-conversion-using-openssl.md" >}}

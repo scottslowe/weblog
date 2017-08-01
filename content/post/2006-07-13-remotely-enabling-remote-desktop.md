@@ -47,5 +47,5 @@ Credit to [Daniel Petri](http://www.petri.co.il/remotely_enable_remote_desktop_o
 
 **UPDATE 2:** I had the opportunity to test the Registry change on computers that did not have Remote Desktop enabled previously. Changing the referenced Registry key immediately enables Remote Desktop; no reboot is required.
 
-[1]: {% post_url 2006-06-28-automating-static-entries-in-wins %}
-[2]: {% post_url 2006-07-06-remotely-setting-the-dns-suffix-search-order %}
+[1]: {{< relref "2006-06-28-automating-static-entries-in-wins.md" >}}
+[2]: {{< relref "2006-07-06-remotely-setting-the-dns-suffix-search-order.md" >}}

@@ -52,4 +52,4 @@ Having iSCSI-based storage eliminates one potential block to testing and demonst
 
 **UPDATE:** I corrected the command-line above to reflect that the first "I" should be uppercase, not lowercase as was previously noted. Thanks to Chauncey for catching the error!
 
-[1]: {% post_url 2006-06-27-netapp-ontap-simulator-and-esx-server %}
+[1]: {{< relref "2006-06-27-netapp-ontap-simulator-and-esx-server.md" >}}

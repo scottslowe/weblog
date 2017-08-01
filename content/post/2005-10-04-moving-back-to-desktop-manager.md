@@ -20,5 +20,5 @@ If I were a programmer, I'd probably pick up the code myself and run with it. Bu
 
 [1]: http://virtuedesktops.sourceforge.net/
 [2]: http://www.apple.com/macosx/
-[3]: {% post_url 2005-09-30-virtual-desktops-on-mac-os-x %}
+[3]: {{< relref "2005-09-30-virtual-desktops-on-mac-os-x.md" >}}
 [4]: http://desktopmanager.berlios.de/

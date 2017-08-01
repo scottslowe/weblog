@@ -20,4 +20,4 @@ According to eWeek, a security researcher has uncovered [two new flaws for Inter
 
 If you use Internet Explorer, exercise caution. Better yet, switch to Firefox.
 
-[1]: {% post_url 2006-07-02-trojan-horse-exploiting-os-x-flaw %}
+[1]: {{< relref "2006-07-02-trojan-horse-exploiting-os-x-flaw.md" >}}

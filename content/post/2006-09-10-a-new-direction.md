@@ -38,5 +38,5 @@ The conversation continued on for a few minutes, then Linda bid my wife farewell
 
 I can't see how it could be anything else. We hadn't said anything to Linda or her family about our calling. How could she have known if it wasn't the Lord? It all seems a bit too coincidental for me. For now, we are believing that it was the Lord, and preparing to get started with what He's called us to do. Keep us in your prayers.
 
-[1]: {% post_url 2006-01-30-decisions-to-be-made %}
-[2]: {% post_url 2006-08-15-who-to-believe %}
+[1]: {{< relref "2006-01-30-decisions-to-be-made.md" >}}
+[2]: {{< relref "2006-08-15-who-to-believe.md" >}}

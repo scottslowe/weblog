@@ -56,7 +56,7 @@ I was hoping that Solaris would show the same results, since my first foray with
 
 Hopefully, this new information will help some of you out there that are still struggling with TGT validation. If anyone else has found any tricks or useful tips, please be sure to post them in the comments.
 
-[1]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
-[2]: {% post_url 2006-08-15-solaris-10-and-active-directory-integration %}
-[3]: {% post_url 2006-08-10-kerberos-based-sso-with-apache %}
-[4]: {% post_url 2006-08-21-native-kerberos-authentication-with-ssh %}
+[1]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
+[2]: {{< relref "2006-08-15-solaris-10-and-active-directory-integration.md" >}}
+[3]: {{< relref "2006-08-10-kerberos-based-sso-with-apache.md" >}}
+[4]: {{< relref "2006-08-21-native-kerberos-authentication-with-ssh.md" >}}

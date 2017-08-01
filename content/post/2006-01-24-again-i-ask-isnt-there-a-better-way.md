@@ -20,4 +20,4 @@ Isn't there a better way? As IT professionals---whether we be security experts, 
 
 I suppose that's the real value behind open source software; the flaws and vulnerabilities are out there for anyone to see in the source code itself.
 
-[1]: {% post_url 2005-07-29-theres-got-to-be-a-better-way %}
+[1]: {{< relref "2005-07-29-theres-got-to-be-a-better-way.md" >}}

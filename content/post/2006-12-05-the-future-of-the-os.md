@@ -32,4 +32,4 @@ I think so, and here is where I think that Apple and [Microsoft](http://www.micr
 
 So I guess the future of the operating system depends on your perspective. If you're an operating system guy, you'll say that the OS has a bright future, and point to developments such as built-in paravirtualization and bundled hypervisors to prove your point. If you're a virtualization guy, you'll say that the OS is dead, and you'll point to developments such as third-party paravirtualization and independent hypervisors to prove your point. Which of these two is correct?
 
-[1]: {% post_url 2006-12-04-macintosh-virtualization-heating-up %}
+[1]: {{< relref "2006-12-04-macintosh-virtualization-heating-up.md" >}}

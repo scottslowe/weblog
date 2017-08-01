@@ -13,7 +13,7 @@ url: /2005/07/19/rootkit-prevention-coming-to-windows/
 wordpress_id: 55
 ---
 
-I [blogged]({% post_url 2005-06-21-dangerous-stuff %}) a while back about concerns that [spyware](http://en.wikipedia.org/wiki/Spyware) makers were adding [rootkit](http://en.wikipedia.org/wiki/Root_kit) functionality to their products to make them harder to detect and harder to remove. It seems that trend has gotten the attention of [Microsoft](http://www.microsoft.com). (About time, I say.)
+I [blogged]({{< relref "2005-06-21-dangerous-stuff.md" >}}) a while back about concerns that [spyware](http://en.wikipedia.org/wiki/Spyware) makers were adding [rootkit](http://en.wikipedia.org/wiki/Root_kit) functionality to their products to make them harder to detect and harder to remove. It seems that trend has gotten the attention of [Microsoft](http://www.microsoft.com). (About time, I say.)
 
 Microsoft's [Malicious Software Removal Tool](https://www.microsoft.com/en-us/download/malicious-software-removal-tool-details.aspx) has been enhanced with the ability to find and remove rootkit-like trojans and backdoor applications. In addition, Microsoft has indicated that it will likely [incorporate anti-rootkit functionality](http://www.eweek.com/article2/0,1759,1838294,00.asp) into future versions of its [AntiSpyware](http://www.microsoft.com/athome/security/spyware/software/default.mspx) product, acquired with Giant Software and still in beta.
 

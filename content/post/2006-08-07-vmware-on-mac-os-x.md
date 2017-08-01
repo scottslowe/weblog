@@ -19,4 +19,4 @@ Various sources ([this notice](http://www.virtualization.info/2006/08/vmware-wor
 
 I can't tell you how long I've been waiting for this (like so many others). I first [pined for virtualization on Apple][1] back in February of this year, and I'm thrilled that VMware is now stepping up to the plate to provide a Mac OS X-based version of VMware Workstation. Here's hoping they also release Mac OS X-based versions of their remote consoles as well, so that I can manage virtual machines hosted on VMware Server or ESX Server from my Mac as well.
 
-[1]: {% post_url 2006-02-13-apple-and-virtualization %}
+[1]: {{< relref "2006-02-13-apple-and-virtualization.md" >}}

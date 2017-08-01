@@ -22,5 +22,5 @@ The virtual machine configuration was specified as a single CPU (I haven't teste
 
 In the past I experienced problems with time synchronization inside CentOS when running as a virtual machine (described [here][1] and [here][2]). As I have not yet had the time to test time synchronization, I don't know if the problem will crop up again.
 
-[1]: {% post_url 2005-08-16-strange-ntpd-problem-on-centos-41 %}
-[2]: {% post_url 2005-12-19-ntpd-on-centos-42 %}
+[1]: {{< relref "2005-08-16-strange-ntpd-problem-on-centos-41.md" >}}
+[2]: {{< relref "2005-12-19-ntpd-on-centos-42.md" >}}

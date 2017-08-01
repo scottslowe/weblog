@@ -23,5 +23,5 @@ Second, the virtual SCSI driver must be switched to LSI Logic instead of BusLogi
 
 From there, the installation is perfectly straightforward. There are no VMware Tools for OpenBSD, although I have heard rumors that people have gotten versions for other operating systems to run on OpenBSD.
 
-[1]: {% post_url 2005-11-02-small-openbsd-38-speed-bump %}
-[2]: {% post_url 2005-11-04-openbsd-pcn0-driver-issue-resolved %}
+[1]: {{< relref "2005-11-02-small-openbsd-38-speed-bump.md" >}}
+[2]: {{< relref "2005-11-04-openbsd-pcn0-driver-issue-resolved.md" >}}

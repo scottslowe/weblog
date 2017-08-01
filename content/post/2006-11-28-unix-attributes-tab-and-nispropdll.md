@@ -35,4 +35,4 @@ Specifically, registering `nisprop.dll` adds the CLSID of `nisprop.dll` to the A
 
 If you are working on Linux-AD integration in your shop, then just keep in mind that at some point during the process you'll probably need to have Schema Admin privileges. Certainly while you are extending the schema (if it's not already extended, which you can check using ADSI Edit), then when you install Server for NIS or register `nisprop.dll`. Alternately, if you don't want the "UNIX Attributes" tab in Active Directory Users and Computers, you can use tools such as LDP, ADSI Edit, LDIF import files, or scripts to populate and edit the values in the UNIX-related attributes. Populating these values is necessary for the process to work correctly, but the method by which the attributes are populated is up to you.
 
-[1]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
+[1]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}

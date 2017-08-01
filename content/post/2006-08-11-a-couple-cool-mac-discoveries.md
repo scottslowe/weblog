@@ -32,5 +32,5 @@ Lo and behold, a XDMCP session popped up on my Mac's desktop, all neatly contain
 
 I'm looking forward to using Xnest to do the same thing on Linux servers as well, but haven't yet had the time to test it. I'll post more information here as soon as I do.
 
-[1]: {% post_url 2006-08-10-kerberos-based-sso-with-apache %}
-[2]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
+[1]: {{< relref "2006-08-10-kerberos-based-sso-with-apache.md" >}}
+[2]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}

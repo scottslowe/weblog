@@ -46,5 +46,5 @@ To verify this, I edited the `/etc/krb5.conf` file on a Linux server to map DNS 
 
 So, the server was not the problem, instead it was the configuration of my PowerBook all along. Go figure! In any case, it is working now. The lesson to be learned: be sure that either your Kerberos realm maps perfectly to Active Directory's DNS name, or be sure client machines are properly configured for domain-realm mappings.
 
-[1]: {% post_url 2006-08-15-solaris-10-and-active-directory-integration %}
-[2]: {% post_url 2006-08-21-native-kerberos-authentication-with-ssh %}
+[1]: {{< relref "2006-08-15-solaris-10-and-active-directory-integration.md" >}}
+[2]: {{< relref "2006-08-21-native-kerberos-authentication-with-ssh.md" >}}

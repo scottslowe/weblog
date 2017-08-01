@@ -29,6 +29,6 @@ The network reconfiguration on a VM running Windows Server 2003, on the other ha
 
 Not so. The VMware Tools installation removed the driver and installed a new driver, so even if the network configuration had made it through the "new hardware" discovery process, it would have been hosed at that point. Eventually, after a couple of different reboots, I finally had the Windows server up and running with its original network configuration again. If there is one area I've found so far that VMware really needs to work on, it's this one.
 
-[1]: {% post_url 2006-01-10-gsx-server-upgrade-woes %}
-[2]: {% post_url 2005-12-19-ntpd-on-centos-42 %}
-[3]: {% post_url 2005-12-23-centos-ntpd-problem-mostly-resolved %}
+[1]: {{< relref "2006-01-10-gsx-server-upgrade-woes.md" >}}
+[2]: {{< relref "2005-12-19-ntpd-on-centos-42.md" >}}
+[3]: {{< relref "2005-12-23-centos-ntpd-problem-mostly-resolved.md" >}}

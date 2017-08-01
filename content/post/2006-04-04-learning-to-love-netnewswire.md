@@ -30,5 +30,5 @@ In addition, it's the little features that have really started to grow on me (no
 
 I'm confident that as I continue to use NetNewsWire, I'll find more "nuggets of usefulness" built into the application. If you're looking for a good Mac OS X RSS aggregator, you would be well-served to give NetNewsWire a serious look.
 
-[1]: {% post_url 2006-03-12-my-tiger-upgrade %}
-[2]: {% post_url 2006-03-15-rebuilding-my-rss-subscriptions %}
+[1]: {{< relref "2006-03-12-my-tiger-upgrade.md" >}}
+[2]: {{< relref "2006-03-15-rebuilding-my-rss-subscriptions.md" >}}

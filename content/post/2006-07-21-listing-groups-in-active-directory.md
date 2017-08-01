@@ -47,4 +47,4 @@ Universal distribution group: groupType=8
 
 Substitute these values in one of the full queries above to list distribution groups of the specified scope.
 
-[1]: {% post_url 2006-06-22-enumerating-universal-group-membership %}
+[1]: {{< relref "2006-06-22-enumerating-universal-group-membership.md" >}}

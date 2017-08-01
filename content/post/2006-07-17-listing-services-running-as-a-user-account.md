@@ -51,4 +51,4 @@ With these text files, you then have the information you need to know what compu
 
 **UPDATE:** This weblog entry shows [another way to get this information](http://guy.netguru.co.il/archives/19-Querying-services-and-the-account-they-run-under.html), this time without using WMIC (this may be useful for dealing with older computers that may not support WMIC).
 
-[1]: {% post_url 2006-07-06-remotely-setting-the-dns-suffix-search-order %}
+[1]: {{< relref "2006-07-06-remotely-setting-the-dns-suffix-search-order.md" >}}

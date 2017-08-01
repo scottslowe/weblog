@@ -35,4 +35,4 @@ Since each category's RSS feed is available from the category page, I've removed
 
 **UPDATE:** I also added the plugin [Tags in the Head](http://www.maxpower.ca/wordpress-plugin-tags-in-the-head/2006/04/17/) to add tags as meta keywords in the header of each page. This is a pretty handy plugin that also ties in nicely with [Ultimate Tag Warrior](http://www.neato.co.nz/ultimate-tag-warrior/).
 
-[1]: {% post_url 2006-06-12-site-search-tags %}
+[1]: {{< relref "2006-06-12-site-search-tags.md" >}}

@@ -20,4 +20,4 @@ I have since upgraded to Tiger (I'll post a blog entry about that soon), and was
 
 After a quick download, install, and tweak of the preferences, I'm once again back up and running with Virtue after my Tiger upgrade. If you're running Tiger and looking for a good virtual desktop application, look no further.
 
-[1]: {% post_url 2005-09-30-virtual-desktops-on-mac-os-x %}
+[1]: {{< relref "2005-09-30-virtual-desktops-on-mac-os-x.md" >}}

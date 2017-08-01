@@ -50,5 +50,5 @@ The "delims=," parameter tells the `for` command to use a comma as the delimiter
 
 With this command, we now can pretty easily add large numbers of hosts to a DNS zone file.
 
-[1]: {% post_url 2006-06-20-mass-changes-in-active-directory %}
-[2]: {% post_url 2006-06-28-automating-static-entries-in-wins %}
+[1]: {{< relref "2006-06-20-mass-changes-in-active-directory.md" >}}
+[2]: {{< relref "2006-06-28-automating-static-entries-in-wins.md" >}}

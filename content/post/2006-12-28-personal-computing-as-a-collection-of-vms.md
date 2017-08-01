@@ -44,4 +44,4 @@ Indeed! Which approach do you think desktop computing will take? Application agn
 
 What do _you_ think?
 
-[1]: {% post_url 2006-12-05-the-future-of-the-os %}
+[1]: {{< relref "2006-12-05-the-future-of-the-os.md" >}}

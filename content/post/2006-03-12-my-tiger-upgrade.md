@@ -29,5 +29,5 @@ Of course, I did have to reinstall all my applications, recreate some of my pref
 
 Overall, I'm glad I upgraded. I do find myself liking Spotlight, and using Spotlight, and I'm looking forward to working more with Automator. This will also now open the door to test some additional applications that require Tiger or higher in order to run.
 
-[1]: {% post_url 2006-03-11-a-new-life-for-virtue %}
-[2]: {% post_url 2006-03-11-spotlight-weirdness %}
+[1]: {{< relref "2006-03-11-a-new-life-for-virtue.md" >}}
+[2]: {{< relref "2006-03-11-spotlight-weirdness.md" >}}

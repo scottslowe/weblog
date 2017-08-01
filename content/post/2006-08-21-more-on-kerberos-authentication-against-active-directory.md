@@ -97,9 +97,9 @@ Likewise, I'm not sure which login attribute the Solaris LDAP libraries are look
 
 As I continue to expand my knowledge of using Kerberos to integrate these various platforms and applications, I'll post additional information here. I know that a number of you have been posting questions in the comments for these various articles; keep the questions coming. I may not know the answer right away, but I'll sure do my best to find out!
 
-[1]: {% post_url 2005-07-18-minor-linux-ad-hiccup-fixed-hopefully %}
-[2]: {% post_url 2006-08-10-kerberos-based-sso-with-apache %}
-[3]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
-[4]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
-[5]: {% post_url 2006-08-10-kerberos-based-sso-with-apache %}
-[6]: {% post_url 2006-08-15-solaris-10-and-active-directory-integration %}
+[1]: {{< relref "2005-07-18-minor-linux-ad-hiccup-fixed-hopefully.md" >}}
+[2]: {{< relref "2006-08-10-kerberos-based-sso-with-apache.md" >}}
+[3]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
+[4]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
+[5]: {{< relref "2006-08-10-kerberos-based-sso-with-apache.md" >}}
+[6]: {{< relref "2006-08-15-solaris-10-and-active-directory-integration.md" >}}
