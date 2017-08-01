@@ -92,4 +92,4 @@ Welcome to Technology Short Take #17, another of my irregularly-scheduled collec
 
 I guess I should wrap it up here, before this post gets any longer. Thanks for reading this far, and feel free to speak up in the comments!
 
-[1]: {% post_url 2011-09-14-the-end-of-the-infrastructure-engineer %}
+[1]: {{< relref "2011-09-14-the-end-of-the-infrastructure-engineer.md" >}}

@@ -32,5 +32,5 @@ If you are running a revision of FLARE 30 prior to 509, you could see issues whe
 
 If you have any questions, please feel free to ask them in the comments below. Thanks!
 
-[1]: {% post_url 2010-10-28-recoverpoint-and-vaai-interoperability %}
-[2]: {% post_url 2010-11-01-recoverpoint-and-vaai-update %}
+[1]: {{< relref "2010-10-28-recoverpoint-and-vaai-interoperability.md" >}}
+[2]: {{< relref "2010-11-01-recoverpoint-and-vaai-update.md" >}}

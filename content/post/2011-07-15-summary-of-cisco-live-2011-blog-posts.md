@@ -51,11 +51,11 @@ Here are some other blog posts about Cisco Live 2011 that I found:
 
 If you have other posts that you think I should add, let me know in the comments below. Thanks!
 
-[1]: {% post_url 2011-07-11-brkcrs-2031-multilayer-campus-architectures-and-design-principles %}
-[2]: {% post_url 2011-07-11-brkmpl-1101-introduction-to-mpls %}
-[3]: {% post_url 2011-07-12-brkcom-3002-network-redundancy-and-load-balancing-designs-for-ucs-blade-servers %}
-[4]: {% post_url 2011-07-12-brkdct-2081-cisco-fabricpath-technology-and-design %}
-[5]: {% post_url 2011-07-13-brkdct-2121-virtual-device-context-design-and-implementation-considerations %}
-[6]: {% post_url 2011-07-14-brkdct-3060-deployment-considerations-with-interconnecting-dcs %}
-[7]: {% post_url 2011-07-14-brksan-3707-advanced-san-services %}
-[8]: {% post_url 2011-07-14-brkdct-9131-mobility-and-virtualization-with-lisp-and-otv %}
+[1]: {{< relref "2011-07-11-brkcrs-2031-multilayer-campus-architectures-and-design-principles.md" >}}
+[2]: {{< relref "2011-07-11-brkmpl-1101-introduction-to-mpls.md" >}}
+[3]: {{< relref "2011-07-12-brkcom-3002-network-redundancy-and-load-balancing-designs-for-ucs-blade-servers.md" >}}
+[4]: {{< relref "2011-07-12-brkdct-2081-cisco-fabricpath-technology-and-design.md" >}}
+[5]: {{< relref "2011-07-13-brkdct-2121-virtual-device-context-design-and-implementation-considerations.md" >}}
+[6]: {{< relref "2011-07-14-brkdct-3060-deployment-considerations-with-interconnecting-dcs.md" >}}
+[7]: {{< relref "2011-07-14-brksan-3707-advanced-san-services.md" >}}
+[8]: {{< relref "2011-07-14-brkdct-9131-mobility-and-virtualization-with-lisp-and-otv.md" >}}

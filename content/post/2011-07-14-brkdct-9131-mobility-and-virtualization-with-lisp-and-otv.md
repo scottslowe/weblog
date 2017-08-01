@@ -93,4 +93,4 @@ Victor now walks through some scenarios concerning the use of LISP with VM mobil
 
 The session is still going, but I have to get back to the show floor and finish tearing down the EMC booth.
 
-[1]: {% post_url 2011-07-14-brkdct-3060-deployment-considerations-with-interconnecting-dcs %}
+[1]: {{< relref "2011-07-14-brkdct-3060-deployment-considerations-with-interconnecting-dcs.md" >}}

@@ -36,4 +36,4 @@ In other words, just because HDS or any other vendor didn't participate (which m
 
 However, it gets more attention if you proclaim that a particular storage vendor was excluded; hence, the title (and subtitle) that The Register used. I have a feeling the reality is probably quite different than the picture painted in some of these articles.
 
-[1]: {% post_url 2011-08-29-vsp3205-tech-preview-vstorage-apis %}
+[1]: {{< relref "2011-08-29-vsp3205-tech-preview-vstorage-apis.md" >}}

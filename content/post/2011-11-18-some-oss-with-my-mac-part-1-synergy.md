@@ -91,4 +91,4 @@ On the Macs, launching Synergy (as either server or client) is handled via shell
 
 If you use multiple computers in your office, I'd **strongly** recommend having a look at Synergy---I've found it to be quite useful. If anyone has any other tips or tricks pertaining to Synergy or any of the other topics mentioned in this post, please feel free to speak up in the comments.
 
-[1]: {% post_url 2011-11-21-some-oss-with-my-mac-part-2-unison %}
+[1]: {{< relref "2011-11-21-some-oss-with-my-mac-part-2-unison.md" >}}

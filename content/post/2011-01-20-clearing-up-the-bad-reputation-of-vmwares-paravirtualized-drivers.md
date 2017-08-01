@@ -23,4 +23,4 @@ In addition, the recommendation against using PVSCSI with low I/O workloads was 
 
 Feel free to post any corrections or clarifications in the comments. In particular, if you have links to articles or documents with explicit mention of support for these paravirtualized drivers, feel free to share them for the benefit of all readers. Thanks!
 
-[1]: {% post_url 2009-07-05-another-reason-not-to-use-pvscsi-or-vmxnet3 %}
+[1]: {{< relref "2009-07-05-another-reason-not-to-use-pvscsi-or-vmxnet3.md" >}}

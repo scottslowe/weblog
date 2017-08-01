@@ -98,4 +98,4 @@ Once you have your profile configured correctly, you can run the Unison GUI app,
 
 If there are any questions, tips, clarifications, or corrections, please speak up in the comments. Thanks, and I hope you find this useful!
 
-[1]: {% post_url 2011-11-18-some-oss-with-my-mac-part-1-synergy %}
+[1]: {{< relref "2011-11-18-some-oss-with-my-mac-part-1-synergy.md" >}}

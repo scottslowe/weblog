@@ -42,4 +42,4 @@ For me, while this addresses Layer 3 connectivity after a migration with VXLAN, 
 
 Feel free to post any questions, thoughts, or corrections in the comments below. Thanks!
 
-[1]: {% post_url 2011-11-30-vxlan-and-layer-3-connectivity %}
+[1]: {{< relref "2011-11-30-vxlan-and-layer-3-connectivity.md" >}}

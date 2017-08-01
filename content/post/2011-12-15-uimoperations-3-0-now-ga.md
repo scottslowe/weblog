@@ -46,4 +46,4 @@ Home > Support > Technical Documentation and Advisories > Software ~ E-I ~ Docum
 
 Enjoy!
 
-[1]: {% post_url 2011-11-09-new-version-of-uimp %}
+[1]: {{< relref "2011-11-09-new-version-of-uimp.md" >}}

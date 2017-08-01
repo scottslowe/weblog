@@ -62,5 +62,5 @@ Not so fast! I'm not a networking guru, but I see some potential problems with t
 
 In the end, it seems to me that there is (currently) very little value in bringing FabricPath (or TRILL or SPB) support all the way down to the virtualization hosts. However, I'd love to hear what you think. Am I wrong in some of my conclusions? My understanding of FabricPath (and related technologies) is still evolving, so please let me know if something I've said is incorrect. Speak up in the comments!
 
-[1]: {% post_url 2011-07-15-summary-of-cisco-live-2011-blog-posts %}
-[2]: {% post_url 2011-07-12-brkdct-2081-cisco-fabricpath-technology-and-design %}
+[1]: {{< relref "2011-07-15-summary-of-cisco-live-2011-blog-posts.md" >}}
+[2]: {{< relref "2011-07-12-brkdct-2081-cisco-fabricpath-technology-and-design.md" >}}

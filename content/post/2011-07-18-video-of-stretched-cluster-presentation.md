@@ -25,4 +25,4 @@ Many thanks to David Davis and Train Signal for recording the session and making
 
 **UPDATE:** The embedded video was converted to a link in the blog migration that occurred at the end of 2014.
 
-[1]: {% post_url 2011-05-10-stretched-clustering-presentation %}
+[1]: {{< relref "2011-05-10-stretched-clustering-presentation.md" >}}

@@ -71,6 +71,6 @@ Welcome to Technology Short Take #16. It's been quite a while since my last Tech
 
 I guess it's time to wrap up now. Thanks for reading, and feel free to share any useful or pertinent links in the comments below.
 
-[1]: {% post_url 2010-09-30-stretched-cluster-presentation-from-denver-vmug %}
-[2]: {% post_url 2011-05-10-stretched-clustering-presentation %}
-[3]: {% post_url 2011-10-03-updated-stretched-cluster-presentation %}
+[1]: {{< relref "2010-09-30-stretched-cluster-presentation-from-denver-vmug.md" >}}
+[2]: {{< relref "2011-05-10-stretched-clustering-presentation.md" >}}
+[3]: {{< relref "2011-10-03-updated-stretched-cluster-presentation.md" >}}

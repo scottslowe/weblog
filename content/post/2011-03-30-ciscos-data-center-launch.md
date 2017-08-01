@@ -47,4 +47,4 @@ As always, I invite and encourage discussion, so if I've left something importan
 
 **UPDATE:** In response to information gathered via Twitter (I'm [@scott_lowe](http://twitter.com/scott_lowe)), I've updated the information on the 5584UP/5596UP and Unified Ports functionality. Thanks for the great discussion!
 
-[1]: {% post_url 2010-03-16-understanding-network-interface-virtualization %}
+[1]: {{< relref "2010-03-16-understanding-network-interface-virtualization.md" >}}

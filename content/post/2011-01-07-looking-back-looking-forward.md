@@ -58,23 +58,23 @@ For 2011, I have a few commitments to the site and to the readers:
 
 I do appreciate every single person who visits the site, subscribes to the feeds, or posts a comment. To each and every reader: **thank you!** I will strive to provide solid, useful, pertinent technical information that will make it worthwhile to continue to be a reader!
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2009-05-21-vmware-vsphere-vds-vmkernel-ports-and-jumbo-frames %}
-[3]: {% post_url 2009-06-01-vsphere-virtual-machine-upgrade-process %}
-[4]: {% post_url 2007-07-09-linux-ad-integration-with-windows-server-2008 %}
-[5]: {% post_url 2008-04-22-esx-server-ip-storage-and-jumbo-frames %}
-[6]: {% post_url 2008-09-05-vmware-esx-nic-teaming-and-vlan-trunking-with-hp-procurve %}
-[7]: {% post_url 2008-07-16-understanding-nic-utilization-in-vmware-esx %}
-[8]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
-[9]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
-[10]: {% post_url 2009-01-08-creating-a-bootable-esxi-usb-stick-on-mac-os-x %}
-[11]: {% post_url 2010-03-02-pxe-booting-vmware-esx-40 %}
-[12]: {% post_url 2010-06-18-the-future-of-netapp %}
-[13]: {% post_url 2010-06-13-the-vmotion-reality %}
-[14]: {% post_url 2010-04-22-setting-up-a-ccna-study-environment-with-gns3-and-vmware %}
-[15]: {% post_url 2010-07-17-enabling-raid-1-on-a-mac-mini-server %}
-[16]: {% post_url 2010-01-11-a-couple-geektool-scripts %}
-[17]: {% post_url 2010-03-16-understanding-network-interface-virtualization %}
-[18]: {% post_url 2010-01-31-emc-celerra-optimizations-for-vmware-on-nfs %}
-[19]: {% post_url 2010-08-23-new-users-guide-to-configuring-vmware-esxi-networking-via-cli %}
-[20]: {% post_url 2010-07-12-vmotion-practicality %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2009-05-21-vmware-vsphere-vds-vmkernel-ports-and-jumbo-frames.md" >}}
+[3]: {{< relref "2009-06-01-vsphere-virtual-machine-upgrade-process.md" >}}
+[4]: {{< relref "2007-07-09-linux-ad-integration-with-windows-server-2008.md" >}}
+[5]: {{< relref "2008-04-22-esx-server-ip-storage-and-jumbo-frames.md" >}}
+[6]: {{< relref "2008-09-05-vmware-esx-nic-teaming-and-vlan-trunking-with-hp-procurve.md" >}}
+[7]: {{< relref "2008-07-16-understanding-nic-utilization-in-vmware-esx.md" >}}
+[8]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
+[9]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}
+[10]: {{< relref "2009-01-08-creating-a-bootable-esxi-usb-stick-on-mac-os-x.md" >}}
+[11]: {{< relref "2010-03-02-pxe-booting-vmware-esx-40.md" >}}
+[12]: {{< relref "2010-06-18-the-future-of-netapp.md" >}}
+[13]: {{< relref "2010-06-13-the-vmotion-reality.md" >}}
+[14]: {{< relref "2010-04-22-setting-up-a-ccna-study-environment-with-gns3-and-vmware.md" >}}
+[15]: {{< relref "2010-07-17-enabling-raid-1-on-a-mac-mini-server.md" >}}
+[16]: {{< relref "2010-01-11-a-couple-geektool-scripts.md" >}}
+[17]: {{< relref "2010-03-16-understanding-network-interface-virtualization.md" >}}
+[18]: {{< relref "2010-01-31-emc-celerra-optimizations-for-vmware-on-nfs.md" >}}
+[19]: {{< relref "2010-08-23-new-users-guide-to-configuring-vmware-esxi-networking-via-cli.md" >}}
+[20]: {{< relref "2010-07-12-vmotion-practicality.md" >}}

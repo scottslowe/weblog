@@ -29,4 +29,4 @@ Similarly, I could have a stretched cluster (a cluster of ESX/ESXi hosts with so
 
 So what am I missing? Or am I just being too technical with the definitions? Constructive comments and feedback are welcome.
 
-[1]: {% post_url 2011-05-12-stretched-clusters-distance-vmotion-and-l2-adjacency %}
+[1]: {{< relref "2011-05-12-stretched-clusters-distance-vmotion-and-l2-adjacency.md" >}}

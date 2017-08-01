@@ -91,4 +91,4 @@ That's right folks, it's time for another installation of Technology Short Takes
 
 It's time to wrap up now; I think I've managed to throw out a few links and articles that someone should find useful. As always, feel free to speak up in the comments below.
 
-[1]: {% post_url 2010-12-20-using-vplex-and-data-replication-together %}
+[1]: {{< relref "2010-12-20-using-vplex-and-data-replication-together.md" >}}

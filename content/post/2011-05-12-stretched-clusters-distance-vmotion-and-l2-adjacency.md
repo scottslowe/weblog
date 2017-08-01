@@ -29,5 +29,5 @@ Regarding point #2, the L2 adjacency for virtual machines (VMs) is **absolutely*
 
 Am I off? Speak your mind in the comments below.
 
-[1]: {% post_url 2011-05-10-stretched-clustering-presentation %}
-[2]: {% post_url 2010-08-19-vmotion-layer-2-adjacency-requirement %}
+[1]: {{< relref "2011-05-10-stretched-clustering-presentation.md" >}}
+[2]: {{< relref "2010-08-19-vmotion-layer-2-adjacency-requirement.md" >}}

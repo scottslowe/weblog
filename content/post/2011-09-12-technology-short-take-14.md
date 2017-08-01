@@ -64,4 +64,4 @@ Much of my focus in the networking space recently has been around virtualization
 
 I guess that will wrap things up for this time around. Thanks for reading, and I hope that you found something useful in this varied mix of links. Feel free to share more in the comments below!
 
-[1]: {% post_url 2011-07-19-time-for-a-fresh-start %}
+[1]: {{< relref "2011-07-19-time-for-a-fresh-start.md" >}}
