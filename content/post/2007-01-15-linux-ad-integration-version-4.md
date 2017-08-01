@@ -110,6 +110,6 @@ What's not addressed in this article? Password management. In this configuration
 I hope you find this information helpful. As always, feel free to post corrections, additions, or suggestions in the comments below.
 
 
-[1]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
-[2]: {% post_url 2006-11-28-unix-attributes-tab-and-nispropdll %}
-[3]: {% post_url 2006-11-21-greater-ad-integration-via-nfs-and-automounts %}
+[1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
+[2]: {{< relref "2006-11-28-unix-attributes-tab-and-nispropdll.md" >}}
+[3]: {{< relref "2006-11-21-greater-ad-integration-via-nfs-and-automounts.md" >}}

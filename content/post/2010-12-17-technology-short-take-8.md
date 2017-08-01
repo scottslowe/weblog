@@ -81,9 +81,9 @@ Welcome to Technology Short Take #8, my latest collection of item from around th
 
 It's time to wrap up now, so I'll just say that I welcome any feedback, corrections, clarifications, or additions in the comments below. I hope you've found something helpful. Thanks!
 
-[1]: {% post_url 2010-11-30-connecting-a-nexus-2148-to-a-nexus-5010 %}
-[2]: {% post_url 2008-07-16-understanding-nic-utilization-in-vmware-esx %}
-[3]: {% post_url 2008-10-08-more-on-vmware-esx-nic-utilization %}
-[4]: {% post_url 2007-07-02-authenticating-to-cisco-ios-via-active-directory %}
-[5]: {% post_url 2006-12-07-8021x-integration-with-active-directory %}
-[6]: {% post_url 2005-11-22-cisco-pix-vpn-and-active-directory-integration %}
+[1]: {{< relref "2010-11-30-connecting-a-nexus-2148-to-a-nexus-5010.md" >}}
+[2]: {{< relref "2008-07-16-understanding-nic-utilization-in-vmware-esx.md" >}}
+[3]: {{< relref "2008-10-08-more-on-vmware-esx-nic-utilization.md" >}}
+[4]: {{< relref "2007-07-02-authenticating-to-cisco-ios-via-active-directory.md" >}}
+[5]: {{< relref "2006-12-07-8021x-integration-with-active-directory.md" >}}
+[6]: {{< relref "2005-11-22-cisco-pix-vpn-and-active-directory-integration.md" >}}

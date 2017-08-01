@@ -35,5 +35,5 @@ If there's anything else you're interested in seeing, let me know in the comment
 
 **UPDATE:** The NIC utilization article is available [here][2].
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2008-07-16-understanding-nic-utilization-in-vmware-esx %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2008-07-16-understanding-nic-utilization-in-vmware-esx.md" >}}

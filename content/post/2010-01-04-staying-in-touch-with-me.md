@@ -23,4 +23,4 @@ If you have my Google Voice number, you can continue using that number to reach 
 
 My Twitter ID ([scott_lowe](http://twitter.com/scott_lowe)) and my blog URL will remain unchanged. I will continue to actively use both to share useful technical information.
 
-[1]: {% post_url 2009-12-28-so-long-status-quo %}
+[1]: {{< relref "2009-12-28-so-long-status-quo.md" >}}

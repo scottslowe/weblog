@@ -33,4 +33,4 @@ So here's the opportunity that I was talking about---I'm writing as a contributo
 
 More articles are in the works, so be sure to stay tuned to [SearchVMware.com](http://searchvmware.techtarget.com/)! And, if you have any suggestions for future articles that should be written, please let me know. Or, better yet, register at SearchVMware.com and let me know there too!
 
-[1]: {% post_url 2007-10-02-exciting-new-opportunity %}
+[1]: {{< relref "2007-10-02-exciting-new-opportunity.md" >}}

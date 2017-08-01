@@ -19,4 +19,4 @@ One of things we wanted to do was to poll the VMware community ahead of time for
 
 Don't just sit there---click the link and go submit a question!
 
-[1]: {% post_url 2009-07-07-submit-a-question-for-vmworld-2009-ask-the-experts-session %}
+[1]: {{< relref "2009-07-07-submit-a-question-for-vmworld-2009-ask-the-experts-session.md" >}}

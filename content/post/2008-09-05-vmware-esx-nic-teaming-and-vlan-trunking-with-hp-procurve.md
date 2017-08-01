@@ -56,6 +56,6 @@ Key point to remember: apply your VLAN configurations _after_ your trunking conf
 
 With this information, users should now be pretty well prepared to configure HP ProCurve switches in a VMware ESX environment. Feel free to post any questions, clarifications, or corrections in the comments below, and thanks for reading!
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2007-11-13-esx-server-and-the-native-vlan %}
-[3]: {% post_url 2008-09-05-setting-vmware-esx-vswitch-load-balancing-policy-via-cli %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}
+[3]: {{< relref "2008-09-05-setting-vmware-esx-vswitch-load-balancing-policy-via-cli.md" >}}

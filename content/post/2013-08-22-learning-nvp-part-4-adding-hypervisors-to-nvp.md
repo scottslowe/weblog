@@ -133,6 +133,6 @@ Congratulations---you've added your first hypervisor to NVP! In the next part, I
 
 Until that time, feel free to post any questions, thoughts, corrections, or clarifications in the comments below. Please disclose vendor affiliations, where appropriate, and---as always---I welcome all courteous comments.
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
-[2]: {% post_url 2013-08-16-learning-nvp-part-2-nvp-controllers %}
-[3]: {% post_url 2013-08-19-learning-nvp-part-3-nvp-manager %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}
+[2]: {{< relref "2013-08-16-learning-nvp-part-2-nvp-controllers.md" >}}
+[3]: {{< relref "2013-08-19-learning-nvp-part-3-nvp-manager.md" >}}

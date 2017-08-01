@@ -24,4 +24,4 @@ So here's my question: is unified fabric an inevitability?
 
 (Oh, and here's a related question: Most people cite VoIP as proof that the unified fabric is inevitable. More so than anything else, I believe VoIP's success was more a reflection of the rising importance of TCP/IP networking. If so, does that give iSCSI an edge over FCoE? Is iSCSI the "VoIP of the storage world"?)
 
-[1]: {% post_url 2008-12-09-continuing-the-fcoe-discussion %}
+[1]: {{< relref "2008-12-09-continuing-the-fcoe-discussion.md" >}}

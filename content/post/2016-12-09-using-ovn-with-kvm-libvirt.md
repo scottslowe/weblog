@@ -188,4 +188,4 @@ There's quite a bit of information out there about OVN (see [Russell Bryant's we
 [link-6]: http://openvswitch.org/support/dist-docs/IntegrationGuide.rst.html
 [xref-1]: http://blog.scottlowe.org/tags/#Libvirt
 [xref-2]: http://blog.scottlowe.org/tags/#OVS
-[xref-3]: {% post_url 2012-11-12-libvirt-ovs-integration-revisited %}
+[xref-3]: {{< relref "2012-11-12-libvirt-ovs-integration-revisited.md" >}}

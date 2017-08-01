@@ -37,12 +37,12 @@ I was visiting [Unclutterer](http://unclutterer.com/) and saw them sharing older
 [WMF Flaw Exploit Grows Worse][8]  
 [Complete Linux-AD Authentication Details][9]
 
-[1]: {% post_url 2008-01-08-lacp-with-cisco-switches-and-netapp-vifs %}
-[2]: {% post_url 2007-12-31-hyper-v-architectural-issue %}
-[3]: {% post_url 2007-12-20-latest-vdi-article-published %}
-[4]: {% post_url 2007-01-03-bookmark-spam %}
-[5]: {% post_url 2006-12-30-recovering-data-inside-vms-using-netapp-snapshots %}
-[6]: {% post_url 2006-12-26-application-agnosticism %}
-[7]: {% post_url 2006-01-04-mac-os-x-and-local-domains %}
-[8]: {% post_url 2005-12-29-wmf-flaw-exploit-grows-worse %}
-[9]: {% post_url 2005-12-22-complete-linux-ad-authentication-details %}
+[1]: {{< relref "2008-01-08-lacp-with-cisco-switches-and-netapp-vifs.md" >}}
+[2]: {{< relref "2007-12-31-hyper-v-architectural-issue.md" >}}
+[3]: {{< relref "2007-12-20-latest-vdi-article-published.md" >}}
+[4]: {{< relref "2007-01-03-bookmark-spam.md" >}}
+[5]: {{< relref "2006-12-30-recovering-data-inside-vms-using-netapp-snapshots.md" >}}
+[6]: {{< relref "2006-12-26-application-agnosticism.md" >}}
+[7]: {{< relref "2006-01-04-mac-os-x-and-local-domains.md" >}}
+[8]: {{< relref "2005-12-29-wmf-flaw-exploit-grows-worse.md" >}}
+[9]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}

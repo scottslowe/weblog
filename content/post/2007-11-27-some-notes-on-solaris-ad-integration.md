@@ -33,4 +33,4 @@ So, without further ado, here are the notes I collected in no particular order:
 
 Again, I'll be incorporating these changes into a future version of the Solaris-AD integration instructions. I hope to have that complete within the next week or two, so stay tuned. In addition, I have information coming to help with the co-existence of multiple UNIX and UNIX-like operating systems all authenticating against the same Active Directory forest, so keep your eyes peeled for that as well.
 
-[1]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
+[1]: {{< relref "2007-04-25-solaris-10-ad-integration-version-3.md" >}}

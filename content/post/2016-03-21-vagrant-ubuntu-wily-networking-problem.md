@@ -48,5 +48,5 @@ Once the interface has been created by Vagrant, then you can configure the inter
 [link-3]: http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html
 [link-4]: https://github.com/mitchellh/vagrant/issues/6871
 [link-5]: https://www.ansible.com/
-[xref-1]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
-[xref-2]: {% post_url 2016-01-14-improved-way-yaml-vagrant %}
+[xref-1]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}
+[xref-2]: {{< relref "2016-01-14-improved-way-yaml-vagrant.md" >}}

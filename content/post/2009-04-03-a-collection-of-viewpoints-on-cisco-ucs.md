@@ -45,5 +45,5 @@ Burton Group analyst [Drue Reeves says](http://dcsblog.burtongroup.com/data_cent
 
 Perhaps, perhaps not. Given that UCS relies so heavily on FCoE, wouldn't it have made sense for Cisco to push the FCoE train along by providing FCoE interconnects for blade servers from HP and IBM? Of course, this is supposing that CNAs would be available for HP and IBM blades, but I'm sure that this is something Cisco could have helped guarantee. This route would have broadened the market for FCoE and the unified fabric and simultaneously establishing Cisco as _the_ FCoE leader (as if they weren't already). Then, when really game-changing stuff like the [SR-IOV-enabled adapters like "Palo"][2] were available, Cisco could have taken the leap into the compute space and played the unified management card. That seems like a less risky approach to me. But hey, what do I know?
 
-[1]: {% post_url 2009-03-12-this-pretty-much-answers-that-question %}
-[2]: {% post_url 2009-03-18-cisco-ucs-virtualization-optimized-cnas %}
+[1]: {{< relref "2009-03-12-this-pretty-much-answers-that-question.md" >}}
+[2]: {{< relref "2009-03-18-cisco-ucs-virtualization-optimized-cnas.md" >}}

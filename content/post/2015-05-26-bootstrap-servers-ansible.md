@@ -57,4 +57,4 @@ I know this may not seem like much, but I did want to share it here in the event
 
 
 [link-1]: http://www.ansible.com/home
-[xref-1]: {% post_url 2015-05-20-fully-automated-ubuntu-install %}
+[xref-1]: {{< relref "2015-05-20-fully-automated-ubuntu-install.md" >}}

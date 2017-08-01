@@ -25,4 +25,4 @@ As to the argument that Apple is missing potential sales by not making the Intel
 
 If Apple really wants to increase marketshare, the fast, best, and cheapest option (in my opinion) involves promoting virtualization and emulation. No, these aren't conflicting directions. First, support virtualization by promoting open source and commercial virtualization products, such as [VMware](http://www.vmware.com/), [Q](http://www.kberg.ch/q/index.php), and others. (I've mentioned the [use of virtualization to drive marketshare][1] before.) Second, support emulation of the Windows API via such projects as [WINE](http://www.winehq.com/) and [Darwine](http://darwine.opendarwin.org/), which allow Windows applications to run on non-Windows operating systems. Think about it: If the only reason you want to boot Windows on your new Intel-based Mac is for a couple of applications that don't have Macintosh equivalents, why install an entire OS?
 
-[1]: {% post_url 2006-02-13-apple-and-virtualization %}
+[1]: {{< relref "2006-02-13-apple-and-virtualization.md" >}}

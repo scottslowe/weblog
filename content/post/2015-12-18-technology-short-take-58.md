@@ -113,5 +113,5 @@ I had more stuff to share with you, but I constrained myself to publish this las
 [link-31]: http://networkingnerd.net/2015/11/18/a-stack-full-of-it/
 [link-32]: http://k8s.info/cs.html
 [link-33]: http://blog.russellbryant.net/2013/05/21/availability-zones-and-host-aggregates-in-openstack-compute-nova/
-[xref-1]: {% post_url 2014-09-22-thinking-about-intel-rack-scale-architecture %}
-[xref-2]: {% post_url 2015-09-28-using-vagrant-with-openstack %}
+[xref-1]: {{< relref "2014-09-22-thinking-about-intel-rack-scale-architecture.md" >}}
+[xref-2]: {{< relref "2015-09-28-using-vagrant-with-openstack.md" >}}

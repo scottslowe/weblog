@@ -50,4 +50,4 @@ You might read this and say, "Oh, he's an FCoE hater and an iSCSI lover." No, no
 
 Of course, despite all these facts, it's looking more and more like FCoE is VHS and iSCSI is Betamax. Sometimes the "best" technology doesn't always win...
 
-[1]: {% post_url 2008-11-17-fcoe-versus-mr-iovhuh %}
+[1]: {{< relref "2008-11-17-fcoe-versus-mr-iovhuh.md" >}}

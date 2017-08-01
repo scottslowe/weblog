@@ -80,6 +80,6 @@ Of course, one of the advantages of UCS is its flexibility; meaning you don't _h
 
 Courteous comments are always welcome! Feel free to add any clarifications, corrections, or other thoughts in the comments below.
 
-[1]: {% post_url 2010-05-05-creating-ucs-service-profiles-part-1-networking-elements %}
-[2]: {% post_url 2010-05-07-creating-ucs-service-profiles-part-2-storage-elements %}
-[3]: {% post_url 2010-05-10-creating-ucs-service-profiles-part-3-other-elements %}
+[1]: {{< relref "2010-05-05-creating-ucs-service-profiles-part-1-networking-elements.md" >}}
+[2]: {{< relref "2010-05-07-creating-ucs-service-profiles-part-2-storage-elements.md" >}}
+[3]: {{< relref "2010-05-10-creating-ucs-service-profiles-part-3-other-elements.md" >}}

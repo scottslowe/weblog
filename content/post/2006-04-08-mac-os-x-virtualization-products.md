@@ -22,4 +22,4 @@ In addition, [rumors are swirling](http://www.virtualization.info/2006/04/vmware
 
 Now I _really_ wish I had a [MacBook Pro](http://www.apple.com/macbookpro/)...
 
-[1]: {% post_url 2006-02-13-apple-and-virtualization %}
+[1]: {{< relref "2006-02-13-apple-and-virtualization.md" >}}

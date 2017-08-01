@@ -18,4 +18,4 @@ All the domains, web sites, and e-mail services that I formerly managed myself h
 
 My own personal network at home is being dismantled and reorganized. When that's all said and done, I'll probably end up with only a single server (most likely Linux-based) acting as some sort of media server for the house, so that the kids can listen to music and watch movies and stuff. You know, the important things.
 
-[1]: {% post_url 2006-03-02-march-13-changes-everything %}
+[1]: {{< relref "2006-03-02-march-13-changes-everything.md" >}}

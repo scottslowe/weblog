@@ -32,4 +32,4 @@ Likewise, adding Windows and Active Directory to a heterogeneous network compris
 
 If you're an IT professional (and it's likely you are if you are reading this), go expand your horizons. Learn something new that isn't necessarily related to your core expertise, and see if you can't also start to bridge the gaps and make some connections that will help you be more effective in your career.
 
-[1]: {% post_url 2006-07-28-active-directory-and-vas %}
+[1]: {{< relref "2006-07-28-active-directory-and-vas.md" >}}

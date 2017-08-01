@@ -48,5 +48,5 @@ In any event, here are some older links that I've been saving up to share with y
 
 That's going to do it this time around. Feel free to speak up in the comments below to add your thoughts, other links you've found useful, or anything else. Thanks!
 
-[1]: {% post_url 2012-01-20-technology-short-take-20 %}
-[2]: {% post_url 2012-04-09-8-things-to-help-keep-your-mac-secure %}
+[1]: {{< relref "2012-01-20-technology-short-take-20.md" >}}
+[2]: {{< relref "2012-04-09-8-things-to-help-keep-your-mac-secure.md" >}}

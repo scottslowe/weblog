@@ -43,7 +43,7 @@ Here are some of the networking-virtualization chimeras I've concocted:
 
 Are there any other groupings that are worth exploring or discussing? Any other "you got your virtualization peanut butter in my networking chocolate" combinations that might help address some of the issues in data centers today? Feel free to speak up in the comments below. Courteous comments are invited and encouraged.
 
-[1]: {% post_url 2011-08-08-thinking-out-loud-what-if-vsphere-supported-fabricpath %}
-[2]: {% post_url 2011-08-15-thinking-out-loud-logical-link-multiplexing-sort-of %}
-[3]: {% post_url 2012-06-26-thinking-out-loud-why-not-mpls-in-ip %}
-[4]: {% post_url 2011-12-22-otv-and-vxlan-layer-3-connectivity-compared %}
+[1]: {{< relref "2011-08-08-thinking-out-loud-what-if-vsphere-supported-fabricpath.md" >}}
+[2]: {{< relref "2011-08-15-thinking-out-loud-logical-link-multiplexing-sort-of.md" >}}
+[3]: {{< relref "2012-06-26-thinking-out-loud-why-not-mpls-in-ip.md" >}}
+[4]: {{< relref "2011-12-22-otv-and-vxlan-layer-3-connectivity-compared.md" >}}

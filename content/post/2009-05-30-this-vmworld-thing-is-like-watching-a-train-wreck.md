@@ -35,4 +35,4 @@ So, let's sum it up:
 
 I tell my kids all the time, "Actions speak louder than words." What would _you_ derive from VMware's actions?
 
-[1]: {% post_url 2009-05-28-vmware-this-is-wrong %}
+[1]: {{< relref "2009-05-28-vmware-this-is-wrong.md" >}}

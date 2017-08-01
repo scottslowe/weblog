@@ -25,6 +25,6 @@ The point of this story---and yes, there is a point---is what happened after tho
 
 I have to say that's pretty impressive. It's highly doubtful that VMware can or does respond to every customer in the same fashion, although I wish they did, but it does occur to me that at least they're trying. I suppose I could be cynical and say that they're only behaving this way because they don't want to look bad, but who am I to question their motivations? I've said before there's nothing wrong with a company that's out to make money---it does make the economy run, after all---but what really matters is the means by which the company seeks that goal.
 
-[1]: {% post_url 2008-01-07-underwhelmed-by-the-remote-cli %}
-[2]: {% post_url 2008-02-14-storage-vmotion-plugin %}
-[3]: {% post_url 2008-02-09-im-glad-im-not-the-only-one %}
+[1]: {{< relref "2008-01-07-underwhelmed-by-the-remote-cli.md" >}}
+[2]: {{< relref "2008-02-14-storage-vmotion-plugin.md" >}}
+[3]: {{< relref "2008-02-09-im-glad-im-not-the-only-one.md" >}}

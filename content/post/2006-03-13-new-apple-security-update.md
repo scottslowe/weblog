@@ -20,4 +20,4 @@ Per Apple's description of the update, the update provides "additional checks" t
 
 And while we're on the topic of security updates, Microsoft is expected to release one critical security update for Microsoft Office and one important security update for Microsoft Windows tomorrow on "patch Tuesday." More information is available from [Microsoft's web site](http://www.microsoft.com/technet/security/bulletin/advance.mspx), but is subject to change until the final security bulletin is released.
 
-[1]: {% post_url 2006-03-07-mac-os-security-flaw-persists %}
+[1]: {{< relref "2006-03-07-mac-os-security-flaw-persists.md" >}}

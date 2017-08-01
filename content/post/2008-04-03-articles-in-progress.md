@@ -30,6 +30,6 @@ If anyone has any other topics they'd be interested in seeing me tackle, feel fr
 
 **UPDATE:** The article on [preserving thin provisioned VMDKs with SnapRestore][3] is now available.
 
-[1]: {% post_url 2008-03-31-only-thin-provisioned-in-the-beginning %}
-[2]: {% post_url 2007-01-15-active-directory-integration-index %}
-[3]: {% post_url 2008-04-09-keeping-thin-vmdks-using-netapp-snaprestore %}
+[1]: {{< relref "2008-03-31-only-thin-provisioned-in-the-beginning.md" >}}
+[2]: {{< relref "2007-01-15-active-directory-integration-index.md" >}}
+[3]: {{< relref "2008-04-09-keeping-thin-vmdks-using-netapp-snaprestore.md" >}}

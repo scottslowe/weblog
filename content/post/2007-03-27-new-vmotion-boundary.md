@@ -22,5 +22,5 @@ It's odd that this comes up---I was just speaking to some customers a couple of 
 
 I have a feeling that [VMware](http://www.vmware.com/) is going to need to resolve this kind of issue sooner rather than later. As the hardware vendors race with each other to add new features and new virtualization support, we are going to see more and more artificial VMotion boundaries being introduced, and this will eliminate much of the flexibility that VMware currently offers organizations since they will have to resort to buying exactly identical systems. The sooner that VMware can move into a position of being able to support custom CPU masks, the better off they'll be in my opinion.
 
-[1]: {% post_url 2006-11-23-vmotion-compatibility %}
-[2]: {% post_url 2006-09-25-sneaking-around-vmotion-limitations %}
+[1]: {{< relref "2006-11-23-vmotion-compatibility.md" >}}
+[2]: {{< relref "2006-09-25-sneaking-around-vmotion-limitations.md" >}}

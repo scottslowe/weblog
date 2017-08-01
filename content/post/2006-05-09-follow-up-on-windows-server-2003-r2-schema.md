@@ -22,4 +22,4 @@ Error message when you run the Active Directory Installation Wizard: "The versio
 
 Have a look at [Jorge's full weblog entry](http://blogs.dirteam.com/blogs/jorge/archive/2006/05/06/930.aspx), as he lists some other helpful information as well.
 
-[1]: {% post_url 2006-04-21-windows-server-2003-r2-schema %}
+[1]: {{< relref "2006-04-21-windows-server-2003-r2-schema.md" >}}

@@ -27,6 +27,6 @@ What Marathon is ultimately seeking to achieve is feature parity between EverRun
 
 The Windows Server 2008 support for EverRun VM on XenServer---this is the ability to use EverRun VM to provide component-level or system-level fault tolerance for Windows Server 2008 guests---is expected in the first half of 2009. No dates were provided for a version of EverRun VM that will work with Windows Server 2008 and Hyper-V.
 
-[1]: {% post_url 2008-09-15-citrix-announces-xenserver-5 %}
-[2]: {% post_url 2008-09-15-marathon-and-xenserver-ha %}
-[3]: {% post_url 2008-09-26-everrun-vm-vmware-ha-and-vmware-ft %}
+[1]: {{< relref "2008-09-15-citrix-announces-xenserver-5.md" >}}
+[2]: {{< relref "2008-09-15-marathon-and-xenserver-ha.md" >}}
+[3]: {{< relref "2008-09-26-everrun-vm-vmware-ha-and-vmware-ft.md" >}}

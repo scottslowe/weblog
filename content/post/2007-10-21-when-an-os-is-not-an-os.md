@@ -43,4 +43,4 @@ Likewise, VMware _has_ to distinguish their solution from the "traditional OS" b
 
 Is ESX Server an "operating system"? What about ESX Server 3i? As with so many other things in life, I guess that truly depends upon your perspective.
 
-[1]: {% post_url 2006-12-05-the-future-of-the-os %}
+[1]: {{< relref "2006-12-05-the-future-of-the-os.md" >}}

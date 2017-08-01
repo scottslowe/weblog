@@ -45,4 +45,4 @@ Using this process, I now have two OpenBSD 3.8 VMs running and haven't experienc
 [3]: http://archives.neohapsis.com/archives/openbsd/2005-08/1314.html
 [4]: http://www.openbsd.org/cgi-bin/man.cgi?query=config&apropos=0&sektion=0&manpath=OpenBSD+3.8&arch=i386&format=html
 [5]: http://www.clamav.net/
-[6]: {% post_url 2006-05-18-openbsd-39-on-esx-server %}
+[6]: {{< relref "2006-05-18-openbsd-39-on-esx-server.md" >}}

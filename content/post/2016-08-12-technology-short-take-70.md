@@ -118,4 +118,4 @@ OK folks, that's all for now! I'll keep my eyes peeled for content to add in fut
 [link-31]: http://www.lucd.info/2016/06/04/vspheredsc-intro/
 [link-32]: http://www.boche.net/blog/index.php/2016/07/30/vmware-tools-causes-virtual-machine-snapshot-with-quiesce-error/
 [link-33]: https://www.howtoforge.com/tutorial/running-virtual-machines-with-virtualbox-5.1-on-a-headless-ubuntu-16.04-lts-server/
-[xref-1]: {% post_url 2014-09-22-thinking-about-intel-rack-scale-architecture %}
+[xref-1]: {{< relref "2014-09-22-thinking-about-intel-rack-scale-architecture.md" >}}

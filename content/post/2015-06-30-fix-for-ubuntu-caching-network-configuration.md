@@ -61,4 +61,4 @@ Here's hoping this helps someone else!
 [link-3]: http://www.dell.com
 [link-4]: http://www.ansible.com/home
 [link-5]: http://askubuntu.com/questions/509975/how-can-i-change-the-network-configuration-on-ubuntu-14-04-server
-[xref-1]: {% post_url 2015-06-25-vlan-trunking-cumulus-linux %}
+[xref-1]: {{< relref "2015-06-25-vlan-trunking-cumulus-linux.md" >}}

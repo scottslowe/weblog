@@ -35,13 +35,13 @@ The "trick" here lies in the Ansible configuration file and the Ansible inventor
 
 Here's a very generic Ansible configuration file I use:
 
-{{< highlight text >}}
+```
 [defaults]
 inventory = ./hosts
 private_key_file = /Users/slowe/.vagrant.d/insecure_private_key
 remote_user = vagrant
 host_key_checking = False
-{{< / highlight >}}
+```
 
 The [documentation on the Ansible configuration file][link-5] can explain these in greater detail, but here's a quick breakdown of each line:
 

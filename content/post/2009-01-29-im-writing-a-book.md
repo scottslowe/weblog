@@ -18,4 +18,4 @@ This is a lifelong dream of mine and I'm absolutely thrilled to have the opportu
 
 If there are any experienced authors out there who are interested in sharing some tips and tricks with this first-time author, please drop me a line. I'd certainly appreciate any advice or suggestions.
 
-[1]: {% post_url 2009-01-23-im-speaking-at-virtualization-congress-2009 %}
+[1]: {{< relref "2009-01-23-im-speaking-at-virtualization-congress-2009.md" >}}

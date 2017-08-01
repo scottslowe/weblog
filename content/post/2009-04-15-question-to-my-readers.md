@@ -18,4 +18,4 @@ While I might think it is interesting or cool or useful, there are about 5,000 o
 
 I'd love to hear your thoughts.
 
-[1]: {% post_url 2009-04-09-cloud-computing-interview-with-dave-malcom-cto-of-surgient %}
+[1]: {{< relref "2009-04-09-cloud-computing-interview-with-dave-malcom-cto-of-surgient.md" >}}

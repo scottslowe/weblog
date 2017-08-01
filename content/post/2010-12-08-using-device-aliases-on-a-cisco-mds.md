@@ -53,5 +53,5 @@ To those who suggested I look at device aliases, I thank you! You've made my job
 
 As always, I welcome your feedback! Feel free to speak up in the comments with corrections, clarifications, or suggestions.
 
-[1]: {% post_url 2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli %}
-[2]: {% post_url 2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli %}
+[1]: {{< relref "2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli.md" >}}
+[2]: {{< relref "2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli.md" >}}

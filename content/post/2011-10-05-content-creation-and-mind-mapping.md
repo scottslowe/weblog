@@ -30,4 +30,4 @@ The real problem so far has been finding the _right_ mind mapping application. T
 
 Unfortunately, MindManager is also the priciest of the bunch. At $249, it is **significantly** more expensive than any of the other applications in this category. I'm still a bit on the fence with the decision, but I expect I'll decide one way or another within the next week or so. I'd love to hear from any MindManager users on their likes, dislikes, and use cases. Speak up in the comments below!
 
-[1]: {% post_url 2011-09-07-switching-to-eaglefiler %}
+[1]: {{< relref "2011-09-07-switching-to-eaglefiler.md" >}}

@@ -38,4 +38,4 @@ And turns it into this:
 The nice thing about this regex is that it's still useful even after the migration. Why? Well, it's a lot easier to find the article I want to reference via an Internet search engine like DuckDuckGo or Google than it is to search through the Markdown source files. So, I find the article I want to reference, copy the URL, then use this regex to turn it into a Jekyll reference in another blog post. Handy!
 
 
-[xref-1]: {% post_url 2015-01-06-the-story-behind-the-migration %}
+[xref-1]: {{< relref "2015-01-06-the-story-behind-the-migration.md" >}}

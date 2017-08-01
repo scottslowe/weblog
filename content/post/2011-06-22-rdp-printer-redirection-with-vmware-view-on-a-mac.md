@@ -39,4 +39,4 @@ Keep in mind the caveat that I pointed out in the original article: changing the
 
 Great work Patrick, and thanks for sharing the information with me. As always, comments are invited!
 
-[1]: {% post_url 2010-07-21-changing-rdp-settings-in-vmware-view-open-client-for-mac %}
+[1]: {{< relref "2010-07-21-changing-rdp-settings-in-vmware-view-open-client-for-mac.md" >}}

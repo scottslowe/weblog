@@ -45,4 +45,4 @@ Based on a quick review of the [GitHub issues for Docker Machine][link-4], this 
 [link-3]: https://docs.docker.com/machine/drivers/openstack/
 [link-4]: https://github.com/docker/machine/issues/
 [link-5]: https://github.com/docker/machine/issues/3261
-[xref-1]: {% post_url 2015-09-24-using-docker-machine-with-openstack %}
+[xref-1]: {{< relref "2015-09-24-using-docker-machine-with-openstack.md" >}}

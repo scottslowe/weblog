@@ -58,9 +58,9 @@ There you have it---an update on my organizational/productivity setup as of earl
 [link-18]: http://www.noodlesoft.com/hazel.php
 [link-19]: https://twitter.com/scott_lowe
 [link-20]: https://www.dropbox.com/
-[xref-1]: {% post_url 2010-05-02-my-current-getting-things-done-setup %}
-[xref-2]: {% post_url 2012-11-30-why-i-might-leave-os-x %}
-[xref-3]: {% post_url 2015-04-06-plain-text-productivity-experiment %}
-[xref-4]: {% post_url 2013-06-21-reducing-the-friction-processing-e-mail %}
-[xref-5]: {% post_url 2011-09-07-switching-to-eaglefiler %}
-[xref-6]: {% post_url 2012-07-25-advanced-spotlight-queries-in-the-mac-gui %}
+[xref-1]: {{< relref "2010-05-02-my-current-getting-things-done-setup.md" >}}
+[xref-2]: {{< relref "2012-11-30-why-i-might-leave-os-x.md" >}}
+[xref-3]: {{< relref "2015-04-06-plain-text-productivity-experiment.md" >}}
+[xref-4]: {{< relref "2013-06-21-reducing-the-friction-processing-e-mail.md" >}}
+[xref-5]: {{< relref "2011-09-07-switching-to-eaglefiler.md" >}}
+[xref-6]: {{< relref "2012-07-25-advanced-spotlight-queries-in-the-mac-gui.md" >}}

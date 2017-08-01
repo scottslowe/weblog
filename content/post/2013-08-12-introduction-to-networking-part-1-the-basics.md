@@ -33,13 +33,13 @@ In networking, two "models" of how networked systems should communicate drive al
 
 Two of these layers---layer 2, the Data Link layer, and layer 3, the Network layer---are the basis for the "layer 2" and "layer 3" discussions that you so frequently hear thrown about when someone is discussing networking. A "sub-layer" of the Data Link layer (layer 2) is also the basis for another term that you'll hear frequently thrown about in networking: the MAC address. This sublayer is the Media Access Control, or MAC, sublayer, and it's where MAC addresses are used.
 
-<aside>Note that "MAC" and "Mac" are very different! The first pertains to the Media Access Control sublayer of the OSI model; the second pertains to a line of computers made by Apple, Inc. You shouldn't call an Apple computer a MAC, and you shouldn't refer to a Media Access Control address as a Mac address. OK, stepping off the soap box now</aside>
+&lt;aside&gt;Note that "MAC" and "Mac" are very different! The first pertains to the Media Access Control sublayer of the OSI model; the second pertains to a line of computers made by Apple, Inc. You shouldn't call an Apple computer a MAC, and you shouldn't refer to a Media Access Control address as a Mac address. OK, stepping off the soap box now...&lt;/aside&gt;
 
 The third layer of the OSI model, the Network layer, is the "layer 3" that so often referenced in network discussions. Protocols like Internet Protocol (IP) and IPX operate at this layer.
 
-After the creation of the OSI model, the US Department of Defense started work on what would eventually become the Internet. (No, it wasn't invented by Al Gore. Sorry, Al.) As part of that work---I won't cover that here as there have been plenty of other write-ups of [that history](https://en.wikipedia.org/wiki/History_of_the_Internet)--they created a four-layer model that became known as the DoD model or the TCP/IP model. The four layers of the DoD model---Link, Internet, Transport, and Application---have a rough correlation to the seven layers of the OSI model, as shown [here](http://www.sis.pitt.edu/~icucart/networking_basics/4LayersofTCPIPModel.html). Despite this fact, discussions of "layer 2" and "layer 3" still refer to the Data Link and Network layers of the OSI model, and not to the DoD-TCP/IP model.
+After the creation of the OSI model, the US Department of Defense started work on what would eventually become the Internet. (No, it wasn't invented by Al Gore. Sorry, Al.) As part of that work---I won't cover that here as there have been plenty of other write-ups of [that history](https://en.wikipedia.org/wiki/History_of_the_Internet)---they created a four-layer model that became known as the DoD model or the TCP/IP model. The four layers of the DoD model---Link, Internet, Transport, and Application---have a rough correlation to the seven layers of the OSI model, as shown [here](http://www.sis.pitt.edu/~icucart/networking_basics/4LayersofTCPIPModel.html). Despite this fact, discussions of "layer 2" and "layer 3" still refer to the Data Link and Network layers of the OSI model, and not to the DoD-TCP/IP model.
 
-And that leads us to our next section
+And that leads us to our next section...
 
 ## Theory Into Reality: Ethernet and TCP/IP
 

@@ -57,4 +57,4 @@ And that's really about it. Yes, there are more advanced configurations---I'm in
 
 Feel free to post corrections, suggestions, or any other feedback in the comments!
 
-[1]: {% post_url 2010-03-16-understanding-network-interface-virtualization %}
+[1]: {{< relref "2010-03-16-understanding-network-interface-virtualization.md" >}}

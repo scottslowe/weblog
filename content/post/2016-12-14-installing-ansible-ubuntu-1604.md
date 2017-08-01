@@ -48,4 +48,4 @@ You should now be ready to enjoy all of Ansible's automation goodness from your 
 [link-1]: https://www.ubuntu.com
 [link-2]: https://www.ansible.com/
 [link-3]: https://virtualenv.pypa.io/
-[xref-1]: {% post_url 2016-11-25-installing-ansible-fedora-25 %}
+[xref-1]: {{< relref "2016-11-25-installing-ansible-fedora-25.md" >}}

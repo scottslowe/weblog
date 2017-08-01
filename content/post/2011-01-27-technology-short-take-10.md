@@ -110,5 +110,5 @@ Before I wrap up, I'll just leave with you a few other links from my collection:
 
 That's going to do it for this time around. As always, courteous comments are welcome and encouraged!
 
-[1]: {% post_url 2010-12-29-technology-short-take-9 %}
-[2]: {% post_url 2010-11-01-sioc-event-with-emc-mirrorview %}
+[1]: {{< relref "2010-12-29-technology-short-take-9.md" >}}
+[2]: {{< relref "2010-11-01-sioc-event-with-emc-mirrorview.md" >}}

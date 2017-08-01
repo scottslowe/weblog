@@ -30,4 +30,4 @@ Apparently, VMware feels they've met those criteria:
 
 Now things are really getting interesting. Stay tuned!
 
-[1]: {% post_url 2008-03-14-virtualization-short-take-4 %}
+[1]: {{< relref "2008-03-14-virtualization-short-take-4.md" >}}

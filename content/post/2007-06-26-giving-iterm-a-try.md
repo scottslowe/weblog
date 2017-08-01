@@ -36,5 +36,5 @@ Having these features incorporated into iTerm would make switching to iTerm from
 
 What about other "iTerm switchers" out there? Any suggestions or tips for me, or things I might be missing? I'd love to hear from you.
 
-[1]: {% post_url 2005-09-30-virtual-desktops-on-mac-os-x %}
-[2]: {% post_url 2006-07-16-trying-quicksilver %}
+[1]: {{< relref "2005-09-30-virtual-desktops-on-mac-os-x.md" >}}
+[2]: {{< relref "2006-07-16-trying-quicksilver.md" >}}

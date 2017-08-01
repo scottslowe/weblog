@@ -29,4 +29,4 @@ Here are a few ways that I use a text expander tool (my choice is Typinator) to 
 
 These are just three examples; I'm sure that you can probably come up with more. In fact, I'd love to see what sorts of additional ideas readers might have. Feel free to add your ideas and thoughts in the comments below. Courteous comments are always welcome!
 
-[1]: {% post_url 2013-06-21-reducing-the-friction-processing-e-mail %}
+[1]: {{< relref "2013-06-21-reducing-the-friction-processing-e-mail.md" >}}

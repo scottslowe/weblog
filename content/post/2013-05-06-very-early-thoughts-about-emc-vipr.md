@@ -31,6 +31,6 @@ Anyway, those are my initial thoughts. Since I haven't had access to more detail
 
 **UPDATE:** It was brought to my attention I misspelled Matthew Leib's last name; that has been corrected. My apologies Matt!
 
-[1]: {% post_url 2013-01-25-new-year-new-challenges-new-opportunities %}
-[2]: {% post_url 2013-04-16-network-overlays-vs-network-virtualization %}
-[3]: {% post_url 2013-04-30-on-network-virtualization-and-sdn %}
+[1]: {{< relref "2013-01-25-new-year-new-challenges-new-opportunities.md" >}}
+[2]: {{< relref "2013-04-16-network-overlays-vs-network-virtualization.md" >}}
+[3]: {{< relref "2013-04-30-on-network-virtualization-and-sdn.md" >}}

@@ -70,6 +70,6 @@ Welcome to Technology Short Take #13. It's been a while since my last Technology
 
 It's time to wrap up now, but thanks for reading. Feel free to share any other interesting or useful links you've found, or any thoughts on the links I included here, in the comments.
 
-[1]: {% post_url 2011-07-12-vmwares-launch-event %}
-[2]: {% post_url 2011-07-19-time-for-a-fresh-start %}
-[3]: {% post_url 2011-07-13-announcing-mastering-vmware-vsphere-5 %}
+[1]: {{< relref "2011-07-12-vmwares-launch-event.md" >}}
+[2]: {{< relref "2011-07-19-time-for-a-fresh-start.md" >}}
+[3]: {{< relref "2011-07-13-announcing-mastering-vmware-vsphere-5.md" >}}

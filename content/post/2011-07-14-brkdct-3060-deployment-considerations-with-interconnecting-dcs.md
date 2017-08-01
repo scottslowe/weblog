@@ -134,5 +134,5 @@ Ah, here's the information that helps me decipher the flow of the session. A-VPL
 
 At this point I had to leave for a meeting so I wrapped up the session blog. Patrice was in the summary section of the presentation so no new information was going to be shared.
 
-[1]: {% post_url 2011-07-13-brkdct-2121-virtual-device-context-design-and-implementation-considerations %}
-[2]: {% post_url 2011-07-11-brkmpl-1101-introduction-to-mpls %}
+[1]: {{< relref "2011-07-13-brkdct-2121-virtual-device-context-design-and-implementation-considerations.md" >}}
+[2]: {{< relref "2011-07-11-brkmpl-1101-introduction-to-mpls.md" >}}

@@ -35,4 +35,4 @@ In the meantime, I'll continue looking for workarounds. Does anyone know how dif
 
 Anyone with any suggestions, please provide them in the comments. I'll be eternally grateful to the person who shows me a workaround!
 
-[1]: {% post_url 2006-03-12-my-tiger-upgrade %}
+[1]: {{< relref "2006-03-12-my-tiger-upgrade.md" >}}

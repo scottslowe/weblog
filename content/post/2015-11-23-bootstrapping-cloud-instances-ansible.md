@@ -40,4 +40,4 @@ As before, I use the `--extra-vars` parameter to supply the specific host being 
 
 
 [link-1]: http://www.ansible.com/
-[xref-1]: {% post_url 2015-05-26-bootstrap-servers-ansible %}
+[xref-1]: {{< relref "2015-05-26-bootstrap-servers-ansible.md" >}}

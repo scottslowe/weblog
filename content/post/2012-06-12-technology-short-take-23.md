@@ -100,4 +100,4 @@ Welcome to Technology Short Take #23, another collection of links and thoughts r
 
 I guess it's time to wrap up now, lest my "short take" get even longer than it already is! Thanks for reading this far, and I hope that I've shared something useful with you. Feel free to speak up in the comments if you have questions, thoughts, or clarifications.
 
-[1]: {% post_url 2012-03-12-some-thoughts-and-questions-about-stt %}
+[1]: {{< relref "2012-03-12-some-thoughts-and-questions-about-stt.md" >}}

@@ -56,4 +56,4 @@ Also, the command line for Log Parser was updated to show the correct input type
 
 There are no major changes in this section. Only note that in multi-domain environments, it may be necessary to specify a specific domain controller (using the "-s" switch) and provide alternate credentials (using the "-b" switch).
 
-[1]: {% post_url 2006-06-20-mass-changes-in-active-directory %}
+[1]: {{< relref "2006-06-20-mass-changes-in-active-directory.md" >}}

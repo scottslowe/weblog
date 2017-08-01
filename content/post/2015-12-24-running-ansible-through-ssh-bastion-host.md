@@ -100,6 +100,6 @@ If you have any questions or want more information, [hit me up on Twitter][link-
 [link-3]: http://www.ansible.com/
 [link-4]: http://blog.dualspark.com/ansible/configuration-management/aws/ssh/2014/12/19/ansible-tower-ssh-agent-forwarding.html
 [link-5]: https://twitter.com/scott_lowe
-[xref-1]: {% post_url 2015-11-21-using-ssh-bastion-host %}
-[xref-2]: {% post_url 2015-12-04-use-case-ssh-bastion-host %}
-[xref-3]: {% post_url 2015-12-11-using-ssh-multiplexing %}
+[xref-1]: {{< relref "2015-11-21-using-ssh-bastion-host.md" >}}
+[xref-2]: {{< relref "2015-12-04-use-case-ssh-bastion-host.md" >}}
+[xref-3]: {{< relref "2015-12-11-using-ssh-multiplexing.md" >}}

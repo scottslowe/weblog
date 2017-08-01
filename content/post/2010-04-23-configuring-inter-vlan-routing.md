@@ -69,4 +69,4 @@ With this configuration in place, you should be able to route between the VLANs;
 
 If I've missed anything glaring please speak up in the comments and let me know.
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}

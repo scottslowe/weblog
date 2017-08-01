@@ -92,5 +92,5 @@ Now that I've discovered Log Parser, I hope to be able to find more ways to use 
 
 **UPDATE:** I modified the article to properly render the percent signs above, as well as removing the reference to delete the header line (leaving the header line in the `csvde` output allows you to specify friendly field names in the Log Parser template file). In addition, I added the switches to Log Parser to use quiet output and not display statistics; this keeps us from having to edit the Log Parser output before importing it back into Active Directory. Finally, I published a [follow-up article][2] that provides some additional information as well.
 
-[1]: {% post_url 2006-05-16-mass-password-changes-in-ad-revisited %}
-[2]: {% post_url 2006-07-25-mass-changes-in-active-directory-take-2 %}
+[1]: {{< relref "2006-05-16-mass-password-changes-in-ad-revisited.md" >}}
+[2]: {{< relref "2006-07-25-mass-changes-in-active-directory-take-2.md" >}}

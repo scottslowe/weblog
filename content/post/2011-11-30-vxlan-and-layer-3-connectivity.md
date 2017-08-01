@@ -74,4 +74,4 @@ If I have misrepresented anything, presented something incorrectly, or if you ha
 
 **UPDATE:** As a couple of readers pointed out in the comments (thanks!), the Layer 3 connectivity isn't quite as dire as what I've described. Instead of the VM's address having to change due to a change in NAT mappings on a VSE, instead the VM's traffic will "trombone" back to the original VSE that acts as the VXLAN segment's default gateway. Again, thanks for the clarification/correction all!
 
-[1]: {% post_url 2011-12-07-revisiting-vxlan-and-layer-3-connectivity %}
+[1]: {{< relref "2011-12-07-revisiting-vxlan-and-layer-3-connectivity.md" >}}

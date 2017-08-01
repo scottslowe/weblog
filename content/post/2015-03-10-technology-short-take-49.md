@@ -120,4 +120,4 @@ Well, this post turned out to be quite hefty (over 1600 words!) Sorry for the le
 [link-34]: http://www.ntpro.nl/blog/archives/2868-VMware-vCenter-Server-6.0-Deployment-Guide.html
 [link-35]: http://blogs.msdn.com/b/virtual_pc_guy/
 [link-36]: http://www.virtu-al.net/2015/02/20/retrieving-vm-metrics-from-vcloud-air/
-[xref-1]: {% post_url 2015-01-16-looking-ahead-2015-projects %}
+[xref-1]: {{< relref "2015-01-16-looking-ahead-2015-projects.md" >}}

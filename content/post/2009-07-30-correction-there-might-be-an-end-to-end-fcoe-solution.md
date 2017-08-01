@@ -44,4 +44,4 @@ So, my earlier statement wasn't entirely true; it is possible to build an end-to
 
 As always, comments and clarifications are welcome!
 
-[1]: {% post_url 2009-07-29-no-such-thing-as-an-end-to-end-fcoe-solution %}
+[1]: {{< relref "2009-07-29-no-such-thing-as-an-end-to-end-fcoe-solution.md" >}}

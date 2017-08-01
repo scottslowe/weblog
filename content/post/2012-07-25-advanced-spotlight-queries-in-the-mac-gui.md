@@ -49,4 +49,4 @@ For example, I've already shown you the query to list all untagged files (very f
 
 You could, naturally, combine this with a filename filter to get even more specific. I hope this helps someone else out there fine tune their Spotlight searches as well!
 
-[1]: {% post_url 2011-09-07-switching-to-eaglefiler %}
+[1]: {{< relref "2011-09-07-switching-to-eaglefiler.md" >}}

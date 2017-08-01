@@ -64,8 +64,8 @@ The virtualization comparison first compares Hyper-V with Virtual Server 2005 R2
 
 That wrapped up the session. They gave away three copies of Windows Server 2008, SQL Server, Visual Studio, but I didn't win. Bummer.
 
-[1]: {% post_url 2008-06-10-vir367-hyper-v-security-and-best-practices %}
-[2]: {% post_url 2008-06-10-a-discussion-with-jeff-woolsey %}
-[3]: {% post_url 2008-06-11-vir361-introducing-map-for-windows-server-2008-hyper-v %}
-[4]: {% post_url 2008-06-11-vir253-microsoft-system-center-vmm-2008-part-1-of-2 %}
-[5]: {% post_url 2008-06-11-vir360-microsoft-system-center-vmm-2008-part-2-of-2 %}
+[1]: {{< relref "2008-06-10-vir367-hyper-v-security-and-best-practices.md" >}}
+[2]: {{< relref "2008-06-10-a-discussion-with-jeff-woolsey.md" >}}
+[3]: {{< relref "2008-06-11-vir361-introducing-map-for-windows-server-2008-hyper-v.md" >}}
+[4]: {{< relref "2008-06-11-vir253-microsoft-system-center-vmm-2008-part-1-of-2.md" >}}
+[5]: {{< relref "2008-06-11-vir360-microsoft-system-center-vmm-2008-part-2-of-2.md" >}}

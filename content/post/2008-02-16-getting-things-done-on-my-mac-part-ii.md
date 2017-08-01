@@ -32,4 +32,4 @@ The only area that I feel like I'm still not doing quite so well with is the ide
 
 Moving forward, I'll continue to tweak the AppleScripts that I'm using for getting information into OmniFocus, and I'll be searching for an application like [EagleFiler](http://c-command.com/eaglefiler/), [Together](http://reinventedsoftware.com/together/), [Yojimbo](http://www.barebones.com/products/yojimbo/), or the like to help with storing and organizing information. I've pretty much come to the conclusion that to really be effective, I need an application like OmniFocus to help me track and work through my tasks, and an application to help me store, organize, and retrieve information. Again, I'm certainly open to any recommendations from readers.
 
-[1]: {% post_url 2008-02-06-getting-things-done-on-my-mac %}
+[1]: {{< relref "2008-02-06-getting-things-done-on-my-mac.md" >}}

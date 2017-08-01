@@ -69,4 +69,4 @@ Hopefully this was somewhat helpful. I have more posts queued up, so please stay
 
 [link-1]: http://www.vmware.com/products/vsphere/
 [link-2]: http://openvswitch.org
-[xref-1]: {% post_url 2015-06-01-cumulus-networking-concepts %}
+[xref-1]: {{< relref "2015-06-01-cumulus-networking-concepts.md" >}}

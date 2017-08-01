@@ -25,4 +25,4 @@ On the other hand, VMware has done a reasonably good job of delivering quality p
 
 Unfortunately, I've been unable to get involved in the beta program, so I have no idea of whether VMware is on track with software quality or not. (Of course, even if I were on the beta program, I wouldn't be allowed to comment about it anyway, but that's another story...)
 
-[1]: {% post_url 2007-08-09-next-generation-virtual-infrastructure %}
+[1]: {{< relref "2007-08-09-next-generation-virtual-infrastructure.md" >}}

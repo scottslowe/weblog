@@ -31,4 +31,4 @@ I'd be interested to hear what others have to say. Voice your position in the co
 
 _Disclosure: As you probably know, I work for a reseller who represents many different vendors and manufacturers. My words here are not endorsed by my employer, nor do I represent my employer in this area._
 
-[1]: {% post_url 2009-10-22-io-virtualization-and-the-double-edged-sword %}
+[1]: {{< relref "2009-10-22-io-virtualization-and-the-double-edged-sword.md" >}}

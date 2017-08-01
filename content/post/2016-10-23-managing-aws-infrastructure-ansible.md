@@ -178,4 +178,4 @@ To make this easier to test out yourself, I've made all the playbooks and such d
 [link-5]: https://aws.amazon.com/cli/
 [link-6]: https://github.com/lowescott/learning-tools
 [link-7]: https://www.zigg.com/2014/using-virtualenv-python-local-ansible.html
-[xref-1]: {% post_url 2016-04-30-installing-ansible-in-virtualenv %}
+[xref-1]: {{< relref "2016-04-30-installing-ansible-in-virtualenv.md" >}}

@@ -46,4 +46,4 @@ Together, these commands will establish a LACP-based link aggregate between a Ne
 
 Thanks to Jeff, our NetApp SE, for providing the updated information.
 
-[1]: {% post_url 2007-06-13-cisco-link-aggregation-and-netapp-vifs %}
+[1]: {{< relref "2007-06-13-cisco-link-aggregation-and-netapp-vifs.md" >}}

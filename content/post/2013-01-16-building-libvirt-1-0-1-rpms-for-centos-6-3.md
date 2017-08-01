@@ -108,4 +108,4 @@ Once the RPM compilation process is complete, you'll find libvirt 1.0.1 RPMs in 
 
 I hope this post helps someone. If you have any questions, or if you spot an error, please speak up in the comments below. All courteous comments are welcome!
 
-[1]: {% post_url 2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3 %}
+[1]: {{< relref "2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3.md" >}}

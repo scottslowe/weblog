@@ -28,4 +28,4 @@ Some of the key limitations that I've encountered:
 
 I'm still moving ahead with a greater usage of Google Calendar, but as a result of finding these limitations, I'm now taking a closer look at some of the third-party utilities to provide two-way sync between iCal and Google Calendar. [BusySync](http://www.busymac.com/) is the leading candidate right now, although I'm also looking at [Calgoo Connect](http://www.calgoo.com/connect/index.do) and [Spanning Sync](http://spanningsync.com/). If any readers are using any of these products right now, I'd certainly welcome any feedback on how well they work.
 
-[1]: {% post_url 2008-12-02-manually-configuring-ical-for-google-calendar-and-caldav %}
+[1]: {{< relref "2008-12-02-manually-configuring-ical-for-google-calendar-and-caldav.md" >}}

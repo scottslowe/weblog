@@ -38,4 +38,4 @@ Once the configuration changes have been made, SSHd has been restarted, and a lo
 
 Although this doesn't provide the broad integration with Active Directory that some may be seeking, it can at least help with SSH access to the OpenBSD systems, and that's better than nothing.
 
-[1]: {% post_url 2006-08-21-native-kerberos-authentication-with-ssh %}
+[1]: {{< relref "2006-08-21-native-kerberos-authentication-with-ssh.md" >}}

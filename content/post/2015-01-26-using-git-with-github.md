@@ -59,4 +59,4 @@ I found [Matt Brender's #vBrownBag session on using Git and GitHub][link-2] to b
 [link-1]: https://github.com
 [link-2]: http://professionalvmware.com/2014/10/vbrownbag-devops-follow-up-git-with-matthew-brender-mjbrender/
 [link-3]: http://www.git-scm.com/book/en/v2
-[xref-1]: {% post_url 2015-01-14-non-programmer-git-intro %}
+[xref-1]: {{< relref "2015-01-14-non-programmer-git-intro.md" >}}

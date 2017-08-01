@@ -30,4 +30,4 @@ I'd certainly appreciate any suggestions from those who may have already been do
 
 Wish me luck!
 
-[1]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
+[1]: {{< relref "2007-04-25-solaris-10-ad-integration-version-3.md" >}}

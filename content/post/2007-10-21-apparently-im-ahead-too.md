@@ -21,5 +21,5 @@ Fast forward to just the other day, when I stumble across his column once more a
 
 Given that I have embarked upon a plan to [learn Solaris][2], it's kind of nice to see an "industry analyst" say that you're making the right move and that you, too, are ahead of the curve.
 
-[1]: {% post_url 2006-03-29-my-almost-three-years-with-mac-os-x %}
-[2]: {% post_url 2007-07-31-learning-solaris %}
+[1]: {{< relref "2006-03-29-my-almost-three-years-with-mac-os-x.md" >}}
+[2]: {{< relref "2007-07-31-learning-solaris.md" >}}

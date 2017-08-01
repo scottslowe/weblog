@@ -21,5 +21,5 @@ In theory, yes. After all, Samba is included with Solaris 10, right? Right! Unfo
 
 I plan to test this in my lab as soon as possible, and when I have some first results I'll post more information here.
 
-[1]: {% post_url 2006-12-19-using-samba-in-linux-ad-integration %}
-[2]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
+[1]: {{< relref "2006-12-19-using-samba-in-linux-ad-integration.md" >}}
+[2]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}

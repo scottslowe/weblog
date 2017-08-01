@@ -113,4 +113,4 @@ I'd love to keep going, but I suppose I'd better wrap it up before this post get
 [link-30]: http://www.sneaku.com/2016/07/13/how-to-find-object-ids-for-almost-everything/
 [link-31]: http://www.virtuallyghetto.com/2016/09/direct-playback-urls-for-all-vmworld-us-2016-sessions.html
 [link-32]: https://github.com/lamw/vmworld2016-session-urls
-[xref-1]: {% post_url 2014-10-08-technology-short-take-45 %}
+[xref-1]: {{< relref "2014-10-08-technology-short-take-45.md" >}}

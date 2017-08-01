@@ -69,5 +69,5 @@ Templeton shows the videos from the Citrix Innovation award finalists---Emory He
 
 At this point, the keynote transitions into a customer panel moderated by John Gallant of Network World. I'm wrapping up coverage of the keynote.
 
-[1]: {% post_url 2009-05-05-citrix-synergy-day-1-keynote %}
-[2]: {% post_url 2008-09-15-citrix-announces-citrix-cloud-center %}
+[1]: {{< relref "2009-05-05-citrix-synergy-day-1-keynote.md" >}}
+[2]: {{< relref "2008-09-15-citrix-announces-citrix-cloud-center.md" >}}

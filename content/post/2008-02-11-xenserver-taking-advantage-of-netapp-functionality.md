@@ -26,5 +26,5 @@ This is pretty significant, in my mind, and definitely gives Citrix XenServer a 
 
 Virtualization is about using your hardware more effectively. That should include your storage as well.
 
-[1]: {% post_url 2007-05-15-netapp-flexclones-with-vmware-part-1 %}
-[2]: {% post_url 2007-05-17-netapp-flexclones-with-vmware-part-2 %}
+[1]: {{< relref "2007-05-15-netapp-flexclones-with-vmware-part-1.md" >}}
+[2]: {{< relref "2007-05-17-netapp-flexclones-with-vmware-part-2.md" >}}

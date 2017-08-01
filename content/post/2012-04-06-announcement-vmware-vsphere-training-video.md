@@ -21,4 +21,4 @@ In addition, this video training series is a great complement to _VMware vSphere
 
 Work is already underway on the video training course, which should be available near the end of June (only a few months away!). Look for more information as I progress through the course, and I'll be sure to make an announcement when the course is actually available.
 
-[1]: {% post_url 2012-01-02-some-projects-for-2012 %}
+[1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}

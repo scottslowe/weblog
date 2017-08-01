@@ -25,7 +25,7 @@ Network overlays are great for address space isolation (for example, isolating d
 
 As always, I welcome the input of those more educated/knowledgeable than I am. If you're a networking expert (or a virtual networking expert), feel free to speak up in the comments and correct my misunderstanding or misconceptions (please disclose vendor affiliations). I'm always open to deepening my knowledge---and helping others with their understanding and knowledge along the way.
 
-[1]: {% post_url 2013-04-15-openstack-summit-2013-nicira-nvp-deep-dive %}
-[2]: {% post_url 2011-12-02-examining-vxlan %}
-[3]: {% post_url 2011-12-07-revisiting-vxlan-and-layer-3-connectivity %}
-[4]: {% post_url 2012-03-12-some-thoughts-and-questions-about-stt %}
+[1]: {{< relref "2013-04-15-openstack-summit-2013-nicira-nvp-deep-dive.md" >}}
+[2]: {{< relref "2011-12-02-examining-vxlan.md" >}}
+[3]: {{< relref "2011-12-07-revisiting-vxlan-and-layer-3-connectivity.md" >}}
+[4]: {{< relref "2012-03-12-some-thoughts-and-questions-about-stt.md" >}}

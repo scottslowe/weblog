@@ -67,5 +67,5 @@ When you're done recovering files, the clean-up process looks like this:
 
 Overall, this process is rather similar to the technique described using LUN clones, although a bit simpler because resignaturing is not required.
 
-[1]: {% post_url 2006-12-30-recovering-data-inside-vms-using-netapp-snapshots %}
-[2]: {% post_url 2007-09-21-nfs-for-vmware-storage %}
+[1]: {{< relref "2006-12-30-recovering-data-inside-vms-using-netapp-snapshots.md" >}}
+[2]: {{< relref "2007-09-21-nfs-for-vmware-storage.md" >}}

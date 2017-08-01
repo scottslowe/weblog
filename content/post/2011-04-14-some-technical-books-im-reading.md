@@ -46,6 +46,6 @@ I would be remiss if I didn't at least mention that a book to which I contribute
 
 _Disclaimer: Where applicable, the publishers and/or authors of all of the books listed here provided me with free copies, either physical or electronic._
 
-[1]: {% post_url 2008-04-24-book-review-vmware-esx-server-in-the-enterprise %}
-[2]: {% post_url 2008-11-19-viscosity-a-mac-openvpn-client %}
-[3]: {% post_url 2008-12-26-openvpn-and-mt-daapd %}
+[1]: {{< relref "2008-04-24-book-review-vmware-esx-server-in-the-enterprise.md" >}}
+[2]: {{< relref "2008-11-19-viscosity-a-mac-openvpn-client.md" >}}
+[3]: {{< relref "2008-12-26-openvpn-and-mt-daapd.md" >}}

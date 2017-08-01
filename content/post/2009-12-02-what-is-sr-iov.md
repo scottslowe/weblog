@@ -47,4 +47,4 @@ Finally, it's worth noting that the PCI SIG is also working on a separate IOV sp
 
 You now should have a basic understanding of SR-IOV, what it does, what is necessary to support it, and some of the benefits and drawbacks that SR-IOV creates. Feel free to post any questions you have about SR-IOV in the comments and I'll do my best to get answers for you.
 
-[1]: {% post_url 2009-11-27-understanding-npiv-and-npv %}
+[1]: {{< relref "2009-11-27-understanding-npiv-and-npv.md" >}}

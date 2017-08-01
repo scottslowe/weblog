@@ -34,4 +34,4 @@ Now, for some of the disadvantages of this type of configuration:
 
 I'm sure there are other disadvantages as well. Anyone care to comment and share their experiences?
 
-[1]: {% post_url 2005-12-03-protecting-owa-with-apache %}
+[1]: {{< relref "2005-12-03-protecting-owa-with-apache.md" >}}

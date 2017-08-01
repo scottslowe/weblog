@@ -96,4 +96,4 @@ There are many, many more examples I could share with you, but this should get y
 
 As usual, feel free to speak up in the comments if you have any questions or clarifications. Thank you!
 
-[1]: {% post_url 2010-12-13-a-quick-review-of-vplex-storage-objects %}
+[1]: {{< relref "2010-12-13-a-quick-review-of-vplex-storage-objects.md" >}}

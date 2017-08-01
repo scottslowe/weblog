@@ -33,4 +33,4 @@ This took care of the apparent conflict between the dynamic NAT setup and the st
 Now, if I could just figure out why my GRE-over-IPSec tunnels aren't working, I'd be in really good shape...
 
 
-[1]: {% post_url 2006-01-14-cisco-nat-issue %}
+[1]: {{< relref "2006-01-14-cisco-nat-issue.md" >}}

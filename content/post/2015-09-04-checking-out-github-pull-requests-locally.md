@@ -26,4 +26,4 @@ Once you run the command and the fetch is successful, then you can switch to the
 
 [link-1]: https://gist.github.com/piscisaureus/3342247
 [link-2]: https://www.github.com/
-[xref-1]: {% post_url 2015-01-27-using-fork-branch-git-workflow %}
+[xref-1]: {{< relref "2015-01-27-using-fork-branch-git-workflow.md" >}}

@@ -49,4 +49,4 @@ Changes and/or additions that I'm considering adding include:
 
 So, there you have it...my homegrown document management system. I'm open to suggestions for improvement or additional tools to make it more effective. What am I missing that could make this better?
 
-[1]: {% post_url 2006-09-21-cocoalicious-woes %}
+[1]: {{< relref "2006-09-21-cocoalicious-woes.md" >}}

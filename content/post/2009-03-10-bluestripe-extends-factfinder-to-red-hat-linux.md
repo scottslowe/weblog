@@ -19,5 +19,5 @@ One of the major new features in this new release of FactFinder is support for R
 
 The full press release is [here](http://bluestripe.com/blog/bluestripe-news/2009/03/10/3102009-bluestripe-software-launches-factfinder-20-delivering-its-award-winning-asm-solution-to-red-hat-enterprise-linux/).
 
-[1]: {% post_url 2008-11-10-bluestripe-releases-factfinder-11 %}
-[2]: {% post_url 2008-09-16-todays-vendor-meetings %}
+[1]: {{< relref "2008-11-10-bluestripe-releases-factfinder-11.md" >}}
+[2]: {{< relref "2008-09-16-todays-vendor-meetings.md" >}}

@@ -138,6 +138,6 @@ Let me know if you have any questions or if anyone finds a faster or easier way 
 
 **UPDATE:** I've updated the comments to delete and recreate the VMkernel port per the comments below.
 
-[1]: {% post_url 2008-04-22-esx-server-ip-storage-and-jumbo-frames %}
-[2]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[3]: {% post_url 2009-03-13-next-gen-stuff-enabling-cdp-in-esxesxi %}
+[1]: {{< relref "2008-04-22-esx-server-ip-storage-and-jumbo-frames.md" >}}
+[2]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[3]: {{< relref "2009-03-13-next-gen-stuff-enabling-cdp-in-esxesxi.md" >}}

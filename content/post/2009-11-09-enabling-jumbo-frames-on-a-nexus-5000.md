@@ -49,8 +49,8 @@ The end result of these differences is this: if you upgrade NX-OS from 4.0 to 4.
 
 More information on the necessary commands can be found [here for version 4.0](http://www.cisco.com/en/US/docs/switches/datacenter/nexus5000/sw/configuration/guide/cli_rel_4_0_1a/QoS.html#wp1150612) and [here for version 4.1](http://www.cisco.com/en/US/docs/switches/datacenter/nexus5000/sw/configuration/nxos/Cisco_Nexus_5000_Series_NX-OS_Software_Configuration_Guide_chapter33.html#con_1150612).
 
-[1]: {% post_url 2009-08-27-connecting-nexus-5000-to-older-gigabit-ethernet-switches %}
-[2]: {% post_url 2009-10-25-setting-up-fcoe-on-a-nexus-5000 %}
-[3]: {% post_url 2009-11-03-fcoe-and-vlan-trunking-on-nexus-5000 %}
-[4]: {% post_url 2008-04-22-esx-server-ip-storage-and-jumbo-frames %}
-[5]: {% post_url 2009-05-21-vmware-vsphere-vds-vmkernel-ports-and-jumbo-frames %}
+[1]: {{< relref "2009-08-27-connecting-nexus-5000-to-older-gigabit-ethernet-switches.md" >}}
+[2]: {{< relref "2009-10-25-setting-up-fcoe-on-a-nexus-5000.md" >}}
+[3]: {{< relref "2009-11-03-fcoe-and-vlan-trunking-on-nexus-5000.md" >}}
+[4]: {{< relref "2008-04-22-esx-server-ip-storage-and-jumbo-frames.md" >}}
+[5]: {{< relref "2009-05-21-vmware-vsphere-vds-vmkernel-ports-and-jumbo-frames.md" >}}

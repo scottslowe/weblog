@@ -124,6 +124,6 @@ To enable vMotion on an already-created VMkernel NIC:
 
 There are more networking-related tasks that you can perform from the CLI, but for a new user these commands should handle the lion's share of all the networking configuration. Good luck with your ESXi environment!
 
-[1]: {% post_url 2009-06-23-new-user-networking-config-guide %}
-[2]: {% post_url 2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli %}
-[3]: {% post_url 2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli %}
+[1]: {{< relref "2009-06-23-new-user-networking-config-guide.md" >}}
+[2]: {{< relref "2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli.md" >}}
+[3]: {{< relref "2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli.md" >}}

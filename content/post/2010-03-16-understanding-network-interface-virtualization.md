@@ -50,4 +50,4 @@ In a future post, I'll discuss the role of the Nexus 1000V in NIV and how it rel
 
 Feel free to post any questions, comments, or clarifications below.
 
-[1]: {% post_url 2009-11-27-understanding-npiv-and-npv %}
+[1]: {{< relref "2009-11-27-understanding-npiv-and-npv.md" >}}

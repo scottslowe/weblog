@@ -109,6 +109,6 @@ To verify that everything worked as expected, I tested the RPMs using these step
 
 I imagine there might be more comprehensive/better ways of testing the RPMs that I built, but they seemed to work fine on my end. If anyone has any other suggestions for how we can double-check to ensure the packages are working correctly, feel free to speak up in the comments below. I also welcome any other corrections, suggestions, or questions in the comments. Courteous comments are always welcome.
 
-[1]: {% post_url 2013-01-22-using-mock-to-build-sanlock-2-4-rpms-for-centos-6-3 %}
-[2]: {% post_url 2013-01-22-using-mock-to-build-libssh2-1-4-1-rpms-for-centos-6-3 %}
-[3]: {% post_url 2013-01-16-building-libvirt-1-0-1-rpms-for-centos-6-3 %}
+[1]: {{< relref "2013-01-22-using-mock-to-build-sanlock-2-4-rpms-for-centos-6-3.md" >}}
+[2]: {{< relref "2013-01-22-using-mock-to-build-libssh2-1-4-1-rpms-for-centos-6-3.md" >}}
+[3]: {{< relref "2013-01-16-building-libvirt-1-0-1-rpms-for-centos-6-3.md" >}}

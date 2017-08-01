@@ -61,4 +61,4 @@ In working to get Hiera up and running, I found the following websites and pages
 
 Corrections, suggestions for improvement, or questions are always welcome! Speak up in the comments below.
 
-[1]: {% post_url 2012-07-09-updated-multi-os-puppet-configuration %}
+[1]: {{< relref "2012-07-09-updated-multi-os-puppet-configuration.md" >}}

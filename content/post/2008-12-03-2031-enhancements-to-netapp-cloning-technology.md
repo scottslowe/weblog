@@ -68,4 +68,4 @@ Now for the limitations, caveats and the gotchas:
 
 Obviously, VMware environments---VDI in particular---are a key use case for this sort of technology. (By the way, in case no one has yet connected the dots, this is the technology that I [discussed here][1]). To leverage this functionality, NetApp will update a tool known as the Rapid Cloning Utility (RCU; described in more detail in [TR-3705](http://www.netapp.com/us/library/technical-reports/tr-3705.html)) to take full advantage of file-level FlexCloning after Data ONTAP 7.3.1 is released. Note that the RCU is available today, but it only uses volume-level FlexClone.
 
-[1]: {% post_url 2008-02-28-i-love-it-but-its-not-available %}
+[1]: {{< relref "2008-02-28-i-love-it-but-its-not-available.md" >}}

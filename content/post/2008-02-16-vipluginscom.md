@@ -22,4 +22,4 @@ In addition, Andrew's released the [Add Port Groups plugin](http://www.lostcreat
 
 Good work, Andrew!
 
-[1]: {% post_url 2008-02-14-storage-vmotion-plugin %}
+[1]: {{< relref "2008-02-14-storage-vmotion-plugin.md" >}}

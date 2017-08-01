@@ -53,6 +53,6 @@ This will be the last post titled "Learning NVP"; moving forward, all future pos
 
 As always, your feedback is welcome and encouraged, so feel free to speak up in the comments below.
 
-[1]: {% post_url 2013-11-01-learning-nvp-part-7-handling-the-nvp-to-nsx-transition %}
-[2]: {% post_url 2013-09-06-learning-nvp-part-5-creating-a-logical-network %}
-[3]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
+[1]: {{< relref "2013-11-01-learning-nvp-part-7-handling-the-nvp-to-nsx-transition.md" >}}
+[2]: {{< relref "2013-09-06-learning-nvp-part-5-creating-a-logical-network.md" >}}
+[3]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}

@@ -34,7 +34,7 @@ The final session of the day was on VMware's VDI and ACE solutions, including a 
 
 As soon as I have some additional time, I'll try to post some additional information about these sessions and some of the in-depth technical details presented.
 
-[1]: {% post_url 2007-03-05-vmware-consolidated-backup %}
-[2]: {% post_url 2007-03-06-restoring-vcb-full-backups-with-vmware-converter %}
-[3]: {% post_url 2007-08-07-strange-vcb-error %}
-[4]: {% post_url 2007-09-10-vmworld-2007-partner-day %}
+[1]: {{< relref "2007-03-05-vmware-consolidated-backup.md" >}}
+[2]: {{< relref "2007-03-06-restoring-vcb-full-backups-with-vmware-converter.md" >}}
+[3]: {{< relref "2007-08-07-strange-vcb-error.md" >}}
+[4]: {{< relref "2007-09-10-vmworld-2007-partner-day.md" >}}

@@ -33,5 +33,5 @@ Instead, there is no framework to provide official NIC redundancy for any Micros
 
 By the way, since publishing the first article I've been contacted by one of the presenters of [the VIR358 session][2] during this which issue came to light, but he has not yet been able to provide any additional information. As soon as more information is available, I'll be sure to let everyone know here.
 
-[1]: {% post_url 2008-06-12-significant-networking-problem-with-hyper-v %}
-[2]: {% post_url 2008-06-12-vir358-hyper-v-architecture-scenarios-and-networking %}
+[1]: {{< relref "2008-06-12-significant-networking-problem-with-hyper-v.md" >}}
+[2]: {{< relref "2008-06-12-vir358-hyper-v-architecture-scenarios-and-networking.md" >}}

@@ -29,5 +29,5 @@ What about you, other road warriors out there? What are you carrying these days?
 
 **UPDATE:** Thanks to Ivan Pepelnjak, who pointed out that I had inadvertently swapped out the product names for the Bose earphones and headphones. That's been corrected!
 
-[1]: {% post_url 2013-10-31-timbuk2-commute-messenger-bag-two-months-later %}
-[2]: {% post_url 2013-05-15-using-pf-on-os-x-mountain-lion %}
+[1]: {{< relref "2013-10-31-timbuk2-commute-messenger-bag-two-months-later.md" >}}
+[2]: {{< relref "2013-05-15-using-pf-on-os-x-mountain-lion.md" >}}

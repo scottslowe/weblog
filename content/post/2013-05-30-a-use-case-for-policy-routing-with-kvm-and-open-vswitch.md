@@ -63,7 +63,7 @@ This configuration requires only the initial configuration (which could, quite n
 
 Hopefully this gives you an idea of how Linux policy routing could be effectively used in environments leveraging virtualization, OVS, and overlay protocols. Feel free to add your thoughts, idea, corrections, or questions in the comments below. Courteous comments are always welcome! (Please disclose vendor affiliations where applicable.)
 
-[1]: {% post_url 2013-05-29-a-quick-introduction-to-linux-policy-routing %}
-[2]: {% post_url 2013-05-15-examining-open-vswitch-traffic-patterns %}
-[3]: {% post_url 2012-10-30-running-host-management-on-open-vswitch %}
-[4]: {% post_url 2013-05-07-using-gre-tunnels-with-open-vswitch %}
+[1]: {{< relref "2013-05-29-a-quick-introduction-to-linux-policy-routing.md" >}}
+[2]: {{< relref "2013-05-15-examining-open-vswitch-traffic-patterns.md" >}}
+[3]: {{< relref "2012-10-30-running-host-management-on-open-vswitch.md" >}}
+[4]: {{< relref "2013-05-07-using-gre-tunnels-with-open-vswitch.md" >}}

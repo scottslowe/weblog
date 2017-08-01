@@ -73,4 +73,4 @@ My conclusion this time is a cut and paste of last time (almost literally!). As 
 
 The next article will focus on the expansion abilities of both the IBM and HP blade servers. I know that expandability is a big concern for many readers, so stay tuned for Part 3!
 
-[1]: {% post_url 2009-02-04-blades-and-virtualization-arent-mutually-exclusive-part-one-hp-power-sizing %}
+[1]: {{< relref "2009-02-04-blades-and-virtualization-arent-mutually-exclusive-part-one-hp-power-sizing.md" >}}

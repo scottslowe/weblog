@@ -88,7 +88,7 @@ For more information, documents on [application specific VPNs with SSH][16] and 
 [9]: http://www.microsoft.com/exchange/default.mspx
 [10]: http://www.microsoft.com/downloads/details.aspx?FamilyID=80111f21-d48d-426e-96c2-08aa2bd23a49&DisplayLang=en
 [11]: http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient
-[12]: {% post_url 2005-12-02-certificate-conversion-using-openssl %}
+[12]: {{< relref "2005-12-02-certificate-conversion-using-openssl.md" >}}
 [13]: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 [14]: http://projects.tynsoe.org/en/stm/
 [15]: http://www.leapingbytes.com/almostvpn

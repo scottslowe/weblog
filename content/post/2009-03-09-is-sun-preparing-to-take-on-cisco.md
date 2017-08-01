@@ -28,4 +28,4 @@ It's an interesting thought, to say the least. Going up against Cisco is a bold 
 
 Thoughts?
 
-[1]: {% post_url 2009-01-07-virtualization-short-take-25 %}
+[1]: {{< relref "2009-01-07-virtualization-short-take-25.md" >}}

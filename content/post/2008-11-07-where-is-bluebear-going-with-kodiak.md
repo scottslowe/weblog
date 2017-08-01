@@ -40,4 +40,4 @@ And, of course, this doesn't take into account Bluebear's hardware side, aka Koa
 
 Anyway, I think I have a pile of beta invites for Kodiak, so if anyone is interested post a comment here and I'll see what I can do. Then you can take a look at the product yourself---keeping in mind that it is a very early beta---and see what you think about the future of Kodiak.
 
-[1]: {% post_url 2008-08-29-bluebear-and-kodiak %}
+[1]: {{< relref "2008-08-29-bluebear-and-kodiak.md" >}}

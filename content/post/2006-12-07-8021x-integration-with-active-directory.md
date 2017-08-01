@@ -97,5 +97,5 @@ By the way, configuring Mac OS X to use 802.1x for wireless connections is equal
 
 Future enhancements to this configuration include switching from EAP-MD5 to something like EAP-TLS or PEAP; this will avoid the need to enable reversible password encryption on the domain.
 
-[1]: {% post_url 2005-11-22-cisco-pix-vpn-and-active-directory-integration %}
-[2]: {% post_url 2005-12-06-watchguard-firebox-vpn-and-active-directory-integration %}
+[1]: {{< relref "2005-11-22-cisco-pix-vpn-and-active-directory-integration.md" >}}
+[2]: {{< relref "2005-12-06-watchguard-firebox-vpn-and-active-directory-integration.md" >}}

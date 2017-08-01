@@ -18,4 +18,4 @@ The developers guide is the result of Andrew's work in creating plugins for VI3 
 
 Good work, Andrew!
 
-[1]: {% post_url 2008-02-14-storage-vmotion-plugin %}
+[1]: {{< relref "2008-02-14-storage-vmotion-plugin.md" >}}

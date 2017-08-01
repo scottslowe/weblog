@@ -54,6 +54,6 @@ When all looked good, I configured any firewalls to pass the appropriate traffic
 
 With a few modifications, this approach could easily be used to create [application-specific VPNs][3] between multiple locations within the same organization, or between different organizations.
 
-[1]: {% post_url 2005-06-29-transparent-rdp-tunneling %}
-[2]: {% post_url 2005-07-01-transparent-rdp-tunneling-part-2 %}
-[3]: {% post_url 2005-12-13-application-specific-vpns %}
+[1]: {{< relref "2005-06-29-transparent-rdp-tunneling.md" >}}
+[2]: {{< relref "2005-07-01-transparent-rdp-tunneling-part-2.md" >}}
+[3]: {{< relref "2005-12-13-application-specific-vpns.md" >}}

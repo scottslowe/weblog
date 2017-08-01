@@ -34,4 +34,4 @@ This searches for the string "CDP Summary" in the output of the `esxcfg-info` co
 
 Thanks go to reader Larry for the information on this command. Other readers, feel free to continue to share information here. It is helpful!
 
-[1]: {% post_url 2009-03-13-next-gen-stuff-enabling-cdp-in-esxesxi %}
+[1]: {{< relref "2009-03-13-next-gen-stuff-enabling-cdp-in-esxesxi.md" >}}

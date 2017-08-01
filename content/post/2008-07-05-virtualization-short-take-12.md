@@ -44,5 +44,5 @@ Here's Virtualization Short Take #12, a collection of links I've gathered over t
 
 As always, readers' thoughts are welcome in the comments!
 
-[1]: {% post_url 2008-02-20-a-few-thoughts-on-xen %}
-[2]: {% post_url 2006-12-26-application-agnosticism %}
+[1]: {{< relref "2008-02-20-a-few-thoughts-on-xen.md" >}}
+[2]: {{< relref "2006-12-26-application-agnosticism.md" >}}

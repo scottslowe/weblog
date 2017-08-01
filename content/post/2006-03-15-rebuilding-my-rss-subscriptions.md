@@ -20,5 +20,5 @@ On the flip side, I've removed some feeds that were just generating noise. [Nove
 
 Finally, the Tiger upgrade has also afforded me the opportunity to review my choice of RSS aggregator. I had been using [PulpFiction](http://freshsqueeze.com/products/pulpfiction/), but that application has been languishing since the sale of [Freshly Squeezed Software](http://freshsqueeze.com/) to a new owner (although I saw rumors that development was going to pick back up soon---I certainly hope so). I really wanted some improved integration with new Tiger features, such as [Spotlight](http://www.apple.com/macosx/features/spotlight/) and [Automator](http://www.apple.com/macosx/features/automator/), and evaluated a number of applications. I've finally settled on [NetNewsWire](http://ranchero.com/netnewswire/), which I'm going to run for a while to see how it fits into my workflow (and take full advantage of the trial period). It doesn't have Spotlight support (yet), but it does support Automator and [AppleScript](http://www.apple.com/macosx/features/applescript/), and I'm beginning to like how some of its features work. It's rather different than PulpFiction (not better or worse, just different).
 
-[1]: {% post_url 2006-02-02-my-rss-subscriptions %}
-[2]: {% post_url 2006-03-12-my-tiger-upgrade %}
+[1]: {{< relref "2006-02-02-my-rss-subscriptions.md" >}}
+[2]: {{< relref "2006-03-12-my-tiger-upgrade.md" >}}

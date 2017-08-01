@@ -62,4 +62,4 @@ Of course, the other way of handling it is to assign only two network connection
 
 As far as I can tell, this is not documented by HP in the Virtual Connect (or Flex-10) documentation. So, you might want to bookmark this article, or post it to Delicious.com or similar. Finally, as always, I'd love to hear any feedback or clarifications in the comments. Thanks!
 
-[1]: {% post_url 2009-07-06-using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect %}
+[1]: {{< relref "2009-07-06-using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect.md" >}}

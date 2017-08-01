@@ -22,4 +22,4 @@ Just a few minutes later---the process only took a few minutes in the Quicksilve
 
 Thank goodness for Quicksilver!
 
-[1]: {% post_url 2008-02-16-getting-things-done-on-my-mac-part-ii %}
+[1]: {{< relref "2008-02-16-getting-things-done-on-my-mac-part-ii.md" >}}

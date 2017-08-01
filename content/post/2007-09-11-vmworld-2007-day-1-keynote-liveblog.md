@@ -75,4 +75,4 @@ And that's it! Karthik Rau took the stage again to recognize other VMworld 2007 
 
 I'll post more information here as soon as I can. Today is my busiest day the entire week, so updates may be a bit on the light side.
 
-[1]: {% post_url 2007-09-10-vmworld-2007-partner-day %}
+[1]: {{< relref "2007-09-10-vmworld-2007-partner-day.md" >}}

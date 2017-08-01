@@ -44,5 +44,5 @@ I said all that to finally come back to the comment that started all this: if Dr
 
 Anyway, that's what I was thinking. Courteous comments (or questions) are always invited and encouraged, so feel free to speak out below.
 
-[1]: {% post_url 2012-04-30-updated-launchd-property-list-file-for-synergy %}
-[2]: {% post_url 2012-11-23-using-encfs-with-dropbox-and-boxcryptor %}
+[1]: {{< relref "2012-04-30-updated-launchd-property-list-file-for-synergy.md" >}}
+[2]: {{< relref "2012-11-23-using-encfs-with-dropbox-and-boxcryptor.md" >}}

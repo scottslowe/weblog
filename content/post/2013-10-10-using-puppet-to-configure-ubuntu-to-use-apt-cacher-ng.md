@@ -33,4 +33,4 @@ This is a really simple block of code, but I'm publishing it here just for the s
 
 Questions, corrections, and other feedback are welcome, so feel free to speak up in the comments below.
 
-[1]: {% post_url 2013-10-04-using-puppet-for-ubuntu-cloud-archive-support %}
+[1]: {{< relref "2013-10-04-using-puppet-for-ubuntu-cloud-archive-support.md" >}}

@@ -18,4 +18,4 @@ I first discussed VIMA, the VMware Infrastructure Management Assistant, in the [
 
 [Via VMwarewolf](http://www.vmwarewolf.com/download-vima-today/), I learned that VIMA 1.0 has been released and is now available as [a free download](http://www.vmware.com/support/developer/vima/index.html). Go check it out!
 
-[1]: {% post_url 2008-09-17-ta2659-managing-esx-in-a-cos-less-world %}
+[1]: {{< relref "2008-09-17-ta2659-managing-esx-in-a-cos-less-world.md" >}}

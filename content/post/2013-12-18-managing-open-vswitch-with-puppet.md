@@ -51,9 +51,9 @@ I haven't yet used L23Network to create/manage patch ports or GRE ports, but the
 
 Based on the snippets I've given you above, it should be pretty straightforward how to combine these various pieces together to fully configure and manage OVS instances across a large number of systems. However, if you have any questions, feel free to post them in the comments below. I also welcome all other courteous feedback; you are encouraged to start (or join) the conversation.
 
-[1]: {% post_url 2013-02-26-automating-open-vswitch-configuration-with-puppet %}
-[2]: {% post_url 2013-02-07-exploring-rhel-ovs-integrations %}
-[3]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
-[4]: {% post_url 2013-12-03-connecting-lxc-to-open-vswitch-using-libvirt %}
-[5]: {% post_url 2013-05-07-using-gre-tunnels-with-open-vswitch %}
-[6]: {% post_url 2012-10-30-running-host-management-on-open-vswitch %}
+[1]: {{< relref "2013-02-26-automating-open-vswitch-configuration-with-puppet.md" >}}
+[2]: {{< relref "2013-02-07-exploring-rhel-ovs-integrations.md" >}}
+[3]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}
+[4]: {{< relref "2013-12-03-connecting-lxc-to-open-vswitch-using-libvirt.md" >}}
+[5]: {{< relref "2013-05-07-using-gre-tunnels-with-open-vswitch.md" >}}
+[6]: {{< relref "2012-10-30-running-host-management-on-open-vswitch.md" >}}

@@ -66,4 +66,4 @@ Thanks!
 [link-8]: http://fullstackjourney.com/podcast.xml
 [link-9]: https://twitter.com/scott_lowe
 
-[xref-1]: {% post_url 2016-01-07-launching-new-podcast %}
+[xref-1]: {{< relref "2016-01-07-launching-new-podcast.md" >}}

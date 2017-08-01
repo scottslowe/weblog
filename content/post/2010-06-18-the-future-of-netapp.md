@@ -38,4 +38,4 @@ However, it appears to me (again, lacking any inside knowledge I could be comple
 
 Again, I'm sure that everyone will take these comments as me bashing NetApp. My intent here is most definitely not to bash NetApp, but to simply state my observations. I'd love to hear others' thoughts on the matter; my only request is that you fully disclose your affiliations. Speak up in the comments and let me know what you think! All courteous comments are welcome.
 
-[1]: {% post_url 2010-06-07-a-deeper-look-at-vplex %}
+[1]: {{< relref "2010-06-07-a-deeper-look-at-vplex.md" >}}

@@ -36,7 +36,7 @@ I am very happy to report that the pcn driver now works as expected; it's no lon
 
 If I run across any additional information, I'll be sure to share it here.
 
-[1]: {% post_url 2005-11-04-openbsd-pcn0-driver-issue-resolved %}
-[2]: {% post_url 2006-04-03-openbsd-on-esx-server %}
+[1]: {{< relref "2005-11-04-openbsd-pcn0-driver-issue-resolved.md" >}}
+[2]: {{< relref "2006-04-03-openbsd-on-esx-server.md" >}}
 [3]: http://www.openbsd.org/39.html
 [4]: http://www.vmware.com/products/esx/

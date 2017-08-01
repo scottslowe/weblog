@@ -25,5 +25,5 @@ So it's clear that Bob and I aren't too terribly happy with the overall fit and 
 
 What about you? What do you think?
 
-[1]: {% post_url 2008-02-09-graphical-front-end-for-storage-vmotion %}
-[2]: {% post_url 2008-01-07-underwhelmed-by-the-remote-cli %}
+[1]: {{< relref "2008-02-09-graphical-front-end-for-storage-vmotion.md" >}}
+[2]: {{< relref "2008-01-07-underwhelmed-by-the-remote-cli.md" >}}

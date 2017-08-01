@@ -23,6 +23,6 @@ Of course, there are numerous other implications as well. As was mentioned on Tw
 
 Does this mean we'll be running our virtual machines in VHD files stored on a VMFS partition? It's possible...let me know what you think.
 
-[1]: {% post_url 2009-02-10-what-if-hypervisors-shared-a-file-system %}
-[2]: {% post_url 2009-02-10-what-if-hypervisors-shared-a-file-system %}
-[3]: {% post_url 2009-02-19-citrix-open-sources-their-vhd-implementation %}
+[1]: {{< relref "2009-02-10-what-if-hypervisors-shared-a-file-system.md" >}}
+[2]: {{< relref "2009-02-10-what-if-hypervisors-shared-a-file-system.md" >}}
+[3]: {{< relref "2009-02-19-citrix-open-sources-their-vhd-implementation.md" >}}

@@ -33,4 +33,4 @@ Having already learned my lesson regarding the ESX firewall, I ensured that the 
 
 The next steps will be to do some performance tuning, test bonding the NICs and/or multipathing, and perform some NFS interoperability tests. (Remember that NFS is also supported by ESX 3 for datastores.)
 
-[1]: {% post_url 2006-07-10-iscsi-and-esx-server-3 %}
+[1]: {{< relref "2006-07-10-iscsi-and-esx-server-3.md" >}}

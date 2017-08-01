@@ -67,6 +67,6 @@ It should go without saying, but I'll say it anyway: we can easily modify this c
 
 **UPDATE:** It has come to my attention that you could also use the [PsExec](http://www.sysinternals.com/Utilities/PsExec.html) tool, from [SysInternals](http://www.sysinternals.com/), to replace the `wmic process call create` command. This should achieve the same effect, but I haven't yet had the time to check that myself and fully document the command line.
 
-[1]: {% post_url 2006-07-07-setting-dns-and-wins-server-addresses-remotely %}
-[2]: {% post_url 2006-07-13-remotely-enabling-remote-desktop %}
-[3]: {% post_url 2006-07-06-remotely-setting-the-dns-suffix-search-order %}
+[1]: {{< relref "2006-07-07-setting-dns-and-wins-server-addresses-remotely.md" >}}
+[2]: {{< relref "2006-07-13-remotely-enabling-remote-desktop.md" >}}
+[3]: {{< relref "2006-07-06-remotely-setting-the-dns-suffix-search-order.md" >}}

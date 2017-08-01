@@ -24,4 +24,4 @@ Jose also wrote a [follow-up article on Hyper-V's storage options](http://blogs.
 
 Great work, Jose! Keep it coming.
 
-[1]: {% post_url 2008-06-22-hyper-v-clustering-scenarios %}
+[1]: {{< relref "2008-06-22-hyper-v-clustering-scenarios.md" >}}

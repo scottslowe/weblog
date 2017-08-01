@@ -56,6 +56,6 @@ So far, everything I've shared with you has been true for centralized logical ro
 I hope this information helps in understanding the routing aspects of VMware NSX. Feel free to post any questions, clarifications, or thoughts in the comments below. Any input on other topics you'd like to see in the Learning NSX blog series are welcome as well!
 
 [all]: {{ site.url }}/learning-nvp-nsx/
-[p6]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
-[p9]: {% post_url 2014-02-26-learning-nsx-part-9-adding-a-gateway-service %}
-[p14]: {% post_url 2014-06-20-learning-nsx-part-14-using-logical-routing %}
+[p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
+[p9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
+[p14]: {{< relref "2014-06-20-learning-nsx-part-14-using-logical-routing.md" >}}

@@ -51,4 +51,4 @@ DPDK also enables other functions like deep packet inspection (DPI) and Quality 
 
 Brian now turns it back over to Frank, who provides more information on where attendees can get more information on Intel's SDN/NFV enables. He points attendees to Intel's Network Builders program, provides a summary of the key points from the session, and then opens for questions and answers.
 
-[1]: {% post_url 2013-09-12-idf-2013-future-of-sdn-with-the-intel-onp-switch-reference-design %}
+[1]: {{< relref "2013-09-12-idf-2013-future-of-sdn-with-the-intel-onp-switch-reference-design.md" >}}

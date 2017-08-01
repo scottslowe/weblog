@@ -24,4 +24,4 @@ I'm going to be trying out the VMware appliance on [ESX Server](http://www.vmwar
 
 Thanks to [DABCC](http://www.dabcc.com/dabcc/webapplication/aspx/dabcc.content.aspx?intPKText=2020&intPKChannel=13) for alerting me to the release of StrataGuard Free as a VMware image.
 
-[1]: {% post_url 2006-04-17-freenas-on-esx-server %}
+[1]: {{< relref "2006-04-17-freenas-on-esx-server.md" >}}

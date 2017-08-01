@@ -40,4 +40,4 @@ I hope this information helps!
 
 
 [link-1]: http://www.openssh.com/txt/release-5.4
-[xref-1]: {% post_url 2015-11-21-using-ssh-bastion-host %}
+[xref-1]: {{< relref "2015-11-21-using-ssh-bastion-host.md" >}}

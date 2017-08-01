@@ -108,6 +108,6 @@ Congratulations---you've just set up an etcd-backed Docker Swarm cluster! If you
 [link-7]: http://docs.docker.com/machine/
 [link-8]: http://cloudinit.readthedocs.org/
 [link-9]: https://coreos.com/docs/launching-containers/building/customizing-docker/
-[xref-1]: {% post_url 2015-04-15-running-etcd-20-cluster %}
-[xref-2]: {% post_url 2015-03-06-running-own-docker-swarm-cluster %}
-[xref-3]: {% post_url 2015-02-05-vagrant-coreos-etcd-fleet-docker %}
+[xref-1]: {{< relref "2015-04-15-running-etcd-20-cluster.md" >}}
+[xref-2]: {{< relref "2015-03-06-running-own-docker-swarm-cluster.md" >}}
+[xref-3]: {{< relref "2015-02-05-vagrant-coreos-etcd-fleet-docker.md" >}}

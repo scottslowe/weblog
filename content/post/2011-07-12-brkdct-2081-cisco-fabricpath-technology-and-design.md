@@ -91,4 +91,4 @@ The presenter moves on to some discussion of various FabricPath designs. The fir
 
 At this point the session wrapped up.
 
-[1]: {% post_url 2011-07-11-brkcrs-2031-multilayer-campus-architectures-and-design-principles %}
+[1]: {{< relref "2011-07-11-brkcrs-2031-multilayer-campus-architectures-and-design-principles.md" >}}

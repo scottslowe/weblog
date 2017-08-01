@@ -41,4 +41,4 @@ This issue is applicable to other operating systems besides ESX Server, though, 
 
 **UPDATE:** It appears that local logins will work without network connectivity, even with full Active Directory integration, if you use the Emergency Console. Thanks to Magnus for the update!
 
-[1]: {% post_url 2007-07-10-esx-server-ad-integration %}
+[1]: {{< relref "2007-07-10-esx-server-ad-integration.md" >}}

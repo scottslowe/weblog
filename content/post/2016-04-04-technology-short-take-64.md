@@ -115,7 +115,7 @@ It's time to wrap up now. See you again soon!
 [link-33]: http://ntwrk.guru/design-mindset-3/
 [link-34]: http://bladesmadesimple.com/2016/03/intel-releases-broadwell-cpus-for-servers/
 [link-35]: http://virtualgeek.typepad.com/virtual_geek/2016/03/scaleio-20-the-march-towards-a-software-defined-future-continues.html
-[xref-1]: {% post_url 2013-06-21-reducing-the-friction-processing-e-mail %}
-[xref-2]: {% post_url 2013-07-19-reducing-the-friction-processing-e-mail-part-2 %}
-[xref-3]: {% post_url 2015-02-06-quick-intro-to-consul %}
-[xref-4]: {% post_url 2015-02-28-experimenting-docker-registrator-consul %}
+[xref-1]: {{< relref "2013-06-21-reducing-the-friction-processing-e-mail.md" >}}
+[xref-2]: {{< relref "2013-07-19-reducing-the-friction-processing-e-mail-part-2.md" >}}
+[xref-3]: {{< relref "2015-02-06-quick-intro-to-consul.md" >}}
+[xref-4]: {{< relref "2015-02-28-experimenting-docker-registrator-consul.md" >}}

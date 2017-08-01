@@ -68,5 +68,5 @@ Please note that plenty of other folks have written about using Docker Machine o
 [link-6]: https://alexanderzeitler.com/articles/a-lap-around-aws-and-docker-machine/
 [link-7]: https://docs.docker.com/machine/drivers/aws/
 [link-8]: http://www.ubuntu.com/
-[xref-1]: {% post_url 2016-01-21-looking-ahead-2016-projects %}
-[xref-2]: {% post_url 2015-08-04-using-vagrant-docker-machine-together %}
+[xref-1]: {{< relref "2016-01-21-looking-ahead-2016-projects.md" >}}
+[xref-2]: {{< relref "2015-08-04-using-vagrant-docker-machine-together.md" >}}

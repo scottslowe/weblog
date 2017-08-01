@@ -40,12 +40,12 @@ Every now and then, it's kind of fun to look back at the content that I've gener
 
 [Revisiting VXLAN and Layer 3 Connectivity][9]
 
-[1]: {% post_url 2008-12-05-installing-the-vi-power-documenter %}
-[2]: {% post_url 2008-12-09-continuing-the-fcoe-discussion %}
-[3]: {% post_url 2009-12-02-what-is-sr-iov %}
-[4]: {% post_url 2009-12-09-snow-leopard-time-machine-and-iomega-ix4-200d %}
-[5]: {% post_url 2010-12-02-vlan-trunking-between-nexus-5010-and-dell-powerconnect-switches %}
-[6]: {% post_url 2010-12-08-using-device-aliases-on-a-cisco-mds %}
-[7]: {% post_url 2011-12-01-some-initial-mpls-reading %}
-[8]: {% post_url 2011-12-02-examining-vxlan %}
-[9]: {% post_url 2011-12-07-revisiting-vxlan-and-layer-3-connectivity %}
+[1]: {{< relref "2008-12-05-installing-the-vi-power-documenter.md" >}}
+[2]: {{< relref "2008-12-09-continuing-the-fcoe-discussion.md" >}}
+[3]: {{< relref "2009-12-02-what-is-sr-iov.md" >}}
+[4]: {{< relref "2009-12-09-snow-leopard-time-machine-and-iomega-ix4-200d.md" >}}
+[5]: {{< relref "2010-12-02-vlan-trunking-between-nexus-5010-and-dell-powerconnect-switches.md" >}}
+[6]: {{< relref "2010-12-08-using-device-aliases-on-a-cisco-mds.md" >}}
+[7]: {{< relref "2011-12-01-some-initial-mpls-reading.md" >}}
+[8]: {{< relref "2011-12-02-examining-vxlan.md" >}}
+[9]: {{< relref "2011-12-07-revisiting-vxlan-and-layer-3-connectivity.md" >}}

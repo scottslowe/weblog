@@ -30,5 +30,5 @@ However, having said all that, it is the default configuration in many VMware en
 
 Have more questions, or need additional clarification? Speak up in the comments. Thanks for reading!
 
-[1]: {% post_url 2009-07-06-using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect %}
-[2]: {% post_url 2009-07-09-using-multiple-vlans-with-hp-virtual-connect-flex-10 %}
+[1]: {{< relref "2009-07-06-using-vmware-esx-virtual-switch-tagging-with-hp-virtual-connect.md" >}}
+[2]: {{< relref "2009-07-09-using-multiple-vlans-with-hp-virtual-connect-flex-10.md" >}}

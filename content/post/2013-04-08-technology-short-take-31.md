@@ -100,4 +100,4 @@ Nothing this time around, but I'll stay alert for information I can include in t
 
 That's it for this time. I have plenty more links I wanted to share, but I figured I'd better not let this post get any longer. As always, courteous comments are welcome, so I invite you to participate in the conversation by adding your thoughts below.
 
-[1]: {% post_url 2012-08-28-app-cap2165-operating-cloud-foundry %}
+[1]: {{< relref "2012-08-28-app-cap2165-operating-cloud-foundry.md" >}}

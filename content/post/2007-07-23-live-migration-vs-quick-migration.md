@@ -32,4 +32,4 @@ Even [this blog posting](http://blogs.technet.com/daven/archive/2007/06/08/virtu
 
 Microsoft can change the names of features to make them look more like their competition, but the fact of the matter remains: when Windows Server Virtualization debuts in late 2008 (supposedly within 180 days of the release of [Windows Server 2008](http://www.microsoft.com/windowsserver2008/default.mspx), which is due to be released in late February 2008), it _still_ won't have a feature set comparable to the feature set that VMware has today.
 
-[1]: {% post_url 2007-05-10-viridian-feature-set-trimmed %}
+[1]: {{< relref "2007-05-10-viridian-feature-set-trimmed.md" >}}

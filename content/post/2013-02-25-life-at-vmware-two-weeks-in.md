@@ -25,4 +25,4 @@ One key takeaway so far is that I need to deepen my networking knowledge. It's c
 
 That's it for me, two weeks into my new role at VMware. I'm looking forward to the challenges that lie ahead (there are a few big ones), but also to the opportunities (there a few big ones). Feel free to share your comments below; courteous comments are always accepted.
 
-[1]: {% post_url 2013-01-25-new-year-new-challenges-new-opportunities %}
+[1]: {{< relref "2013-01-25-new-year-new-challenges-new-opportunities.md" >}}

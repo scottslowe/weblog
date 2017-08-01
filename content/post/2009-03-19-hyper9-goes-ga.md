@@ -22,4 +22,4 @@ Additionally, Hyper9 is releasing the H9Labs Search Plugin for VI Client, a plug
 
 Congratulations to David, Andrew, and the rest of their team on finally reaching this milestone. Good work!
 
-[1]: {% post_url 2008-02-14-storage-vmotion-plugin %}
+[1]: {{< relref "2008-02-14-storage-vmotion-plugin.md" >}}

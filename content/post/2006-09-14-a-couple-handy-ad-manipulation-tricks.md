@@ -79,6 +79,6 @@ When this command is complete, your `output-file.csv` would look something like 
 
 You could then use a variety of methods to get these changes back into Active Directory. If you wanted to modify only the display name (of course, you'd need to adjust the commands above accordingly) you could use `for /f` with `dsmod user` and pipe the correct information to the command to modify the users; that technique is described [here][2] and [here][3]. Or, you could just use Log Parser again to convert from CSV to LDIF using a template file and then import back in with LDIFDE. The real trick here is again the use of `sed` and regexes to quickly and efficiently make bulk changes to a text file, and that's something that is uniquely Unix-like. Nevertheless, it holds great value in other areas and on other platforms as well.
 
-[1]: {% post_url 2006-06-20-mass-changes-in-active-directory %}
-[2]: {% post_url 2006-07-06-mass-renaming-computers %}
-[3]: {% post_url 2006-06-30-bulk-adding-entries-in-dns %}
+[1]: {{< relref "2006-06-20-mass-changes-in-active-directory.md" >}}
+[2]: {{< relref "2006-07-06-mass-renaming-computers.md" >}}
+[3]: {{< relref "2006-06-30-bulk-adding-entries-in-dns.md" >}}

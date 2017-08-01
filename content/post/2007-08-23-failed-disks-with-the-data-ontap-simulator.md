@@ -18,4 +18,4 @@ Readers Sdodson and Jacek provided workarounds in their comments to that article
 
 So, if you're using the Simulator and happen to run into this problem, the fix is simply to mark the disks as unfailed, zero them, and then you should be able to use the disks as you expect.
 
-[1]: {% post_url 2006-06-27-netapp-ontap-simulator-and-esx-server %}
+[1]: {{< relref "2006-06-27-netapp-ontap-simulator-and-esx-server.md" >}}

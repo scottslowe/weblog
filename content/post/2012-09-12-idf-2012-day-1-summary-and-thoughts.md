@@ -42,7 +42,7 @@ There are also other discussions that result from the Seacliff Trail announcemen
 
 _(My disclosure: I work for EMC, but I'm attending IDF at the request of Intel. Intel is covering my expenses and provided a pass for the show.)_
 
-[1]: {% post_url 2012-09-11-idf-2012-keynote-day-1 %}
-[2]: {% post_url 2012-09-11-spcs001-intel-next-generation-haswell-microarchitecture %}
-[3]: {% post_url 2012-09-11-coms002-next-generation-cloud-infrastructure-with-data-plane-virtualization %}
-[4]: {% post_url 2012-09-11-clds001-odca-and-usage-models-for-cloud-computing %}
+[1]: {{< relref "2012-09-11-idf-2012-keynote-day-1.md" >}}
+[2]: {{< relref "2012-09-11-spcs001-intel-next-generation-haswell-microarchitecture.md" >}}
+[3]: {{< relref "2012-09-11-coms002-next-generation-cloud-infrastructure-with-data-plane-virtualization.md" >}}
+[4]: {{< relref "2012-09-11-clds001-odca-and-usage-models-for-cloud-computing.md" >}}

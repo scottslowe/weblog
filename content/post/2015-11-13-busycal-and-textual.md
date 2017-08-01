@@ -25,4 +25,4 @@ Unfortunately, I'm still left with a number of MAS-only apps for which there doe
 [link-1]: http://www.busymac.com/busycal/index.html
 [link-2]: https://www.codeux.com/textual/
 [link-3]: http://www.macrumors.com/2015/11/12/mac-app-store-apps-damaged-expired-receipts-issue/
-[xref-1]: {% post_url 2009-04-05-the-perfect-mac-twitter-client %}
+[xref-1]: {{< relref "2009-04-05-the-perfect-mac-twitter-client.md" >}}

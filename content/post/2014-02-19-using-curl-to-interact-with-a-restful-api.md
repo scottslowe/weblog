@@ -125,5 +125,5 @@ Once again, I recommend piping the output of this command through `python -m jso
 
 Clearly, there is _much_ more that can be done with the OpenStack and VMware NSX APIs, but this at least should give you a starting point from which you can continue to explore in more detail. If anyone has any corrections, clarifications, or questions, please feel free to post them in the comments section below. All courteous comments (with vendor disclosure, where applicable) are welcome!
 
-[1]: {% post_url 2013-11-08-a-non-programmers-introduction-to-json %}
-[2]: {% post_url 2013-11-11-making-json-output-more-readable-with-bbedit %}
+[1]: {{< relref "2013-11-08-a-non-programmers-introduction-to-json.md" >}}
+[2]: {{< relref "2013-11-11-making-json-output-more-readable-with-bbedit.md" >}}

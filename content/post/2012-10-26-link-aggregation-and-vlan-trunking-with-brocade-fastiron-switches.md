@@ -75,7 +75,7 @@ Once the VLANs are created and the interfaces are added to the VLANs, configurin
 
 I hope this information is useful to someone. If anyone has any corrections or clarifications, I encourage you to add your information to the comments on this post.
 
-[1]: {% post_url 2012-10-19-link-aggregation-and-lacp-with-open-vswitch %}
-[2]: {% post_url 2007-11-13-esx-server-and-the-native-vlan %}
-[3]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
-[4]: {% post_url 2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges %}
+[1]: {{< relref "2012-10-19-link-aggregation-and-lacp-with-open-vswitch.md" >}}
+[2]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}
+[3]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}
+[4]: {{< relref "2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges.md" >}}

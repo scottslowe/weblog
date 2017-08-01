@@ -44,4 +44,4 @@ In the event you aren't interested in one of the special invitations, or if you 
 
 So post your comment now!
 
-[1]: {% post_url 2009-05-11-pre-order-mastering-vmware-vsphere-4 %}
+[1]: {{< relref "2009-05-11-pre-order-mastering-vmware-vsphere-4.md" >}}

@@ -34,10 +34,10 @@ All in all, it looks like a great week of activities. For the conference attende
 
 All these activities have been discounted, thanks to IBM's sponsorship of Spousetivities, so I encourage you to visit [the registration page](http://edge2013-spousetivities.eventbrite.com) and get signed up as soon as possible.
 
-[1]: {% post_url 2009-06-19-vmworld-2009-spouse-activities %}
-[2]: {% post_url 2010-08-22-vmworld-2010-spouse-activities-calendar %}
-[3]: {% post_url 2010-10-01-vmworld-emea-spousetivities-update %}
-[4]: {% post_url 2011-07-26-vmworld-2011-spousetivities %}
-[5]: {% post_url 2011-09-21-spousetivities-at-vmworld-emea-2011 %}
-[6]: {% post_url 2012-07-27-spouse-activities-at-vmworld-2012 %}
-[7]: {% post_url 2011-11-08-spousetivities-at-hp-discover-vienna %}
+[1]: {{< relref "2009-06-19-vmworld-2009-spouse-activities.md" >}}
+[2]: {{< relref "2010-08-22-vmworld-2010-spouse-activities-calendar.md" >}}
+[3]: {{< relref "2010-10-01-vmworld-emea-spousetivities-update.md" >}}
+[4]: {{< relref "2011-07-26-vmworld-2011-spousetivities.md" >}}
+[5]: {{< relref "2011-09-21-spousetivities-at-vmworld-emea-2011.md" >}}
+[6]: {{< relref "2012-07-27-spouse-activities-at-vmworld-2012.md" >}}
+[7]: {{< relref "2011-11-08-spousetivities-at-hp-discover-vienna.md" >}}

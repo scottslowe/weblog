@@ -19,4 +19,4 @@ However, despite this dry spell, I am determined to continue with my Learning NV
 
 So, bear with me as I work through this short bout of writers' block. I hope to be back soon with some new content. Thanks!
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}

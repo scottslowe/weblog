@@ -32,5 +32,5 @@ The addition of MindNode helps me with the brainstorming/creative thinking skill
 
 Anyone else have any other suggestions to helping to improve brainstorming and creative thinking skills?
 
-[1]: {% post_url 2008-02-06-getting-things-done-on-my-mac %}
-[2]: {% post_url 2008-02-16-getting-things-done-on-my-mac-part-ii %}
+[1]: {{< relref "2008-02-06-getting-things-done-on-my-mac.md" >}}
+[2]: {{< relref "2008-02-16-getting-things-done-on-my-mac-part-ii.md" >}}

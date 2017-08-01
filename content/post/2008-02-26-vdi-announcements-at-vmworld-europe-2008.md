@@ -30,5 +30,5 @@ Likewise, the scalable virtual image stuff addresses what is, in my mind, the #1
 
 With these announcements, it's now much clearer that VMware sees the desktop virtualization market is a very strategic market, and they are taking the steps to control that market.
 
-[1]: {% post_url 2006-11-08-vmworld-2006-day-2-keynote %}
-[2]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
+[1]: {{< relref "2006-11-08-vmworld-2006-day-2-keynote.md" >}}
+[2]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}

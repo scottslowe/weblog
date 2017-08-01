@@ -41,4 +41,4 @@ Note also that the beta program for MAP 3.1 is already running; this version wil
 
 That about does it this time around. Thanks for reading!
 
-[1]: {% post_url 2008-06-11-vir361-introducing-map-for-windows-server-2008-hyper-v %}
+[1]: {{< relref "2008-06-11-vir361-introducing-map-for-windows-server-2008-hyper-v.md" >}}

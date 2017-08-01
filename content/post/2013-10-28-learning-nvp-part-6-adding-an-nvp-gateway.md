@@ -118,8 +118,8 @@ To add the new gateway appliance to NVP, you'll use NVP Manager (I showed you ho
 
 That's it---you're all done adding a gateway appliance to NVP. In future posts, you'll leverage the gateway appliance to add L2 (bridged) and L3 (routed) connectivity in and out of logical networks. First, though, I'll need to address the transition from NVP to NSX, so look for that coming soon. In the meantime, feel free to post any questions, thoughts, or suggestions in the comments below. I welcome all courteous comments (even if you disagree with something I've said!).
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
-[2]: {% post_url 2013-08-16-learning-nvp-part-2-nvp-controllers %}
-[3]: {% post_url 2013-08-19-learning-nvp-part-3-nvp-manager %}
-[4]: {% post_url 2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp %}
-[5]: {% post_url 2013-09-06-learning-nvp-part-5-creating-a-logical-network %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}
+[2]: {{< relref "2013-08-16-learning-nvp-part-2-nvp-controllers.md" >}}
+[3]: {{< relref "2013-08-19-learning-nvp-part-3-nvp-manager.md" >}}
+[4]: {{< relref "2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp.md" >}}
+[5]: {{< relref "2013-09-06-learning-nvp-part-5-creating-a-logical-network.md" >}}

@@ -27,5 +27,5 @@ Brian shared a bunch of information with me during VMworld a couple of weeks ago
 
 So, aside from meeting [Robert Scoble](http://scobleizer.com/) at Starbucks this morning, that's it for my day 2 summary. Feel free to post any thoughts or questions in the comments below.
 
-[1]: {% post_url 2012-09-12-dats002-big-data-meets-high-performance-computing %}
-[2]: {% post_url 2012-09-12-clds006-exploring-new-xeon-e5-optimizations-for-10-gb-ethernet %}
+[1]: {{< relref "2012-09-12-dats002-big-data-meets-high-performance-computing.md" >}}
+[2]: {{< relref "2012-09-12-clds006-exploring-new-xeon-e5-optimizations-for-10-gb-ethernet.md" >}}

@@ -32,4 +32,4 @@ I don't know the answers to these questions (yet).
 [link-3]: https://saltstack.com/
 [link-4]: https://www.chef.io/
 [link-5]: https://www.ansible.com/
-[xref-1]: {% post_url 2015-01-16-looking-ahead-2015-projects %}
+[xref-1]: {{< relref "2015-01-16-looking-ahead-2015-projects.md" >}}

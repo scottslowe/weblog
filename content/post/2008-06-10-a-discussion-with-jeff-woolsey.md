@@ -47,4 +47,4 @@ In my opinion, relying on partners to fill certain portions of the solution is c
 
 And that was the end of our discussion. I'd like to thank Jeff for taking the time to talk with me, answering my questions, and sharing his thoughts on these topics.
 
-[1]: {% post_url 2008-06-10-vir367-hyper-v-security-and-best-practices %}
+[1]: {{< relref "2008-06-10-vir367-hyper-v-security-and-best-practices.md" >}}

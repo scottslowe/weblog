@@ -41,4 +41,4 @@ As soon as I have the opportunity to upgrade the IOS image on the Catalyst 3524X
 
 **UPDATE:** I've posted some updated information and more comprehensive configuration notes in a posting titled "[ESX Server, NIC Teaming, and VLAN Trunking][1]".
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}

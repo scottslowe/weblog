@@ -58,5 +58,5 @@ So that's a quick introduction to Consul. Have I whetted your appetite for more?
 [link-4]: http://coreos.com/
 [link-5]: https://www.consul.io/intro/getting-started/join.html
 [link-6]: https://www.consul.io/docs/agent/http.html
-[xref-1]: {% post_url 2014-08-18-coreos-continued-etcd %}
-[xref-2]: {% post_url 2013-11-08-a-non-programmers-introduction-to-json %}
+[xref-1]: {{< relref "2014-08-18-coreos-continued-etcd.md" >}}
+[xref-2]: {{< relref "2013-11-08-a-non-programmers-introduction-to-json.md" >}}

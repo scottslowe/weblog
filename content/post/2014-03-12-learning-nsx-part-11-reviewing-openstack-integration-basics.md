@@ -64,10 +64,10 @@ Therefore, if you choose to deploy the OpenStack Neutron components in a "typica
 At this point, you should have a pretty good understanding of how, at a high level, NSX integrates with and affects OpenStack Neutron. In the next post in the series, I'll provide more details on exactly how to configure the integration between VMware NSX and OpenStack Neutron.
 
 [1]: {{ site.url }}/learning-nvp-nsx/
-[2]: {% post_url 2013-08-16-learning-nvp-part-2-nvp-controllers %}
-[3]: {% post_url 2013-08-19-learning-nvp-part-3-nvp-manager %}
-[4]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
-[5]: {% post_url 2014-02-27-learning-nsx-part-10-adding-a-service-node %}
-[6]: {% post_url 2013-09-04-introducing-linux-network-namespaces %}
-[7]: {% post_url 2014-02-26-learning-nsx-part-9-adding-a-gateway-service %}
-[8]: {% post_url 2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp %}
+[2]: {{< relref "2013-08-16-learning-nvp-part-2-nvp-controllers.md" >}}
+[3]: {{< relref "2013-08-19-learning-nvp-part-3-nvp-manager.md" >}}
+[4]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
+[5]: {{< relref "2014-02-27-learning-nsx-part-10-adding-a-service-node.md" >}}
+[6]: {{< relref "2013-09-04-introducing-linux-network-namespaces.md" >}}
+[7]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
+[8]: {{< relref "2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp.md" >}}

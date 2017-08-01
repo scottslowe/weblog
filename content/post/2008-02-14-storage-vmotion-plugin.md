@@ -19,4 +19,4 @@ This new plugin goes above and beyond the previous [GUI for Storage VMotion][1] 
 
 Kudos to Schley Andrew Kutz for his work on creating this plugin.
 
-[1]: {% post_url 2008-02-09-graphical-front-end-for-storage-vmotion %}
+[1]: {{< relref "2008-02-09-graphical-front-end-for-storage-vmotion.md" >}}

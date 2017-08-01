@@ -95,4 +95,4 @@ In [part 2][1] of the series, I'll provide information on the storage-related el
 
 If you have any questions or clarifications, please feel free to post them in the comments.
 
-[1]: {% post_url 2010-05-07-creating-ucs-service-profiles-part-2-storage-elements %}
+[1]: {{< relref "2010-05-07-creating-ucs-service-profiles-part-2-storage-elements.md" >}}

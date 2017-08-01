@@ -77,6 +77,6 @@ Using this configuration, when you start the container the host-side virtual Eth
 
 If you have any questions, feedback, or corrections, please feel free to speak up in the comments below. I encourage reader interaction!
 
-[1]: {% post_url 2013-11-26-lxc-open-vswitch-and-gre-tunnels %}
-[2]: {% post_url 2013-12-03-connecting-lxc-to-open-vswitch-using-libvirt %}
-[3]: {% post_url 2013-11-25-a-brief-introduction-to-linux-containers-with-lxc %}
+[1]: {{< relref "2013-11-26-lxc-open-vswitch-and-gre-tunnels.md" >}}
+[2]: {{< relref "2013-12-03-connecting-lxc-to-open-vswitch-using-libvirt.md" >}}
+[3]: {{< relref "2013-11-25-a-brief-introduction-to-linux-containers-with-lxc.md" >}}

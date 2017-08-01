@@ -73,5 +73,5 @@ I've only tested this on Ubuntu 12.04 LTS, so use at your own risk on other dist
 
 As always, I encourage you to participate in the discussion by adding your questions, thoughts, suggestions, and/or clarifications in the comments below. All courteous comments are welcome.
 
-[1]: {% post_url 2013-10-04-using-puppet-for-ubuntu-cloud-archive-support %}
-[2]: {% post_url 2013-10-10-using-puppet-to-configure-ubuntu-to-use-apt-cacher-ng %}
+[1]: {{< relref "2013-10-04-using-puppet-for-ubuntu-cloud-archive-support.md" >}}
+[2]: {{< relref "2013-10-10-using-puppet-to-configure-ubuntu-to-use-apt-cacher-ng.md" >}}

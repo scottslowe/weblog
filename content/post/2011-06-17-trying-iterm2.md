@@ -23,4 +23,4 @@ I also whipped up a quick AppleScript that I can invoke with [FastScripts](http:
 
 I'm going to continue to work with iTerm2 as my primary terminal application for a while to see how it works. If anyone has any tips or tricks to share, please add them in the comments below. Thanks!
 
-[1]: {% post_url 2007-06-26-giving-iterm-a-try %}
+[1]: {{< relref "2007-06-26-giving-iterm-a-try.md" >}}

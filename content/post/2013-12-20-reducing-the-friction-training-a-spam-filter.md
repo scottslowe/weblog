@@ -55,7 +55,7 @@ As you can tell by the comments in the code, this script was designed to be run 
 
 I hope this helps someone out there!
 
-[1]: {% post_url 2013-06-21-reducing-the-friction-processing-e-mail %}
-[2]: {% post_url 2013-07-19-reducing-the-friction-processing-e-mail-part-2 %}
-[3]: {% post_url 2013-12-04-divorcing-google %}
+[1]: {{< relref "2013-06-21-reducing-the-friction-processing-e-mail.md" >}}
+[2]: {{< relref "2013-07-19-reducing-the-friction-processing-e-mail-part-2.md" >}}
+[3]: {{< relref "2013-12-04-divorcing-google.md" >}}
 [gist-1]: https://gist.github.com/lowescott/7990921

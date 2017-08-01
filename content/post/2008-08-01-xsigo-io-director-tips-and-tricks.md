@@ -58,6 +58,6 @@ By the way, if you'd like more information on I/O virtualization and why it migh
 
 It's quite likely I'll have more Xsigo-related tips in the future, so if you're interested, be sure to stay tuned. The easiest way to do that would be to subscribe to the site's RSS feed, which is easily accessible via the bright orange logo in the upper right corner of the site.
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2007-11-13-esx-server-and-the-native-vlan %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}
 [3]: {{ site.url }}/tags/#VLAN

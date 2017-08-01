@@ -43,5 +43,5 @@ Chad Sakac of EMC touches on this very lightly in his [latest post](http://virtu
 
 UCS experts, feel free to correct me or clarify my statements in the comments. Thanks!
 
-[1]: {% post_url 2009-03-16-more-on-cisco-ucs %}
-[2]: {% post_url 2008-09-18-ta2644-networking-io-virtualization %}
+[1]: {{< relref "2009-03-16-more-on-cisco-ucs.md" >}}
+[2]: {{< relref "2008-09-18-ta2644-networking-io-virtualization.md" >}}

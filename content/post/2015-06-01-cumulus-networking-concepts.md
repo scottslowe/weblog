@@ -33,6 +33,6 @@ I know this is high-level stuff, and a bit abstract. I plan to publish more deta
 [link-2]: http://www.dell.com/us/business/p/open-networking-switches/pd
 [link-3]: https://twitter.com/scott_lowe
 
-[xref-1]: {% post_url 2006-01-27-gre-tunnels-on-a-cisco-router %}
-[xref-2]: {% post_url 2007-06-22-link-state-tracking-in-blade-deployments %}
-[xref-3]: {% post_url 2009-11-09-enabling-jumbo-frames-on-a-nexus-5000 %}
+[xref-1]: {{< relref "2006-01-27-gre-tunnels-on-a-cisco-router.md" >}}
+[xref-2]: {{< relref "2007-06-22-link-state-tracking-in-blade-deployments.md" >}}
+[xref-3]: {{< relref "2009-11-09-enabling-jumbo-frames-on-a-nexus-5000.md" >}}

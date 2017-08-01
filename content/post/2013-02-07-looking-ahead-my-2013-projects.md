@@ -38,7 +38,7 @@ With the conclusions listed above in mind, here is my list of 2013 projects and-
 
 So, that's my list of 2013 projects. I'm sure that I'll have a few side projects here and there as well (for example, there is a book project and at least one video training series project on the books for 2013), but the projects listed above represent the majority of my technical focus over the coming year. I'd love to hear your feedback---am I missing something important? Are there ways I could further improve the synergy of the projects? As always, your honest and courteous comments are welcome.
 
-[1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[2]: {% post_url 2012-06-25-mid-year-project-update %}
-[3]: {% post_url 2013-01-07-looking-back-2012-project-report-card %}
-[4]: {% post_url 2013-01-25-new-year-new-challenges-new-opportunities %}
+[1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[2]: {{< relref "2012-06-25-mid-year-project-update.md" >}}
+[3]: {{< relref "2013-01-07-looking-back-2012-project-report-card.md" >}}
+[4]: {{< relref "2013-01-25-new-year-new-challenges-new-opportunities.md" >}}

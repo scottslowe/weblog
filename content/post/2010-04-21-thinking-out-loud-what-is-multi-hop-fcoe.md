@@ -28,5 +28,5 @@ My response is this: what _is_ multi-hop, anyway? Is it the presence of multiple
 
 What do you think? Do your own "thinking out loud" in the comments below.
 
-[1]: {% post_url 2010-03-21-how-niv-and-fcoe-play-together %}
-[2]: {% post_url 2010-03-16-understanding-network-interface-virtualization %}
+[1]: {{< relref "2010-03-21-how-niv-and-fcoe-play-together.md" >}}
+[2]: {{< relref "2010-03-16-understanding-network-interface-virtualization.md" >}}

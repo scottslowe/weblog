@@ -42,7 +42,7 @@ However, Steve's not entirely wrong---virtualization, FCoE and 10Gb Ethernet, an
 
 Think I'm crazy? Think I'm out of my mind? Feel free to speak up in the comments---courteous comments are always welcome.
 
-[1]: {% post_url 2009-02-04-blades-and-virtualization-arent-mutually-exclusive-part-one-hp-power-sizing %}
-[2]: {% post_url 2009-02-07-blades-and-virtualization-arent-mutually-exclusive-part-two-ibm-power-sizing %}
-[3]: {% post_url 2009-02-13-blades-and-virtualization-arent-mutually-exclusive-part-three-ibm-traditional-expansion-options %}
-[4]: {% post_url 2009-02-16-blades-and-virtualization-arent-mutually-exclusive-part-four-hp-traditional-expansion-options %}
+[1]: {{< relref "2009-02-04-blades-and-virtualization-arent-mutually-exclusive-part-one-hp-power-sizing.md" >}}
+[2]: {{< relref "2009-02-07-blades-and-virtualization-arent-mutually-exclusive-part-two-ibm-power-sizing.md" >}}
+[3]: {{< relref "2009-02-13-blades-and-virtualization-arent-mutually-exclusive-part-three-ibm-traditional-expansion-options.md" >}}
+[4]: {{< relref "2009-02-16-blades-and-virtualization-arent-mutually-exclusive-part-four-hp-traditional-expansion-options.md" >}}

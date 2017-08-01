@@ -25,5 +25,5 @@ The new version will use Kerberos for authentication, LDAP for account informati
 
 I hope to post the updated integration instructions within the next few days, before I have to leave for a business trip to Canada.
 
-[1]: {% post_url 2006-10-16-refined-solaris-10-ad-integration-instructions %}
-[2]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
+[1]: {{< relref "2006-10-16-refined-solaris-10-ad-integration-instructions.md" >}}
+[2]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}

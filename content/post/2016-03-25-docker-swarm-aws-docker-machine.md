@@ -99,5 +99,5 @@ There you have it---now you can go create Swarm clusters running on AWS using Do
 [link-4]: https://aws.amazon.com/
 [link-5]: https://www.virtualbox.org/
 [link-6]: http://www.vmware.com/products/fusion/
-[xref-1]: {% post_url 2016-03-22-using-docker-machine-with-aws %}
-[xref-2]: {% post_url 2015-08-04-using-vagrant-docker-machine-together %}
+[xref-1]: {{< relref "2016-03-22-using-docker-machine-with-aws.md" >}}
+[xref-2]: {{< relref "2015-08-04-using-vagrant-docker-machine-together.md" >}}

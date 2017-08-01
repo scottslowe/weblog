@@ -33,5 +33,5 @@ Unfortunately, I now find that my system is no longer as transparent as it used 
 
 All things considered, it seems as if I'm finding one potential advantage to Evernote (syncing data across devices) and three known drawbacks (lack of multiple data types, note functionality issues, and an unintuitive user interface). I just can't decide if having information like URLs and brief notes available across devices is really as worthwhile as it's made out to be. I'd love to hear feedback from readers about their viewpoint---has Evernote syncing really been useful? Speak up in the comments below. Thanks!
 
-[1]: {% post_url 2008-07-07-evernote %}
-[2]: {% post_url 2010-05-02-my-current-getting-things-done-setup %}
+[1]: {{< relref "2008-07-07-evernote.md" >}}
+[2]: {{< relref "2010-05-02-my-current-getting-things-done-setup.md" >}}

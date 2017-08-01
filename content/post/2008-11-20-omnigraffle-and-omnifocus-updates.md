@@ -18,5 +18,5 @@ The [OmniGraffle](http://www.omnigroup.com/omnigraffle/) update brings one featu
 
 The [OmniFocus](http://www.omnigroup.com/omnifocus/) update brings this GTD application's official 1.5 release, and with it synchronization with OmniFocus for iPhone. Now that both the Mac and iPhone versions support Bonjour sync---although this is not without its [own travails][2]---I find myself using them more and more. If you've been following the pre-release versions of OmniFocus (the so-called "sneaky peeks") then you won't find many new features in this official release, but users who have been waiting for the official release to upgrade are in for a real treat. As with OmniGraffle, this OmniFocus upgrade is a free upgrade for existing OmniFocus 1.x customers.
 
-[1]: {% post_url 2008-03-26-netapp-omnigraffle-stencils %}
-[2]: {% post_url 2008-11-02-the-adventures-of-omnifocus-bonjour-sync %}
+[1]: {{< relref "2008-03-26-netapp-omnigraffle-stencils.md" >}}
+[2]: {{< relref "2008-11-02-the-adventures-of-omnifocus-bonjour-sync.md" >}}

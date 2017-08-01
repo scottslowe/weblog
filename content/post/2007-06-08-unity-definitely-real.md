@@ -25,5 +25,5 @@ My hat is off to the Fusion developers. Well done! A lot of people were predicti
 
 &lt;aside&gt;Boring technical question to any VMware developers, Fusion team members, etc: Is Unity debuting on OS X because of some advantage within Mac OS X itself, or simply because of the timing and the competition? I _am_ a Mac fan, after all, and was curious if my favorite OS had a leg up on the competitors that made it easier to create Unity.&lt;/aside&gt;
 
-[1]: {% post_url 2007-06-06-unity-real-or-rumor %}
-[2]: {% post_url 2006-12-26-application-agnosticism %}
+[1]: {{< relref "2007-06-06-unity-real-or-rumor.md" >}}
+[2]: {{< relref "2006-12-26-application-agnosticism.md" >}}

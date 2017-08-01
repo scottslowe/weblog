@@ -78,5 +78,5 @@ OK, this is interesting (sort of), but what sort of uses does this have? Well, I
 
 I've racked my brain for other potential use cases, but they seem to be escaping me at the moment. If you have other use cases, feel free to share them in the comments. Likewise, if there are technical errors or corrections, please share those in the comments as well. Courteous comments are always welcome and encouraged.
 
-[1]: {% post_url 2012-10-04-some-insight-into-open-vswitch-configuration %}
-[2]: {% post_url 2012-10-31-layer-3-routing-with-open-vswitch %})
+[1]: {{< relref "2012-10-04-some-insight-into-open-vswitch-configuration.md" >}}
+[2]: {{< relref "2012-10-31-layer-3-routing-with-open-vswitch.md" >}})

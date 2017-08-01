@@ -72,4 +72,4 @@ At this point, the rest of the configuration consists of creating the appropriat
 
 In future posts, I hope to be able to do provide some performance and some troubleshooting information. However, it will likely be early 2012 before I have that opportunity. In the meantime, if anyone has any additional information they'd like to share---including any corrections or clarifications---please feel free to add them to the comments below.
 
-[1]: {% post_url 2009-10-25-setting-up-fcoe-on-a-nexus-5000 %}
+[1]: {{< relref "2009-10-25-setting-up-fcoe-on-a-nexus-5000.md" >}}

@@ -27,4 +27,4 @@ All in all, it looks to me like a pretty impressive set of updates. Based on a c
 
 Disclosure: I have no financial interest in HyTrust nor have I received any compensation from HyTrust. These views and opinions of HyTrust are mine and mine alone.
 
-[1]: {% post_url 2009-04-06-hytrust-launches-security-appliance %}
+[1]: {{< relref "2009-04-06-hytrust-launches-security-appliance.md" >}}

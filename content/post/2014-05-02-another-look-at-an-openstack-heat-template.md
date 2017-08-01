@@ -98,4 +98,4 @@ Aside from these differences, you'll note that the resource types and properties
 
 Feel free to post any questions, corrections, or clarifications in the comments below. Thanks for reading!
 
-[1]: {% post_url 2014-05-01-an-introduction-to-openstack-heat %}
+[1]: {{< relref "2014-05-01-an-introduction-to-openstack-heat.md" >}}

@@ -90,6 +90,6 @@ If you're interested in experimenting with JSON and Vagrant yourself, have a loo
 
 [link-1]: http://thornelabs.net/2014/11/13/multi-machine-vagrantfile-with-shorter-cleaner-syntax-using-json-and-loops.html
 [link-2]: https://github.com/lowescott/learning-tools
-[xref-1]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
-[xref-2]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
-[xref-3]: {% post_url 2016-01-14-improved-way-yaml-vagrant %}
+[xref-1]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
+[xref-2]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}
+[xref-3]: {{< relref "2016-01-14-improved-way-yaml-vagrant.md" >}}

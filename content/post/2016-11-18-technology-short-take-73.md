@@ -113,5 +113,5 @@ I'll cut it off there before it gets any longer. Still so much content, but so l
 [link-31]: http://storagemojo.com/2016/10/06/is-3d-xpoint-in-trouble/
 [link-32]: https://blog.architecting.it/2016/10/17/snia-has-high-hopes-for-swordfish/
 [link-33]: http://www.virtuallyghetto.com/2016/11/usb-3-0-ethernet-adapter-nic-driver-for-esxi-6-5.html
-[xref-1]: {% post_url 2015-11-14-handy-gui-tool-working-apis %}
-[xref-2]: {% post_url 2015-11-11-handy-cli-tool-json %}
+[xref-1]: {{< relref "2015-11-14-handy-gui-tool-working-apis.md" >}}
+[xref-2]: {{< relref "2015-11-11-handy-cli-tool-json.md" >}}

@@ -222,6 +222,6 @@ If either of these tests are unsuccessful, review the log files on the Solaris s
 
 If the tests are successful, then you should now be able to authenticate on a Solaris server using your Active Directory username and password. I tested this using SSH and the X Desktop login.
 
-[1]: {% post_url 2006-08-15-solaris-10-and-active-directory-integration %}
-[2]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
-[3]: {% post_url 2006-08-21-more-on-kerberos-authentication-against-active-directory %}
+[1]: {{< relref "2006-08-15-solaris-10-and-active-directory-integration.md" >}}
+[2]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
+[3]: {{< relref "2006-08-21-more-on-kerberos-authentication-against-active-directory.md" >}}

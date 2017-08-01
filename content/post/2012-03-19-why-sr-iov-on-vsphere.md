@@ -38,4 +38,4 @@ Regarding networking, this is where I see a lot of potential for SR-IOV. While V
 
 What do you think? Please share your thoughts in the comments below. Where applicable, please provide disclosure. For example, I work for EMC, but I speak for myself.
 
-[1]: {% post_url 2012-03-18-sr-iov-support-in-the-next-version-of-hyper-v %}
+[1]: {{< relref "2012-03-18-sr-iov-support-in-the-next-version-of-hyper-v.md" >}}

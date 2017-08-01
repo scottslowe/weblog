@@ -49,6 +49,6 @@ Keep in mind the other recommendations as well: explicitly control trunking to o
 
 CCIEs and other experts, I'd welcome any other suggestions as well as recommended commands to use in the switch configuration to help maximize security and minimize exposure to VLAN-based attacks.
 
-[1]: {% post_url 2008-03-05-vmotion-and-vlan-security %}
-[2]: {% post_url 2007-11-13-esx-server-and-the-native-vlan %}
-[3]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
+[1]: {{< relref "2008-03-05-vmotion-and-vlan-security.md" >}}
+[2]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}
+[3]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}

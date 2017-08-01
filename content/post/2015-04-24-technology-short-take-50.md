@@ -102,5 +102,5 @@ Well, this post has already gotten longer than it should, so let's wrap it up he
 [link-33]: http://blogs.msdn.com/b/virtual_pc_guy/archive/2015/04/15/hyper-v-powershell-one-line-challenge-part-3.aspx
 [link-34]: http://bladesmadesimple.com/2015/02/blade-server-comparisons-march-2015/
 [link-35]: http://storagemojo.com/2015/04/13/how-doomed-is-netapp/
-[xref-1]: {% post_url 2015-03-06-running-own-docker-swarm-cluster %}
-[xref-2]: {% post_url 2010-06-18-the-future-of-netapp %}
+[xref-1]: {{< relref "2015-03-06-running-own-docker-swarm-cluster.md" >}}
+[xref-2]: {{< relref "2010-06-18-the-future-of-netapp.md" >}}

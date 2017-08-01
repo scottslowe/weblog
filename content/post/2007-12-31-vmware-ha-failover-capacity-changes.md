@@ -28,6 +28,6 @@ So this _looks_ like it's allowing us to specify how VMware HA should calculate 
 
 If anyone can shed some light on these new settings---I plan on testing them in the lab as soon as possible---that would be very useful. In the meantime, I encourage everyone to check out the PDF linked in the [VMware KB article on VMware HA best practices](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1002080&sliceId=2&docTypeID=DT_KB_1_1&dialogID=38398839&stateId=0%200%2038394611). And, just for fun, check out [this white paper](http://www.vmware.com/pdf/vi3_35_25_vmha.pdf) on the VMware HA VM failure monitoring functionality that's new in ESX Server 3.5.
 
-[1]: {% post_url 2007-12-04-calculating-vmware-ha-failover-capacity %}
-[2]: {% post_url 2007-12-07-more-discussion-on-vmware-ha-failover-capacity %}
-[3]: {% post_url 2007-10-05-troubleshooting-vmware-ha-isolation-response %}
+[1]: {{< relref "2007-12-04-calculating-vmware-ha-failover-capacity.md" >}}
+[2]: {{< relref "2007-12-07-more-discussion-on-vmware-ha-failover-capacity.md" >}}
+[3]: {{< relref "2007-10-05-troubleshooting-vmware-ha-isolation-response.md" >}}

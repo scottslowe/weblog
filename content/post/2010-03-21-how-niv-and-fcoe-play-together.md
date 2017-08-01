@@ -40,5 +40,5 @@ Of course, NIV isn't the only way the industry is going to address the need for 
 
 Courteous comments, corrections, and thoughts (with full vendor disclosure, please) are welcome below.
 
-[1]: {% post_url 2009-08-11-why-no-multi-hop-fcoe %}
-[2]: {% post_url 2010-03-16-understanding-network-interface-virtualization %}
+[1]: {{< relref "2009-08-11-why-no-multi-hop-fcoe.md" >}}
+[2]: {{< relref "2010-03-16-understanding-network-interface-virtualization.md" >}}

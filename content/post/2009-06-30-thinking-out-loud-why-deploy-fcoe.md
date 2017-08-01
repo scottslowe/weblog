@@ -23,5 +23,5 @@ Then, a few days ago, I read this article [on FCoE divergence](http://www.thereg
 
 _Whoa!_ That's a limitation of which I was not aware. And with that limitation in mind, knowing that FCoE will---for the time being at least---be limited to convergence at the edge, I have to ask: _why deploy FCoE at all?_ What real and specific benefits does an organization seek to gain by deploying FCoE as opposed to just deploying FC? Is the edge convergence really that worthwhile and valuable?
 
-[1]: {% post_url 2008-12-09-continuing-the-fcoe-discussion %}
-[2]: {% post_url 2009-02-20-is-unified-fabric-an-inevitability %}
+[1]: {{< relref "2008-12-09-continuing-the-fcoe-discussion.md" >}}
+[2]: {{< relref "2009-02-20-is-unified-fabric-an-inevitability.md" >}}

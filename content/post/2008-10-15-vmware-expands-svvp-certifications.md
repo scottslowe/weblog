@@ -31,5 +31,5 @@ Unfortunately, x86 guests are still limited to 4GB of RAM, but I don't really fo
 
 Let's hope that VMware continues to expand the SVVP certifications to include more processors (currently limited to 4 CPUs, which I'm guessing is 4 vCPUs) and more memory for both x86 and x64 workloads. Right now VMware's list of SVVP certifications is trounced by Citrix's list, which boasts higher CPU and higher RAM limits.
 
-[1]: {% post_url 2008-09-23-vmware-esx-svvp-validation-apparently-limited %}
-[2]: {% post_url 2008-09-03-vmware-esx-35-u2-validated-via-svvp %}
+[1]: {{< relref "2008-09-23-vmware-esx-svvp-validation-apparently-limited.md" >}}
+[2]: {{< relref "2008-09-03-vmware-esx-35-u2-validated-via-svvp.md" >}}

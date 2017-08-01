@@ -32,4 +32,4 @@ Right now, we're targeting availability of _Mastering VMware vSphere 5_  around 
 
 As soon as the book is available for pre-order, I'll update this article accordingly.
 
-[1]: {% post_url 2011-07-12-vmwares-launch-event %}
+[1]: {{< relref "2011-07-12-vmwares-launch-event.md" >}}

@@ -61,4 +61,4 @@ Obviously, this is only a subset of what you can do with `vboxmanage`; use `vbox
 
 [link-1]: https://www.virtualbox.org/
 [link-2]: https://www.virtualbox.org/manual/UserManual.html
-[xref-1]: {% post_url 2016-09-28-why-now-using-virtualbox-with-vagrant %}
+[xref-1]: {{< relref "2016-09-28-why-now-using-virtualbox-with-vagrant.md" >}}

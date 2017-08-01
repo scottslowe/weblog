@@ -48,11 +48,11 @@ There is still so much to cover, though. For example, here are some of the topic
 
 My question to you, the readers, is this: what other topics should I be exploring that aren't listed? Are there topics in the list of planned posts that are of greater interest/value, and therefore should be prioritized? (OK, so that's _two_ questions, but you get the idea.) Let me know your feedback by speaking up in the comments below.
 
-[1]: {% post_url 2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu %}
-[2]: {% post_url 2012-10-04-some-insight-into-open-vswitch-configuration %}
-[3]: {% post_url 2012-10-19-link-aggregation-and-lacp-with-open-vswitch %}
-[4]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
-[5]: {% post_url 2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges %}
-[6]: {% post_url 2012-10-30-running-host-management-on-open-vswitch %}
-[7]: {% post_url 2012-10-31-layer-3-routing-with-open-vswitch %}
-[8]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
+[1]: {{< relref "2012-08-17-installing-kvm-and-open-vswitch-on-ubuntu.md" >}}
+[2]: {{< relref "2012-10-04-some-insight-into-open-vswitch-configuration.md" >}}
+[3]: {{< relref "2012-10-19-link-aggregation-and-lacp-with-open-vswitch.md" >}}
+[4]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}
+[5]: {{< relref "2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges.md" >}}
+[6]: {{< relref "2012-10-30-running-host-management-on-open-vswitch.md" >}}
+[7]: {{< relref "2012-10-31-layer-3-routing-with-open-vswitch.md" >}}
+[8]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}

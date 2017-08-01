@@ -24,4 +24,4 @@ Further research turned up [this KB article on a post-Update 3 patch](http://kb.
 
 Have any other users out there experienced this problem? If so, what was the fix, if any? It sounds like there may be more to this issue than perhaps I first suspected.
 
-[1]: {% post_url 2008-12-12-vmware-ha-problem-with-update-3 %}
+[1]: {{< relref "2008-12-12-vmware-ha-problem-with-update-3.md" >}}

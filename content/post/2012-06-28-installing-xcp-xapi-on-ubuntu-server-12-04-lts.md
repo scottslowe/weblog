@@ -75,5 +75,5 @@ I'm still working on a more comprehensive set of tests, but some basic tests sho
 
 I have future posts planned that will talk more about networking and SRs with this Ubuntu-based XCP-XAPI system, so stay tuned for those. Also, if you have any tips or tricks for making this process easier (or if I've stated something incorrectly), please speak up in the comments. Thanks!
 
-[1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[2]: {% post_url 2012-06-25-mid-year-project-update %}
+[1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[2]: {{< relref "2012-06-25-mid-year-project-update.md" >}}

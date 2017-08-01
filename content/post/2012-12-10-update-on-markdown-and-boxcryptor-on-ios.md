@@ -24,5 +24,5 @@ It works flawlessly. I can preview Markdown files in the iOS BoxCryptor client, 
 
 If you are thinking about using EncFS with Dropbox and using BoxCryptor to access those files from iOS, and those files are text-based files (like Markdown, plain text, HTML, and similar file formats), I highly recommend Textastic.
 
-[1]: {% post_url 2012-11-23-using-encfs-with-dropbox-and-boxcryptor %}
-[2]: {% post_url 2012-11-30-problem-with-markdown-files-in-boxcryptor-on-ios %}
+[1]: {{< relref "2012-11-23-using-encfs-with-dropbox-and-boxcryptor.md" >}}
+[2]: {{< relref "2012-11-30-problem-with-markdown-files-in-boxcryptor-on-ios.md" >}}

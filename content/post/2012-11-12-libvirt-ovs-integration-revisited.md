@@ -64,4 +64,4 @@ I haven't yet tested this on earlier versions of libvirt, but I can confirm that
 If anyone has any additional information to share, please speak up in the comments.
 
 
-[1]: {% post_url 2012-11-07-using-vlans-with-ovs-and-libvirt %}
+[1]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}

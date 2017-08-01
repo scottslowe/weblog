@@ -24,4 +24,4 @@ I then set out to compare the alternatives. After comparing Linux and Mac OS X, 
 
 Is Mac OS X right for you? I don't know; that depends upon what you do at your job. I believe that Mac OS X is a great fit for more people than Windows, but I also believe that people must use what is most ideally suited for their work. If that is Windows; so be it. If that is Linux, then great. And if, like me, it is Mac OS X, then fantastic. Each of these operating systems have their own strengths and weaknesses, and it is up to each user to determine which OS is right for them.
 
-[1]: {% post_url 2005-06-20-preferred-mac-os-x-applications %}
+[1]: {{< relref "2005-06-20-preferred-mac-os-x-applications.md" >}}

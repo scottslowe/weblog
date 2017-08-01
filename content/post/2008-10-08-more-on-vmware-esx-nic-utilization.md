@@ -63,4 +63,4 @@ In this environment, the tests showed exactly what we expected; traffic from VMs
 
 Again, some of the points above are simple common sense, but they should be kept in mind nevertheless. If the workloads that are being hosted on VMware ESX are such that having more aggregate bandwidth would be beneficial, then using link aggregation is really the only way to do it. I suppose it would be possible to use NIC teaming inside the guest OS, assuming the VM was configured to use e1000 NICs, but I've never tested this configuration. (Anyone else tested it?)
 
-[1]: {% post_url 2008-07-16-understanding-nic-utilization-in-vmware-esx %}
+[1]: {{< relref "2008-07-16-understanding-nic-utilization-in-vmware-esx.md" >}}

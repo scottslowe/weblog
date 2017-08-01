@@ -35,4 +35,4 @@ However, there's more here than perhaps many people are realizing. Fortunately, 
 
 So, while Microsoft's licensing changes are a good first step, there's still more work to be done. Let's applaud the changes, which were necessary, but let's continue to press Microsoft to fix the issues that remain.
 
-[1]: {% post_url 2008-08-19-a-quick-note-to-vmware %}
+[1]: {{< relref "2008-08-19-a-quick-note-to-vmware.md" >}}

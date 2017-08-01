@@ -24,4 +24,4 @@ This is outstanding news! This now removes what is, in my mind, one of the most 
 
 **UPDATE:** In case anyone's wondering about this press release, refer to [this entry on the Windows Virtualization Team Blog](http://blogs.technet.com/virtualization/archive/2008/09/03/The-Validated-Hypervisor.aspx). They confirm that ESX 3.5 Update 2 has indeed been validated.
 
-[1]: {% post_url 2008-08-28-virtualization-short-take-17 %}
+[1]: {{< relref "2008-08-28-virtualization-short-take-17.md" >}}

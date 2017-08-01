@@ -57,5 +57,5 @@ Make this policy the first policy (using the Move Up/Move Down commands in the I
 
 **UPDATE:** I've updated this entry to correct some errors pointed out in the comments. Thanks for the feedback!
 
-[1]: {% post_url 2005-11-22-cisco-pix-vpn-and-active-directory-integration %}
+[1]: {{< relref "2005-11-22-cisco-pix-vpn-and-active-directory-integration.md" >}}
 [2]: http://www.watchguard.com/

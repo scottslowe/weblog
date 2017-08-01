@@ -197,6 +197,6 @@ The key takeaway from this post, in my mind, is understanding where traffic orig
 
 Hopefully this information is helpful. I am, of course, completely open to your comments, questions, and corrections, so feel free to speak up in the comments below. Courteous comments are always welcome!
 
-[1]: {% post_url 2012-10-19-link-aggregation-and-lacp-with-open-vswitch %}
-[2]: {% post_url 2013-05-07-using-gre-tunnels-with-open-vswitch %}
-[3]: {% post_url 2012-10-30-running-host-management-on-open-vswitch %}
+[1]: {{< relref "2012-10-19-link-aggregation-and-lacp-with-open-vswitch.md" >}}
+[2]: {{< relref "2013-05-07-using-gre-tunnels-with-open-vswitch.md" >}}
+[3]: {{< relref "2012-10-30-running-host-management-on-open-vswitch.md" >}}

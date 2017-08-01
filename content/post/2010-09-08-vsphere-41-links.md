@@ -74,4 +74,4 @@ I'd collected a long list of vSphere 4.1-related links as part of the process of
 
 I hope that you find something useful in this list. If anyone has any other vSphere 4.1-specific links that they feel other readers might find useful, I encourage you to post them in the comments below.
 
-[1]: {% post_url 2010-08-25-my-book-project-has-been-canceled %}
+[1]: {{< relref "2010-08-25-my-book-project-has-been-canceled.md" >}}

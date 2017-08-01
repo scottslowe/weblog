@@ -31,4 +31,4 @@ Overall, I'm very excited. Some of the VMware installations I manage could reall
 
 Now, let's hope they don't push everything into some clunky web-based interface...
 
-[1]: {% post_url 2006-02-04-vmware-giving-away-server-for-free %}
+[1]: {{< relref "2006-02-04-vmware-giving-away-server-for-free.md" >}}

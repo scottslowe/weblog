@@ -36,4 +36,4 @@ As it turns out, if you want to specify a different set of DHCP options to a cli
 
 Of course, now that I know this it seems incredibly obvious. At the time that I was trying to figure this out, though, I wasn't sure exactly what the syntax would look like. So, next time you find yourself needing to change the options on a DHCP reservation on Linux, you'll know what to do!
 
-[1]: {% post_url 2009-01-02-ubuntu-and-mac-os-x-integration %}
+[1]: {{< relref "2009-01-02-ubuntu-and-mac-os-x-integration.md" >}}

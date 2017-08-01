@@ -18,4 +18,4 @@ For example, posts placed into the Microsoft category won't have the Microsoft t
 
 **UPDATE:** I started to go back and update some of the older articles with this scheme, and then I realized that if I don't tag the article with the same tag as the category, then site visitors can't search for related weblog entries or bookmarks with those tags. So, I've decided to leave the tags as they are and not worry about duplicate tags/categories.
 
-[1]: {% post_url 2006-06-12-site-search-tags %}
+[1]: {{< relref "2006-06-12-site-search-tags.md" >}}

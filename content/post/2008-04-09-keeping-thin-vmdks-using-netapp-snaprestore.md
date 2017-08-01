@@ -59,4 +59,4 @@ The last and final step is to edit the settings for the VM you created earlier a
 
 In the near future I plan to test another possible method of preserving the VMDK's thin provisioned status, a method that is storage agnostic. Look for details of that testing here.
 
-[1]: {% post_url 2008-03-31-only-thin-provisioned-in-the-beginning %}
+[1]: {{< relref "2008-03-31-only-thin-provisioned-in-the-beginning.md" >}}

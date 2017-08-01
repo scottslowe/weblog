@@ -26,4 +26,4 @@ The key, of course, is the "!route add ..." statement. This is the piece that I 
 
 You can also add similar statements to `/etc/rc.local`, which will do the same thing. Note, however, that these statements _cannot_ go into `/etc/rc.conf.local`.
 
-[1]: {% post_url 2006-04-03-openbsd-on-esx-server %}
+[1]: {{< relref "2006-04-03-openbsd-on-esx-server.md" >}}

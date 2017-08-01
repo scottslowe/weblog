@@ -56,4 +56,4 @@ Then save the configuration with `copy runn start` and you should be good to go!
 
 **UPDATE:** I've posted a follow-up to this article on [managing zones via the CLI][1].
 
-[1]: {% post_url 2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli %}
+[1]: {{< relref "2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli.md" >}}

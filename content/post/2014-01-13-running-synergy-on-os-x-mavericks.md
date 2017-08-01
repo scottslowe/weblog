@@ -45,4 +45,4 @@ That's it! You should now be able to use the keyboard and mouse on the Synergy s
 
 Enjoy! (By the way, if you do find Synergy to be useful, I'd recommend donating to the project.)
 
-[1]: {% post_url 2011-11-18-some-oss-with-my-mac-part-1-synergy %}
+[1]: {{< relref "2011-11-18-some-oss-with-my-mac-part-1-synergy.md" >}}

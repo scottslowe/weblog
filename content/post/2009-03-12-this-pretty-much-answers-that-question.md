@@ -45,4 +45,4 @@ To me, that looks like a direct jab at "California".
 
 So, I guess the question of whether Sun is going to take on Cisco is settled. Hoff, get your popcorn!
 
-[1]: {% post_url 2009-03-09-is-sun-preparing-to-take-on-cisco %}
+[1]: {{< relref "2009-03-09-is-sun-preparing-to-take-on-cisco.md" >}}

@@ -117,4 +117,4 @@ OK, I'd better stop before this gets any longer! Whew...so much good stuff out t
 [link-36]: http://blogs.msdn.com/b/virtual_pc_guy/archive/2015/10/20/windows-10-build-10565-creating-vms-with-different-versions.aspx
 [link-37]: http://blog.architecting.it/2015/10/16/dell-acquiring-emc-the-facts/
 [link-38]: http://blog.architecting.it/2015/10/22/dell-acquiring-emc-the-federation/
-[xref-1]: {% post_url 2015-09-24-quick-reference-new-storage-lvm %}
+[xref-1]: {{< relref "2015-09-24-quick-reference-new-storage-lvm.md" >}}

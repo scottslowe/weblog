@@ -23,5 +23,5 @@ After installing OpenBSD, I was able to successfully install a number of package
 
 I'll likely experiment with adding the VMXnet driver within the next few days to see how that works and how it affects network performance.
 
-[1]: {% post_url 2006-04-03-openbsd-on-esx-server %}
-[2]: {% post_url 2006-05-18-openbsd-39-on-esx-server %}
+[1]: {{< relref "2006-04-03-openbsd-on-esx-server.md" >}}
+[2]: {{< relref "2006-05-18-openbsd-39-on-esx-server.md" >}}

@@ -35,4 +35,4 @@ Unfortunately, even [VMotion](http://www.vmware.com/products/vc/vmotion.html) to
 
 Once we find this way to maintain state across multiple servers, then we can go easily bring together technologies for delivering applications (like [Citrix Presentation Server](http://www.citrix.com/English/ps2/products/product.asp?contentID=186)) and technologies for managing applications (like SoftGrid and SystemGuard) to create the ideal managed desktop environment that many organizations are seeking.
 
-[1]: {% post_url 2006-03-15-synergies %}
+[1]: {{< relref "2006-03-15-synergies.md" >}}

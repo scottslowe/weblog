@@ -55,5 +55,5 @@ I guess that's about it for this time around. Before I go, though, here are a fe
 
 As always, feel free to share other links or items in the comments below. Thanks for reading this far!
 
-[1]: {% post_url 2010-03-16-understanding-network-interface-virtualization %}
-[2]: {% post_url 2010-03-21-how-niv-and-fcoe-play-together %}
+[1]: {{< relref "2010-03-16-understanding-network-interface-virtualization.md" >}}
+[2]: {{< relref "2010-03-21-how-niv-and-fcoe-play-together.md" >}}

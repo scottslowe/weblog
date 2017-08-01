@@ -18,4 +18,4 @@ My offhand comment about Leostream dropping their P>V product in [Virtualization
 
 I've stated before that I like the Leostream Connection Broker, so I'm glad to hear about Leostream's decision to put all their resources into the development of the broker.
 
-[1]: {% post_url 2008-05-26-virtualization-short-take-8 %}
+[1]: {{< relref "2008-05-26-virtualization-short-take-8.md" >}}

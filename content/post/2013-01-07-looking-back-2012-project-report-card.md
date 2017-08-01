@@ -53,5 +53,5 @@ So, what can I learn from these results?
 
 In a (near-)future post, I'll incorporate the progress on my 2012 projects and the key takeaways into my list of 2013 projects. Until then, I welcome any feedback or thoughts in the comments below.
 
-[1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[2]: {% post_url 2012-06-25-mid-year-project-update %}
+[1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[2]: {{< relref "2012-06-25-mid-year-project-update.md" >}}

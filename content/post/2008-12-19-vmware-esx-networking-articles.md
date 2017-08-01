@@ -34,11 +34,11 @@ In addition to an in-depth guide to NIC teaming, link aggregation, and VLAN trun
 
 With the release of VI4--or whatever it ends up being called---there'll be plenty of new networking fodder for me to write about: the Distributed vSwitch, the Cisco Nexus 1000V, and more. In the meantime, though, are there any other networking-oriented articles, guides, or how-to's that readers would be interested in seeing published? I'm open to suggestions.
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2008-09-05-vmware-esx-nic-teaming-and-vlan-trunking-with-hp-procurve %}
-[3]: {% post_url 2007-11-13-esx-server-and-the-native-vlan %}
-[4]: {% post_url 2008-07-16-understanding-nic-utilization-in-vmware-esx %}
-[5]: {% post_url 2008-10-08-more-on-vmware-esx-nic-utilization %}
-[6]: {% post_url 2008-09-05-setting-vmware-esx-vswitch-load-balancing-policy-via-cli %}
-[7]: {% post_url 2008-12-16-using-vmware-vim-cmd-to-modify-a-portgroup %}
-[8]: {% post_url 2008-04-22-esx-server-ip-storage-and-jumbo-frames %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2008-09-05-vmware-esx-nic-teaming-and-vlan-trunking-with-hp-procurve.md" >}}
+[3]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}
+[4]: {{< relref "2008-07-16-understanding-nic-utilization-in-vmware-esx.md" >}}
+[5]: {{< relref "2008-10-08-more-on-vmware-esx-nic-utilization.md" >}}
+[6]: {{< relref "2008-09-05-setting-vmware-esx-vswitch-load-balancing-policy-via-cli.md" >}}
+[7]: {{< relref "2008-12-16-using-vmware-vim-cmd-to-modify-a-portgroup.md" >}}
+[8]: {{< relref "2008-04-22-esx-server-ip-storage-and-jumbo-frames.md" >}}

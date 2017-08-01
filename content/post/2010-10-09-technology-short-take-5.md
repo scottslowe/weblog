@@ -56,4 +56,4 @@ Well, that ought to do it for this time around. Trying to get these things publi
 
 Thanks for reading!
 
-[1]: {% post_url 2010-09-30-stretched-cluster-presentation-from-denver-vmug %}
+[1]: {{< relref "2010-09-30-stretched-cluster-presentation-from-denver-vmug.md" >}}

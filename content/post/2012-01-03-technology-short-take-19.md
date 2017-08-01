@@ -90,7 +90,7 @@ Welcome to Technology Short Take #19, the first Technology Short Take for 2012. 
 
 And that it's for this time around; as always, I hope you've found something useful here. Courteous comments are always welcome; feel free to speak up below.
 
-[1]: {% post_url 2011-11-30-vxlan-and-layer-3-connectivity %}
-[2]: {% post_url 2011-12-07-revisiting-vxlan-and-layer-3-connectivity %}
-[3]: {% post_url 2011-12-22-otv-and-vxlan-layer-3-connectivity-compared %}
-[4]: {% post_url 2012-01-02-some-projects-for-2012 %}
+[1]: {{< relref "2011-11-30-vxlan-and-layer-3-connectivity.md" >}}
+[2]: {{< relref "2011-12-07-revisiting-vxlan-and-layer-3-connectivity.md" >}}
+[3]: {{< relref "2011-12-22-otv-and-vxlan-layer-3-connectivity-compared.md" >}}
+[4]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}

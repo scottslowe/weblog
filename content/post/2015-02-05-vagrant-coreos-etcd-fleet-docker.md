@@ -112,9 +112,9 @@ If you'd like some additional information on some of the technologies mentioned 
 [link-3]: http://www.vagrantup.com/
 [link-4]: https://github.com/coreos/coreos-vagrant
 [link-5]: https://discovery.etcd.io/new
-[xref-1]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
-[xref-2]: {% post_url 2014-08-18-coreos-continued-etcd %}
-[xref-3]: {% post_url 2014-08-20-coreos-continued-fleet-and-docker %}
-[xref-4]: {% post_url 2014-08-13-deploying-coreos-on-openstack-using-heat %}
-[xref-5]: {% post_url 2014-08-22-a-heat-template-for-docker-containers %}
-[xref-6]: {% post_url 2014-10-22-multi-machine-vagrant-with-yaml %}
+[xref-1]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
+[xref-2]: {{< relref "2014-08-18-coreos-continued-etcd.md" >}}
+[xref-3]: {{< relref "2014-08-20-coreos-continued-fleet-and-docker.md" >}}
+[xref-4]: {{< relref "2014-08-13-deploying-coreos-on-openstack-using-heat.md" >}}
+[xref-5]: {{< relref "2014-08-22-a-heat-template-for-docker-containers.md" >}}
+[xref-6]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}

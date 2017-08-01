@@ -81,6 +81,6 @@ If you are interested in some more in-depth discussion, here are links to some o
 
 [There Might Be an FCoE End to End Solution][3]
 
-[1]: {% post_url 2008-12-09-continuing-the-fcoe-discussion %}
-[2]: {% post_url 2009-08-11-why-no-multi-hop-fcoe %}
-[3]: {% post_url 2009-07-30-correction-there-might-be-an-end-to-end-fcoe-solution %}
+[1]: {{< relref "2008-12-09-continuing-the-fcoe-discussion.md" >}}
+[2]: {{< relref "2009-08-11-why-no-multi-hop-fcoe.md" >}}
+[3]: {{< relref "2009-07-30-correction-there-might-be-an-end-to-end-fcoe-solution.md" >}}

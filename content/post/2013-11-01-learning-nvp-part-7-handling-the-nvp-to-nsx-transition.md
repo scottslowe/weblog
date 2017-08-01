@@ -53,9 +53,9 @@ Unfortunately, my travel schedule over the next few weeks is pretty hectic, whic
 
 Questions? Comments? Feel free to add them below. All I ask for is common courtesy and disclosure of vendor affiliations, where applicable. Thanks!
 
-[1]: {% post_url 2013-05-21-learning-nvp-part-1-high-level-architecture %}
-[2]: {% post_url 2013-08-16-learning-nvp-part-2-nvp-controllers %}
-[3]: {% post_url 2013-08-19-learning-nvp-part-3-nvp-manager %}
-[4]: {% post_url 2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp %}
-[5]: {% post_url 2013-09-06-learning-nvp-part-5-creating-a-logical-network %}
-[6]: {% post_url 2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway %}
+[1]: {{< relref "2013-05-21-learning-nvp-part-1-high-level-architecture.md" >}}
+[2]: {{< relref "2013-08-16-learning-nvp-part-2-nvp-controllers.md" >}}
+[3]: {{< relref "2013-08-19-learning-nvp-part-3-nvp-manager.md" >}}
+[4]: {{< relref "2013-08-22-learning-nvp-part-4-adding-hypervisors-to-nvp.md" >}}
+[5]: {{< relref "2013-09-06-learning-nvp-part-5-creating-a-logical-network.md" >}}
+[6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}

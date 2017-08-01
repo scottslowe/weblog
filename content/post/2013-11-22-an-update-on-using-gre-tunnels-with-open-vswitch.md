@@ -53,5 +53,5 @@ I do want to share one final note before I wrap up. STP is needed in this instan
 
 Feel free to post any questions or comments below. All courteous comments are welcome!
 
-[1]: {% post_url 2013-05-07-using-gre-tunnels-with-open-vswitch %}
-[2]: {% post_url 2013-05-15-examining-open-vswitch-traffic-patterns %}
+[1]: {{< relref "2013-05-07-using-gre-tunnels-with-open-vswitch.md" >}}
+[2]: {{< relref "2013-05-15-examining-open-vswitch-traffic-patterns.md" >}}

@@ -57,4 +57,4 @@ Of course, this schedule is mostly flexible, so everyone will be free to divert 
 
 Please express your interest or thoughts in the comments below. Some of you may already have Crystal's e-mail address as you were included in e-mail discussions of some of the plans; feel free to e-mail her directly if you would like. All others are encouraged to add their information in the comments below, and check back here often for updates. Thanks!
 
-[1]: {% post_url 2008-08-03-vmworld-spouse-activities %}
+[1]: {{< relref "2008-08-03-vmworld-spouse-activities.md" >}}

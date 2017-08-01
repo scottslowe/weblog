@@ -32,4 +32,4 @@ A few other points that came out of today's discussion that might be useful to r
 
 I guess that's about it for now; I'll post more throughout the week. Thanks for reading, and keep the good comments coming!
 
-[1]: {% post_url 2009-07-27-potential-ucs-issue-northbound-fcoe-connectivity %}
+[1]: {{< relref "2009-07-27-potential-ucs-issue-northbound-fcoe-connectivity.md" >}}

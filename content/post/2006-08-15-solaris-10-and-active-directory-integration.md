@@ -196,5 +196,5 @@ If the tests are successful, then you should now be able to authenticate on a So
 
 I tested this configuration using Solaris 10 x86 6/06 (the June 2006 release) running as a VM under VMware ESX Server 3.0.0. Authentication was performed against a pair of virtual servers (one hosted on ESX 3.0.0, the other on ESX 2.5.3) running Windows Server 2003 R2, Standard Edition.
 
-[1]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
-[2]: {% post_url 2006-08-10-kerberos-based-sso-with-apache %}
+[1]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
+[2]: {{< relref "2006-08-10-kerberos-based-sso-with-apache.md" >}}

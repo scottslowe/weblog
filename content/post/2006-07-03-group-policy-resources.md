@@ -28,4 +28,4 @@ If you know of any other useful Group Policy resources, send the link to [del.ic
 
 **UPDATE:** I tested the [SpecOps GPUpdate](http://www.specopssoft.com/products/specopsgpupdate/Default.asp) product (or tried to) late last week, but was utterly and completely unable to make it even launch. I'm not sure what I did wrong, if anything, since it was a simple Windows Installer package that didn't really ask any questions except where to place its files. Even so, it absolutely refused to launch, so I have no idea if this product is any good or even worth investigating.
 
-[1]: {% post_url 2006-06-09-extending-group-policy %}
+[1]: {{< relref "2006-06-09-extending-group-policy.md" >}}

@@ -50,4 +50,4 @@ I'm guessing here that organizations will need to do boot-from-SAN in order to g
 
 So, there are my initial thoughts. What about you?
 
-[1]: {% post_url 2009-03-16-cisco-ucs-announcements %}
+[1]: {{< relref "2009-03-16-cisco-ucs-announcements.md" >}}

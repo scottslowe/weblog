@@ -126,4 +126,4 @@ Some additional resources and information:
 Thanks again to Shannon VanWagner for sharing this information with me so that I could post it here. As always, feel free to post any questions, clarifications, or corrections in the comments below.
 
 
-[1]: {% post_url 2006-11-28-unix-attributes-tab-and-nispropdll %}
+[1]: {{< relref "2006-11-28-unix-attributes-tab-and-nispropdll.md" >}}

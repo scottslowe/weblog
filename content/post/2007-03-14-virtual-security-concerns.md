@@ -31,4 +31,4 @@ I will agree that the limited view into the virtual network switches (and inter-
 
 Feel free to disagree with me in the comments---just be sure to state your reasons why.
 
-[1]: {% post_url 2006-03-21-virtual-security %}
+[1]: {{< relref "2006-03-21-virtual-security.md" >}}

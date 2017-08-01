@@ -61,4 +61,4 @@ All these product announcements and new product versions are pretty cool, but yo
 
 As always, feel free to post any clarifications or corrections in the comments below. I'd love to hear from any networking gurus on any of the points that I raised in this article.
 
-[1]: {% post_url 2011-12-02-examining-vxlan %}
+[1]: {{< relref "2011-12-02-examining-vxlan.md" >}}

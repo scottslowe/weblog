@@ -24,4 +24,4 @@ If you follow my [del.icio.us linkstream](http://del.icio.us/slowe), you will pr
 
 In my opinion, that is a **_huge_** problem. How does one go about providing network link redundancy to guests hosted on Hyper-V? Surely using Failover Clustering and Quick Migration isn't the answer here, is it? One of the presenters offered to get back to me with more information; I've already sent him an e-mail so he has my contact information. As soon as I hear something back, I'll be sure to update this post.
 
-[1]: {% post_url 2008-06-12-vir358-hyper-v-architecture-scenarios-and-networking %}
+[1]: {{< relref "2008-06-12-vir358-hyper-v-architecture-scenarios-and-networking.md" >}}

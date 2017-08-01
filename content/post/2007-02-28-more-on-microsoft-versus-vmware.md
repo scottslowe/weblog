@@ -48,4 +48,4 @@ Besides, VMware isn't the only server virtualization vendor that's affected here
 
 I guess it's the crazy stuff like this that drives people to use open source software---but that's a different story for a different day.
 
-[1]: {% post_url 2007-02-27-return-of-the-old-microsoft %}
+[1]: {{< relref "2007-02-27-return-of-the-old-microsoft.md" >}}

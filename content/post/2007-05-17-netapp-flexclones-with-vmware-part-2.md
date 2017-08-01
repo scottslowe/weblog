@@ -40,5 +40,5 @@ In summary, the use of FlexClones for VMware environments has some very compelli
 
 As always, I welcome any comments below.
 
-[1]: {% post_url 2007-05-15-netapp-flexclones-with-vmware-part-1 %}
-[2]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
+[1]: {{< relref "2007-05-15-netapp-flexclones-with-vmware-part-1.md" >}}
+[2]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}

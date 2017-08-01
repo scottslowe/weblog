@@ -29,4 +29,4 @@ So, in my particular case, I was trying to install LXC. However, I needed the al
 
 Are there other useful `apt-get` tidbits like this that other readers might find particularly useful? Feel free to share in the comments below. Thanks for reading!
 
-[1]: {% post_url 2014-01-23-automatically-connecting-lxc-to-open-vswitch %}
+[1]: {{< relref "2014-01-23-automatically-connecting-lxc-to-open-vswitch.md" >}}

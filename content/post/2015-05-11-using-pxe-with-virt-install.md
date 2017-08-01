@@ -31,4 +31,4 @@ Naturally, you'd want to substitute the desired values for the KVM guest domain 
 Happy PXE booting your KVM guests!
 
 
-[xref-1]: {% post_url 2012-08-21-working-with-kvm-guests %}
+[xref-1]: {{< relref "2012-08-21-working-with-kvm-guests.md" >}}

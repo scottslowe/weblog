@@ -30,4 +30,4 @@ That should do it. One site I found while preparing for this also suggested inst
 
 Coming up soon: installation of Solaris x86 under VMware Workstation running on Ubuntu Linux!
 
-[1]: {% post_url 2006-03-22-installing-ubuntu-on-an-hp-compaq-nc8230 %}
+[1]: {{< relref "2006-03-22-installing-ubuntu-on-an-hp-compaq-nc8230.md" >}}

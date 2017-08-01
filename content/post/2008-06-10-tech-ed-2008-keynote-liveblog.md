@@ -69,7 +69,7 @@ Bob announces the first Release Candidate of SQL Server 2008, available immediat
 
 With that, Bob closed out the keynote. On to my first session!
 
-[1]: {% post_url 2006-12-05-the-future-of-the-os %}
-[2]: {% post_url 2007-07-23-live-migration-vs-quick-migration %}
-[3]: {% post_url 2008-04-03-quick-migration-revisited %}
-[4]: {% post_url 2008-04-25-my-thoughts-on-the-live-migration-quick-migration-discussion %}
+[1]: {{< relref "2006-12-05-the-future-of-the-os.md" >}}
+[2]: {{< relref "2007-07-23-live-migration-vs-quick-migration.md" >}}
+[3]: {{< relref "2008-04-03-quick-migration-revisited.md" >}}
+[4]: {{< relref "2008-04-25-my-thoughts-on-the-live-migration-quick-migration-discussion.md" >}}

@@ -78,8 +78,8 @@ My initial assessment is that OpenStack needs container scheduling, not static a
 
 If you have any questions, have more information to share, or have corrections or clarifications to any of the information presented here, please speak up in the comments.
 
-[1]: {% post_url 2014-05-01-an-introduction-to-openstack-heat %}
-[2]: {% post_url 2014-05-02-another-look-at-an-openstack-heat-template %}
-[3]: {% post_url 2014-03-11-a-quick-introduction-to-docker %}
-[4]: {% post_url 2014-08-20-coreos-continued-fleet-and-docker %}
-[5]: {% post_url 2014-07-31-installing-the-docker-plugin-for-heat %}
+[1]: {{< relref "2014-05-01-an-introduction-to-openstack-heat.md" >}}
+[2]: {{< relref "2014-05-02-another-look-at-an-openstack-heat-template.md" >}}
+[3]: {{< relref "2014-03-11-a-quick-introduction-to-docker.md" >}}
+[4]: {{< relref "2014-08-20-coreos-continued-fleet-and-docker.md" >}}
+[5]: {{< relref "2014-07-31-installing-the-docker-plugin-for-heat.md" >}}

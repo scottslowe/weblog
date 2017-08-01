@@ -78,4 +78,4 @@ Next Ron shifts gears to discuss VDCs with FCoE. The use of VDCs allows us to fu
 
 The next technology Ron looks at with VDCs is FabricPath. I wasn't able to capture all of these information. Ron then wrapped up the session.
 
-[1]: {% post_url 2011-07-12-brkdct-2081-cisco-fabricpath-technology-and-design %}
+[1]: {{< relref "2011-07-12-brkdct-2081-cisco-fabricpath-technology-and-design.md" >}}

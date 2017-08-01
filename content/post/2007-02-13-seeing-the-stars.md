@@ -22,4 +22,4 @@ Wow...what a difference one phrase can make in your outlook. He's right, of cour
 
 For what it's worth, try to keep that in mind next time you are in a time of spiritual darkness. I know I will.
 
-[1]: {% post_url 2007-02-11-joy-in-the-morning %}
+[1]: {{< relref "2007-02-11-joy-in-the-morning.md" >}}

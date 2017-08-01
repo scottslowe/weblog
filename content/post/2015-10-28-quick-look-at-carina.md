@@ -59,5 +59,5 @@ As I've stated on a few different occasions, having a clean "consumer/provider" 
 
 [link-1]: http://getcarina.com
 [link-2]: https://github.com/getcarina/carina/releases/
-[xref-1]: {% post_url 2015-03-06-running-own-docker-swarm-cluster %}
-[xref-2]: {% post_url 2014-03-11-a-quick-introduction-to-docker %}
+[xref-1]: {{< relref "2015-03-06-running-own-docker-swarm-cluster.md" >}}
+[xref-2]: {{< relref "2014-03-11-a-quick-introduction-to-docker.md" >}}

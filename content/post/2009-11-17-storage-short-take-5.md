@@ -37,5 +37,5 @@ I've decided to resurrect my Storage Short Take series, after almost a year sinc
 
 That's it for this time around. Feel free to share other interesting or useful links in the comments.
 
-[1]: {% post_url 2009-07-29-no-such-thing-as-an-end-to-end-fcoe-solution %}
-[2]: {% post_url 2009-07-30-correction-there-might-be-an-end-to-end-fcoe-solution %}
+[1]: {{< relref "2009-07-29-no-such-thing-as-an-end-to-end-fcoe-solution.md" >}}
+[2]: {{< relref "2009-07-30-correction-there-might-be-an-end-to-end-fcoe-solution.md" >}}

@@ -25,4 +25,4 @@ So what does this mean for you, the readers? Nothing. I'll still be posting out 
 
 To those of you who were or are customers of mine, thanks for the opportunities you've provided over the last five years. It's been a blessing from the Lord to have met each and every one of you, and I consider you friends as well as customers. Feel free to continue to stay in touch with me using [this e-mail address](mailto:scott.lowe@scottlowe.org).
 
-[1]: {% post_url 2006-02-21-what-i-want-to-do-when-i-grow-up %}
+[1]: {{< relref "2006-02-21-what-i-want-to-do-when-i-grow-up.md" >}}

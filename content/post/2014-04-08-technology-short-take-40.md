@@ -92,4 +92,4 @@ I should close things out now, but I do have one final link to share. I really e
 
 Anyway, enough is enough. I hope that you found something useful here. I encourage readers to contribute to the discussion in the comments below. All courteous comments are welcome.
 
-[1]: {% post_url 2008-12-19-vmware-esx-networking-articles %}
+[1]: {{< relref "2008-12-19-vmware-esx-networking-articles.md" >}}

@@ -130,5 +130,5 @@ In [part 3][2] of the series, I will cover any other remaining elements that I r
 
 As always, feel free to post questions, clarifications, or corrections in the comments below.
 
-[1]: {% post_url 2010-05-05-creating-ucs-service-profiles-part-1-networking-elements %}
-[2]: {% post_url 2010-05-10-creating-ucs-service-profiles-part-3-other-elements %}
+[1]: {{< relref "2010-05-05-creating-ucs-service-profiles-part-1-networking-elements.md" >}}
+[2]: {{< relref "2010-05-10-creating-ucs-service-profiles-part-3-other-elements.md" >}}

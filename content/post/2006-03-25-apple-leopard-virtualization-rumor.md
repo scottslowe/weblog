@@ -21,4 +21,4 @@ According to [this article](http://www.macosxrumors.com/articles/2006/03/23/leop
 
 Now, it would be tremendously cool (and not to mention very helpful) to be able to run Windows or Linux on an x86-based Macintosh. But will this virtualization be "full virtualization," allowing the use of other operating systems simultaneously (such as provided by VMware), or "paravirtualization," the ability to partition the hardware so that it supports multiple instances of the same OS (such as that provided by [Virtuozzo](http://www.swsoft.com/en/products/virtuozzo/)/[OpenVZ](http://www.openvz.org/) or [Xen](http://www.cl.cam.ac.uk/Research/SRG/netos/xen/))? I'm personally [hoping for the former][1], and the growth of open source projects such as [Q](http://www.kberg.ch/q/index.php) are a ray of light in that direction. Hopefully, Apple's support for virtualization (if such really exists) will bolster those types of efforts, not hamper them.
 
-[1]: {% post_url 2006-02-13-apple-and-virtualization %}
+[1]: {{< relref "2006-02-13-apple-and-virtualization.md" >}}

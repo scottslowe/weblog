@@ -94,5 +94,5 @@ Welcome to Technology Short Take #44, the latest in my irregularly-published ser
 
 That's it this time around; hopefully I was able to include something useful for you. As always, all courteous comments are welcome, so feel free to speak up in the comments. In particular, if there is a technology area that I'm not covering (or not covering well), please let me know---and suggestions for more content sources are certainly welcome!
 
-[1]: {% post_url 2014-05-19-some-useful-markdown-tools-for-os-x %}
+[1]: {{< relref "2014-05-19-some-useful-markdown-tools-for-os-x.md" >}}
 [2]: {{ site.url }}/tags/#Puppet

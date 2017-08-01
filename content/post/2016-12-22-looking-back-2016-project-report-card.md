@@ -51,4 +51,4 @@ While there may be a couple more blog posts before 2017 arrives, I'd like to tak
 
 [link-1]: http://shop.oreilly.com/product/0636920042082.do
 [link-2]: https://github.com/lowescott/learning-tools
-[xref-1]: {% post_url 2016-01-21-looking-ahead-2016-projects %}
+[xref-1]: {{< relref "2016-01-21-looking-ahead-2016-projects.md" >}}

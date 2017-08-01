@@ -39,4 +39,4 @@ Now, the user attempting to access the guest domain's VNC console must know the 
 
 For more details, you can refer to the full reference on the [libvirt guest domain XML configuration](http://libvirt.org/formatdomain.html).
 
-[1]: {% post_url 2013-08-21-accessing-vnc-consoles-of-kvm-guests-via-ssh %}
+[1]: {{< relref "2013-08-21-accessing-vnc-consoles-of-kvm-guests-via-ssh.md" >}}

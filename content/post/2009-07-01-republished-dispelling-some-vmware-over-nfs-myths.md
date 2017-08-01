@@ -44,6 +44,6 @@ Now, one might look at this article and say, "Scott, you hate NFS!" No, actually
 
 So there _are_ some tangible benefits to using NFS for VMware Infrastructure. But let's be real about this, and not try to gloss over technical details. While NFS has some real advantages, it also has some real disadvantages, and organizations choosing a storage protocol need to understand both sides of the coin.
 
-[1]: {% post_url 2008-03-31-only-thin-provisioned-in-the-beginning %}
-[2]: {% post_url 2008-07-16-understanding-nic-utilization-in-vmware-esx %}
-[3]: {% post_url 2008-08-14-storage-protocol-performance-whitepaper-from-netapp %}
+[1]: {{< relref "2008-03-31-only-thin-provisioned-in-the-beginning.md" >}}
+[2]: {{< relref "2008-07-16-understanding-nic-utilization-in-vmware-esx.md" >}}
+[3]: {{< relref "2008-08-14-storage-protocol-performance-whitepaper-from-netapp.md" >}}

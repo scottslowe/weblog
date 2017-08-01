@@ -60,4 +60,4 @@ It's also important to point out that while OTV and VXLAN have some overlap in f
 
 Once again, I encourage network experts to chime in and share their views. If I've misstated something, please let me know. Questions, thoughts, and comments are always welcome.
 
-[1]: {% post_url 2011-12-07-revisiting-vxlan-and-layer-3-connectivity %}
+[1]: {{< relref "2011-12-07-revisiting-vxlan-and-layer-3-connectivity.md" >}}

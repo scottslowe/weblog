@@ -30,5 +30,5 @@ Be sure to visit the [Fusion 2.0 Beta 1 landing page](http://www.vmware.com/land
 
 Personally, it's interesting to me to see how the VMware Fusion team has really capitalized and focused on the user interaction side of desktop virtualization. Much more so than with VMware Workstation, VMware Fusion is really bringing to life the [idea of application agnosticism][1] (great idea, not so great name, but I coined it so I guess I'm stuck with it) or [personal computing as a collection of VMs][2]. As virtualization becomes more pervasive, it also needs to become more transparent, and as its transparency increases its adoption---at least among consumers---will also increase.
 
-[1]: {% post_url 2006-12-26-application-agnosticism %}
-[2]: {% post_url 2006-12-28-personal-computing-as-a-collection-of-vms %}
+[1]: {{< relref "2006-12-26-application-agnosticism.md" >}}
+[2]: {{< relref "2006-12-28-personal-computing-as-a-collection-of-vms.md" >}}

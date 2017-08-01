@@ -70,5 +70,5 @@ Anyway, I hope this has been helpful in some way. I know that I'll likely find P
 [link-2]: {{ site.url }}/public/img/blank-paw-window.png
 [link-3]: {{ site.url }}/public/img/paw-request-response.png
 [link-4]: {{ site.url }}/public/img/paw-dynamic-response.png
-[xref-1]: {% post_url 2014-02-19-using-curl-to-interact-with-a-restful-api %}
-[xref-2]: {% post_url 2015-11-11-handy-cli-tool-json %}
+[xref-1]: {{< relref "2014-02-19-using-curl-to-interact-with-a-restful-api.md" >}}
+[xref-2]: {{< relref "2015-11-11-handy-cli-tool-json.md" >}}

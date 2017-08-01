@@ -46,5 +46,5 @@ Both of these benefits stand in direct contrast to VirtualCenter cloning:
 
 At first glance, it's easy to look at these benefits and say, "Why _wouldn't_ I want to use FlexClones? I can create additional VMs in seconds instead of minutes, and save tons of expensive Fibre Channel SAN storage. What's not to like?" Those are very good questions. In [Part 2][2] of this series, we'll take a look at some of the disadvantages of using FlexClones in VMware environments. In the meantime, feel free to add any clarifications, corrections, or questions in the comments below.
 
-[1]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
-[2]: {% post_url 2007-05-17-netapp-flexclones-with-vmware-part-2 %}
+[1]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}
+[2]: {{< relref "2007-05-17-netapp-flexclones-with-vmware-part-2.md" >}}

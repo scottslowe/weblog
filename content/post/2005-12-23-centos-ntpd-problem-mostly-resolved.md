@@ -39,8 +39,8 @@ The repetitive synchronization messages still appeared, but were appearing with 
 
 So, it's still not working as cleanly as the older Red Hat Linux 9.0-based servers, but it _is_ working. Given that I'm still running these servers under an old version of VMware (which, technically, doesn't support Linux 2.6 kernels) I may try upgrading to a new version of VMware to see if that helps at all.
 
-[1]: {% post_url 2005-08-16-strange-ntpd-problem-on-centos-41 %}
-[2]: {% post_url 2005-12-19-ntpd-on-centos-42 %}
+[1]: {{< relref "2005-08-16-strange-ntpd-problem-on-centos-41.md" >}}
+[2]: {{< relref "2005-12-19-ntpd-on-centos-42.md" >}}
 [3]: http://www.vmware.com/
 [4]: http://www.vmware.com/support/kb/enduser/std_adp.php?p_sid=Nuh3rAXh&p_lva=&p_faqid=1420&p_created=1093994398&p_sp=cF9zcmNoPTEmcF9ncmlkc29ydD0mcF9yb3dfY250PTc0MyZwX3NlYXJjaF90ZXh0PUxpbnV4IGd1ZXN0IGNsb2NrJnBfc2VhcmNoX3R5cGU9NyZwX3Byb2RfbHZsMT1_YW55fiZwX3Byb2RfbHZsMj1_YW55fiZwX3NvcnRfYnk9ZGZsdCZwX3BhZ2U9MQ**&p_li=
 [5]: http://www.microsoft.com/windowsserver2003/default.mspx

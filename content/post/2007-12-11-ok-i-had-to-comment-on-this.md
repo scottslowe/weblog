@@ -32,5 +32,5 @@ Don't get me wrong, Microsoft Virtual Server is a decent solution at a great pri
 
 Until then, articles such as [this one](http://blogs.technet.com/doxley/archive/2007/12/10/virtualisation-why-would-you-not-choose-microsoft-virtual-server.aspx) are, in my humble opinion, useless.
 
-[1]: {% post_url 2007-05-10-viridian-feature-set-trimmed %}
-[2]: {% post_url 2007-07-23-live-migration-vs-quick-migration %}
+[1]: {{< relref "2007-05-10-viridian-feature-set-trimmed.md" >}}
+[2]: {{< relref "2007-07-23-live-migration-vs-quick-migration.md" >}}

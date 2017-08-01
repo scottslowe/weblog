@@ -40,10 +40,10 @@ This week's Short Take is a collection of links and articles that I've seen over
 
 That does it for now. Thanks for reading!
 
-[1]: {% post_url 2008-09-08-live-migration-with-hyper-v %}
-[2]: {% post_url 2008-06-16-melio-fs-hyper-v-and-vmware-esx %} 
-[3]: {% post_url 2008-07-08-sanbolic-looking-to-capitalize-on-hyper-v-opportunity %}
-[4]: {% post_url 2008-10-18-important-note-regarding-vmware-over-nfs %}
-[5]: {% post_url 2007-05-11-how-to-provision-vms-using-netapp-flexclones %}
-[6]: {% post_url 2007-05-15-netapp-flexclones-with-vmware-part-1 %}
-[7]: {% post_url 2007-05-17-netapp-flexclones-with-vmware-part-2 %}
+[1]: {{< relref "2008-09-08-live-migration-with-hyper-v.md" >}}
+[2]: {{< relref "2008-06-16-melio-fs-hyper-v-and-vmware-esx.md" >}} 
+[3]: {{< relref "2008-07-08-sanbolic-looking-to-capitalize-on-hyper-v-opportunity.md" >}}
+[4]: {{< relref "2008-10-18-important-note-regarding-vmware-over-nfs.md" >}}
+[5]: {{< relref "2007-05-11-how-to-provision-vms-using-netapp-flexclones.md" >}}
+[6]: {{< relref "2007-05-15-netapp-flexclones-with-vmware-part-1.md" >}}
+[7]: {{< relref "2007-05-17-netapp-flexclones-with-vmware-part-2.md" >}}

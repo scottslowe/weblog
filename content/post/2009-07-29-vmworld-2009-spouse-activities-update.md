@@ -45,4 +45,4 @@ If anyone has any questions, you're welcome to ask them in the comments to this 
 
 Thanks for reading! I'm looking forward to seeing everyone in San Francisco.
 
-[1]: {% post_url 2008-08-20-vmworld-2008-spouse-activities-schedule %}
+[1]: {{< relref "2008-08-20-vmworld-2008-spouse-activities-schedule.md" >}}

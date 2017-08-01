@@ -19,4 +19,4 @@ Part of this product suite is XenServer Cloud Edition, a version of XenServer op
 
 Citrix Cloud Center is available immediately.
 
-[1]: {% post_url 2008-09-15-citrix-announces-xenserver-5 %}
+[1]: {{< relref "2008-09-15-citrix-announces-xenserver-5.md" >}}

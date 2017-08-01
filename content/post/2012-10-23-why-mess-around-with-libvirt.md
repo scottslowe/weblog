@@ -29,7 +29,7 @@ While libvirt is pretty cool in and of itself (I really like the abstraction lay
 
 At least, that's the general idea. As always, I'm open to constructive feedback---is it worth the time, or not? I'd love to hear from others who might be on a similar path of discovery and education. Feel free to share your thoughts in the comments below.
 
-[1]: {% post_url 2012-08-21-working-with-kvm-guests %}
-[2]: {% post_url 2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3 %}
-[3]: {% post_url 2012-09-07-compiling-libvirt-0-10-1-on-ubuntu-12-04 %}
-[4]: {% post_url 2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges %}
+[1]: {{< relref "2012-08-21-working-with-kvm-guests.md" >}}
+[2]: {{< relref "2012-09-06-compiling-libvirt-0-10-1-on-centos-6-3.md" >}}
+[3]: {{< relref "2012-09-07-compiling-libvirt-0-10-1-on-ubuntu-12-04.md" >}}
+[4]: {{< relref "2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges.md" >}}

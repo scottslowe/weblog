@@ -110,4 +110,4 @@ That's all, folks...until next time, at least!
 [link-29]: http://blog.kubernetes.io/2016/05/hypernetes-security-and-multi-tenancy-in-kubernetes.html
 [link-30]: http://www.midokura.com/press-releases/midokura-third-party-network-driver-large-scale-openstack-clouds-production/
 [link-31]: http://www.openstack.org/assets/survey/April-2016-User-Survey-Report.pdf
-[xref-1]: {% post_url 2006-12-05-the-future-of-the-os %}
+[xref-1]: {{< relref "2006-12-05-the-future-of-the-os.md" >}}

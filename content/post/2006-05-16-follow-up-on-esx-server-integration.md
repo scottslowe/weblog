@@ -40,4 +40,4 @@ The final answer still remains unknown. The man page for pam_krb5.so module indi
 
 In the meantime, any Kerberos experts out there are invited to add their comments to this article and share any additional information.
 
-[1]: {% post_url 2006-05-01-esx-server-integration-with-active-directory %}
+[1]: {{< relref "2006-05-01-esx-server-integration-with-active-directory.md" >}}

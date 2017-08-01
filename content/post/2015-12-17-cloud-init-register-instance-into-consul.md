@@ -54,4 +54,4 @@ Besides, there may be a way that others can use this information in some as-yet-
 [link-4]: https://consul.io/docs/agent/http.html
 [link-5]: https://luckymarmot.com/paw
 [link-6]: https://twitter.com/scott_lowe
-[xref-1]: {% post_url 2015-11-14-handy-gui-tool-working-apis %}
+[xref-1]: {{< relref "2015-11-14-handy-gui-tool-working-apis.md" >}}

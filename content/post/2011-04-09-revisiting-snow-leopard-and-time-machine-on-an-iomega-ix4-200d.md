@@ -32,4 +32,4 @@ In the comments to the original article, a few people suggested that newer firmw
 
 So, it would seem that even with the latest available firmware on the ix4-200d, it's still necessary to follow the steps I outlined in [my previous article][1] in order to make Time Machine work.
 
-[1]: {% post_url 2009-12-09-snow-leopard-time-machine-and-iomega-ix4-200d %}
+[1]: {{< relref "2009-12-09-snow-leopard-time-machine-and-iomega-ix4-200d.md" >}}

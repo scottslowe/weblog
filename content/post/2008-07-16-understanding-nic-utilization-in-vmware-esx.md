@@ -73,4 +73,4 @@ Clearly, this has some implications for efficient and scalable VI3 designs. I'd 
 
 **UPDATE:** Reader Tim Washburn pointed out that the "Route based on Source MAC hash" actually can't be used in conjunction with link aggregation; it's behavior is identical to "Route based on originating virtual port ID". Thanks for the correction, Tim!
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}

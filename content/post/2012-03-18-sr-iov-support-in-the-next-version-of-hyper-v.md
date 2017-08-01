@@ -31,4 +31,4 @@ It's great to see Microsoft adding SR-IOV support to Hyper-V; this brings SR-IOV
 
 (By the way, for those of you wondering why SR-IOV is important, there are lots of potential synergies here---in my view, at least---between hardware switching on an SR-IOV NIC and things like software-defined networking.)
 
-[1]: {% post_url 2009-12-02-what-is-sr-iov %}
+[1]: {{< relref "2009-12-02-what-is-sr-iov.md" >}}

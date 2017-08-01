@@ -45,4 +45,4 @@ In my mind, Intel RSA is more of an example use case than a technology in and of
 
 I hope that this helps explain Intel RSA in a way that is a bit more consumable and understandable. If you have any questions, corrections, or clarifications, please feel free to speak up in the comments.
 
-[1]: {% post_url 2013-09-11-idf-2013-rack-scale-architecture-for-cloud %}
+[1]: {{< relref "2013-09-11-idf-2013-rack-scale-architecture-for-cloud.md" >}}

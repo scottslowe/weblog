@@ -70,6 +70,6 @@ As you can see, there's still lots of work to do and lots of questions to answer
 [link-13]: https://1password.com/
 [link-14]: https://www.omnigroup.com/omnioutliner/
 [link-15]: https://www.omnigroup.com/omnifocus
-[xref-1]: {% post_url 2012-11-30-why-i-might-leave-os-x %}
-[xref-2]: {% post_url 2015-04-06-plain-text-productivity-experiment %}
-[xref-3]: {% post_url 2017-02-01-linux-migration-final-distro-selection %}
+[xref-1]: {{< relref "2012-11-30-why-i-might-leave-os-x.md" >}}
+[xref-2]: {{< relref "2015-04-06-plain-text-productivity-experiment.md" >}}
+[xref-3]: {{< relref "2017-02-01-linux-migration-final-distro-selection.md" >}}

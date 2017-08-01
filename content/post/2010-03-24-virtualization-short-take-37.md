@@ -56,6 +56,6 @@ It's that time again: time for another Virtualization Short Take! My Virtualizat
 
 That does it for me this time around, folks. Thanks for reading (I appreciate it!), and if you have some good information to add please feel free to speak up in the comments.
 
-[1]: {% post_url 2006-12-04-esx-server-nic-teaming-and-vlan-trunking %}
-[2]: {% post_url 2009-10-23-cutting-yourself-on-the-double-edged-sword %}
-[3]: {% post_url 2007-07-10-esx-server-ad-integration %}
+[1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
+[2]: {{< relref "2009-10-23-cutting-yourself-on-the-double-edged-sword.md" >}}
+[3]: {{< relref "2007-07-10-esx-server-ad-integration.md" >}}

@@ -38,5 +38,5 @@ I think a variation of this saying is applicable here: you can't chide other pro
 [link-4]: https://consul.io/
 [link-5]: https://github.com/skynetservices/skydns
 [link-6]: https://github.com/coreos/etcd/
-[xref-1]: {% post_url 2015-02-06-quick-intro-to-consul %}
-[xref-2]: {% post_url 2014-08-18-coreos-continued-etcd %}
+[xref-1]: {{< relref "2015-02-06-quick-intro-to-consul.md" >}}
+[xref-2]: {{< relref "2014-08-18-coreos-continued-etcd.md" >}}

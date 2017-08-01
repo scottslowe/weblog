@@ -31,6 +31,6 @@ To help summarize some of the content that I've generated around VMware ESX and 
 
 Enjoy!
 
-[1]: {% post_url 2008-03-11-identifying-esx-server-nics-in-blades %}
-[2]: {% post_url 2009-03-13-next-gen-stuff-enabling-cdp-in-esxesxi %}
-[3]: {% post_url 2009-03-24-viewing-cdp-data-on-vmware-esx %}
+[1]: {{< relref "2008-03-11-identifying-esx-server-nics-in-blades.md" >}}
+[2]: {{< relref "2009-03-13-next-gen-stuff-enabling-cdp-in-esxesxi.md" >}}
+[3]: {{< relref "2009-03-24-viewing-cdp-data-on-vmware-esx.md" >}}

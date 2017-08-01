@@ -101,8 +101,8 @@ There are a couple of things to note about this configuration:
 
 If you have any questions, corrections, suggestions, or clarifications, please feel free to post them in the comments below. All feedback is welcome and appreciated.
 
-[1]: {% post_url 2013-05-07-using-gre-tunnels-with-open-vswitch %}
-[2]: {% post_url 2013-09-09-namespaces-vlans-open-vswitch-and-gre-tunnels %}
-[3]: {% post_url 2013-11-25-a-brief-introduction-to-linux-containers-with-lxc %}
-[4]: {% post_url 2013-05-15-examining-open-vswitch-traffic-patterns %}
-[5]: {% post_url 2013-11-22-an-update-on-using-gre-tunnels-with-open-vswitch %}
+[1]: {{< relref "2013-05-07-using-gre-tunnels-with-open-vswitch.md" >}}
+[2]: {{< relref "2013-09-09-namespaces-vlans-open-vswitch-and-gre-tunnels.md" >}}
+[3]: {{< relref "2013-11-25-a-brief-introduction-to-linux-containers-with-lxc.md" >}}
+[4]: {{< relref "2013-05-15-examining-open-vswitch-traffic-patterns.md" >}}
+[5]: {{< relref "2013-11-22-an-update-on-using-gre-tunnels-with-open-vswitch.md" >}}

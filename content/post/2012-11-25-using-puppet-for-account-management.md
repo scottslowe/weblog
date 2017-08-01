@@ -111,4 +111,4 @@ I freely admit that I'm still relatively new to Puppet, so I'm sure there are nu
 [gist-2]: https://gist.github.com/lowescott/4050229
 [gist-3]: https://gist.github.com/lowescott/4050236
 
-[1]: {% post_url 2012-07-09-updated-multi-os-puppet-configuration %}
+[1]: {{< relref "2012-07-09-updated-multi-os-puppet-configuration.md" >}}

@@ -87,4 +87,4 @@ It's funny to me that the storage section of these posts is typically the shorte
 
 That wraps up this installation of Technology Short Takes. As always, your comments, thoughts, suggestions, or clarifications are welcome, so please speak up in the comments!
 
-[1]: {% post_url 2010-03-21-how-niv-and-fcoe-play-together %}
+[1]: {{< relref "2010-03-21-how-niv-and-fcoe-play-together.md" >}}

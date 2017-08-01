@@ -27,4 +27,4 @@ In addition, if selected, program participants must agree to install the softwar
 
 Do you meet the requirements? If so, and you're interested in participating in the beta, post a comment below. Be sure to use a valid e-mail address!
 
-[1]: {% post_url 2008-10-24-hyper9-beta-invitations %}
+[1]: {{< relref "2008-10-24-hyper9-beta-invitations.md" >}}

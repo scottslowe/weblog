@@ -84,8 +84,8 @@ Once IP forwarding is enabled, you should be able to route IP traffic from one V
 
 Feel free to post any questions, corrections, or clarifications in the comments below. Your feedback and any courteous comments are always welcome.
 
-[1]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
-[2]: {% post_url 2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges %}
-[3]: {% post_url 2012-10-19-link-aggregation-and-lacp-with-open-vswitch %}
-[4]: {% post_url 2012-10-04-some-insight-into-open-vswitch-configuration %}
-[5]: {% post_url 2012-10-30-running-host-management-on-open-vswitch %}
+[1]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}
+[2]: {{< relref "2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges.md" >}}
+[3]: {{< relref "2012-10-19-link-aggregation-and-lacp-with-open-vswitch.md" >}}
+[4]: {{< relref "2012-10-04-some-insight-into-open-vswitch-configuration.md" >}}
+[5]: {{< relref "2012-10-30-running-host-management-on-open-vswitch.md" >}}

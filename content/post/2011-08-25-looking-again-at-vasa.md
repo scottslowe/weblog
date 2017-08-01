@@ -30,4 +30,4 @@ So, based on this information and seeing how the vendors are "bypassing" the pro
 
 What do you think? Do these VASA implementations look useful? What part of VASA (and profile-driven storage) do you think will be most useful to you in your specific environment? I'd love to hear what you think, so feel free to speak up in the comments below.
 
-[1]: {% post_url 2011-08-12-a-deeper-look-at-vasa %}
+[1]: {{< relref "2011-08-12-a-deeper-look-at-vasa.md" >}}

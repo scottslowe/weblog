@@ -106,5 +106,5 @@ To define a boot policy, use these steps:
 
 That wraps up part 3 of the series. I've now covered all the different elements that I recommend creating before creating an actual service profile or service profile template. In the next and final post in the series, I'll walk through creating a service profile and show you how easy it is once you've defined all these other objects.
 
-[1]: {% post_url 2010-05-05-creating-ucs-service-profiles-part-1-networking-elements %}
-[2]: {% post_url 2010-05-07-creating-ucs-service-profiles-part-2-storage-elements %}
+[1]: {{< relref "2010-05-05-creating-ucs-service-profiles-part-1-networking-elements.md" >}}
+[2]: {{< relref "2010-05-07-creating-ucs-service-profiles-part-2-storage-elements.md" >}}

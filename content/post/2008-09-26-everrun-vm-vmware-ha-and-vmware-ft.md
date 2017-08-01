@@ -39,4 +39,4 @@ As a final note, as [SearchServerVirtualization.com stated](http://servervirtual
 
 I welcome everyone's input and thoughts on this matter. Please contribute in the comments to this article.
 
-[1]: {% post_url 2008-09-15-marathon-and-xenserver-ha %}
+[1]: {{< relref "2008-09-15-marathon-and-xenserver-ha.md" >}}

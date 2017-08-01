@@ -54,5 +54,5 @@ Now, before you go any farther, add a local account to use in case the network c
 
 [This Cisco document](http://www.cisco.com/en/US/tech/tk59/technologies_tech_note09186a0080093c81.shtml) offers some additional information on AAA configurations, so I'll refer you there for more detailed descriptions of the commands involved. Enjoy!
 
-[1]: {% post_url 2005-11-22-cisco-pix-vpn-and-active-directory-integration %}
-[2]: {% post_url 2005-12-06-watchguard-firebox-vpn-and-active-directory-integration %}
+[1]: {{< relref "2005-11-22-cisco-pix-vpn-and-active-directory-integration.md" >}}
+[2]: {{< relref "2005-12-06-watchguard-firebox-vpn-and-active-directory-integration.md" >}}

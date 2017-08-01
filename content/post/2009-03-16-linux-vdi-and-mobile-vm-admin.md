@@ -21,4 +21,4 @@ In all the [noise surrounding Cisco UCS][1], a couple of other smaller news rele
 
 Also today, [Rove](http://www.roveit.com/) released version 4.2 of their [Mobile Admin](http://www.roveit.com/mobileadmin/overview/) product, a product designed to allow administators to manage their infrastructure from the ever-present mobile device. The press release is available [here](http://www.roveit.com/newsroom/pressarchive/2009/2009-03-16_2009%20MobileAdmin42Release.aspx). Rove offered to provide a trial for me to use, but as they don't yet offer a native iPhone version of Mobile Admin, I had to decline. (Rove is quick to point out that you can use Mobile Safari on the iPhone to access the web version of their application, however. Personally, I prefer native applications.) Mobile Admin is available for the BlackBerry and for Windows Mobile. If you're in need of some sort of mobile administration solution, this might fit the bill. I'd love to hear from some readers who have used this product---is it good?
 
-[1]: {% post_url 2009-03-16-more-on-cisco-ucs %}
+[1]: {{< relref "2009-03-16-more-on-cisco-ucs.md" >}}

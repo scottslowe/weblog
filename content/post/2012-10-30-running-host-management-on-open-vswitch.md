@@ -47,5 +47,5 @@ And that's it! You can now use the IP address assigned to the `mgmt0` interface 
 
 If you have any questions or thoughts about this configuration, please feel free to speak up in the comments below---all courteous comments are welcome.
 
-[1]: {% post_url 2012-10-19-link-aggregation-and-lacp-with-open-vswitch %}
-[2]: {% post_url 2012-10-19-vlans-with-open-vswitch-fake-bridges %}
+[1]: {{< relref "2012-10-19-link-aggregation-and-lacp-with-open-vswitch.md" >}}
+[2]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}

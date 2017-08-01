@@ -22,4 +22,4 @@ These two articles, [Big Brother Microsoft](http://www.linux-watch.com/news/NS65
 
 She proceeds to back that up with a detailed analysis of the EULAs (End User License Agreements), when EULAs are even presented to the user. I'm no lawyer, but her discussion and analysis of the matter is detailed and fascinating to read. Even if you disagree with Microsoft's handling of this situation, I encourage you to read the entire article so that you have a good feel for the principles that are involved.
 
-[1]: {% post_url 2006-06-08-windows-phones-home %}
+[1]: {{< relref "2006-06-08-windows-phones-home.md" >}}

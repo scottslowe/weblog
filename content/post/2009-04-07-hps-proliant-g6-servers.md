@@ -41,5 +41,5 @@ If you're interested in learning more about the G6 products, HP is hosting a ["W
 
 **UPDATE 2:** I received word from HP today that the ROM update that enables 1333MHz operation with 2 DIMMs on each bus is actually already on all shipping "Nehalem" systems. Of course, this would require a 95W CPU, since [only 95W CPUs][2] can support the 1333MHz memory bus speed.
 
-[1]: {% post_url 2009-04-07-introduction-to-nehalem-cpus %}
-[2]: {% post_url 2009-04-07-introduction-to-nehalem-cpus %}
+[1]: {{< relref "2009-04-07-introduction-to-nehalem-cpus.md" >}}
+[2]: {{< relref "2009-04-07-introduction-to-nehalem-cpus.md" >}}

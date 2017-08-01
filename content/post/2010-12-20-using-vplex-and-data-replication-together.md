@@ -52,5 +52,5 @@ With your replication solution replicating entire LUNs and VPLEX working on enti
 
 Your feedback is always welcome! Post any questions, corrections, or clarifications in the comments below.
 
-[1]: {% post_url 2010-12-13-a-quick-review-of-vplex-storage-objects %}
-[2]: {% post_url 2010-06-07-a-deeper-look-at-vplex %}
+[1]: {{< relref "2010-12-13-a-quick-review-of-vplex-storage-objects.md" >}}
+[2]: {{< relref "2010-06-07-a-deeper-look-at-vplex.md" >}}

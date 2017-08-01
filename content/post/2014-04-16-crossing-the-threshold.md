@@ -27,5 +27,5 @@ At this point you might be wondering, "What does that have to do with encouragin
 
 As IT professionals---especially those on the individual contributor (IC) track instead of the management track---we are tasked with having to constantly learn new products, new technologies, and new methodologies. Because the learning never stops (and that isn't a bad thing, in my humble opinion), we tend to focus on what we _haven't_ mastered. We forget to look at what we _have_ learned, at the progress that we _have_ made. Maybe, like me, you're on a journey of learning and education to move from being a specialist in one type of technology to a practitioner of another type. If that's the case, perhaps it's time you stop saying "I _will be_ a &lt;new technology&gt; person" and say "I _am_ a &lt;new technology&gt; person." Perhaps it's time for you to cross the threshold.
 
-[1]: {% post_url 2012-01-02-some-projects-for-2012 %}
-[2]: {% post_url 2013-02-07-looking-ahead-my-2013-projects %}
+[1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}
+[2]: {{< relref "2013-02-07-looking-ahead-my-2013-projects.md" >}}

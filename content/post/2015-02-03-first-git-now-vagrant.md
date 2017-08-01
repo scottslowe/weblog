@@ -33,5 +33,5 @@ I have two goals with this effort. First, I want to make it easier for other peo
 [link-5]: http://openvswitch.org/
 [link-6]: https://github.com/coreos/etcd/
 [link-7]: https://coreos.com
-[xref-1]: {% post_url 2015-01-06-the-story-behind-the-migration %}
-[xref-2]: {% post_url 2014-09-12-a-quick-introduction-to-vagrant %}
+[xref-1]: {{< relref "2015-01-06-the-story-behind-the-migration.md" >}}
+[xref-2]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}

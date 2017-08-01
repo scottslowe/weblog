@@ -89,5 +89,5 @@ Using fake bridges with link aggregation is also possible, as you can see from t
 
 I hope this information is useful. OVS is a really powerful piece of software, and I'm enjoying learning more about it and how to use it. If anyone has any additional information, please feel free to speak up in the comments. All courteous comments are welcome!
 
-[1]: {% post_url 2012-10-04-some-insight-into-open-vswitch-configuration %}
-[2]: {% post_url 2012-10-19-link-aggregation-and-lacp-with-open-vswitch %}
+[1]: {{< relref "2012-10-04-some-insight-into-open-vswitch-configuration.md" >}}
+[2]: {{< relref "2012-10-19-link-aggregation-and-lacp-with-open-vswitch.md" >}}

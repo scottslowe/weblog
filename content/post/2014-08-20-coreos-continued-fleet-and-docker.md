@@ -150,7 +150,7 @@ Naturally, `fleetctl` includes commands for stopping units, destroying units, et
 
 I hope you've found this post to be helpful. Feel free to post any questions, corrections, clarifications, or thoughts in the comments below. Courteous comments are always welcome.
 
-[1]: {% post_url 2014-08-01-a-quick-introduction-to-coreos %}
-[2]: {% post_url 2014-08-18-coreos-continued-etcd %}
-[3]: {% post_url 2014-03-11-a-quick-introduction-to-docker %}
-[4]: {% post_url 2014-08-13-deploying-coreos-on-openstack-using-heat %}
+[1]: {{< relref "2014-08-01-a-quick-introduction-to-coreos.md" >}}
+[2]: {{< relref "2014-08-18-coreos-continued-etcd.md" >}}
+[3]: {{< relref "2014-03-11-a-quick-introduction-to-docker.md" >}}
+[4]: {{< relref "2014-08-13-deploying-coreos-on-openstack-using-heat.md" >}}

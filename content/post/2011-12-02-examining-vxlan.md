@@ -60,5 +60,5 @@ I was not a fan of VMware (apparently) driving the creation of an entirely new n
 
 Comments, corrections, and clarifications are always welcome!
 
-[1]: {% post_url 2011-08-31-vsp2117-virtualization-aware-datacenter-networks %}
-[2]: {% post_url 2011-11-30-vxlan-and-layer-3-connectivity %}
+[1]: {{< relref "2011-08-31-vsp2117-virtualization-aware-datacenter-networks.md" >}}
+[2]: {{< relref "2011-11-30-vxlan-and-layer-3-connectivity.md" >}}

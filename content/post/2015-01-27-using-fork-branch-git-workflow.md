@@ -150,5 +150,5 @@ I found [the Help on the GitHub site][link-5] to be particularly useful.
 [link-6]: http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html
 
 
-[xref-1]: {% post_url 2015-01-14-non-programmer-git-intro %}
-[xref-2]: {% post_url 2015-01-26-using-git-with-github %}
+[xref-1]: {{< relref "2015-01-14-non-programmer-git-intro.md" >}}
+[xref-2]: {{< relref "2015-01-26-using-git-with-github.md" >}}

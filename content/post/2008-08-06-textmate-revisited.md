@@ -18,4 +18,4 @@ I'm still convinced that I'm not even scratching the surface of this application
 
 If there any readers out there who use TextMate primarily for technical writing and not development, I'd love to hear your feedback, including suggestions for additional bundles or plug-ins that you find helpful.
 
-[1]: {% post_url 2008-07-14-textmate %}
+[1]: {{< relref "2008-07-14-textmate.md" >}}

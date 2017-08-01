@@ -40,5 +40,5 @@ Oh, and did I mention that she's planning activities for VMworld EMEA, too? That
 
 Visit the [Spousetivities website](http://spousetivities.com) or follow [Spousetivities on Twitter](http://twitter.com/spousetivities) for more details and regular updates.
 
-[1]: {% post_url 2008-08-20-vmworld-2008-spouse-activities-schedule %}
-[2]: {% post_url 2009-06-19-vmworld-2009-spouse-activities %}
+[1]: {{< relref "2008-08-20-vmworld-2008-spouse-activities-schedule.md" >}}
+[2]: {{< relref "2009-06-19-vmworld-2009-spouse-activities.md" >}}

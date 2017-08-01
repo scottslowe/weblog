@@ -28,4 +28,4 @@ I also anticipate that the use of the file system will make integrating tools li
 
 In my opinion, if you're considering an "anything bucket" for your Mac to help keep your information organized, EagleFiler should definitely be on your list of applications to consider.
 
-[1]: {% post_url 2010-05-02-my-current-getting-things-done-setup %}
+[1]: {{< relref "2010-05-02-my-current-getting-things-done-setup.md" >}}

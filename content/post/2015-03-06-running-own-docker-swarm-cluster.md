@@ -197,4 +197,4 @@ You can find copies of all the scripts, configuration files, and a `Vagrantfile`
 [link-6]: https://coreos.com
 [link-7]: https://github.com/gliderlabs/registrator
 
-[xref-1]: {% post_url 2015-02-06-quick-intro-to-consul %}
+[xref-1]: {{< relref "2015-02-06-quick-intro-to-consul.md" >}}

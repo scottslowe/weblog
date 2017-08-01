@@ -16,4 +16,4 @@ VKernel has released version 2 of SearchMyVM, a search-based management tool tha
 
 More information on SearchMyVM is available from VKernel's web site.
 
-[1]: {% post_url 2008-09-03-searchmyvm %}
+[1]: {{< relref "2008-09-03-searchmyvm.md" >}}

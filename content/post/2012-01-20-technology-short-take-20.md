@@ -101,10 +101,10 @@ Here are a few other virtualization-related links that I also thought you might 
 
 That's it for this time around. If you have any comments or thoughts on anything shared here, feel free to speak up in the comments.
 
-[1]: {% post_url 2011-12-02-examining-vxlan %}
-[2]: {% post_url 2011-12-07-revisiting-vxlan-and-layer-3-connectivity %}
-[3]: {% post_url 2011-12-22-otv-and-vxlan-layer-3-connectivity-compared %}
-[4]: {% post_url 2011-12-22-otv-and-vxlan-layer-3-connectivity-compared %}
-[5]: {% post_url 2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli %}
-[6]: {% post_url 2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli %}
-[7]: {% post_url 2010-12-08-using-device-aliases-on-a-cisco-mds %}
+[1]: {{< relref "2011-12-02-examining-vxlan.md" >}}
+[2]: {{< relref "2011-12-07-revisiting-vxlan-and-layer-3-connectivity.md" >}}
+[3]: {{< relref "2011-12-22-otv-and-vxlan-layer-3-connectivity-compared.md" >}}
+[4]: {{< relref "2011-12-22-otv-and-vxlan-layer-3-connectivity-compared.md" >}}
+[5]: {{< relref "2009-08-24-new-users-guide-to-configuring-cisco-mds-zones-via-cli.md" >}}
+[6]: {{< relref "2009-10-20-new-users-guide-to-managing-cisco-mds-zones-via-cli.md" >}}
+[7]: {{< relref "2010-12-08-using-device-aliases-on-a-cisco-mds.md" >}}

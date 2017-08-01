@@ -31,4 +31,4 @@ Keep up the great work, Congress team!
 [link-2]: https://wiki.openstack.org/wiki/Congress
 [link-3]: https://github.com/stackforge/congress
 [link-4]: http://ruleyourcloud.com/
-[xref-1]: {% post_url 2014-04-22-kicking-the-policy-discussion-into-high-gear %}
+[xref-1]: {{< relref "2014-04-22-kicking-the-policy-discussion-into-high-gear.md" >}}

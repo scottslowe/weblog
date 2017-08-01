@@ -80,5 +80,5 @@ With these changes in place, I was able to successfully VMotion several differen
 
 As always, please feel free to add any thoughts or corrections in the comments below.
 
-[1]: {% post_url 2006-09-25-sneaking-around-vmotion-limitations %}
-[2]: {% post_url 2006-11-23-vmotion-compatibility %}
+[1]: {{< relref "2006-09-25-sneaking-around-vmotion-limitations.md" >}}
+[2]: {{< relref "2006-11-23-vmotion-compatibility.md" >}}

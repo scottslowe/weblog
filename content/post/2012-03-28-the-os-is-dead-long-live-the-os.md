@@ -36,4 +36,4 @@ The OS is dead, long live the OS!
 
 &lt;aside&gt;If this is the case---and I believe that it is---what does this portend for massive OS upgrades such as Windows 8 (and Server 2012)?&lt;/aside&gt;
 
-[1]: {% post_url 2006-12-05-the-future-of-the-os %}
+[1]: {{< relref "2006-12-05-the-future-of-the-os.md" >}}

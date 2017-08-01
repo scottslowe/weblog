@@ -25,5 +25,5 @@ Cool! I hope the article is useful to others.
 
 As a quick follow-up to that article, you may recall that I ran into a [strange issue with OpenVPN and mt-daapd][2] prior to the home network rebuild. I just finished installing OpenVPN last night and, anticipating the problem, did some digging to see how I'd fix the problem this time around. Turns out there's nothing to worry about; Avahi skips point-to-point interfaces by default, and OpenVPN tags its interfaces as point-to-point. So, everything works as expected.
 
-[1]: {% post_url 2009-01-02-ubuntu-and-mac-os-x-integration %}
-[2]: {% post_url 2008-12-26-openvpn-and-mt-daapd %}
+[1]: {{< relref "2009-01-02-ubuntu-and-mac-os-x-integration.md" >}}
+[2]: {{< relref "2008-12-26-openvpn-and-mt-daapd.md" >}}

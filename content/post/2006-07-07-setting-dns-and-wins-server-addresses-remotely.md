@@ -47,4 +47,4 @@ There are some important things to note about this command:
 
 With those limitations in mind, I hope that someone finds this information helpful. I don't think I can describe how many times I've had to go back and reconfigure servers with new DNS IP addresses or new WINS IP addresses, and when the number of servers gets up there that process gets real tedious real fast.
 
-[1]: {% post_url 2006-07-06-remotely-setting-the-dns-suffix-search-order %}
+[1]: {{< relref "2006-07-06-remotely-setting-the-dns-suffix-search-order.md" >}}

@@ -42,6 +42,6 @@ By the way, these tests were performed on a stock installation of CentOS 5, with
 
 In the end, I've given up on trying to make Samba work in the AD integration process and will instead fallback to the use of `ktpass.exe` to create the keytab file. If you have any useful information to share, please let me know or post it in the comments. Thanks!
 
-[1]: {% post_url 2007-09-05-centos-5-on-esx-server %}
-[2]: {% post_url 2007-01-15-linux-ad-integration-version-4 %}
-[3]: {% post_url 2007-04-25-solaris-10-ad-integration-version-3 %}
+[1]: {{< relref "2007-09-05-centos-5-on-esx-server.md" >}}
+[2]: {{< relref "2007-01-15-linux-ad-integration-version-4.md" >}}
+[3]: {{< relref "2007-04-25-solaris-10-ad-integration-version-3.md" >}}

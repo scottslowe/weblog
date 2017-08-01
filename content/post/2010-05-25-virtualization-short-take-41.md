@@ -54,4 +54,4 @@ It has been a busy week since I last posted, and the blogging/micro-blogging wor
 
 I guess that will wrap things up for this issue of Virtualization Short Takes. I hope you've found something useful!
 
-[1]: {% post_url 2010-05-18-virtualization-short-take-40 %}
+[1]: {{< relref "2010-05-18-virtualization-short-take-40.md" >}}

@@ -97,4 +97,4 @@ Welcome to Technology Short Take #29! This is another installation in my irregul
 
 And that's it for this time around! Feel free to share your thoughts, suggestions, clarifications, or corrections in the comments below. I encourage your feedback, and thanks for reading.
 
-[1]: {% post_url 2013-01-25-new-year-new-challenges-new-opportunities %}
+[1]: {{< relref "2013-01-25-new-year-new-challenges-new-opportunities.md" >}}

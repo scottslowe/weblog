@@ -42,4 +42,4 @@ Johnson takes back over now to announce that iWARP support will be built into th
 
 At this point the session wraps up.
 
-[1]: {% post_url 2013-09-11-idf-2013-virtualizing-the-network-to-enable-sdi %}
+[1]: {{< relref "2013-09-11-idf-2013-virtualizing-the-network-to-enable-sdi.md" >}}

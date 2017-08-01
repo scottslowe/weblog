@@ -55,7 +55,7 @@ As I mentioned earlier, I have also been trying to make this work with the SSH s
 
 **UPDATE:** The problems with Kerberos SSH logins to Solaris was a client-side issue; read more about that [here][4].
 
-[1]: {% post_url 2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited %}
-[2]: {% post_url 2006-08-15-solaris-10-and-active-directory-integration %}
-[3]: {% post_url 2006-08-21-more-on-kerberos-authentication-against-active-directory %}
-[4]: {% post_url 2006-08-29-follow-ups-on-solaris-native-kerberos-authentication %}
+[1]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
+[2]: {{< relref "2006-08-15-solaris-10-and-active-directory-integration.md" >}}
+[3]: {{< relref "2006-08-21-more-on-kerberos-authentication-against-active-directory.md" >}}
+[4]: {{< relref "2006-08-29-follow-ups-on-solaris-native-kerberos-authentication.md" >}}

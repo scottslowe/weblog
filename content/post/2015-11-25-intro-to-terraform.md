@@ -228,4 +228,4 @@ There's more to Terraform than what I've covered here, but this should at least 
 [link-2]: http://www.openstack.org
 [link-3]: https://terraform.io/docs/
 [link-4]: https://github.com/lowescott/learning-tools
-[xref-1]: {% post_url 2015-01-14-non-programmer-git-intro %}
+[xref-1]: {{< relref "2015-01-14-non-programmer-git-intro.md" >}}

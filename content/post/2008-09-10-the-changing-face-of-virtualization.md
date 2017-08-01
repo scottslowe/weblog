@@ -33,4 +33,4 @@ Does the blurring of boundaries create problems? Certainly. So does connecting y
 
 On the consumer side, virtualization won't succeed until it becomes transparent. Just like in the recent film _I, Robot_, where the Three Laws of Robotics had to be broken in order to move forward, in the evolution of consumer/client/desktop virtualization the Three Laws of Virtualization are going to need to be broken before we can move forward.
 
-[1]: {% post_url 2006-12-26-application-agnosticism %}
+[1]: {{< relref "2006-12-26-application-agnosticism.md" >}}

@@ -35,4 +35,4 @@ The real question here is this: what will VMware do? VMware continues to pour R&
 
 **UPDATE 2:** As [shared by David Marshall](http://vmblog.com/archive/2009/02/23/vmlogix-adds-application-lifecycle-management-to-citrix-virtualization-solutions.aspx), it turns out that the automated lab management functionality of Citrix Essentials is being OEM'ed from VMLogix.
 
-[1]: {% post_url 2009-02-19-citrix-open-sources-their-vhd-implementation %}
+[1]: {{< relref "2009-02-19-citrix-open-sources-their-vhd-implementation.md" >}}

@@ -86,4 +86,4 @@ As you can see in [the GitHub issue for this problem][link-3], it's likely that 
 [link-1]: http://terraform.io
 [link-2]: http://www.openstack.org
 [link-3]: https://github.com/hashicorp/terraform/issues/4319
-[xref-1]: {% post_url 2015-11-25-intro-to-terraform %}
+[xref-1]: {{< relref "2015-11-25-intro-to-terraform.md" >}}
