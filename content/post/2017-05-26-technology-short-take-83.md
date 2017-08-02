@@ -72,7 +72,7 @@ That's all this time around---I hope you found something useful here.
 
 
 [link-1]: http://endoflineblog.com/gitflow-considered-harmful
-[link-2]: endoflineblog.com/oneflow-a-git-branching-model-and-workflow
+[link-2]: http://endoflineblog.com/oneflow-a-git-branching-model-and-workflow
 [link-3]: https://github.com/joemiller/git-flux
 [link-4]: http://samplefive.com/2017/05/why-the-heck-would-you-use-nsx/
 [link-5]: https://blog.mccrory.me/2017/05/22/the-future-of-the-network/

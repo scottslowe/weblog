@@ -70,7 +70,7 @@ Welcome to Technology Short Take #44, the latest in my irregularly-published ser
 
 * Good to see that Ivan Pepelnjak thinks [infrastructure as code makes sense](http://blog.ipspace.net/2014/06/infrastructure-as-code-actually-makes.html). I guess that means the time I've spent with Puppet (you can browse Puppet-related posts [here][2]) wasn't a waste.
 
-* I don't know if I've mentioned this before (sorry if that's the case), but I'm liking this "NIX4NetEng" series going on over at Nick Buraglio's site ([part 1](e.net/2014/04/nix4neteng-1-managing-dotfiles-pwn-the-unspoken-pain-of-unix-administration/), [part 2](http://www.forwardingplane.net/2014/06/nix4neteng-2-ipv46-address-investigation-tools-whois-dig/), and [part 3](http://www.forwardingplane.net/2014/07/nix4neteng-3-ip-addressing-and-subnet-tools/)).
+* I don't know if I've mentioned this before (sorry if that's the case), but I'm liking this "NIX4NetEng" series going on over at Nick Buraglio's site ([part 1](https://www.forwardingplane.net/2014/04/nix4neteng-1-managing-dotfiles-pwn-the-unspoken-pain-of-unix-administration/), [part 2](http://www.forwardingplane.net/2014/06/nix4neteng-2-ipv46-address-investigation-tools-whois-dig/), and [part 3](http://www.forwardingplane.net/2014/07/nix4neteng-3-ip-addressing-and-subnet-tools/)).
 
 * Mike Foley has a blog post on how to go from [zero to Windows domain controller in only 4 reboots](http://www.yelof.com/2014/08/04/zero-to-windows-domain-controller-in-4-reboots/). Handy.
 
