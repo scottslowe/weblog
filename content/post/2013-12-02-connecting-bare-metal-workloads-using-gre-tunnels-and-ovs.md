@@ -43,7 +43,7 @@ Once you have the transport interface configured and operational, you can move o
 
 ## Configuring OVS
 
-If you've been following along at home with all of my OVS-related posts (you can browse all posts using [the OVS tag]({{ site.url }}/tags/#OVS), you can probably guess what this will look like (hint: it will look a little bit like the configuration I described in my post on running [host management through OVS][4]). Nevertheless, I'll walk through the configuration for the benefit of those who are new to OVS.
+If you've been following along at home with all of my OVS-related posts (you can browse all posts using [the OVS tag](/tags/ovs/), you can probably guess what this will look like (hint: it will look a little bit like the configuration I described in my post on running [host management through OVS][4]). Nevertheless, I'll walk through the configuration for the benefit of those who are new to OVS.
 
 First, you'll need to create an OVS bridge that has no physical interfaces---the so-called "isolated bridge" because it is isolated from the physical network. You can call this bridge whatever you want. I'll use the name `br-int` (the "integration bridge") because it's commonly used in other environments like OpenStack and NVP/NSX.
 

@@ -18,7 +18,7 @@ wordpress_id: 3369
 
 In this post I'm going to expand a little bit on using [libvirt](http://libvirt.org/) to connect Linux containers (created using [LXC](http://linuxcontainers.org/)) to [Open vSwitch (OVS)](http://openvswitch.org/). I made brief mention of this in my post on [using LXC with libvirt][1], but did not provide any details. This post aims to provide those details.
 
-I'm assuming that you're already familiar with LXC, OVS, and libvirt. If you aren't familiar with these projects, I suggest you have a look back at other articles I've written about them in the past. One of the easiest ways to do that is to browse articles [tagged LXC]({{ site.url }}/tags/#LXC), [tagged OVS]({{ site.url }}/tags/#OVS), and/or [tagged Libvirt]({{ site.url }}/tags/#Libvirt). Further, I'm using Ubuntu 12.04 LTS in my environment, so if you're using another Linux distribution please note that some commands and/or package names might be different.
+I'm assuming that you're already familiar with LXC, OVS, and libvirt. If you aren't familiar with these projects, I suggest you have a look back at other articles I've written about them in the past. One of the easiest ways to do that is to browse articles [tagged LXC](/tags/lxc/), [tagged OVS](/tags/ovs/), and/or [tagged Libvirt](/tags/libvirt/). Further, I'm using Ubuntu 12.04 LTS in my environment, so if you're using another Linux distribution please note that some commands and/or package names might be different.
 
 The basic process for connecting a Linux container to OVS using libvirt looks something like this:
 

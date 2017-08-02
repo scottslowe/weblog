@@ -14,7 +14,7 @@ wordpress_id: 3024
 
 Today I had the opportunity to speak at the Midwest Regional/Kansas City VMUG User Conference in Overland Park, KS. Below is the presentation I delivered, [as hosted by SpeakerDeck](https://speakerdeck.com/slowe/keeping-up-with-the-joneses).
 
-If you'd like a PDF version of the deck for direct download, it is available [here]({{ site.url }}/public/dl/2012-12-11-kcvmug-slides.pdf).
+If you'd like a PDF version of the deck for direct download, it is available [here](/public/dl/2012-12-11-kcvmug-slides.pdf).
 
 As always, courteous comments are both welcomed and encouraged! Feel free to speak up below.
 

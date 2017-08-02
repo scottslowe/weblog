@@ -30,7 +30,7 @@ But we felt there was something missing in all these books. What was missing was
 
 ...and many more similar questions. This is how _VMware vSphere Design_ was born...
 
-![VMware vSphere Design]({{ site.url }}/public/img/vsphere-design.png)
+![VMware vSphere Design](/public/img/vsphere-design.png)
 
 The three of us collaborated on the book, to not only explain how to configure each element of your infrastructure, but to make you think about all the options available, and how each choice can impact the overall design. It should help you find the right solution for your environment---because no "one size fits all."
 

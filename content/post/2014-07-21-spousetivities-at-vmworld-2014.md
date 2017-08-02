@@ -49,4 +49,4 @@ If you appreciate the fact that your loved ones will have someone to watch out f
 
 Interested in signing up? Registration for Spousetivities is available [here](http://vmworld2014-spousetivities.eventbrite.com). Interested in being a sponsor? Drop me an e-mail (see [my About page][about]) and I'll get you connected with more information.
 
-[about]: {{ site.url }}/about/
+[about]: /about/

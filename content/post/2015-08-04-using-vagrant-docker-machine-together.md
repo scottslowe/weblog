@@ -56,4 +56,4 @@ I hope someone else finds this useful.
 [link-2]: https://www.docker.com/
 [link-3]: https://docs.docker.com/machine/
 [link-4]: http://www.vmware.com/products/fusion/
-[xref-1]: {{ site.url }}/tags/#Vagrant
+[xref-1]: /tags/vagrant/

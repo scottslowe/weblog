@@ -18,4 +18,4 @@ While it should be fairly obvious from the discussions about [spouse activities 
 To keep track of all VMworld 2008-related content, you can use the ["VMworld2008" content tag][2] to view all the pertinent articles. Hopefully, that will make finding the content a bit easier.
 
 [1]: {{< relref "2008-08-03-vmworld-spouse-activities.md" >}}
-[2]: {{ site.url }}/tags/#VMworld2008
+[2]: /tags/vmworld2008/

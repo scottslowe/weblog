@@ -34,7 +34,7 @@ After working a bit with network namespaces---and knowing that OpenStack Neutron
 
 To test my ideas, I came up with the following design:
 
-![Testing topology]({{ site.url }}/public/img/ns-vlan-ovs-gre.png)
+![Testing topology](/public/img/ns-vlan-ovs-gre.png)
 
 As you can see in the diagram, my test environment has two KVM hosts. Each KVM host has a network namespace and a running guest domain. Both the network namespace and the guest domain are connected to an OVS bridge; the network namespace via a veth pair and the guest domain via a vnet port. A GRE tunnel between the OVS bridges connects the two hosts.
 
@@ -96,7 +96,7 @@ So I now had the environment I'd envisioned for my testing. VLAN 10 had a guest 
 
 Now came the critical test---would the guest domain be able to ping the veth interface? This screen shot shows the results of my testing; this is the guest domain on KVM Host 1 communicating with the veth1 interface in the separate network namespace on KVM Host 2:
 
-[![Ping results]({{ site.url }}/public/img/dom2ns-ping-test-small.png)]({{ site.url }}/public/img/dom2ns-ping-test-fullsize.png)
+[![Ping results](/public/img/dom2ns-ping-test-small.png)](/public/img/dom2ns-ping-test-fullsize.png)
 
 Success! Although not shown here, I also tested all other combinations as well, and they worked. (Note you'd have to use `ip netns exec ping ` to ping from the veth1 interface in the network namespace.) I now had a configuration where I could integrate multiple network namespaces with GRE tunnels and OVS. Unfortunately---and this is where the whole "technically interesting but practically useless" statement comes from---this isn't really a usable configuration:
 

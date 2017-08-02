@@ -42,7 +42,7 @@ Thanks to Aaron for providing a good overview of Hyper-V. For more information, 
 
 [VIR350: System Center VMM Advanced Integration][8]
 
-For even more resources, readers can also use [the HyperV tag]({{ site.url }}/tags/#HyperV) to browse the site for all articles tagged for Hyper-V.
+For even more resources, readers can also use [the HyperV tag](/tags/hyperv) to browse the site for all articles tagged for Hyper-V.
 
 Oh, and if you don't have Aaron's RSS feed in your RSS reader, you're missing out. He's producing some really great stuff that you need to be reading. Go subscribe now!
 

@@ -60,4 +60,4 @@ It's quite likely I'll have more Xsigo-related tips in the future, so if you're 
 
 [1]: {{< relref "2006-12-04-esx-server-nic-teaming-and-vlan-trunking.md" >}}
 [2]: {{< relref "2007-11-13-esx-server-and-the-native-vlan.md" >}}
-[3]: {{ site.url }}/tags/#VLAN
+[3]: /tags/vlan/

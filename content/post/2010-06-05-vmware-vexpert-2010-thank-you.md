@@ -15,7 +15,7 @@ wordpress_id: 1966
 
 While I was waiting in the airport last night to catch a flight back from Nashua, NH, where I'd been working with VPLEX at the EMC lab facility there, I received confirmation that I had been awarded a VMware vExpert 2010 award. I am humbled and honored by the award. Wow---thank you!
 
-![VMware vExpert logo]({{ site.url }}/public/img/vmw-vexpert.jpg)
+![VMware vExpert logo](/public/img/vmw-vexpert.jpg)
 
 It is a tremendous honor to be included among those that VMware feels have (quoting from [the vExpert landing page](http://www.vmware.com/communities/vexpert/)) "significantly contributed to the community of VMware users over the past year" and who "have gone above and beyond their day jobs to share their technical expertise". I'm not so sure I've met those criteria, but I'm glad that VMware feels I have!
 

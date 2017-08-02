@@ -48,7 +48,7 @@ First, let's start with a few basic things that we know about VXLAN:
 
 With that information in mind, I'd like to use the following diagram to frame the discussion.
 
-![]({{ site.url }}/public/img/vxlan-l3-diagram-small.png)
+![](/public/img/vxlan-l3-diagram-small.png)
 
 In the diagram, there are two ESXi hosts acting as VTEPs. Between them exist two VXLAN segments with two different VNIs (VNI 738 and VNI 864). Because VXLAN works by encapsulating Layer 2 frames into Layer 3 packets and then routing these packets between VTEPs, VXLAN accomplishes one of its primary goals: it extends Layer 2 connectivity across Layer 3 networks.
 

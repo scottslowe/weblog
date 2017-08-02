@@ -22,7 +22,7 @@ I'd not seen any references to patch ports before before running into [this blog
 
 Graphically, you can think of patch ports like this:
 
-![OVS patch ports]({{ site.url }}/public/img/ovs-bridges-patch-ports.png)
+![OVS patch ports](/public/img/ovs-bridges-patch-ports.png)
 
 To create a patch port, it's quite easy. This group of commands will create a patch port:
 

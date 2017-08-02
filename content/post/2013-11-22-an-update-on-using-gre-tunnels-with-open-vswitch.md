@@ -37,7 +37,7 @@ To connect entities (VMs, containers, etc.) on these hosts using GRE tunnels, yo
 
 I won't repeat the specific commands to create those tunnels here, as it is well explained in my earlier article. What this creates is a virtual topology like this:
 
-![GRE tunnel full mesh]({{ site.url }}/public/img/gre-full-mesh.png)
+![GRE tunnel full mesh](/public/img/gre-full-mesh.png)
 
 What you'll find when you try this yourself is that everything works fine when there are just two hosts; this is what I also found when I first wrote the article. When you add the third host, though, you'll find---assuming you created a full mesh of GRE tunnels---is that everything stops working.
 

@@ -36,7 +36,7 @@ I modified the Dell PowerConnect to use this configuration:
 
 With this configuration, the `show interfaces switchport ethernet` command now reported that VLAN 1 was untagged, as shown in the screenshot below.
 
-![Dell VLAN configuration]({{ site.url }}/public/img/dell-vlan-cfg.png)
+![Dell VLAN configuration](/public/img/dell-vlan-cfg.png)
 
 A quick connectivity test showed that traffic was now flowing properly between the Dell PowerConnect 6248 switches and the Cisco Nexus 5010 switches. Problem resolved! Key takeaway: use `switchport mode general` for interoperability with other vendors' switches.
 

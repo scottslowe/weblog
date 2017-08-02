@@ -23,4 +23,4 @@ I _**highly**_ recommend reading and reviewing this resource, and on behalf of e
 **UPDATE (15 July 2015):** The original URL for Florian's article changed at some point, and is now no longer available. However, I have a PDF copy of the original article available [here][link-2] for those that are interested.
 
 [link-1]: https://a248.e.akamai.net/cdn.hpcloudsvc.com/h9f25be84b35c201beea6b13c85876258/prodaw2/Bootstrapping_OVS_Quantum---final_20130319.html
-[link-2]: {{ site.url }}/public/dl/Bootstrapping_OVS_Quantum---final_20130319.pdf
+[link-2]: /public/dl/Bootstrapping_OVS_Quantum---final_20130319.pdf

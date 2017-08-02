@@ -20,4 +20,4 @@ Now that first customer ship (FCS) for UCS has occurred---it happened last week,
 
 If anyone has any specific pieces of information they'd like me to find out about UCS, post a comment here and I'll try to get an answer this week. Please _don't_ ask about pricing or discounts or the like; try to keep the questions technical in nature. Thanks!
 
-[1]: {{ site.url }}/tags/#UCS
+[1]: /tags/ucs/

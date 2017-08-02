@@ -42,7 +42,7 @@ So, how did I do? Here's my assessment of my progress:
 
 In summary: not bad, but could have been better!
 
-What's **not** reflected in this project list is the progress I made with understanding OpenStack, or my deepened level of knowledge of OVS (just browse [articles tagged OVS]({{ site.url }}/tags/#OVS) for an idea of what I've been doing in that area).
+What's **not** reflected in this project list is the progress I made with understanding OpenStack, or my deepened level of knowledge of OVS (just browse [articles tagged OVS](/tags/ovs/) for an idea of what I've been doing in that area).
 
 Over the next week or two, I'll be reflecting on my progress with my 2013 projects and thinking about what projects I should be taking in 2014. In the meantime, I would love to hear any feedback, suggestions, or thoughts on projects I should consider, technologies that should be incorporated, or learning techniques I should leverage. Feel free to speak up in the comments below.
 

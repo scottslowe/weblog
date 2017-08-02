@@ -22,7 +22,7 @@ The tool that I use here is [Hazel](http://www.noodlesoft.com/hazel.php), a nift
 
 The basic rule is the same in both instances, although the trigger is different. Here's a screenshot of the Hazel rule for the first usage, archiving files I no longer need/want:
 
-![Hazel rule screenshot]({{ site.url }}/public/img/2013-06-07-rtf-archive-file-rule-01.png)
+![Hazel rule screenshot](/public/img/2013-06-07-rtf-archive-file-rule-01.png)
 
 Let me break that down real quick:
 
@@ -34,7 +34,7 @@ So, to archive files to my Archive-Pending folder (which I periodically move off
 
 I use the same basic rule, with one small tweak, for the second usage I listed (automatically archiving published blog posts):
 
-![Hazel rule screenshot]({{ site.url }}/public/img/2013-06-07-rtf-archive-file-rule-02.png)
+![Hazel rule screenshot](/public/img/2013-06-07-rtf-archive-file-rule-02.png)
 
 As you can see, the rule actions are the same (move the file to the Archive-Pending folder and clear the color label), but the trigger is different. In this particular case, I use the green color label, which I've named "Finished" in my Finder preferences, to trigger the rule action. This rule is attached to my Blog-Drafts folder.
 

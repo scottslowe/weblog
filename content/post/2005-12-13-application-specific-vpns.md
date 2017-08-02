@@ -92,5 +92,5 @@ For more information, documents on [application specific VPNs with SSH][16] and 
 [13]: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 [14]: http://projects.tynsoe.org/en/stm/
 [15]: http://www.leapingbytes.com/almostvpn
-[16]: {{ site.url }}/downloads/ptd-asvpn-ssh.doc
-[17]: {{ site.url }}/downloads/ptd-asvpn-stunnel.doc
+[16]: /downloads/ptd-asvpn-ssh.doc
+[17]: /downloads/ptd-asvpn-stunnel.doc

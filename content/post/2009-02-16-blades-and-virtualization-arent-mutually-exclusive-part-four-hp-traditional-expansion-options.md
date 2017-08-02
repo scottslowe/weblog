@@ -30,7 +30,7 @@ As we did for the IBM side, let's start with memory. The maximum amount of memor
 
 As with the IBM solution, I will explore four possible transport technologies for virtualization: 10Gb, iSCSI, FC, and NFS. I will also fill any remaining expansion slots with 1Gb Ethernet ports. Just like the IBM Chassis, we have a maximum of eight expansion ports.
 
-![HP Chassis rear view]({{ site.url }}/public/img/hp-chassis-rear.jpg)
+![HP Chassis rear view](/public/img/hp-chassis-rear.jpg)
 
 HP expansion is a little more straightforward than IBM. Bays 1 & 2 connect to the blade on-board NICs and must be populated with an Ethernet compatible switch. An HP BL460c blade has two expansion slots, labeled Mezzanine 1 & 2. Bays 3 & 4 on the chassis connect to the adapter in Mezzanine Slot 1 on the BL460c Blade. Bays 5-8 connect to Mezzanine bay 2 on the blade. If a dual port card is placed in Mezzanine 2, only Bays 5 & 6 will be active. A four port card is required (Ethernet is the only 4 port card currently) to access all four switch bays.
 

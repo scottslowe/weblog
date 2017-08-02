@@ -173,7 +173,7 @@ If you are going to use JSON (as I have here), then I'd recommend bookmarking a 
 
 Once you have your Heat template defined, you can then use this template to create a stack, either via the `heat` CLI client or via the OpenStack Dashboard. I'll attach a screenshot from a stack that I deployed via the Dashboard so that you can see what it looks like (click the image for a larger version):
 
-[![A deployed Heat stack in OpenStack Dashboard]({{ site.url }}/public/img/heat-screenshot-small.png)]({{ site.url }}/public/img/heat-screenshot.png)
+[![A deployed Heat stack in OpenStack Dashboard](/public/img/heat-screenshot-small.png)](/public/img/heat-screenshot.png)
 
 Kinda nifty, don't you think? Anyway, I hope this brief introduction to OpenStack Heat has proven useful. I do plan on covering some additional topics with OpenStack Heat in the near future, so stay tuned. In the meantime, if you have any questions, corrections, or clarifications, I invite you to add them to the comments below.
 

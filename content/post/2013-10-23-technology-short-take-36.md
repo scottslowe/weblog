@@ -83,4 +83,4 @@ Nothing this time around, but I'll keep my eyes posted for content to share with
 
 That's it for this time around, but feel free to continue to conversation in the comments below. If you have any additional information to share regarding any of the topics I've mentioned, please take the time to add that information in the comments. Courteous comments are always welcome!
 
-[1]: {{ site.url }}/tags/#IDF2013
+[1]: /tags/idf2013/

@@ -36,4 +36,4 @@ The second part of the session delved into some NetApp-specific information:
 
 For more information, readers can refer to [TR-3701](http://www.netapp.com/us/library/technical-reports/tr-3701.html) and [TR-3702](http://www.netapp.com/us/library/technical-reports/tr-3702.html). Note that updated versions of TR-3702 are expected to be released in the coming months to address additional product integrations.
 
-[1]: {{ site.url }}/tags/#TechEd2008
+[1]: /tags/teched2008/

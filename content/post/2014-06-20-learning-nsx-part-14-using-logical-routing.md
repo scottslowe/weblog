@@ -26,7 +26,7 @@ If you're new to this series, you can find links to all the articles on [my Lear
 
 One of the features of VMware NSX that can be useful, depending on customer requirements, is the ability to create complex network topologies. For example, creating a multi-tier network topology like the one shown below is easily accomplished via VMware NSX:
 
-![Sample network topology]({{ site.url }}/public/img/logical-network-topology.png)
+![Sample network topology](/public/img/logical-network-topology.png)
 
 Note that this topology has two tenant-specific routing entities---these are _logical routers_. A logical router is an abstraction created and maintained by VMware NSX on behalf of your cloud management platform (like OpenStack, which I'll assume you're using here). These logical entities perform the routing process just like a physical router would (forwarding traffic based on a routing table, changing the source and destination MAC address, maintaining an ARP cache of MAC addresses, decrementing the TTL, etc.). Of course, they are not _exactly_ the same as physical routers; you can't, for example, connect two logical routers directly to each other.
 
@@ -40,7 +40,7 @@ The components are pretty straightforward. In addition to the logical router abs
 
 You can see all of these components in NSX Manager. Once you're logged into NSX Manager, select Network Components > Logical Layer > Logical Routers, then click on a specific logical router from the list. This will display the screen shown below (click the image for a larger version):
 
-[![Logical router detail in NSX Manager]({{ site.url }}/public/img/part-14-lr-detail-small.png)]({{ site.url }}/public/img/part-14-lr-detail.png)
+[![Logical router detail in NSX Manager](/public/img/part-14-lr-detail-small.png)](/public/img/part-14-lr-detail.png)
 
 A few things to note here:
 
@@ -58,7 +58,7 @@ All of these components and settings are accessible via the NSX API, and since N
 
 One key component of NSX's logical routing functionality that you _can't_ see in NSX Manager is how the routing is actually implemented in the data plane. As with most features in NSX, the actual data plane implementation is handled via Open vSwitch (OVS) and a set of flow rules pushed down by the NSX controllers. These flow rules control the flow of traffic within and between logical networks (logical switches in NSX). You can see some of the flow rules in OVS using the `ovs-dpctl dump-flows` command, which will produce output something like what's shown in this screenshot (note that the addresses are highlighted because I used `grep` to show only the flows matching a certain IP address):
 
-[![List of flows in OVS]({{ site.url }}/public/img/part-14-ovs-flow-list-small.png)]({{ site.url }}/public/img/part-14-ovs-flow-list.png)
+[![List of flows in OVS](/public/img/part-14-ovs-flow-list-small.png)](/public/img/part-14-ovs-flow-list.png)
 
 _(Click the image above for a larger version.)_
 
@@ -119,7 +119,7 @@ OpenStack Heat also offers resource types for setting the router's external gate
 
 That wraps up this post on logical routing with VMware NSX. As always, I welcome your courteous feedback, so feel free to speak up in the comments below. In the next post, I'll spend a bit of time discussing logical routers, gateway servies, and gateway appliances. See you next time!
 
-[all]: {{ site.url }}/learning-nvp-nsx/
+[all]: /learning-nvp-nsx/
 [p9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
 [p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
 [p10]: {{< relref "2014-02-27-learning-nsx-part-10-adding-a-service-node.md" >}}

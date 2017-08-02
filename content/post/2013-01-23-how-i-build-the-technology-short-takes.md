@@ -20,7 +20,7 @@ I've mentioned before that I have three "layers" of tools: a consumption layer, 
 
 This is where I go about actually finding the content that gets pulled into a TST post. There's nothing terribly unique here; I have a collection of RSS feeds which I subscribe and I get content from people I follow on Twitter. I will also visit various Usenet newsgroups and certain IRC channels (only on `irc.freenode.net`) from time to time.
 
-If you're interested in seeing the RSS feeds to which I subscribe, here's [an OPML list of all my subscriptions]({{ site.url }}/public/dl/current-rss-subscriptions.opml).
+If you're interested in seeing the RSS feeds to which I subscribe, here's [an OPML list of all my subscriptions](/public/dl/current-rss-subscriptions.opml).
 
 The majority of the content I consume is web-based, so when I find an article that I want to use in a TST post, I'll save that as a Safari web archive. I wish there was a more platform-independent method, but as yet I haven't found a good solution. Once I've saved a page for future use, then we move into the organization layer.
 

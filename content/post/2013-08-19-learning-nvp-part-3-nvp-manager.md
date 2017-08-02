@@ -99,7 +99,7 @@ This should complete the process of adding the controller cluster to NVP Manager
 
 Now that NVP Manager is connected to the controller cluster, you can click Dashboard in the header across the top of the NVP Manager web GUI and get a screen that looks something like this:
 
-![NVP Manager dashboard]({{ site.url }}/public/img/nvp-mgr-dashboard.png)
+![NVP Manager dashboard](/public/img/nvp-mgr-dashboard.png)
 
 At this point, you now have a 3-node cluster of NVP controllers and an instance of NVP Manager connected to that cluster. The next step, which I'll tackle in the next part of this series, is adding some hypervisors.
 

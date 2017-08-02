@@ -111,7 +111,7 @@ If you need to change the mapping between a broadcast domain on the physical net
 
 I hope you've found this post to be useful. The use of L2 gateways offers administrators and operators a new option for network connectivity for tenants in addition to L3 routing. I'll explore additional options for network connectivity in future posts, so stay tuned. In the meantime, feel free to share any comments, thoughts, or corrections in the comments below.
 
-[all]: {{ site.url }}/learning-nvp-nsx/
+[all]: /learning-nvp-nsx/
 [p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
 [p11]: {{< relref "2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics.md" >}}
 [p12]: {{< relref "2014-04-25-learning-nsx-part-12-integrating-vmware-nsx-with-openstack.md" >}}

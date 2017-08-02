@@ -19,7 +19,7 @@ I've been doing some experimenting with virtual Ethernet (veth) interfaces in Ub
 I'll start with a pretty vanilla installation of Ubuntu 12.04 LTS and Open vSwitch (OVS). When I run `ip link list`, I get output that looks something like this (click the image for a larger version):
 
 [
-![Before adding the veth pair]({{ site.url }}/public/img/pre-veth-pair-link-list-small.png)]({{ site.url }}/public/img/pre-veth-pair-link-list.png)
+![Before adding the veth pair](/public/img/pre-veth-pair-link-list-small.png)](/public/img/pre-veth-pair-link-list.png)
 
 OK, nothing unusual or unexpected there.
 
@@ -30,7 +30,7 @@ Next, I'll add a pair of veth interfaces:
 Then the output of `ip link list` looks like this (I've circled some of the output to draw your attention; again, you can click for a larger version):
 
 [
-![After adding the veth pair]({{ site.url }}/public/img/post-veth-pair-link-list-small.png)]({{ site.url }}/public/img/post-veth-pair-link-list.png)
+![After adding the veth pair](/public/img/post-veth-pair-link-list-small.png)](/public/img/post-veth-pair-link-list.png)
 
 See? The name of the veth peer interface gets garbled up and somehow corrupted. Because of this, nothing works---I can't use the veth pair to connect network namespaces, or to connect a Linux bridge to OVS, or anything else. Rebooting the system does not fix the problem; only a rebuild seems to get rid of it.
 

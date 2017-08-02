@@ -58,7 +58,7 @@ Once you have this address, then it's just a simple matter of adding that route 
 
 I hope you find this article (and this series) helpful. As always, if you have any questions, corrections, clarifications, or concerns, I invite you to speak up in the comments below. All courteous comments are welcome!
 
-[all]: {{ site.url }}/learning-nvp-nsx/
+[all]: /learning-nvp-nsx/
 [p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
 [p9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
 [p14]: {{< relref "2014-06-20-learning-nsx-part-14-using-logical-routing.md" >}}

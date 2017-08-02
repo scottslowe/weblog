@@ -125,7 +125,7 @@ Now that you've verified the hypervisor configuration and created a transport zo
 
 This should return you to the NVP Manager Dashboard, where you'll see the Hypervisors line in the Summary of Transport Components go from 0 to 1 (both in the Registered and the Active columns). You can refresh the display of that section only by clicking the little circular arrow button. You should also see an entry appear in the Hypervisor Software Version Summary section. This screen shot shows you what the dashboard would look like after adding 3 hypervisors:
 
-[![NVP Manager dashboard]({{ site.url }}/public/img/nvp-dash-with-hv-small.png)]({{ site.url }}/public/img/nvp-dash-with-hv-large.png)
+[![NVP Manager dashboard](/public/img/nvp-dash-with-hv-small.png)](/public/img/nvp-dash-with-hv-large.png)
 
 (Side note: This dashboard shows a gateway and service node also added, though I haven't discussed those yet. It also shows a logical switch and logical switch ports, though I haven't discussed those either. Be patient---they're coming. I can only write so fast.)
 

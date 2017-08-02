@@ -47,7 +47,7 @@ NVP uses the idea of transport zones to provide connectivity models based on the
 
 For example, consider this graphic:
 
-![Transport zone illustration]({{ site.url }}/public/img/nvp-transport-zones.png)
+![Transport zone illustration](/public/img/nvp-transport-zones.png)
 
 The transport zones (TZ-01 and TZ-02) help NVP understand which interfaces on the hypervisors can communicate with which other interfaces on other hypervisors for the purposes of establishing overlay tunnels. These separate transport zones could be different trust zones, or just reflect the realities of connectivity via the underlying physical network.
 

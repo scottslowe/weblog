@@ -17,7 +17,7 @@ There's no question that the networking industry is undergoing significant chang
 
 To help address this change, I'm very excited to announce a new book project targeting "next-generation network engineering skills." I've joined forces with two folks that I really admire---[Jason Edelman][link-2] and [Matt Oswalt][link-3]---to write a new book focusing on the skills we believe are essential for the next-generation network engineer:
 
-![New book cover]({{ site.url }}/public/img/npab-cover-early-access.jpg)
+![New book cover](/public/img/npab-cover-early-access.jpg)
 
 The Early Access edition of the book is [available now][link-1]. If you're familiar with [O'Reilly's Early Access program][link-4], you know that this is an incomplete version right now, but you'll get regular updates and the final version of the book once it is complete. Plus, you get to provide feedback to us (the authors) while we write, which in turn helps improve the book. (And we greatly desire your feedback!)
 

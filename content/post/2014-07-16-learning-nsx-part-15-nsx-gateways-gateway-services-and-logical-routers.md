@@ -33,7 +33,7 @@ I have a few more terms I'll introduce in this post, but that should be enough f
 
 This diagram contains the bulk of what I'd like to discuss in this post---the relationship between gateway services, gateway appliances, and logical routers:
 
-![Gateway service, gateway appliance, and logical router relationships]({{ site.url }}/public/img/part-15-gws-gwa-lr.png)
+![Gateway service, gateway appliance, and logical router relationships](/public/img/part-15-gws-gwa-lr.png)
 
 As I walk you through the details of this diagram, hopefully I'll clarify the relationships between these components.
 
@@ -55,7 +55,7 @@ So far, everything I've shared with you has been true for centralized logical ro
 
 I hope this information helps in understanding the routing aspects of VMware NSX. Feel free to post any questions, clarifications, or thoughts in the comments below. Any input on other topics you'd like to see in the Learning NSX blog series are welcome as well!
 
-[all]: {{ site.url }}/learning-nvp-nsx/
+[all]: /learning-nvp-nsx/
 [p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
 [p9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
 [p14]: {{< relref "2014-06-20-learning-nsx-part-14-using-logical-routing.md" >}}

@@ -20,7 +20,7 @@ In my previous post on EMC VPLEX, I provided [a review of the VPLEX storage obje
 
 The following diagram illustrates these various storage objects again:
 
-![VPLEX storage objects]({{ site.url }}/public/img/vplex-devices-extents.png)
+![VPLEX storage objects](/public/img/vplex-devices-extents.png)
 
 As you can see from the diagram, VPLEX offers a number of different ways to combine these objects together:
 
@@ -36,7 +36,7 @@ As a side note, a fair amount of the information in this post is derived from a 
 
 So what would a supported configuration that uses both VPLEX and replication look like? This diagram graphically depicts a supported solution that integrates both EMC VPLEX and a data replication solution such as SRDF or RecoverPoint:
 
-![VPLEX replication topology]({{ site.url }}/public/img/vplex-repl-topol.png)
+![VPLEX replication topology](/public/img/vplex-repl-topol.png)
 
 The key to a supported solution that combines VPLEX and replication lies in the phrase "single extent/single device". In order to use both replication as well as VPLEX in the same solution, **you must use a 1:1:1 mapping between storage volumes, extents, and devices.** In other words, you must use a "single extent/single device" approach, where each storage volume has only a single extent (occupying the entire storage volume), and devices are built from that single extent on a single storage volume.
 

@@ -80,7 +80,7 @@ The final step is ensuring that `ipfw` launches automatically every time your Ma
 
 Here's a screenshot of my plist file, named `com.apple.ipfw.plist` (you can use a different name, like your own domain name, in the filename):
 
-![ipfw LaunchDaemon file]({{ site.url }}/public/img/ipfw-launchdaemon-file.png)
+![ipfw LaunchDaemon file](/public/img/ipfw-launchdaemon-file.png)
 
 Don't just copy and paste this file "as is" into your system! You'll need to customize it to fit your system. Specifically, under the ProgramArguments key, the path to and name of the startup shell script should be adjusted to match the shell script you created earlier. In my case, the script is named `ipfwstartup.sh` and is found in `/usr/local/bin`. This startup shell script should, in turn, refer to the `ipfw` configuration file you created.
 

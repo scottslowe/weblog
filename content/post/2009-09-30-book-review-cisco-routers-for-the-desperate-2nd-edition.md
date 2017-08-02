@@ -23,4 +23,4 @@ These "drawbacks"---and I use that term very loosely---don't outweigh the overal
 
 _Disclosure: No Starch Press provided a copy of this book for review at no cost. The fact that the book was provided at no cost did not influence my review._
 
-[1]: ({{ site.url }}/tags/#Cisco)
+[1]: /tags/cisco/

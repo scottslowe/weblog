@@ -19,4 +19,4 @@ So, over the next few days, look for blog posts about some of the sessions that 
 
 Note that a fair number of these sessions discuss timelines or targeted feature sets for future products. None of the information I post here should be taken as any sort of commitment from NetApp as to when a product will be delivered or what features it will contain. Just like any other company, things still in development may change before they are released. (No, NetApp did not ask me to say that---in fact, they are not reviewing this content at all. I'm just trying to help good sense prevail.)
 
-[1]: {{ site.url }}/tags/#Insight2008
+[1]: /tags/insight2008/

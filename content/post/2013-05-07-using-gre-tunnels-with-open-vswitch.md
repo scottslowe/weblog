@@ -37,7 +37,7 @@ We'll start with an overview of the topology, then we'll jump into the specific 
 
 The graphic below shows the basic topology of what we have going on here:
 
-![Topology overview]({{ site.url }}/public/img/ovs-gre-tun-overview.png)
+![Topology overview](/public/img/ovs-gre-tun-overview.png)
 
 We have two hypervisors (CentOS 6.3 and KVM, in my case), both running OVS (an older version, version 1.7.1). Each hypervisor has one OVS bridge that has at least one physical interface associated with the bridge (shown as `br0` connected to `eth0` in the diagram). As part of this process, you'll create the other internal interfaces (the `tep` and `gre` interfaces, as well as the second, isolated bridge to which VMs will connect. You'll then create a GRE tunnel between the hypervisors and test VM-to-VM connectivity.
 
@@ -109,7 +109,7 @@ Similarly, here's the output of the `route -n` command on the CentOS host, showi
 
 In my case, VM1 (named `web01`) was given 10.10.10.1; VM2 (named `web02`) was given 10.10.10.2. Once I went through the steps outlined above, I was able to successfully ping VM2 from VM1, as you can see in this screenshot:
 
-![VM-to-VM connectivity over GRE tunnel]({{ site.url }}/public/img/ovs-gre-tun-vm-ping-test.png)
+![VM-to-VM connectivity over GRE tunnel](/public/img/ovs-gre-tun-vm-ping-test.png)
 
 (Although it's not shown here, connectivity from VM2 to VM1 was obviously successful as well.)
 

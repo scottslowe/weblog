@@ -22,7 +22,7 @@ Before continuing, it might be useful to set some context around NVP and NSX. Th
 
 Let's start with a figure. The diagram below graphically illustrates the NVP architecture at a high level:
 
-![High-level NVP architecture diagram]({{ site.url }}/public/img/nvp-architecture.png)
+![High-level NVP architecture diagram](/public/img/nvp-architecture.png)
 
 The key components of the NVP architecture include:
 

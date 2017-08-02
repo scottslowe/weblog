@@ -19,7 +19,7 @@ For readers that didn't already know this, Snapshots on NetApp-hosted CIFS share
 
 Here's a screenshot of the Previous Versions support on an out-of-the-box server running Windows Server 2003 R2:
 
-![NetApp Snapshots as Previous Versions]({{ site.url }}/public/img/netapp-ss-prev-vers.jpg)
+![NetApp Snapshots as Previous Versions](/public/img/netapp-ss-prev-vers.jpg)
 
 As you can see in the screenshot, the Previous Versions tab automatically shows the NetApp Snapshots. No configuration is required; this is after a vanilla installation of Windows Server 2003 R2 and all applicable updates from Windows Update.
 

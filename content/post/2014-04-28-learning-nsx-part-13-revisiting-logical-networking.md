@@ -35,11 +35,11 @@ Now that we have VMware NSX integrated with OpenStack, let's revisit this proces
 
 First, you'd need to create a network in OpenStack. To do this, it's as simple as selecting Networks > Create Network, then providing a name for the new network (you could also use the `neutron net-create` command as well):
 
-[![Creating a logical network in OpenStack]({{ site.url }}/public/img/openstack-create-network-small.png)]({{ site.url }}/public/img/openstack-create-network.png)
+[![Creating a logical network in OpenStack](/public/img/openstack-create-network-small.png)](/public/img/openstack-create-network.png)
 
 To exactly mirror the process I showed you in [part 5][p5]---which did not include DHCP services---you'd need to also go to the Subnet tab and uncheck "Create Subnet" as well as go to the Subnet Detail tab and uncheck "Enable DHCP." Once you unselect those options and click Create, then OpenStack will (through the Neutron plugin for NSX) create a logical switch in NSX. You can pop into NSX Manager to see this:
 
-[![New logical switch in NSX Manager]({{ site.url }}/public/img/nsx-new-logical-switch-small.png)]({{ site.url }}/public/img/nsx-new-logical-switch.png)
+[![New logical switch in NSX Manager](/public/img/nsx-new-logical-switch-small.png)](/public/img/nsx-new-logical-switch.png)
 
 As I pointed out in [part 12][p12], the UUID and `os_tid` tag on this object in NSX will provide the necessary ties back to the corresponding object in OpenStack.
 
@@ -53,7 +53,7 @@ Now that we have OpenStack up and running, though, we can create a logical netwo
 
 If you log into NSX Manager, you'll see that a new logical switch (whose name matches the name you gave the logical network above) has been created, and you'll also note that 1 logical switch port is already in use---even though you haven't launched any instances yet! The easiest way to find out what is attached to that port is via the OpenStack dashboard. Once logged into the dashboard, select Networks, then click on the network you just created, and scroll down to the list of Ports. You'll see there that OpenStack has automatically created a logical switch port for the DHCP services associated with the subnet you created above:
 
-[![Ports on a logical network]({{ site.url }}/public/img/openstack-network-ports-small.png)]({{ site.url }}/public/img/openstack-network-ports.png)
+[![Ports on a logical network](/public/img/openstack-network-ports-small.png)](/public/img/openstack-network-ports.png)
 
 If you're a command-line freak, you could also get this information from the CLI. To find the subnet associated with the logical network you just created:
 
@@ -77,7 +77,7 @@ At this point, you should have a fairly clear understanding of how logical netwo
 
 Thanks for reading, and feel free to post any corrections, clarifications, or questions in the comments below.
 
-[all]: {{ site.url }}/learning-nvp-nsx/
+[all]: /learning-nvp-nsx/
 [p5]: {{< relref "2013-09-06-learning-nvp-part-5-creating-a-logical-network.md" >}}
 [p11]: {{< relref "2014-03-12-learning-nsx-part-11-reviewing-openstack-integration-basics.md" >}}
 [p12]: {{< relref "2014-04-25-learning-nsx-part-12-integrating-vmware-nsx-with-openstack.md" >}}

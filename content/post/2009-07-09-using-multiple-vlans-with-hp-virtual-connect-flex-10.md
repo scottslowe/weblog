@@ -38,11 +38,11 @@ With that in mind, what this means is that you can't map the same VLANs to the f
 
 Perhaps an example would help. Consider the configuration shown in this figure, in which multiple VLANs are mapped to all eight connections in Virtual Connect Manager:
 
-![Incorrect Flex10 VLAN setting]({{ site.url }}/public/img/hp-flex10-vlans-incorrect.png)
+![Incorrect Flex10 VLAN setting](/public/img/hp-flex10-vlans-incorrect.png)
 
 This screenshot shows how the VLANs are mapped for each of those eight network connections:
 
-![Flex10 VLAN mapping]({{ site.url }}/public/img/hp-flex10-vlan-mapping.png)
+![Flex10 VLAN mapping](/public/img/hp-flex10-vlan-mapping.png)
 
 As you can see, I have the same set of five VLANs mapped onto all eight network connections (all eight logical FlexNIC instances). But only the first two show OK---the rest show Critical. Why? Because these logical FlexNICs have the same VLANs mapped to them as were mapped to the first FlexNIC, and therefore Virtual Connect Manager has placed them into a Critical state (they'll be reported as "Down" to an operating system on the blade).
 
@@ -50,7 +50,7 @@ This behavior is the strange behavior I tweeted about a few days ago, where I co
 
 Contrast that first configuration with the configuration shown in this screenshot:
 
-![Correct Flex10 VLAN configuration]({{ site.url }}/public/img/hp-flex10-vlans-correct.png)
+![Correct Flex10 VLAN configuration](/public/img/hp-flex10-vlans-correct.png)
 
 In this case, you'll note that I do not have the same VLANs mapped to more than one FlexNIC on the same LOM. As a result, Virtual Connect Manager does not place any of the FlexNICs into a Critical state, and all eight show OK (and will be reported as Up to an operating system on the blade).
 

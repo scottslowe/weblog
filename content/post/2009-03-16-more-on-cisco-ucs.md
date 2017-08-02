@@ -30,7 +30,7 @@ UCS essentially consists of 4 major components:
 
 This diagram shows an overview of UCS:
 
-![cisco-ucs-components-overview.gif]({{ site.url }}/public/img/cisco-ucs-components-overview.gif)
+![cisco-ucs-components-overview.gif](/public/img/cisco-ucs-components-overview.gif)
 
 With the exception of the UCS Manager software and the Converged Network Adapters (CNAs), everything else is pretty standard stuff:
 

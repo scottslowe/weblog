@@ -34,11 +34,11 @@ When I first started considering what benefits, if any, FabricPath support in vS
 
 Consider this diagram of a "regular" vSphere network topology:
 
-![Non-FP-aware network]({{ site.url }}/public/img/non-fp-aware-network.png)
+![Non-FP-aware network](/public/img/non-fp-aware-network.png)
 
 This is fairly straightforward stuff, found in many data centers today. What would bringing FabricPath into this network, all the way down to the ESXi hosts, give us? Consider this diagram:
 
-![FP-aware network 1]({{ site.url }}/public/img/fp-aware-network-01.png)
+![FP-aware network 1](/public/img/fp-aware-network-01.png)
 
 We've replaced the upstream switches with FabricPath-aware switches and put in our fictional FP-aware Nexus 1000V, but what does it change? From what I can tell, not much changes. Consider these points:
 
@@ -48,7 +48,7 @@ We've replaced the upstream switches with FabricPath-aware switches and put in o
 
 That second point, in my mind, deserves some additional thought. FabricPath enables multiple, active L2 links between switches, but in both of the topologies shown above the traffic has to travel through the upstream switches. In fact, the only way to change the travel patterns would be to add extra host-to-host links, like this:
 
-![FP-aware network 2]({{ site.url }}/public/img/fp-aware-network-02.png)
+![FP-aware network 2](/public/img/fp-aware-network-02.png)
 
 OK, if these extra host-to-host links were present, then the presence of FabricPath at the ESXi host layer might make a difference. VM-to-VM traffic could then just hop across without going through the upstream switches. All is good, right?
 

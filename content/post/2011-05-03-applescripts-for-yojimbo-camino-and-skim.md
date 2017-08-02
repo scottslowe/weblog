@@ -29,4 +29,4 @@ To make both of these scripts easy to use and easy to access, I stored them in `
 
 If you'd like a copy of the scripts to use for yourself or to modify for your own purposes, click [here][1]. Just remember that I am in no way liable for anything that may happen as a result of using any scripts or code that I post on my site, including increased productivity and greater enjoyment of your computing experience.
 
-[1]: {{ site.url }}/public/dl/yojimbo-skim-camino.zip
+[1]: /public/dl/yojimbo-skim-camino.zip

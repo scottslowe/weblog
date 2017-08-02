@@ -33,7 +33,7 @@ With this in mind, then, how does one connect IP-based storage to a Cisco UCS? I
 
 Naturally, the Nexus 5000 fits the bill quite nicely. You can use a pair of Nexus 5000 switches between the UCS 6100XP interconnects and the storage array. Dual-connect the 6100XP interconnects to the Nexus 5000 switches for redundancy and active-active data connections, and dual-connect the target storage array to the Nexus 5000 switches for redundancy and (depending upon the array) active-active data connections. It would look something like this:
 
-![IP storage with Cisco UCS]({{ site.url }}/public/img/ipstorage-with-ucs.jpg)
+![IP storage with Cisco UCS](/public/img/ipstorage-with-ucs.jpg)
 
 From the VMware side of the house, since you're using 10GbE end-to-end, it's very unlikely that you'll need to worry about bandwidth; that eliminates any concerns over multiple VMkernel ports on multiple subnets or using multiple NFS targets so as to be able to use link aggregation. (I'm not entirely sure you could use link aggregation with the 6100XP interconnects anyway. Anyone?) However, since you are talking Cisco UCS you'll have only two 10GbE connections (unless you're using the full width blade, which is unlikely). This means you'll need to pay careful attention to the VMware vSwitch (or dvSwitch, or Nexus 1000V) configuration. In general, the recommendation in this sort of configuration is to place Service Console, VMotion, and IP-based storage traffic on one 10GbE uplink, place virtual machine traffic on the second 10GbE uplink, and use whatever mechanisms are available to preferentially specify which uplink should be used in the course of normal operation. This provides redundancy in the uplinks but some level of separation of traffic.
 

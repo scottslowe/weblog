@@ -37,9 +37,9 @@ That's the physical architecture. From a more logical architecture, you may reca
 
 The configurations I've shown you/discussed so far have assumed the presence of only a single uplink. NSX is not constrained to having only a single uplink, nor is it constrained to having only a single physical network on an uplink. If you need multiple networks on the outside of an NSX gateway appliance, you can either use multiple uplinks, or you can use multiple VLANs on an uplink. In this post I'll show you how to use multiple VLANs on the outside. This diagram provides a graphical representation of what the configuration will look like.
 
-![Multiple VLANs with NSX Gateways]({{ site.url }}/public/img/part-16-nsx-gw-multi-vlan-small.png)
+![Multiple VLANs with NSX Gateways](/public/img/part-16-nsx-gw-multi-vlan-small.png)
 
-(Click [here]({{ site.url }}/public/img/part-16-nsx-gw-multi-vlan.png) for a larger version.)
+(Click [here](/public/img/part-16-nsx-gw-multi-vlan.png) for a larger version.)
 
 Setting up this configuration will involve three steps:
 
@@ -108,7 +108,7 @@ When you're done creating an external network and subnet for each VLAN on the ou
 
 I hope you find this post to be useful. If you have any questions, corrections, or clarifications, please speak up in the comments. All courteous comments are welcome!
 
-[all]: {{ site.url }}/learning-nvp-nsx/
+[all]: /learning-nvp-nsx/
 [p6]: {{< relref "2013-10-28-learning-nvp-part-6-adding-an-nvp-gateway.md" >}}
 [p9]: {{< relref "2014-02-26-learning-nsx-part-9-adding-a-gateway-service.md" >}}
 [p14]: {{< relref "2014-06-20-learning-nsx-part-14-using-logical-routing.md" >}}

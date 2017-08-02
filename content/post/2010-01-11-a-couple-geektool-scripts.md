@@ -33,4 +33,4 @@ I actually wrapped several of these commands together into a shell script that y
 
 Of course, I also have a few other scripts running with GeekTool---one that displays system information, one that produces IP addresses and Airport (wireless LAN) information, etc.---but these two are probably most useful to me so far.
 
-[1]: {{ site.url }}/public/dl/proxyinfo.zip
+[1]: /public/dl/proxyinfo.zip

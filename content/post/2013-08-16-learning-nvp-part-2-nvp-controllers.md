@@ -123,11 +123,11 @@ Once the process of joining the controller cluster is done, you can check the st
 
 The output of both these commands is illustrated below.
 
-![Status and startup nodes commands]({{ site.url }}/public/img/show-control-cluster-output.png)
+![Status and startup nodes commands](/public/img/show-control-cluster-output.png)
 
 If you want to get a feel for the types of communication the NVP controllers will use, you can also use the `show control-cluster connections` command, which produces output that looks something like this:
 
-![Connections summary]({{ site.url }}/public/img/show-control-cluster-output-2.png)
+![Connections summary](/public/img/show-control-cluster-output-2.png)
 
 Once the controller cluster is up and running, you're ready to move on to adding other components of NVP to the environment. In the next part, I'll walk through setting up NVP Manager, which will then allow us to continue with setting up NVP by adding gateways, service nodes, and hypervisors.
 

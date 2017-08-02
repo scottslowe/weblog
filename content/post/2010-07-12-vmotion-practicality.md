@@ -22,7 +22,7 @@ In a recent comment to that article, a reader again mentions networking limitati
 
 First, I'd like to use a diagram to help explain what we're discussing here. In the diagram below, there is a single ESX/ESXi host with a management interface, a vMotion interface, and a couple of network interfaces dedicated to virtual machine (VM) traffic.
 
-![VLAN Behaviors with VMware ESX/ESXi]({{ site.url }}/public/img/vmotion-l2-adjacency.jpg)
+![VLAN Behaviors with VMware ESX/ESXi](/public/img/vmotion-l2-adjacency.jpg)
 
 As you can see from this highly-simplified diagram, there are three basic types of network interfaces that ESX/ESXi uses: management interfaces, VMkernel interfaces, and VM networking interfaces. Each of them is configured separately and, in many configurations, quite differently.
 

@@ -15,7 +15,7 @@ wordpress_id: 2701
 
 In case you hadn't already heard, this past Tuesday, July 24, Train Signal officially released my [Designing VMware Infrastructure video training course](http://www.trainsignal.com/Designing-VMware-Infrastructure.aspx)!
 
-![Designing VMware Infrastructure from Train Signal]({{ site.url }}/public/img/designing-vmware-infrastructure.jpg)
+![Designing VMware Infrastructure from Train Signal](/public/img/designing-vmware-infrastructure.jpg)
 
 If you're interested, you can [view a sample video](http://www.youtube.com/watch?v=ESF6-t3D_iQ&feature=plcp) from the course on YouTube.
 

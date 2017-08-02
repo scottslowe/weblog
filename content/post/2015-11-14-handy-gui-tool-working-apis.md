@@ -19,7 +19,7 @@ Before I start talking about Paw, allow me to first explain _why_ I'm talking ab
 
 In any case, enough about that---let's start talking about Paw. Once you download it (there is a free trial available), you'll get a blank "document" window that looks something like this:
 
-![Blank Paw document window]({{ site.url }}/public/img/blank-paw-window-small.png)
+![Blank Paw document window](/public/img/blank-paw-window-small.png)
 
 _(Click [here][link-2] for a full-size version of the image.)_
 
@@ -39,7 +39,7 @@ To provide some continuity with my other API-related posts, I'll use the OpenSta
 4. Assuming you have the cURL Code Generator installed, change "HTTP" to "cURL", and Paw will show you the cURL command line that corresponds to the request you just built.
 5. Click the little arrow at the end of the URL bar, and---if everything worked correctly---the right-hand section of the window should show "200 OK" at the top and the response body underneath. Here's a screenshot:
 
-![URL request and response]({{ site.url }}/public/img/paw-request-response-small.png)
+![URL request and response](/public/img/paw-request-response-small.png)
 
 _(Click [here][link-3] for a full-size version of the image.)_
 
@@ -53,7 +53,7 @@ Here's where Paw comes in really handy: double-click on the token ID value to se
 4. Add another header, this time "Content-Type: application/json".
 5. Click the little arrow at the end of the URL bar, and (assuming all is correct) the response area will show "200 OK". Here's a screenshot of what it might look like (click [here][link-4] for a full-size version of the image):
 
-![Dynamic response]({{ site.url }}/public/img/paw-dynamic-response-small.png)
+![Dynamic response](/public/img/paw-dynamic-response-small.png)
 
 This should give you a rough idea of what you could do, but I'll carry it out a little bit:
 
@@ -67,8 +67,8 @@ Anyway, I hope this has been helpful in some way. I know that I'll likely find P
 
 
 [link-1]: https://luckymarmot.com/paw
-[link-2]: {{ site.url }}/public/img/blank-paw-window.png
-[link-3]: {{ site.url }}/public/img/paw-request-response.png
-[link-4]: {{ site.url }}/public/img/paw-dynamic-response.png
+[link-2]: /public/img/blank-paw-window.png
+[link-3]: /public/img/paw-request-response.png
+[link-4]: /public/img/paw-dynamic-response.png
 [xref-1]: {{< relref "2014-02-19-using-curl-to-interact-with-a-restful-api.md" >}}
 [xref-2]: {{< relref "2015-11-11-handy-cli-tool-json.md" >}}

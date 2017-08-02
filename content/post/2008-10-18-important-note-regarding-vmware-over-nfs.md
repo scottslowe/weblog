@@ -64,4 +64,4 @@ The instructions you should follow to restore NFS locking are here (these instru
 
 So, again, if you haven't applied ESX350-200808401-BG, please do so as quickly as possible, and then ensure that NFS locking is enabled. If you've previously disabled NFS locking, then follow the steps above to restore NFS locking and protect yourself against this possible split-brain scenario.
 
-[1]: {{ site.url }}/tags/#VMwareHA
+[1]: /tags/vmwareha/

@@ -28,4 +28,4 @@ This is why _Mastering VMware vSphere 5.5_ represents a changing of the guard. T
 
 So, if you're looking for an authoritative reference to the vSphere 5.5 release, I would encourage you to pick up _Mastering VMware vSphere 5.5_. Nick and I, along with our co-conspirators Forbes Guthrie, Josh Atwell, and Matt Liebowitz, have done our best to produce something that is useful and informative. I hope that you agree.
 
-![Mastering VMware vSphere 5.5 cover]({{ site.url }}/public/img/mastering-vsphere-55-cover.jpg)
+![Mastering VMware vSphere 5.5 cover](/public/img/mastering-vsphere-55-cover.jpg)

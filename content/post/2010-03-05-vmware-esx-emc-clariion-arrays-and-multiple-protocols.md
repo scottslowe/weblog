@@ -77,5 +77,5 @@ I can see both sides of the coin. Personally, I tend to side more with the secon
 Courteous and professional comments, clarifications, or corrections are always welcome!
 
 [1]: {{< relref "2009-10-23-cutting-yourself-on-the-double-edged-sword.md" >}}
-[2]: {{ site.url }}/public/img/navireg-esx3.png
-[3]: {{ site.url }}/public/img/navireg-esx4.png
+[2]: /public/img/navireg-esx3.png
+[3]: /public/img/navireg-esx4.png

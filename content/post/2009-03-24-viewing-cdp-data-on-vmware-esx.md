@@ -30,7 +30,7 @@ From the ESX side, you can use this command:
 
 This searches for the string "CDP Summary" in the output of the `esxcfg-info` command. The output from that command will include information about the switch to which the ESX host is connected, the ports to which the NICs are connected, and associated VLANs. The screenshot below shows some of the output from this command.
 
-![CDP-related output of esxcfg-info]({{ site.url }}/public/img/esxcfg-info-cdp.png)
+![CDP-related output of esxcfg-info](/public/img/esxcfg-info-cdp.png)
 
 Thanks go to reader Larry for the information on this command. Other readers, feel free to continue to share information here. It is helpful!
 

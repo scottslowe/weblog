@@ -35,7 +35,7 @@ Another area of concern is the fact that the HS21XM only supports one hard disk.
 
 The expansion cards can get a little tricky depending on the configuration. For virtualization I see four possible options to fill out the blades to meet our needs. They are FC, 10Gb, iSCSI, and NFS. We will fill any remaining expansion with Ethernet 1GB ports to provide as much connectivity as possible.
 
-![BladeCenter H rear view]({{ site.url }}/public/img/bladecenterh-rear.jpg)
+![BladeCenter H rear view](/public/img/bladecenterh-rear.jpg)
 
 Above is a picture of an IBM BladeCenter H Chassis from the rear, highlighting the expansion bays. Bays 1 and 2 connect to the onboard Ethernet so the switches must be Ethernet compatible. Bays 3 and 4 connect to the first expansion card on the IBM Blade, often called the CFFv form factor. The v in CFFv stands for vertical meaning this card will talk to the vertical expansion switches.
 

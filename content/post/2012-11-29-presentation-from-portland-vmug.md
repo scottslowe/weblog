@@ -17,12 +17,12 @@ At the request of a few individuals, I'm posting my presentation from the Portla
 
 Here's the presentation [as hosted on SpeakerDeck](https://speakerdeck.com/slowe/understanding-openstack).
 
-For those that would like a direct download, it's available [here as a PDF]({{ site.url }}/public/dl/2012-11-13-pdx-vmug-ostack-slides.pdf).
+For those that would like a direct download, it's available [here as a PDF](/public/dl/2012-11-13-pdx-vmug-ostack-slides.pdf).
 
 Also, several readers indicated they'd like to be able to have direct downloads for some of the other presentations, so here are links to those presentations (as PDFs) as well:
 
-[Three Technologies Worth Watching or Learning]({{ site.url }}/public/dl/2012-10-23-new-techs-slides.pdf)  
+[Three Technologies Worth Watching or Learning](/public/dl/2012-10-23-new-techs-slides.pdf)  
 
-[5 Thoughts on Staying Sharp and Relevant (London)]({{ site.url }}/public/dl/2012-11-15-ukvmug-slides.pdf)
+[5 Thoughts on Staying Sharp and Relevant (London)](/public/dl/2012-11-15-ukvmug-slides.pdf)
 
 As always, I hope this is helpful in some way, and courteous comments are encouraged below.
