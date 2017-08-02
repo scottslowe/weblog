@@ -49,7 +49,7 @@ On Windows, there is no graphical user interface (GUI) for configuring Stunnel; 
 
 Once Stunnel has been configured, running `stunnel --install` will install it as a system service; this service can then be stopped and started through the Services MMC console just like any other background service.
 
-Of course, this is only half the work; you'll also need an equivalent Stunnel configuration on the client side, since the Microsoft RDP client (the [Windows version][10] or the [Mac OS X][11] version) does not support SSL. Also, note that the SSL certificate used by Stunnel needs to be in PEM format (which is a nice lead-in to my article discussing the [conversion of certificates][12]).
+Of course, this is only half the work; you'll also need an equivalent Stunnel configuration on the client side, since the Microsoft RDP client (the [Windows version][10] or the [Mac OS X][11] version) does not support SSL. Also, note that the SSL certificate used by Stunnel needs to be in PEM format (which is a nice lead-in to my article discussing the [conversion of certificates][xref-1]).
 
 On Mac OS X, there is a graphical utility for managing Stunnel called SSL Enabler. (Note that I was not able to find a home page for this utility; downloads can be found at various sites.)
 
@@ -75,7 +75,6 @@ Most of the examples so far have been using SSH and/or Stunnel to connect endpoi
 
 Consider this example. CompanyA wants to send e-mail to CompanyB, but wants that e-mail to be secure. If both mail servers support TLS, then the organizations could use TLS to secure the SMTP traffic. If not, then the companies can use Stunnel to establish an SSL connection between two systems. HostA at CompanyA can use Stunnel as a client side application to listen for unencrypted connections and pass them as encrypted connections to HostB at CompanyB. HostB at CompanyB is using Stunnel to listen for encrypted connections and passes them unencrypted to the mail server at CompanyB. With a simple configuration, the mail servers at both companies can be configured to pass mail connections for other company through the Stunnel connection. With no additional cost and very little configuration, all e-mail traffic between the two organizations has now been secured. All this without the complexity of a typical B-to-B VPN and the associated access controls.
 
-For more information, documents on [application specific VPNs with SSH][16] and [application specific VPNs with Stunnel][17] are available.
 
 [1]: http://www.openssh.org/
 [2]: http://stunnel.mirt.net/index.html
@@ -88,9 +87,7 @@ For more information, documents on [application specific VPNs with SSH][16] and 
 [9]: http://www.microsoft.com/exchange/default.mspx
 [10]: http://www.microsoft.com/downloads/details.aspx?FamilyID=80111f21-d48d-426e-96c2-08aa2bd23a49&DisplayLang=en
 [11]: http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient
-[12]: {{< relref "2005-12-02-certificate-conversion-using-openssl.md" >}}
 [13]: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 [14]: http://projects.tynsoe.org/en/stm/
 [15]: http://www.leapingbytes.com/almostvpn
-[16]: /downloads/ptd-asvpn-ssh.doc
-[17]: /downloads/ptd-asvpn-stunnel.doc
+[xref-1]: {{< relref "2005-12-02-certificate-conversion-using-openssl.md" >}}

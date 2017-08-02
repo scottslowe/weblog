@@ -11,7 +11,7 @@ title: 'Interop Liveblog: IPv6 Microsegmentation'
 url: /2015/04/29/ipv6-microsegmentation/
 ---
 
-This session was titled "IPv6 Microsegmentation," and the speaker was Ivan Pepelnjak. Ivan is, of course, a well-known figure in the networking space, and publishes content at [http://ipspace.net](link-1).
+This session was titled "IPv6 Microsegmentation," and the speaker was Ivan Pepelnjak. Ivan is, of course, a well-known figure in the networking space, and publishes content at [http://ipspace.net][link-1].
 
 The session starts with a discussion of the problems found in Layer 2 IPv6 networks. Some of the problems include spoofing RA (Router Advertisement) messages, NA (Neighbor Advertisement) messages, DHCPv6 spoofing, DAD (Duplicate Address Detection) DoS attacks, and ND (Neighbor Discovery) DoS attacks. All of these messages derive from the assumption that one subnet = one security zone, and therefore intra-subnet communications are not secured.
 
