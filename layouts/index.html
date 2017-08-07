@@ -17,7 +17,7 @@
     <div class="post">
       <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
       <span class="post-date">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span>
-      {{ .Summary }}...<em><a href="{{ .Permalink }}">(Click to read more)</a></em>
+      {{ .Summary }}<em><a href="{{ .Permalink }}">Read more...</a></em>
     </div>
   {{ end }}
 
