@@ -8,6 +8,7 @@
         "post": ":year/:month/:day/:title/",
         "fixed": ":title/"
     },
+    "theme": "lanyon-hugo",
     "params": {
         "Title": "Scott's Weblog",
         "Tagline": "The weblog of an IT pro specializing in cloud computing, virtualization, and networking, all with an open source view",
