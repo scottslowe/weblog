@@ -15,7 +15,7 @@ title: Container Deployment Demos from Interop ITX
 url: /2017/05/25/container-deployment-demos/
 ---
 
-At Interop ITX 2017 in Las Vegas, I had the privilege to lead a half-day workshop on options for deploying containers to cloud providers. As part of that workshop, I gave four live demos of using different deployment options. Those demos---along with the slides I used for my presentation along the way---are now available to anyone who might like to try them on their own.
+At Interop ITX 2017 in Las Vegas, I had the privilege to lead a half-day workshop on options for deploying containers to cloud providers. As part of that workshop, I gave four live demos of using different deployment options. Those demos---along with the slides I used for my presentation along the way---are now available to anyone who might like to try them on their own.<!--more-->
 
 The slides and all the resources for the demos are available in [this GitHub repository][link-6]. The four demos are:
 

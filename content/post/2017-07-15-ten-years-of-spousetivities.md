@@ -12,7 +12,7 @@ title: Ten Years of Spousetivities
 url: /2017/07/15/ten-years-of-spousetivities/
 ---
 
-A long time ago in a galaxy far, far away (OK, so it was 2008 and it was here in this galaxy---on this very planet, in fact), I posted an article about [bringing your spouse to VMworld][xref-1]. That one post sparked a fire that, kindled by my wife's passion and creativity, culminates this year in **ten years of Spousetivities!** Yes, [Spousetivities][link-1] is back at VMworld (both US and Europe) this year, and Crystal has some pretty nice events planned for this year's participants.
+A long time ago in a galaxy far, far away (OK, so it was 2008 and it was here in this galaxy---on this very planet, in fact), I posted an article about [bringing your spouse to VMworld][xref-1]. That one post sparked a fire that, kindled by my wife's passion and creativity, culminates this year in **ten years of Spousetivities!** Yes, [Spousetivities][link-1] is back at VMworld (both US and Europe) this year, and Crystal has some pretty nice events planned for this year's participants.<!--more-->
 
 Registration is [here][link-3], and here's a quick look at some of the activities planned for VMworld US in Las Vegas:
 

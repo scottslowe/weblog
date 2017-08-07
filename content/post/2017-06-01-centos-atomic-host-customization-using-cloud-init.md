@@ -12,7 +12,7 @@ title: CentOS Atomic Host Customization Using cloud-init
 url: /2017/06/01/centos-atomic-host-customization-using-cloud-init/
 ---
 
-Back in early March of this year, I wrote a post on [customizing the Docker Engine on CentOS Atomic Host][xref-1]. In that post, I showed how you could use systemd constructs like drop-in units to customize the behavior of the Docker Engine when running on CentOS Atomic Host. In this post, I'm going to build on that information to show how this can be done using `cloud-init` on a public cloud provider (AWS, in this case).
+Back in early March of this year, I wrote a post on [customizing the Docker Engine on CentOS Atomic Host][xref-1]. In that post, I showed how you could use systemd constructs like drop-in units to customize the behavior of the Docker Engine when running on CentOS Atomic Host. In this post, I'm going to build on that information to show how this can be done using `cloud-init` on a public cloud provider (AWS, in this case).<!--more-->
 
 Although I haven't really blogged about it, I'd already taken the information in that first post and written some Ansible playbooks to do the same thing (see [here][link-1] for more information). Thus, one _could_ use Ansible to do this when running CentOS Atomic Host on a public cloud provider. However, much like the original post, I wanted to find a very "cloud-native" way of doing this, and `cloud-init` seemed like a pretty good candidate.
 

@@ -11,7 +11,7 @@ title: 'Liveblog: Kuryr Project Update'
 url: /2017/05/09/kuryr-project-update/
 ---
 
-This is a liveblog of an OpenStack Summit session providing an update on the Kuryr project. The speakers are Antoni Segura Puimedon and Irena Berezovsky. Kuryr, if you recall, was a project aimed at making OpenStack Neutron functionality available to Docker containers; it has since expanded to also offer Cinder and Manila storage to Docker containers, and has added support for both Docker Swarm and Kubernetes as well.
+This is a liveblog of an OpenStack Summit session providing an update on the Kuryr project. The speakers are Antoni Segura Puimedon and Irena Berezovsky. Kuryr, if you recall, was a project aimed at making OpenStack Neutron functionality available to Docker containers; it has since expanded to also offer Cinder and Manila storage to Docker containers, and has added support for both Docker Swarm and Kubernetes as well.<!--more-->
 
 According to Puimedon, the latest release of Kuryr has a diverse base of contributors, with over 45 active contributors.
 

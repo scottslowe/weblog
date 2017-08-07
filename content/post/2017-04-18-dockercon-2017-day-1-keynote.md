@@ -13,7 +13,7 @@ title: 'Liveblog: DockerCon 2017 Day 1 Keynote'
 url: /2017/04/18/dockercon-2017-day-1-keynote/
 ---
 
-This is a liveblog of the day 1 keynote (general session) of DockerCon 2017 in Austin, TX.
+This is a liveblog of the day 1 keynote (general session) of DockerCon 2017 in Austin, TX.<!--more-->
 
 At 9:05am, Ben Golub, CEO of Docker, Inc., takes the stage to kick off the general session and the conference. Golub starts the presentation by reviewing Docker's four-year history and all the things that have changed over the last three years since the very first DockerCon---from the size of Gordon (Docker's tortoise mascot) to the amount of growth in Docker usage (via statistics in the number of Docker hosts, the number of Docker-ized apps, the number of image pulls from Docker Hub, and so forth). 
 

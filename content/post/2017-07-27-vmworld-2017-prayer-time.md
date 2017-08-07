@@ -11,7 +11,7 @@ title: VMworld 2017 Prayer Time
 url: /2017/07/27/vmworld-2017-prayer-time/
 ---
 
-At [VMworld 2017][link-1] in Las Vegas, I'm organizing---as I have in previous years---a gathering of Christians for a brief time of prayer while at the conference. If you're interested in joining us, here are the details.
+At [VMworld 2017][link-1] in Las Vegas, I'm organizing---as I have in previous years---a gathering of Christians for a brief time of prayer while at the conference. If you're interested in joining us, here are the details.<!--more-->
 
 **What:** A brief time of prayer
 

@@ -10,7 +10,7 @@ title: 'Liveblog: DockerCon 2017 Day 2 Keynote'
 url: /2017/04/19/dockercon-2017-day-2-keynote/
 ---
 
-This is a liveblog of the day 2 keynote (general session) of DockerCon 2017 in Austin, TX. For a look at what was announced or discussed in the day 1 keynote yesterday, see [this liveblog][xref-1]. You can also see all DockerCon 2017-related posts by browsing the posts tagged with "DockerCon2017" (see the links at the bottom of this page). Before the keynote starts, there's some nice live music playing; a welcome change (in my opinion) from yesterday's video game.
+This is a liveblog of the day 2 keynote (general session) of DockerCon 2017 in Austin, TX. For a look at what was announced or discussed in the day 1 keynote yesterday, see [this liveblog][xref-1]. You can also see all DockerCon 2017-related posts by browsing the posts tagged with "DockerCon2017" (see the links at the bottom of this page). Before the keynote starts, there's some nice live music playing; a welcome change (in my opinion) from yesterday's video game.<!--more-->
 
 At 9:03am, Ben Golub takes the stage to kick off the day 2 general session. He starts off by reviewing some proposed Docker logos, with a hint toward an announcement at the end of the session (presumably around changing Docker's logo).
 

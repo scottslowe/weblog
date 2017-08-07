@@ -13,7 +13,7 @@ title: Revisiting CentOS Atomic Host
 url: /2017/04/25/revisiting-centos-atomic-host/
 ---
 
-A couple years ago, I wrote an article about how I was [choosing CoreOS over Project Atomic][xref-1] based on some initial testing with CentOS Atomic Host builds. As it turns out---and as I pointed out in the "Update" section of that article---the Atomic Host builds I was using were pre-release builds, and therefore it wasn't really appropriate to form an assessment based on pre-release builds. Now that both [CentOS Atomic Host][link-1] and [CoreOS][link-6] Container Linux have both grown and matured, I thought I'd revisit the topic and see how---if at all---things have changed.
+A couple years ago, I wrote an article about how I was [choosing CoreOS over Project Atomic][xref-1] based on some initial testing with CentOS Atomic Host builds. As it turns out---and as I pointed out in the "Update" section of that article---the Atomic Host builds I was using were pre-release builds, and therefore it wasn't really appropriate to form an assessment based on pre-release builds. Now that both [CentOS Atomic Host][link-1] and [CoreOS][link-6] Container Linux have both grown and matured, I thought I'd revisit the topic and see how---if at all---things have changed.<!--more-->
 
 In my original post, there were 4 major issues I identified (not necessarily in the same order as the original post):
 

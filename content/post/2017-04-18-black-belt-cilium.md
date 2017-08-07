@@ -13,7 +13,7 @@ title: 'Liveblog: Cilium for Network and Application Security with BPF and XDP'
 url: /2017/04/18/black-belt-cilium/
 ---
 
-This is a liveblog of the DockerCon 2017 Black Belt session led by Thomas Graf on [Cilium][link-1], a new startup that focuses on using eBPF and XDP for network and application security.
+This is a liveblog of the DockerCon 2017 Black Belt session led by Thomas Graf on [Cilium][link-1], a new startup that focuses on using eBPF and XDP for network and application security.<!--more-->
 
 Graf starts by talking about how BPF (specifically, extended BPF or eBPF) can be used to rethink how the Linux kernel handles network traffic. Graf points out that there is another session by Brendan Gregg on using BPF to do analysis performance and profiling.
 

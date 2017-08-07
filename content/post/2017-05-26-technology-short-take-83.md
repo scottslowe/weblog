@@ -23,7 +23,7 @@ title: 'Technology Short Take #83'
 url: /2017/05/26/technology-short-take-83/
 ---
 
-Welcome to Technology Short Take #83! This is a slightly shorter TST than usual, which might be a nice break from the typical information overload. In any case, enjoy!
+Welcome to Technology Short Take #83! This is a slightly shorter TST than usual, which might be a nice break from the typical information overload. In any case, enjoy!<!--more-->
 
 ## Networking
 

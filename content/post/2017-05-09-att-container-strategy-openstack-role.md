@@ -11,7 +11,7 @@ title: 'Liveblog: AT&T''s Container Strategy and OpenStack''s Role in it'
 url: /2017/05/09/att-container-strategy-openstack-role/
 ---
 
-This is a liveblog of the OpenStack Summit session titled "AT&T's Container Strategy and OpenStack's Role in it". The speakers are Kandan Kathirvel and Amit Tank, both from AT&T. I really wanted to sit in on Martin Casado's presentation next door (happening at the same time), but as much as I love watching/hearing Martin speak, I felt this like presentation might expose me to some new information.
+This is a liveblog of the OpenStack Summit session titled "AT&T's Container Strategy and OpenStack's Role in it". The speakers are Kandan Kathirvel and Amit Tank, both from AT&T. I really wanted to sit in on Martin Casado's presentation next door (happening at the same time), but as much as I love watching/hearing Martin speak, I felt this like presentation might expose me to some new information.<!--more-->
 
 Kathirvel kicks off the session with some quick introductions, then sets the stage for the session. Naturally, Kathirvel starts out by describing AT&T's cloud deployment. (I say "naturally" because it seems that _every_ presentation starts out with describing how great and how awesome the presenter's company's OpenStack cloud is.)
 

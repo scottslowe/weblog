@@ -12,7 +12,7 @@ title: 'The Linux Migration: July 2017 Progress Report'
 url: /2017/07/10/linux-migration-july-2017-progress-report/
 ---
 
-I'm now roughly six months into using Linux as my primary laptop OS, and it's been a few months since [my last progress report][xref-3]. If you're just now picking up this thread, I encourage you to go back and read [my initial progress report][xref-1], see [which Linux distribution][xref-2] I selected, or check how I chose to handle corporate collaboration (see [here][xref-4], [here][xref-5], and [here][xref-6]). In this post, I'll share where things currently stand.
+I'm now roughly six months into using Linux as my primary laptop OS, and it's been a few months since [my last progress report][xref-3]. If you're just now picking up this thread, I encourage you to go back and read [my initial progress report][xref-1], see [which Linux distribution][xref-2] I selected, or check how I chose to handle corporate collaboration (see [here][xref-4], [here][xref-5], and [here][xref-6]). In this post, I'll share where things currently stand.<!--more-->
 
 My configuration is unchanged from the last progress report. I'm still running [Fedora][link-1] 25, and may consider upgrading to Fedora 26 when it releases (due to be released tomorrow, I believe). I'm still using the Dell Latitude E7370, which continues---from a hardware perspective---to perform admirably. CPU power is a bit limited, but that's to be expected from a mobile-focused chip. My line-up of applications also remains largely unchanged as well.
 

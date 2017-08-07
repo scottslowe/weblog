@@ -29,7 +29,7 @@ title: 'Technology Short Take #84'
 url: /2017/06/19/technology-short-take-84/
 ---
 
-Welcome to Technology Short Take #84! This episode is a bit late (sorry about that!), but I figured better late than never, right? OK, bring on the links!
+Welcome to Technology Short Take #84! This episode is a bit late (sorry about that!), but I figured better late than never, right? OK, bring on the links!<!--more-->
 
 ## Networking
 

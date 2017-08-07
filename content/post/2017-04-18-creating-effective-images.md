@@ -10,7 +10,7 @@ title: 'Liveblog: Creating Effective Images'
 url: /2017/04/18/creating-effective-images/
 ---
 
-This is a liveblog for the DockerCon 2017 session titled "Creating Effective Images." The speaker is Abby Fuller, a Senior Technical Evangelist with Amazon Web Services. Abby is a former operations engineer who was an early consumer of Amazon's Elastic Container Service (ECS), and some of her learnings came about the "hard way." This session is from the "Using Docker" track.
+This is a liveblog for the DockerCon 2017 session titled "Creating Effective Images." The speaker is Abby Fuller, a Senior Technical Evangelist with Amazon Web Services. Abby is a former operations engineer who was an early consumer of Amazon's Elastic Container Service (ECS), and some of her learnings came about the "hard way." This session is from the "Using Docker" track.<!--more-->
 
 Fuller starts with reviewing the agenda, and shares that she's intent on providing some practical tips that attendees can put to work immediately.
 

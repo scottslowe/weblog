@@ -31,7 +31,7 @@ title: 'Technology Short Take #82'
 url: /2017/05/05/technology-short-take-82/
 ---
 
-Welcome to Technology Short Take #82! This issue is a bit behind schedule; I've been pretty heads-down on some projects. That work will come to fruition in a couple weeks, so I should be able to come up for some air soon. In the meantime, here's a few links and articles for your reading pleasure.
+Welcome to Technology Short Take #82! This issue is a bit behind schedule; I've been pretty heads-down on some projects. That work will come to fruition in a couple weeks, so I should be able to come up for some air soon. In the meantime, here's a few links and articles for your reading pleasure.<!--more-->
 
 ## Networking
 

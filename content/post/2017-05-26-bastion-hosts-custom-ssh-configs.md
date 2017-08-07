@@ -12,7 +12,7 @@ title: Bastion Hosts and Custom SSH Configurations
 url: /2017/05/26/bastion-hosts-custom-ssh-configs/
 ---
 
-The idea of an SSH bastion host is something I discussed [here][xref-1] about 18 months ago. For the most part, it's a pretty simple concept (yes, things can get quite complex in some situations, but I think these are largely corner cases). For the last few months, though, I've been trying to use an SSH bastion host and failing, and I could not figure out _why_ it wouldn't work. The answer, it turns out, lies in custom SSH configurations.
+The idea of an SSH bastion host is something I discussed [here][xref-1] about 18 months ago. For the most part, it's a pretty simple concept (yes, things can get quite complex in some situations, but I think these are largely corner cases). For the last few months, though, I've been trying to use an SSH bastion host and failing, and I could not figure out _why_ it wouldn't work. The answer, it turns out, lies in custom SSH configurations.<!--more-->
 
 In my introduction on using SSH bastion hosts (linked above)---or in just about any tutorial out there on using SSH bastion hosts---brief mention is made of adding configuration information to SSH to use the bastion host. Borrowing from my original post, if you had an instance named "private1" that you wanted to access via a bastion named "bastion", the SSH configuration information might look like this:
 

@@ -14,7 +14,7 @@ title: Open vSwitch Day at OpenStack Summit 2017
 url: /2017/05/10/ovs-day-openstack-summit/
 ---
 
-This is a "liveblog" (not quite live, but you get the idea) of the Open vSwitch Open Source Day happening at the OpenStack Summit in Boston. Summaries of each of the presentations are included below.
+This is a "liveblog" (not quite live, but you get the idea) of the Open vSwitch Open Source Day happening at the OpenStack Summit in Boston. Summaries of each of the presentations are included below.<!--more-->
 
 ## Kubernetes and OVN on Windows
 

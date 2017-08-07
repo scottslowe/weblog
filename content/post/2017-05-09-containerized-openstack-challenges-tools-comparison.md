@@ -13,7 +13,7 @@ title: 'Liveblog: Deploying Containerized OpenStack: Challenges & Tools Comparis
 url: /2017/05/09/containerized-openstack-challenges-tools-comparison/
 ---
 
-This is a liveblog for an OpenStack Summit session on containerized OpenStack and a comparison of the tools used for containerized OpenStack. The speaker is Jaivish Kothari, from NEC Technologies. Two other speakers were listed on the title slide, but were apparently unable to make it to the Summit to present.
+This is a liveblog for an OpenStack Summit session on containerized OpenStack and a comparison of the tools used for containerized OpenStack. The speaker is Jaivish Kothari, from NEC Technologies. Two other speakers were listed on the title slide, but were apparently unable to make it to the Summit to present.<!--more-->
 
 Kothari provides a brief overview of the session, then jumps into a discussion of deployment tools. As illustrated by one of his slides, there's a huge collection of tools that are used to deploy OpenStack; some are "pure" deployment tools, others are configuration management tools. In this presentation, Kothari says he will focus specifically on OpenStack deployment tools, like Juju (Canonical), Fuel (Mirantis), Crowbar (Dell), and PackStack/TripleO (Red Hat), but I'm not sure how this relates to containerized OpenStack (per the session title).
 
