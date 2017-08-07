@@ -1,0 +1,39 @@
+{{ partial "default_head.html" . }}
+
+<!--Render full content for 5 most recent posts-->
+<div class="posts">
+  {{ range first 5 (where .Data.Pages "Type" "in" "post") }}
+    <div class="post">
+      <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <span class="post-date">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span>
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+<!--Render summaries for next 15 posts-->
+  <h1>Recent Posts</h1>
+
+  {{ range first 15 (after 5 (where .Data.Pages "Type" "in" "post")) }}
+    <div class="post">
+      <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <span class="post-date">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span>
+      {{ .Summary }}...<em><a href="{{ .Permalink }}">(Click to read more)</a></em>
+    </div>
+  {{ end }}
+
+<!--Render list of next 30 posts-->
+  <h1>Older Posts</h1>
+
+  <div class="post">
+    <ul id="list">
+    {{ range first 30 (after 20 (where .Data.Pages "Type" "in" "post")) }}
+      {{ .Render "li2"}}
+    {{ end }}
+    </ul>
+  </div>
+
+<!--Closing note about how to find other articles-->
+  <div class="post">Find more posts by browsing the <a href="/categories/">post categories</a>, <a href="/tags/">content tags</a>, or <a href="/archives/">site archives</a> pages. Thanks for visiting!</div>
+</div>
+
+{{ partial "default_foot.html" . }}

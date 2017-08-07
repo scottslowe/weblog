@@ -332,6 +332,14 @@ a.sidebar-nav-item:focus {
   font-size: .75em; /* 12px */
 }
 
+/* Formatting for post date when used in a list of posts */
+.post-date-list {
+  color: #9a9a9a;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .75em; /* 12px */
+}
+
 /* Meta data text block at bottom of post content */
 .post-meta {
   display: block;
