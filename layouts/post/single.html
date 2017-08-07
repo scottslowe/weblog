@@ -33,7 +33,7 @@
   <h3>Related Posts</h3>
   <ul class="related-posts">
     {{ range first 3 ( where ( where .Site.Pages.ByDate.Reverse ".Params.tags" "intersect" .Params.tags ) "Permalink" "!=" .Permalink ) }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="post-date-list">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span></li>
     {{ end }}
   </ul>
 </div>
