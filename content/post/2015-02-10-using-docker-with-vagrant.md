@@ -3,7 +3,7 @@ author: slowe
 categories: Tutorial
 comments: true
 date: 2015-02-10T14:25:00Z
-redirect_from: /2015/02/11/using-docker-with-vagrant/
+aliases: /2015/02/11/using-docker-with-vagrant/
 tags:
 - Docker
 - Vagrant

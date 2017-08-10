@@ -3,7 +3,7 @@ author: slowe
 categories: Tutorial
 comments: true
 date: 2015-09-28T09:45:00Z
-redirect_from: /2015/09/25/using-vagrant-with-openstack/
+aliases: /2015/09/25/using-vagrant-with-openstack/
 tags:
 - Vagrant
 - OpenStack

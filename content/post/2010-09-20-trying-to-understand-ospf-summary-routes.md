@@ -3,7 +3,7 @@ author: slowe
 categories: Musing
 comments: true
 date: 2010-09-20T20:56:53Z
-redirect_from: /2010/09/20/thinking-out-loud-ospf-summary-routes/
+aliases: /2010/09/20/thinking-out-loud-ospf-summary-routes/
 slug: trying-to-understand-ospf-summary-routes
 tags:
 - Cisco

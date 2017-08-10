@@ -3,7 +3,7 @@ author: slowe
 categories: Liveblog
 comments: true
 date: 2016-06-21T00:00:00Z
-redirect_from: /2016/06/20/dockercon-2016-day-2-keynote/
+aliases: /2016/06/20/dockercon-2016-day-2-keynote/
 tags:
 - Docker
 - OSS

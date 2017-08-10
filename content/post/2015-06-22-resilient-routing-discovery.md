@@ -3,7 +3,7 @@ author: slowe
 categories: Liveblog
 comments: true
 date: 2015-06-22T23:00:00Z
-redirect_from: /2015/06/23/resilient-routing-discovery/
+aliases: /2015/06/23/resilient-routing-discovery/
 tags:
 - Docker
 - DockerCon2015

@@ -3,7 +3,7 @@ author: slowe
 categories: Liveblog
 comments: true
 date: 2015-06-22T23:30:00Z
-redirect_from: /2015/06/23/docker-networking/
+aliases: /2015/06/23/docker-networking/
 tags:
 - Docker
 - DockerCon2015

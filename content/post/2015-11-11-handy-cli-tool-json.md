@@ -3,7 +3,7 @@ author: slowe
 categories: Education
 comments: true
 date: 2015-11-11T00:00:00Z
-redirect_from: /2015/11/20/handy-cli-tool-json/
+aliases: /2015/11/20/handy-cli-tool-json/
 tags:
 - JSON
 - OSS
