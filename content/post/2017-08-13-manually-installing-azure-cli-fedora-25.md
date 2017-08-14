@@ -14,7 +14,7 @@ title: Manually Installing Azure CLI on Fedora 25
 url: /2017/08/13/manually-installing-azure-cli-fedora-25/
 ---
 
-For various reasons that we don't need to get into just yet, I've started exploring [Microsoft Azure][link-1]. Given that I'm a command-line interface (CLI) fan, and given that I use [Fedora][link-2] as my primary laptop operating system, this led me to installing the Azure CLI on my Fedora 25 system---and that, in turn, led to this blog post.
+For various reasons that we don't need to get into just yet, I've started exploring [Microsoft Azure][link-1]. Given that I'm a command-line interface (CLI) fan, and given that I use [Fedora][link-2] as my primary laptop operating system, this led me to installing the Azure CLI on my Fedora 25 system---and that, in turn, led to this blog post.<!--more-->
 
 ## Some Background
 
