@@ -1,5 +1,6 @@
 {
     "baseurl": "https://blog.scottlowe.org/",
+    "rssLimit": 15,
     "disablePathToLower": true,
     "languageCode": "en-us",
     "title": "Scott's Weblog",
