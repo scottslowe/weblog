@@ -1,5 +1,5 @@
 {
-    "baseurl": "http://blog.scottlowe.org/",
+    "baseurl": "https://blog.scottlowe.org/",
     "disablePathToLower": true,
     "languageCode": "en-us",
     "title": "Scott's Weblog",
@@ -21,5 +21,15 @@
     },
     "blackfriday": {
         "fractions": false
+    },
+    "outputs": {
+        "home": ["HTML","RSS"],
+        "taxonomy": ["HTML","RSS"]
+    },
+    "outputformats": {
+        "RSS": {
+            "mediatype": "application/rss",
+            "baseName": "feed"
+        }
     }
 }
