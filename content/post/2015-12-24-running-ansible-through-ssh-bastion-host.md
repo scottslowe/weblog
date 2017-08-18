@@ -40,7 +40,7 @@ This is pretty straightforward, and something that I've already discussed in my 
 
 Here's a sample SSH configuration file. I'll break down some of the various settings found here below.
 
-{{< highlight text >}}
+```
 Host 10.10.10.*
   ProxyCommand ssh -W %h:%p bastion.example.com
   IdentityFile ~/.ssh/private_key.pem
@@ -52,7 +52,7 @@ Host bastion.example.com
   ControlMaster auto
   ControlPath ~/.ssh/ansible-%r@%h:%p
   ControlPersist 5m
-{{< / highlight >}}
+```
 
 What does this configuration file do? Here's a quick rundown:
 
@@ -93,6 +93,8 @@ If you have any questions or want more information, [hit me up on Twitter][link-
 
 **UPDATE 14 Sep 2016:** I've removed the information on SSH agent forwarding from this article, as it is not required when using an SSH bastion host.
 
+**UPDATE 17 Aug 2017:** In Ansible 2, you're able to do this "natively" in Ansible; see [this entry in the FAQ][link-6].
+
 
 
 [link-1]: https://gist.github.com/seansawyer/8fe009e67f7e01344328
@@ -100,6 +102,7 @@ If you have any questions or want more information, [hit me up on Twitter][link-
 [link-3]: http://www.ansible.com/
 [link-4]: http://blog.dualspark.com/ansible/configuration-management/aws/ssh/2014/12/19/ansible-tower-ssh-agent-forwarding.html
 [link-5]: https://twitter.com/scott_lowe
+[link-6]: https://docs.ansible.com/ansible/latest/faq.html#how-do-i-configure-a-jump-host-to-access-servers-that-i-have-no-direct-access-to
 [xref-1]: {{< relref "2015-11-21-using-ssh-bastion-host.md" >}}
 [xref-2]: {{< relref "2015-12-04-use-case-ssh-bastion-host.md" >}}
 [xref-3]: {{< relref "2015-12-11-using-ssh-multiplexing.md" >}}
