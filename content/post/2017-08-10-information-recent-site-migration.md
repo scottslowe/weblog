@@ -17,7 +17,7 @@ Earlier this week, I completed the migration of this site to an entirely new pla
 
 The site is now generated using [Hugo][link-4], an extraordinarily fast static site generator. I switched to Hugo because it offers a couple of key benefits over Jekyll:
 
-1. Site build times are 10x faster (less than 30 seconds with Hugo compared to over 5 minutes with Jekll)---this directly translates into me being able to test changes to the site much more quickly
+1. Site build times are 10x faster (less than 30 seconds with Hugo compared to over 5 minutes with Jekll)---this directly translates into me being able to test changes to the site much more quickly _(Update: after some optimizations, site build times are down to less than 2 seconds!)_
 2. Hugo is a single binary that's easily installed on Linux or macOS (and Windows too, though I don't have any Windows systems)
 
 Hugo also gives me more flexibility that I had with Jekyll, such as generating [lists of articles by tag][link-5] or [lists of articles by category][link-6]. Along with those additions---the ability to browse by tag or category---I've also removed the pagination (I mean, who's _really_ going to page through 188 pages of posts?) and instead made the 50 most recent posts available directly via the home page. The full content of the first 5 are displayed, followed by excerpts/summaries of the next 15 and then links to the next 30 most recent articles. (I'd love to get your feedback on what you think about this arrangement---helpful, not helpful, etc.)
