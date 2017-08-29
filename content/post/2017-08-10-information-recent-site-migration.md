@@ -13,7 +13,7 @@ title: Information on the Recent Site Migration
 url: /2017/08/10/information-recent-site-migration/
 ---
 
-Earlier this week, I completed the migration of this site to an entirely new platform, marking the third or fourth platform migration for this site in its 12-year history.<!--more--> Prior to the migration, the site was generated using [Jekyll][link-1] and [GitHub Pages][link-2] following [a previous migration in late 2014][xref-1]. Prior to that, I ran [WordPress][link-3] for about 9 years. So what is it running now?
+Earlier this week, I completed the migration of this site to an entirely new platform, marking the third or fourth platform migration for this site in its 12-year history. Prior to the migration, the site was generated using [Jekyll][link-1] and [GitHub Pages][link-2] following [a previous migration in late 2014][xref-1]. Prior to that, I ran [WordPress][link-3] for about 9 years. So what is it running now?<!--more-->
 
 The site is now generated using [Hugo][link-4], an extraordinarily fast static site generator. I switched to Hugo because it offers a couple of key benefits over Jekyll:
 
