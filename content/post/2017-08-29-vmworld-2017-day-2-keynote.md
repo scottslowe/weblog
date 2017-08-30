@@ -39,7 +39,7 @@ First up, O'Farrell brings out Chris Wolf and Purnima Padmanabhan. Padmanabhan s
 
 Over the course of the next few minutes, Wolf and Padmanabhan bounce back and forth talking about various products and how those products apply to Elastic Sky Pizza.
 
-THe first demo is AppDefense, followed by a quick demo of vRealize Operations, which rapidly leads into a demo of VMware Cloud on AWS. VMware vRealize Network Insight (vRNI) comes up next as they discuss migrating applications from a capacity-bound on-premises data center into VMware Cloud on AWS; in particular, attendees see vRNI helping with migration planning.
+The first demo is AppDefense, followed by a quick demo of vRealize Operations, which rapidly leads into a demo of VMware Cloud on AWS. VMware vRealize Network Insight (vRNI) comes up next as they discuss migrating applications from a capacity-bound on-premises data center into VMware Cloud on AWS; in particular, attendees see vRNI helping with migration planning.
 
 VMware vRealize Automation pops up next as the tool used to migrate the application from the on-premises data center to VMware Cloud on AWS.
 
