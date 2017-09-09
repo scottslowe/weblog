@@ -76,7 +76,7 @@ It's time to wrap up now. I hope that I was able to include something useful for
 
 
 [link-1]: http://blogs.vmware.com/performance/2015/05/running-transactional-workloads-using-docker-containers-vsphere-6-0.html
-[link-2]: http://openvswitch.org/pipermail/dev/2015-March/052663.html
+[link-2]: http://openvswitch.org/pipermail/ovs-dev/2015-March/052663.html
 [link-3]: https://www.sumologic.com/2015/04/16/new-docker-logging-drivers/
 [link-4]: http://www.datacenterknowledge.com/archives/2015/05/22/openstack-magnum-containers-service-cloud-operators/
 [link-5]: https://www.youtube.com/watch?v=kEzXTq2fPDg
