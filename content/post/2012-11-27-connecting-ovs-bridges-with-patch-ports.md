@@ -68,7 +68,7 @@ Let's review this a bit:
 
 With this configuration, I can start up a guest domain attached to `ovsbr2`---which has no physical uplinks---and gain connectivity to the outside world via the patch ports that connect it to `ovsbr0` and its uplinks.
 
-The next natural question (at least, it was the next natural question for me): how many levels of connected OVS bridges can you build? It turns out the answer is 5 (as described [here](http://openvswitch.org/pipermail/discuss/2012-July/007689.html)).
+The next natural question (at least, it was the next natural question for me): how many levels of connected OVS bridges can you build? It turns out the answer is 5 (as described [here](http://openvswitch.org/pipermail/ovs-discuss/2012-July/007689.html)).
 
 OK, this is interesting (sort of), but what sort of uses does this have? Well, I'm still exploring that myself, and I'd love to hear from readers as to how they might see this functionality utilized. Here are two examples of which I know:
 
