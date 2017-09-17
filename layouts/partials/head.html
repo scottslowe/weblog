@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    {{ if eq .URL "/" }}
-      {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}
+    {{- if eq .URL "/" -}}
+      {{- .Site.Params.Title }} - {{ .Site.Params.Tagline -}}
     {{ else }}
-      {{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}
-    {{ end }}
+      {{- .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline -}}
+    {{- end -}}
   </title>
 
   <!--Metadata-->
