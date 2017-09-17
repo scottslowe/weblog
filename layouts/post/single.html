@@ -1,4 +1,4 @@
-{{ partial "default_head.html" . }}
+{{- partial "default_head.html" . -}}
 
 <div class="post">
   <h1 class="post-title">{{ .Title }}</h1>
@@ -9,15 +9,15 @@
   <span class="post-meta">
   {{ range .Params.tags }}<i class="fa fa-tag" aria-hidden="true"></i>&#160;<a href="/tags/{{ . | lower }}">{{ . }}</a> {{ end }}
 
-  {{ with .PrevInSection }}
+  {{ with .PrevInSection -}}
   <br />
   <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Previous Post: <a href="{{ .Permalink }}">{{ .Title }}</a>
-  {{ end }}
+  {{- end }}
   
-  {{ with .NextInSection }}
+  {{ with .NextInSection -}}
   <br />
    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Next Post: <a href="{{ .Permalink }}">{{ .Title }}</a>
-  {{ end }}
+  {{- end }}
   </span>
 
   <span class="post-sharing">
@@ -29,4 +29,16 @@
   </span>
 </div>
 
-{{ partial "default_foot.html" . }}
+{{ $related := .Site.RegularPages.Related . | first 3 -}}
+{{- with $related -}}
+<div class="related">
+  <h3>Related Posts</h3>
+  <ul class="related-posts">
+  {{ range . -}}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <span class="post-date-list">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span></li> 
+  {{- end }}
+  </ul>
+</div>
+{{- end }}
+
+{{- partial "default_foot.html" . -}}
