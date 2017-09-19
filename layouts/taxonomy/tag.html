@@ -2,7 +2,7 @@
 
 <div class="post">
   <h1 class="post-title">All Posts With Tag &ldquo;{{ .Title }}&rdquo;</h1>
-  <span class="post-date"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back to <a href="/tags/">Content Tags</a></span>
+  <span class="post-date"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back to <a href="/tags/">Content Tags</a> &middot; <i class="fa fa-rss" aria-hidden="true"></i> <a href="/tags/{{ .Title | lower }}/feed.xml">RSS Feed</a> for this tag</span>
   <ul id="list">
     {{ range .Data.Pages }}
       {{ .Render "li" }}
