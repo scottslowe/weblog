@@ -6,7 +6,8 @@ date: 2017-09-19T14:00:00Z
 tags:
 - HashiConf2017
 - Terraform
-- Tag3
+- AWS
+- ECS
 title: 'Liveblog: Terraform Abstractions for Safety and Power'
 url: /2017/09/19/terraform-abstractions-safety-power/
 ---
