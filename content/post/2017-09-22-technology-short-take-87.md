@@ -21,6 +21,7 @@ tags:
 - Ubuntu
 - Encryption
 title: "Technology Short Take #87"
+url: /2017/09/22/technology-short-take-87/
 ---
 
 Welcome to Technology Short Take #87! I have a mix of newer and older items for you this time around. While I'm a bit short on links in some areas, hopefully this is outweighed by some good content in other areas. Here's hoping you find something useful!<!--more-->
