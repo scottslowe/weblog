@@ -27,7 +27,7 @@ tags:
 - VMware
 - vSphere
 - Fusion
-title: 'Technology Short Take #82'
+title: 'Technology Short Take 82'
 url: /2017/05/05/technology-short-take-82/
 ---
 

@@ -29,7 +29,7 @@ tags:
 - VirtualBox
 - Macintosh
 - Apple
-title: 'Technology Short Take #85'
+title: 'Technology Short Take 85'
 url: /2017/08/11/technology-short-take-85/
 ---
 

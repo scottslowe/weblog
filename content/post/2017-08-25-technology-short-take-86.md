@@ -22,7 +22,7 @@ tags:
 - VMware
 - vSphere
 - CLI
-title: 'Technology Short Take #86'
+title: 'Technology Short Take 86'
 url: /2017/08/25/technology-short-take-86/
 ---
 
