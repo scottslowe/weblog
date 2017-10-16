@@ -20,7 +20,7 @@ tags:
 - VPN
 - Ubuntu
 - Encryption
-title: "Technology Short Take #87"
+title: "Technology Short Take 87"
 url: /2017/09/22/technology-short-take-87/
 ---
 

@@ -19,7 +19,7 @@ tags:
 - OpenStack
 - Docker
 - Git
-title: 'Technology Short Take #83'
+title: 'Technology Short Take 83'
 url: /2017/05/26/technology-short-take-83/
 ---
 

@@ -21,7 +21,7 @@ tags:
 - Photon
 - Linux
 - Vagrant
-title: 'Technology Short Take #80'
+title: 'Technology Short Take 80'
 url: /2017/03/24/technology-short-take-80/
 ---
 

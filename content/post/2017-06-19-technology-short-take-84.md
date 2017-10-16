@@ -25,7 +25,7 @@ tags:
 - Microsoft
 - Fedora
 - VirtualBox
-title: 'Technology Short Take #84'
+title: 'Technology Short Take 84'
 url: /2017/06/19/technology-short-take-84/
 ---
 

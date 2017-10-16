@@ -23,7 +23,7 @@ tags:
 - Fusion
 - PowerCLI
 - CLI
-title: 'Technology Short Take #81'
+title: 'Technology Short Take 81'
 url: /2017/04/07/technology-short-take-81/
 ---
 
