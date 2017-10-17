@@ -12,7 +12,7 @@ title: DockerCon EU 2017 Day 1 Keynote
 url: /2017/10/17/dockercon-eu-day-1-keynote/
 ---
 
-This is a liveblog of the day 1 keynote/general session at DockerCon EU 2017 in Copenhagen, Denmark. Prior to the start of the keynote, attendees are "entertained" by occasional clips of some Monty Python-esque production.
+This is a liveblog of the day 1 keynote/general session at DockerCon EU 2017 in Copenhagen, Denmark. Prior to the start of the keynote, attendees are "entertained" by occasional clips of some Monty Python-esque production.<!--more-->
 
 At 9:02, the lights go down and another clip appears, the first of several cliups that depict life "without Docker" and then again "with Docker" (where everything is better, of course). It's humorous and a good introduction to the general session.
 
