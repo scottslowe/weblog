@@ -29,7 +29,7 @@ Singh pivots after a few minutes to talk about Docker growth in terms of specifi
 
 Based on these essential characteristics, Singh believes Docker is the platform companies can use to build the software supply chain of the future, the one that enables the world to work in a new (better) way. How does this happen? Singh believes that focusing on modernizing traditional applications (identified by the acronym MTA) is the means whereby customers can free up funds to invest in innovation and new initiatives. Singh says customers shouldn't have to choose between maintain and innovate, and Docker enables customers to do both.
 
-These leads to a demo of how customers are modernizing traditional applications, but Singh must first offer his sacrifice to the demo gods, this time by adding some Legos to a Lego construction on the stage.
+This leads to a demo of how customers are modernizing traditional applications, but Singh must first offer his sacrifice to the demo gods, this time by adding some Legos to a Lego construction on the stage.
 
 Singh now brings out Kristie Howard and Ben Bonnefoy to do the demo. Howard and Bonnefoy engage in a bit of role-playing to demonstrate something called the Docker Application Converter (DAC), which can use a virtual machine backup to build a Docker container image. In the demo, it's as simple as running `dac discover tar` to containerize an old Java/Spring/Tomcat application. (In reality, of course, it will often be more complex than this.)
 
@@ -48,7 +48,6 @@ To talk a bit more about this, Hykes brings out Brendan Burns, one of the co-fou
 Hykes returns to the stage to talk in more concrete terms about the integration of Kubernetes into the Docker stack. What does this look like, exactly? Docker will provide a way to test locally with Kubernetes, and will allow developers to continue to use all existing Docker tools instead of having to learn new Kubernetes tools. Developers are, of course, welcome to use Kubernetes tools.
 
 To demonstrate how this works, Hykes brings out David Gageot to show the first demo of Kubernetes integrated into Docker. Gageot is using Docker for Mac, and he show how using standard tools like `docker stack` to deploy a sample application on Kubernetes. Gageot also shows how Kubernetes-standard tools like `kubectl` are also being extended to show "Docker" concepts like stacks.
-
 
 Hykes returns to the stage to talk about how Kubernetes is integrated with Docker EE for production. The next version of Docker EE will contain a full, upstream-compatible version of Kubernetes that sits right next to the Swarm support that Docker EE already possesses.
 
