@@ -5,7 +5,7 @@ comments: true
 date: 2017-10-17T14:00:00Z
 tags:
 - Docker
-- DockerCon
+- DockerCon2017
 - Linux
 title: LinuxKit Deep Dive
 url: /2017/10/17/linuxkit-deep-dive/

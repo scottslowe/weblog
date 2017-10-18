@@ -5,7 +5,7 @@ comments: true
 date: 2017-10-17T15:00:00Z
 tags:
 - Docker
-- DockerCon
+- DockerCon2017
 - Linux
 title: Container-Relevant Kernel Developments
 url: /2017/10/17/container-relevant-kernel-developments/

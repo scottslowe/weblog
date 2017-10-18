@@ -5,7 +5,7 @@ comments: true
 date: 2017-10-17T10:00:00Z
 tags:
 - Docker
-- DockerCon
+- DockerCon2017
 - Kubernetes
 - OSS
 title: DockerCon EU 2017 Day 1 Keynote

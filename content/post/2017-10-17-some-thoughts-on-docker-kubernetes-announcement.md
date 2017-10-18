@@ -5,7 +5,7 @@ comments: true
 date: 2017-10-17T20:30:00Z
 tags:
 - Docker
-- DockerCon
+- DockerCon2017
 - Kubernetes
 title: Some Thoughts on the Docker-Kubernetes Announcement
 url: /2017/10/17/some-thoughts-on-docker-kubernetes-announcement/

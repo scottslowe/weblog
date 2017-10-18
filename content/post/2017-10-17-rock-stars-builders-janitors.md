@@ -5,7 +5,7 @@ comments: true
 date: 2017-10-17T13:00:00Z
 tags:
 - Docker
-- DockerCon
+- DockerCon2017
 title: "Rock Stars, Builders, and Janitors: You're Doing it Wrong"
 url: /2017/10/17/rock-stars-builders-janitors/
 ---
