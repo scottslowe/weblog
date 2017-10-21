@@ -15,11 +15,11 @@ This is a liveblog of the session titled "Looking Under the Hood: containerD", p
 
 Coulton starts out by explaining the session (it will focus a bit more on how to consume containerD in your own software projects), and provides a brief background on himself. Then he reviews the agenda, and dives right into the content.
 
-Up first, Coulton starts by providing a bit of explanation around what containerD is and does. He notes that there is a CLI tool for containerD (the `ctr` tool), and that containerD uses a gRPC API listening on a local UNIX socket. Coulton also discusses `ctr`, but points out that `ctr` is, currently, an unstable tool (changing too quickly). Next, Coulton talks about how containerD provides support for the OCI Image Spec and the OCI Runtime Spec (of which `runC` is an implementation), image push/pull support, and management of namespaces.
+Up first, Coulton starts by providing a bit of explanation around what containerD is and does. He notes that there is a CLI tool for containerD (the `ctr` tool), and that containerD uses a gRPC API listening on a local UNIX socket. Coulton also discusses `ctr`, but points out that `ctr` is, currently, an unstable tool (it is changing quickly). Next, Coulton talks about how containerD provides support for the OCI Image Spec and the OCI Runtime Spec (of which `runC` is an implementation), image push/pull support, and management of namespaces.
 
 Coulton moves into a demo showing off some of containerD's functionality, using the `ctr` tool.
 
-After the demo, Coulton talks about some other upstream projects that use containerD. Those projects include Moby, cri-containerD; containerD itself can leverage OCI-compliant runtimes (that adhere to the OCI Runtime Spec). Mostly containerD is used in Moby, LinuxKit, and Kubernetes.
+After the demo, Coulton talks about some other upstream projects that use containerD. Those projects include Moby, cri-containerD; he notes that containerD itself can leverage OCI-compliant runtimes (that adhere to the OCI Runtime Spec). Mostly containerD is used in Moby, LinuxKit, and Kubernetes.
 
 This leads Coulton into a discussion of the Moby Project, which is the upstream open source project that then feeds into the commercial products Docker CE and Docker EE. Various components of Moby include SwarmKit, HyperKit, InfraKit, LinuxKit, containerD, and runC.
 
