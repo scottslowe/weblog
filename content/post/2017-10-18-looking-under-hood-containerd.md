@@ -11,7 +11,7 @@ title: "Looking Under the Hood: containerD"
 url: /2017/10/18/looking-under-hood-containerd/
 ---
 
-This is a liveblog of the session titled "Looking Under the Hood: containerD", presented by Scott Coulton with Puppet (and also a Docker Captain). It's part of the Edge track here at DockerCon EU 2017, where I'm attending and liveblogging as many sessions as I'm able.<!--=more-->
+This is a liveblog of the session titled "Looking Under the Hood: containerD", presented by Scott Coulton with Puppet (and also a Docker Captain). It's part of the Edge track here at DockerCon EU 2017, where I'm attending and liveblogging as many sessions as I'm able.<!--more-->
 
 Coulton starts out by explaining the session (it will focus a bit more on how to consume containerD in your own software projects), and provides a brief background on himself. Then he reviews the agenda, and dives right into the content.
 
