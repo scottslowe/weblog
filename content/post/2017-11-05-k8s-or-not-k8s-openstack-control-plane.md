@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Category
+categories: Liveblog
 comments: true
 date: 2017-11-05T23:15:00Z
 tags:
