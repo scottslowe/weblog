@@ -14,7 +14,7 @@ title: Upcoming Spousetivities Events
 url: /2017/09/28/upcoming-spousetivities-events/
 ---
 
-Long-time readers/followers know that my wife, Crystal, runs a program called [Spousetivities][link-1]. This program organizes events for spouses/partners/significant others at IT industry conferences. This fall is a particularly busy season for Crystal and Spousetivities, as she'll be organizing events at DockerCon EU, the fall OpenStack Summit, and AWS re:Invent! Here are some details on these upcoming events.
+Long-time readers/followers know that my wife, Crystal, runs a program called [Spousetivities][link-1]. This program organizes events for spouses/partners/significant others at IT industry conferences. This fall is a particularly busy season for Crystal and Spousetivities, as she'll be organizing events at DockerCon EU, the fall OpenStack Summit, and AWS re:Invent! Here are some details on these upcoming events.<!--more-->
 
 ## DockerCon EU 2017
 

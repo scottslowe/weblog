@@ -25,7 +25,7 @@ tags:
 title: 'Technology Short Take 89'
 ---
 
-Welcome to Technology Short Take 89! I have a collection of newer materials and some older materials this time around, but hopefully all of them are still useful. (I needed to do some housekeeping on my Instapaper account, which is where I bookmark stuff that frequently lands here.) Enjoy!
+Welcome to Technology Short Take 89! I have a collection of newer materials and some older materials this time around, but hopefully all of them are still useful. (I needed to do some housekeeping on my Instapaper account, which is where I bookmark stuff that frequently lands here.) Enjoy!<!--more-->
 
 ## Networking
 
