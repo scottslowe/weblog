@@ -6,7 +6,7 @@ date: 2017-11-06T22:30:00Z
 tags:
 - OpenStack
 title: How to Deploy 800 Servers in 8 Hours
-url: /2017/11/06/
+url: /2017/11/06/how-deploy-800-servers-8-hours/
 ---
 
 This is a liveblog of the session titled "How to deploy 800 nodes in 8 hours automatically", presented by Tao Chen with T2Cloud (Tencent).<!--more-->
