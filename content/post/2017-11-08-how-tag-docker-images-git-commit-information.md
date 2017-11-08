@@ -53,6 +53,8 @@ I also create a GitHub release corresponding to the Git commit used to build an 
 
 I imagine there are probably better/more efficient ways of doing what I've done here; feel free to [hit me up on Twitter][link-3] to help me improve. Thanks for reading!
 
+**UPDATE:** Michael Gasch also pointed out that `git rev-parse HEAD` will return the full (long) commit hash from the last commit, so this is another way to get the information from Git. Given the nature of Git, no doubt there are countless more!
+
 
 
 [link-1]: http://container-solutions.com/tagging-docker-images-the-right-way/
