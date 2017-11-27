@@ -12,8 +12,7 @@ url: /2016/02/07/brief-site-update/
 
 As many of you may already know, GitHub recently [upgraded GitHub Pages to use Jekyll 3.0][link-3], and along with that upgrade comes a few (relatively) minor changes to the site as a result. Here are the details of what's changed here.
 
-The most notable difference is a change in the site's feed URL. Whereas the feed _used_ to be available at `http://blog.scottlowe.org/feed/`, changes in how Jekyll 3.0 handles permalinks mean that URL is no longer sustainable. Thus, the
-feed is now available at the following URLs:
+The most notable difference is a change in the site's feed URL. Whereas the feed _used_ to be available at `http://blog.scottlowe.org/feed/`, changes in how Jekyll 3.0 handles permalinks mean that URL is no longer sustainable. Thus, the feed is now available at the following URLs:
 
 Served directly from this site: [http://blog.scottlowe.org/feed.xml][link-1]  
 Served via Google FeedBurner: [http://feeds.scottlowe.org/slowe/content/feed/][link-2]
@@ -26,7 +25,7 @@ If you have any questions, or if you run into _any_ problems with the site, plea
 
 
 
-[link-1]: http://blog.scottlowe.org/feed.xml
+[link-1]: /feed.xml
 [link-2]: http://feeds.scottlowe.org/slowe/content/feed/
 [link-3]: https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
 [link-4]: https://twitter.com/scott_lowe

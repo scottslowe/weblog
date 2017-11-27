@@ -49,4 +49,4 @@ For other OVS-related content, have a look at any of [my OVS-tagged articles][li
 [link-2]: https://www.debian.org/
 [link-3]: https://github.com/openvswitch/ovs/blob/master/debian/openvswitch-switch.README.Debian
 [link-4]: https://github.com/openvswitch/ovs/blob/master/debian/openvswitch-switch.init#L30
-[link-5]: http://blog.scottlowe.org/tags/#OVS
+[link-5]: /tags/ovs/
