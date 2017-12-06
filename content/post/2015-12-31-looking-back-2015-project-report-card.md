@@ -13,7 +13,7 @@ title: 'Looking Back: 2015 Project Report Card'
 url: /2015/12/31/looking-back-2015-project-report-card/
 ---
 
-In early 2015, I posted [a look ahead at my planned 2015 projects][link-1], where I took a quick look at some of the self-development projects I set out for myself over the course of 2015. In this post, I'm going to review my progress on those 2015 projects.
+In early 2015, I posted [a look ahead at my planned 2015 projects][xref-4], where I took a quick look at some of the self-development projects I set out for myself over the course of 2015. In this post, I'm going to review my progress on those 2015 projects.
 
 The 2015 projects were as follows:
 
@@ -40,7 +40,6 @@ Thanks for another awesome year!
 
 
 
-[link-1]: http://blog.scottlowe.org/2015/01/16/looking-ahead-2015-projects/
 [link-2]: http://www.ansible.com/
 [link-3]: http://openvswitch.org/
 [link-4]: http://www.openstack.org/
@@ -51,3 +50,4 @@ Thanks for another awesome year!
 [xref-1]: {{< relref "2015-05-26-bootstrap-servers-ansible.md" >}}
 [xref-2]: {{< relref "2015-11-23-bootstrapping-cloud-instances-ansible.md" >}}
 [xref-3]: {{< relref "2015-12-28-next-gen-network-engineering-skills.md" >}}
+[xref-4]: {{< relref "2015-01-16-looking-ahead-2015-projects.md" >}}

@@ -30,7 +30,7 @@ Here are a few takeaways from my conversation on the podcast:
 Thanks to Interop and Technology Advice for the opportunity to participate on the podcast!
 
 
-[link-1]: http://blog.scottlowe.org/tags/#Interop2015
+[link-1]: /tags/interop2015
 [link-2]: https://soundcloud.com/b2bnationit/vmware
 [link-3]: http://technologyadvice.com/
 [link-4]: http://www.interop.com/
