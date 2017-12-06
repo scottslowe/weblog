@@ -43,7 +43,7 @@ Next, create a `Vagrantfile` with the right settings. The full list of settings 
 
 Here's a sample snippet from a `Vagrantfile` for use with the OpenStack provider:
 
-{{< highlight ruby >}}
+```ruby
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Specify the default SSH username and private key
@@ -69,7 +69,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     os.security_groups = ["default","basic-services"]
   end
 end
-{{< / highlight >}}
+```
 
 With the OpenStack provider plugin installed and a properly-configured `Vagrantfile` in place, then it's a simple matter of running `vagrant up`. Vagrant will authenticate against OpenStack, spin up an instance using the specified image and flavor, allocate a floating IP address, apply the listed security groups, and inject the specified SSH key. How's that for handy?
 
