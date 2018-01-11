@@ -36,7 +36,7 @@ First, you'll create a custom policy routing table, as outlined [here][1]. I'll 
 
 Next, you'll need to modify `/etc/network/interfaces` for the `tep0` interface so that a custom policy routing rule and custom route are installed whenever this interface is brought up. The new configuration stanza would look something like this:
 
-{{< highlight text >}}
+```
 auto tep0
 iface tep0 inet static
   address 192.168.200.10
@@ -45,7 +45,7 @@ iface tep0 inet static
   broadcast 192.168.200.255
   post-up ip rule add from 192.168.200.10 lookup tunnel
   post-up ip route add default via 192.168.200.1 dev tep0 table tunnel
-{{< / highlight >}}
+```
 
 (Click [here](https://gist.github.com/lowescott/5665588) for the same information as a GitHub Gist.)
 
