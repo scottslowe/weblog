@@ -75,7 +75,7 @@ Naturally, you'll need to replace `2222` with the SSH port reported by `vagrant 
 Additionally, you'll also need to forward port 2376 (the port that Docker uses to communicate across the network) in your `Vagrantfile` by adding a snippet like this:
 
     # Configure port forwarding to support remote access to Docker Engine
-    srv.vm.network "forwarded_port", guest: 2376, host: 2376
+    config.vm.network "forwarded_port", guest: 2376, host: 2376
 
 With the forwarded port specified in the `Vagrantfile` and the updated `docker-machine` command that includes the correct SSH port, then you'll be able to use Vagrant to provision/manage the VM(s) and use Docker Machine to provision/manage the Docker Engine(s).
 
