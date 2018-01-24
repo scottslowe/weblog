@@ -51,9 +51,13 @@ Because you're using Vagrant to provision the VMs, you have all the flexibility 
 
 I hope someone else finds this useful.
 
+**UPDATE**: I published [this update][xref-2] to add some information about using Vagrant and Docker Machine together with Vagrant providers that leverage a forwarded port on the loopback address for connectivity.
+
+
 
 [link-1]: http://www.vagrantup.com/
 [link-2]: https://www.docker.com/
 [link-3]: https://docs.docker.com/machine/
 [link-4]: http://www.vmware.com/products/fusion/
 [xref-1]: /tags/vagrant/
+[xref-2]: {{< relref "2018-01-24-update-on-using-docker-machine-with-vagrant.md" >}}
