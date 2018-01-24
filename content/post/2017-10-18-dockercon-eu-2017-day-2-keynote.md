@@ -5,7 +5,7 @@ comments: true
 date: 2017-10-18T10:30:00Z
 tags:
 - Docker
-- DockerCon
+- DockerCon2017
 - IBM
 title: DockerCon EU 2017 Day 2 Keynote
 url: /2017/10/18/dockercon-eu-2017-day-2-keynote/
