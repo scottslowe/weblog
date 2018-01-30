@@ -27,7 +27,7 @@ title: 'Technology Short Take 91'
 url: /2017/12/08/technology-short-take-91/
 ---
 
-Welcome to Technology Short Take 91! It's been a bit longer than usual since the last Tech Short Take (partly due to the US Thanksgiving holiday, partly due to vacation time, and partly due to business travel), so apologies for that. Still, there's a great collection of links and articles here for you, so dig in and enjoy.
+Welcome to Technology Short Take 91! It's been a bit longer than usual since the last Tech Short Take (partly due to the US Thanksgiving holiday, partly due to vacation time, and partly due to business travel), so apologies for that. Still, there's a great collection of links and articles here for you, so dig in and enjoy.<!--more-->
 
 ## Networking
 
