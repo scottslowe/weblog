@@ -65,11 +65,11 @@ You can store this file wherever you like, but make note of where the file is st
 
 This custom SSH configuration file is useless without explicitly telling Ansible to use these settings when connecting to Ansible-managed hosts. This is accomplished by creating (or modifying) `ansible.cfg` and adding the following setings:
 
-{{< highlight text >}}
+```
 [ssh_connection]
 ssh_args = -F ./ssh.cfg -o ControlMaster=auto -o ControlPersist=30m
 control_path = ~/.ssh/ansible-%%r@%%h:%%p
-{{< / highlight >}}
+```
 
 This is an area where I found a lot of incorrect and/or incomplete information. A number of articles failed to note that these settings need to be in the `[ssh_connection]` portion of `ansible.cfg`; based on my testing, it won't work properly unless the settings are in the right section. 
 
