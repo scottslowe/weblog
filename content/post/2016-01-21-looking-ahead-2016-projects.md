@@ -25,7 +25,7 @@ Here's the list for 2016. For some of the items below, I'm also going to include
 
 4. **Expand my knowledge, use, and focus on public cloud services.** It's pretty clear that the use of public cloud services---whether from Amazon, Google, Microsoft, or others---isn't going to go away or decrease. This year, I will spend time, energy, and focus becoming more familiar with using (and architecting designs for) public cloud services. _(Stretch goal: attain a certification in public cloud services, like AWS Certified Solutions Architect.)_
 
-5. **Complete a "wildcard project."** As I said in the 2015 project list, the purpose of including this item here is because I don't know what lies ahead. Having this project gives me freedom to explore as new projects, new technologies, and new ideas emerge over the course of 2015.
+5. **Complete a "wildcard project."** As I said in the 2015 project list, the purpose of including this item here is because I don't know what lies ahead. Having this project gives me freedom to explore as new projects, new technologies, and new ideas emerge over the course of 2016.
 
 What I've _not_ included in this list are things like continuing to blog (which I will most certainly do), continue with [my new podcast, the Full Stack Journey][xref-6] (which I will most certainly do), and continue to give back wherever possible (through [sharing materials on GitHub][link-3], by speaking at conferences and events, or by participating in mentorship programs like [vSensei][link-4]---all of which I will most certainly do).
 
