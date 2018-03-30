@@ -59,17 +59,17 @@ ff02::3 ipv6-allhosts
 127.0.0.2 client-hostname.DOMAIN.COM client-hostname
 ```
 
-Next, we configure the `krb5.conf` file. In the interest of brevity, I won't paste it into this article; rather, just follow [this link](https://gist.github.com/lowescott/3eb79dec00dc8e754b6c) to view it on GitHub (and have the option to download it).
+Next, we configure the `krb5.conf` file. In the interest of brevity, I won't paste it into this article; rather, just follow [this link](https://gist.github.com/scottslowe/3eb79dec00dc8e754b6c) to view it on GitHub (and have the option to download it).
 
-Once Kerberos is configured, we configure LDAP via `ldap.conf`. Again, just follow [this link](https://gist.github.com/lowescott/29aed4672a012946f1cb) to view the full file.
+Once Kerberos is configured, we configure LDAP via `ldap.conf`. Again, just follow [this link](https://gist.github.com/scottslowe/29aed4672a012946f1cb) to view the full file.
 
-And then configure the Name Switch Service to use LDAP. [This link](https://gist.github.com/lowescott/55f2ddd14214499a629c) will show you a properly-formatted NSS configuration.
+And then configure the Name Switch Service to use LDAP. [This link](https://gist.github.com/scottslowe/55f2ddd14214499a629c) will show you a properly-formatted NSS configuration.
 
-Almost there---next we need to make sure that time synchronization is working, since this is a prerequisite for Kerberos authentication. To make sure time synchronization is working, we'll configure NTP using a configuration similar to [this configuration](https://gist.github.com/lowescott/1375d23864c8ad41498a).
+Almost there---next we need to make sure that time synchronization is working, since this is a prerequisite for Kerberos authentication. To make sure time synchronization is working, we'll configure NTP using a configuration similar to [this configuration](https://gist.github.com/scottslowe/1375d23864c8ad41498a).
 
-At this point we have Kerberos authentication configured, LDAP configured, NSS configured to use LDAP, and time synchronization configured and running. Now we need to get Samba configured to help automate the process of integrating into Active Directory. A sample configuration such as [this one](https://gist.github.com/lowescott/790ffff17a56e2d21189) would get the job done.
+At this point we have Kerberos authentication configured, LDAP configured, NSS configured to use LDAP, and time synchronization configured and running. Now we need to get Samba configured to help automate the process of integrating into Active Directory. A sample configuration such as [this one](https://gist.github.com/scottslowe/790ffff17a56e2d21189) would get the job done.
 
-SLED uses PAM (Pluggable Authentication Mechanism) to control authentication and authorization, so we next need to configure PAM to use Kerberos and LDAP, where necessary. There are a number of files that need to be configured to make this happen; [this GitHub gist](https://gist.github.com/lowescott/2f3bb6cd609cc2926178) shows the various files and how each would need to be configured.
+SLED uses PAM (Pluggable Authentication Mechanism) to control authentication and authorization, so we next need to configure PAM to use Kerberos and LDAP, where necessary. There are a number of files that need to be configured to make this happen; [this GitHub gist](https://gist.github.com/scottslowe/2f3bb6cd609cc2926178) shows the various files and how each would need to be configured.
 
 All these files are in turn referenced by a "master" PAM configuration file, like this:
 

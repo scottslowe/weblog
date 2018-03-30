@@ -113,7 +113,7 @@ To experiment with this sort of thing yourself, I've added some content to [my G
 
 
 [link-1]: https://docs.docker.com/engine/admin/systemd/
-[link-2]: https://github.com/lowescott/learning-tools/
+[link-2]: https://github.com/scottslowe/learning-tools/
 [link-3]: https://www.projectatomic.io/
 [link-4]: https://www.docker.com/
 [link-5]: https://www.freedesktop.org/wiki/Software/systemd/

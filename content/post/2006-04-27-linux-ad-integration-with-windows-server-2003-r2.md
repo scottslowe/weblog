@@ -83,5 +83,5 @@ This configuration was tested on Red Hat Linux 9.0 as well as CentOS 4.3.
 
 [1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
 [2]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
-[gist-1]: https://gist.github.com/lowescott/67a3f8c36270c7e6376b
-[gist-2]: https://gist.github.com/lowescott/a7c89505c46a13d95ebe
+[gist-1]: https://gist.github.com/scottslowe/67a3f8c36270c7e6376b
+[gist-2]: https://gist.github.com/scottslowe/a7c89505c46a13d95ebe

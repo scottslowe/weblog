@@ -121,6 +121,6 @@ Thanks for reading!
 [link-4]: http://www.michaelm.info/blog/?p=1378
 [link-5]: http://www.ansible.com/home
 [link-6]: http://www.ubuntu.com/server
-[link-7]: https://gist.github.com/lowescott/9116c0bf80f931a5eca2
+[link-7]: https://gist.github.com/scottslowe/9116c0bf80f931a5eca2
 [link-8]: http://ftp.dc.volia.com/pub/debian/preseed/partman-auto-recipe.txt
 [link-9]: https://wikitech.wikimedia.org/wiki/Partman_Recipes

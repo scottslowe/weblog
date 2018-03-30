@@ -32,7 +32,7 @@ The basic process for connecting a Linux container to OVS using libvirt looks so
 
 Steps 2, 3, and 4 were covered in my previous post on using LXC and libvirt, so I won't repeat them here. Step 1 is the focus here. (If you are a long-time reader and/or well-versed with libvirt and OVS, there isn't a great deal of new information here; I just wanted to present it in the context of LXC for the sake of completeness.)
 
-To create a libvirt virtual network to front-end OVS, you need to create an XML definition that you can use with `virsh` to define the virtual network. Here's an example XML definition (click [here](https://gist.github.com/lowescott/7748398) for an option to download this snippet):
+To create a libvirt virtual network to front-end OVS, you need to create an XML definition that you can use with `virsh` to define the virtual network. Here's an example XML definition (click [here](https://gist.github.com/scottslowe/7748398) for an option to download this snippet):
 
 ``` xml
 <network>

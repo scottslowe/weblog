@@ -119,5 +119,5 @@ That's all for this time. The next Technology Short Take will be published on Fr
 [link-29]: https://software.intel.com/en-us/articles/introducing-the-intel-software-guard-extensions-tutorial-series
 [link-30]: https://github.com/vmware/chaperone
 [link-31]: http://www.punchingclouds.com/2016/11/29/hci-automated-deployment-configuration-vsphere-vsan-nsx-vio-the-devops-way/
-[link-32]: https://github.com/lowescott/learning-tools/tree/master/ovn
+[link-32]: https://github.com/scottslowe/learning-tools/tree/master/ovn
 [xref-1]: {{< relref "2015-02-06-quick-intro-to-consul.md" >}}

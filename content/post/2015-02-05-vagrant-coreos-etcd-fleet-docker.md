@@ -108,7 +108,7 @@ If you'd like some additional information on some of the technologies mentioned 
 
 
 [link-1]: http://professionalvmware.com/2015/02/vbrownbag-devops-follow-up-docker-and-friends-with-scott-lowe-scott_lowe/
-[link-2]: https://github.com/lowescott/2015-vbrownbag-docker
+[link-2]: https://github.com/scottslowe/2015-vbrownbag-docker
 [link-3]: http://www.vagrantup.com/
 [link-4]: https://github.com/coreos/coreos-vagrant
 [link-5]: https://discovery.etcd.io/new

@@ -52,7 +52,7 @@ Since we're bypassing the existing configuration file, all you really need is an
 
 The other file you need has the actual options and rules that will be passed to `pf` when it starts. You can get fancy here and use a separate file to define macros and tables, or you can bundle the macros and tables in with the rules. Whatever approach you take, be **sure** that you have the commands in this file in the right order: options, normalization, queueing, translation, and filtering. Failure to put things in the right order will cause `pf` not to enable and will leave your system without this additional layer of network protection.
 
-A _very_ simple set of rules in an anchor might look something like this (click [here](https://gist.github.com/lowescott/5581710) for an option to download this code snippet):
+A _very_ simple set of rules in an anchor might look something like this (click [here](https://gist.github.com/scottslowe/5581710) for an option to download this code snippet):
 
 ``` text
 # Options
@@ -104,7 +104,7 @@ If this command reports errors, go back and fix them before proceeding.
 
 Creating the launchd item simply involves creating a properly-formatted XML file and placing it in `/Library/LaunchDaemons`. It must be owned by root, otherwise it won't be processed at all. If you aren't clear on how to make sure it's owned by root, go do a bit of reading on `sudo` and `chown`.
 
-Here's a launchd item you might use for `pf` (click [here](https://gist.github.com/lowescott/5581726) for an option to download this code snippet):
+Here's a launchd item you might use for `pf` (click [here](https://gist.github.com/scottslowe/5581726) for an option to download this code snippet):
 
 ``` xml
 <?xml version="1.0" encoding="UTF-8" ?>

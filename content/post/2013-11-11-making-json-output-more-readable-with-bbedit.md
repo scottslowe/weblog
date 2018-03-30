@@ -66,6 +66,6 @@ Place this script (or a link to this script) in the `~/Library/Application Suppo
 
 Given that I'm new to a lot of this stuff, I'm sure that I have probably overlooked something along the way. There might be better and/or more efficient ways of handling this, or better tools to use. If you have any suggestions on how to improve any of this---or just suggestions on how I might do better in my API explorations---feel free to speak out in the comments below.
 
-[gist-1]: https://gist.github.com/lowescott/7370184
-[gist-2]: https://gist.github.com/lowescott/7364842
-[gist-3]: https://gist.github.com/lowescott/7370142
+[gist-1]: https://gist.github.com/scottslowe/7370184
+[gist-2]: https://gist.github.com/scottslowe/7364842
+[gist-3]: https://gist.github.com/scottslowe/7370142

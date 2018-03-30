@@ -107,8 +107,8 @@ With this structure in place, when the node named "server.domain.net" runs Puppe
 I freely admit that I'm still relatively new to Puppet, so I'm sure there are numerous ways this approach could be improved. I tested this code on both CentOS 6.3 as well as Ubuntu 12.04, and it seems to work fine on both platforms. Feel free to submit suggestions for improvement, corrections, or clarifications in the comments below.
 
 
-[gist-1]: https://gist.github.com/lowescott/4050213
-[gist-2]: https://gist.github.com/lowescott/4050229
-[gist-3]: https://gist.github.com/lowescott/4050236
+[gist-1]: https://gist.github.com/scottslowe/4050213
+[gist-2]: https://gist.github.com/scottslowe/4050229
+[gist-3]: https://gist.github.com/scottslowe/4050236
 
 [1]: {{< relref "2012-07-09-updated-multi-os-puppet-configuration.md" >}}

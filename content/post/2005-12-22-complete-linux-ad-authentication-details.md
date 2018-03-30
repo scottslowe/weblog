@@ -79,5 +79,5 @@ At this point, any PAM-aware service that is configured to use the stacked syste
 [3]: {{< relref "2005-07-18-minor-linux-ad-hiccup-fixed-hopefully.md" >}}
 [4]: {{< relref "2005-08-16-strange-ntpd-problem-on-centos-41.md" >}}
 [5]: {{< relref "2005-12-19-ntpd-on-centos-42.md" >}}
-[gist-1]: https://gist.github.com/lowescott/67a3f8c36270c7e6376b
-[gist-2]: https://gist.github.com/lowescott/722dc11cd7967c6ea12b
+[gist-1]: https://gist.github.com/scottslowe/67a3f8c36270c7e6376b
+[gist-2]: https://gist.github.com/scottslowe/722dc11cd7967c6ea12b

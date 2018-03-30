@@ -47,7 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 end
 {{< / highlight >}}
 
-(Click [here](https://gist.github.com/lowescott/0f82601987bf1f39c941) for a downloadable GitHub Gist with this code.)
+(Click [here](https://gist.github.com/scottslowe/0f82601987bf1f39c941) for a downloadable GitHub Gist with this code.)
 
 This `Vagrantfile` sets the box ("ubuntu/precise64"), the box URL (retrieves from Canonical's repository of cloud images), and then sets the "/vagrant" directory in the VM to be shared/synced with the current (".") directory on the host---in this case, the current directory is the directory where the `Vagrantfile` itself is stored.
 

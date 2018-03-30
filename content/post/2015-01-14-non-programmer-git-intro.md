@@ -43,14 +43,14 @@ I've mentioned several times that Git, as a distributed version control system, 
 
 Cloning a Git repository is super simple: just use the `git clone` command with a URL, like this (this is the GitHub repo that contains this blog):
 
-	https://github.com/lowescott/lowescott.github.io.git
+	https://github.com/scottslowe/lowescott.github.io.git
 
 I need to point out a couple of things here. First, don't conflate Git and [GitHub][link-2]. GitHub provides a service for hosting Git repositories, but you aren't **required** to use GitHub---you could use a private server running Git, or a competing public service like BitBucket. The underlying process for cloning a remote Git repository is the same. Second, this particular example uses HTTPS, but other protocols are supported. The protocol you should use will depend on how you're using Git. In this post, I'll use GitHub and HTTPS in my examples.
 
 In addition to making a full copy of the remote repository on the system where you run `git clone`, a link back to the original remote is also created. You can see this link by running the command `git remote -v`, which will produce output something like this:
 
-	origin	https://github.com/lowescott/lowescott.github.io.git (fetch)
-	origin	https://github.com/lowescott/lowescott.github.io.git (push)
+	origin	https://github.com/scottslowe/lowescott.github.io.git (fetch)
+	origin	https://github.com/scottslowe/lowescott.github.io.git (push)
 
 This link is needed in order to allow users to collaborate. Although each Git repository is completely standalone, this link allows users to push changes to a remote repository or pull changes from a remote repository.
 

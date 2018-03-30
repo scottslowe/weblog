@@ -21,7 +21,7 @@ What you _won't_ do, though, is make changes directly to the GitHub repository. 
 
 I talked about how to clone a repository in my earlier article, but let's look at it again. GitHub supports cloning via SSH as well as via HTTPS; I tend to use HTTPS as it is more likely to work in all environments (SSH can be blocked in many environments). So, to clone the GitHub repository for my weblog, I'd use the `git clone` command, like this:
 
-	git clone https://github.com/lowescott/lowescott.github.io.git
+	git clone https://github.com/scottslowe/lowescott.github.io.git
 
 The generic form of this command is `git clone <URL>`. As I mentioned in my earlier Git article, this clones the entire repository down to your local system and automatically adds a Git remote (a link, if you will) back to the repository on GitHub. (You can see the Git remote by running `git remote -v`.) In the specific instance of using GitHub, you'll automatically have a Git remote named `origin` that refers to the GitHub repository.
 

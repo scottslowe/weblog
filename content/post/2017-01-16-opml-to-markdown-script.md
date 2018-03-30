@@ -38,6 +38,6 @@ Thanks!
 
 
 [link-1]: http://pandoc.org/
-[link-2]: https://github.com/lowescott/scripts
+[link-2]: https://github.com/scottslowe/scripts
 [xref-1]: {{< relref "2014-05-19-some-useful-markdown-tools-for-os-x.md" >}}
 [xref-2]: {{< relref "2016-12-16-linux-migration-initial-progress-report.md" >}}

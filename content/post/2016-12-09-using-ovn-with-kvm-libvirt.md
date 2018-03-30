@@ -181,7 +181,7 @@ There's quite a bit of information out there about OVN (see [Russell Bryant's we
 
 
 [link-1]: http://openvswitch.org/
-[link-2]: https://github.com/lowescott/learning-tools
+[link-2]: https://github.com/scottslowe/learning-tools
 [link-3]: https://blog.russellbryant.net/
 [link-4]: http://openvswitch.org/support/dist-docs/INSTALL.rst.html
 [link-5]: https://wiki.ubuntu.com/OpenStack/CloudArchive

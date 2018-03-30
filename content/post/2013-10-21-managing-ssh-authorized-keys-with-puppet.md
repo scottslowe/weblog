@@ -16,7 +16,7 @@ wordpress_id: 3313
 
 In this post, I'll show you how I extended my solution for [managing user accounts with Puppet][1] to include managing SSH authorized keys. With this solution in place, user accounts managed through Puppet can also include their SSH public key, and that public key will automatically be installed on hosts where the account is realized. All in all, I think it's a pretty cool solution.
 
-Just to refresh your memory, here's the original Puppet manifest code I posted in the original article; this code uses define-based virtual user resources that you then realize on a per-host basis (click [here](https://gist.github.com/lowescott/4050213) for an option to download this code snippet).
+Just to refresh your memory, here's the original Puppet manifest code I posted in the original article; this code uses define-based virtual user resources that you then realize on a per-host basis (click [here](https://gist.github.com/scottslowe/4050213) for an option to download this code snippet).
 
 ``` puppet
 # Defined type for creating virtual user accounts
@@ -51,7 +51,7 @@ define accounts::virtual ($uid,$realname,$pass) {
 
 Since I posted this original code, I've made a few changes. I switched some of the hard-coded values to parameters (stored in a separate subclass), and I made a few stylistic/syntactic changes based on running the code through `puppet-lint`. But, by and large, this is still quite similar to the code I'm running right now.
 
-Here's the code after I modified it to include managing SSH authorized keys for user accounts (again, click [here](https://gist.github.com/lowescott/7064759) for an option to download the code):
+Here's the code after I modified it to include managing SSH authorized keys for user accounts (again, click [here](https://gist.github.com/scottslowe/7064759) for an option to download the code):
 
 ``` puppet
 define accounts::virtual ($uid,$realname,$pass,$sshkeytype,$sshkey) {

@@ -26,8 +26,8 @@ I hope that these two environments prove useful to others who are new to OVN and
 
 
 
-[link-1]: https://github.com/lowescott/learning-tools
+[link-1]: https://github.com/scottslowe/learning-tools
 [link-2]: http://openvswitch.org/
 [link-3]: https://www.vagrantup.com/
-[link-4]: https://github.com/lowescott/learning-tools/tree/master/ovn
-[link-5]: https://github.com/lowescott/learning-tools/tree/master/ovn-docker-ansible
+[link-4]: https://github.com/scottslowe/learning-tools/tree/master/ovn
+[link-5]: https://github.com/scottslowe/learning-tools/tree/master/ovn-docker-ansible

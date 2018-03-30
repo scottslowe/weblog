@@ -63,7 +63,7 @@ I also experimented with Markdown-based presentations while still using OS X; [h
 [link-6]: http://www.mozilla.com/firefox/
 [link-7]: https://getfedora.org/
 [link-8]: https://remarkjs.com
-[link-9]: https://github.com/lowescott/scripts
+[link-9]: https://github.com/scottslowe/scripts
 [link-10]: https://git-scm.com/
 [link-11]: https://packagecontrol.io/packages/Markdown%20Extended
 [link-12]: https://packagecontrol.io/packages/Monokai%20Extended

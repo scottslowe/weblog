@@ -116,7 +116,7 @@ Additionally, see the documentation for [the `vagrant-azure` plugin on GitHub][l
 [link-3]: http://www.vmware.com/products/fusion.html
 [link-4]: http://www.vmware.com/products/workstation.html
 [link-5]: https://azure.microsoft.com/
-[link-6]: https://github.com/lowescott/learning-tools
+[link-6]: https://github.com/scottslowe/learning-tools
 [link-7]: https://github.com/Azure/vagrant-azure
 [link-8]: https://www.terraform.io/
 [xref-1]: {{< relref "2015-09-28-using-vagrant-with-openstack.md" >}}

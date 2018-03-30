@@ -119,7 +119,7 @@ As I mentioned earlier, you're passing JSON-encoded data to the NSX controller; 
 }
 {{< / highlight >}}
 
-(Click [here](https://gist.github.com/lowescott/9103770) for this JSON data as a GitHub gist.)
+(Click [here](https://gist.github.com/scottslowe/9103770) for this JSON data as a GitHub gist.)
 
 Once again, I recommend piping the output of this command through `python -m json.tool`, as what you'll get back on a successful call is some useful JSON data that includes, among other things, the UUID of the object (logical switch, in this case) that you just created. You can use this UUID in subsequent API calls to list properties, change properties, add logical switch ports, etc.
 

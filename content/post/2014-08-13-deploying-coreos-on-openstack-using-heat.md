@@ -77,7 +77,7 @@ resources:
               command: start
 {{< / highlight >}}
 
-(Click [here](https://gist.github.com/lowescott/43ea98cf49ff91445d0f) to view the code block above as a GitHub Gist.)
+(Click [here](https://gist.github.com/scottslowe/43ea98cf49ff91445d0f) to view the code block above as a GitHub Gist.)
 
 Let's walk through this template real quick:
 

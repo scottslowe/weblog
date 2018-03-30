@@ -76,4 +76,4 @@ If you're interested in trying this out for yourself, check out the `docker-macv
 
 [link-1]: http://www.docker.com/
 [link-2]: https://github.com/gopher-net/macvlan-docker-plugin
-[link-3]: https://github.com/lowescott/learning-tools
+[link-3]: https://github.com/scottslowe/learning-tools

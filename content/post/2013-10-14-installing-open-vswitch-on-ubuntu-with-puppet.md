@@ -24,7 +24,7 @@ This code makes a couple of assumptions:
 
 2. It assumes that you have Debian packages for OVS in that internal Apt repository. Depending on which version of OVS you need (I needed a newer version than was available in the public repositories), you might be able to get away with just using the public repositories.
 
-OK, with the assumptions out of the way, let's have a look at the code. If you're interested in downloading this code (for your own use or modification), please click [here](https://gist.github.com/lowescott/6938382).
+OK, with the assumptions out of the way, let's have a look at the code. If you're interested in downloading this code (for your own use or modification), please click [here](https://gist.github.com/scottslowe/6938382).
 
 ``` puppet
 if $::operatingsystem == 'Ubuntu' {

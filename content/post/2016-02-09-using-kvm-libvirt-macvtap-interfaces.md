@@ -75,7 +75,7 @@ If you're interested in playing with this but don't want to spend a bunch of tim
 [link-3]: http://openvswitch.org/
 [link-4]: http://download.cirros-cloud.net/0.3.2/
 [link-5]: http://www.vagrantup.com/
-[link-6]: https://github.com/lowescott/learning-tools
+[link-6]: https://github.com/scottslowe/learning-tools
 [link-7]: http://www.vmware.com/products/fusion/
 [link-8]: https://www.debian.org/
 [link-9]: http://www.ubuntu.com/

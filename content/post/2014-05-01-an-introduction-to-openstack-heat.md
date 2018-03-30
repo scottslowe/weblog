@@ -143,7 +143,7 @@ Now that you have an idea about Heat's architecture, I'll walk you through an ex
 }
 {{< / highlight >}}
 
-(Want a downloadable version of the code above? Click [here](https://gist.github.com/lowescott/485fa69644d646052149) to see it as a GitHub Gist.)
+(Want a downloadable version of the code above? Click [here](https://gist.github.com/scottslowe/485fa69644d646052149) to see it as a GitHub Gist.)
 
 Let's walk through this template real quick:
 

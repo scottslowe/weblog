@@ -49,7 +49,7 @@ I have more Photon-related content planned, so stay tuned. In the meantime, enjo
 [link-1]: https://github.com/vmware/photon
 [link-2]: http://www.vmware.com/products/fusion
 [link-3]: http://www.vagrantup.com
-[link-4]: https://github.com/lowescott/learning-tools/
+[link-4]: https://github.com/scottslowe/learning-tools/
 [link-5]: https://github.com/vmware/vagrant-guests-photon
 [link-6]: https://github.com/mitchellh/vagrant/pull/5612
 [link-7]: https://atlas.hashicorp.com/vmware/boxes/photon

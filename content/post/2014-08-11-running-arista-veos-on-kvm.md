@@ -123,7 +123,7 @@ One you've downloaded these files, you can use the following libvirt domain XML 
 </domain>
 {{< / highlight >}}
 
-(Click [here](https://gist.github.com/lowescott/ca31c88a52284eb12ac2) for this XML text as a GitHub Gist.)
+(Click [here](https://gist.github.com/scottslowe/ca31c88a52284eb12ac2) for this XML text as a GitHub Gist.)
 
 There are a few key things to note about this libvirt domain XML:
 

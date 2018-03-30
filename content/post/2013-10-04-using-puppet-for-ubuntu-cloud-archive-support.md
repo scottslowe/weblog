@@ -33,7 +33,7 @@ apt::source { 'ubuntu-cloud':
 }
 ```
 
-(You can download this code from [here](https://gist.github.com/lowescott/6827241), if you'd like.)
+(You can download this code from [here](https://gist.github.com/scottslowe/6827241), if you'd like.)
 
 Once you put this into the Puppet manifest and then refresh the system's configuration, you should see a file named `ubuntu-cloud.list` appear in the `/etc/apt/sources.list.d` directory on your Ubuntu system. (By the way, I usually wrap that code in a conditional like `if $::operatingsystem == 'Ubuntu'` or similar.) Once that file is there, simply run `apt-get update` and you should now be able to install packages from the Ubuntu Cloud Archive.
 

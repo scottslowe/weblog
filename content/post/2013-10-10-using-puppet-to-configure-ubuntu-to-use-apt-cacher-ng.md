@@ -27,7 +27,7 @@ class {'apt':
 }
 ```
 
-(You can also see this code block as a GitHub Gist [here](https://gist.github.com/lowescott/6924675).)
+(You can also see this code block as a GitHub Gist [here](https://gist.github.com/scottslowe/6924675).)
 
 This is a really simple block of code, but I'm publishing it here just for the sake of completeness and in the remote event someone else will find it useful. Because this a distro-specific thing (only applies to Debian and Debian derivatives like Ubuntu), you might want to wrap this in a conditional (like `If $::osfamily == 'Debian'` or similar) to prevent errors in the event this manifest is (accidentally) applied to a non-Debian distribution.
 

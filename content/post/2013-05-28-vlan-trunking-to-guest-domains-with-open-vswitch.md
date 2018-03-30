@@ -123,7 +123,7 @@ You can repeat this configuration for multiple VLAN interfaces.
 I'll have to admit that I can't immediately think of some useful use cases for this sort of configuration. At first glance, you might think that it would be useful in situations where you need logical separation, but I think there are better ways than VLANs to accomplish this task (and those ways are probably simpler). I primarily set out to document this in order to better solidify my knowledge of how OVS works and is configured. However, I'd be happy to hear from others on what they think might be interesting or useful use cases for this sort of configuration. Feel free to add your thoughts in the comments below. Courteous comments are always welcome!
 
 
-[gist-1]: https://gist.github.com/lowescott/4057683
-[gist-2]: https://gist.github.com/lowescott/5658227
+[gist-1]: https://gist.github.com/scottslowe/4057683
+[gist-2]: https://gist.github.com/scottslowe/5658227
 [1]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}
 [2]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}

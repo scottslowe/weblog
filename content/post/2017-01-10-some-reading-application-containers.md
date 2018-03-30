@@ -33,5 +33,5 @@ I was successful in using Docker to containerize Firefox (see [my "dockerfiles" 
 [link-5]: https://insecure.ws/linux/systemd_nspawn.html#using-your-own-containers-with-systemd-nspawn-overlayfs
 [link-6]: https://www.ubuntu.com/
 [link-7]: https://www.docker.com/
-[link-8]: https://github.com/lowescott/dockerfiles
+[link-8]: https://github.com/scottslowe/dockerfiles
 [link-9]: http://blog.fntlnz.wtf/post/systemd-nspawn/

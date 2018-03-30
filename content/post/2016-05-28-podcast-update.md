@@ -58,7 +58,7 @@ Thanks!
 
 [link-1]: http://fullstackjourney.com
 [link-2]: http://jekyllrb.com/
-[link-3]: https://github.com/lowescott/fullstackjourney
+[link-3]: https://github.com/scottslowe/fullstackjourney
 [link-4]: https://itunes.apple.com/us/podcast/full-stack-journey/id1073172158?mt=2
 [link-5]: http://fullstackjourney.com/2016/04/14/full-stack-journey-ep004/
 [link-6]: http://aws.amazon.com/s3/

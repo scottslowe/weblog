@@ -36,12 +36,12 @@ Stay tuned for more updates as this project progresses.
 
 
 [link-1]: http://openvswitch.org/
-[link-2]: https://github.com/lowescott/ovs-cookbook
+[link-2]: https://github.com/scottslowe/ovs-cookbook
 [link-3]: https://www.gitbook.com/book/scottslowe/ovs-cookbook/details
 [link-4]: https://www.gitbook.com/
 [link-5]: https://en.wikipedia.org/wiki/Markdown
-[link-6]: https://github.com/lowescott/ovs-cookbook/issues
-[link-7]: https://github.com/lowescott/ovs-cookbook/pulls
+[link-6]: https://github.com/scottslowe/ovs-cookbook/issues
+[link-7]: https://github.com/scottslowe/ovs-cookbook/pulls
 [link-8]: https://git-scm.com/
 [xref-1]: {{< relref "2017-01-31-looking-ahead-2017-projects.md" >}}
 [xref-2]: {{< relref "2017-03-28-canceling-ovs-cookbook-project.md" >}}

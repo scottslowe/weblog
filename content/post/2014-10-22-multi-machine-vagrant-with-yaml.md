@@ -54,7 +54,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 end
 {{< / highlight >}}
 
-(click [here](https://gist.github.com/lowescott/eae23022db8cc95508c6) to get this as a GitHub Gist you can download.)
+(click [here](https://gist.github.com/scottslowe/eae23022db8cc95508c6) to get this as a GitHub Gist you can download.)
 
 You'll note that there is no specific data in this Vagrantfile; all the pertinent configuration data is found in an external YAML file, named `servers.yaml` (the name is obviously configurable within the Vagrantfile). The Vagrantfile simply retrieves the data from the YAML file and iterates over it.
 
@@ -76,7 +76,7 @@ Here's a sample `servers.yaml` you could use with this Vagrantfile:
   ip: 172.17.8.103
 {{< / highlight >}}
 
-(Click [here](https://gist.github.com/lowescott/4ca1e0c960bbd450ea0e) for a downloadable GitHub Gist.)
+(Click [here](https://gist.github.com/scottslowe/4ca1e0c960bbd450ea0e) for a downloadable GitHub Gist.)
 
 Using the sample `servers.yaml` file shown above, the Vagrantfile would create three VMs, using the CoreOS Alpha Vagrant box, each with 512MB of RAM and the corresponding IP address. To add more systems to the configuration, simply add lines to the YAML file and you're done. It's as simple as that.
 

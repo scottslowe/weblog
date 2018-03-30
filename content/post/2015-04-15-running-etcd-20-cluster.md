@@ -105,7 +105,7 @@ You can find the Upstart script, machine-specific override files, a provisioning
 
 [link-1]: https://github.com/coreos/etcd
 [link-2]: https://coreos.com
-[link-3]: https://github.com/lowescott/learning-tools
+[link-3]: https://github.com/scottslowe/learning-tools
 [link-4]: http://www.vagrantup.com/
 [link-5]: https://github.com/coreos/etcd/releases/tag/v2.0.9
 [link-6]: http://upstart.ubuntu.com/cookbook/#override-files

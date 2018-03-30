@@ -104,7 +104,7 @@ ExecStart=/usr/bin/docker run --rm --name nginx -p 80:80 nginx
 ExecStop=/usr/bin/docker stop nginx
 ```
 
-(Click [here](https://gist.github.com/lowescott/a0777d789d91464441fd) to see the code excerpt as a GitHub Gist.)
+(Click [here](https://gist.github.com/scottslowe/a0777d789d91464441fd) to see the code excerpt as a GitHub Gist.)
 
 With this file in place on the system where you are running `fleetctl`, you can submit this to the etcd cluster with this command:
 
@@ -130,7 +130,7 @@ ExecStop=/usr/bin/docker stop nginx-01
 X-Conflicts=nginx.*.service
 ```
 
-(Click [here](https://gist.github.com/lowescott/dc3cadbfbfd3ae3ebe08) for the code block above as a GitHub Gist.)
+(Click [here](https://gist.github.com/scottslowe/dc3cadbfbfd3ae3ebe08) for the code block above as a GitHub Gist.)
 
 Note the difference here: the Docker container name is changed (to `nginx-01`) and the filename is different (now `nginx.1.service`). If you make multiple copies of this file, changing the Docker container name and the unit filename, you can submit all of the units to the etcd cluster at the same time. For example, let's say you wanted to run 3 Nginx containers on the cluster. Make three copies of the file (`nginx.1.service`, `nginx.2.service`, and `nginx.3.service`), modifying the container name in each copy. Make sure that you have the "X-Conflicts" line in there; that tells fleet not to place two Nginx containers on the same system in the cluster. Then submit them with this command:
 

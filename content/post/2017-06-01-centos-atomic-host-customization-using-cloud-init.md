@@ -106,8 +106,8 @@ Enjoy!
 
 
 
-[link-1]: https://github.com/lowescott/learning-tools/tree/master/centos-atomic/docker-tcp-ansible
+[link-1]: https://github.com/scottslowe/learning-tools/tree/master/centos-atomic/docker-tcp-ansible
 [link-2]: https://bugzilla.redhat.com/show_bug.cgi?id=1457978
 [link-3]: http://dustymabe.com/2015/08/03/installingstarting-systemd-services-using-cloud-init/
-[link-4]: https://github.com/lowescott/learning-tools/
+[link-4]: https://github.com/scottslowe/learning-tools/
 [xref-1]: {{< relref "2017-03-02-customizing-docker-centos-atomic-host.md" >}}

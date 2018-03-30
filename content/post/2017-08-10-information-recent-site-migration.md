@@ -42,7 +42,7 @@ Hopefully, this helps answer some questions about why I migrated the site (again
 [link-4]: https://gohugo.io/
 [link-5]: /tags/
 [link-6]: /categories/
-[link-7]: https://github.com/lowescott/weblog/
+[link-7]: https://github.com/scottslowe/weblog/
 [link-8]: https://aws.amazon.com/s3/
 [link-9]: https://aws.amazon.com/cloudfront/
 [link-10]: https://github.com/bep/s3deploy

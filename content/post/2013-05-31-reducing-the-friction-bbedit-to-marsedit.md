@@ -45,6 +45,6 @@ So, my second pass at automating the process is much more comprehensive. The App
 
 I store the script in BBEdit's scripts folder, which means I can invoke the script easily from within BBEdit.
 
-The entire AppleScript is available [right here](https://gist.github.com/lowescott/5686217) as a GitHub Gist.
+The entire AppleScript is available [right here](https://gist.github.com/scottslowe/5686217) as a GitHub Gist.
 
 Now, I can write my Markdown in BBEdit, invoke the script, and get dropped out to HTML code sitting in a new blog post in MarsEdit. All I need to do to publish the post at that point is supply the metadata (tags, categories, title, excerpt) and click Send to Blog. Done. (I used this process for this post, in fact.) How's that for reduced friction?

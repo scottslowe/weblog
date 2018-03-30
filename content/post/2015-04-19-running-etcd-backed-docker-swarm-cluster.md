@@ -101,7 +101,7 @@ Congratulations---you've just set up an etcd-backed Docker Swarm cluster! If you
 
 [link-1]: https://docs.docker.com/swarm/
 [link-2]: https://github.com/coreos/etcd
-[link-3]: https://github.com/lowescott/learning-tools/
+[link-3]: https://github.com/scottslowe/learning-tools/
 [link-4]: http://www.vagrantup.com/
 [link-5]: http://www.ubuntu.com/
 [link-6]: https://coreos.com/

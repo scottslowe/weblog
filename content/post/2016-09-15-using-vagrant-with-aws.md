@@ -106,7 +106,7 @@ Additionally, see the documentation for [the `vagrant-aws` plugin on GitHub][lin
 [link-3]: http://www.vmware.com/products/fusion.html
 [link-4]: http://www.vmware.com/products/workstation.html
 [link-5]: https://aws.amazon.com
-[link-6]: https://github.com/lowescott/learning-tools
+[link-6]: https://github.com/scottslowe/learning-tools
 [link-7]: https://github.com/mitchellh/vagrant-aws
 [link-8]: https://aws.amazon.com/cloudformation/
 [link-9]: https://www.terraform.io/

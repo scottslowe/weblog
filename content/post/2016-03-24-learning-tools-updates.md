@@ -28,10 +28,10 @@ I have plans to add a great deal more content here throughout this year, as I co
 
 
 
-[link-1]: https://github.com/lowescott/learning-tools
+[link-1]: https://github.com/scottslowe/learning-tools
 [link-2]: http://www.vagrantup.com
 [link-3]: http://www.terraform.io
-[link-4]: https://github.com/lowescott/learning-tools/tree/master/docker-ipvlan
-[link-5]: https://github.com/lowescott/learning-tools/tree/master/docker-ipvlan-l3
+[link-4]: https://github.com/scottslowe/learning-tools/tree/master/docker-ipvlan
+[link-5]: https://github.com/scottslowe/learning-tools/tree/master/docker-ipvlan-l3
 [xref-1]: {{< relref "2016-03-21-vagrant-ubuntu-wily-networking-problem.md" >}}
 [xref-2]: {{< relref "2016-01-21-looking-ahead-2016-projects.md" >}}

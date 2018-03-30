@@ -166,7 +166,7 @@ Finally, I posted resources to help you follow along with this blog post in [my 
 [link-5]: http://www.vmware.com/products/fusion/
 [link-6]: http://www.vmware.com/products/workstation/
 [link-7]: http://nickapedia.com/2014/06/12/docker-vagrant-vmware-fusion-bug/
-[link-8]: https://github.com/lowescott/learning-tools
+[link-8]: https://github.com/scottslowe/learning-tools
 
 [xref-1]: {{< relref "2014-03-11-a-quick-introduction-to-docker.md" >}}
 [xref-2]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}

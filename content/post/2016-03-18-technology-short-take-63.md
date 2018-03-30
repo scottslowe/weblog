@@ -74,7 +74,7 @@ That's all, folks! In the interest of not taking up _too_ much of your time, I'l
 [link-2]: https://blogs.microsoft.com/blog/2016/03/07/announcing-sql-server-on-linux/
 [link-3]: http://www.slideshare.net/lowescott/an-overview-of-linux-networking-options
 [link-4]: https://speakerdeck.com/slowe/an-overview-of-linux-networking-options
-[link-5]: https://github.com/lowescott/2016-dnf-materials
+[link-5]: https://github.com/scottslowe/2016-dnf-materials
 [link-6]: https://labs.spotify.com/2016/01/26/sdn-internet-router-part-1/
 [link-7]: https://labs.spotify.com/2016/01/27/sdn-internet-router-part-2/
 [link-8]: http://www.yet.org/2014/09/openvswitch-troubleshooting/

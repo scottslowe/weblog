@@ -141,7 +141,7 @@ If you'd like to play around with a sample environment, have a look in the `mult
 
 
 [link-1]: https://www.vagrantup.com/
-[link-2]: https://github.com/lowescott/learning-tools/
+[link-2]: https://github.com/scottslowe/learning-tools/
 [link-3]: https://www.virtualbox.org/
 [link-4]: https://aws.amazon.com/
 [link-5]: http://www.vmware.com/products/fusion.html

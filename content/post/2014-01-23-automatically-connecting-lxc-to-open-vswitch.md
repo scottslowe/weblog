@@ -55,7 +55,7 @@ ovs-vsctl --if-exists del-port $BRIDGE $5
 ovs-vsctl --may-exist add-port $BRIDGE $5
 ```
 
-(Please click [here](https://gist.github.com/lowescott/8569424) to see this as a GitHub Gist.)
+(Please click [here](https://gist.github.com/scottslowe/8569424) to see this as a GitHub Gist.)
 
 LXC passes five parameters to the script when it is called:
 

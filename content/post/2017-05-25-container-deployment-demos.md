@@ -46,7 +46,7 @@ I'm sure there are many more that I did not capture as I was researching, but th
 [link-3]: http://thisendout.com/2016/09/13/deploying-docker-swarm-with-ansible/
 [link-4]: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ecs.html
 [link-5]: http://kubernetes.io/docs/getting-started-guides/kops/
-[link-6]: https://github.com/lowescott/2017-itx-container-workshop
+[link-6]: https://github.com/scottslowe/2017-itx-container-workshop
 [link-7]: https://www.terraform.io/
 [link-8]: https://www.ansible.com/
 [link-9]: https://www.docker.com/

@@ -144,7 +144,7 @@ As I mentioned earlier, sample `Vagrantfiles` and supporting documentation to re
 
 
 
-[link-1]: https://github.com/lowescott/learning-tools
+[link-1]: https://github.com/scottslowe/learning-tools
 [link-2]: http://www.vmware.com/products/fusion/
 [link-3]: http://www.virtualbox.org/
 [xref-1]: {{< relref "2015-02-10-using-docker-with-vagrant.md" >}}

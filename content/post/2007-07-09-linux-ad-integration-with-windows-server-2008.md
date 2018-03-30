@@ -73,11 +73,11 @@ Follow the steps below to configure the Linux server for authentication against 
 
 3. Be sure that time is being properly synchronized between Active Directory and the Linux server in question. Kerberos requires time synchronization. Configure the NTP daemon if necessary.
 
-4. Edit the `/etc/krb5.conf` file to look something like [this](https://gist.github.com/lowescott/67a3f8c36270c7e6376b), substituting your actual host names and domain names where appropriate.
+4. Edit the `/etc/krb5.conf` file to look something like [this](https://gist.github.com/scottslowe/67a3f8c36270c7e6376b), substituting your actual host names and domain names where appropriate.
 
-5. Edit the `/etc/ldap.conf` file to look something like [this](https://gist.github.com/lowescott/7ad13c8839a546b760df), substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate.
+5. Edit the `/etc/ldap.conf` file to look something like [this](https://gist.github.com/scottslowe/7ad13c8839a546b760df), substituting the appropriate host names, domain names, account names, and distinguished names (DNs) where appropriate.
 
-6. Configure PAM (this varies according to Linux distributions) to use pam_krb5 for authentication. Many modern distributions use a stacking mechanism whereby one file can be modified and those changes will applied to all the various PAM-aware services. For example, in Red Hat-based distributions, the system-auth file is referenced by most other PAM-aware services. Click [here](https://gist.github.com/lowescott/0e47e27dd5e515963daf) to see a properly edited `/etc/pam.d/system-auth` file taken from CentOS 4.4.
+6. Configure PAM (this varies according to Linux distributions) to use pam_krb5 for authentication. Many modern distributions use a stacking mechanism whereby one file can be modified and those changes will applied to all the various PAM-aware services. For example, in Red Hat-based distributions, the system-auth file is referenced by most other PAM-aware services. Click [here](https://gist.github.com/scottslowe/0e47e27dd5e515963daf) to see a properly edited `/etc/pam.d/system-auth` file taken from CentOS 4.4.
 
 7. Edit the `/etc/nsswitch.conf file` to include "ldap" as a lookup source for passwd, shadow, and groups.
 

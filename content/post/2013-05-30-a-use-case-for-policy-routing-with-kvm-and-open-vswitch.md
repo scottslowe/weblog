@@ -47,7 +47,7 @@ iface tep0 inet static
   post-up ip route add default via 192.168.200.1 dev tep0 table tunnel
 ```
 
-(Click [here](https://gist.github.com/lowescott/5665588) for the same information as a GitHub Gist.)
+(Click [here](https://gist.github.com/scottslowe/5665588) for the same information as a GitHub Gist.)
 
 Finally, you'll want to ensure that `mgmt0` is properly configured in `/etc/network/interfaces`. No special configuration is required there, just the use of the `gateway` directive to install the default route. Ubuntu will install the default route into the main table automatically, making it a "system-wide" default route that will be used unless a policy routing rule dictates otherwise.
 

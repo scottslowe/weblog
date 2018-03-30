@@ -20,7 +20,7 @@ wordpress_id: 3448
 
 In an earlier post, I provided [an introduction to OpenStack Heat][1], and provided an example Heat template that launched two instances with a logical network and a logical router. Here I am going to provide another view of a Heat template that does the same thing, but uses YAML and the HOT format instead of JSON and the CFN format.
 
-Here's the full template (click [here](https://gist.github.com/lowescott/1ed38b586a1751138c8d) for this code as a GitHub Gist):
+Here's the full template (click [here](https://gist.github.com/scottslowe/1ed38b586a1751138c8d) for this code as a GitHub Gist):
 
 {{< highlight yaml >}}
 heat_template_version: 2013-05-23

@@ -49,7 +49,7 @@ First, here's an example of a set of name/value pairs (I've taken the liberty of
 }
 ```
 
-(Click [here](https://gist.github.com/lowescott/7370142) for an option to download the code snippet above.)
+(Click [here](https://gist.github.com/scottslowe/7370142) for an option to download the code snippet above.)
 
 Let's break that down a bit:
 

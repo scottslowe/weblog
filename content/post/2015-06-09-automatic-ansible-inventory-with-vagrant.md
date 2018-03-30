@@ -50,5 +50,5 @@ Pretty useful, yes?
 [link-2]: https://www.vagrantup.com
 [link-3]: https://www.ruby-lang.org/en/
 [link-4]: http://yaml.org/
-[link-5]: https://github.com/lowescott/learning-tools
+[link-5]: https://github.com/scottslowe/learning-tools
 [xref-1]: {{< relref "2015-06-08-using-vagrant-to-learn-ansible.md" >}}

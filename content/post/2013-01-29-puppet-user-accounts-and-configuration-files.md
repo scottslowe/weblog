@@ -28,7 +28,7 @@ Let's look at each of these.
 
 ## Adding a Subclass
 
-To add a subclass to manage the configuration files, I created `config.pp` and placed it in the `manifests` folder for the accounts module. Here's a simplified look at the contents of that file (click [here](https://gist.github.com/lowescott/4274021) if you'd like to download this code snippet):
+To add a subclass to manage the configuration files, I created `config.pp` and placed it in the `manifests` folder for the accounts module. Here's a simplified look at the contents of that file (click [here](https://gist.github.com/scottslowe/4274021) if you'd like to download this code snippet):
 
 ``` puppet
 class accounts::config {

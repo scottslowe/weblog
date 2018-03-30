@@ -58,7 +58,7 @@ I imagine there are probably better/more efficient ways of doing what I've done 
 
 
 [link-1]: http://container-solutions.com/tagging-docker-images-the-right-way/
-[link-2]: https://github.com/lowescott/flask-web-svc
+[link-2]: https://github.com/scottslowe/flask-web-svc
 [link-3]: https://twitter.com/scott_lowe
-[link-4]: https://github.com/lowescott/flask-web-svc/releases/tag/v0.3
+[link-4]: https://github.com/scottslowe/flask-web-svc/releases/tag/v0.3
 [xref-1]: {{< relref "2015-11-11-handy-cli-tool-json.md" >}}

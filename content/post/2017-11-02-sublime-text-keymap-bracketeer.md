@@ -57,4 +57,4 @@ For a full copy of my modified Bracketeer keymap, see [this gist][link-4].
 [link-1]: http://www.sublimetext.com/
 [link-2]: https://atom.io/
 [link-3]: https://packagecontrol.io/packages/Bracketeer
-[link-4]: https://gist.github.com/lowescott/108192e1a0d27028df73a1b2fc4a740a
+[link-4]: https://gist.github.com/scottslowe/108192e1a0d27028df73a1b2fc4a740a

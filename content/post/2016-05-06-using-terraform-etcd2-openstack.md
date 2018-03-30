@@ -140,7 +140,7 @@ If you'd like to give this a try in your own OpenStack environment, feel free to
 [link-2]: http://www.openstack.org/
 [link-3]: https://coreos.com/
 [link-4]: https://github.com/coreos/etcd/
-[link-5]: https://github.com/lowescott/dev-tools-openstack/
+[link-5]: https://github.com/scottslowe/dev-tools-openstack/
 [link-6]: http://www.vagrantup.com/
 [link-7]: http://www.ansible.com/
 [link-8]: https://www.docker.com/products/docker-machine

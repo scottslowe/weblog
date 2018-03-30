@@ -24,7 +24,7 @@ As I said, the updates are relatively minor:
 
 In the coming months, I plan to expand the repository to include more content on [Kubernetes][link-5] and related projects/technologies, so stay tuned for that. Until then, if there's additional stuff you'd like to see---feel free to fork the repository, contribute your changes, and submit a pull request! Alternately, you're welcome to open an issue on the repository with requests for additional technologies (or scenarios/use cases) you'd like to see.
 
-[link-1]: https://github.com/lowescott/learning-tools
+[link-1]: https://github.com/scottslowe/learning-tools
 [link-2]: https://www.vagrantup.com/
 [link-3]: https://www.ansible.com/
 [link-4]: https://www.terraform.io/

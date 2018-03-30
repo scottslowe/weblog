@@ -34,7 +34,7 @@ Anyway, there you have it. Feel free to [contact me on Twitter][link-5] if you h
 
 [link-1]: http://shop.oreilly.com/product/0636920042082.do
 [link-2]: http://www.openstack.org/
-[link-3]: https://github.com/lowescott
+[link-3]: https://github.com/scottslowe
 [link-4]: http://vsensei.expert/index.html
 [link-5]: https://twitter.com/scott_lowe
 [xref-1]: {{< relref "2012-01-02-some-projects-for-2012.md" >}}

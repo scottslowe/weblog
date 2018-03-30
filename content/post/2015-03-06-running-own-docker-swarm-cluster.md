@@ -192,7 +192,7 @@ You can find copies of all the scripts, configuration files, and a `Vagrantfile`
 [link-1]: https://www.docker.com
 [link-2]: http://www.consul.io
 [link-3]: http://www.vagrantup.com
-[link-4]: https://github.com/lowescott/learning-tools
+[link-4]: https://github.com/scottslowe/learning-tools
 [link-5]: https://docs.docker.com/swarm/
 [link-6]: https://coreos.com
 [link-7]: https://github.com/gliderlabs/registrator

@@ -30,5 +30,5 @@ Here's hoping this is useful!
 [link-1]: http://openvswitch.org/
 [link-2]: http://www.vagrantup.com/
 [link-3]: /tags/ovs/
-[link-4]: https://github.com/lowescott/learning-tools
+[link-4]: https://github.com/scottslowe/learning-tools
 [xref-1]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
