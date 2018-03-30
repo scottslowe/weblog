@@ -12,12 +12,12 @@
     "theme": "lanyon-hugo",
     "params": {
         "Title": "Scott's Weblog",
-        "Tagline": "The weblog of an IT pro specializing in cloud computing, virtualization, and networking, all with an open source view",
+        "Tagline": "The weblog of an IT pro specializing in cloud computing, open source, networking, and virtualization",
         "Author": "Scott Lowe",
         "GitHubUser": "scottslowe",
         "TwitterUser": "scott_lowe",
         "LinkedInUser": "scottslowe",
-        "Description": "Offering technical posts and how-to articles from an IT pro specializing in cloud computing, networking, and virtualization, all with an open source view",
+        "Description": "Offering technical posts and how-to articles from an IT pro specializing in cloud computing, open source, networking, and virtualization",
         "DateForm": "2 Jan 2006"
     },
     "blackfriday": {
