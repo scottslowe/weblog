@@ -116,3 +116,4 @@ It's time to wrap up. Have a great weekend, everyone!
 [link-31]: https://zenhabits.net/antidotes/
 [link-32]: http://etherealmind.com/will-never-make-serious-money-working-startup/
 [link-33]: https://blog.getambassador.io/kubernetes-ingress-nodeport-load-balancers-and-ingress-controllers-6e29f1c44f2d
+[xref-1]: {{< relref "2018-03-26-time-to-evolve.md" >}}
