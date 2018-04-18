@@ -62,6 +62,8 @@ Without further ado, here is the list I compiled from the responses to my tweet,
 * Nigel Poulton (Pluralsight) - @nigelpoulton
 * Justin Garrison (Disney) - @rothgar
 * Mark Mandel (Google) - @neurotic
+* Michael Gasch (VMware) - @embano1
+* Sebastien Goasguen (Bitnami) - @sebgoa
 
 Some folks were explicitly called out as "influencers," but I did not include that designation in the list above. It seems like a slippery slope to determine who is an influencer and who is not, so I'd rather just avoid any potential issues.
 
