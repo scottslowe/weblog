@@ -32,7 +32,7 @@ Without further ado, here is the list I compiled from the responses to my tweet,
 * Ilya Dmitrichenko (Weaveworks) - @errordeveloper
 * Brendan Burns (Microsoft) - @brendanburns
 * Kris Nova (Heptio) - @krisnova
-* Paris (Google?) - @parisinbmore
+* Paris (Google) - @parisinbmore
 * Amy Chen (Heptio) - @theamycode
 * Ria Bhatia (Microsoft) - @rbitia
 * Celina (Uber) - @shaleenaa
@@ -49,7 +49,7 @@ Without further ado, here is the list I compiled from the responses to my tweet,
 * Brian Gracely (Red Hat) - @bgracely
 * Steve Watt (Red Hat) - @wattsteve
 * Diane Mueller (Red Hat) - @pythondj
-* Clayton Coleman (Unknown) - @smarterclayton
+* Clayton Coleman (Red Hat) - @smarterclayton
 * Craig McLuckie (Heptio) - @cmcluck
 * Benjamin Hindman (Mesosphere) - @benh
 * Armon Dadgar (HashiCorp) - @armon
@@ -64,6 +64,8 @@ Without further ado, here is the list I compiled from the responses to my tweet,
 * Mark Mandel (Google) - @neurotic
 * Michael Gasch (VMware) - @embano1
 * Sebastien Goasguen (Bitnami) - @sebgoa
+* Victor Farcic (CloudBees) - @vfarcic
+* Ben Hall (Katacoda) - @ben_hall
 
 Some folks were explicitly called out as "influencers," but I did not include that designation in the list above. It seems like a slippery slope to determine who is an influencer and who is not, so I'd rather just avoid any potential issues.
 
