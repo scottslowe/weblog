@@ -66,6 +66,7 @@ Without further ado, here is the list I compiled from the responses to my tweet,
 * Sebastien Goasguen (Bitnami) - @sebgoa
 * Victor Farcic (CloudBees) - @vfarcic
 * Ben Hall (Katacoda) - @ben_hall
+* Ralph Squillace (Microsoft) - @ralph_squillace
 
 Some folks were explicitly called out as "influencers," but I did not include that designation in the list above. It seems like a slippery slope to determine who is an influencer and who is not, so I'd rather just avoid any potential issues.
 
