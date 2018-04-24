@@ -30,7 +30,7 @@ Without further ado, here is the list I compiled from the responses to my tweet,
 * Brandon Philips (CoreOS/Red Hat) - @brandonphilips
 * Ray Tsang (Google) - @saturnism
 * Ilya Dmitrichenko (Weaveworks) - @errordeveloper
-* Brendan Burns (Microsoft) - @brendanburns
+* Brendan Burns (Microsoft) - @brendandburns
 * Kris Nova (Heptio) - @krisnova
 * Paris (Google) - @parisinbmore
 * Amy Chen (Heptio) - @theamycode
@@ -67,11 +67,20 @@ Without further ado, here is the list I compiled from the responses to my tweet,
 * Victor Farcic (CloudBees) - @vfarcic
 * Ben Hall (Katacoda) - @ben_hall
 * Ralph Squillace (Microsoft) - @ralph_squillace
+* Jaice Singer DuMars (Google?) - @jaydumars
+* Jorge Castro (Heptio) - @castrojo
+* Niraj Tolia (Kasten) - @nirajtolia
+* Brian Grant (Google) - @bgrant0607
+* Aaron Crickenberger (Samsung) - @spiffxp
+* Ihor Dvoretskyi (Linux Foundation/CNCF) - @idvoretskyi
 
 Some folks were explicitly called out as "influencers," but I did not include that designation in the list above. It seems like a slippery slope to determine who is an influencer and who is not, so I'd rather just avoid any potential issues.
 
 Here's hoping others find this list useful!
 
+**UPDATE:** William Lam, a former coworker of mine at VMware, has taken the time to create a Twitter list to make it easier for folks. That Twitter list is available [here][link-4].
+
 [link-1]: https://twitter.com/scott_lowe/status/986602642083229696
 [link-2]: https://kubernetes.io/
 [link-3]: https://twitter.com/scott_lowe/
+[link-4]: https://twitter.com/lamw/lists/k8s-peeps
