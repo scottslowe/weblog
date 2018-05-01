@@ -46,7 +46,7 @@ Some tools that I'm still evaluating:
 
 Well, that's it for now. I'll keep this post updated as my toolbelt evolves. In the meantime, if you have any suggestions for tools that I should evaluate, feel free to [hit me up on Twitter][link-15] (or Wire, for that matter).
 
-
+**UPDATE:** Check out [this updated look at my multi-platform toolbelt][xref-3] for a view of where things stand as of April/May 2018.
 
 [link-1]: https://twitter.com/scott_lowe/status/815836813583613954
 [link-2]: https://twitter.com/mhmd_io/status/816175975792775168
@@ -66,3 +66,4 @@ Well, that's it for now. I'll keep this post updated as my toolbelt evolves. In 
 [link-16]: https://www.mozilla.org/en-US/firefox/
 [xref-1]: {{< relref "2016-09-28-why-now-using-virtualbox-with-vagrant.md" >}}
 [xref-2]: {{< relref "2017-01-19-plain-text-productivity-redux.md" >}}
+[xref-3]: {{< relref "2018-04-30-updated-look-at-multi-platform-toolbelt.md" >}}
