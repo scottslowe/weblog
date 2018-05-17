@@ -32,7 +32,7 @@ Without further ado, here is the list I compiled from the responses to my tweet,
 * Ilya Dmitrichenko (Weaveworks) - @errordeveloper
 * Brendan Burns (Microsoft) - @brendandburns
 * Kris Nova (Heptio) - @krisnova
-* Paris (Google) - @parisinbmore
+* Paris Pittman (Google) - @parisinbmore
 * Amy Chen (Heptio) - @theamycode
 * Ria Bhatia (Microsoft) - @rbitia
 * Celina (Uber) - @shaleenaa
