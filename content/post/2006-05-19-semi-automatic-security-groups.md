@@ -20,21 +20,21 @@ Using the `dsquery` and `dsmod` tools in Windows Server 2003, we can create a co
 
 First, we use the `dsquery *` command, which allows us to define a custom LDAP query to find any kind of object within Active Directory. Let's say we are interested in automatically populating departmental security groups based on the department attribute for each user object. To find all the members of the Engineering group in Atlanta, we'd use a command like this (this has been broken into three lines for readability, but should be typed in as a single line):
 
-{{< highlight text >}}
+``` text
 dsquery * ou=Users,ou=Atlanta,ou=Locations,dc=example,dc=net 
 -filter "(&(objectcategory=person)(objectclass=user)
 (department=Engineering))" -limit 1000
-{{< / highlight >}}
+```
 
 This command will return the DNs of those user objects in the Locations/Atlanta/Users OU whose department attribute is set to Engineering. We can then pipe that output to the `dsmod` command, like so (again, lines have been broken for readability but this should be entered as a single line):
 
-{{< highlight text >}}
+``` text
 dsquery * ou=Users,ou=Atlanta,ou=Locations,dc=example,dc=net 
 -filter "(&(objectcategory=person)(objectclass=user)
 (department=Engineering))" -limit 1000 | dsmod group "cn=Atlanta 
 Engineering Dept,ou=Groups,ou=Atlanta,ou=Locations,
 dc=example,dc=net" -addmbr
-{{< / highlight >}}
+```
 
 This command takes the output of the `dsquery` command and pipes it to the `dsmod` command, modifying the group named Atlanta Engineering Dept in the Locations/Atlanta/Groups OU. (If you anticipate more than 1,000 users in Atlanta in the Engineering department, adjust the "-limit" parameter accordingly.)
 
@@ -47,12 +47,12 @@ First, we get the members of the group using the `dsget` command:
 
 This returns a list of the DNs for those users that are currently members of the specified group. We pipe that to the `dsmod` command again to clear the group out:
 
-{{< highlight text >}}
+``` text
 dsget group "cn=Atlanta Engineering Dept,ou=Groups,
 ou=Atlanta,ou=Locations,dc=example,dc=net" -members | dsmod group 
 "cn=Atlanta Engineering Dept,ou=Groups,ou=Atlanta,ou=Locations,
 dc=example,dc=net" -rmmbr
-{{< / highlight >}}
+```
 
 This command sequence removes all the current members of the group. Run this command before the `dsquery`, and both problems (the error about users already being a member and "stale" members not being removed) are corrected.
 
