@@ -48,7 +48,7 @@ This gives you another opportunity show off what `jq` can do. We're primarily on
 
 This will provide output that will look something like this:
 
-{{< highlight json >}}
+```json
 {
   "name": "customer-A",
   "uuid": "2c9dfbd9f1be3e88c56c88e1e6f38b85"
@@ -57,7 +57,7 @@ This will provide output that will look something like this:
   "name": "customer-B",
   "uuid": "e7c59d569a894d42943417f7b6d2931a"
 }
-{{< / highlight >}}
+```
 
 This makes it really easy to parse out the specific information you need.
 
@@ -84,8 +84,6 @@ This will pull out only the name and ID of the servers returned by the API call.
 (For this last use case, you could also use `python -m json.tool`.)
 
 Anyway, there's a ton more that you can do with `jq`, and I'm still discovering all the various uses myself. Be sure to check out [the tutorial][link-4] and [the manual][link-5] for more information.
-
-
 
 [link-1]: https://stedolan.github.io/jq/
 [link-2]: https://kubecon.io
