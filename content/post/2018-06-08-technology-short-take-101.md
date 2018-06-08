@@ -36,7 +36,7 @@ Welcome to Technology Short Take #101! I have (hopefully) crafted an interesting
 
 ## Servers/Hardware
 
-* AWS adds local NVMe storage to the M5 instance family; more details [here][link-15]. What I found interesting is that the local NVMe storage is also hardware encrypted. AWS also mentions that these M5d instances are powered by (in their words) "Custom Intel Xeon Platinum" processors, which just goes to confirm the long-known fact that AWS is leveraging custom Intel CPUs in their stuff (as are the major cloud providers, I'm sure).
+* AWS adds local NVMe storage to the M5 instance family; more details [here][link-15]. What I found interesting is that the local NVMe storage is also hardware encrypted. AWS also mentions that these M5d instances are powered by (in their words) "Custom Intel Xeon Platinum" processors, which just goes to confirm the long-known fact that AWS is leveraging custom Intel CPUs in their stuff (as are all the major cloud providers, I'm sure).
 
 ## Security
 
