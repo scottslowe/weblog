@@ -29,7 +29,7 @@ Both of these are necessary; you can't get away with just one or the other. Furt
 
 One you've downloaded these files, you can use the following libvirt domain XML definition to create a VM for running Arista vEOS (you'd use a command like `virsh define <filename>`).
 
-{{< highlight xml >}}
+``` xml
 <domain type='kvm'>
   <name>veos</name>
   <memory unit='KiB'>2097152</memory>
@@ -121,7 +121,7 @@ One you've downloaded these files, you can use the following libvirt domain XML 
   </devices>
   <seclabel type='dynamic' model='apparmor' relabel='yes'/>
 </domain>
-{{< / highlight >}}
+```
 
 (Click [here](https://gist.github.com/scottslowe/ca31c88a52284eb12ac2) for this XML text as a GitHub Gist.)
 

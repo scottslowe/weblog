@@ -7,6 +7,8 @@ tags:
 - Git
 - Collaboration
 - CLI
+- Development
+- GitHub
 title: Using Git with GitHub
 url: /2015/01/26/using-git-with-github/
 ---

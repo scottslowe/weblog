@@ -9,6 +9,7 @@ tags:
 - Git
 - GitHub
 - JSON
+- Development
 title: Cloning All Repositories in a GitHub Organization
 url: /2018/07/19/cloning-all-repositories-in-a-github-organization/
 ---

@@ -6,6 +6,8 @@ date: 2015-09-04T13:40:00Z
 tags:
 - CLI
 - Git
+- GitHub
+- Development
 title: Checking Out GitHub Pull Requests Locally
 url: /2015/09/04/checking-out-github-pull-requests-locally/
 ---
