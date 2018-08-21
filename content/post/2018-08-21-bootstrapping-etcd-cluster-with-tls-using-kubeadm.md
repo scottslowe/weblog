@@ -15,11 +15,11 @@ url: /2018/08/21/boostrapping-etcd-cluster-with-tls-using-kubeadm/
 
 The [etcd distributed key-value store][link-4] is an integral part of [Kubernetes][link-5]. I first wrote about etcd back in 2014 in [this post][xref-1], but haven't really discussed it in any great detail since then. However, as part of my recent efforts to dive _much_ deeper into Kubernetes, I needed to revisit etcd. In this post, I wanted to share how to boostrap a new etcd cluster with TLS certificates using `kubeadm`.<!--more-->
 
-Before I go on, I feel compelled to state that this is certainly not the _only_ way to bootstrap an etcd cluster with TLS certificates. I feel I must also state that nothing in what I'm about to share is new, novel, revolutionary, or unusual. In fact, a fair amount of it is based on [these instructions][link-7], although this post will focus on using systemd unit files instead of static pods under Kubernetes. I'm simply documenting it here in the hopes of getting the information more broadly disseminated, and to help document my own journey of learning.
+Before I go on, I feel compelled to state that this is certainly not the _only_ way to bootstrap an etcd cluster with TLS certificates. I feel I must also state that nothing in what I'm about to share is new, novel, revolutionary, or unusual. In fact, a fair amount of it is based on [these instructions][link-10], although this post will focus on using systemd unit files instead of static pods under Kubernetes. I'm simply documenting it here in the hopes of getting the information more broadly disseminated, and to help document my own journey of learning.
 
 ## Preparing the Systems
 
-Before you bootstrap the etcd cluster, you'll first need to prepare the nodes for the process. Although I'll list the steps manually below, in practice you'll want to build some automation tooling to help with this process. (My ["learning-tools" GitHUb repository][link-3] has [an example][link-6] that you could use as a starting point for your own tooling.)
+Before you bootstrap the etcd cluster, you'll first need to prepare the nodes for the process. Although I'll list the steps manually below, in practice you'll want to build some automation tooling to help with this process. (My ["learning-tools" GitHub repository][link-3] has [an example][link-6] that you could use as a starting point for your own tooling.)
 
 1. You'll need to download an etcd release from GitHub.
 
@@ -165,4 +165,5 @@ Virtually everyone who does content creation stands on the shoulders of those wh
 [link-7]: https://github.com/mauilion/wardroom-nc/
 [link-8]: https://github.com/coreos/etcd/tree/master/etcdctl
 [link-9]: https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-via-curl
+[link-10]: https://kubernetes.io/docs/setup/independent/setup-ha-etcd-with-kubeadm/
 [xref-1]: {{< relref "2014-08-18-coreos-continued-etcd.md" >}}
