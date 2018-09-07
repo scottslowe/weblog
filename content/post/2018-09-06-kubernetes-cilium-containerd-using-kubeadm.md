@@ -36,7 +36,7 @@ I also had to do the following on my Ubuntu 16.04 nodes, but I take this as more
     modprobe br_netfilter
     sysctl -w net.ipv4.ip_forward=1
 
-With this content added, you're good to go to run `kubeadm init --config <config-file-name>` to bootstrap the first master. `kubectl get nodes` will report it as NotReady until we install the CNI, but that's OK. You can proceed with the next steps in the procedure.
+With this content added, you're good to go to run `kubeadm init --config <config-file-name>` to bootstrap the first master. `kubectl get nodes` will report it as NotReady until you install the CNI, but that's OK. You can proceed with the next steps in the procedure.
 
 ## Add the Second Stacked Control Plane Node
 
@@ -55,7 +55,7 @@ Run the rest of the commands in this section as outlined, and your second contro
 
 The same change to the `kubeadm` configuration file is needed here, along with (maybe) the `modprobe` and `sysctl` commands.
 
-Once this step is complete, you'll have a three-node control plane up and running, although they'll all report NotReady in `kubectl get nodes` until we install a networking plugin. Fortunately, we'll tackle that next.
+Once this step is complete, you'll have a three-node control plane up and running, although they'll all report NotReady in `kubectl get nodes` until you install a networking plugin. Fortunately, you'll tackle that next.
 
 ## Install a Pod Network
 
