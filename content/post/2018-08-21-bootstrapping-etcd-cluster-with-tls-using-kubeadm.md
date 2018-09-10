@@ -1,4 +1,5 @@
 ---
+aliases: /2018/08/21/boostrapping-etcd-cluster-with-tls-using-kubeadm/
 author: slowe
 categories: Tutorial
 comments: true
@@ -10,7 +11,7 @@ tags:
 - Security
 - Encryption
 title: Bootstrapping an etcd Cluster with TLS using Kubeadm
-url: /2018/08/21/boostrapping-etcd-cluster-with-tls-using-kubeadm/
+url: /2018/08/21/bootstrapping-etcd-cluster-with-tls-using-kubeadm/
 ---
 
 The [etcd distributed key-value store][link-4] is an integral part of [Kubernetes][link-5]. I first wrote about etcd back in 2014 in [this post][xref-1], but haven't really discussed it in any great detail since then. However, as part of my recent efforts to dive _much_ deeper into Kubernetes, I needed to revisit etcd. In this post, I wanted to share how to boostrap a new etcd cluster with TLS certificates using `kubeadm`.<!--more-->
