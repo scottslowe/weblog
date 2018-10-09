@@ -64,7 +64,7 @@ Finally, the `output.tf.json` file contains information that should be output to
 
 Let's start with the `provider.tf.json` file. For the OpenStack provider, it should look something like this:
 
-{{< highlight json >}}
+``` json
 {
     "provider": {
         "openstack": {
@@ -75,13 +75,13 @@ Let's start with the `provider.tf.json` file. For the OpenStack provider, it sho
         }
     }
 }
-{{< / highlight >}}
+```
 
 Technically, this file isn't required; Terraform can leverage OpenStack-specific environment variables (like OS_AUTH_URL and similar) that are typically required by the OpenStack command-line clients anyway.
 
 Next up is the variables file, `vars.tf.json`. This is the file that would change most between uses of the configuration, since it contains the information specific to that particular use case. Here's an example of what it might look like:
 
-{{< highlight json >}}
+``` json
 {
     "variable": {
         "image": {
@@ -109,11 +109,11 @@ Next up is the variables file, `vars.tf.json`. This is the file that would chang
         }
     }
 }
-{{< / highlight >}}
+```
 
 On its own, this file doesn't make a whole lot of sense. However, when viewed in light of the main configuration file (`main.tf.json`) it makes a lot more sense:
 
-{{< highlight json >}}
+``` json
 {
     "resource": {
         "openstack_networking_network_v2": {
@@ -183,7 +183,7 @@ On its own, this file doesn't make a whole lot of sense. However, when viewed in
         }
     }
 }
-{{< / highlight >}}
+```
 
 Let's break this down a little bit:
 
@@ -196,7 +196,7 @@ Let's break this down a little bit:
 
 Somewhat anti-climactically, the final file in our solution is `output.tf.json`, which simply defines what information Terraform will display when the configuration is applied. Here's a sample `output.tf.json` file:
 
-{{< highlight json >}}
+``` json
 {
     "output": {
         "address": {
@@ -204,7 +204,7 @@ Somewhat anti-climactically, the final file in our solution is `output.tf.json`,
         }
     }
 }
-{{< / highlight >}}
+```
 
 In this case, the output is only the IP address created by the `openstack_compute_floatingip_v2` resource and assigned to the new compute instance. You could, naturally, include more information to be displayed here.
 
@@ -221,8 +221,6 @@ When you're finished with the environment, you run `terraform destroy` and Terra
 ## Summary
 
 There's more to Terraform than what I've covered here, but this should at least get you started. To help you along in case you want to experiment with Terraform, I've placed both Terraform-formatted and JSON-formatted configurations in the "terraform" directory of [my GitHub learning-tools repository][link-4]. Feel free to use those as a starting point for your own exploration.
-
-
 
 [link-1]: http://terraform.io
 [link-2]: http://www.openstack.org
