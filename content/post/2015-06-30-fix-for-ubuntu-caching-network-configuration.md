@@ -16,32 +16,32 @@ I've been wrestling with an [Ubuntu][link-1] network configuration issue over th
 
 Here's a bit more context: I was switching some of the network interfaces in my Ubuntu 14.04.2 servers from a "standard" network configuration to using VLAN interfaces (after all, it seemed like such a shame to not more fully utilize the 10GbE and 40GbE interfaces in these servers). Before the reconfiguration, the servers had a network interface configuration file (located in `/etc/network/interfaces.d` and sourced in `/etc/network/interfaces`) that looked something like this:
 
-{{< highlight text >}}
+```
 auto p55p1
 iface p55p1 inet static
 address 172.16.3.201
 netmask 255.255.255.0
-{{< / highlight >}}
+```
 
 This interface was connected to a port on a [Cumulus Linux][link-2]-powered [Dell][link-3] S6000-ON that was configured as an access port on a particular VLAN. Everything seemed to work just fine.
 
 After reconfiguration (done using [Ansible][link-4], more on that in a future post), I had _two_ interface configuration files---one for the physical interface, and one for the VLAN interface. The physical interface file looked like this:
 
-{{< highlight text >}}
+```
 auto p55p1
 iface p55p1 inet manual
 up ip link set p55p1 up
 down ip link set p55p1 down
-{{< / highlight >}}
+```
 
 And the VLAN interface file looked like this:
 
-{{< highlight text >}}
+```
 auto p55p1.3
 iface p55p1.3 inet static
 address 172.16.3.201
 netmask 255.255.255.0
-{{< / highlight >}}
+```
 
 At the same time, the switch port on the Dell S6000-ON was being taken from an access port to a VLAN trunk port (using the configuration found in [this post][xref-1]). It was a pretty simple reconfiguration---just move the IP address from the physical interface to the VLAN interface. Piece of cake, right?
 
@@ -54,7 +54,6 @@ Finally, today, I found the solution. As described [here][link-5], Ubuntu will a
 The takeaway, therefore, is to be sure to flush the device configuration (using `ip addr flush dev <devicename>`) when you need to move the IP address from one interface to another so as to avoid the same issues that I was seeing.
 
 Here's hoping this helps someone else!
-
 
 [link-1]: http://www.ubuntu.com
 [link-2]: http://cumulusnetworks.com

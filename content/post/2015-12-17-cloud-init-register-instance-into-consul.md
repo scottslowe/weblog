@@ -19,7 +19,7 @@ The idea was to automatically register OpenStack instances into Consul as they w
 
 Once I'd worked out the details for the shell script, it was pretty straightforward to use cloud-init's `write_files` and `runcmd` modules to write the shell script into the instance and then execute it. Here's the snippet of cloud-init configuration needed to make all this work:
 
-{{< highlight yaml >}}
+``` yaml
 #cloud-config
 write_files:
   - content: |
@@ -34,7 +34,7 @@ write_files:
     permissions: '0755'
 runcmd:
   - [ /home/ubuntu/register.sh ]
-{{< / highlight >}}
+```
 
 If you supply this snippet of cloud-init configuration to your cloud platform, then the instance will automatically register its hostname and IP address (for the `eth0` interface) into the Consul cluster. You can then use DNS or Consul's HTTP API to retrieve that information.
 
@@ -45,8 +45,6 @@ As I mentioned earlier, there are a couple of flaws with this approach. First, t
 * I improved my shell scripting skills.
 
 Besides, there may be a way that others can use this information in some as-yet-unforeseen way; it wouldn't be the first time that's happened. If you do find this information helpful in some way, feel free [to contact me on Twitter][link-6].
-
-
 
 [link-1]: http://cloud-init.org/index.html
 [link-2]: https://consul.io/

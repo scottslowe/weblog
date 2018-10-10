@@ -103,7 +103,7 @@ When you put it all together, it looks something like this (substituting appropr
 
 As I mentioned earlier, you're passing JSON-encoded data to the NSX controller; here are the contents of the `new-switch.json` file referenced in the above command example:
 
-{{< highlight json >}}
+``` json
 {
   "display_name": "test-lswitch", 
   "port_isolation_enabled": false, 
@@ -117,7 +117,7 @@ As I mentioned earlier, you're passing JSON-encoded data to the NSX controller; 
   "replication_mode": "source", 
   "type": "LogicalSwitchConfig"
 }
-{{< / highlight >}}
+```
 
 (Click [here](https://gist.github.com/scottslowe/9103770) for this JSON data as a GitHub gist.)
 

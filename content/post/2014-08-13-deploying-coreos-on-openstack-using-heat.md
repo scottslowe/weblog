@@ -30,7 +30,7 @@ Moving forward, OpenStack Heat is trying to standardize on OpenStack resource ty
 
 Here's the example Heat template you can use to deploy and customize CoreOS on OpenStack:
 
-{{< highlight yaml >}}
+``` yaml
 heat_template_version: 2013-05-23
 description: >
   A simple Heat template to deploy CoreOS into an existing cluster.
@@ -75,7 +75,7 @@ resources:
               command: start
             - name: fleet.service
               command: start
-{{< / highlight >}}
+```
 
 (Click [here](https://gist.github.com/scottslowe/43ea98cf49ff91445d0f) to view the code block above as a GitHub Gist.)
 

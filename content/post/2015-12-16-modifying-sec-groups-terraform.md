@@ -20,7 +20,7 @@ As you probably already know if you read [my recent introduction to Terraform bl
 
 Broadly speaking, interpolation allows Terraform to reference variables or attributes of other objects created by Terraform. For example, how does one refer to a network that he or she has just created? Here's an example taken from the introductory blog post:
 
-{{< highlight json >}}
+``` json
    "resource": {
         "openstack_compute_instance_v2": {
             "tf-instance": {
@@ -39,13 +39,13 @@ Broadly speaking, interpolation allows Terraform to reference variables or attri
             }
         }
     }
-{{< / highlight >}}
+```
 
 I'll call your attention to the `floating_ip` and `uuid` lines, which reference an attribute from another object. In this case, I'm referencing the address of the floating IP object and the UUID of the network object.
 
 Terraform can, as part of a configuration, create a security group. A simple security group might look something like this:
 
-{{< highlight json >}}
+``` json
     "resource": {
         "openstack_compute_secgroup_v2": {
             "ssh": {
@@ -60,7 +60,7 @@ Terraform can, as part of a configuration, create a security group. A simple sec
             }
         }
     }
-{{< / highlight >}}
+```
 
 As you can probably determine, this allows TCP port 22 (SSH) from any remote source. If you later wanted to associate this security group, you'd need to use interpolation to reference the security group when defining the instance.
 

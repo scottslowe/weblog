@@ -28,7 +28,7 @@ In order to provide layer 2 (switched) connectivity between front-panel ports on
 
 Owing to its Debian roots, you'll configure the bridge by either adding a stanza to `/etc/network/interfaces` or by placing a configuration file in `/etc/network/interfaces.d`. I tend to prefer the latter approach, and here's a sample file that illustrates how to create and configure the bridge:
 
-{{< highlight text >}}
+```
 auto bridge
 iface bridge
   bridge-vlan-aware yes
@@ -37,7 +37,7 @@ iface bridge
   bridge-pvid 1
   bridge-stp on
   mstpctl-treeprio 20480
-{{< / highlight >}}
+```
 
 Here's a brief description of the configuration parameters illustrated here:
 
@@ -65,7 +65,6 @@ For example, if a port that is a member of the bridge described earlier needed t
 And that's it!
 
 Hopefully this was somewhat helpful. I have more posts queued up, so please stay tuned. In the meantime, feel free to contact me via Twitter if you have any questions about this article. Thanks for reading!
-
 
 [link-1]: http://www.vmware.com/products/vsphere/
 [link-2]: http://openvswitch.org

@@ -50,7 +50,7 @@ All of these components would typically be installed on an OpenStack "controller
 
 Now that you have an idea about Heat's architecture, I'll walk you through an example template that I created and tested on my own OpenStack implementation (running OpenStack Havana on Ubuntu 12.04 with KVM and VMware NSX). Here's the full template:
 
-{{< highlight json >}}
+``` json
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
   "Description" : "Sample Heat template that spins up multiple instances and a private network (JSON)",
@@ -141,7 +141,7 @@ Now that you have an idea about Heat's architecture, I'll walk you through an ex
     }
   }
 }
-{{< / highlight >}}
+```
 
 (Want a downloadable version of the code above? Click [here](https://gist.github.com/scottslowe/485fa69644d646052149) to see it as a GitHub Gist.)
 
