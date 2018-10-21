@@ -33,17 +33,17 @@ If you're unfamiliar with Consul, I recommend having a look at [my quick introdu
 
 I'm using two pieces to handle bootstrapping the Consul cluster. First, I have a Consul configuration file that provides the necessary configuration details to Consul. Here's the JSON-formatting Consul configuration file:
 
-{{< highlight json >}}
+```json
 {
-	"bootstrap_expect": 3,
-	"server": true,
-	"data_dir": "/var/consul",
-	"log_level": "INFO",
-	"enable_syslog": false,
-	"retry_join": ["192.168.1.101", "192.168.1.102", "192.168.1.103"],
-	"client_addr": "0.0.0.0"
+    "bootstrap_expect": 3,
+    "server": true,
+    "data_dir": "/var/consul",
+    "log_level": "INFO",
+    "enable_syslog": false,
+    "retry_join": ["192.168.1.101", "192.168.1.102", "192.168.1.103"],
+    "client_addr": "0.0.0.0"
 }
-{{< / highlight >}}
+```
 
 The Consul web site provides documentation for all these parameters, but let's walk through this real quick:
 
@@ -58,7 +58,7 @@ You can store this anywhere you'd like, but if you want to use the scripts and s
 
 Next, I have an Upstart script to start and run the Consul agent as a daemon using the above configuration file. Here's the script:
 
-{{< highlight text >}}
+```text
 description "Consul server process"
 
 start on runlevel [2345]
@@ -78,7 +78,7 @@ exec /usr/local/bin/consul agent \
   ${CONSUL_FLAGS} \
   >>/var/log/consul.log 2>&1
 end script
-{{< / highlight >}}
+```
 
 You can see that this script assumes the Consul binary is in `/usr/local/bin`; if you store it elsewhere, be sure to adjust this script accordingly. Store this file as `consul.conf` in `/etc/init`; then you can use these commands to start and stop Consul, respectively:
 
@@ -187,8 +187,6 @@ All set---you've just built a Consul cluster, used Consul as the discovery servi
 
 You can find copies of all the scripts, configuration files, and a `Vagrantfile` to follow along using Vagrant in the "docker-swarm" folder of [my GitHub "learning-tools" repository][link-4].
 
-
-
 [link-1]: https://www.docker.com
 [link-2]: http://www.consul.io
 [link-3]: http://www.vagrantup.com
@@ -196,5 +194,4 @@ You can find copies of all the scripts, configuration files, and a `Vagrantfile`
 [link-5]: https://docs.docker.com/swarm/
 [link-6]: https://coreos.com
 [link-7]: https://github.com/gliderlabs/registrator
-
 [xref-1]: {{< relref "2015-02-06-quick-intro-to-consul.md" >}}

@@ -26,12 +26,12 @@ To make printer redirection work on a Mac using the VMware View client, two thin
 
 I'll leave the first task as an exercise for the readers, but for the second task I'll provide a bit more detail. To enable printer redirection, edit the `vmware-view.rdp` file and add these lines:
 
-{{< highlight xml >}}
+```xml
 <key>PrinterRedirection</key>  
 <true/>  
 <key>RedirectPrinter</key>  
 <string>all</string>
-{{< / highlight >}}
+```
 
 Once you have the LaserJet 4350 PS printer driver installed on the Windows VM and have this text in the `vmware-view.rdp` file, printer redirection from the Mac VMware View client should work as expected.
 

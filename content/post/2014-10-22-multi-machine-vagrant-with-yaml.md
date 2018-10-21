@@ -23,7 +23,7 @@ I found this technique after trying to find a way to simplify the creation of mu
 
 So what's the fix? As with other DSLs (domain-specific languages) such as Puppet, the fix was found in separating the data from the code. In Puppet, that means parameterizing the module or class, and I needed to use a similar technique here with Vagrant. So, based on the example provided [here](http://liquidat.wordpress.com/2014/03/03/howto-vagrant-libvirt-multi-multi-machine-ansible-and-puppet/), I came up with this Vagrantfile:
 
-{{< highlight ruby >}}
+```ruby
 # -*- mode: ruby -*-
 # # vi: set ft=ruby :
  
@@ -52,7 +52,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 end
-{{< / highlight >}}
+```
 
 (click [here](https://gist.github.com/scottslowe/eae23022db8cc95508c6) to get this as a GitHub Gist you can download.)
 
@@ -60,7 +60,7 @@ You'll note that there is no specific data in this Vagrantfile; all the pertinen
 
 Here's a sample `servers.yaml` you could use with this Vagrantfile:
 
-{{< highlight yaml >}}
+```yaml
 ---
 - name: coreos-01
   box: coreos-alpha
@@ -74,7 +74,7 @@ Here's a sample `servers.yaml` you could use with this Vagrantfile:
   box: coreos-alpha
   ram: 512
   ip: 172.17.8.103
-{{< / highlight >}}
+```
 
 (Click [here](https://gist.github.com/scottslowe/4ca1e0c960bbd450ea0e) for a downloadable GitHub Gist.)
 

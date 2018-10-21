@@ -31,15 +31,15 @@ Let's take a deeper look at each of these steps.
 
 This part is harder than it sounds. At its most basic level, the script only needs to call `/sbin/ipfw` and a configuration file, like this:
 
-{{< highlight bash >}}
+```sh
 #!/bin/sh
 
 /sbin/ipfw -q /etc/ipfw.conf
-{{< / highlight >}}
+```
 
 I did quite a bit of digging to see if something more than that was suggested, and finally came up with this startup shell script:
 
-{{< highlight bash >}}
+```sh
 #!/bin/sh
 # Startup script for ipfw on Mac OS X
 
@@ -52,7 +52,7 @@ I did quite a bit of digging to see if something more than that was suggested, a
 
 # Load the firewall ruleset
 /sbin/ipfw -q /etc/ipfw.conf
-{{< / highlight >}}
+```
 
 This startup shell script can generally be put anywhere; I chose to put it in `/usr/local/bin` (which may not exist by default on your system).
 

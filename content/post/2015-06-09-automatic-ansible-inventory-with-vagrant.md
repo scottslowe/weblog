@@ -20,14 +20,14 @@ Using this arrangement, since I already have all the VM-specific data in the ext
 
 Here's the particular snippet of Ruby code to add to the `Vagrantfile`:
 
-{{< highlight ruby >}}
+```ruby
 require "fileutils"
 f = File.open("hosts","w")
 servers.each do |servers|
   f.puts servers["ip_addr"]
 end # servers.each
 f.close
-{{< / highlight >}}
+```
 
 This snippet of code opens a file named `hosts` (which is the inventory file name specified in the `ansible.cfg` in this directory, as I described in yesterday's post). If the file already exists, it is overwritten---the preferred behavior, actually, since it allows us to write the contents fresh every time the user runs `vagrant up`. It then iterates through the entries from the external YAML file, and writes the IP address to the file, closing the file after the loop is complete.
 
@@ -43,8 +43,6 @@ With this approach, your workflow looks like this:
 * When you're ready to start again, you run `vagrant up` and start all over again with a fresh environment. The Ansible inventory file gets automatically re-created with the correct IP addresses.
 
 Pretty useful, yes?
-
- 
 
 [link-1]: http://www.ansible.com/home
 [link-2]: https://www.vagrantup.com

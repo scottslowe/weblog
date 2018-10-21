@@ -42,7 +42,7 @@ Earlier (pre-2.0) releases of etcd apparently supported a TOML-based configurati
 
 Here's an Upstart script you can use for etcd:
 
-{{< highlight text >}}
+```text
 description "etcd 2.0 distributed key-value store"
 author "Scott Lowe <scott.lowe@scottlowe.org>"
 
@@ -62,7 +62,7 @@ script
 chdir /var/etcd
 exec /usr/local/bin/etcd >>/var/log/etcd.log 2>&1
 end script
-{{< / highlight >}}
+```
 
 This is a reasonably straightforward Upstart script, so I won't bother spending a great deal of time explaining it. Note that if you chose not to move the `etcd` binary to `/usr/local/bin`, you'll have to edit this Upstart script to point to the correct location of the binary. Also, if you choose to use something other than `/var/etcd` as the data directory, you'll need to edit this Upstart script appropriately. Consider the script above to be an example from which you can build one appropriate to your environment.
 
@@ -70,7 +70,7 @@ I did find that the `if [ -f "/etc/default/etcd" ]; then` test---and subsequentl
 
 The Upstart script itself (listed above) goes into `/etc/init` as `etcd.conf`. The override file also goes into `/etc/init` but is named (quite intuitively) `etcd.override`. Here's the contents of the override file:
 
-{{< highlight text >}}
+```text
 # Override file for etcd Upstart script providing some environment variables
 env ETCD_INITIAL_CLUSTER="etcd-01=http://192.168.101.101:2380,etcd-02=http://192.168.101.102:2380,etcd-03=http://192.168.101.103:2380"
 env ETCD_INITIAL_CLUSTER_STATE="new"
@@ -81,7 +81,7 @@ env ETCD_LISTEN_PEER_URLS="http://192.168.101.101:2380"
 env ETCD_LISTEN_CLIENT_URLS="http://192.168.101.101:2379"
 env ETCD_ADVERTISE_CLIENT_URLS="http://192.168.101.101:2379"
 env ETCD_NAME="etcd-01"
-{{< / highlight >}}
+```
 
 By including all these environment variables in the override file, we're able to keep the Upstart script itself very clean and minimal. If you need to make changes to the configuration, then you edit the override file and just restart the service. Without the override file, all these parameters would have to be specified on the `etcd` command line itself, which has the following effects:
 
@@ -101,7 +101,6 @@ You can verify the operation of etcd by running a command like `etcdctl member l
 ## Additional Resources
 
 You can find the Upstart script, machine-specific override files, a provisioning script, and a Vagrantfile for replicating a three-node etcd 2.0 cluster on Ubuntu 14.04 in the "etcd-2.0" directory of [my learning-tools GitHub repository][link-3]. It was tested with Vagrant 1.7.2, the VMware plugin for Vagrant, and Fusion 6.0.5. It should work on VMware Workstation, but I haven't tested it there. (Feedback is welcome.)
-
 
 [link-1]: https://github.com/coreos/etcd
 [link-2]: https://coreos.com

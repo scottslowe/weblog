@@ -25,7 +25,7 @@ In any case, here's the corrected Puppet manifests. I checked these with both `p
 
 First up is the `init.pp` manifest.
 
-{{< highlight puppet >}}
+```text
 # NTP class definition
 
 class ntp {
@@ -51,11 +51,11 @@ class ntp {
     require       => File['ntp.conf'],
   }
 }
-{{< / highlight >}}
+```
 
 Next we have the subclasses for the various operating systems. Here's `openbsd.pp`:
 
-{{< highlight puppet >}}
+```text
 # NTP subclass for OpenBSD
     
 class ntp::openbsd inherits ntp {
@@ -75,11 +75,11 @@ class ntp::openbsd inherits ntp {
     start         => '/usr/sbin/ntpd',
   }
 }
-{{< / highlight >}}
+```
 
 Here's the subclass for Ubuntu, stored in `ubuntu.pp`:
 
-{{< highlight puppet >}}
+```text
 # NTP subclass for Ubuntu Linux
     
 class ntp::ubuntu inherits ntp {
@@ -88,11 +88,11 @@ class ntp::ubuntu inherits ntp {
     path          => '/etc/init.d/',
   }
 }
-{{< / highlight >}}
+```
 
 And finally, here's `centos.pp`, used for CentOS/Red Hat-based instances:
 
-{{< highlight puppet >}}
+```text
 # NTP subclass for CentOS Linux
     
 class ntp::centos inherits ntp {
@@ -100,7 +100,7 @@ class ntp::centos inherits ntp {
     name          => 'ntpd',
   }
 }
-{{< / highlight >}}
+```
 
 I know that there are NTP modules for Puppet that "take care" of all this sort of thing for you, but creating this was, for me, part of the learning process. I'm going to tackle SSH next, and---per the comments on my first Puppet post---I've also started reading up on Hiera to see how that might fit in here. The initial reading I've done leads me to believe that the combination of Puppet and Hiera could be quite powerful.
 

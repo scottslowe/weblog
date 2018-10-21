@@ -26,7 +26,7 @@ CoreOS has some pretty good [documentation][link-7], but as I set out to figure 
 
 Fortunately, both of these tasks are easily handled via cloud-init. Here is a sample cloud-config file, written in YAML, that you could pass to CoreOS via cloud-init, that will take care of both the configuration tasks listed above:
 
-{{< highlight yaml >}}
+```yaml
 #cloud-config
 
 write-files:
@@ -46,7 +46,7 @@ coreos:
         What=nfshost.domain.com:/vol2/data
         Where=/mnt/data
         Type=nfs
-{{< / highlight >}}
+```
 
 Let's walk through this real quick:
 
@@ -57,7 +57,6 @@ Let's walk through this real quick:
 If you were deploying a CoreOS instance on OpenStack, you'd simply take the YAML code listed above (with your site-specific details, of course) and paste that into the "Post-Creation" section of the Launch Instance wizard (or you'd supply it via the command-line to the `nova` client). If you're deploying CoreOS via Vagrant (as I described [here][xref-4]), you'd include this content in the `user-data` file that is referenced by the `Vagrantfile`. In both cases, it's cloud-init that will take this information and automatically configure CoreOS appropriately upon deployment. Naturally, you could also combine this information with other cloud-init directives to configure etcd, fleet, Docker, etc.
 
 I know this doesn't seem too complicated (and it isn't, to be honest), but I hope that this information will be useful to someone out there.
-
 
 [link-1]: https://coreos.com
 [link-2]: http://www.openstack.org

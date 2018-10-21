@@ -28,7 +28,7 @@ All of this was covered in my earlier post, so refer back there for more details
 
 In this post, I'll re-use the same `Vagrantfile` for the host VM, which tells Vagrant to use an Ubuntu 14.04 base box instead of the default boot2docker box. For the sake of completeness, here's that host VM `Vagrantfile`:
 
-{{< highlight ruby >}}
+```ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -56,13 +56,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Disable synced folders (prevents an NFS error on "vagrant up")
   config.vm.synced_folder ".", "/vagrant", disabled: true
 end
-{{< / highlight >}}
+```
 
 This `Vagrantfile` is pretty simple, and I've added comments to help explain each command present. As in my earlier post, I've stored this file in a `host` subdirectory off the main project directory.
 
 The real meat of this post, though, is the use of a separate YAML file to provide the details on the Docker containers that Vagrant should create. This is a technique I've used elsewhere (see [here][xref-2] for an example). In this particular case, I've used a file named `containers.yml`, the contents of which look like this:
 
-{{< highlight yaml >}}
+```yaml
 ---
 - name: nginx-01
   image: nginx
@@ -70,13 +70,13 @@ The real meat of this post, though, is the use of a separate YAML file to provid
 - name: redis-01
   image: redis
   ports: ['6379:6379']
-{{< / highlight >}}
+```
 
 As you can see, the YAML file specifies two containers, and for each container three properties are provided: a user-friendly name, the specific Docker image to use, and the network ports that should be exposed. If you wanted to create more containers, you'd simply edit this YAML file to define these properties for additional containers. Note that these containers are all getting instantiated on the same host VM, so be mindful of port conflicts when exposing ports.
 
 The main `Vagrantfile`, which Vagrant will use to create Docker containers on the host VM, now looks like this:
 
-{{< highlight ruby >}}
+```ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -126,7 +126,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 end
-{{< / highlight >}}
+```
 
 Again, I've tried to heavily comment the `Vagrantfile` so that it's easy for others to follow along and figure out what the various commands do. At a high-level, this `Vagrantfile` does the following:
 
@@ -141,8 +141,6 @@ Similarly, you could use `vagrant global-status` to get the ID for the host VM, 
 ## Additional Resources
 
 As I mentioned earlier, sample `Vagrantfiles` and supporting documentation to replicate this setup in your own environment can be found in [my "learning-tools" GitHub repository][link-1]. Just look in the "vagrant-docker-yaml" subdirectory.
-
-
 
 [link-1]: https://github.com/scottslowe/learning-tools
 [link-2]: http://www.vmware.com/products/fusion/

@@ -33,7 +33,9 @@ I'm not going to cover installing Fusion, Vagrant, or the VMware provider for Va
 
 At the time of this writing, CoreOS supplied a Vagrant box for the `vmware_fusion` provider that you could install with a simple `vagrant box add`, like this:
 
-	vagrant box add http://stable.release.core-os.net/amd64-usr/current/coreos_production_vagrant_vmware_fusion.json
+```sh
+vagrant box add http://stable.release.core-os.net/amd64-usr/current/coreos_production_vagrant_vmware_fusion.json
+```
 
 This command will download and install the Vagrant box you'll need for use with VMware Fusion. Once it's done, you'll see the box listed when you run `vagrant box list`. I chose the stable branch for my testing; you could just as easily run builds from the alpha or beta branches by replacing "stable" in the URL above with the branch you want to use.
 
@@ -56,7 +58,7 @@ Before you can just run `vagrant up` to turn up a cluster of systems on your lap
 
 First, you'll need to edit the `servers.yml` to provide Vagrant with the details on the VMs you'd like it to create. Here's a snippet from the supplied `servers.yml` in the repository:
 
-{{< highlight yaml >}}
+```yaml
 ---
 - name: coreos-01
   box: coreos-stable
@@ -64,7 +66,7 @@ First, you'll need to edit the `servers.yml` to provide Vagrant with the details
   vcpu: 1
   priv_ip: 192.168.254.101
   pub_ip: 172.16.5.11
-{{< / highlight >}}
+```
 
 Let's walk through this real quick:
 
@@ -104,8 +106,6 @@ If you'd like some additional information on some of the technologies mentioned 
 [CoreOS Continued: Fleet and Docker][xref-3]  
 [Deploying CoreOS on OpenStack Using Heat][xref-4]  
 [A Heat Template for Docker Containers][xref-5]
-
-
 
 [link-1]: http://professionalvmware.com/2015/02/vbrownbag-devops-follow-up-docker-and-friends-with-scott-lowe-scott_lowe/
 [link-2]: https://github.com/scottslowe/2015-vbrownbag-docker

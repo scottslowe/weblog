@@ -64,7 +64,7 @@ The PoC in which I was engaged involved Cisco UCS, so we knew in advance what th
 
 The contents of this file should look something like this (lines have been wrapped here for readability and are marked by backslashes; don't insert any line breaks in the actual file):
 
-{{< highlight text >}}
+```text
 default menu.c32  
 menu title Custom PXE Boot Menu Title  
 timeout 30  
@@ -74,7 +74,7 @@ menu label Scripted installation
 kernel vmlinuz  
 append initrd=initrd.img mem=512M ksdevice=vmnic0 ks=ftp://A.B.C.D/ks.cfg  
 IPAPPEND 1
-{{< / highlight >}}
+```
 
 You'll want to replace `ftp://A.B.C.D/ks.cfg` with the correct IP address and path for the kickstart script on the FTP server.
 

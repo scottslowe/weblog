@@ -32,10 +32,10 @@ Here's how:
 
 That's it! It's actually a lot easier than it might seem. For example, I didn't like the fact that the EMC corporate VDI connection played that stupid Windows logon sound, so I modified the `vmware-view.rdp` file to change the value of the `AudioRedirectionMode` parameter so that it wouldn't play music when I logged into a VDI image. All I had to do was change the integer value of the `AudioRedirectionMode` parameter to two, like this:
 
-{{< highlight xml >}}
+```xml
 <key>AudioRedirectionMode</key>  
 <integer>2</integer>
-{{< / highlight >}}
+```
 
 Voila! No more sounds being sent across my RDP connection. I haven't yet found a comprehensive breakdown of all the parameters, although [this page is a good start](http://www.coe.uncc.edu/mosaic/remote_desk/RDP%20File%20Settings.htm).
 

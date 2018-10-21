@@ -57,7 +57,7 @@ Although Vagrant expects Docker to be running inside this host VM, it does provi
 
 Pretty straightforward, right? Let's take a look at a full example of a `Vagrantfile` that could be used to define a host VM for the Vagrant Docker provider:
 
-{{< highlight ruby >}}
+```ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -85,7 +85,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Disable synced folders (prevents an NFS error on "vagrant up")
   config.vm.synced_folder ".", "/vagrant", disabled: true
 end
-{{< / highlight >}}
+```
 
 Most of this `Vagrantfile` is pretty simple---define a VM, specify the box, disable checking for new versions of the box, etc. A couple of things I want to note:
 
@@ -100,7 +100,7 @@ I like to store this `Vagrantfile` in a subdirectory of the main project directo
 
 And speaking of defining your containers...that's the next topic to discuss. Here's a sample `Vagrantfile` that specifies the host VM and builds a single Nginx container:
 
-{{< highlight ruby >}}
+```ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -135,7 +135,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     docker.name = 'nginx-container'
   end
 end
-{{< / highlight >}}
+```
 
 As with the `Vagrantfile` that specifies the host VM, this is reasonably straightforward once you've worked with Vagrant a little while. This example `Vagrantfile` disables synced folders, specifies the path to the `Vagrantfile` defining the host VM (in this case, that file resides in a subdirectory named `host`), provides the name of the Docker image to use, the ports to map, and a user-friendly name. Note that if you omit the `docker.ports` statement no ports will be mapped.
 
@@ -155,10 +155,6 @@ I found [this post][link-7] by Nick Weaver to be very helpful as well, providing
 
 Finally, I posted resources to help you follow along with this blog post in [my "learning-tools" GitHub repository][link-8]; feel free to clone or download the repository to help with your own studies.
 
-
-
-
-
 [link-1]: http://www.docker.com
 [link-2]: http://www.vagrantup.com
 [link-3]: https://github.com/boot2docker/boot2docker
@@ -167,7 +163,6 @@ Finally, I posted resources to help you follow along with this blog post in [my 
 [link-6]: http://www.vmware.com/products/workstation/
 [link-7]: http://nickapedia.com/2014/06/12/docker-vagrant-vmware-fusion-bug/
 [link-8]: https://github.com/scottslowe/learning-tools
-
 [xref-1]: {{< relref "2014-03-11-a-quick-introduction-to-docker.md" >}}
 [xref-2]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
 [xref-3]: {{< relref "2014-10-22-multi-machine-vagrant-with-yaml.md" >}}

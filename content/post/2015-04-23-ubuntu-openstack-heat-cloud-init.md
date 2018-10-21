@@ -16,7 +16,7 @@ In this post I'd like to share a couple of things I recently learned about the i
 
 One issue that I'd been repeatedly running into was an apparent "failure" on the part of Heat to properly apply cloud-init configurations to deployed Ubuntu instances. So, using a Heat template with an `OS::Nova::Server` resource defined like this would result in an instance that apparently wasn't reachable via SSH (I'd get back `Permission denied (publickey)`):
 
-{{< highlight yaml >}}
+```yaml
 resources:
   instance0:
     type: OS::Nova::Server
@@ -27,7 +27,7 @@ resources:
       networks:
         - port: { get_resource: instance0_port0 }
       key_name: lab
-{{< / highlight >}}
+```
 
 Deploying an instance manually from the same image worked perfectly. So what was the deal?
 
@@ -37,7 +37,7 @@ However, the problem wasn't completely resolved. Although the hostname had been 
 
 I thought this might be related to using "ec2-user" instead of "ubuntu", so I started digging around and found that you can specify the user account Heat should use with the `admin_user` parameter. That changed the Heat template snippet to look like this:
 
-{{< highlight yaml >}}
+```yaml
 resources:
   instance0:
     type: OS::Nova::Server
@@ -49,13 +49,13 @@ resources:
         - port: { get_resource: instance0_port0 }
       key_name: lab
       admin_user: ubuntu
-{{< / highlight >}}
+```
 
 This ensured that the specified SSH key was injected for the expected user ("ubuntu", in this case), but it didn't change the odd behaviors once I got logged in. Something was still off.
 
 Digging into the logs, I found this message being reported in the instance's console log:
 
-{{< highlight text >}}
+```text
 cloud-init-test-01 login: Cloud-init v. 0.7.5 running 'modules:final' at Thu, 23 Apr 2015 15:27:39 +0000. Up 24.12 seconds.
 Provision began: 2015-04-23 15:27:39.250084
 
@@ -64,7 +64,7 @@ Provision began: 2015-04-23 15:27:39.250084
 Userdata empty or not executable: [Errno 8] Exec format error
 
 Provision done: 2015-04-23 15:27:39.255737
-{{< / highlight >}}
+```
 
 OK, so cloud-init was running into some sort of error when deploying the instance, which explained why the instance's environment wasn't getting configured correctly. Great---now how do I fix the problem?
 
@@ -76,7 +76,7 @@ Then I came across this snippet in the OpenStack user guide online:
 
 Light bulb! Heat was defaulting to HEAT_CFNTOOLS, which is exactly what the error message in the console log was reporting. So, I changed the Heat template so that the instance was invoked like this:
 
-{{< highlight yaml >}}
+```yaml
 resources:
   instance0:
     type: OS::Nova::Server
@@ -89,13 +89,13 @@ resources:
       key_name: lab
       admin_user: ubuntu
       user_data_format: RAW
-{{< / highlight >}}
+```
 
 That fixed the problem---the error in the console logs went away, I was able to log in as the "ubuntu" user with the specified SSH key, and the instance was configured properly and behaved as one would expect. End of the story, right?
 
 Not quite. Additional testing revealed that only the `user_data_format: RAW` statement was actually required to fix the problem I'd been experiencing. In other words, fixing the HEAT_CFNTOOLS error also fixed the issue of injecting the SSH key to the correct user. Using a snippet like this worked just fine:
 
-{{< highlight yaml >}}
+```yaml
 resources:
   instance0:
     type: OS::Nova::Server
@@ -107,7 +107,7 @@ resources:
         - port: { get_resource: instance0_port0 }
       key_name: lab
       user_data_format: RAW
-{{< / highlight >}}
+```
 
 This produced an Ubuntu instance that was accessible via SSH, injecting the specified key for the "ubuntu" user and properly customizing and configuring the instance. (And, naturally, the earlier error that had appeared in the console logs was no longer present.)
 
@@ -116,7 +116,6 @@ This produced an Ubuntu instance that was accessible via SSH, injecting the spec
 When using OpenStack Heat, you're almost certainly going to want to be sure to specify `user_data_format: RAW` when defining your instances. This definitely is the case for Ubuntu instances based on the Ubuntu cloud images; I haven't tested any of the other distributions to see if they behave similarly. The giveaway that this is the issue will be the HEAT_CFNTOOLS-related error in the console log for the instance(s) in question.
 
 As I said at the beginning of this post, this might be something you already know. It might be so simple that you're in disbelief that I didn't already know this. I suspect, though, that if this is something I ran into others will run into it as well. If you end up being one of those folks, I hope this ends up being useful for you.
-
 
 [link-1]: http://cloudinit.readthedocs.org/en/latest/
 [link-2]: https://wiki.openstack.org/wiki/Heat

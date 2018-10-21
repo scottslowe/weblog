@@ -32,7 +32,7 @@ With that in mind, it seems to me that the most beneficial uses of Vagrant are t
 
 OK, enough of the high-level theory. Let's take a look at a _very_ simple example of a `Vagrantfile`:
 
-{{< highlight ruby >}}
+```ruby
 VAGRANTFILE_API_VERSION = "2"
  
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
@@ -45,7 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder ".", "/vagrant"
  
 end
-{{< / highlight >}}
+```
 
 (Click [here](https://gist.github.com/scottslowe/0f82601987bf1f39c941) for a downloadable GitHub Gist with this code.)
 

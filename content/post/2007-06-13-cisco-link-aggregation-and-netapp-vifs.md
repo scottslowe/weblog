@@ -27,12 +27,14 @@ Multi-mode VIFs, on the other hand, allow for both greater bandwidth utilization
 
 To configure the switch, you would use the following commands (these are entered in global configuration mode on the switch):
 
-	s3(config)#int port-channel1
-	s3(config-if)#description Multi-mode VIF for netapp1
-	s3(config-if)#int gi0/23
-	s3(config-if)#channel-group 1 mode on
-	s3(config-if)#int gi0/24
-	s3(config-if)#channel-group 1 mode on
+```text
+s3(config)#int port-channel1
+s3(config-if)#description Multi-mode VIF for netapp1
+s3(config-if)#int gi0/23
+s3(config-if)#channel-group 1 mode on
+s3(config-if)#int gi0/24
+s3(config-if)#channel-group 1 mode on
+```
 
 This creates the port-channel1 interface (you may need to increment that number, i.e., use port-channel2 or port-channel3, if you already have existing link aggregates configured) and adds interfaces GigabitEthernet0/23 and GigabitEthernet0/24 to the link aggregate. If you do have to use a different link aggregate interface, be sure the number of the interface (`int port-channel 4`, for example) matches the number of the channel-group specified on the member interfaces (`channel-group 4 mode on`, for example). This seems obvious, but it's worth mentioning nevertheless.
 
@@ -40,21 +42,27 @@ Be aware that Data ONTAP's multi-mode VIFs are only compatible with static 802.3
 
 By default, many Cisco switches default to MAC address-based load balancing across the links, whereas NetApp defaults to IP address-based load balancing. To see the switch's current load balancing configuration, use this command in privileged mode:
 
-	s3#show etherchannel load-balance
+```text
+s3#show etherchannel load-balance
+```
 
 To change the switch's load balancing algorith to a mode compatible with NetApp's, use one of the following command in global configuration mode (note that changing it affects the entire switch; you can't change it for a single port-channel individually):
 
-	s3(config)#port-channel load-balance src-dst-ip
+```text
+s3(config)#port-channel load-balance src-dst-ip
+```
 
 Once the switch is configured, then we can proceed with configuring the NetApp storage system. The following commands will create the the multi-mode VIF (this can also be done via the FilerView GUI):
 
-	netapp1>vif create multi vif0 e6d e7d
-	netapp1>ifconfig vif0 172.31.254.10 netmask 255.255.255.0
-	netapp1>ifconfig vif0 up
+```text
+netapp1>vif create multi vif0 e6d e7d
+netapp1>ifconfig vif0 172.31.254.10 netmask 255.255.255.0
+netapp1>ifconfig vif0 up
+```
 
 This creates the VIF with interfaces e6d and e7d as members, plumbs it with an IP address, and brings it up. Running the command `vif status vif0` now will return the following results:
 
-{{< highlight text >}}
+```text
 default: transmit 'IP Load balancing', VIF Type 'multi_mode', fail 'log'
 vif0: 2 links, transmit 'IP Load balancing', VIF Type 'multi-mode' fail 'default'
 
@@ -77,7 +85,7 @@ vif0: 2 links, transmit 'IP Load balancing', VIF Type 'multi-mode' fail 'default
                 up indications 1, broken indications 0
                 drops (if) 0, drops (link) 0
                 indication: broken
-{{< / highlight >}}
+```
 
 Note the 'IP Load balancing' algorithm stated in the output; this is why the switch's load-balancing mechanism should be changed to match.
 

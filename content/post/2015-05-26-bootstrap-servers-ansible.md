@@ -25,11 +25,11 @@ As I dug into Ansible, I found something that proved to be very important: it's 
 
 With that information in hand, I built an Ansible playbook that created an Ansible user account and installed an SSH key for that user account (this was accomplished using the "user" and "authorized_key" Ansible modules). The playbook did a couple other things as well, like handle `sudo` access for this new account. There's nothing special about the tasks in the playbook; the trick, in my opinion, is in the playbook header:
 
-{{< highlight yaml >}}
+```yaml
 - hosts: '{{ hosts }}'
   remote_user: '{{ user }}'
   sudo: yes
-{{< / highlight >}}
+```
 
 Every Ansible playbook starts with this header, and these lines tell it against which hosts (via the `hosts:` line) to execute the playbook, and which user account (via the `remote_user:` line) to use when connecting to those hosts. By using variables on these lines, it meant I could specify these values on the command-line---which in turn meant I had very granular control over which servers I wanted to affect and how Ansible would connect to those servers.
 
@@ -53,8 +53,6 @@ There are a few things to note about this process:
 * **Nothing** special is required in the Ansible inventory. You're welcome to use inventory variables, if you'd like, but they aren't needed at all for this process---which helps make the transition from first Ansible run to subsequent Ansible runs very seamless.
 
 I know this may not seem like much, but I did want to share it here in the event that the use of command-line variables within a playbook---especially within the header of a playbook, as in this case---could prove useful to others. Thanks for reading!
-
-
 
 [link-1]: http://www.ansible.com/home
 [xref-1]: {{< relref "2015-05-20-fully-automated-ubuntu-install.md" >}}

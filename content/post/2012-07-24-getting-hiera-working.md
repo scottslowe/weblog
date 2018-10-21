@@ -38,7 +38,7 @@ Here are the steps that I took to get Hiera up and running on the Puppet master 
 
 7. You'll need to create a Hiera configuration file located in the main Puppet directory (on my Ubuntu 12.04 LTS Puppet master server, this was `/etc/puppet`). This file is called `hiera.yaml` and will probably need to look something like this (you'd specify the directory created in step 6 on the last line here):
 
-{{< highlight yaml >}}
+```yaml
 ---
 :hierarchy:
   - %{operatingsystem}
@@ -47,7 +47,7 @@ Here are the steps that I took to get Hiera up and running on the Puppet master 
   - yaml
 :yaml:
   :datadir: '/etc/puppet/hieradata'
-{{< / highlight >}}
+```
 
 At this point, you should now have a working Hiera installation. In a future post, I'll show you how I used Hiera with Puppet to create OS-based customized configuration files.
 

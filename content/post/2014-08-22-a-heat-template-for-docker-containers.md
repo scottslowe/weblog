@@ -44,7 +44,7 @@ Once these prerequisites are addressed---Docker plugin installed and working, Do
 
 Here is a sample template that will create a Docker container on an existing instance:
 
-{{< highlight yaml >}}
+```yaml
 heat_template_version: 2013-05-23
 description: >
   Heat template to deploy Docker containers to an existing host
@@ -54,7 +54,7 @@ resources:
     properties:
       image: nginx
       docker_endpoint: 'tcp://192.168.1.207:2345'
-{{< / highlight >}}
+```
 
 (Click [here](https://gist.github.com/scottslowe/2c22e5548910e5717f12) for a downloadable version of the code block above.)
 

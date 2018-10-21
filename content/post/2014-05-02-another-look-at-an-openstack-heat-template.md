@@ -22,7 +22,7 @@ In an earlier post, I provided [an introduction to OpenStack Heat][1], and provi
 
 Here's the full template (click [here](https://gist.github.com/scottslowe/1ed38b586a1751138c8d) for this code as a GitHub Gist):
 
-{{< highlight yaml >}}
+```yaml
 heat_template_version: 2013-05-23
 description: >
   A simple Heat template that spins up multiple instances and a private network (HOT template in YAML).
@@ -86,7 +86,7 @@ resources:
       flavor: m1.xsmall
       networks:
         - port: { get_resource: instance1_port0 }
-{{< / highlight >}}
+```
 
 I won't walk through the whole template again, but rather just talk briefly about a couple of the differences between this YAML-encoded template and the earlier JSON-encoded template:
 

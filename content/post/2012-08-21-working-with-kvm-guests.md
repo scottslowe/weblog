@@ -41,7 +41,7 @@ You can look at the XML configuration of a KVM guest (more properly referred to 
 
 Here's a snippet of the XML configuration for a KVM guest:
 
-{{< highlight xml >}}
+```xml
         <devices>
         <emulator>/usr/bin/kvm</emulator>
         <disk type='file' device='disk'>
@@ -50,7 +50,7 @@ Here's a snippet of the XML configuration for a KVM guest:
           <target dev='hda' bus='ide'/>
           <address type='drive' controller='0' bus='0' unit='0'/>
         </disk>
-{{< / highlight >}}
+```
 
 The second component of a KVM guest is the storage; as I mentioned earlier, this can be a file on a file system or it can be a volume managed by a logical volume manager (LVM). The XML snippet above shows the configuration for a disk image stored as a file on a file system. This particular disk image is in QEMU raw format.
 
@@ -97,13 +97,13 @@ For improved performance, you can also use paravirtualized drivers. (This is the
 
 To use virtio drivers for networking, edit the guest configuration like this (the `model` line is the line that needs to be added):
 
-{{< highlight xml >}}
+```xml
     <interface type='bridge'>
       <mac address='52:54:00:a0:55:ef'/>
       <source bridge='br0'/>
       <model type='virtio'/>
     </interface>
-{{< / highlight >}}
+```
 
 I found [this page](https://help.ubuntu.com/community/KVM/Networking) to be quite helpful in determining exactly how to enable the virtio network drivers. This part is the same for both Ubuntu and Windows guests; for Windows guests, you also have to install the virtio drivers into Windows. That can be a bit more problematic; I'd recommend copying them across the network _before_ making the change above.
 

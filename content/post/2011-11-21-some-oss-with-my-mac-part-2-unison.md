@@ -77,7 +77,7 @@ I highly recommend you read [this page](https://alliance.seas.upenn.edu/~bcpierc
 
 Here's a sanitized version of the Unison profile that I'm using to keep files synchronized:
 
-{{< highlight text >}}
+```
 root = /Local/Path/To/Files
 root = ssh://username@remote.host.com//Remote/Path/To/Files
 servercmd = /usr/bin/unison
@@ -88,7 +88,7 @@ ignore = Name .FBCIndex
 ignore = Name .FBCLockFolder
 ignore = Name .Apple*
 ignore = Name *.tmp
-{{< / highlight >}}
+```
 
 There are a few more ignore statements in there, but you get the idea. Refer to the Wiki page for a more detailed listing of suggested ignore statements. Oh, and the double forward slash in the second `root` statement is intentional, not a typo (this is the right syntax).
 

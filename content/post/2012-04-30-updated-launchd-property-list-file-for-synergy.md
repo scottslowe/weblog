@@ -16,7 +16,7 @@ After posting my article on [running the Synergy server automatically on OS X Li
 
 Here's the updated property list file:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer/DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -36,7 +36,7 @@ Here's the updated property list file:
 <string>Synergy server daemon</string>
 </dict>
 </plist>
-{{< / highlight >}}
+```
 
 After making the changes and rebooting, everything seems to work just fine. Thanks for the tip!
 
