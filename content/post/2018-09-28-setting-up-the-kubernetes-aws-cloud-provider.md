@@ -53,6 +53,8 @@ For worker nodes, the permissions are not as far-reaching:
 
 You'll want to capture these permissions in a policy statement, associate that policy statement with a role, and then associate that role with an IAM instance profile. You'll end up with two IAM instance profiles: one for the control plane nodes with a broader set of permissions, and one for the worker nodes with a more restrictive set of permissions.
 
+(UPDATE: Reader Matt Roux pointed out that [the `cloud-provider-aws` GitHub repository][link-6]---which represents the future of the AWS cloud provider---contains a proper IAM policy for control plane nodes and worker nodes. Thanks Matt!)
+
 ## AWS Tags
 
 The AWS cloud provider needs a specific tag to be present on almost all the AWS resources that a Kubernetes cluster needs. The tag key is `kubernetes.io/cluster/<cluster-name>`; the value of the tag is immaterial (this tag replaces an older `KubernetesCluster` tag). Note that Kubernetes itself will also use this tag on things that it creates, and it will use a value of "owned". This value does _not_ need to be used on resources that Kubernetes itself did not create. Most of the documentation I've seen indicates that the tag is needed on all instances and on exactly one security group (this is the security group that will be modified to allow ELBs to access the nodes, so the worker nodes should be a part of this security group). However, I've also found it necessary to make sure the `kubernetes.io/cluster/<cluster-name>` tag is present on subnets and route tables in order for the integration to work as expected.
@@ -110,3 +112,4 @@ Hopefully the information in this article helps remove some of the confusion and
 [link-3]: https://twitter.com/scott_lowe
 [link-4]: https://kubernetes.slack.com
 [link-5]: https://kubernetes.io
+[link-6]: https://github.com/kubernetes/cloud-provider-aws

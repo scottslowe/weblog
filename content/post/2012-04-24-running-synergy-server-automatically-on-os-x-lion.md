@@ -18,7 +18,7 @@ However, I recently acquired a new dual quad-core Mac Pro workstation, and as pa
 
 First, I wrote a simple shell script that checks for the presence of `synergys` already running. If `synergys` is already running, do nothing; otherwise, start `synergys`. Here's the shell script:
 
-{{< highlight bash >}}
+```sh
 #!/bin/sh
 # Startup script for the Synergy server component
 
@@ -32,7 +32,7 @@ if [ $number -gt 0 ]
   else
     /usr/bin/synergys -f -c /etc/synergy.conf
 fi
-{{< / highlight >}}
+```
 
 Based on the testing I've done so far, this script works well. If you're a shell scripting expert and have a better way of handling this, let me know (I'm always open to suggestions for improvement).
 
@@ -40,7 +40,7 @@ The next step was to configure `launchd` to automatically run this shell script-
 
 Here's the contents of the plist file I created:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer/DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -57,7 +57,7 @@ Here's the contents of the plist file I created:
 <string>Synergy server daemon</string>
 </dict>
 </plist>
-{{< / highlight >}}
+```
 
 Of course, `synergys` also needs its configuration file. You can read about the configuration file I used in [my original Synergy article][1]. I modified it slightly to remove the double-tap feature and to add corners where the cursor wouldn't switch screens (to make it easier to get to the Apple and Spotlight menus).
 

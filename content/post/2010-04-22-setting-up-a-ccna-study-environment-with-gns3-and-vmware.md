@@ -42,13 +42,13 @@ Once you have GNS3 downloaded, extract it into the directory of your choice (I c
 
 After you've downloaded and extracted GNS3, create the following directories under the directory where GNS3 is found:
 
-{{< highlight text >}}
+```text
 <GNS3 directory>/project  
 <GNS3 directory>/ios  
 <GNS3 directory>/cache  
 <GNS3 directory>/tmp  
 <GNS3 directory>/dynamips
-{{< / highlight >}}
+```
 
 Use the `chmod` and `chown` commands as necessary to ensure that your user account has full read/write permissions all of these directories except the `dynamips` directory.
 

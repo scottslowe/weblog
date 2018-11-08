@@ -27,22 +27,22 @@ Now that we have that out of the way, the process for using a libvirt virtual ne
 
 Next, create an XML definition for a libvirt virtual network. For a fake bridge named `vlan100`, your XML definition might look something like this:
 
-{{< highlight xml >}}
+```xml
 <network>
   <name>vlan100-net</name>
   <forward mode='bridge'/>
   <bridge name='vlan100'/>
 </network>
-{{< / highlight >}}
+```
 
 Then, in the guest domain configuration, you reference the libvirt virtual network instead of the underlying bridge directly, like this:
 
-{{< highlight xml >}}
+```xml
 <interface type='network'>
   <mac address='11:22:33:aa:bb:cc'/>
   <source network='vlan100-net'/>
 </interface>
-{{< / highlight >}}
+```
 
 And that's it! Based on my testing, it even appears that you can make this change on the fly, without having to reboot the guest domain. However, I could be wrong---if anyone knows definitively, please speak up in the comments. Any other corrections, clarifications, or questions are also welcome in the comments below.
 

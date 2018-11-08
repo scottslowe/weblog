@@ -24,7 +24,7 @@ To give credit where credit is due, this isn't my idea at all; I've derived all 
 
 First, here's the AppleScript code that wraps around the `curl` command to shorten the URL:
 
-{{< highlight applescript >}}
+```text
 on run (input)  
 	set login to "YourUserNameHere" as string  
 	set apiKey to "YourAPIKeyHere" as string  
@@ -40,7 +40,7 @@ on run (input)
 	end if  
 	end ignoring  
 end run
-{{< / highlight >}}
+```
 
 Be careful with the line starting "set curlCmd..."; it's wrapped above and you'll need to properly escape the quotes with backslashes, as above, in order for it to work properly. You'll clearly want to replace "YourUserNameHere" and "YourAPIKeyHere" with the appropriate values from your bit.ly account.
 

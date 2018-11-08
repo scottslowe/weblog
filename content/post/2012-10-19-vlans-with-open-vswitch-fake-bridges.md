@@ -50,13 +50,13 @@ Let's look at an example. Suppose you had an existing OVS bridge named ovsbr0, a
 
 When you create (or edit) a guest domain, you'll assign it to the new fake bridge (named `vlan100` in this example). So, looking at the libvirt XML code for a guest domain, it might look something like this:
 
-{{< highlight xml >}}
+```xml
 <interface type='bridge'>
   <mac address='11:22:33:aa:bb:cc'/>
   <source bridge='vlan100'/>
   <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
 </interface>
-{{< / highlight >}}
+```
 
 Naturally, you could also create a libvirt virtual network that corresponds to the fake bridge as well. (I'll likely post a separate article around that idea.)
 

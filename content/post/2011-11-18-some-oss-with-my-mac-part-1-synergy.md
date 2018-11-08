@@ -35,7 +35,7 @@ Here's my setup:
 
 With that in mind, here is a sanitized version of the `synergy.conf` file I use on the Synergy server (currently the 13" 2011 MacBook Pro):
 
-{{< highlight text >}}
+```text
 section: screens
     center-laptop:
     left-laptop:
@@ -75,7 +75,7 @@ section: options
     keystroke(control+left) = switchInDirection(left)
     keystroke(control+right) = switchInDirection(right)
 end
-{{< / highlight >}}
+```
 
 The [documentation for Synergy](http://synergy-foss.org/tracker/projects/synergy/wiki/Docs) is pretty straightforward, so I'd recommend you read the docs for more details on each of the directives and configuration options above and their function. What this configuration gives me:
 
