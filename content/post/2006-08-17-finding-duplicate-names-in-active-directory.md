@@ -16,21 +16,21 @@ To use this procedure, you'll need access to the Directory Service command line 
 
 First, we'll need to obtain a list of all the CNs in Active Directory for every user and/or every contact, regardless of their container. It may be possible to do this with Log Parser (using the ADS input format), but I couldn't figure out how. Instead, I turned to the Directory Service command line tool `dsquery`. Here's the command to use:
 
-{{< highlight dosbatch >}}
+```text
 dsquery * "dc=example,dc=com" -scope subtree
 -filter "(|(objectCategory=user)(objectCategory=contact))"
 -limit 0 > output-file.txt
-{{< / highlight >}}
+```
 
 This creates a file (`output-file.txt`) with a list of the CNs for every user object and contact in your Active Directory domain (obviously, you'll need to substitute the correct values in the query statement above---unless your domain is called example.com).
 
 Using this file, then we use Log Parser to list only those CNs that occur more than once in this file. This will identify those objects that have the same name in the domain:
 
-{{< highlight dosbatch >}}
+```text
 logparser -i:TEXTLINE -stats:off -o:NAT -rtp:-1
 "SELECT Text AS objName, COUNT(*) FROM output-file.txt
 GROUP BY Text HAVING COUNT(*) > 1" > duplicates.txt
-{{< / highlight >}}
+```
 
 This produces a text file that lists each CN which is found more than once in the input file, along with a count of how many times it was found. Use this file to go to Active Directory Users and Computers, find the duplicate objects, and rename them as needed. You can then repeat the process until you don't find any more duplicate names.
 

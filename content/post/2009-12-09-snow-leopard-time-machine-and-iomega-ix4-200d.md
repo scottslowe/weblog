@@ -26,7 +26,7 @@ Leopard required that the name of the sparse disk image be a concatenation of th
 
 Second, you'll need to create a file named `com.apple.TimeMachine.MachineID.plist` and copy that into the sparse disk image. The contents of this file should look like this:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>  
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">  
 <plist version="1.0">  
@@ -35,7 +35,7 @@ Second, you'll need to create a file named `com.apple.TimeMachine.MachineID.plis
 <string>_**System UUID Here**_</string>  
 </dict>  
 </plist>
-{{< / highlight >}}
+```
 
 You'll need to put your system's UUID here; you can get this value from System Profiler. Once you've created this file with the appropriate values, copy it into the sparse disk image you created. I did this with the Finder and it works fine, but if you want to use Terminal.app you can use this command:
 

@@ -20,7 +20,7 @@ Having successfully mapped out the steps for Linux/Unix-based hosts to authentic
 
 Using instructions found in [this technical white paper](http://www.vmware.com/pdf/esx_authentication_AD.pdf) from VMware's web site, I started out by modifying the `/etc/krb5.conf` file, which controls the operation of the Kerberos libraries in the Console Operating System (COS).  The contents of the `/etc/krb5.conf` file should look something like this:
 
-{{< highlight text >}}
+```text
 [logging]
  default = FILE:/var/log/krb5libs.log
  kdc = FILE:/var/log/krb5kdc.log
@@ -52,7 +52,7 @@ Using instructions found in [this technical white paper](http://www.vmware.com/p
  renew_lifetime = 36000
  forwardable = true
  krb4_convert = false
-{{< / highlight >}}
+```
 
 As you may already be aware, you can change the "dns_lookup_realm" and "dns_lookup_kdc" directives to true and omit the "[realms]" section, assuming that your Active Directory DNS infrastructure has the properly registered SRV records for the domain controllers.
 

@@ -30,13 +30,13 @@ In this example, we use AdFind to search the Workstations OU in the example.net 
 
 Of course, this could easily be placed into a batch file and called with the OU as a parameter:
 
-{{< highlight dosbatch >}}
+```text
 REM Accepts an Active Directory base DN as a parameter, local account as a parameter, and new password as a parameter, then changes the password on the specified account on all PCs in the specified base DN.
 REM
 @echo off
 adfind -b %1 -f "(objectcategory=computer)" dNSHostName -list > %temp%\adfindtmp.txt && pspasswd @%temp%\adfindtmp.txt %2 %3
 del %temp%\adfindtmp.txt
-{{< / highlight >}}
+```
 
 It would be a good idea to incorporate some error checking, to ensure that the right number and type of parameters were specified, but I'll leave that as an exercise to the readers.
 

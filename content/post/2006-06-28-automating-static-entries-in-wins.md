@@ -23,10 +23,10 @@ First, create a simple text file that contains the names and IP addresses of the
 
 Let's assume this file is called `static.txt`. From the same directory where `static.txt` is currently saved, execute this command at a command line prompt (the line is broken here for readability, please enter as a single line):
 
-{{< highlight dosbatch >}}
+```text
 for /f "tokens=1,2" %1 in (static.txt) do 
 @netsh wins server add name name=%1 ip=\{\%2}
-{{< / highlight >}}
+```
 
 Assuming that the user account under which this command is run has read/write access to the currently-configured WINS server, the output of this command should be something like this:
 
@@ -39,9 +39,9 @@ Please note that it should be possible to modify this command line to accept inp
 
 **UPDATE:** To direct the requests to a specific WINS server rather than just the default WINS server, add the IP address of the WINS server in the command line like this:
 
-{{< highlight dosbatch >}}
+```text
 for /f "tokens=1,2" %1 in (static.txt) do 
 @netsh wins server 10.10.10.100 add name name=%1 ip=\{\%2}
-{{< / highlight >}}
+```
 
 This will direct the name registrations to the specified WINS server.

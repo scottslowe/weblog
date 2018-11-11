@@ -58,7 +58,7 @@ The suggestion for this change came from [this thread on the Ubuntu Forums](http
 
 **afpd.service:**
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" standalone='no'?><!--*-nxml-*-->  
 <!DOCTYPE service-group SYSTEM "avahi-service.dtd">  
 <service-group>  
@@ -73,11 +73,11 @@ The suggestion for this change came from [this thread on the Ubuntu Forums](http
 <txt-record>model=AirPort</txt-record>  
 </service>  
 </service-group>
-{{< / highlight >}}
+```
 
 **daapd.service:**
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" standalone='no'?><!--*-nxml-*-->  
 <!DOCTYPE service-group SYSTEM "avahi-service.dtd">  
 <service-group>  
@@ -87,7 +87,7 @@ The suggestion for this change came from [this thread on the Ubuntu Forums](http
 <port>3689</port>  
 </service>  
 </service-group>
-{{< / highlight >}}
+```
 
 After placing these two files into `/etc/avahi/services`, the new services starting advertising immediately. By the way, you'll note the extra "device-info" entry in `afpd.service`; that sets the icon that will be used by Macs when they discover this service. I made mine look like a Time Capsule by using the setting listed above.
 

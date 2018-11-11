@@ -31,7 +31,7 @@ Next, we'll configure pf for network address translation (NAT) and simple packet
 
 Here's a quick sample ruleset (keep in mind this is based on OpenBSD running as a virtual machine in a VMware environment):
 
-{{< highlight text >}}
+```text
 # Set some variables for use later
 ext_if="pcn1"
 int_if="pcn0"
@@ -59,7 +59,7 @@ antispoof quick for { lo $int_if }
 # Allow other traffic
 pass in on $ext_if proto tcp to ($ext_if) port ssh flags S/SA keep state
 pass in inet proto icmp from $allowed_hosts icmp-type $icmp_types keep state
-{{< / highlight >}}
+```
 
 This is a really, really simple configuration, but it will get the job done. (I did title this "OpenBSD as a _Simple_ NAT Router", after all.)
 

@@ -21,14 +21,14 @@ This was my first project using GRE tunnels. I'd used IPSec tunnels many times, 
 
 The GRE tunnel configuration (scrubbed for sensitive data) looked something like this originally:
 
-{{< highlight text >}}
+```text
 interface Tunnel0
 description GRE tunnel to other location
 ip address 192.168.254.1 255.255.255.252
 tunnel source FastEthernet0/0
 tunnel destination 172.31.254.1
 crypto map tunnel-ipsec-map
-{{< / highlight >}}
+```
 
 Of course, there was an appropriately configured interface at the other end of the tunnel as well. The tunnels came up, and appeared to work just fine, until we added the `keepalive` statement. (The `keepalive` statement is required for the tunnel to report an actual up/down status, necessary for HSRP interface tracking.) Then they went down and stayed down.
 
@@ -36,7 +36,7 @@ A `debug tunnel` statement showed that the keepalives were being sent, but none 
 
 After reviewing the configuration again, I began to suspect an MTU issue---the `show int tun0` output listed an MTU of 1514. I consulted with a Cisco expert (recently obtained his CCIE), and he confirmed that it was most likely an MTU issue. So I modified the configuration to look like this:
 
-{{< highlight text >}}
+```text
 interface Tunnel0
 description GRE tunnel to other location
 ip address 192.168.254.1 255.255.255.252
@@ -44,13 +44,13 @@ ip mtu 1400
 keepalive
 tunnel source FastEthernet0/0
 tunnel destination 172.31.254.1
-{{< / highlight >}}
+```
 
 At that point, the tunnel finally came up and I was able to pass traffic through the tunnel. I re-added the `crypto map` statement to enforce encryption, and the tunnels promptly went back down again.
 
 Once again, debug output saved the day. The output from a `debug crypto` statement was constantly reporting "packet too small". A search of the Cisco web site turned up a result (I can't find it now) that indicated a bug within IOS and suggested the addition of a `tunnel key` statement. So, I modified the configuration again:
 
-{{< highlight text >}}
+```text
 interface Tunnel0
 description GRE tunnel to other location
 ip address 192.168.254.1 255.255.255.252
@@ -60,6 +60,6 @@ tunnel source FastEthernet0/0
 tunnel destination 172.31.254.1
 tunnel key 12345
 crypto map tunnel-ipsec-map
-{{< / highlight >}}
+```
 
 With this configuration, the IPSec/ISAKMP SAs were established and the tunnels came up, passing traffic as expected. The debug output showed no crypto errors, and keepalives were being sent and received. Success!

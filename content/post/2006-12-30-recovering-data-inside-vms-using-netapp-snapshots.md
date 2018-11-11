@@ -53,7 +53,7 @@ By default, snapshots are already enabled and scheduled, so unless you've modifi
 
 We can view the list of snapshots using `snap list vol_name`, where "vol_name" is the name of the volume. The output will look something like this:
 
-{{< highlight text >}}
+```text
 %/used    %/total     date          name
 --------  ----------  ------------  --------
 0% ( 0%)    0% ( 0%)  Dec 30 08:00  hourly.0
@@ -64,7 +64,7 @@ We can view the list of snapshots using `snap list vol_name`, where "vol_name" i
 2% ( 1%)    0% ( 0%)  Dec 29 08:00  hourly.4
 2% ( 0%)    0% ( 0%)  Dec 29 00:00  nightly.1
 3% ( 0%)    0% ( 0%)  Dec 28 20:00  hourly.5
-{{< / highlight >}}
+```
 
 Now, we can make a LUN clone from one of these snapshots and map it to an igroup (this would normally all be on a single line, but I've wrapped it here for readability):
 

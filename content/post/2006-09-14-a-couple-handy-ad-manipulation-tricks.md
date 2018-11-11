@@ -20,10 +20,10 @@ Where shall we start? Let's say that you needed to add a prefix to all the names
 
 First, export the list of groups out of Active Directory using a tool such as AdFind:
 
-{{< highlight dosbatch >}}
+```text
 adfind -b ou=Groups,dc=example,dc=net -s subtree  
 -f "(objectCategory=Group)" displayName –csv > grp-list-1.csv
-{{< / highlight >}}
+```
 
 This produces a list of groups in the Groups OU at the root of the domain example.net in CSV format, listing the full DN and the group's display name. It will look a little something like this:
 
@@ -53,11 +53,11 @@ sed (or **s**tream **ed**itor) is a Unix application that is exceedingly efficie
 
 OK, let's run with another example. What if your organization decides its going to split into two different companies, sharing the same infrastructure, and you are charged with the task of stamping every user account with a suffix that denotes the company for which that user works. After separating the users into separate OUs (which would be useful for separate Group Policy object application anyway), export the user list using AdFind:
 
-{{< highlight dosbatch >}}
+```text
 adfind -b ou=NewCompanyB,dc=example,dc=net -s subtree  
 -f "(&(objectCategory=User)(objectClass=User))" name displayName  
 –csv > usr-compb-list-1.csv
-{{< / highlight >}}
+```
 
 This will create a more complex listing that includes full DN, name, and display name attributes of the users in that OU. With this file, use `sed` to transform it automagically:
 

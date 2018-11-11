@@ -43,7 +43,7 @@ Done now? OK, good. We're going to use Log Parser to read in our CSV output and 
 
 Here's the template file that I used:
 
-{{< highlight text >}}
+```text
 <LPBODY>  
 dn: %FIELD_3%  
 changetype: modify  
@@ -51,30 +51,30 @@ replace: userPrincipalName
 userPrincipalName: %FIELD_4%  
 -  
 </LPBODY>`
-{{< / highlight >}}
+```
 
 In this template, `%FIELD_3%` and `%FIELD_4%` represent the third and fourth fields in the CSV file. This confused me at first, since the CSV output has only two fields, but the difference is in how Log Parser generates the output. Save this file (make note of the filename!) and then we're ready to proceed. For the purposes of this article, I'll assume we used the name `template.tpl`. By the way, if you leave the header line in the CSVDE output, you can use the "friendly" field name in the template instead of the more generic `%FIELD_3%`.
 
 Use this command to convert our CSV output into LDIF format for modifying Active Directory:
 
-{{< highlight dosbatch >}}
+```text
 type c:\output.csv |
 logparser "SELECT * FROM STDIN"
 -i:CSV -o:tpl -tpl:c:\template.tpl -q:on -stats:off >
 c:\output.ldf
-{{< / highlight >}}
+```
 
 This command selects all fields from standard input (which is being piped to Log Parser by the type command) and places them into the template file (using the placeholders described earlier), then redirecting the output to a file named `output.ldf`.
 
 The results of the file will look something like this:
 
-{{< highlight text >}}
+```text
 dn: CN=Bob Smith,OU=Users,OU=Atlanta,OU=Locations,DC=example,DC=net  
 changetype: modify  
 replace: userPrincipalName  
 userPrincipalName: Bob.Smith@atlanta.example.net  
 -
-{{< / highlight >}}
+```
 
 The dash is important, by the way. Refer to [this Microsoft article](http://www.microsoft.com/technet/prodtechnol/windows2000serv/technologies/activedirectory/howto/bulkstep.mspx) for more information and examples on using `ldifde` to modify Active Directory.
 

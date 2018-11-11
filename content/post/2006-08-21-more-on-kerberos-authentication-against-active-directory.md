@@ -35,11 +35,11 @@ In addition, because of differences in the encryption types supported by Active 
 
 An updated `ktpass.exe`, accounting for the change to a user account and the desire to use DES encryption types, would look something like this:
 
-{{< highlight dosbatch >}}
+```text
 ktpass.exe -princ host/fqdn@REALM -mapuser DOMAIN\account 
 -crypto des-cbc-md5 +DesOnly -pass Password123 -ptype KRB5_NT_PRINCIPAL 
 -out c:\filename.keytab
-{{< / highlight >}}
+```
 
 Please note that this command, particularly the service principal name (as specified by the "-princ" parameter) is **CASE SENSITIVE.** For example, the host SPN (i.e., "host/fqdn@REALM") that is used by pam\_krb5 and "native" Kerberos/GSSAPI authentication is lowercase. However, the HTTP SPN (used by mod\_auth\_kerb with Apache) needs to be _uppercase._ In both cases, the Kerberos realm (which should be equivalent to the Active Directory DNS domain name) must be in uppercase.
 

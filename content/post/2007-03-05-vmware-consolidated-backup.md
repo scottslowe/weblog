@@ -24,11 +24,11 @@ We performed a number of backups with VCB during our tests:
 
 All of the preliminary VCB tests listed above were performed using `vcbMounter`, a command-line tool installed on the VCB proxy server. The command we used looked something like this (this has been line-wrapped for readability, but should be entered all on a single line):
 
-{{< highlight dosbatch >}}
+```text
 vcbmounter -h vcenter.example.com -u vcbservice 
 -p <password> -a ipaddr:10.1.1.100 -r E:\VMmount\VM1 
 -t file -m san
-{{< / highlight >}}
+```
 
 In the specific environment in which this testing was conducted, the hostname (of the VirtualCenter server, in this example) had to be changed from the default of 902, as the customer was using a non-default port number. This threw us for a minute, until we could determine exactly what port on which the server was listening.
 
@@ -36,26 +36,26 @@ This mounted the contents of this VM's virtual hard disks on the path `E:\VMmoun
 
 This command worked, but in order to back up the virtual machine while it was shut down, we had to change the command slightly (again, this is line-wrapped for readability):
 
-{{< highlight dosbatch >}}
+```text
 vcbmounter -h vcenter.example.com -u vcbservice 
 -p <password> -a name:VM1 -r E:\VMmount\VM1 
 -t file -m san
-{{< / highlight >}}
+```
 
 Here, the "name:VM1" parameter was the name of the VM that we wanted to back up _exactly as it appears in VirtualCenter, including case._ (We did try this command using the same name with in different case, but it failed.) We could also have used the BIOS UUID for the VM, which can be retrieved using this command:
 
-{{< highlight dosbatch >}}
+```text
 vcbvmname -h vcenter.example.com -u vcbservice 
 -p <password> -s name:VM1
-{{< / highlight >}}
+```
 
 Again, the name has to match exactly what is listed in VirtualCenter. One of the parameters returned by this command is the BIOS UUID, which you can then use in a `vcbMounter` command like this (this would be entered on a single line, not wrapped for readability as it is here):
 
-{{< highlight dosbatch >}}
+```text
 vcbmounter -h vcenter.example.com -u vcbservice 
 -p <password> -a uuid:<BIOS UUID> -r E:\VMmount\VM1 
 -t file -m san
-{{< / highlight >}}
+```
 
 By using the VM name or the VM BIOS UUID, we were able to make `vcbMounter` work both when the VM was running as well as when the VM was shutdown. Using the VM's IP address or DNS name, on the other hand, only worked when the VM was up and running.
 

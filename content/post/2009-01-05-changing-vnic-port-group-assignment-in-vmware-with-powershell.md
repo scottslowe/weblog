@@ -19,9 +19,9 @@ Experienced PowerShell users won't find this post very helpful, but less experie
 
 Thanks to [this post](http://professionalvmware.com/2008/12/18/1-day-left-the-most-awesome-powershell-one-liner-in-the-history-of-powershell-one-liners/) by Cody Bunch and [this Twitter response](http://twitter.com/halr9000/statuses/1097365098) by Hal Rottenberg, I cobbled together this PowerShell command:
 
-{{< highlight powershell >}}
+```text
 get-datacenter "Name" | get-vm | get-networkadapter | where-object { $_.networkname -like "OldPortGroup" } | set-networkadapter -networkname "NewPortGroup" -Confirm:$false
-{{< / highlight >}}
+```
 
 It worked like a champ! Obviously, you could limit the scope of this command by filtering the VMs that are returned with a wildcard pattern on the `Get-VM` command.
 

@@ -61,11 +61,11 @@ These steps need to be repeated for each Solaris server that will authenticating
 
 2. For each account that was created, run the ktpass.exe command to generate a unique keytab for each account. The command will look something like this (substitute the appropriate values where necessary):  
 
-{{< highlight dosbatch >}}
+```text
 ktpass -princ HOST/fqdn@REALM -mapuser DOMAIN\account
 -crypto DES-CBC-MD5 +DesOnly -pass password -ptype KRB5_NT_PRINCIPAL
 -out filename
-{{< / highlight >}}
+```
 
 Be sure to specify a unique output filename (so that you don't overwrite files; each server/account will needs its own unique file). I suggest using the server's name as the filename, i.e., something like `solarissrvr.keytab`.
 
@@ -79,7 +79,7 @@ The following steps need to be performed on each Solaris server that will authen
 
 Solaris keeps its Kerberos configuration in the `/etc/krb5` directory as `krb5.conf`. Edit this file using your editor of choice to look something like the one below. Depending upon how you configured Solaris during the installation, some of this configuration may already be present.
 
-{{< highlight text >}}
+```text
 [libdefaults]
    default_realm = EXAMPLE.COM
    dns_lookup_kdc = true
@@ -109,7 +109,7 @@ Solaris keeps its Kerberos configuration in the `/etc/krb5` directory as `krb5.c
    renewable = true
    forwardable= true
    }
-{{< / highlight >}}
+```
 
 Your particular information will need to be supplied here, of course, so you can't simply copy and paste from here to the Solaris configuration file.
 
@@ -121,7 +121,7 @@ Transfer the keytab generated earlier by the `ktpass.exe` utility (in our exampl
 
 We'll use the native Solaris `ldapclient` utility to configure the LDAP support in Solaris. The command you'll type in looks something like this (please _don't_ copy and paste this, as it contains generic/incorrect information that won't work!):
 
-{{< highlight text >}}
+```text
 ldapclient manual \
  -a credentialLevel=proxy \
  -a authenticationMethod=simple \
@@ -145,7 +145,7 @@ ldapclient manual \
  -a objectClassMap=shadow:shadowAccount=user \
  -a serviceSearchDescriptor=passwd:dc=example,dc=com?sub \
  -a serviceSearchDescriptor=group:dc=example,dc=com?sub
-{{< / highlight >}}
+```
 
 The easiest way to handle this would probably be to copy it into a blank text file, edit it to include the specific details for your network, and then paste it into a terminal session on the Solaris server.
 
@@ -161,7 +161,7 @@ Use the `svcs -a | grep ldap` command to verify the exact name of the LDAP clien
 
 The `/etc/pam.conf` file controls the PAM (Pluggable Authentication Mechanism) configuration on Solaris. You'll need to edit the `/etc/pam.conf` file to look something like what's shown below. I've edited away all the non-essential sections, so only change the sections listed below.
 
-{{< highlight text >}}
+```text
 # Default definition for Authentication management
 #
 other   auth requisite          pam_authtok_get.so.1
@@ -176,7 +176,7 @@ other   account requisite       pam_roles.so.1
 other   account sufficient      pam_unix_account.so.1
 other   account required        pam_ldap.so.1
 #
-{{< / highlight >}}
+```
 
 With this configuration in place, Solaris will use Kerberos authentication and will retrieve account information via LDAP.
 

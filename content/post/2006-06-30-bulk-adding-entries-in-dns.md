@@ -28,10 +28,10 @@ The "." syntax here refers to the local server; this can be easily substituted w
 
 Using some of the same techniques as before, combining `dsncmd.exe` with the `for` batch command allows us to do something like this:
 
-{{< highlight dosbatch >}}
+```text
 for /f "tokens=1,2" %1 in (newhosts.txt) do 
 @dnscmd dns.example.net /RecordAdd example.net %1 A %2
-{{< / highlight >}}
+```
 
 This assumes that the "newhosts.txt" file contains something like this:
 
@@ -41,10 +41,10 @@ This assumes that the "newhosts.txt" file contains something like this:
 
 Here's a small twist, though: What if your list isn't space delimited, but comma delimited? No problem, just adjust your command accordingly:
 
-{{< highlight dosbatch >}}
+```text
 for /f "tokens=1,2 delims=," %1 in (newhosts.txt) do 
 @dnscmd dns.example.net /RecordAdd example.net %1 A %2
-{{< / highlight >}}
+```
 
 The "delims=," parameter tells the `for` command to use a comma as the delimiter, allowing us to use comma-separated input.
 

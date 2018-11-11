@@ -20,8 +20,8 @@ Here's a great example. In working on interoperability and integration documenta
 
 Here's the output from ktpass.exe when running on a Windows Server 2008-based server with UAC enabled:
 
-{{< highlight dosbatch >}}
-C:\>ktpass.exe -princ HOST/vsxsoltest01.vmwarelab.net@ADNG.VMWARELAB.NET 
+```text
+ktpass.exe -princ HOST/vsxsoltest01.vmwarelab.net@ADNG.VMWARELAB.NET 
 -mapuser ADNG\VSXSOLTEST01$ -crypto all -pass Password123 
 -ptype KRB5_NT_PRINCIPAL -out c:\vsxsoltest01.keytab  
 
@@ -46,7 +46,7 @@ WARNING: Resetting VSXSOLTEST01$'s password may cause
 Reset VSXSOLTEST01$'s password [y/n]?  y  
 
 Aborted.
-{{< / highlight >}}
+```
 
 This is running as an account that is not the built-in Administrator account, but is a member of Domain Admins, Schema Admins, Enterprise Admins, and the built-in Administrators group.
 

@@ -16,19 +16,19 @@ The syntax for finding recently created Active Directory accounts using either `
 
 Using AdFind, the syntax would look like this:
 
-{{< highlight dosbatch >}}
+```text
 adfind -b dc=example,dc=net -f "(&(objectCategory=Person)
 (objectClass=User)(whenCreated>=20061001000000.0Z))"
-{{< / highlight >}}
+```
 
 This would return all user accounts created on or after October 1, 2006. Of course, you could add the "-csv" option to output the results in CSV format, and redirect the output to a text file (using the "&gt;" redirection symbol) for further processing as needed.
 
 Using `dsquery`, the syntax would look like this:
 
-{{< highlight dosbatch >}}
+```text
 dsquery * dc=example,dc=net -filter "(&(objectCategory=Person)
 (objectClass=User)(whenCreated>=20061001000000.0Z))"
-{{< / highlight >}}
+```
 
 The syntax is very similar, and the actual LDAP query is identical between the two applications.
 

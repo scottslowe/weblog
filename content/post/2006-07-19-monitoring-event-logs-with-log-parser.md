@@ -21,7 +21,7 @@ Rather than belaboring the Log Parser syntax here, I'll direct you to the [Unoff
 
 The full command looks like this:
 
-{{< highlight dosbatch >}}
+```text
 for /f "tokens=1,2 delims=," %1 in (c:\servers.txt) do 
 @logparser -i:EVT "SELECT TimeGenerated,EventID,EventType,
 EventTypeName,EventCategory,EventCategoryName,SourceName,
@@ -29,7 +29,7 @@ Strings,ComputerName,SID,Message FROM \%1\%2 WHERE
 TimeGenerated > TO_TIMESTAMP(SUB(TO_INT(SYSTEM_TIMESTAMP()),86400)) 
 AND EventType IN (1;2) ORDER BY TimeGenerated DESC" -o:CSV 
 -q:ON -stats:OFF >> c:\24hr-events.csv
-{{< / highlight >}}
+```
 
 Whew! That's a monster of a command. Let's break it down.
 
@@ -56,16 +56,16 @@ To make this command really helpful, though, we need a way to get the results of
 
 [Blat](http://www.blat.net/) is a command-line utility for sending SMTP messages. With Blat, sending the output file from the Log Parser command above becomes as simple as this:
 
-{{< highlight dosbatch >}}
+```text
 blat - -subject "Daily event log report" 
 -body "Here is the daily report of warning and error events 
 from the servers' event logs." -to your@address -f source@address 
 -server your.mail.server -attacht c:\24hr-events.csv
-{{< / highlight >}}
+```
 
 Do you remember how to concatenate multiple commands on a single command line? Use the double ampersands! Using double ampersands, we can query the event logs _and_ e-mail ourselves the results all on a single command line:
 
-{{< highlight dosbatch >}}
+```text
 for /f "tokens=1,2 delims=," %1 in (c:\servers.txt) do 
 @logparser -i:EVT "SELECT TimeGenerated,EventID,EventType,
 EventTypeName,EventCategory,EventCategoryName,SourceName,
@@ -77,6 +77,6 @@ blat - -subject "Daily event log report"
 -body "Here is the daily report of warning and error events 
 from the servers' event logs." -to your@address -f source@address 
 -server your.mail.server -attacht c:\24hr-events.csv
-{{< / highlight >}}
+```
 
 Voila! You now have an automated command that will parse your servers' event logs for warning and informational events, output those results into a CSV file (easily manipulated via your choice of spreadsheet program), and e-mail that CSV file to your e-mail address. Can it get any easier?

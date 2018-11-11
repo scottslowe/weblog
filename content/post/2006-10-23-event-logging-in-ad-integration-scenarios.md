@@ -25,7 +25,7 @@ To test what kind of logging occurs, I simply used my existing installation of [
 
 After the login, I reviewed the event logs and found a large number of entries for the LDAP bind account (the account that is used to bind to Active Directory to retrieve account information, such as UID number, GID number, login shell, home directory, etc.). These are useless for identifying unique logons to Linux/Unix-based systems. However, there is one event that is useful---an event ID 672 with the following text:
 
-{{< highlight text >}}
+```text
     Authentication Ticket Request:
      	User Name:		bjones
      	Supplied Realm Name:	EXAMPLE.NET
@@ -43,13 +43,13 @@ After the login, I reviewed the event logs and found a large number of entries f
     
     For more information, see Help and Support Center at 
     http://go.microsoft.com/fwlink/events.asp.
-{{< / highlight >}}
+```
 
 As you can see, this entry clearly identifies the user that was authenticated as well as the IP address of the host to which the user logged in. Note that the IP address of the workstation from which the user logon originated is not captured here.
 
 OK, that takes care of the typical Linux system. Now, what about [Solaris](http://www.sun.com/software/solaris/) 10? I cleared the security event logs (saving them) and attempted an SSH logon to a Solaris server. As it turns out, Solaris 10 logs two event entries---event ID 672, as above, as well as event ID 673. The text for event ID 673 is as follows:
 
-{{< highlight text >}}
+```text
     Service Ticket Request:
      	User Name:		bjones@EXAMPLE.NET
      	User Domain:		EXAMPLE.NET
@@ -64,7 +64,7 @@ OK, that takes care of the typical Linux system. Now, what about [Solaris](http:
     
     For more information, see Help and Support Center at 
     http://go.microsoft.com/fwlink/events.asp.
-{{< / highlight >}}
+```
 
 This provides the same sort of information as well as the name of the service ticket that was requested by the host. (Keep in mind, too, that Solaris 10 logged both the event ID 672 _and_ event ID 673, whereas CentOS logged only the event ID 672.)
 
