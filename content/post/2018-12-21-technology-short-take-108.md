@@ -46,7 +46,7 @@ Welcome to Technology Short Take #108! This will be the last Technology Short Ta
 
 * Here's [another stab at a multi-cloud control plane][link-3].
 * My colleague Josh Rosso has a post up on [securing communication to the Kubernetes controller manager and Kubernetes scheduler][link-4]. It even includes a video---nice!
-* This is [a slightly older article by Mitch Beaumont][link-6] that I've had sitting in the hopper for a while. When I first read it, I was still (relatively) early in my Kubernetes journey, and a fair amount of what he discussed wasn't quick "clicking" in my brain (no fault of his). Now, it makes a lot more sense to me. Time and experience can make quite a difference sometimes!
+* This is [a slightly older article by Mitch Beaumont][link-6] that I've had sitting in the hopper for a while. When I first read it, I was still (relatively) early in my Kubernetes journey, and a fair amount of what he discussed wasn't quite "clicking" in my brain (no fault of his). Now, it makes a lot more sense to me. Time and experience can make quite a difference sometimes!
 * Weijuan Shi Davis collected some resources related to Windows containers on Kubernetes in [this post-KubeCon post][link-12].
 
 ## Operating Systems/Applications
