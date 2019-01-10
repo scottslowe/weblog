@@ -51,9 +51,10 @@ Here are the steps I followed:
 
 Enjoy!
 
-
+**UPDATE:** Newer versions of Postman apparently change some of the paths inside the tarball. Check out [this post on installing Postman 6.7.1 on Fedora 29][link-5] for some updated information. Credit to Jose Barahona for the post. Thanks Jose!
 
 [link-1]: https://blog.bluematador.com/posts/postman-how-to-install-on-ubuntu-1604/
 [link-2]: https://www.getpostman.com/app/download/linux64
 [link-3]: https://www.getpostman.com/docs/postman/launching_postman/installation_and_updates
 [link-4]: https://getfedora.org/
+[link-5]: https://jrab66.com/2019/01/10/installing-postman-on-fedora-29/
