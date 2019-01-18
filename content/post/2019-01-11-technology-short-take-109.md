@@ -26,7 +26,7 @@ title: 'Technology Short Take 109'
 url: /2019/01/11/technology-short-take-109/
 ---
 
-Welcome to Technology Short Take #109! This is the first Technology Short Take of 2019. It may be confirmation bias, but I've noticed of number of sites adding "Short Take"-type posts to their content lineup. I'll take that as flattery, even if it wasn't necessary intended that way. Enjoy!<!--more-->
+Welcome to Technology Short Take #109! This is the first Technology Short Take of 2019. It may be confirmation bias, but I've noticed of number of sites adding "Short Take"-type posts to their content lineup. I'll take that as flattery, even if it wasn't necessarily intended that way. Enjoy!<!--more-->
 
 ## Networking
 
