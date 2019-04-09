@@ -22,7 +22,7 @@ Without further ado, here is a list of my teammates who have a blog; each entry 
 * [Dan Finneran][link-6]
 * [Hart Hoover][link-7]
 * [Duffie Cooley][link-8]
-* [Stephen Augustus][link-9] _(as of this post Stephen hadn't yet updated his affiliation---c'mon Stephen, get with the program!)_
+* [Stephen Augustus][link-9]
 * [Timmy Carr][link-10]
 * [Carl Danley][link-11] _(not fully live yet)_
 * [Olive Power][link-12] _(not fully live yet)_
