@@ -25,7 +25,7 @@ Welcome to Technology Short Take #112! It's been quite a while since the last on
 
 ## Networking
 
-* [Part 2][link-13] of Stark and Wayne's container-to-container networking for Cloud Foundry and Kubernetes dig deep into CNI workings.
+* [Part 2][link-13] of Stark and Wayne's container-to-container networking for Cloud Foundry and Kubernetes digs deep into CNI workings.
 * Via Ivan Pepelnjak's site, Albert Siersema shares some information on using Ansible to [automate 802.1x configurations][link-24].
 * Milind Gunjan shares some [tips for troubleshooting Linux bridged networking on a KVM host][link-28].
 
