@@ -36,7 +36,7 @@ To then make it easier to set up this Pulumi sandbox for various scenarios, I'll
 
 ## Additional Resources
 
-For more background and context on Pulumi, you may want to check out [episode 30][link-3] of the Full Stack Journey podcast, which features Luke Hoban, CTO of Pulumi, discussing what Pulumi is and why users should consider using it for their infrastructure-as-code projects.
+For more background and context on Pulumi, you may want to check out [episode 30][link-3] of the Full Stack Journey podcast, which features Luke Hoban, CTO of Pulumi, discussing what Pulumi is and why users should consider using it for their infrastructure-as-code projects. Also, Joe Beda did a TGIK episode on Pulumi; [check it out on YouTube][link-7].
 
 [link-1]: https://pulumi.io
 [link-2]: https://github.com/scottslowe/learning-tools
@@ -44,3 +44,4 @@ For more background and context on Pulumi, you may want to check out [episode 30
 [link-4]: https://www.vagrantup.com/
 [link-5]: https://www.ansible.com/
 [link-6]: https://www.packer.io/
+[link-7]: https://www.youtube.com/watch?v=ILMK65YVSKw
