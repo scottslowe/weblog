@@ -32,6 +32,8 @@ Corporate Collaboration: [Part 1][xref-9], [Part 2][xref-10], [Part 3][xref-11]
 
 [December 2018 Progress Report][xref-15] (update after restarting the migration)
 
+[Preparing for the Migration][xref-16] (the "prequel")
+
 These are only the articles _directly_ related to the migration efforts, but many more articles were spawned as a result of the project. Browse through [all the Fedora-tagged articles][link-2] to see some related articles.
 
 If you have any questions about migrating to Linux or about any of these articles (or related articles), you're welcome [to contact me on Twitter][link-3]. I look forward to hearing from you!
@@ -54,3 +56,4 @@ If you have any questions about migrating to Linux or about any of these article
 [xref-13]: {{< relref "2017-07-10-linux-migration-july-2017-progress-report.md" >}}
 [xref-14]: {{< relref "2017-10-25-linux-migration-wrap-up.md" >}}
 [xref-15]: {{< relref "2018-12-31-linux-migration-december-2018-progress-report.md" >}}
+[xref-16]: {{< relref "2019-05-11-linux-migration-preparing-for-the-migration.md" >}}
