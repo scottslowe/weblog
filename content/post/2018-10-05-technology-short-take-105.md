@@ -18,7 +18,7 @@ tags:
 - Linux
 - Fedora
 - CLI
-- OpenBSD
+- BSD
 - Golang
 title: 'Technology Short Take 105'
 url: /2018/10/05/technology-short-take-105/

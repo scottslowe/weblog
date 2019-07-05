@@ -33,7 +33,7 @@ The last and final step is to create an Azure Active Directory (AD) service prin
 
     az ad sp create-for-rbac
 
-Make note of the values returned in the command's JSON response; you'll need them later. You'll also want to know your Azure subscription ID, which you can obtain by running `az account list --query '[?isDefault].id' -o tsv`.
+Make note of the values returned in the command's JSON response; you'll need them later. You'll also want to know your Azure subscription ID, which you can obtain by running `az account list --query '[?isDefault].id' -o tsv`. _(Note: as pointed out by reader Jochen Schissler, the command listed above creates an entity with Contributor permissions at the Subscription level. For some folks, this isn't possible/acceptable due to security policies. It is perfectly fine to create a service principal and grant permissions at the resource group level, although it must still have Contributor permissions.)_
 
 Now that you've installed Vagrant, installed the `vagrant-azure` plugin, downloaded the dummy Azure box, and have created the Azure AD service principal, you're ready to start spawning some Azure VMs with Vagrant.
 
@@ -78,7 +78,7 @@ Naturally, this is a very generic configuration, so you'd need to supply the spe
 * The SSH keypair you want to use (via the `config.ssh.private_key_path` setting)
 * The Azure VM size you'd like to use (via the `az.vm_size` setting)
 * The Azure VM image you want to use (via the `az.vm_image_urn` setting)
-* The name of the Azure resource group you'd like to use (via the `az.resource_group_name` setting; this group should _not_ already exist)
+* The name of the Azure resource group you'd like to use (via the `az.resource_group_name` setting)
 
 Also, you'll note that the `Vagrantfile` assumes you've set some environment variables that will allow Vagrant to communicate with Azure. These values are taken from the JSON output of creating the Azure AD service principal:
 
@@ -109,7 +109,7 @@ To help make using Vagrant with Azure easier, I've created a couple learning env
 
 Additionally, see the documentation for [the `vagrant-azure` plugin on GitHub][link-7] for more information.
 
-
+**UPDATE 5 Jul 2019:** See the added text regarding the creation of a service principal and the permissions needed. Thanks to reader Jochen Schissler for the added information and feedback!
 
 [link-1]: https://www.vagrantup.com
 [link-2]: https://www.virtualbox.org
