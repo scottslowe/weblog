@@ -41,7 +41,7 @@ openssl dgst -sha256
 
 I shared this with my team members (sharing is caring!), and my teammate Naadir Jeewan promptly responded with an [Ansible][link-6] filter to perform the same task. This is helpful when `openssl` isn't present on the system where you need to calculate the hash. Naadir's Ansible filter is found [here][link-2] (great work, Naadir!).
 
-There you have it. Next time you find yourself needing to calculcate the CA certificate hash to use with `kubeadm`, you now have two ways of getting there (either using `openssl` or using Naadir's Ansible filter).
+There you have it. Next time you find yourself needing to calculate the CA certificate hash to use with `kubeadm`, you now have two ways of getting there (either using `openssl` or using Naadir's Ansible filter).
 
 If you have any questions, don't hesitate [to reach out to me on Twitter][link-7]. Thanks!
 
