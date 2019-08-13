@@ -108,6 +108,8 @@ Once you've edited the file, upload it back to the cluster with this command:
 
     kubeadm config upload from-file --config kubeadm.yaml
 
+You also need to update the "cluster-info" ConfigMap in the "kube-public" namespace, which contains a Kubeconfig file with a `server:` line that points to the single control plane node. It's easist to just use `kubectl -n kube-public edit cm cluster-info` and update the `server:` line to point to the load balancer for the control plane. _(Thanks to Fabrizio Pandini for pointing this out!)_
+
 Only one step remains now: actually adding more control plane nodes to make the control plane highly available.
 
 ## Add Control Plane Nodes
