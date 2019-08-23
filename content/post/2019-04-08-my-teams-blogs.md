@@ -24,8 +24,8 @@ Without further ado, here is a list of my teammates who have a blog; each entry 
 * [Duffie Cooley][link-8]
 * [Stephen Augustus][link-9]
 * [Timmy Carr][link-10]
+* [Olive Power][link-12]
 * [Carl Danley][link-11] _(not fully live yet)_
-* [Olive Power][link-12] _(not fully live yet)_
 * [Koushik Radhakrishnan][link-13] _(not fully live yet)_
 
 I know I've gained valuable insight from some of their content, and I hope you do as well.
