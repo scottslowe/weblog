@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Category
+categories: Tutorial
 comments: true
 date: 2019-08-27T17:00:00Z
 tags:
