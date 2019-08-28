@@ -36,7 +36,7 @@ In general, the workflow of using CAPI looks something like this:
 
 The end result of all this is users now have a far simpler way (once the management cluster is up and running) to create Kubernetes clusters. Users have the option of creating their own infrastructure and having CAPI consume it, or having CAPI provision infrastructure and then consume it. Both models are supported by CAPI.
 
-In future posts, I'll build on this high-level overview by outlining more detailed steps for using CAPI with various providers/platforms. The first of those posts is available [here for the Cluster API AWS provider][xref-1].
+In future posts, I'll build on this high-level overview by outlining more detailed steps for using CAPI with various providers/platforms. The first of those posts is available [here for the Cluster API AWS provider][xref-1]. Myles Gray has [a good write-up on the Cluster API vSphere provider][link-6], so I probably won't write an article for vSphere.
 
 If you have any questions or need more information, feel free to find me in [the Kubernetes Slack][link-3] ([sign up here][link-4] if you don't have an account) or [hit me up on Twitter][link-5]. Thanks!
 
@@ -45,4 +45,5 @@ If you have any questions or need more information, feel free to find me in [the
 [link-3]: https://kubernetes.slack.com/
 [link-4]: http://slack.k8s.io/
 [link-5]: https://twitter.com/scott_lowe
+[link-6]: https://blah.cloud/kubernetes/first-look-automated-k8s-lifecycle-with-clusterapi/
 [xref-1]: {{< relref "2019-08-27-bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi.md" >}}
