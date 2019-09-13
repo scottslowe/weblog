@@ -12,9 +12,9 @@ title: Bootstrapping a Kubernetes Cluster on AWS with Cluster API
 url: /2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/
 ---
 
-Yesterday I published [a high-level overview of Cluster API][xref-1] (CAPI) that provides an introduction to some of the concepts and terminology in CAPI. In this post, I'd like to walk readers through actually using CAPI to bootstrap a [Kubernetes][link-3] cluster on AWS.<!--more-->
+Yesterday I published [a high-level overview of Cluster API][xref-1] (CAPI) that provides an introduction to some of the concepts and terminology in CAPI. In this post, I'd like to walk readers through actually using CAPI to bootstrap a [Kubernetes][link-3] cluster on AWS. This walkthrough is for the v1alpha1 release of CAPI (a walk through for CAPI v1alpha2 is coming).<!--more-->
 
-It's important to note that all of the information shared here is also found in [the "Getting Started" guide][link-2] in [the AWS provider's GitHub repository][link-4]. My purpose here is provide an additional walkthrough that supplements that official documentation, not to supplant the official documentation, and to spread the word about how the process works.
+It's important to note that all of the information shared here is also found in [the "Getting Started" guide][link-2] in [the AWS provider's GitHub repository][link-4]. My purpose here is provide an additional walkthrough that supplements that official documentation, not to supplant the official documentation, and to spread the word about how the process works. As mentioned earlier, this is all based on the 0.3.x release of the AWS provider, which adheres to the v1alpha1 revision of CAPI.
 
 Four basic steps are involved in bootstrapping a Kubernetes cluster on AWS using CAPI:
 
@@ -23,7 +23,7 @@ Four basic steps are involved in bootstrapping a Kubernetes cluster on AWS using
 3. Creating a management cluster (not required every single time)
 4. Creating a workload cluster
 
-The following sections take a look at each of these steps in a bit more detail. First, though, I think it's important to mention that CAPI is still in its early days (it's currently at v1alpha1). As such, it's possible that commands may (will) change, and API specifications may (will) change as further development occurs.
+The following sections take a look at each of these steps in a bit more detail. First, though, I think it's important to mention that CAPI is still in its early days (this post is based on v1alpha1). As such, it's possible that commands may (will) change, and API specifications may (will) change as further development occurs. In fact, there are changes in the process from v1alpha1 (which is what this post is based upon) and the v1alpha2 release.
 
 With that caveat/warning provided, let's dig into the details.
 
@@ -116,9 +116,11 @@ At each step, CAPA (the AWS provider for CAPI) will create and configure the req
 
 And that's it---you've created a management cluster on AWS, and then used that management cluster to bootstrap a Kubernetes workload cluster on AWS. You can now use that management cluster to stamp out as many additional workload clusters as needed. The nice thing about using CAPA is that it handles all the AWS-specific details needed to get the AWS cloud provider working (all the stuff described [here][xref-2]).
 
-Got questions, comments, or corrections? I'd love to hear them. [Hit me up on Twitter][link-99] and let me know.
+Got questions, comments, or corrections? I'd love to hear them. [Hit me up on Twitter][link-99] and let me know. Looking for a walk through using v1alpha2 (a newer release) of CAPI? It will be available soon.
 
-[link-2]: https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/master/docs/getting-started.md
+**UPDATE 13 September 2019:** I've updated this post to make it clearer it is based on CAPI v1alpha1, and that separate content will be generated for CAPI v1alpha2.
+
+[link-2]: https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v0.3.7/docs/getting-started.md
 [link-3]: https://kubernetes.io/
 [link-4]: https://github.com/kubernetes-sigs/cluster-api-provider-aws/
 [link-5]: https://github.com/kubernetes-sigs/kind/
