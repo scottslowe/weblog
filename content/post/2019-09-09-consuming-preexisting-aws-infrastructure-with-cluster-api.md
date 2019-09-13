@@ -19,7 +19,7 @@ Why would one _not_ want CAPA to create the necessary AWS infrastructure? There 
 
 Fortunately, CAPA makes it reasonably straightforward to use pre-existing infrastructure. The key here is the `networkSpec` object in a Cluster definition. Readers who read the post on [highly available clusters on AWS with Cluster API][xref-1] saw how to use the `networkSpec` object to tell CAPA how to create subnets across multiple availability zones (AZs) for greater availability. The `networkSpec` object can _also_ be used to tell CAPA how to use pre-existing infrastructure.
 
-For this second use case (having CAPA use pre-existing infrastructure), users will need to add a `networkSpec` object to the Cluster definition that provides the IDs of the VPC and the subnets within the VPC that CAPA should use. Here's an example:
+For this second use case (having CAPA use pre-existing infrastructure), users will need to add a `networkSpec` object to the Cluster definition that provides the IDs of the VPC and the subnets within the VPC that CAPA should use. Here's an example (this example assumes CAPI v1alpha1; the full "path" to where `networkSpec` should be specified changes in CAPI v1alpha2):
 
 ```yaml
 spec:
@@ -50,7 +50,7 @@ Users who are configuring CAPA to consume pre-existing infrastructure still have
 
 The first option is exactly as described in [the previous post on HA clusters][xref-1], so I won't repeat it here.
 
-The second option is only available in the case of having CAPA consume pre-existing infrastructure, because only in such cases will the subnet IDs be known in advance. To add the subnet ID to the Machine YAML specification would look something like this:
+The second option is only available in the case of having CAPA consume pre-existing infrastructure, because only in such cases will the subnet IDs be known in advance. To add the subnet ID to the Machine YAML specification would look something like this (this example is for CAPI v1apha1; the full "path" in the YAML manifest changes for CAPI v1alpha2):
 
 ```yaml
 spec:
@@ -65,6 +65,8 @@ This is a bit more tedious than specifying AZ; here, the user must manually look
 Finally, users will need to provide their "own" bastion host for accessing the EC2 instances that CAPA places on private subnets. When configuring CAPA to use pre-existing infrastructure, CAPA will _not_ create a bastion host automatically.
 
 If anyone has any feedback, corrections, or suggestions for improving this post, please feel free to [contact me via Twitter][link-99]. All feedback is welcome!
+
+**UPDATE 13 September 2019:** I've updated this post to point out that the examples provided are based on CAPI v1alpha1. The examples will work with CAPI v1alpha2, but the "path" within the YAML manifest changes with CAPI v1alpha2.
 
 [link-1]: https://github.com/kubernetes-sigs/cluster-api
 [link-2]: https://kubernetes.io/
