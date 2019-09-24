@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Information
+categories: Education
 comments: true
 date: 2018-06-05T12:00:00Z
 tags:

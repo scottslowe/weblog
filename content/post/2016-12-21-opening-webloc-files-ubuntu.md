@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Information
+categories: Explanation
 comments: true
 date: 2016-12-21T00:00:00Z
 tags:
