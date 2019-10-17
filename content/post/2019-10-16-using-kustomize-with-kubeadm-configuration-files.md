@@ -1,4 +1,5 @@
 ---
+aliases: /2019/10/16/using-kustomize-with-cluster-api/
 author: slowe
 categories: Education
 comments: true
@@ -9,7 +10,7 @@ tags:
 - CLI
 - YAML
 title: Using Kustomize with Kubeadm Configuration Files
-url: /2019/10/16/using-kustomize-with-cluster-api/
+url: /2019/10/16/using-kustomize-with-kubeadm-configuration-files/
 ---
 
 Last week I had a crazy idea: if [`kustomize`][link-1] can be used to modify YAML files like [Kubernetes][link-2] manifests, then could one use `kustomize` to modify a `kubeadm` configuration file, which is also a YAML manifest? So I asked about it in one of the Kubernetes-related channels in Slack at work, and as it turns out it's not such a crazy idea after all! So, in this post, I'll show you how to use `kustomize` to modify `kubeadm` configuration files.<!--more-->
