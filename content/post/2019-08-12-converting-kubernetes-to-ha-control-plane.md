@@ -42,7 +42,7 @@ The first step is to create a load balancer for the control plane (a load balanc
 * You should be using a Layer 4 load balancer (TCP instead of HTTP/HTTPS).
 * Health checks should be configured as SSL health checks instead of TCP health checks (this will weed out spurious "TLS handshake errors" in the API server's logs).
 
-It is also be a good idea at this time to create a DNS CNAME entry to point to your load balancer (highly recommended). This gives you some additional flexibility in the event you need to swap out or reconfigure your load balancing solution, as the DNS CNAME remains constant even if the names to which it resolves change behind the scenes. (The name remaining constant is important, as you'll see in a moment.)
+It is also a good idea at this time to create a DNS CNAME entry to point to your load balancer (highly recommended). This gives you some additional flexibility in the event you need to swap out or reconfigure your load balancing solution, as the DNS CNAME remains constant even if the names to which it resolves change behind the scenes. (The name remaining constant is important, as you'll see in a moment.)
 
 Whether or not you create a DNS CNAME, make a note of the IP address(es) and DNS names you'll use to connect to the cluster through the load balancer, as you'll need those in the next step.
 
