@@ -81,13 +81,14 @@ When you run that command, you should see a loopback interface and the veth1 int
 
 Now that veth1 has been moved to the blue namespace, we need to actually configure that interface. Once again, we'll use the `ip netns exec` command, this time to configure the veth1 interface in the blue namespace:
 
-    ip netns exec blue ifconfig veth1 10.1.1.1/24 up
+    ip netns exec blue ip addr add 10.1.1.1/24 dev veth1
+    ip netns exec blue ip link set dev veth1 up
 
 As before, the format this command follows is:
 
     ip netns exec <network namespace> <command to run against that namespace>
 
-In this case, you're using `ifconfig` to assign an IP address to the veth1 interface and bring that interface up. (Note: you could use the `ip addr`, `ip route`, and `ip link` commands to accomplish the same thing.)
+In this case, you're using the `ip addr` to assign an IP address to the veth1 interface and the `ip link` command to bring that interface up.
 
 Once the veth1 interface is up, you can verify that the network configuration of the blue namespace is completely separate by just using a few different commands. For example, let's assume that your "global" namespace has physical interfaces in the 172.16.1.0/24 range, and your veth1 interface is in a separate namespace and assigned something from the 10.1.1.0/24 range. You could verify how network namespaces keep the network configuration separate using these commands:
 
@@ -109,7 +110,7 @@ So there you go---an introduction to Linux network namespaces. It's quite likely
 
 Sorry for the confusion!
 
-
+**UPDATE 2:** I've removed the use of the `ifconfig` command as it's been deprecated. The article already mentioned that users could use `ip addr`, `ip link`, and `ip route` in its place, but this change makes it more obvious.
 
 [1]: {{< relref "2013-05-29-a-quick-introduction-to-linux-policy-routing.md" >}}
 [2]: {{< relref "2013-05-30-a-use-case-for-policy-routing-with-kvm-and-open-vswitch.md" >}}
