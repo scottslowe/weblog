@@ -157,6 +157,8 @@ Virtually everyone who does content creation stands on the shoulders of those wh
 
 [This GitHub repository][link-7] by my colleague Duffie Cooley also provided some inspiration and guidance for some portions of this process.
 
+**UPDATE 2020-01-31:** Note that the `kubeadm alpha phase` command was replaced by the `kubeadm init phase` command in the Kubernetes 1.13 release. Since readers are pretty likely to be running a release later than 1.13, please replace all instances of `kubeadm alpha phase` above with `kubeadm init phase`. The commands remain otherwise identical.
+
 [link-1]: https://coreos.com/etcd/docs/latest/op-guide/security.html
 [link-2]: https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/07-bootstrapping-etcd.md
 [link-3]: https://github.com/scottslowe/learning-tools/

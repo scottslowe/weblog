@@ -41,6 +41,8 @@ Aside from these two (very) minor issues, the procedures in the official docs wi
 
 Feel free to [hit me up on Twitter][link-4] if you have any questions, or if you feel I've made a mistake or misrepresented anything. Thanks!
 
+**UPDATE 2020-01-31:** As of the Kubernetes 1.13 release, `kubeadm alpha phase` was replaced by `kubeadm init phase`, so be sure to adjust the commands above accordingly.
+
 [link-1]: https://kubernetes.io/docs/setup/independent/setup-ha-etcd-with-kubeadm/
 [link-2]: https://v1-11.docs.kubernetes.io/docs/tasks/administer-cluster/setup-ha-etcd-with-kubeadm/
 [link-3]: https://github.com/heptiolabs/wardroom

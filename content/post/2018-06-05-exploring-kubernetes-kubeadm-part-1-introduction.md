@@ -25,6 +25,8 @@ In future parts of this series, I'll dig into specific sections of the `kubeadm 
 
 Along the way, if you find _anything_ incorrect---I'm human and will make mistakes---feel free to [hit me up on Twitter][link-5] or submit a pull request fixing the error. This will help make this resource more useful for everyone over time.
 
+**UPDATE 2020-01-31:** As of the Kubernetes 1.13 release, `kubeadm alpha phase` was replaced with `kubeadm init phase`, so adjust the commands above accordingly.
+
 [link-1]: https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/
 [link-2]: https://kubernetes.io/docs/tasks/tools/install-kubeadm/
 [link-3]: https://www.vagrantup.com/
