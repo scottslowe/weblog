@@ -27,6 +27,8 @@ In my specific example, I had a bastion host with Internet access, and a couple 
 
     I repeated this process for all the other images the isolated systems also needed.
 
+    If you have a system (like your local laptop) running Docker, then you can use `docker pull` here instead; just note that you may need to adjust the path/URL to the image/image registry.
+
 2. Still on the bastion host, I exported the pulled images to standalone archives:
 
         ctr image export calico-node-v3.11.2.tar \
@@ -37,6 +39,8 @@ In my specific example, I had a bastion host with Internet access, and a couple 
         ctr image export <output-filename> <image-name>
 
     If you don't know what the image name (according to `containerd`) is, use `ctr image ls`.
+
+    If you're using a system with Docker installed (maybe you're using your local laptop), then `docker save <image-name> -o <output-filename` will get you an image you can use in the subsequent steps.
 
 3. After transferring the standalone archives to the other systems (using whatever means you prefer; I used `scp`), then load (or import) the images into `containerd` with this command:
 
@@ -67,6 +71,8 @@ I did find a few sites with some `containerd` information while searching, and w
 [`crictl` User Guide][link-4]
 
 I hope the information in this post is helpful. If you have questions, comments, suggestions, or corrections, you are welcome to [contact me on Twitter][link-8], or drop me an e-mail (my e-mail address isn't too hard to find).
+
+**UPDATE:** I've added a few Docker commands to steps #1 and #2 above for users who may be using a Docker-powered system, like their local laptop, to retrieve images from the Internet that will be transferred to the `containerd`-powered systems for importing.
 
 [link-1]: https://www.docker.com/
 [link-2]: https://sweetcode.io/getting-started-with-containerd/
