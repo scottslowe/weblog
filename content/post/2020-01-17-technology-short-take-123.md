@@ -30,7 +30,7 @@ Welcome to Technology Short Take #123, the first of 2020! I hope that everyone h
 ## Servers/Hardware
 
 * Frank Denneman has a nice article aimed at helping readers understand [PCIe device to NUMA Node Locality][link-1].
-* Guiliano Bertello [introduces PowerVCF][link-6], a PowerCLI module aimed at interacting with the SDDC Manager and VMware Cloud Foundation (VCF) stack. (If you're not familiar with VCF, see [here][link-7].)
+* Giuliano Bertello [introduces PowerVCF][link-6], a PowerCLI module aimed at interacting with the SDDC Manager and VMware Cloud Foundation (VCF) stack. (If you're not familiar with VCF, see [here][link-7].)
 * [This][link-8] is pricey, but I can't say I don't want one.
 * James Hamilton is back with a post on [the AWS Graviton2 ARM processors][link-11].
 
