@@ -84,13 +84,25 @@ For these components to pick up the change, you'll need to restart them. Assumin
     docker kill $(docker ps | grep kube-scheduler | grep -v pause | \
     cut -d' ' -f1)
 
+If you're using containerd as your container runtime, the commands will look a bit different. Use `crictl pods | grep kube-controller-manager | cut -d' ' -f1` to get the Pod ID. Then use `crictl stopp <pod-id>` to stop the Pod, and `crictl rmp <pod-id>` to remove the Pod. Repeat as needed for other control plane components.
+
 The Kubelet will then restart them automatically, and they'll pull in the changes to their respective Kubeconfig files. Once the controller manager and scheduler have restarted, check the logs for each (using either `docker logs <containerID>` or `kubectl logs -n kube-system <podName>`) to make sure that they are operating correctly.
 
-At this point, you've created and configured a load balancer for the control plane, updated the API server's certificate to account for the load balancer, updated the Kubelet to point to the load balancer, and updated the controller manager and scheduler to point to the load balancer.
+Before moving on to the worker nodes, there's one more component on the control plane node that needs to be updated: `kube-proxy`.
+
+## Update Kube-Proxy on the Control Plane Node
+
+With most CNI plugins, `kube-proxy` is responsible for implementing the necessary mechanisms to support Services and Network Policies. Like the Kubelet and the other control plane components, `kube-proxy` uses a Kubeconfig file to specify how to connect to the Kubernetes API. In this case, however, the config file is provided to `kube-proxy` via a ConfigMap.
+
+To update this ConfigMap, use `kubectl -n kube-system edit cm kube-proxy` and look for the `server:` line that specifies how to connect to the Kubernetes API. It probably refers to the original control plane node's IP address, or possibly the control plane node's DNS name. You'll need to edit it to point to the load balancer you created for the control plane. Then restart the `kube-proxy` Pod on the control plane node using the instructions provided above.
+
+At this point, you've created and configured a load balancer for the control plane, updated the API server's certificate to account for the load balancer, updated the Kubelet to point to the load balancer, updated the controller manager and scheduler to point to the load balancer, and updated `kube-proxy` to point to the load balancer. You're now ready to move on to the worker nodes.
 
 ## Update Worker Nodes
 
 The only component running on the worker nodes that needs to be updated is the Kubelet configuration. Follow the instructions in the section "Update the Kubelet on the Control Plane Node" to update the Kubelet on the worker nodes as well.
+
+Next, restart the `kube-proxy` Pod running on the node so that it picks up the updated ConfigMap you edited in the previous section. Use the `docker` or `crictl` commands provided earlier.
 
 ## Update the In-Cluster Configuration
 
@@ -136,6 +148,8 @@ Once you've added two more control plane nodes (for a total of three), you now h
 **Reminder:** I _do not_ recommend using this procedure for any sort of cluster that is or ever will be considered "production." See the "Disclaimer" section above.
 
 If you have any questions, comments about the post, or corrections/suggestions, please don't hesitate to [contact me on Twitter][link-4]. Or, you can find me on the Kubernetes Slack community (I hang out a lot in the "#kubeadm" channel). I hope this information is useful to you!
+
+**UPDATE 2020-02-20:** I added notes about updating the `kube-proxy` configuration, and added commands for restarting Pods on containerd-based nodes.
 
 [link-1]: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/
 [link-2]: https://v1-14.docs.kubernetes.io/docs/setup/production-environment/tools/kubeadm/high-availability/

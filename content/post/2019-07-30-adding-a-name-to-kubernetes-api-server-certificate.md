@@ -93,6 +93,12 @@ The final step is restarting the API server to pick up the new certificate. The 
 1. Run `docker ps | grep kube-apiserver | grep -v pause` to get the container ID for the container running the Kubernetes API server. (The container ID will be the very first field in the output.)
 2. Run `docker kill <containerID>` to kill the container.
 
+If your nodes are running containerd as the container runtime, the commands are a bit different:
+
+1. Run `crictl pods | grep kube-apiserver | cut -d' ' -f1` to get the Pod ID for the Kubernetes API server Pod.
+2. Run `crictl stopp <pod-id>` to stop the Pod.
+3. Run `crictl rmp <pod-id>` to remove the Pod.
+
 The Kubelet will automatically restart the container, which will pick up the new certificate. As soon as the API server restarts, you will immediately be able to connect to it using one of the newly-added IP addresses or hostnames.
 
 ## Verifying the Change
