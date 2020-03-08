@@ -11,6 +11,7 @@ tags:
 - CLI
 - Vagrant
 - CoreOS
+- etcd
 title: Using Vagrant with CoreOS, etcd, fleet, and Docker
 url: /2015/02/05/vagrant-coreos-etcd-fleet-docker/
 ---

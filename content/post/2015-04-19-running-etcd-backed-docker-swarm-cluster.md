@@ -10,6 +10,7 @@ tags:
 - CLI
 - Fusion
 - Virtualization
+- etcd
 title: Running an etcd-Backed Docker Swarm Cluster
 url: /2015/04/19/running-etcd-backed-docker-swarm-cluster/
 ---

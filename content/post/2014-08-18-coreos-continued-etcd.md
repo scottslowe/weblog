@@ -10,6 +10,7 @@ tags:
 - Linux
 - OSS
 - CoreOS
+- etcd
 title: 'CoreOS Continued: etcd'
 url: /2014/08/18/coreos-continued-etcd/
 wordpress_id: 3499

@@ -10,6 +10,7 @@ tags:
 - Automation
 - OSS
 - Docker
+- etcd
 title: Using Terraform to Build an etcd2 Cluster on OpenStack
 url: /2016/05/06/using-terraform-etcd2-openstack/
 ---
