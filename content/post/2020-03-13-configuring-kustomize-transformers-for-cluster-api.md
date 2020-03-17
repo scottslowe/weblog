@@ -96,12 +96,16 @@ Now the `commonLabels` transformer knows that labels have to be added to the `sp
 
 I'm still exploring what other changes may be beneficial, but these are the two I've found (so far) that have had the most impact on the usability of `kustomize` with CAPI. If I find more, I'll either update this post or publish a follow-up post.
 
-If you have questions, comments, suggestions for improvement, or corrections, please let me know. Feel free to [contact me on Twitter][link-5], reach out to me on the Kubernetes Slack instance, or hit me up via e-mail (my address isn't too hard to find/figure out).
+The information shared above is for Cluster API v1alpha2; for information on configuring `kustomize` transfomers for use with Cluster API v1alpha3, see [this follow-up post][xref-3].
+
+If you have questions, comments, suggestions for improvement, or corrections, please let me know. Feel free to [contact me on Twitter][link-5], reach out to me on [the Kubernetes Slack instance][link-6], or hit me up via e-mail (my address isn't too hard to find/figure out).
 
 [link-1]: https://kubectl.docs.kubernetes.io/pages/reference/kustomize.html#configurations
 [link-2]: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/transformerconfigs
 [link-3]: https://github.com/kubernetes-sigs/kustomize/blob/master/docs/glossary.md
 [link-4]: https://kustomize.io/
 [link-5]: https://twitter.com/scott_lowe
+[link-6]: https://kubernetes.slack.com
 [xref-1]: {{< relref "2019-11-12-using-kustomize-with-cluster-api.md" >}}
 [xref-2]: {{< relref "2019-09-13-an-introduction-to-kustomize.md" >}}
+[xref-3]: {{< relref "2020-03-17-kustomize-transformer-configuration-cluster-api-v1alpha3.md" >}}
