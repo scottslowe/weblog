@@ -99,7 +99,7 @@ Let's break this down just a bit:
 * Technically, the `networking.dnsDomain` and `networking.serviceSubnet` aren't necessary either, but I'm including them here for completeness. `networking.podSubnet` is often required to be included for some CNI plugins (Calico, for example, requires this value to be set).
 * You'll note there's no `etcd` section---this tells `kubeadm` to create an etcd node local to the control plane node, in what we call a "stacked control plane" configuration. If you're using an external etcd cluster, you'll need to add the appropriate configuration to this file.
 
-Set the values you need in this file, then bootstrap your first control plane node with `kubeadm init --config=kubeadm.yaml` (substituting the correct filename, of course).
+Set the values you need in this file, then bootstrap your first control plane node with `kubeadm init --config=kubeadm.yaml --upload-certs` (substituting the correct filename, of course).
 
 Once you've verified that the first control plane node is up, go ahead and install your CNI plugin.
 
