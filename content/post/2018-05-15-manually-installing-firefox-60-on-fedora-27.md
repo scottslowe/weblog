@@ -8,6 +8,7 @@ tags:
 - Fedora
 - Web
 - CLI
+- Firefox
 title: Manually Installing Firefox 60 on Fedora 27
 url: /2018/05/15/manually-installing-firefox-60-on-fedora-27/
 ---
