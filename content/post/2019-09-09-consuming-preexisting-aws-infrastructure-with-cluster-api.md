@@ -68,10 +68,13 @@ If anyone has any feedback, corrections, or suggestions for improving this post,
 
 **UPDATE 13 September 2019:** I've updated this post to point out that the examples provided are based on CAPI v1alpha1. The examples will work with CAPI v1alpha2, but the "path" within the YAML manifest changes with CAPI v1alpha2.
 
+**UPDATE 22 April 2020:** The [upstream documentation for using existing AWS infrastructure][link-6] has been updated and should be considered the authoritative source of information on this topic.
+
 [link-1]: https://github.com/kubernetes-sigs/cluster-api
 [link-2]: https://kubernetes.io/
 [link-3]: https://www.terraform.io/
 [link-4]: https://aws.amazon.com/cloudformation/
 [link-5]: https://www.pulumi.com/
+[link-6]: https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/master/docs/existing-aws-infrastructure.md
 [link-99]: https://twitter.com/scott_lowe
 [xref-1]: {{< relref "2019-09-05-highly-available-kubernetes-clusters-on-aws-with-cluster-api.md" >}}
