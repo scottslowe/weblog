@@ -112,5 +112,11 @@ Sorry for the confusion!
 
 **UPDATE 2:** I've removed the use of the `ifconfig` command as it's been deprecated. The article already mentioned that users could use `ip addr`, `ip link`, and `ip route` in its place, but this change makes it more obvious.
 
+**UPDATE 3:** A reader contacted me to point out that it's possible to create the veth pairs _and_ assign one of the pairs to a network namespace all in one command:
+
+    ip link add veth0 type veth peer name veth1 netns blue
+
+Thanks to Rick van Rein for pointing this out!
+
 [1]: {{< relref "2013-05-29-a-quick-introduction-to-linux-policy-routing.md" >}}
 [2]: {{< relref "2013-05-30-a-use-case-for-policy-routing-with-kvm-and-open-vswitch.md" >}}
