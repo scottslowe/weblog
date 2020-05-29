@@ -45,6 +45,8 @@ There you have it. Next time you find yourself needing to calculate the CA certi
 
 If you have any questions, don't hesitate [to reach out to me on Twitter][link-7]. Thanks!
 
+**UPDATE:** Apparently, I overlooked a portion of [the official documentation for `kubeadm join`][link-3], which _does_ provide a mechanism for using `openssl` to calculate the CA cert hash. I checked the documentation back to version 1.15, and the information is there. (No idea how I missed this!) See the section titled "Token-based discovery with CA pinning" for another `openssl` command you can use to calculate the CA cert hash. Thanks to Dan Webster for pointing this out!
+
 [link-1]: https://kubernetes.io/
 [link-2]: https://gist.github.com/randomvariable/e4c43f89afec52fec0dbef6c08621249
 [link-3]: https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join/
