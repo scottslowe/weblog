@@ -98,7 +98,7 @@ Welcome to Technology Short Take #113! I hope the collection of links and articl
 [link-20]: http://blog.oddbit.com/2019/04/25/writing-ansible-filter-plugins/
 [link-21]: https://www.bluecatnetworks.com/blog/my-network-automation-journey-part-1-frameworks-and-goals/
 [link-22]: https://www.bluecatnetworks.com/blog/my-automation-journey-part-2-building-in-ansible-and-initial-impact/
-[link-23]: https://medium.com/solo-io/linkerd-or-istio-6fcd2aad6e42
+[link-23]: https://medium.com/@rettori/linkerd-or-istio-6fcd2aad6e42
 [link-24]: https://stressgrid.com/blog/pps_limits_in_ec2/
 [link-25]: https://github.com/metal3-io/metal3-docs
 [link-26]: https://www.thomasmaurer.ch/2019/04/run-your-vmware-natively-on-azure-with-azure-vmware-solutions/
