@@ -43,4 +43,7 @@ I use this configuration myself, and I haven't run into any problems with it. Th
 
 Questions? Comments? Clarifications? Feel free to post them in the comments below, where courteous comments are not only welcome, but encouraged.
 
+**UPDATE:** Seven years later, someone has uncovered a Windows equivalent for this workaround. See [this post][0] for details.
+
+[0]: http://www.patrickkremer.com/per-zone-dns-resolution-for-homelabs/
 [1]: {{< relref "2006-01-04-mac-os-x-and-local-domains.md" >}}
