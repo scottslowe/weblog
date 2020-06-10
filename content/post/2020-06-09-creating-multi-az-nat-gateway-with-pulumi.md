@@ -66,7 +66,7 @@ When you run `pulumi up` to create this infrastructure, you'll end up with a sin
 
 ## Caveats
 
-It's important to note that outbound traffic will have to cross AZ boundaries in order to egress onto the Internet, and therefore will be subject to cross-AZ data transfer fees (see [this article][link-1] by Corey Quinn for more details). Be sure to understand your traffic patterns and understand the impact of this sort of design on your traffic patterns and your billing before going down this path. (Of course, that's good advice for _any_ design.)
+It's important to note that outbound traffic will have to cross AZ boundaries in order to egress onto the Internet, and therefore will be subject to cross-AZ data transfer fees (see [this article][link-1] by Corey Quinn for more details). Be sure to understand your traffic patterns and understand the impact of this sort of design on your traffic patterns and your billing before going down this path. (Of course, that's good advice for _any_ design.) [This article][link-5] also has some good information on reducing data transfer charges for your NAT Gateway(s) (thanks to reader Amey Bhide for the link!).
 
 Feel free to connect with [me on Twitter][link-99], or find me in any one of a number of Slack communities (including [the Pulumi Slack community][link-3]), if you have questions, comments, or suggestions for improvement.
 
@@ -74,4 +74,5 @@ Feel free to connect with [me on Twitter][link-99], or find me in any one of a n
 [link-2]: https://www.pulumi.com/
 [link-3]: https://pulumi-community.slack.com
 [link-4]: https://www.typescriptlang.org/
+[link-5]: https://aws.amazon.com/premiumsupport/knowledge-center/vpc-reduce-nat-gateway-transfer-costs/
 [link-99]: https://twitter.com/scott_lowe
