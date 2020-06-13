@@ -24,7 +24,7 @@ Let's take a closer look at each of these.
 
 ## A More Informative Shell Prompt
 
-There's been quite a few articles written about [powerline][link-9], a Python-based utility that provides a much more informative shell prompt. Instead of going down the traditional powerline route, I found [powerline-go][link-8]---a small, statically linked Go binary that provides similar functionality.
+There's been quite a few articles written about [`powerline`][link-9], a Python-based utility that provides a much more informative shell prompt. Instead of going down the traditional `powerline` route, I found [`powerline-go`][link-8]---a small, statically linked Go binary that provides similar functionality.
 
 Now, my shell prompt automatically displays things like:
 
@@ -33,7 +33,11 @@ Now, my shell prompt automatically displays things like:
 * The name of the Kubernetes cluster against which `kubectl` will operate (and the namespace, if one is selected)
 * And more mundane information like the username, hostname, and current working directory
 
-I've found powerline-go to be very easy to use and very easy to configure. If you're looking for a way to make your shell prompt a bit more interactive and a bit more informative, powerline-go is definitely worth a look.
+Here's a quick demo of `powerline-go`:
+
+![Powerline-go demo](/public/img/powerline-go-demo.gif)
+
+I've found `powerline-go` to be very easy to use and very easy to configure. If you're looking for a way to make your shell prompt a bit more interactive and a bit more informative, `powerline-go` is definitely worth a look.
 
 ## Faster Content Searches with Ripgrep
 
