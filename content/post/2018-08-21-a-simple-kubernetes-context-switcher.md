@@ -29,6 +29,9 @@ Now, if you haven't figured it out yet, there's a **giant** problem with the adm
 
 In the meantime, I hope this small (and quite simple) utility is helpful to folks.
 
+**UPDATE:** Within days of publishing this post, someone pointed me to [`ktx`][link-4], which does pretty much the same thing (only better). I've completely abandoned `kcs` in favor of `ktx`.
+
 [link-1]: https://github.com/justjanne/powerline-go
 [link-2]: https://kubernetes.io/
 [link-3]: https://github.com/scottslowe/scripts/
+[link-4]: https://github.com/heptiolabs/ktx
