@@ -55,10 +55,11 @@ I imagine there are probably better/more efficient ways of doing what I've done 
 
 **UPDATE:** Michael Gasch also pointed out that `git rev-parse HEAD` will return the full (long) commit hash from the last commit, so this is another way to get the information from Git. Given the nature of Git, no doubt there are countless more!
 
-
+**UPDATE 2020-06-29:** A reader contacted me via Twitter to point out at the Open Containers Initiative has a list of suggested image tags/annotations, including one for the Git commit hash (it's "org.opencontainers.image.revision"). See [this page][link-5] for more information and details. Thanks, Hans!
 
 [link-1]: http://container-solutions.com/tagging-docker-images-the-right-way/
 [link-2]: https://github.com/scottslowe/flask-web-svc
 [link-3]: https://twitter.com/scott_lowe
 [link-4]: https://github.com/scottslowe/flask-web-svc/releases/tag/v0.3
+[link-5]: https://github.com/opencontainers/image-spec/blob/master/annotations.md
 [xref-1]: {{< relref "2015-11-11-handy-cli-tool-json.md" >}}
