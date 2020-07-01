@@ -19,7 +19,7 @@ Let's assume you are creating a new VPC using code that looks something like thi
 ```go
 vpc, err := ec2.NewVpc(ctx, "testvpc", &ec2.VpcArgs{
 	CidrBlock: pulumi.String("10.100.0.0/16"),
-	Tags: pulumi.Map {
+	Tags: pulumi.StringMap {
 		"Name": pulumi.String("testvpc"),
 		k8sTag: pulumi.String("shared"),
 	},
@@ -33,7 +33,7 @@ If you'd like to now bring the default route table that automatically gets creat
 ```go
 defrt, err := ec2.NewDefaultRouteTable(ctx, "defrt", &ec2.DefaultRouteTableArgs{
 	DefaultRouteTableId: vpc.DefaultRouteTableId,
-	Tags: pulumi.Map {
+	Tags: pulumi.StringMap {
 		"Name": pulumi.String("defrt"),
 		k8sTag: pulumi.String("shared"),
 	},
@@ -53,6 +53,8 @@ route, err := ec2.NewRoute(ctx, "inet-route", &ec2.RouteArgs {
 The result? A new VPC with only a single route table, and routes for both the VPC's local CIDR as well as to the Internet through an Internet gateway. No explicit subnet-route table associations were necessary (unlike the previous approach), which reduces code to maintain and simplifies the overall code base (as well as simplifies the resources to manage on AWS).
 
 I hope this information is helpful to someone. I'm finding there to be quite a dearth of documentation on using Pulumi with Go, and I hope that my beginner-level posts help alleviate that in some way. If you have questions---or if you have comments on how I can improve my Go code!---feel free to find [me on Twitter][link-5] or on [the Pulumi Slack community][link-4].
+
+**UPDATE 2020-07-01:** I updated the code snippets to use `Pulumi.StringMap` for the tags instead of `Pulumi.Map`. The AWS provider used by Pulumi changed in version 2.11.0 to require string values in maps, hence the need to use `Pulumi.StringMap`.
 
 [link-1]: https://www.pulumi.com/
 [link-2]: https://golang.org/
