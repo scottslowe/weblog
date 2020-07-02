@@ -1,7 +1,7 @@
 ---
 aliases: /2019/10/16/using-kustomize-with-cluster-api/
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2019-10-16T10:00:00-07:00
 tags:
