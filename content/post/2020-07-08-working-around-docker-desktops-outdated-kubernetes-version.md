@@ -12,7 +12,7 @@ title: "Working Around Docker Desktop's Outdated Kubernetes Version"
 url: /2020/07/08/working-around-docker-desktops-outdated-kubernetes-version/
 ---
 
-As of the time that I published this blog post in early July 2020, [Docker Desktop][link-1] for macOS was at version 2.2.0.4 (for the "stable" channel). That version includes a relatively recent version of the Docker engine (19.03.8, compared to 19.03.12 on my [Fedora][link-2] 31 box), but a quite outdated version of [Kubernetes][link-3] (1.15.5, which isn't supported by upstream). Now, this may not be a problem for users who _only_ use Kubernetes via Docker Desktop. For me, however, the old version of Kubernetes---specifically the old version of `kubectl`---causes problems. Here's how I worked around the old version that Docker Desktop supplies.<!--more-->
+As of the time that I published this blog post in early July 2020, [Docker Desktop][link-1] for macOS was at version 2.2.0.4 (for the "stable" channel). That version includes a relatively recent version of the Docker engine (19.03.8, compared to 19.03.12 on my [Fedora][link-2] 31 box), but a quite outdated version of [Kubernetes][link-3] (1.15.5, which isn't supported by upstream). Now, this may not be a problem for users who _only_ use Kubernetes via Docker Desktop. For me, however, the old version of Kubernetes---specifically the old version of `kubectl`---causes problems. Here's how I worked around the old version that Docker Desktop supplies. (Also, see the update at the bottom for some additional details that emerged after this post was originally published.)<!--more-->
 
 First, you'll note that Docker Desktop automatically symlinks its version of `kubectl` into your system path at `/usr/local/bin`. You can verify the version of Docker Desktop's `kubectl` by running this command:
 
@@ -45,6 +45,8 @@ fi
 With this in `~/.bash_profile`, _if_ a `$HOME/bin` or `$HOME/.local/bin` directory exists, it gets added to the _start_ of the search path---thus placing it before `/usr/local/bin`, and thus making sure that any executables or symlinks placed there will be found _before_ those in `/usr/local/bin`. Therefore, when I place a symlink to a newer version of `kubectl` in one of these directories, it will get found _before_ Docker Desktop's outdated version. Problem solved! (You can, of course, still access the older Docker Desktop version by using the full path.)
 
 Folks who are familiar with UNIX/Linux are probably already very familiar with this sort of approach. However, I suspect there are a fair number of my readers who may be using macOS-based systems but aren't well-versed in the intricacies of manipulating the `$PATH` environment variable. Hopefully, this article helps those folks. Feel free to contact me on Twitter if you have any questions or feedback on what I've shared here.
+
+**UPDATE 2020-07-09:** Several folks contacted me on Twitter (thank you!) to point out that a slightly newer version of Docker Desktop may be available in the stable channel, although I have not been able to update my installation thus far. The new version, version 2.3.0.3, comes with Kubernetes 1.16.5, and therefore may not be as problematic for folks as the older version I have on my system. Regardless, the workaround remains valid. Thanks to the readers who responded!
 
 [link-1]: https://www.docker.com/products/docker-desktop
 [link-2]: https://getfedora.org/
