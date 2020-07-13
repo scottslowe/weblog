@@ -42,12 +42,13 @@ In a future blog post, look for me to explore one or more examples of where usin
 
 ## Additional Resources
 
-I found [this article][link-1] to be extraordinarily helpful while working through the details of an SSH bastion host configuration.
+I found [this article][link-1] _(update: try [this Wayback machine version][link-3]; it seems the original has gone offline)_ to be extraordinarily helpful while working through the details of an SSH bastion host configuration.
 
 **UPDATE 13 Sep 2016:** I've removed the references to the need for SSH agent forwarding, as it turns out this isn't required (despite indications otherwise from other tutorials). See [this follow-up post][xref-1] for more information.
 
-
+**UPDATE: 13 Jul 2020:** It seems one of my original links has gone offline (thanks Lucas!), so I've added a link to the Wayback Machine's archived copy.
 
 [link-1]: https://10mi2.wordpress.com/2015/01/14/using-ssh-through-a-bastion-host-transparently/
 [link-2]: https://kb.iu.edu/d/aews
+[link-3]: http://web.archive.org/web/20170413054605/https://10mi2.wordpress.com/2015/01/14/using-ssh-through-a-bastion-host-transparently/
 [xref-1]: {{< relref "2016-09-13-ssh-bastion-host-follow-up.md" >}}
