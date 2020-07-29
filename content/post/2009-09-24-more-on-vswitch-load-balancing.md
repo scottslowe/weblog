@@ -41,9 +41,9 @@ So, let's say that you have an ESX/ESXi host with a VMkernel interface whose add
 
 	switch# test etherchannel load-balance interface Po3 ip 172.16.5.10 172.16.5.100
 
-For more examples of what the output would look like, take a look at [this image](http://dl.getdropbox.com/u/1015730/test-ethchannel-output.png). This was taken off a Cisco Catalyst 3560G running my test lab (and yes, the IP addresses have been changed to protect the innocent).
+For more examples of what the output would look like, take a look at [this image](/public/img/test-ethchannel-output.png). This was taken off a Cisco Catalyst 3560G running my test lab (and yes, the IP addresses have been changed to protect the innocent).
 
-This would give you one way of testing whether your link aggregation configuration would actually use multiple links, or only a single link due to the IP hash calculation. Also, don't forget that `esxtop` can also show you NIC utilization; [here's an example](http://dl.getdropbox.com/u/1015730/esxtop-net-output-ethchannel.png) of both uplinks being used in this sort of configuration.
+This would give you one way of testing whether your link aggregation configuration would actually use multiple links, or only a single link due to the IP hash calculation. Also, don't forget that `esxtop` can also show you NIC utilization; [here's an example](/public/img/esxtop-net-output-ethchannel.png) of both uplinks being used in this sort of configuration.
 
 Unfortunately, what I _can't_ tell you right now is what algorithm the vSwitch itself uses to place traffic onto the uplinks. Does it follow the same sort of mechanism as the Cisco switch? I don't know. If anyone has any information on that, it would be tremendously helpful.
 

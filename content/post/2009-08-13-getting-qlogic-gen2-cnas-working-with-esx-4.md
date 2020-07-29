@@ -30,7 +30,7 @@ Here's what I've had to do to make them work (with thanks to Eric H for his help
 
 3. The in-box drivers for VMware ESX 4.0.0 don't support the Gen2 QLogic cards, so I had to obtain beta drivers to install into VMware ESX. I first tried `esxupdate` with the bundle ZIP file, using the command `esxupdate update --bundle=offline-bundle.zip --nosigcheck`. I couldn't omit the `--nosigcheck` parameter because `esxupdate` then failed with error 20 (VibSigMissing). That, unfortunately, worked only for the Ethernet drivers and not the HBA drivers. To make the HBA drivers install, I had to install the RPM directly and include the `--force` parameter because ESX thought the version that was already installed was newer than the beta driver I was trying to install. I did finally get both sets of drivers installed, though.
 
-Once both sets of drivers were installed, the 10GbE NICs and the 10Gb HBAs were both recognized in vCenter Server, but the ESX console showed an error about missing signatures. You can see a [screenshot of the error here](http://dl.getdropbox.com/u/1015730/esx4-gen2cna-drivers.png).
+Once both sets of drivers were installed, the 10GbE NICs and the 10Gb HBAs were both recognized in vCenter Server, but the ESX console showed an error about missing signatures. You can see a [screenshot of the error here](/public/img/esx4-gen2cna-drivers.png).
 
 I'm quite confident that this is just because this card is an early Gen2 card, and that the strangeness I've been seeing is not a reflection on QLogic or VMware. I am a bit disappointed that the CNA is not supported by ESX 4.0.0 out of the box; I guess that will probably be remedied in ESX 4.0 Update 1. (No, I don't have any special insider knowledge. I'm just guessing.)
 
