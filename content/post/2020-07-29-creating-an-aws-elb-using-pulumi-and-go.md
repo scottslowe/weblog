@@ -26,7 +26,7 @@ elb, err := elb.NewLoadBalancer(ctx, "elb", &elb.LoadBalancerArgs{
 		Interval:           pulumi.Int(30),
 		Target:             pulumi.String("SSL:6443"),
 		UnhealthyThreshold: pulumi.Int(3),
-		Timeout:            pulumi.Int(30),
+		Timeout:            pulumi.Int(15),
 	},
 	Listeners: &elb.LoadBalancerListenerArray{
 		&elb.LoadBalancerListenerArgs{
@@ -53,6 +53,8 @@ You could also do something like this, if you wanted to explicitly specify value
 AvailabilityZones: pulumi.StringArray{pulumi.String("us-east-1")}
 Instances:         pulumi.StringArray{pulumi.String("i-01234564789")}
 ```
+
+Note that you should probably use the "Subnets" argument _instead_ of the "AvailabilityZones" argument (you can only use one or the other) if you need to attach the ELB to subnets in a particular VPC.
 
 Getting the syntax for the health check and the listeners was a bit challenging until I reviewed the package documentation for each (see [here][link-3] for the health check arguments and [here][link-4] for the listener arguments). I quickly realized it followed a similar pattern as the ingress and egress rules for an AWS security group (as outlined [in this post][xref-2]).
 
