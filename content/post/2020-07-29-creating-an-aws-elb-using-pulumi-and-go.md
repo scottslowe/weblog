@@ -21,6 +21,7 @@ elb, err := elb.NewLoadBalancer(ctx, "elb", &elb.LoadBalancerArgs{
 	CrossZoneLoadBalancing: pulumi.Bool(true),
 	AvailabilityZones:      pulumi.StringArray(azNames),
 	Instances:              pulumi.StringArray(cpNodeIds),
+	SecurityGroups:			pulumi.StringArray{elbSecGrp.ID()},
 	HealthCheck: &elb.LoadBalancerHealthCheckArgs{
 		HealthyThreshold:   pulumi.Int(3),
 		Interval:           pulumi.Int(30),
