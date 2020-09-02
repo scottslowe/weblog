@@ -22,7 +22,9 @@ Here's the change in default behavior:
 
 This change in default behavior is briefly documented in the 0.5.5 release [here][link-5]. As mentioned in the release, the default behavior can be changed with a configuration file (API reference is available [here][link-1]).
 
-In and of itself, this change in default behavior isn't significant. What _is_ significant is what happens if you use `clusterawsadm` 0.5.4 or earlier to create the necessary CAPA stack, and then use `clusterawsadm` 0.5.5 or later to update this stack. In such cases, if you haven't taken steps to change the default behavior then **the bootstrap IAM user and group are removed**.
+In and of itself, this change in default behavior isn't significant. What _is_ significant is what happens if you use `clusterawsadm` 0.5.4 or earlier to create the necessary CAPA stack, and then use `clusterawsadm` 0.5.5 or later to update this stack. In such cases, if you haven't taken steps to change the default behavior then **the bootstrap IAM user and group are removed**. When this happens, you'll start to see error messages like this (or similar):
+
+    The user with name bootstrapper.cluster-api-provider-aws.sigs.k8s.io cannot be found
 
 If your CAPI management cluster is using those credentials to interact with AWS, the CAPA controllers on that management cluster are now broken. You'll have to update the CAPA controllers to use a new set of credentials (I'm working on a blog post for that; I'll update this post when those instructions go live) before any CAPI-related operations will succeed.
 
