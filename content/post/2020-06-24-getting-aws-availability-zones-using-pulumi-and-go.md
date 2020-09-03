@@ -5,8 +5,8 @@ comments: true
 date: 2020-06-24T09:45:00-07:00
 tags:
 - AWS
+- Go
 - Pulumi
-- Golang
 title: Getting AWS Availability Zones using Pulumi and Go
 url: /2020/06/24/getting-aws-availability-zones-using-pulumi-and-go/
 ---

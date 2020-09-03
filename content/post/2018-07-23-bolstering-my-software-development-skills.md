@@ -4,11 +4,11 @@ categories: Information
 comments: true
 date: 2018-07-23T08:00:00Z
 tags:
+- Ballerina
 - Development
 - Git
 - GitHub
-- Golang
-- Ballerina
+- Go
 title: Bolstering my Software Development Skills
 url: /2018/07/23/bolstering-my-software-development-skills/
 ---
