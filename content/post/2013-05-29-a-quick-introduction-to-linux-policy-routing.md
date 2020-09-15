@@ -34,7 +34,7 @@ Let's look at each of these steps separately.
 
 ## Creating a Custom Policy Routing Table
 
-The first step is to create a custom policy routing table. Each table is represented by an entry in the file `/etc/iproute2/rt_tables`, so creating a new table is generally accomplished using a command like this:
+The first step is to create a custom policy routing table. Linux routing tables are identified by a number from 1 to 255 (there are some reserved values), or by a name taken from the file `/etc/iproute2/rt_tables`. For ease of use, I recommend adding a name and number to the `/etc/iproute2/rt_tables` like this (strictly speaking, this isn't required, but it does make things easier):
 
     echo 200 custom >> /etc/iproute2/rt_tables
 
@@ -84,6 +84,13 @@ As with the policy routing tables, routes added this way are not persistent, so 
 
 This will ensure that the appropriate routes are added to the appropriate policy routing table when the corresponding network interface is brought up.
 
+## Additional Resources
+
+The [policyrouting.org][link-1] web site is a great resource; I highly recommend reviewing some of the information found there.
+
 ## Summary
 
-There's a great deal more functionality possible in policy routing, but this at least gives you the basics you need to understand how it works. In a future post, I'll provide a specific use case where this functionality could be put to work. In the meantime, feel free to share any corrections, clarifications, questions, or thoughts in the comments below.
+There's a great deal more functionality possible in policy routing, but this at least gives you the basics you need to understand how it works. In a future post, I'll provide a specific use case where this functionality could be put to work. In the meantime, feel free to share any corrections, clarifications, questions, or thoughts by contacting [me on Twitter][link-2].
+
+[link-1]: http://www.policyrouting.org/
+[link-2]: https://twitter.com/scott_lowe
