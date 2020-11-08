@@ -5,7 +5,7 @@ comments: true
 date: 2020-06-01T09:40:00-07:00
 tags:
 - Linux
-- Macintosh
+- macOS
 - Windows
 title: "Using Unison Across Linux, macOS, and Windows"
 url: /2020/06/01/using-unison-across-linux-macos-windows/

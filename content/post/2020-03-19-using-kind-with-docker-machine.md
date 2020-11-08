@@ -6,7 +6,7 @@ date: 2020-03-19T13:15:00-07:00
 tags:
 - Kubernetes
 - Docker
-- Macintosh
+- macOS
 title: Using KinD with Docker Machine on macOS
 url: /2020/03/19/using-kind-with-docker-machine-on-macos/
 ---

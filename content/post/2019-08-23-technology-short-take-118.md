@@ -10,7 +10,6 @@ tags:
 - Storage
 - Virtualization
 - Apple
-- Macintosh
 - Kubernetes
 - Pulumi
 - Linux

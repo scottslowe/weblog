@@ -6,7 +6,7 @@ date: 2020-04-12T07:05:00-07:00
 tags:
 - AWS
 - XML
-- Macintosh
+- macOS
 title: Using Paw to Launch an EC2 Instance via API Calls
 url: /2020/04/12/using-paw-to-launch-ec2-instance-via-api-calls/
 ---

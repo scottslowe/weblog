@@ -4,7 +4,7 @@ categories: Information
 comments: true
 date: 2020-01-16T16:00:00+01:00
 tags:
-- Macintosh
+- macOS
 - Linux
 - Personal
 - AWS

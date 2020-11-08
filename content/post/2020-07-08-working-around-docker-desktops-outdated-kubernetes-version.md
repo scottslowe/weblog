@@ -6,7 +6,7 @@ date: 2020-07-08T11:45:00-07:00
 tags:
 - Docker
 - Kubernetes
-- Macintosh
+- macOS
 - CLI
 title: "Working Around Docker Desktop's Outdated Kubernetes Version"
 url: /2020/07/08/working-around-docker-desktops-outdated-kubernetes-version/

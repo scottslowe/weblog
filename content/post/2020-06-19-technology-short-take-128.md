@@ -15,7 +15,8 @@ tags:
 - Intel
 - Kubernetes
 - Linux
-- Macintosh
+- Apple
+- macOS
 - Networking
 - NSX
 - Pulumi

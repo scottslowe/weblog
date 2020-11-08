@@ -13,7 +13,8 @@ tags:
 - Kubernetes
 - Automation
 - Linux
-- Macintosh
+- Apple
+- macOS
 - AWS
 - Azure
 - CLI

@@ -14,7 +14,7 @@ tags:
 - Terraform
 - Pulumi
 - Fusion
-- Macintosh
+- macOS
 - vSphere
 - Automation
 - Encryption

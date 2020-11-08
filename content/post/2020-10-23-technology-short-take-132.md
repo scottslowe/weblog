@@ -12,7 +12,8 @@ tags:
 - Kubernetes
 - Linux
 - Microsoft
-- Macintosh
+- Apple
+- macOS
 - Docker
 - AWS
 - VMware

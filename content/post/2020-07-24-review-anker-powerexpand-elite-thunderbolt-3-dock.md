@@ -5,7 +5,8 @@ comments: true
 date: 2020-07-24T11:30:00-07:00
 tags:
 - Hardware
-- Macintosh
+- Apple
+- macOS
 title: "Review: Anker PowerExpand Elite Thunderbolt 3 Dock"
 url: /2020/07/24/review-anker-powerexpand-elite-thunderbolt-3-dock/
 ---

@@ -6,7 +6,7 @@ date: 2019-05-11T19:00:00Z
 tags:
 - Linux
 - Fedora
-- Macintosh
+- macOS
 - Markdown
 title: 'The Linux Migration: Preparing for the Migration'
 url: /2019/05/11/linux-migration-preparing-for-the-migration/

@@ -4,7 +4,7 @@ categories: Explanation
 comments: true
 date: 2020-03-08T17:00:00-07:00
 tags:
-- Macintosh
+- macOS
 - JSON
 - Blogging
 title: Modifying Visual Studio Code's Bracketing Behavior

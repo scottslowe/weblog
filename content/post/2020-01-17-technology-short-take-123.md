@@ -15,7 +15,7 @@ tags:
 - Windows
 - Kubernetes
 - Docker
-- Macintosh
+- macOS
 title: 'Technology Short Take 123'
 url: /2020/01/17/technology-short-take-123/
 ---

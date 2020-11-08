@@ -14,7 +14,7 @@ tags:
 - SSH
 - Kubernetes
 - Terraform
-- Macintosh
+- macOS
 - CLI
 - Productivity
 title: 'Technology Short Take 122'

@@ -5,7 +5,7 @@ comments: true
 date: 2020-03-12T12:20:00-07:00
 tags:
 - Kubernetes
-- Macintosh
+- macOS
 - CLI
 - YAML
 title: "Updating Visual Studio Code's Kubernetes API Awareness"

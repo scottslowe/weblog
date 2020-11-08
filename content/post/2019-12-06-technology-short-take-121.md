@@ -11,7 +11,7 @@ tags:
 - Virtualization
 - NSX
 - KVM
-- Macintosh
+- macOS
 - Docker
 - Linux
 - Kubernetes

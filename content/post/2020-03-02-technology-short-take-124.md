@@ -15,7 +15,7 @@ tags:
 - Linux
 - NSX
 - Cumulus
-- Macintosh
+- macOS
 - VMware
 - vSAN
 - SSH
