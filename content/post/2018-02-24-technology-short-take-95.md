@@ -10,7 +10,7 @@ tags:
 - Storage
 - Virtualization
 - Cisco
-- Macintosh
+- macOS
 - Kubernetes
 - Terraform
 - VMware

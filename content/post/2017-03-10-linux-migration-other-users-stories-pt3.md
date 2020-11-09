@@ -6,7 +6,7 @@ date: 2017-03-10T00:00:00Z
 tags:
 - Linux
 - Productivity
-- Macintosh
+- macOS
 - Ubuntu
 title: 'The Linux Migration: Other Users'' Stories, Part 3'
 url: /2017/03/10/linux-migration-other-users-stories-pt3/
@@ -47,8 +47,6 @@ I also wanted to mention a couple of very useful applications I've found along t
 * [Enpass][link-3] is a great password manager (a reasonable replacement for 1Password on OS X, if you use that)
 * [odrive][link-2] is a good cloud storage client that supports Linux
 * [Netdata][link-1] is awesome for local performance monitoring
-
-
 
 [link-1]: https://github.com/firehol/netdata
 [link-2]: https://www.odrive.com

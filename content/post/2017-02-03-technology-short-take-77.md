@@ -13,7 +13,8 @@ tags:
 - VMware
 - OVN
 - OpenStack
-- Macintosh
+- Apple
+- macOS
 - vSphere
 - Linux
 - CLI
@@ -64,7 +65,7 @@ Welcome to Technology Short Take #77. I've got a new collection of links and art
 * Who would have thought that one day you'd refer to a Microsoft web site for instructions on configuring something in Linux? That's exactly what we have here: [a Microsoft Azure page with instructions on configuring DHCPv6 for Linux VMs][link-13] (covering various Linux distributions).
 * This next post is more than a year old; it's been sitting in my "folder of articles that I'm going to discuss but haven't gotten around to yet". In any case, I think the time is right. [The article][link-14] is by Kelsey Hightower, and in it he discusses how building twelve-factor apps incorrectly can lead to "12 fractured apps" (the title of the article). As I understand it, the basic idea behind Kelsey's article is that _if_ you're going to go down the route of containerizing your applications, _then_ you should do it right instead of jimmy-rigging shell scripts and configuration management tools.
 * Courtesy of Cody Bunch, I found this article on [defensive BASH programming][link-16], which contains some very useful tips of which I was not aware.
-* Looks like I'm not the only one making the leap from OS X to Linux---check out this pair of articles on Wesley Moore's switch ([part 1][link-26] and [part 2][link-27]). Part 2 is especially helpful for others who might be switching, as it contains a list of Linux apps to replace the OS X equivalents.
+* Looks like I'm not the only one making the leap from macOS to Linux---check out this pair of articles on Wesley Moore's switch ([part 1][link-26] and [part 2][link-27]). Part 2 is especially helpful for others who might be switching, as it contains a list of Linux apps to replace the macOS equivalents.
 
 ## Storage
 

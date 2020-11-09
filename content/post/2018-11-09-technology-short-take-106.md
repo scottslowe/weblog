@@ -17,7 +17,7 @@ tags:
 - Microsoft
 - Fedora
 - Kubernetes
-- Macintosh
+- Apple
 - Docker
 title: 'Technology Short Take 106'
 url: /2018/11/09/technology-short-take-106/

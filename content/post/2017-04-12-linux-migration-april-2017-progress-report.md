@@ -6,12 +6,12 @@ date: 2017-04-12T00:00:00Z
 tags:
 - Linux
 - Fedora
-- Macintosh
+- macOS
 title: 'The Linux Migration: April 2017 Progress Report'
 url: /2017/04/12/linux-migration-april-2017-progress-report/
 ---
 
-In December 2016, I kicked off a migration to Linux (from OS X) as my primary laptop OS. In the nearly 4 months since the [initial progress report][xref-1], I've published a series of articles providing updates on things like [which Linux distribution][xref-2] I selected, how I'm handling [running VMs][xref-3] on my Linux laptop, and integration with corporate collaboration systems ([here][xref-4], [here][xref-5], and [here][xref-6]). I thought that these "along the way" posts would be sufficient to keep readers informed, but I've had a couple of requests in the last week about how the migration is going. This post will help answer that question by summarizing what's happened so far.<!--more-->
+In December 2016, I kicked off a migration to Linux (from macOS) as my primary laptop OS. In the nearly 4 months since the [initial progress report][xref-1], I've published a series of articles providing updates on things like [which Linux distribution][xref-2] I selected, how I'm handling [running VMs][xref-3] on my Linux laptop, and integration with corporate collaboration systems ([here][xref-4], [here][xref-5], and [here][xref-6]). I thought that these "along the way" posts would be sufficient to keep readers informed, but I've had a couple of requests in the last week about how the migration is going. This post will help answer that question by summarizing what's happened so far.<!--more-->
 
 Let me start by saying that I am _actively using a Linux-powered laptop as my primary laptop right now,_ and I have been doing so since early February. All the posts I've published so far have been updates of how things are going "in production," so to speak. The following sections describe my current, active environment.
 
@@ -23,13 +23,13 @@ The only issue with the Fedora installation so far has been that I didn't set up
 
 ## Hardware
 
-The laptop on which I'm running Fedora 25 is a Dell Latitude E7370 (see [my review][xref-7]) with 16GB RAM, 512GB NVMe SSD, and a 3200x1800 touch screen. Every piece of hardware worked _perfectly_ out of the box---wireless, touchpad, touch screen, USB-C/Thunderbolt docking station, etc. I currently use an external 27" monitor, external keyboard, and external mouse all connected via a USB-C/Thunderbolt docking station when I'm in the office, and docking/undocking the laptop works almost flawlessly. I say "almost" only because I've had a couple instances (out of the dozens of times I've docked or undocked) that it didn't work as expected. To be fair, though, I've seen the same behavior with OS X.
+The laptop on which I'm running Fedora 25 is a Dell Latitude E7370 (see [my review][xref-7]) with 16GB RAM, 512GB NVMe SSD, and a 3200x1800 touch screen. Every piece of hardware worked _perfectly_ out of the box---wireless, touchpad, touch screen, USB-C/Thunderbolt docking station, etc. I currently use an external 27" monitor, external keyboard, and external mouse all connected via a USB-C/Thunderbolt docking station when I'm in the office, and docking/undocking the laptop works almost flawlessly. I say "almost" only because I've had a couple instances (out of the dozens of times I've docked or undocked) that it didn't work as expected. To be fair, though, I've seen the same behavior with macOS.
 
 ## Applications
 
 For the most part, things are where they were at the time of my initial progress report:
 
-* _Markdown:_ A great deal of my content was already being generated in Markdown, and I was already using [Sublime Text][link-5] 3 on OS X. On Linux, I still generate most everything in Markdown, and I still use Sublime Text 3 as my preferred text editor.
+* _Markdown:_ A great deal of my content was already being generated in Markdown, and I was already using [Sublime Text][link-5] 3 on macOS. On Linux, I still generate most everything in Markdown, and I still use Sublime Text 3 as my preferred text editor.
 * _Internet applications:_ [Firefox][link-6] handles my web browsing, but I also have [Google Chrome][link-7] installed for cross-browser testing. I use [HexChat][link-8] for IRC, the [Linux Slack client][link-9], and [Pidgin][link-10] for instant messaging.
 * _Cloud storage/sync:_ [Dropbox][link-11] works fine, although the UI integration could be much better. I'm also using a tool called [ODrive][link-12] to get connectivity to OneDrive for Business.
 * _Basic office productivity:_ I'm using [LibreOffice][link-4] (included with most Linux distributions these days). I have run into a few compatibility issues with Office 2016/Office 365, particularly regarding presentations. For my own presentations, I've moved to a Markdown-based solution (more details [here][xref-8]).
@@ -38,13 +38,13 @@ For the most part, things are where they were at the time of my initial progress
 * _E-mail:_ I'm using [Thunderbird][link-3] with a small collection of add-ons to handle both corporate and personal e-mail (refer to [this post][xref-4] for more details). I did _not_ import the 10+ years of archived mail stored in Apple Mail, keeping that on my Mac Pro instead (more on that later).
 * _Task management:_ I switched to a task management system that is completely based on plain text files using a variant of the TaskPaper format (it's not 100% TaskPaper compatible). This allows me to handle task management via Sublime Text, Dropbox, and [Meld][link-15] (a file differencing tool). See [this post][xref-9] for more details.
 * _Time management:_ Time management (calendaring/scheduling) is difficult, due to issues described [here][xref-5]. I'm currently using the Lightning add-on in Thunderbird, as well as GNOME Calendar. Thunderbird handles my corporate calendar, and GNOME Calendar shows corporate and personal calendars. On the personal calendar side, I've had to switch back to Google from a third-party CalDAV provider; thus, GNOME Calendar syncs with Google Calendar and with my corporate calendar.
-* _Password management:_ I switched from 1Password to [Enpass][link-17]. I've heard that 1Password may be offering a Linux version this year; I'll evaluate switching back if that happens. I'm using Enpass on my OS X, Linux, and iOS devices.
+* _Password management:_ I switched from 1Password to [Enpass][link-17]. I've heard that 1Password may be offering a Linux version this year; I'll evaluate switching back if that happens. I'm using Enpass on my macOS, Linux, and iOS devices.
 * _Corporate connectivity:_ I have the Linux client for VMware Horizon installed (to access my hosted corporate desktop), and I use `vpnc` to connect to our corporate VPN. I also maintain a Windows 10 VM with corporate VPN connectivity for other issues I can't resolve using Linux.
 * _Social media:_ I use [Corebird][link-18] for Twitter access from Linux when I'm traveling.
 
-## Where I Still Use OS X
+## Where I Still Use macOS
 
-OS X hasn't completely disappeared from my computing landscape; I have a well-equipped Mac Pro in my office that I still use for some things. (When I'm traveling, though, it's pretty much 100% Linux---the exception is the occasional need to boot the corporate Windows 10 VM.) Here are the areas where I'm still using OS X:
+macOS hasn't completely disappeared from my computing landscape; I have a well-equipped Mac Pro in my office that I still use for some things. (When I'm traveling, though, it's pretty much 100% Linux---the exception is the occasional need to boot the corporate Windows 10 VM.) Here are the areas where I'm still using macOS:
 
 * Podcast recording (I haven't found a Linux replacement for Audio Hijack, and Skype on Linux is a bit iffy)
 * Viewing archived e-mail (still sits in Apple Mail on my Mac Pro)
@@ -53,7 +53,7 @@ OS X hasn't completely disappeared from my computing landscape; I have a well-eq
 * Social media when I'm in the office (Tweetbot is far more powerful than Corebird)
 * Any virtualization testing specific to VMware Fusion (like testing a VMware-formatted Vagrant box, for example)
 
-I also use my OS X system for general web browsing when I'm in the office, since there's no sense in letting its 27" Thunderbolt Display go to waste. By and large, though, most everything is done from my Linux laptop.
+I also use my macOS system for general web browsing when I'm in the office, since there's no sense in letting its 27" Thunderbolt Display go to waste. By and large, though, most everything is done from my Linux laptop.
 
 ## Summary
 

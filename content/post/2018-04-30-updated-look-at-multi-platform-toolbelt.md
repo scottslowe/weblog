@@ -5,7 +5,7 @@ comments: true
 date: 2018-04-30T20:00:00Z
 tags:
 - Linux
-- Macintosh
+- macOS
 - CLI
 - Markdown
 - Encryption
@@ -19,7 +19,7 @@ In early 2017 I posted about [my (evolving) multi-platform toolbelt][xref-1], de
 
 * _Visual Studio Code:_ I switched from [Sublime Text][link-3] to [Visual Studio Code][link-1] during my latest migration to Fedora 27 on a Lenovo ThinkPad X1 Carbon. Since I'm also planning on expanding my coding skills with Golang, I felt that Visual Studio Code would be a better choice than Sublime Text. I'm still generating the majority of my content in Markdown (MultiMarkdown is the flavor that I generally use), and I've found Visual Studio Code to be pretty decent as a Markdown editor.
 
-* _IMAP/SMTP:_ I've standardized on using IMAP/SMTP for all my e-mail accounts, which gives me quite a bit of flexibility in clients and OSes. It's very likely I've pretty much standardized on [Thunderbird][link-2] (which supports OS X, Linux, and Windows).
+* _IMAP/SMTP:_ I've standardized on using IMAP/SMTP for all my e-mail accounts, which gives me quite a bit of flexibility in clients and OSes. It's very likely I've pretty much standardized on [Thunderbird][link-2] (which supports macOS, Linux, and Windows).
 
 * _Unison:_ This [cross-platform file synchronization tool][link-4] helps keep my files in sync across my macOS and Linux systems.
 
@@ -29,7 +29,7 @@ In early 2017 I posted about [my (evolving) multi-platform toolbelt][xref-1], de
 
 * _TaskPaper-formatted text files for task management:_ I've adopted the TaskPaper format for using plain text files for task management. Obviously I'm not using Sublime Text but Visual Studio Code instead, along with the Todo+ extension.
 
-* _Firefox and Firefox Sync:_ For web browsing, I'm using [Mozilla Firefox][link-8] and Firefox Sync across Linux, OS X, iOS, and Android. I'll occasionally use [Google Chrome][link-18] as needed.
+* _Firefox and Firefox Sync:_ For web browsing, I'm using [Mozilla Firefox][link-8] and Firefox Sync across Linux, macOS, iOS, and Android. I'll occasionally use [Google Chrome][link-18] as needed.
 
 * _1Password X:_ In the past, I had to look at other password managers (like [Enpass][link-19]) because Agile Bits didn't have any Linux support for [1Password][link-9]. With the introduction of 1Password X (including a Firefox extension!), I'm sticking with 1Password as my password manager.
 

@@ -4,7 +4,7 @@ categories: Tutorial
 comments: true
 date: 2017-09-06T12:00:00Z
 tags:
-- Macintosh
+- macOS
 - CLI
 - Security
 - Encryption
@@ -51,8 +51,6 @@ There are a number of other really good "how to" guides that also address this t
 * [Managing Keybase private key with GPGTools][link-7] (supplies some information on editing the keys using GPG)
 * [Setting up Keybase.io, GPG and Git to sign commits on GitHub][link-8] (helps with the GitHub side of things)
 * [Github GPG + Keybase PGP][link-9] (this article actually prompted me to get started down this path)
-
-
 
 [link-1]: https://gnupg.org/
 [link-2]: https://keybase.io/

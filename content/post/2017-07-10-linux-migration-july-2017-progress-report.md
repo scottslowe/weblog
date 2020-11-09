@@ -6,7 +6,7 @@ date: 2017-07-10T00:00:00Z
 tags:
 - Linux
 - Fedora
-- Macintosh
+- macOS
 - Collaboration
 title: 'The Linux Migration: July 2017 Progress Report'
 url: /2017/07/10/linux-migration-july-2017-progress-report/
@@ -21,7 +21,7 @@ Some things are working really well:
 * [Sublime Text][link-2] runs really well and is quite fast, making it easy to continue using Markdown as my primary content format. Sublime Text's performance and stability have been unparalleled.
 * I've had no performance or stability issues with [Firefox][link-3] (for browsing) or [Enpass][link-4] (for password management).
 * [ODrive][link-5], while not fully integrated into the Linux desktop environment, has worked well for access to files stored in OneDrive for Business (OD4B).
-* [Vagrant][link-7] seems noticeably faster on Fedora than on OS X. I don't use Vagrant as much as I used to, so perhaps this isn't terribly important.
+* [Vagrant][link-7] seems noticeably faster on Fedora than on macOS. I don't use Vagrant as much as I used to, so perhaps this isn't terribly important.
 
 Other things are _not_ working so well:
 
@@ -30,17 +30,15 @@ Other things are _not_ working so well:
 * Integrating into the corporate Skype for Business (S4B) infrastructure is also problematic, though this hasn't been a huge stumbling block (yet).
 * I'm running into an increasing number of interoperability issues with Office 365 and [LibreOffice][link-8]. This manifests itself in devious ways, such as subtle color changes, error messages about documents needing to be repaired, and similar. This seems to happen most frequently with presentations. Given that my employer seems to use presentations for almost everything, this is a bit problematic.
 * VM performance for my corporate Windows 10 image is a bit less than desirable. I attribute this primarily to the mobile-focused CPU in the Dell E7370 laptop, and not to Fedora, Linux, or the virtualization software.
-* Connecting to external displays has been less reliable with the Dell/Fedora combination than on OS X. It's possible that some of this is due to the fact that the E7370 has only a micro-HDMI connector, but even when connecting to HDMI displays (using a micro-HDMI to HDMI dongle) I've seen more failures than when working with Apple's variety of display dongles.
+* Connecting to external displays has been less reliable with the Dell/Fedora combination than on macOS. It's possible that some of this is due to the fact that the E7370 has only a micro-HDMI connector, but even when connecting to HDMI displays (using a micro-HDMI to HDMI dongle) I've seen more failures than when working with Apple's variety of display dongles.
 
-One completely unexpected thing that's arisen is I've noticed an increase in eyestrain since switching to Linux. I don't think this has anything to do with my ergonomic setup (my monitor is still at the same height as before and still the same distance away), but I can definitely tell a difference when I've used my Linux laptop for a while versus going back to OS X. I can only guess it has something to do with color schemes, font rendering, and/or antialiasing, but I haven't been able to put my finger on the culprit yet.
+One completely unexpected thing that's arisen is I've noticed an increase in eyestrain since switching to Linux. I don't think this has anything to do with my ergonomic setup (my monitor is still at the same height as before and still the same distance away), but I can definitely tell a difference when I've used my Linux laptop for a while versus going back to macOS. I can only guess it has something to do with color schemes, font rendering, and/or antialiasing, but I haven't been able to put my finger on the culprit yet.
 
-All in all, I'm mostly happy with Linux, but the key areas where I'm unhappy are so important and impactful that it's making life difficult. I must confess that I am considering a move back to OS X, despite my numerous misgivings about the platform. It's not that any one thing is pushing me away; it's more like "death from a thousand cuts"---all the small things are adding up to make quite a significant difference. Add in the unexpected eyestrain, and I have reasonable justification for moving back to OS X.
+All in all, I'm mostly happy with Linux, but the key areas where I'm unhappy are so important and impactful that it's making life difficult. I must confess that I am considering a move back to macOS, despite my numerous misgivings about the platform. It's not that any one thing is pushing me away; it's more like "death from a thousand cuts"---all the small things are adding up to make quite a significant difference. Add in the unexpected eyestrain, and I have reasonable justification for moving back to macOS.
 
 Does that mean this effort has been a failure? Not entirely; I've learned quite a bit, and anytime you can learn from an effort I don't view it as a failure. (As people we do tend to learn more through failure than success.) I also think it's important to incorporate the concepts of the "blameless port-mortem" and "fail fast" here: figure out what went wrong, examine what worked and what didn't, determine how to correct it, and move forward. It's unclear yet what that means moving forward, but I'll be sure to keep documenting the journey here.
 
 Feel free [to hit me up on Twitter][link-9] if you have thoughts to share about this topic; I'd love to hear your feedback and ideas!
-
-
 
 [link-1]: https://getfedora.org/
 [link-2]: http://www.sublimetext.com/

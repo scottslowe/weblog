@@ -13,7 +13,7 @@ tags:
 - Kubernetes
 - NSX
 - VMware
-- Macintosh
+- macOS
 - Azure
 - Fusion
 - Linux

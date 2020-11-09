@@ -9,7 +9,7 @@ tags:
 - CLI
 - Fedora
 - Linux
-- Macintosh
+- macOS
 title: Manually Installing Azure CLI on Fedora 25
 url: /2017/08/13/manually-installing-azure-cli-fedora-25/
 ---

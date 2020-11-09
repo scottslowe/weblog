@@ -5,7 +5,7 @@ comments: true
 date: 2018-12-19T12:00:00Z
 tags:
 - Linux
-- Macintosh
+- Apple
 - Hardware
 - Fedora
 title: Running Fedora on my Mac Pro

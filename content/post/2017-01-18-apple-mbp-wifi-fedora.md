@@ -6,7 +6,7 @@ date: 2017-01-18T00:00:00Z
 tags:
 - Linux
 - Hardware
-- Macintosh
+- Apple
 - Networking
 - Fedora
 - CLI
@@ -33,8 +33,6 @@ Once the RPM Fusion repositories (both Free and Nonfree) repositories are enable
 3. After these packages have been installed, build the kernel modules with `sudo akmods`. This will take a moment, then it should return you to the terminal prompt after an "OK" message.
 
 Once you reboot, you should have a new network adapter (on my particular MBP, it was identified as "wlp3s0"), and you can join the wireless network of your choice.
-
-
 
 [link-1]: https://www.ubuntu.com
 [link-2]: https://getfedora.org

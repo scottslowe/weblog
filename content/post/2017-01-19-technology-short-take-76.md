@@ -19,7 +19,7 @@ tags:
 - VMware
 - Linux
 - LXC
-- Macintosh
+- macOS
 - Ubuntu
 - Docker
 title: 'Technology Short Take #76'

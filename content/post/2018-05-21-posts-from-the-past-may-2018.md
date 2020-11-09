@@ -13,7 +13,7 @@ tags:
 - CLI
 - OVS
 - Networking
-- Macintosh
+- macOS
 - ActiveDirectory
 title: Posts from the Past, May 2018
 url: /2018/05/18/posts-from-the-past-may-2018/
@@ -37,7 +37,7 @@ Three years ago, I was doing a lot of work in my home lab, automating the setup 
 
 ## May 2014
 
-Four years ago, I shared [some useful Markdown tools for OS X][xref-6]. Of those tools, I still use `pandoc` pretty extensively.
+Four years ago, I shared [some useful Markdown tools for macOS][xref-6]. Of those tools, I still use `pandoc` pretty extensively.
 
 ## May 2013
 

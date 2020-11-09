@@ -8,14 +8,14 @@ tags:
 - CLI
 - Productivity
 - Ubuntu
-- Macintosh
+- macOS
 title: Plain Text Productivity Redux
 url: /2017/01/19/plain-text-productivity-redux/
 ---
 
-Almost 2 years ago, I set out on [an experiment in plain text productivity][xref-1]. I won't say the experiment was a failure; I _did_ learn from the experiment, and gaining knowledge is usually a positive outcome. In the end, I switched back to [OmniFocus][link-1], the OS X- and iOS-specific app I'd been using previously. In the last few weeks, though, I've revisited the idea of a plain text productivity system as part of my migration to [Ubuntu Linux][link-3] as my primary desktop OS, and I think I've resolved some of the issues that were present in my last attempt.
+Almost 2 years ago, I set out on [an experiment in plain text productivity][xref-1]. I won't say the experiment was a failure; I _did_ learn from the experiment, and gaining knowledge is usually a positive outcome. In the end, I switched back to [OmniFocus][link-1], the macOS- and iOS-specific app I'd been using previously. In the last few weeks, though, I've revisited the idea of a plain text productivity system as part of my migration to [Ubuntu Linux][link-3] as my primary desktop OS, and I think I've resolved some of the issues that were present in my last attempt.
 
-To recap, in my previous attempt I settled on the TaskPaper format (named after [the OS X app of the same name][link-2]). The format is extraordinarily flexible, and the OS X app is more powerful than you might expect. However, I uncovered some issues that made the solution untenable; namely:
+To recap, in my previous attempt I settled on the TaskPaper format (named after [the macOS app of the same name][link-2]). The format is extraordinarily flexible, and the macOS app is more powerful than you might expect. However, I uncovered some issues that made the solution untenable; namely:
 
 1. Handling future tasks is a problem.
 2. Handling repeating tasks is a problem.
@@ -36,11 +36,11 @@ Sadly, the state of task management/productivity on Linux is pretty poor. The la
 * It can "fold" to show only due/overdue tasks.
 * It can preview your task list in HTML, or export it to HTML.
 
-In short, this package addresses a number of the concerns with the original Mac app. Further, since Sublime Text is a cross-platform app (supported on Windows, Linux, and OS X), this means I can get the same functionality on all platforms. Based on my use over the last few weeks, I feel like using the PlainTasks package does a pretty good job of addressing issues #1 and #3 from my list above.
+In short, this package addresses a number of the concerns with the original Mac app. Further, since Sublime Text is a cross-platform app (supported on Windows, Linux, and macOS), this means I can get the same functionality on all platforms. Based on my use over the last few weeks, I feel like using the PlainTasks package does a pretty good job of addressing issues #1 and #3 from my list above.
 
 Issues #2 and #4 remain outstanding, but the biggest hurdle was issue #5---keeping my task lists synchronized across multiple systems. I think I've found a solution here, and testing over the last few weeks has not uncovered any major issues thus far. The solution is to keep separate files for each device: one for my Mac Pro workstation, one for my MacBook Air (which is soon to be retired), and one for my MacBook Pro running Ubuntu (which is soon to be replaced by a new corporate laptop running Ubuntu). I'll store these on [Dropbox][link-6], which means every device has a copy of every other device's tasks. Then, because these are just plain text files, I'll use file comparison/merge tools---tools that are well-understood given their extensive use within version control systems like Git---to merge changes between files. After all, merging plain text files that contain task lists is no different than merging plain text files that contain code. Why reinvent the wheel?
 
-On Ubuntu, I can use [Meld][link-7] for this process; on OS X, I can use [Kaleidoscope][link-8]. Yes, it will take a couple of passes to converge, but the process is super-quick and quite easy. I haven't found a comparison/merge tool for iOS or Android yet, but I do have an iOS text editor (Editorial) that supports the TaskPaper format (as well as Markdown). Given that it's very likely I'd only need to use a mobile device when my primary laptop would be offline, I think I can get away with just editing the primary laptop text file from my mobile device. I haven't tested that part yet, so some additional fine-tuning may be necessary.
+On Ubuntu, I can use [Meld][link-7] for this process; on macOS, I can use [Kaleidoscope][link-8]. Yes, it will take a couple of passes to converge, but the process is super-quick and quite easy. I haven't found a comparison/merge tool for iOS or Android yet, but I do have an iOS text editor (Editorial) that supports the TaskPaper format (as well as Markdown). Given that it's very likely I'd only need to use a mobile device when my primary laptop would be offline, I think I can get away with just editing the primary laptop text file from my mobile device. I haven't tested that part yet, so some additional fine-tuning may be necessary.
 
 Using this process should largely address issue #5, leaving only #2 and #4. I intend to tackle issue #2 with calendar entries, though---to be honest---the state of calendaring on Linux is also pretty bad. I'm not sure about #4 yet.
 

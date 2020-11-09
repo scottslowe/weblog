@@ -69,8 +69,6 @@ Nothing this time around, but I'm sure I'll find content to include in future ep
 
 That's all this time around---I hope you found something useful here.
 
-
-
 [link-1]: http://endoflineblog.com/gitflow-considered-harmful
 [link-2]: http://endoflineblog.com/oneflow-a-git-branching-model-and-workflow
 [link-3]: https://github.com/joemiller/git-flux

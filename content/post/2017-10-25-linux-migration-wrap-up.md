@@ -6,7 +6,7 @@ date: 2017-10-25T12:00:00Z
 tags:
 - Linux
 - Fedora
-- Macintosh
+- macOS
 - Productivity
 title: 'The Linux Migration: Wrap-Up'
 url: /2017/10/25/linux-migration-wrap-up/
@@ -37,8 +37,6 @@ So what does this mean for others who might be pondering the switch to Linux as 
 * If your employer is more into "Linux-friendly" tools like Slack, IRC, standards-based e-mail/calendaring/contacts (IMAP/SMTP/CalDAV/CardDAV), and online platforms like wikis/blogs for information sharing, then you'll probably be fine (although calendaring may be an issue).
 
 Despite the move back to macOS as my primary laptop OS, I'm still a huge fan of Linux, and I still plan to carefully track the development of Linux on the desktop to see how it continues to grow and evolve. If the various open source communities around desktop Linux---Fedora, GNOME, Mozilla, Ubuntu/Canonical---can address some of the shortcomings that I experienced, then I'd be happy to give it another go. Until then, I'll continue to use Linux on the server side and wait patiently for the right time to switch to it on my laptop as well.
-
-
 
 [link-1]: https://brianketelsen.com/my-cross-platform-dev-setup-on-surface-laptop/
 [xref-1]: {{< relref "2017-04-12-linux-migration-april-2017-progress-report.md" >}}

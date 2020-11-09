@@ -4,7 +4,7 @@ categories: Information
 comments: true
 date: 2017-11-02T21:00:00Z
 tags:
-- Macintosh
+- macOS
 - Writing
 - Productivity
 title: A Sublime Text Keymap for Bracketeer
@@ -51,8 +51,6 @@ To put this into action, I added a context to the keymap entry above to make it 
 Configured this way, Bracketeer only activates _when text is selected._ When text isn't selected, then Bracketeer doesn't modify the default behavior. This allows me to use Bracketeer to easily surround selected text with just about any character: backticks, asterisks, pipe symbols, or underscores.
 
 For a full copy of my modified Bracketeer keymap, see [this gist][link-4].
-
-
 
 [link-1]: http://www.sublimetext.com/
 [link-2]: https://atom.io/

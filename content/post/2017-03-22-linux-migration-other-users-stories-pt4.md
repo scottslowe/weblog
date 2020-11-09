@@ -6,7 +6,7 @@ date: 2017-03-22T00:00:00Z
 tags:
 - Linux
 - Productivity
-- Macintosh
+- Apple
 - Debian
 - Ubuntu
 - Collaboration
@@ -65,8 +65,6 @@ Well, for one I have a beautiful work environment that requires minimal mouse mo
 **Q: Anything else you'd like others to know?**
 
 You should really try out emacs org-mode! [Here's a video][link-9] that will help you get started.
-
-
 
 [link-1]: https://wiki.debian.org/Iceweasel
 [link-2]: https://xubuntu.org/
