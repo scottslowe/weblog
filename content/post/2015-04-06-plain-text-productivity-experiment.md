@@ -5,7 +5,7 @@ comments: true
 date: 2015-04-06T15:00:00Z
 tags:
 - Productivity
-- Macintosh
+- macOS
 title: The Plain Text Productivity Experiment
 url: /2015/04/06/plain-text-productivity-experiment/
 ---

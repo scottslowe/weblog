@@ -5,7 +5,7 @@ comments: true
 date: 2016-09-28T00:00:00Z
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - CLI
 - VirtualBox
@@ -26,8 +26,6 @@ Why? There's a few different reasons:
 3. **Bigger community:** The real power of tools like Vagrant is the community behind the tool. In this case, one metric for measuring such community is the availability of Vagrant boxes for your virtualization platform. With Fusion (or Workstation), finding good Vagrant boxes can be a challenge. Most of the "official" boxes---like those provided by Ubuntu or Debian---are available only for VirtualBox. It's _far_ easier to find VirtualBox-formatted Vagrant boxes than VMware-formatted boxes. And yes, while you can use a tool like [Packer][link-4] to build your own boxes, they tend to be larger than the "official" images. (I saved several gigabytes of disk space switching to VirtualBox-formatted "official" boxes.) Besides, do you really want to spend all your time managing Packer builds? Or do you want to get on with getting things done? (This kind of goes back to point #2 as well.)
 
 This doesn't mean I've ditched VMware Fusion entirely, nor does it mean that VirtualBox is a better product than Fusion. This is where "using the right tool for the job" applies. If I need to run Windows, I'll do that with Fusion because the UI and the Windows support are outstanding. If I need to run a virtual instance of OS X (sorry, macOS), I'll do that with Fusion because Fusion's support for virtualized macOS instances is really solid. If I need to run a VM with nested virtualization support, I'll do that with Fusion because VirtualBox doesn't offer that functionality. However, for simple Linux instances where I don't need a GUI and I want to automate it with Vagrant, I'm going to use VirtualBox because it makes more sense. For me, it's simply the right tool for the job.
-
-
 
 [link-1]: http://www.vmware.com/products/fusion.html
 [link-2]: https://www.virtualbox.org/

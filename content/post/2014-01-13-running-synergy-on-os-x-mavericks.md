@@ -6,7 +6,7 @@ date: 2014-01-13T15:11:50Z
 slug: running-synergy-on-os-x-mavericks
 tags:
 - CLI
-- Macintosh
+- macOS
 - UNIX
 title: Running Synergy on OS X Mavericks
 url: /2014/01/13/running-synergy-on-os-x-mavericks/

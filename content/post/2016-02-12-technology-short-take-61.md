@@ -16,7 +16,7 @@ tags:
 - UCS
 - OpenStack
 - Photon
-- Macintosh
+- macOS
 - VMware
 - vSphere
 title: 'Technology Short Take #61'
@@ -50,7 +50,7 @@ Welcome to Technology Short Take #61. I've tried to find a nice range of article
 
 ## Operating Systems/Applications
 
-* CoreOS recently announced the 1.0 release of rkt, its alternative container runtime to Docker Engine. I hope to be able to spend a bit of time with it soon, but in the meantime you can read [the announcement blog post][link-2]. CoreOS also has [a "getting started" blog post][link-3] that may help.
+* CoreOS recently announced the 1.0 release of `rkt`, its alternative container runtime to Docker Engine. I hope to be able to spend a bit of time with it soon, but in the meantime you can read [the announcement blog post][link-2]. CoreOS also has [a "getting started" blog post][link-3] that may help.
 * Juan Manuel Rey has been spending some quality time with VMware's Photon OS; in particular, how to configure networking on Photon OS. (Given that Photon OS uses systemd, it's more like he's spending time with systemd, but now we're just splitting hairs.) In any case, he's got a couple blog posts you may find useful: one on [network configuration with Photon OS][link-6], and one on [troubleshooting systemd-networkd on Photon OS][link-7]. Keep 'em coming, Juan!
 * This one is specific to OS X, but given that OS X has a lot of users in the IT community I felt it was still appropriate. Fournova Software, makers of the OS X-specific Git client [Tower][link-10], have an article listing [5 tips to be more productive with Dash][link-8]. [Dash][link-9], if you weren't aware, is an OS X app designed to provide easy access to various documentation sets. (It's a really handy app, by the way---I use it constantly.)
 * The past couple of weeks saw the release of Docker 1.10, Docker Compose 1.6, and Docker Machine 0.6.0. The Docker blog has a couple of posts---one [on Docker 1.10's new features][link-19], and another [on Compose 1.6][link-20]---that might help bring you up to speed on the changes in the latest releases.

@@ -25,7 +25,7 @@ tags:
 - Cisco
 - UCS
 - vSphere
-- Macintosh
+- macOS
 title: 'Technology Short Take #42'
 url: /2014/06/11/technology-short-take-42/
 wordpress_id: 3460

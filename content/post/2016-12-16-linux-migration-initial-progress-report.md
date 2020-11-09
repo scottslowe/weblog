@@ -7,7 +7,7 @@ tags:
 - Linux
 - CLI
 - Ubuntu
-- Macintosh
+- macOS
 - Fedora
 title: 'The Linux Migration: Initial Progress Report'
 url: /2016/12/16/linux-migration-initial-progress-report/
@@ -23,7 +23,7 @@ I've looked at a fair number of Linux distributions. I tried [Elementary OS][lin
 
 So, why Ubuntu 16.04 "Xenial Xerus"? Keep in mind that the reasons I list below are _my_ reasons, and may not apply to you or your situation. I also realize that some of these points tread on "religious war" territory, so I'll just say again that it's up to each individual to find what works best for her/him.
 
-* _Hardware support:_ Given that I'm a current OS X user, it's quite likely that I'll press Apple hardware into service first. With that in mind, Ubuntu 16.04 (which I'll just refer to as Xenial from here on) does a good job of supporting hardware (I'm writing this from Ubuntu 16.04 running natively on a slightly older MacBook Pro, and everything is working flawlessly). Wireless works out of the box, and the hardware-specific keys for adjusting sound, keyboard backlighting, and screen brightness work as expected.
+* _Hardware support:_ Given that I'm a current macOS user, it's quite likely that I'll press Apple hardware into service first. With that in mind, Ubuntu 16.04 (which I'll just refer to as Xenial from here on) does a good job of supporting hardware (I'm writing this from Ubuntu 16.04 running natively on a slightly older MacBook Pro, and everything is working flawlessly). Wireless works out of the box, and the hardware-specific keys for adjusting sound, keyboard backlighting, and screen brightness work as expected.
 
 * _Performance:_ Based on highly scientific (read: utterly subjective) tests, I'm pretty pleased with Xenial's performance, both virtual (using both VMware Fusion and VirtualBox) and on bare (laptop) metal. Graphics performance is good, and the system "feels" really responsive overall.
 
@@ -35,7 +35,7 @@ So, why Ubuntu 16.04 "Xenial Xerus"? Keep in mind that the reasons I list below 
 
 ## Data Formats
 
-This is a big issue, and one that anyone seeking to migrate off OS X (or Windows, for that matter) must address. I'd already made the move to [Markdown][link-6] (MultiMarkdown, technically) for a great deal of my content generation, and I'd made the switch to [Sublime Text][link-7] (ST) as my primary editor. ST is a cross-platform app, so I can switch to ST on Linux and preserve the majority of my user experience.
+This is a big issue, and one that anyone seeking to migrate off macOS (or Windows, for that matter) must address. I'd already made the move to [Markdown][link-6] (MultiMarkdown, technically) for a great deal of my content generation, and I'd made the switch to [Sublime Text][link-7] (ST) as my primary editor. ST is a cross-platform app, so I can switch to ST on Linux and preserve the majority of my user experience.
 
 That being said, there were (and are) still a number of areas of concern. Fortunately, I've made some progress there:
 
@@ -52,8 +52,6 @@ Some data format issues have yet to be resolved, though:
 * _Corporate collaboration:_ Need I say anything further? I'd prefer not to rely heavily on having a Windows VM around, but I've yet to find a good solution here. Mail isn't an issue---I can easily do IMAP/SMTP with Office 365 using [Thunderbird][link-10]---but calendaring and conferencing are different stories, especially given that my employer is heavily embracing a Microsoft-centric collaboration suite.
 
 As you can see, there's still lots of work to do and lots of questions to answer, but progress is happening. I'll continue to post updates here on the blog as this effort develops.
-
-
 
 [link-1]: https://www.linux.com/learn/elementary-os-loki-has-arrived
 [link-2]: http://elementary.io/

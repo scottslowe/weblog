@@ -15,7 +15,7 @@ tags:
 - Storage
 - Virtualization
 - VMware
-- Macintosh
+- Fusion
 title: 'Technology Short Take #46'
 url: /2014/11/07/technology-short-take-46/
 wordpress_id: 3560

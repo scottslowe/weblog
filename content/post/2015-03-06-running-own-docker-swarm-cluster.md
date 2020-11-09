@@ -9,7 +9,6 @@ tags:
 - CLI
 - Vagrant
 - Fusion
-- Macintosh
 - Virtualization
 title: Running a Small Docker Swarm Cluster
 url: /2015/03/06/running-own-docker-swarm-cluster/

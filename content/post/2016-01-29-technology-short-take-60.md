@@ -18,7 +18,7 @@ tags:
 - Docker
 - OpenStack
 - CoreOS
-- Macintosh
+- macOS
 - FibreChannel
 - LXC
 - Fusion
@@ -53,8 +53,8 @@ I don't have anything this time around, but I'll stay alert for content to inclu
 
 ## Operating Systems/Applications
 
-* CoreOS rkt is coming along nicely; version 0.15.0 was recently introduced an includes a new "rkt fly" feature that aims to provide better support for software that needs more privileges than a typical container (the Kubernetes _kubelet_ is one example). [This blog post][link-1] has more details.
-* This probably falls more into the "interesting" than "useful" category, but it may prove helpful to someone out there. As you know, the core of Docker Engine is morphing into runc as part of the Open Containers Initiative (OCI). Continuing her legacy of doing some unique things with containers on the desktop, Jessie Frazelle recently blogged about [runc containers on the desktop][link-8].
+* CoreOS `rkt` is coming along nicely; version 0.15.0 was recently introduced an includes a new `rkt fly` feature that aims to provide better support for software that needs more privileges than a typical container (the Kubernetes _kubelet_ is one example). [This blog post][link-1] has more details.
+* This probably falls more into the "interesting" than "useful" category, but it may prove helpful to someone out there. As you know, the core of Docker Engine is morphing into `runc` as part of the Open Containers Initiative (OCI). Continuing her legacy of doing some unique things with containers on the desktop, Jessie Frazelle recently blogged about [`runc` containers on the desktop][link-8].
 * In response to my post on my current productivity setup, the author of this blog post sent me a link to his article on [converting files before moving to Linux][link-14]. Good information, thanks!
 * [Run Windows containers on the Mac][link-15]. 'Nuff said.
 * With [the recent acquisition of Unikernel Systems by Docker Inc.][link-20], you've probably suddenly got unikernels on your radar. (Bart Smith gave you the heads-up [in Episode 1 of the Full Stack Journey Podcast][xref-1], so you shouldn't have been surprised.) In any case, [here's an article][link-21] that provides a overview of unikernels. After you've finished reading that, pop over to the Joyent site to read Bryan Cantrill's take on [why unikernels are unfit for production][link-22]. A lot of folks criticized Bryan's viewpoint on unikernels, but he's right---there is (right now) a dearth of operational tools for unikernels. At best, that makes them an interesting research/innovation opportunity, but certainly not ready for production.
@@ -76,8 +76,6 @@ I don't have anything this time around, but I'll stay alert for content to inclu
 * Following up on the IRC vs. mailing list vs. whatever discussion from previous Technology Short Takes, here's an article on [setting up a ZNC bouncer][link-26] (which is a way to improve your reachability on IRC). [This post][link-27] by Sean Dague (upon which the first post I referenced is also based) may also be useful.
 
 That's enough for this time around. See you next time around! Until then, feel free to [contact me on Twitter][link-31] if you have any questions, comments, or thoughts.
-
-
 
 [link-1]: https://coreos.com/blog/rkt-0.15.0-introduces-rkt-fly.html
 [link-2]: https://www.sdxcentral.com/articles/news/arista-outfits-eos-for-containers-hybrid-clouds/2016/01/

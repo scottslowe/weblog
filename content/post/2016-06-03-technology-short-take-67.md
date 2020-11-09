@@ -15,7 +15,7 @@ tags:
 - Windows
 - Docker
 - vSphere
-- Macintosh
+- macOS
 - Linux
 - VSAN
 - HyperV
@@ -77,7 +77,6 @@ Welcome to Technology Short Take #67. Here's hoping something I've collected for
 * I recently had the pleasure of participating in a panel discussion on the future of the data center while at Interop 2016 in Las Vegas. One of my fellow panelists, Sonia Cuff, summarized some of the thoughts and statements from the panel discussion in [this blog post][link-15].
 
 That's all, folks...until next time, at least!
-
 
 [link-1]: http://networkinferno.net/powernsx-log-insight-segmenter
 [link-2]: http://ntwrk.guru/need-learn-code-no-not-think/

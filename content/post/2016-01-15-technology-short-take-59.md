@@ -15,7 +15,7 @@ tags:
 - NSX
 - OpenStack
 - SSH
-- Macintosh
+- macOS
 - VMware
 - vSphere
 title: 'Technology Short Take #59'

@@ -8,7 +8,6 @@ tags:
 - Linux
 - Virtualization
 - VMware
-- Macintosh
 - Cumulus
 - Networking
 title: Building a VMware-Formatted Cumulus VX Vagrant Box
@@ -88,8 +87,6 @@ While you're at the CLI, add the `vagrant-cumulus` plugin you'll need as well:
 You can now start creating Vagrant environments that include Cumulus VX instances.
 
 One final note: it looks like the `vagrant-cumulus` Vagrant plugin may have a bug that prevents it from correctly setting the hostname of Cumulus VX instances, so you'll get an error when you run `vagrant up`. Despite the error, everything _seems_ to work well, so I think you're safe to ignore the error for now. I don't have a workaround for that yet, but when I find one I'll update this post with more information.
-
-
 
 [link-1]: https://cumulusnetworks.com/cumulus-vx/
 [link-2]: https://cumulusnetworks.com/cumulus-linux/overview/

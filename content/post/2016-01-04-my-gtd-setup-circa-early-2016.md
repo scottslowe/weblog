@@ -6,7 +6,7 @@ date: 2016-01-04T00:00:00Z
 tags:
 - Personal
 - Organization
-- Macintosh
+- macOS
 - Productivity
 title: My Getting Things Done Setup, Circa Early 2016
 url: /2016/01/04/my-gtd-setup-circa-early-2016/

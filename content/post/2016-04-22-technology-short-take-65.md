@@ -20,7 +20,7 @@ tags:
 - Docker
 - Puppet
 - Ubuntu
-- Macintosh
+- Apple
 - VMware
 title: 'Technology Short Take #65'
 url: /2016/04/22/technology-short-take-65/

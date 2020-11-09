@@ -8,7 +8,7 @@ tags:
 - Storage
 - Security
 - Virtualization
-- Macintosh
+- macOS
 - Windows
 - Ansible
 - Docker
@@ -82,8 +82,6 @@ Nothing this time around!
 Well, that's it for this time around. It's a bit shorter than usual, but I'm sure you won't mind too much (I'm usually running too long on these posts).
 
 I hope the rest of your 2016 is pleasant, uneventful, and enjoyable! Happy New Year!
-
-
 
 [link-1]: http://desktopecho.com/tsclientx/
 [link-2]: https://termlen0.github.io/2016/12/16/observations/

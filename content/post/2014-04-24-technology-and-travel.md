@@ -6,7 +6,7 @@ date: 2014-04-24T09:00:00Z
 slug: technology-and-travel
 tags:
 - Hardware
-- Macintosh
+- Apple
 - Security
 title: Technology and Travel
 url: /2014/04/24/technology-and-travel/

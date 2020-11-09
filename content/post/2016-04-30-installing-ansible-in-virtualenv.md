@@ -6,7 +6,7 @@ date: 2016-04-30T00:00:00Z
 tags:
 - Ansible
 - CLI
-- Macintosh
+- macOS
 - Python
 title: Installing Ansible 2.x in a Python Virtualenv on OS X
 url: /2016/04/30/installing-ansible-in-virtualenv/
@@ -39,8 +39,6 @@ Here's what the process looks like:
 5. When you're done with the virtualenv, run `deactivate`. You'll see your prompt revert to normal.
 
 Now, anytime you want to run Ansible, activate the "ansible" virtualenv (see step #3). This will put you into the appropriate virtualenv with all the necessary modules and dependencies. When you're done, simply deactivate the virtualenv (see step #5) and go on about your day. Easy as cake!
-
-
 
 [link-1]: https://www.ansible.com/
 [link-2]: http://www.openstack.org/

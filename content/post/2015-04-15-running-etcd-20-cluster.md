@@ -9,7 +9,6 @@ tags:
 - CLI
 - Vagrant
 - Fusion
-- Macintosh
 - etcd
 title: Running an etcd 2.0 Cluster on Ubuntu 14.04
 url: /2015/04/15/running-etcd-20-cluster/

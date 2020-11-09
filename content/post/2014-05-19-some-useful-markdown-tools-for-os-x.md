@@ -5,7 +5,7 @@ comments: true
 date: 2014-05-19T09:00:00Z
 slug: some-useful-markdown-tools-for-os-x
 tags:
-- Macintosh
+- macOS
 - Productivity
 - Writing
 - Markdown

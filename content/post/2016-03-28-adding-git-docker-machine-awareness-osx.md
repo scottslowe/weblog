@@ -7,7 +7,7 @@ tags:
 - Git
 - Docker
 - CLI
-- Macintosh
+- macOS
 title: Adding Git and Docker Machine Awareness to OS X
 url: /2016/03/28/adding-git-docker-machine-awareness-osx/
 ---
@@ -84,8 +84,6 @@ The functionality is cumulative, of course:
     relentless:docker-macvlan (master) [docker-01]$
 
 I don't know about you, but I find this added functionality to be extraordinarily helpful. I hope you do too!
-
-
 
 [link-1]: https://git-scm.com/
 [link-2]: https://www.docker.com/products/docker-machine

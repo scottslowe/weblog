@@ -4,7 +4,7 @@ categories: Review
 comments: true
 date: 2015-02-18T09:55:00Z
 tags:
-- Macintosh
+- macOS
 - Productivity
 - Markdown
 title: Presentations in Markdown Using Deckset
@@ -36,7 +36,6 @@ Of course, Deckset comes with standard functionality like presenter display, spe
 If I had to pick one problem with Deckset, it's the lack of ability to customize (or supply) your own themes. The application ships with 6 (or 7?) prebuilt themes, and each theme has different color variations. However, you can't edit the prebuilt themes, and you can't add your own themes. I'd love to see Unsigned Integer (the company behind Deckset) add the ability for the community to build themes for Deckset that can be shared within the Deckset community.
 
 Aside from that one complaint, I've been pretty happy with Deckset. If you're an OS X user and are looking for a good Markdown-based presentation solution, I'd definitely recommend giving Deckset a try.
-
 
 [link-1]: http://www.decksetapp.com/
 [link-2]: http://remarkjs.com/

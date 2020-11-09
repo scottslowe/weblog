@@ -5,7 +5,7 @@ comments: true
 date: 2015-11-14T00:00:00Z
 tags:
 - JSON
-- Macintosh
+- macOS
 - OpenStack
 - Web
 - Interoperability
