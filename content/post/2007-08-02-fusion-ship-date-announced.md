@@ -6,7 +6,7 @@ date: 2007-08-02T17:57:08Z
 slug: fusion-ship-date-announced
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: Fusion Ship Date Announced

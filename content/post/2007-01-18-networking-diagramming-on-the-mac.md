@@ -5,7 +5,7 @@ comments: true
 date: 2007-01-18T17:55:01Z
 slug: networking-diagramming-on-the-mac
 tags:
-- Macintosh
+- macOS
 - Microsoft
 - Office
 - VMware

@@ -6,7 +6,7 @@ date: 2007-08-24T18:48:57Z
 slug: listing-all-unique-mailtags-keywords
 tags:
 - CLI
-- Macintosh
+- macOS
 - Tagging
 - Tags
 title: Listing All Unique MailTags Keywords

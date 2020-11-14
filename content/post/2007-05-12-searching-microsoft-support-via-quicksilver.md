@@ -5,7 +5,7 @@ comments: true
 date: 2007-05-12T22:37:52Z
 slug: searching-microsoft-support-via-quicksilver
 tags:
-- Macintosh
+- macOS
 - Microsoft
 title: Searching Microsoft Support via Quicksilver
 url: /2007/05/12/searching-microsoft-support-via-quicksilver/

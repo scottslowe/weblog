@@ -6,7 +6,7 @@ date: 2007-11-26T10:05:30Z
 slug: is-apple-doing-enough-for-mac-security
 tags:
 - Apple
-- Macintosh
+- macOS
 - Security
 title: Is Apple Doing Enough for Mac Security?
 url: /2007/11/26/is-apple-doing-enough-for-mac-security/

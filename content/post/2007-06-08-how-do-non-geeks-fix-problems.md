@@ -6,7 +6,7 @@ date: 2007-06-08T16:50:10Z
 slug: how-do-non-geeks-fix-problems
 tags:
 - Cisco
-- Macintosh
+- macOS
 - Networking
 - Security
 title: How Do Non-Geeks Fix Problems?

@@ -7,7 +7,7 @@ slug: mac-ftpsftp-clients
 tags:
 - Encryption
 - FTP
-- Macintosh
+- macOS
 - SFTP
 title: Mac FTP/SFTP Clients
 url: /2007/01/22/mac-ftpsftp-clients/

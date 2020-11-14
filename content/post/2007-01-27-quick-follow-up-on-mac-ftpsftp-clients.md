@@ -8,7 +8,7 @@ tags:
 - ActiveDirectory
 - FTP
 - Kerberos
-- Macintosh
+- macOS
 - Networking
 - SFTP
 title: Quick Follow Up on Mac FTP/SFTP Clients

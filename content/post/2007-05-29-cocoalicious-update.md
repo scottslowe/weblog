@@ -5,7 +5,7 @@ comments: true
 date: 2007-05-29T22:43:56Z
 slug: cocoalicious-update
 tags:
-- Macintosh
+- macOS
 - Web
 title: Cocoalicious Update
 url: /2007/05/29/cocoalicious-update/

@@ -5,7 +5,7 @@ comments: true
 date: 2007-11-20T13:19:58Z
 slug: quicksilver-ssh-plugin
 tags:
-- Macintosh
+- macOS
 - SSH
 title: Quicksilver SSH Plugin
 url: /2007/11/20/quicksilver-ssh-plugin/

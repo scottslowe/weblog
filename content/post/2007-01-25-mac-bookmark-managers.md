@@ -6,7 +6,7 @@ date: 2007-01-25T22:50:02Z
 slug: mac-bookmark-managers
 tags:
 - Collaboration
-- Macintosh
+- macOS
 - Tagging
 - Tags
 - Web

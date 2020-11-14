@@ -6,7 +6,7 @@ date: 2007-06-06T23:01:19Z
 slug: unity-real-or-rumor
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: 'Unity: Real or Rumor?'

@@ -5,7 +5,7 @@ comments: true
 date: 2007-04-17T11:25:08Z
 slug: cocoalicious-development-restarted
 tags:
-- Macintosh
+- macOS
 - OSS
 - Tags
 - Web

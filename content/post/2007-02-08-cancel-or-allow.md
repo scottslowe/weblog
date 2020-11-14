@@ -6,7 +6,7 @@ date: 2007-02-08T19:58:44Z
 slug: cancel-or-allow
 tags:
 - Apple
-- Macintosh
+- macOS
 - Microsoft
 - Security
 - Vista

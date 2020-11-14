@@ -5,7 +5,7 @@ comments: true
 date: 2007-02-06T12:02:38Z
 slug: new-excel-zero-day-attack
 tags:
-- Macintosh
+- macOS
 - Microsoft
 - Office
 - Security

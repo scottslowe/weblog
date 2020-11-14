@@ -7,7 +7,7 @@ slug: unity-definitely-real
 tags:
 - Apple
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: 'Unity: Definitely Real!'

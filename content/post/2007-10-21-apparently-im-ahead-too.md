@@ -5,7 +5,7 @@ comments: true
 date: 2007-10-21T11:52:22Z
 slug: apparently-im-ahead-too
 tags:
-- Macintosh
+- macOS
 - Solaris
 - UNIX
 title: Apparently, I'm Ahead Too

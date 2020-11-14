@@ -5,7 +5,7 @@ comments: true
 date: 2007-06-03T11:16:53Z
 slug: data-ontap-upgrade
 tags:
-- Macintosh
+- macOS
 - NetApp
 - ONTAP
 - Storage

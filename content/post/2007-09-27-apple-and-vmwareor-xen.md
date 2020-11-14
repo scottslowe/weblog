@@ -10,7 +10,7 @@ tags:
 - Fusion
 - HyperV
 - iPhone
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 - Xen

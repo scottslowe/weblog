@@ -5,7 +5,7 @@ comments: true
 date: 2007-07-20T12:20:34Z
 slug: killing-ads-in-rss-feeds-in-netnewswire
 tags:
-- Macintosh
+- macOS
 - Web
 title: Killing Ads in RSS Feeds in NetNewsWire
 url: /2007/07/20/killing-ads-in-rss-feeds-in-netnewswire/

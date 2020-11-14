@@ -5,7 +5,7 @@ comments: true
 date: 2007-08-29T11:28:25Z
 slug: swsoft-disagrees-with-cnet-benchmarks
 tags:
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: SWsoft Disagrees with CNET Benchmarks

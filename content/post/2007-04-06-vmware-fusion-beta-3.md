@@ -7,7 +7,7 @@ slug: vmware-fusion-beta-3
 tags:
 - Apple
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: VMware Fusion Beta 3

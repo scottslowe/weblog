@@ -5,7 +5,7 @@ comments: true
 date: 2007-07-02T22:03:07Z
 slug: mac-usenet-applications
 tags:
-- Macintosh
+- macOS
 - Networking
 title: Mac Usenet Applications
 url: /2007/07/02/mac-usenet-applications/

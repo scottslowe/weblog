@@ -5,7 +5,7 @@ comments: true
 date: 2007-06-26T14:21:00Z
 slug: giving-iterm-a-try
 tags:
-- Macintosh
+- macOS
 - CLI
 title: Giving iTerm a Try
 url: /2007/06/26/giving-iterm-a-try/

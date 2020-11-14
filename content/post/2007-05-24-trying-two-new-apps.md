@@ -5,7 +5,7 @@ comments: true
 date: 2007-05-24T22:48:58Z
 slug: trying-two-new-apps
 tags:
-- Macintosh
+- macOS
 - Networking
 title: Trying Two New Apps
 url: /2007/05/24/trying-two-new-apps/

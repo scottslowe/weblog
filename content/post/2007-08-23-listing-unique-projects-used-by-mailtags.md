@@ -6,7 +6,7 @@ date: 2007-08-23T18:14:05Z
 slug: listing-unique-projects-used-by-mailtags
 tags:
 - CLI
-- Macintosh
+- macOS
 - Tagging
 - Tags
 title: Listing Unique Projects Used by MailTags

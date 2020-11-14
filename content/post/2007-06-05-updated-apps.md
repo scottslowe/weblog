@@ -5,7 +5,7 @@ comments: true
 date: 2007-06-05T14:33:13Z
 slug: updated-apps
 tags:
-- Macintosh
+- macOS
 - Web
 title: Updated Apps
 url: /2007/06/05/updated-apps/

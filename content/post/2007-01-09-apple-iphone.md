@@ -5,8 +5,9 @@ comments: true
 date: 2007-01-09T15:24:05Z
 slug: apple-iphone
 tags:
-- Apache
-- Macintosh
+- Apple
+- iOS
+- iPhone
 - Mobility
 title: Apple iPhone
 url: /2007/01/09/apple-iphone/

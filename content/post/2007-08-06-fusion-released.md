@@ -6,7 +6,7 @@ date: 2007-08-06T13:24:25Z
 slug: fusion-released
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: Fusion Released

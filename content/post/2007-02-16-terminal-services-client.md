@@ -5,7 +5,7 @@ comments: true
 date: 2007-02-16T12:13:30Z
 slug: terminal-services-client
 tags:
-- Macintosh
+- macOS
 - Microsoft
 - Windows
 title: Terminal Services Client

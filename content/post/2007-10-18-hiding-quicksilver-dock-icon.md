@@ -5,7 +5,7 @@ comments: true
 date: 2007-10-18T17:08:20Z
 slug: hiding-quicksilver-dock-icon
 tags:
-- Macintosh
+- macOS
 title: Hiding Quicksilver Dock Icon
 url: /2007/10/18/hiding-quicksilver-dock-icon/
 wordpress_id: 561

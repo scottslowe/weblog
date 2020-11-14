@@ -6,7 +6,7 @@ date: 2007-02-28T22:02:01Z
 slug: getting-the-hang-of-interarchy
 tags:
 - FTP
-- Macintosh
+- macOS
 - Networking
 - SFTP
 title: Getting the Hang of Interarchy

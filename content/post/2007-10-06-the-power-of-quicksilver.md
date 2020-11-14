@@ -5,7 +5,7 @@ comments: true
 date: 2007-10-06T19:49:01Z
 slug: the-power-of-quicksilver
 tags:
-- Macintosh
+- macOS
 - Music
 title: The Power of Quicksilver
 url: /2007/10/06/the-power-of-quicksilver/

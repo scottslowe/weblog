@@ -6,7 +6,7 @@ date: 2007-08-07T10:01:21Z
 slug: a-few-more-quick-thoughts-on-fusion
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: A Few More Quick Thoughts on Fusion

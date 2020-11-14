@@ -7,7 +7,7 @@ slug: statistically-secure
 tags:
 - Apple
 - Linux
-- Macintosh
+- macOS
 - Microsoft
 - Security
 - Solaris

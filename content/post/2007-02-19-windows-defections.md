@@ -5,7 +5,7 @@ comments: true
 date: 2007-02-19T20:57:27Z
 slug: windows-defections
 tags:
-- Macintosh
+- macOS
 - Vista
 - Windows
 title: Windows Defections

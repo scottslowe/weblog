@@ -6,7 +6,7 @@ date: 2007-11-12T16:02:21Z
 slug: vmware-fusion-update-released
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: VMware Fusion Update Released

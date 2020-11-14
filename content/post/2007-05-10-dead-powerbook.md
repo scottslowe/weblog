@@ -7,7 +7,6 @@ slug: dead-powerbook
 tags:
 - Apple
 - Hardware
-- Macintosh
 - Storage
 title: Dead PowerBook
 url: /2007/05/10/dead-powerbook/

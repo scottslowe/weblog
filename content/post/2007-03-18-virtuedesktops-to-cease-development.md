@@ -5,7 +5,7 @@ comments: true
 date: 2007-03-18T15:46:21Z
 slug: virtuedesktops-to-cease-development
 tags:
-- Macintosh
+- macOS
 - OSS
 title: VirtueDesktops to Cease Development
 url: /2007/03/18/virtuedesktops-to-cease-development/

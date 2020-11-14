@@ -6,7 +6,7 @@ date: 2007-03-02T18:03:36Z
 slug: fusion-beta-2
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: Fusion Beta 2

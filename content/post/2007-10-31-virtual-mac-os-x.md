@@ -6,7 +6,7 @@ date: 2007-10-31T22:36:43Z
 slug: virtual-mac-os-x
 tags:
 - Apple
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: Virtual Mac OS X
