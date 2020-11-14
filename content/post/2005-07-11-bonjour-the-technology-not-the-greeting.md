@@ -5,7 +5,7 @@ comments: false
 date: 2005-07-11T23:39:46Z
 slug: bonjour-the-technology-not-the-greeting
 tags:
-- Macintosh
+- macOS
 - Networking
 title: Bonjour (The Technology, Not the Greeting)
 url: /2005/07/11/bonjour-the-technology-not-the-greeting/

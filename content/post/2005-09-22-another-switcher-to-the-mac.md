@@ -5,7 +5,7 @@ comments: false
 date: 2005-09-22T21:12:15Z
 slug: another-switcher-to-the-mac
 tags:
-- Macintosh
+- macOS
 title: Another Switcher to the Mac
 url: /2005/09/22/another-switcher-to-the-mac/
 wordpress_id: 91

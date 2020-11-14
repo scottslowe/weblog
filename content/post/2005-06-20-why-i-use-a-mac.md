@@ -7,7 +7,7 @@ slug: why-i-use-a-mac
 tags:
 - Apache
 - Linux
-- Macintosh
+- macOS
 - Microsoft
 - Postfix
 - SpamAssassin

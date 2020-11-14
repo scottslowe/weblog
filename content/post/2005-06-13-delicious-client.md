@@ -6,7 +6,7 @@ date: 2005-06-13T13:49:37Z
 slug: delicious-client
 tags:
 - Blogging
-- Macintosh
+- macOS
 title: del.icio.us Client
 url: /2005/06/13/delicious-client/
 wordpress_id: 12

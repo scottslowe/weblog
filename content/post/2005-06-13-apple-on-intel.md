@@ -7,7 +7,7 @@ slug: apple-on-intel
 tags:
 - Apple
 - Hardware
-- Macintosh
+- macOS
 title: Apple on Intel
 url: /2005/06/13/apple-on-intel/
 wordpress_id: 11

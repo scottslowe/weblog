@@ -6,7 +6,7 @@ date: 2005-07-07T22:54:40Z
 slug: stupid-tricks-with-the-mac-os-x-firewall
 tags:
 - BSD
-- Macintosh
+- macOS
 - Security
 title: Stupid Tricks With The Mac OS X Firewall
 url: /2005/07/07/stupid-tricks-with-the-mac-os-x-firewall/

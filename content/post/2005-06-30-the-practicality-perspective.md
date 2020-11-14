@@ -5,7 +5,7 @@ comments: false
 date: 2005-06-30T21:16:43Z
 slug: the-practicality-perspective
 tags:
-- Macintosh
+- macOS
 - Productivity
 title: The Practicality Perspective
 url: /2005/06/30/the-practicality-perspective/

@@ -5,7 +5,7 @@ comments: false
 date: 2005-08-17T11:08:14Z
 slug: xc-connect
 tags:
-- Macintosh
+- macOS
 - Interoperability
 title: XC Connect
 url: /2005/08/17/xc-connect/

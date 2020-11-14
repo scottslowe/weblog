@@ -5,7 +5,7 @@ comments: false
 date: 2005-07-05T16:33:03Z
 slug: yamb-yet-another-mac-browser
 tags:
-- Macintosh
+- macOS
 - OSS
 - Web
 title: YAMB (Yet Another Mac Browser)

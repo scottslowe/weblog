@@ -6,7 +6,7 @@ date: 2005-11-27T20:23:16Z
 slug: making-backup-dvd-copies
 tags:
 - Entertainment
-- Macintosh
+- macOS
 title: Making Backup DVD Copies
 url: /2005/11/27/making-backup-dvd-copies/
 wordpress_id: 123

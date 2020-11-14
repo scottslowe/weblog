@@ -5,7 +5,7 @@ comments: true
 date: 2005-10-04T09:00:32Z
 slug: moving-back-to-desktop-manager
 tags:
-- Macintosh
+- macOS
 - OSS
 title: Moving Back to Desktop Manager
 url: /2005/10/04/moving-back-to-desktop-manager/

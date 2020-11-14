@@ -6,7 +6,7 @@ date: 2005-07-06T14:31:35Z
 slug: linux-better-than-windows
 tags:
 - Linux
-- Macintosh
+- macOS
 - Windows
 title: Linux Better Than Windows?
 url: /2005/07/06/linux-better-than-windows/

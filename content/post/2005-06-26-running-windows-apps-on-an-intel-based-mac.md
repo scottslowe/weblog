@@ -5,7 +5,7 @@ comments: false
 date: 2005-06-26T16:36:17Z
 slug: running-windows-apps-on-an-intel-based-mac
 tags:
-- Macintosh
+- macOS
 - Virtualization
 - Windows
 title: Running Windows Apps on an Intel-Based Mac

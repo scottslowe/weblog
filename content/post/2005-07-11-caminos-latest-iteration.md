@@ -5,7 +5,7 @@ comments: false
 date: 2005-07-11T23:24:29Z
 slug: caminos-latest-iteration
 tags:
-- Macintosh
+- macOS
 - Web
 title: Camino's Latest Iteration
 url: /2005/07/11/caminos-latest-iteration/

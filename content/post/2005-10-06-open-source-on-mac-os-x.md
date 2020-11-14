@@ -5,7 +5,7 @@ comments: false
 date: 2005-10-06T12:04:41Z
 slug: open-source-on-mac-os-x
 tags:
-- Macintosh
+- macOS
 - OSS
 title: Open Source on Mac OS X
 url: /2005/10/06/open-source-on-mac-os-x/

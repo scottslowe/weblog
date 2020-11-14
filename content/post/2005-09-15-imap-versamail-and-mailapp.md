@@ -7,7 +7,7 @@ slug: imap-versamail-and-mailapp
 tags:
 - Interoperability
 - Messaging
-- Macintosh
+- macOS
 title: IMAP, VersaMail, and Mail.app
 url: /2005/09/15/imap-versamail-and-mailapp/
 wordpress_id: 86

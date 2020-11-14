@@ -5,7 +5,7 @@ comments: false
 date: 2005-11-29T17:38:01Z
 slug: market-speak
 tags:
-- Macintosh
+- macOS
 title: Market-speak
 url: /2005/11/29/market-speak/
 wordpress_id: 129

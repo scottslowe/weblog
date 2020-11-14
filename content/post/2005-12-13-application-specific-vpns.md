@@ -8,7 +8,7 @@ tags:
 - Encryption
 - IPSec
 - Linux
-- Macintosh
+- macOS
 - Networking
 - OSS
 - Security

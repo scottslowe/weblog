@@ -5,7 +5,7 @@ comments: false
 date: 2005-08-04T22:57:42Z
 slug: very-handy-add-on
 tags:
-- Macintosh
+- macOS
 - Windows
 title: Very Handy Add-On
 url: /2005/08/04/very-handy-add-on/

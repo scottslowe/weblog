@@ -5,7 +5,7 @@ comments: true
 date: 2005-09-30T22:15:00Z
 slug: virtual-desktops-on-mac-os-x
 tags:
-- Macintosh
+- macOS
 - OSS
 title: Virtual Desktops on Mac OS X
 url: /2005/09/30/virtual-desktops-on-mac-os-x/

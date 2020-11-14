@@ -5,7 +5,7 @@ comments: false
 date: 2005-11-28T16:11:38Z
 slug: ipfw-rules-for-bonjour
 tags:
-- Macintosh
+- macOS
 - Networking
 - Security
 title: ipfw Rules for Bonjour

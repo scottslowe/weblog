@@ -5,7 +5,7 @@ comments: false
 date: 2005-07-13T22:36:41Z
 slug: modifying-caminos-exceptions-list-for-cookies
 tags:
-- Macintosh
+- macOS
 - Web
 title: Modifying Camino's Exceptions List for Cookies
 url: /2005/07/13/modifying-caminos-exceptions-list-for-cookies/

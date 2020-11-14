@@ -6,7 +6,7 @@ date: 2005-09-26T16:40:32Z
 slug: from-pgp-to-smime
 tags:
 - Encryption
-- Macintosh
+- macOS
 - Security
 title: From PGP to S/MIME
 url: /2005/09/26/from-pgp-to-smime/

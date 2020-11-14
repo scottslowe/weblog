@@ -5,7 +5,7 @@ comments: false
 date: 2005-12-12T09:37:38Z
 slug: using-mac-idisk-with-a-watchguard-firebox
 tags:
-- Macintosh
+- macOS
 - Networking
 - Security
 - Interoperability

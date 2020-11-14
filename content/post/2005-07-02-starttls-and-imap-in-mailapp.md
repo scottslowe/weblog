@@ -7,7 +7,7 @@ slug: starttls-and-imap-in-mailapp
 tags:
 - Encryption
 - IMAP
-- Macintosh
+- macOS
 - Messaging
 - Microsoft
 - SSL

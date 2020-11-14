@@ -8,7 +8,7 @@ tags:
 - Interoperability
 - Encryption
 - Linux
-- Macintosh
+- macOS
 - Security
 - SSL
 - Windows

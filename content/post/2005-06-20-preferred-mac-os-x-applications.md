@@ -5,7 +5,7 @@ comments: false
 date: 2005-06-20T09:36:34Z
 slug: preferred-mac-os-x-applications
 tags:
-- Macintosh
+- macOS
 - OSS
 title: Preferred Mac OS X Applications
 url: /2005/06/20/preferred-mac-os-x-applications/

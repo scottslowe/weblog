@@ -5,7 +5,7 @@ comments: false
 date: 2005-06-21T13:47:22Z
 slug: dangerous-stuff
 tags:
-- Macintosh
+- macOS
 - Security
 - Windows
 title: Dangerous Stuff
