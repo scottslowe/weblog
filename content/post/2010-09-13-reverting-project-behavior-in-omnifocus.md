@@ -5,7 +5,7 @@ comments: true
 date: 2010-09-13T10:00:00Z
 slug: reverting-project-behavior-in-omnifocus
 tags:
-- Macintosh
+- macOS
 - Productivity
 title: Reverting Project Behavior in OmniFocus
 url: /2010/09/13/reverting-project-behavior-in-omnifocus/

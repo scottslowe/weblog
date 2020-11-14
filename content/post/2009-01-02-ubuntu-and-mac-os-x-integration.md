@@ -9,7 +9,7 @@ tags:
 - Apple
 - Interoperability
 - Linux
-- Macintosh
+- macOS
 - Music
 - Samba
 - Ubuntu

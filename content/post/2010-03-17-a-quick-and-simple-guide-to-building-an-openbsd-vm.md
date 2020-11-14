@@ -7,7 +7,6 @@ slug: a-quick-and-simple-guide-to-building-an-openbsd-vm
 tags:
 - BSD
 - Fusion
-- Macintosh
 - UNIX
 - Virtualization
 - VMware

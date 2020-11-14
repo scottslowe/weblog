@@ -5,7 +5,8 @@ comments: true
 date: 2009-07-18T23:46:58Z
 slug: a-bit-of-an-applescript-kick
 tags:
-- Macintosh
+- Automation
+- macOS
 - Productivity
 title: A Bit of an AppleScript Kick
 url: /2009/07/18/a-bit-of-an-applescript-kick/

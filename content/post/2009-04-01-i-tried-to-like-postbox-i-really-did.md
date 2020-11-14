@@ -5,7 +5,7 @@ comments: true
 date: 2009-04-01T15:12:23Z
 slug: i-tried-to-like-postbox-i-really-did
 tags:
-- Macintosh
+- macOS
 - Messaging
 title: I Tried to Like Postbox, I Really Did
 url: /2009/04/01/i-tried-to-like-postbox-i-really-did/

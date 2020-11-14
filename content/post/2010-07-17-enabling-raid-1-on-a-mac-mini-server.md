@@ -5,7 +5,8 @@ comments: true
 date: 2010-07-17T20:54:16Z
 slug: enabling-raid-1-on-a-mac-mini-server
 tags:
-- Macintosh
+- Apple
+- macOS
 - Storage
 title: Enabling RAID 1 on a Mac Mini Server
 url: /2010/07/17/enabling-raid-1-on-a-mac-mini-server/

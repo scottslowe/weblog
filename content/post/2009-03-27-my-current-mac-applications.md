@@ -8,7 +8,7 @@ tags:
 - Apple
 - Blogging
 - Fusion
-- Macintosh
+- macOS
 - Newsgroups
 - VMware
 - VPN

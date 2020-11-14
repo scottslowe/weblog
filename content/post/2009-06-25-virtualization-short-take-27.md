@@ -5,7 +5,6 @@ comments: true
 date: 2009-06-25T10:11:35Z
 slug: virtualization-short-take-27
 tags:
-- Macintosh
 - Cisco
 - ESXi
 - Fusion

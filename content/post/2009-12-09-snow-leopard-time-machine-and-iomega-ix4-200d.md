@@ -7,7 +7,7 @@ slug: snow-leopard-time-machine-and-iomega-ix4-200d
 tags:
 - Backup
 - EMC
-- Macintosh
+- macOS
 - Storage
 title: Snow Leopard, Time Machine, and Iomega ix4-200d
 url: /2009/12/09/snow-leopard-time-machine-and-iomega-ix4-200d/

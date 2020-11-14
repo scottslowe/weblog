@@ -5,7 +5,7 @@ comments: true
 date: 2009-04-22T18:52:55Z
 slug: new-folders-with-quicksilver
 tags:
-- Macintosh
+- macOS
 title: New Folders with Quicksilver
 url: /2009/04/22/new-folders-with-quicksilver/
 wordpress_id: 1311

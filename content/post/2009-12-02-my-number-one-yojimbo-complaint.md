@@ -5,7 +5,7 @@ comments: true
 date: 2009-12-02T16:57:44Z
 slug: my-number-one-yojimbo-complaint
 tags:
-- Macintosh
+- macOS
 title: My Number One Yojimbo Complaint
 url: /2009/12/02/my-number-one-yojimbo-complaint/
 wordpress_id: 1758

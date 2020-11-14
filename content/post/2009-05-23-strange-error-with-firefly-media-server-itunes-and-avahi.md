@@ -6,7 +6,7 @@ date: 2009-05-23T20:10:21Z
 slug: strange-error-with-firefly-media-server-itunes-and-avahi
 tags:
 - Linux
-- Macintosh
+- macOS
 - Music
 - Networking
 - OSS

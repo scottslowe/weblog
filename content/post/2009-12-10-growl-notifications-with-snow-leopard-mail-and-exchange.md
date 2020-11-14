@@ -6,7 +6,7 @@ date: 2009-12-10T10:55:50Z
 slug: growl-notifications-with-snow-leopard-mail-and-exchange
 tags:
 - Exchange
-- Macintosh
+- macOS
 - Messaging
 title: Growl Notifications with Snow Leopard Mail and Exchange
 url: /2009/12/10/growl-notifications-with-snow-leopard-mail-and-exchange/

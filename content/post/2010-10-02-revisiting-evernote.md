@@ -5,7 +5,7 @@ comments: true
 date: 2010-10-02T11:23:38Z
 slug: revisiting-evernote
 tags:
-- Macintosh
+- macOS
 - Productivity
 - Web
 title: Revisiting Evernote

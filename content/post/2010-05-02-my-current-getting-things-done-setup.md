@@ -5,7 +5,7 @@ comments: true
 date: 2010-05-02T15:42:08Z
 slug: my-current-getting-things-done-setup
 tags:
-- Macintosh
+- macOS
 - Personal
 - Productivity
 title: My Current Getting Things Done Setup

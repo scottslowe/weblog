@@ -6,7 +6,7 @@ date: 2010-10-20T18:33:39Z
 slug: shortening-urls-via-bitly-from-the-cli
 tags:
 - CLI
-- Macintosh
+- macOS
 - Web
 - UNIX
 title: Shortening URLs via bit.ly from the CLI

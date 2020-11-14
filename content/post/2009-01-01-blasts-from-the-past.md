@@ -8,7 +8,7 @@ tags:
 - ActiveDirectory
 - Cisco
 - HyperV
-- Macintosh
+- macOS
 - NetApp
 - VDI
 - Virtualization

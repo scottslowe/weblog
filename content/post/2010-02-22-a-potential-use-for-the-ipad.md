@@ -6,7 +6,7 @@ date: 2010-02-22T22:49:56Z
 slug: a-potential-use-for-the-ipad
 tags:
 - Apple
-- Macintosh
+- iOS
 title: A Potential Use for the iPad
 url: /2010/02/22/a-potential-use-for-the-ipad/
 wordpress_id: 1850

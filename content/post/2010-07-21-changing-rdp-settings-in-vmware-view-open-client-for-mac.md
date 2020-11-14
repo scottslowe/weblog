@@ -5,7 +5,7 @@ comments: true
 date: 2010-07-21T19:55:09Z
 slug: changing-rdp-settings-in-vmware-view-open-client-for-mac
 tags:
-- Macintosh
+- macOS
 - VDI
 - Virtualization
 - VMware

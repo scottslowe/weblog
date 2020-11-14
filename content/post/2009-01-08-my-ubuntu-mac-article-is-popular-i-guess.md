@@ -6,7 +6,7 @@ date: 2009-01-08T16:38:13Z
 slug: my-ubuntu-mac-article-is-popular-i-guess
 tags:
 - Linux
-- Macintosh
+- macOS
 - Music
 - Ubuntu
 - VPN

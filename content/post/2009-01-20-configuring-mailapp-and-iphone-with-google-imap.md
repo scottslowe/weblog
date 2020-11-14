@@ -6,7 +6,8 @@ date: 2009-01-20T12:16:30Z
 slug: configuring-mailapp-and-iphone-with-google-imap
 tags:
 - iPhone
-- Macintosh
+- macOS
+- iOS
 - Messaging
 title: Configuring Mail.app and iPhone with Google IMAP
 url: /2009/01/20/configuring-mailapp-and-iphone-with-google-imap/

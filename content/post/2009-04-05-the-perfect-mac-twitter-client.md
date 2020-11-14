@@ -5,7 +5,7 @@ comments: true
 date: 2009-04-05T18:43:10Z
 slug: the-perfect-mac-twitter-client
 tags:
-- Macintosh
+- macOS
 - Web
 title: The Perfect Mac Twitter Client
 url: /2009/04/05/the-perfect-mac-twitter-client/

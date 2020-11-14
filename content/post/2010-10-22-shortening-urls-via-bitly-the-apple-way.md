@@ -5,7 +5,8 @@ comments: true
 date: 2010-10-22T11:18:07Z
 slug: shortening-urls-via-bitly-the-apple-way
 tags:
-- Macintosh
+- Automation
+- macOS
 - Web
 title: Shortening URLs via bit.ly the Apple Way
 url: /2010/10/22/shortening-urls-via-bitly-the-apple-way/

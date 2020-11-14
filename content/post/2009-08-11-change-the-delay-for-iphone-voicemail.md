@@ -6,7 +6,7 @@ date: 2009-08-11T10:44:00Z
 slug: change-the-delay-for-iphone-voicemail
 tags:
 - iPhone
-- Macintosh
+- iOS
 title: Change the Delay for iPhone Voicemail
 url: /2009/08/11/change-the-delay-for-iphone-voicemail/
 wordpress_id: 1515

@@ -5,7 +5,7 @@ comments: true
 date: 2010-10-02T22:54:49Z
 slug: hidden-growl-preference-for-interarchy
 tags:
-- Macintosh
+- macOS
 - FTP
 title: Hidden Growl Preference for Interarchy
 url: /2010/10/02/hidden-growl-preference-for-interarchy/

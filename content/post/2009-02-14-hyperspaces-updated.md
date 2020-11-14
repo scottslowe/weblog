@@ -5,7 +5,7 @@ comments: true
 date: 2009-02-14T13:01:24Z
 slug: hyperspaces-updated
 tags:
-- Macintosh
+- macOS
 title: Hyperspaces Updated
 url: /2009/02/14/hyperspaces-updated/
 wordpress_id: 1202

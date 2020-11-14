@@ -6,7 +6,7 @@ date: 2010-01-11T12:30:09Z
 slug: a-couple-geektool-scripts
 tags:
 - CLI
-- Macintosh
+- macOS
 - UNIX
 title: A Couple GeekTool Scripts
 url: /2010/01/11/a-couple-geektool-scripts/

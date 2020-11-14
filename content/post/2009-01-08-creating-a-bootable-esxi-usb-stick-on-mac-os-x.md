@@ -6,7 +6,7 @@ date: 2009-01-08T12:46:35Z
 slug: creating-a-bootable-esxi-usb-stick-on-mac-os-x
 tags:
 - ESXi
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: Creating a Bootable ESXi USB Stick on Mac OS X
