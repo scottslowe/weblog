@@ -6,7 +6,7 @@ date: 2008-05-14T12:00:15Z
 slug: switching-to-the-mac
 tags:
 - Apple
-- Macintosh
+- macOS
 - Microsoft
 - Windows
 title: Switching to the Mac

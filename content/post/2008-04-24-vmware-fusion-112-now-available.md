@@ -6,7 +6,7 @@ date: 2008-04-24T16:38:47Z
 slug: vmware-fusion-112-now-available
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: VMware Fusion 1.1.2 Now Available

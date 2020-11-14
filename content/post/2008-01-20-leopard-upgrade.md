@@ -7,7 +7,7 @@ slug: leopard-upgrade
 tags:
 - Apple
 - Blogging
-- Macintosh
+- macOS
 title: Leopard Upgrade
 url: /2008/01/20/leopard-upgrade/
 wordpress_id: 609

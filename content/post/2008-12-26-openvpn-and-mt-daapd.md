@@ -6,7 +6,7 @@ date: 2008-12-26T18:00:48Z
 slug: openvpn-and-mt-daapd
 tags:
 - Linux
-- Macintosh
+- macOS
 - Music
 - OSS
 title: OpenVPN and mt-daapd

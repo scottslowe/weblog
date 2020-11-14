@@ -6,7 +6,7 @@ date: 2008-11-07T10:45:11Z
 slug: where-is-bluebear-going-with-kodiak
 tags:
 - Linux
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 - Windows

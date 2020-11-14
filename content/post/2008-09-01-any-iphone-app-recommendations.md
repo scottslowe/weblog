@@ -7,8 +7,8 @@ slug: any-iphone-app-recommendations
 tags:
 - Apple
 - Exchange
+- iOS
 - iPhone
-- Macintosh
 title: Any iPhone App Recommendations?
 url: /2008/09/01/any-iphone-app-recommendations/
 wordpress_id: 846

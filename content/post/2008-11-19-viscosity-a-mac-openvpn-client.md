@@ -8,7 +8,7 @@ tags:
 - BSD
 - IPSec
 - Linux
-- Macintosh
+- macOS
 - Networking
 - OSS
 title: Viscosity, a Mac OpenVPN Client

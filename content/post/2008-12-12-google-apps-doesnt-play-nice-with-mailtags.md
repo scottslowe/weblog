@@ -5,7 +5,7 @@ comments: true
 date: 2008-12-12T12:05:03Z
 slug: google-apps-doesnt-play-nice-with-mailtags
 tags:
-- Macintosh
+- macOS
 - Messaging
 - Web
 title: Google Apps Doesn't Play Nice with MailTags

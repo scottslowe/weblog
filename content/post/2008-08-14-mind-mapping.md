@@ -5,7 +5,7 @@ comments: true
 date: 2008-08-14T21:53:06Z
 slug: mind-mapping
 tags:
-- Macintosh
+- macOS
 - Productivity
 title: Mind Mapping
 url: /2008/08/14/mind-mapping/

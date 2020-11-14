@@ -5,7 +5,7 @@ comments: true
 date: 2008-10-28T23:03:29Z
 slug: hyperspaces
 tags:
-- Macintosh
+- macOS
 title: Hyperspaces
 url: /2008/10/28/hyperspaces/
 wordpress_id: 1004

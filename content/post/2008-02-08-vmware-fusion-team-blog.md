@@ -6,7 +6,7 @@ date: 2008-02-08T12:42:35Z
 slug: vmware-fusion-team-blog
 tags:
 - Fusion
-- Macintosh
+- macOS
 - VMware
 - Virtualization
 title: VMware Fusion Team Blog

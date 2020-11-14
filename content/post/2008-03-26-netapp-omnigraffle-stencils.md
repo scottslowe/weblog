@@ -5,7 +5,7 @@ comments: true
 date: 2008-03-26T14:50:01Z
 slug: netapp-omnigraffle-stencils
 tags:
-- Macintosh
+- macOS
 - NetApp
 - Storage
 title: NetApp OmniGraffle Stencils

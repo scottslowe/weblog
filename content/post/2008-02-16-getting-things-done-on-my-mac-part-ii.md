@@ -5,7 +5,7 @@ comments: true
 date: 2008-02-16T20:58:50Z
 slug: getting-things-done-on-my-mac-part-ii
 tags:
-- Macintosh
+- macOS
 - Productivity
 title: Getting Things Done on my Mac, Part II
 url: /2008/02/16/getting-things-done-on-my-mac-part-ii/

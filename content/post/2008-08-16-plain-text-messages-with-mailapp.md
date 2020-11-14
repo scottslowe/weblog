@@ -6,7 +6,7 @@ date: 2008-08-16T09:31:32Z
 slug: plain-text-messages-with-mailapp
 tags:
 - Exchange
-- Macintosh
+- macOS
 - Messaging
 - Microsoft
 title: Plain Text Messages with Mail.app

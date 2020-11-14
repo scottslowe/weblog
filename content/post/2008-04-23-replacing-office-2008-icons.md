@@ -5,7 +5,7 @@ comments: true
 date: 2008-04-23T21:09:28Z
 slug: replacing-office-2008-icons
 tags:
-- Macintosh
+- macOS
 - Microsoft
 - Office
 title: Replacing Office 2008 Icons

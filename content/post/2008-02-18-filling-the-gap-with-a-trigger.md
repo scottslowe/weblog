@@ -6,7 +6,8 @@ date: 2008-02-18T23:00:11Z
 slug: filling-the-gap-with-a-trigger
 tags:
 - Apple
-- Macintosh
+- Automation
+- macOS
 title: Filling the Gap With a Trigger
 url: /2008/02/18/filling-the-gap-with-a-trigger/
 wordpress_id: 636

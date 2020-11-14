@@ -17,7 +17,7 @@ url: /2009/03/27/my-current-mac-applications/
 wordpress_id: 1259
 ---
 
-A colleague recently bought a MacBook Pro. As a switcher, I figured he would need some recommendations on applications to use on his new Mac, and I know it had been quite some time (3 years!) since I'd discussed what Mac applications I use on a day-to-day basis. To kill two birds with one stone, I figured I would post a quick list about some of my recommended Macintosh applications.
+A colleague recently bought a MacBook Pro. As a switcher, I figured he would need some recommendations on applications to use on his new Mac, and I know it had been quite some time (3 years!) since I'd discussed what Mac applications I use on a day-to-day basis. To kill two birds with one stone, I figured I would post a quick list about some of my recommended Mac OS X applications.
 
 ## Free or Open Source Applications
 

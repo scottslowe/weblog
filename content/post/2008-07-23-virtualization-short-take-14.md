@@ -8,7 +8,6 @@ tags:
 - Citrix
 - Fusion
 - HyperV
-- Macintosh
 - Security
 - Storage
 - Virtualization

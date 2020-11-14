@@ -5,7 +5,7 @@ comments: true
 date: 2008-02-06T10:06:38Z
 slug: getting-things-done-on-my-mac
 tags:
-- Macintosh
+- macOS
 - Personal
 - Productivity
 title: Getting Things Done on my Mac

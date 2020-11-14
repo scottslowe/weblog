@@ -7,7 +7,8 @@ slug: activesync-on-the-iphone
 tags:
 - Apple
 - Exchange
-- Macintosh
+- iOS
+- iPhone
 - Wireless
 title: ActiveSync on the iPhone
 url: /2008/03/06/activesync-on-the-iphone/

@@ -6,8 +6,8 @@ date: 2008-09-29T21:07:58Z
 slug: omnifocus-for-iphone-first-impressions
 tags:
 - Apple
+- iOS
 - iPhone
-- Macintosh
 title: OmniFocus for iPhone First Impressions
 url: /2008/09/29/omnifocus-for-iphone-first-impressions/
 wordpress_id: 959

@@ -6,7 +6,7 @@ date: 2008-09-16T17:18:02Z
 slug: fusion-20-released
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: Fusion 2.0 Released

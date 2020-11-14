@@ -6,7 +6,7 @@ date: 2008-04-03T10:45:55Z
 slug: unity-coming-to-vmware-workstation-65
 tags:
 - Linux
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 - Windows

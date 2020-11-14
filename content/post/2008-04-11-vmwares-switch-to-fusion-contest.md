@@ -6,7 +6,7 @@ date: 2008-04-11T12:59:24Z
 slug: vmwares-switch-to-fusion-contest
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: VMware's Switch to Fusion Contest

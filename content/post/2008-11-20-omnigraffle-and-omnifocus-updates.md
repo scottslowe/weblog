@@ -5,8 +5,9 @@ comments: true
 date: 2008-11-20T10:01:06Z
 slug: omnigraffle-and-omnifocus-updates
 tags:
+- iOS
 - iPhone
-- Macintosh
+- macOS
 title: OmniGraffle and OmniFocus Updates
 url: /2008/11/20/omnigraffle-and-omnifocus-updates/
 wordpress_id: 1044

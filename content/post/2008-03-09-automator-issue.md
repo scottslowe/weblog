@@ -5,7 +5,8 @@ comments: true
 date: 2008-03-09T14:43:06Z
 slug: automator-issue
 tags:
-- Macintosh
+- Automation
+- macOS
 - Productivity
 title: Automator Issue
 url: /2008/03/09/automator-issue/

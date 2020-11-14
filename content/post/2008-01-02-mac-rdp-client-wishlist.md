@@ -5,7 +5,7 @@ comments: true
 date: 2008-01-02T23:11:08Z
 slug: mac-rdp-client-wishlist
 tags:
-- Macintosh
+- macOS
 - Networking
 - Windows
 title: Mac RDP Client Wishlist

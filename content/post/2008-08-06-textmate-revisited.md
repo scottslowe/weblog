@@ -5,7 +5,7 @@ comments: true
 date: 2008-08-06T11:58:15Z
 slug: textmate-revisited
 tags:
-- Macintosh
+- macOS
 - Writing
 title: TextMate Revisited
 url: /2008/08/06/textmate-revisited/

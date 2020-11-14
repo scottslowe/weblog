@@ -7,7 +7,7 @@ slug: the-adventures-of-omnifocus-bonjour-sync
 tags:
 - Apple
 - iPhone
-- Macintosh
+- macOS
 - Networking
 - Wireless
 title: The Adventures of OmniFocus Bonjour Sync

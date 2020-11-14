@@ -5,7 +5,7 @@ comments: true
 date: 2008-03-31T10:06:21Z
 slug: cyberduck-and-interarchy-revisited
 tags:
-- Macintosh
+- macOS
 - Networking
 - SSH
 title: Cyberduck and Interarchy Revisited

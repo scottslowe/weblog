@@ -6,7 +6,7 @@ date: 2008-12-23T10:24:44Z
 slug: a-closer-look-at-ical-caldav-google-calendar-and-the-iphone
 tags:
 - iPhone
-- Macintosh
+- macOS
 - Web
 - Collaboration
 title: A Closer Look at iCal, CalDAV, Google Calendar, and the iPhone

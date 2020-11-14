@@ -6,7 +6,7 @@ date: 2008-10-23T21:22:04Z
 slug: this-is-what-snow-leopard-needs
 tags:
 - Apple
-- Macintosh
+- macOS
 - ZFS
 - Storage
 title: This is What Snow Leopard Needs

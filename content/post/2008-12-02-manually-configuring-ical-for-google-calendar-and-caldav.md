@@ -5,7 +5,7 @@ comments: true
 date: 2008-12-02T17:57:21Z
 slug: manually-configuring-ical-for-google-calendar-and-caldav
 tags:
-- Macintosh
+- macOS
 - Web
 - Collaboration
 title: Manually Configuring iCal for Google Calendar and CalDAV

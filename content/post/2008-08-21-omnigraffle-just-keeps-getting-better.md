@@ -5,7 +5,7 @@ comments: true
 date: 2008-08-21T21:59:18Z
 slug: omnigraffle-just-keeps-getting-better
 tags:
-- Macintosh
+- macOS
 title: OmniGraffle Just Keeps Getting Better
 url: /2008/08/21/omnigraffle-just-keeps-getting-better/
 wordpress_id: 836

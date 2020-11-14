@@ -6,7 +6,7 @@ date: 2008-05-06T15:56:01Z
 slug: vmware-fusion-20-beta-1
 tags:
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: VMware Fusion 2.0 Beta 1

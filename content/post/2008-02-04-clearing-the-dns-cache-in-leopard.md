@@ -5,7 +5,7 @@ comments: true
 date: 2008-02-04T16:13:41Z
 slug: clearing-the-dns-cache-in-leopard
 tags:
-- Macintosh
+- macOS
 - Networking
 title: Clearing the DNS Cache in Leopard
 url: /2008/02/04/clearing-the-dns-cache-in-leopard/

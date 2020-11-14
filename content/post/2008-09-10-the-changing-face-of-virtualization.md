@@ -7,7 +7,7 @@ slug: the-changing-face-of-virtualization
 tags:
 - Apple
 - Fusion
-- Macintosh
+- macOS
 - Virtualization
 - VMware
 title: The Changing Face of Virtualization
