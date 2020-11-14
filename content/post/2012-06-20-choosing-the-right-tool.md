@@ -6,7 +6,7 @@ date: 2012-06-20T09:00:00Z
 slug: choosing-the-right-tool
 tags:
 - Productivity
-- Macintosh
+- Apple
 title: Choosing the Right Tool
 url: /2012/06/20/choosing-the-right-tool/
 wordpress_id: 2637

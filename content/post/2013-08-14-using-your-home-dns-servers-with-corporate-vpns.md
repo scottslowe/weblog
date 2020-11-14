@@ -5,7 +5,7 @@ comments: true
 date: 2013-08-14T09:00:00Z
 slug: using-your-home-dns-servers-with-corporate-vpns
 tags:
-- Macintosh
+- macOS
 - Networking
 - VPN
 title: Using Your Home DNS Servers with Corporate VPNs

@@ -5,7 +5,7 @@ comments: true
 date: 2013-12-06T09:00:00Z
 slug: technology-short-take-37
 tags:
-- Macintosh
+- macOS
 - ESXi
 - Linux
 - Networking

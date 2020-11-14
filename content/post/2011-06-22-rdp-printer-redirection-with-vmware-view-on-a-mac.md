@@ -5,7 +5,7 @@ comments: true
 date: 2011-06-22T12:53:01Z
 slug: rdp-printer-redirection-with-vmware-view-on-a-mac
 tags:
-- Macintosh
+- macOS
 - VDI
 - Virtualization
 - VMware

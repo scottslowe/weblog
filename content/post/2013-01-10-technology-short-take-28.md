@@ -8,7 +8,7 @@ tags:
 - Automation
 - HyperV
 - KVM
-- Macintosh
+- macOS
 - Microsoft
 - Networking
 - NFS

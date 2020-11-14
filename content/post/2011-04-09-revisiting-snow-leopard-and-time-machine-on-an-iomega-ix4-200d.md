@@ -11,7 +11,7 @@ slug: revisiting-snow-leopard-and-time-machine-on-an-iomega-ix4-200d
 tags:
 - Backup
 - EMC
-- Macintosh
+- macOS
 - Storage
 title: Revisiting Snow Leopard and Time Machine on an Iomega ix4-200d
 url: /2011/04/09/revisiting-snow-leopard-and-time-machine-on-an-iomega-ix4-200d/

@@ -6,7 +6,7 @@ date: 2012-04-05T22:58:17Z
 slug: setting-up-ipfw-on-mac-os-x
 tags:
 - BSD
-- Macintosh
+- macOS
 - Security
 - UNIX
 - CLI

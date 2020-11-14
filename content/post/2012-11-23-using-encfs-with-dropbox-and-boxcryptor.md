@@ -6,7 +6,7 @@ date: 2012-11-23T10:03:20Z
 slug: using-encfs-with-dropbox-and-boxcryptor
 tags:
 - Encryption
-- Macintosh
+- macOS
 - OSS
 - Storage
 - Interoperability

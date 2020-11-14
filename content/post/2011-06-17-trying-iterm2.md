@@ -6,7 +6,7 @@ date: 2011-06-17T09:00:00Z
 slug: trying-iterm2
 tags:
 - CLI
-- Macintosh
+- macOS
 - UNIX
 title: Trying iTerm2
 url: /2011/06/17/trying-iterm2/

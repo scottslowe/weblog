@@ -5,7 +5,8 @@ comments: true
 date: 2011-10-25T23:30:22Z
 slug: my-experiences-with-lion
 tags:
-- Macintosh
+- macOS
+- Apple
 title: My Experiences with Lion
 url: /2011/10/25/my-experiences-with-lion/
 wordpress_id: 2450

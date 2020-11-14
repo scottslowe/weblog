@@ -6,7 +6,7 @@ date: 2011-07-24T10:16:46Z
 slug: essential-apps-for-new-mac-owners
 tags:
 - Apple
-- Macintosh
+- macOS
 - Productivity
 title: Essential Apps for New Mac Owners
 url: /2011/07/24/essential-apps-for-new-mac-owners/

@@ -7,7 +7,7 @@ slug: update-on-markdown-and-boxcryptor-on-ios
 tags:
 - Encryption
 - Interoperability
-- Macintosh
+- Apple
 - OSS
 - Storage
 - Markdown

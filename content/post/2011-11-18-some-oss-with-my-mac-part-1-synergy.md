@@ -6,7 +6,7 @@ date: 2011-11-18T16:38:19Z
 slug: some-oss-with-my-mac-part-1-synergy
 tags:
 - Linux
-- Macintosh
+- macOS
 - OSS
 title: 'Some OSS with my Mac, Part 1: Synergy'
 url: /2011/11/18/some-oss-with-my-mac-part-1-synergy/

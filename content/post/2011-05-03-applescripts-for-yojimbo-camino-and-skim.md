@@ -7,7 +7,7 @@ slug: applescripts-for-yojimbo-camino-and-skim
 tags:
 - Apple
 - Collaboration
-- Macintosh
+- macOS
 title: AppleScripts for Yojimbo, Camino, and Skim
 url: /2011/05/03/applescripts-for-yojimbo-camino-and-skim/
 wordpress_id: 2285

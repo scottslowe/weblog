@@ -7,7 +7,7 @@ slug: a-few-references-for-ccna-certification
 tags:
 - Certification
 - Cisco
-- Macintosh
+- macOS
 - Networking
 - Virtualization
 - VMware

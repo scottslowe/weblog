@@ -10,7 +10,7 @@ tags:
 - Storage
 - Virtualization
 - VMware
-- Macintosh
+- macOS
 - vSphere
 - SSL
 title: 'Technology Short Take #21'

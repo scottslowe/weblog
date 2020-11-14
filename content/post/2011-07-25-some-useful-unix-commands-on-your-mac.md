@@ -6,7 +6,7 @@ date: 2011-07-25T09:00:00Z
 slug: some-useful-unix-commands-on-your-mac
 tags:
 - CLI
-- Macintosh
+- macOS
 - Networking
 - UNIX
 title: Some Useful UNIX Commands on your Mac

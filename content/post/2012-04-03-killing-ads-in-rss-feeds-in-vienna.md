@@ -5,7 +5,8 @@ comments: true
 date: 2012-04-03T22:02:40Z
 slug: killing-ads-in-rss-feeds-in-vienna
 tags:
-- Macintosh
+- macOS
+- Web
 title: Killing Ads in RSS Feeds in Vienna
 url: /2012/04/03/killing-ads-in-rss-feeds-in-vienna/
 wordpress_id: 2574

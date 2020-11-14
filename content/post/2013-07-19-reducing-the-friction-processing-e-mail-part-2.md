@@ -6,7 +6,7 @@ date: 2013-07-19T09:00:00Z
 slug: reducing-the-friction-processing-e-mail-part-2
 tags:
 - Automation
-- Macintosh
+- macOS
 - Personal
 - Productivity
 - Messaging

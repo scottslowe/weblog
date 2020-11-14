@@ -8,7 +8,7 @@ tags:
 - Automation
 - KVM
 - Linux
-- Macintosh
+- macOS
 - Networking
 - OVS
 - RedHat

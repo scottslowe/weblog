@@ -8,7 +8,7 @@ tags:
 - Cisco
 - EMC
 - FibreChannel
-- Macintosh
+- macOS
 - Microsoft
 - Networking
 - Storage

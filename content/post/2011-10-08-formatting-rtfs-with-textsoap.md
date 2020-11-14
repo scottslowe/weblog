@@ -6,7 +6,7 @@ date: 2011-10-08T09:00:47Z
 slug: formatting-rtfs-with-textsoap
 tags:
 - Collaboration
-- Macintosh
+- macOS
 - Writing
 title: Formatting RTFs with TextSoap
 url: /2011/10/08/formatting-rtfs-with-textsoap/

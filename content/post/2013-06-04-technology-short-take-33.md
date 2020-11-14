@@ -10,7 +10,7 @@ tags:
 - HP
 - HyperV
 - Linux
-- Macintosh
+- macOS
 - Networking
 - OpenStack
 - Puppet

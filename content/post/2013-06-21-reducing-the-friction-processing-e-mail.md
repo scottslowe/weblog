@@ -6,7 +6,7 @@ date: 2013-06-21T09:00:00Z
 slug: reducing-the-friction-processing-e-mail
 tags:
 - Automation
-- Macintosh
+- macOS
 - Personal
 - Productivity
 title: 'Reducing the Friction: Processing E-Mail'

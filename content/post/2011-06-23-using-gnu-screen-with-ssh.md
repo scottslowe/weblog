@@ -6,7 +6,7 @@ date: 2011-06-23T15:40:05Z
 slug: using-gnu-screen-with-ssh
 tags:
 - CLI
-- Macintosh
+- macOS
 - UNIX
 title: Using GNU Screen with SSH
 url: /2011/06/23/using-gnu-screen-with-ssh/

@@ -10,7 +10,7 @@ tags:
 - FCoE
 - Fusion
 - Linux
-- Macintosh
+- macOS
 - Microsoft
 - Networking
 - Storage

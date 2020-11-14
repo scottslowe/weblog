@@ -5,7 +5,7 @@ comments: true
 date: 2012-04-30T09:00:00Z
 slug: updated-launchd-property-list-file-for-synergy
 tags:
-- Macintosh
+- macOS
 - OSS
 title: Updated launchd Property List File for Synergy
 url: /2012/04/30/updated-launchd-property-list-file-for-synergy/

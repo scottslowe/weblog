@@ -5,7 +5,7 @@ comments: true
 date: 2012-04-09T09:00:00Z
 slug: 8-things-to-help-keep-your-mac-secure
 tags:
-- Macintosh
+- macOS
 - Security
 title: 8 Things to Help Keep Your Mac Secure
 url: /2012/04/09/8-things-to-help-keep-your-mac-secure/

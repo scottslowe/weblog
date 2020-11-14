@@ -6,7 +6,7 @@ date: 2011-12-11T23:51:23Z
 slug: technology-short-take-18
 tags:
 - HyperV
-- Macintosh
+- macOS
 - Networking
 - Storage
 - UCS

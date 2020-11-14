@@ -6,7 +6,7 @@ date: 2012-07-25T09:23:35Z
 slug: advanced-spotlight-queries-in-the-mac-gui
 tags:
 - CLI
-- Macintosh
+- macOS
 - Productivity
 title: Advanced Spotlight Queries in the Mac GUI
 url: /2012/07/25/advanced-spotlight-queries-in-the-mac-gui/

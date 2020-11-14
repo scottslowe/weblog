@@ -7,7 +7,8 @@ slug: why-i-might-leave-os-x
 tags:
 - iPhone
 - Linux
-- Macintosh
+- macOS
+- Apple
 title: Why I Might Leave OS X
 url: /2012/11/30/why-i-might-leave-os-x/
 wordpress_id: 2979

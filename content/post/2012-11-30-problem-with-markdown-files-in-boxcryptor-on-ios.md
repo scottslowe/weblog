@@ -7,7 +7,8 @@ slug: problem-with-markdown-files-in-boxcryptor-on-ios
 tags:
 - Encryption
 - Interoperability
-- Macintosh
+- macOS
+- iOS
 - OSS
 - Privacy
 - Security

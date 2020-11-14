@@ -5,7 +5,7 @@ comments: true
 date: 2011-10-05T09:00:00Z
 slug: content-creation-and-mind-mapping
 tags:
-- Macintosh
+- macOS
 - Productivity
 - Collaboration
 - Markdown

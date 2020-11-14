@@ -5,7 +5,7 @@ comments: true
 date: 2011-09-07T23:51:09Z
 slug: switching-to-eaglefiler
 tags:
-- Macintosh
+- macOS
 - Personal
 - Productivity
 - UNIX

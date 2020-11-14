@@ -6,7 +6,7 @@ date: 2013-12-20T09:00:00Z
 slug: reducing-the-friction-training-a-spam-filter
 tags:
 - Automation
-- Macintosh
+- macOS
 - Personal
 - Productivity
 - Messaging

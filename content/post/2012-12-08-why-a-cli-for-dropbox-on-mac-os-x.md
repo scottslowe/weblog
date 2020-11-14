@@ -7,7 +7,7 @@ slug: why-a-cli-for-dropbox-on-mac-os-x
 tags:
 - Automation
 - CLI
-- Macintosh
+- macOS
 - Storage
 title: Why a CLI for Dropbox on Mac OS X
 url: /2012/12/08/why-a-cli-for-dropbox-on-mac-os-x/

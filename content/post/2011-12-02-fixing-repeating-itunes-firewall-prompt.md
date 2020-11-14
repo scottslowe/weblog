@@ -5,7 +5,7 @@ comments: true
 date: 2011-12-02T11:28:32Z
 slug: fixing-repeating-itunes-firewall-prompt
 tags:
-- Macintosh
+- macOS
 - Security
 title: Fixing Repeating iTunes Firewall Prompt
 url: /2011/12/02/fixing-repeating-itunes-firewall-prompt/

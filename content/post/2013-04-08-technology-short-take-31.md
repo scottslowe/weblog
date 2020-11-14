@@ -7,7 +7,7 @@ slug: technology-short-take-31
 tags:
 - Automation
 - iSCSI
-- Macintosh
+- macOS
 - Networking
 - OpenFlow
 - OpenStack

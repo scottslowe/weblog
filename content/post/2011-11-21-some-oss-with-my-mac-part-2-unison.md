@@ -5,7 +5,7 @@ comments: true
 date: 2011-11-21T09:00:00Z
 slug: some-oss-with-my-mac-part-2-unison
 tags:
-- Macintosh
+- macOS
 - Storage
 - OSS
 title: 'Some OSS with my Mac, Part 2: Unison'

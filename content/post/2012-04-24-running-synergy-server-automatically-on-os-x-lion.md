@@ -5,7 +5,7 @@ comments: true
 date: 2012-04-24T09:00:00Z
 slug: running-synergy-server-automatically-on-os-x-lion
 tags:
-- Macintosh
+- macOS
 - OSS
 title: Running Synergy Server Automatically on OS X Lion
 url: /2012/04/24/running-synergy-server-automatically-on-os-x-lion/

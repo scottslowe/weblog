@@ -5,7 +5,7 @@ comments: true
 date: 2011-11-18T17:14:59Z
 slug: exporting-outlines-as-markdown
 tags:
-- Macintosh
+- macOS
 - Markdown
 - Productivity
 title: Exporting Outlines as Markdown

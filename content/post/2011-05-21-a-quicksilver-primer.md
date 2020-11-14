@@ -6,7 +6,7 @@ date: 2011-05-21T22:15:29Z
 slug: a-quicksilver-primer
 tags:
 - Apple
-- Macintosh
+- macOS
 title: A Quicksilver Primer
 url: /2011/05/21/a-quicksilver-primer/
 wordpress_id: 2311

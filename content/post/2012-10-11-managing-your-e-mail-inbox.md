@@ -6,7 +6,7 @@ date: 2012-10-11T09:02:06Z
 slug: managing-your-e-mail-inbox
 tags:
 - Collaboration
-- Macintosh
+- macOS
 - Personal
 - Productivity
 title: Managing Your E-mail Inbox

@@ -5,7 +5,7 @@ comments: true
 date: 2013-06-07T09:00:00Z
 slug: reducing-the-friction-automating-file-management
 tags:
-- Macintosh
+- macOS
 - Productivity
 title: 'Reducing the Friction: Automating File Management'
 url: /2013/06/07/reducing-the-friction-automating-file-management/

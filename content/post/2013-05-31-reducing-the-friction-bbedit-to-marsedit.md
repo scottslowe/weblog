@@ -6,7 +6,7 @@ date: 2013-05-31T11:47:15Z
 slug: reducing-the-friction-bbedit-to-marsedit
 tags:
 - Blogging
-- Macintosh
+- macOS
 - Productivity
 - Writing
 - Markdown

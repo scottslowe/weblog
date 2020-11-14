@@ -6,7 +6,7 @@ date: 2013-05-15T09:00:00Z
 slug: using-pf-on-os-x-mountain-lion
 tags:
 - BSD
-- Macintosh
+- macOS
 - Security
 - UNIX
 - CLI

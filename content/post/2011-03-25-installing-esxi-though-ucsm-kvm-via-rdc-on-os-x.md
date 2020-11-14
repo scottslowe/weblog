@@ -7,7 +7,7 @@ slug: installing-esxi-though-ucsm-kvm-via-rdc-on-os-x
 tags:
 - Cisco
 - ESXi
-- Macintosh
+- macOS
 - UCS
 - Virtualization
 - VMware

@@ -7,7 +7,7 @@ slug: making-json-output-more-readable-with-bbedit
 tags:
 - JSON
 - Linux
-- Macintosh
+- macOS
 - Productivity
 - Web
 title: Making JSON Output More Readable with BBEdit

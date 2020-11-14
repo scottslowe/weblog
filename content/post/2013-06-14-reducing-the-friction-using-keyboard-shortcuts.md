@@ -6,7 +6,7 @@ date: 2013-06-14T09:00:00Z
 slug: reducing-the-friction-using-keyboard-shortcuts
 tags:
 - Automation
-- Macintosh
+- macOS
 - Productivity
 title: 'Reducing the Friction: Using Keyboard Shortcuts'
 url: /2013/06/14/reducing-the-friction-using-keyboard-shortcuts/
