@@ -19,7 +19,7 @@ tags:
 - Linux
 - Fedora
 - VMware
-- Golang
+- Go
 title: 'Technology Short Take 133'
 url: /2020/11/06/technology-short-take-133/
 ---
