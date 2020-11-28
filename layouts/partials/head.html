@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    {{- if eq .URL "/" -}}
+    {{- if eq .Permalink "/" -}}
       {{- .Site.Params.Title }} - {{ .Site.Params.Tagline -}}
     {{ else }}
       {{- .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline -}}
@@ -16,7 +16,7 @@
   <!--Metadata-->
   {{ with .Site.Params.Author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ with .Site.Title }}<meta property="og:site_name" content="{{ . }}">{{ end }}
-  {{ if eq .URL "/" }}
+  {{ if eq .Permalink "/" }}
   <meta property="og:description" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
   <meta property="og:title" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
   {{ else }}
@@ -41,8 +41,8 @@
   <link rel="shortcut icon" href="/assets/favicon.ico">
 
   <!-- RSS -->
-  {{ if .RSSLink -}}
-  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .RSSLink }}">
-  <link rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .RSSLink }}">
-  {{- end }}
+  {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="alternate" type="%s" href="%s" title="%s" />` .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="feed" type="%s" href="%s" title="%s" />` .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
 </head>

@@ -2,7 +2,9 @@
 
 <div class="post">
   <h1 class="post-title">{{ .Title }}</h1>
-  {{ range (where .Site.Pages "Section" "post").GroupByDate "2006" }}
+  <span class="post-date"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> Back to <a href="/">Home</a></span>
+  <p>On this page you can browse the entire archive of posts on this site, organized by year.</p>
+  {{ range (where .Site.RegularPages "Type" "in" "post").GroupByDate "2006" }}
   <h2>{{ .Key }}</h2>
     <ul id="list">
       {{ range .Pages }}
