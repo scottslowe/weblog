@@ -2,7 +2,9 @@
 
 <div class="post">
   <h1 class="post-title">{{ .Title }}</h1>
-  <span class="post-date">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }} &middot; Filed in <a href="/categories/{{ .Params.Categories | lower }}">{{ .Params.Categories }}</a></span>
+  <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i>&#160;Published on {{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }} &middot;
+    <i class="fa fa-folder-open-o" aria-hidden="true"></i>&#160;Filed in <a href="/categories/{{ .Params.Categories | lower }}">{{ .Params.Categories }}</a> &middot;
+    <i class="fa fa-pencil" aria-hidden="true"></i>&#160;{{ .WordCount }} words (estimated {{ .ReadingTime }} minutes to read)</span>
   {{ .Content }}
 
   <h3>Metadata and Navigation</h3>
