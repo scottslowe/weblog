@@ -71,6 +71,10 @@ As you can see in the above example, you can combine arguments for `kubeletExtra
 
 Join the worker node to the cluster using `kubeadm join --config kubeadm.yaml` (or whatever you named the file), and after it's joined the cluster you should again be able to use `kubectl get nodes --show-labels` to see the new node and its node labels.
 
+## Additional Information
+
+Keep in mind that, per [this page on the `kubelet` command line reference][link-7], assigning node labels is an alpha feature. Also, there some restrictions on what labels can and can't be assigned. For example, if you want to assign something in the `kubernetes.io` namespace, there are only certain labels that are permitted and the rest are restricted. You can't, for example, assign the `node-role.kubernetes.io` label (it's restricted). (Hat tip to both Duffie Cooley and Lubomir Ivanov for pointing out these restrictions.)
+
 I hope this information is helpful to folks. If you have any questions, you're welcome to contact [me on Twitter][link-6] or find me on [the Kubernetes Slack community][link-2]. I'm happy to help if I'm able.
 
 [link-1]: https://kubernetes.io/
@@ -79,3 +83,4 @@ I hope this information is helpful to folks. If you have any questions, you're w
 [link-4]: https://kind.sigs.k8s.io/
 [link-5]: https://kind.sigs.k8s.io/docs/user/configuration/
 [link-6]: https://twitter.com/scott_lowe
+[link-7]: https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
