@@ -38,7 +38,7 @@ Welcome to Technology Short Take #135! This will likely be the last Technology S
 ## Security
 
 * [SilentKnight][link-3] is a set of security tools/checks for macOS.
-* Jonathan Bowman writes about the new crypto policies in Fedora 33, how those policies apply to their kids, and whether you'll need [to adjust your SSH keys][link-4].
+* Jonathan Bowman writes about the new crypto policies in Fedora 33 and whether you'll need [to adjust your SSH keys][link-4].
 * This [list of best practices for securing OpenSSH systems][link-5] may be useful.
 * As if another reason was needed _not_ to use `curl | bash`, [here you go][link-22].
 * Akihiro Suda [admonishes readers not to use host networking][link-26] for their containers.
