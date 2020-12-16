@@ -113,10 +113,8 @@ In this post I've tried to describe some of the lessons I learned in building a 
 
 Thanks for reading!
 
-
-
 [link-1]: https://www.unix-ag.uni-kl.de/~bloch/acng/
-[link-2]: http://www.cobblerd.org
+[link-2]: http://cobbler.github.io/
 [link-3]: http://www.briancarpio.com/2012/04/04/system-automation-part-1/
 [link-4]: http://www.michaelm.info/blog/?p=1378
 [link-5]: http://www.ansible.com/home
