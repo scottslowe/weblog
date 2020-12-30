@@ -58,7 +58,6 @@ Welcome to Technology Short Take #135! This will likely be the last Technology S
 ## Operating Systems/Applications
 
 * Here's [a quick cheatsheet for OpenBSD][link-1]. Handy.
-* Who's interested in a 
 * Dusty Mabe walks readers through [an installation of Fedora CoreOS][link-2].
 * Aaron Kili has [a few helpful `sudo` configuration tips][link-8].
 * Eric Schabell shows readers what it takes to [install Fedora 33 on a late 2011-era 13" MacBook Pro][link-17].
