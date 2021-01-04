@@ -42,7 +42,7 @@ Welcome to Technology Short Take #135! This will likely be the last Technology S
 * This [list of best practices for securing OpenSSH systems][link-5] may be useful.
 * As if another reason was needed _not_ to use `curl | bash`, [here you go][link-22].
 * Akihiro Suda [admonishes readers not to use host networking][link-26] for their containers.
-* Wei Lien Dang [discusses the recent MITM vulnerability in Kubernetes][link-33] (assigned CVE-2020-8554).
+* Wei Lien Dang [discusses the recent MITM (man in the middle) vulnerability in Kubernetes][link-33] (assigned CVE-2020-8554).
 
 ## Cloud Computing/Cloud Management
 
