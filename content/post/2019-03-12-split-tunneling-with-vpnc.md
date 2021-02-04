@@ -65,6 +65,8 @@ Note that this solution does _not_ address custom DNS resolver configurations. I
 
 [Find me on Twitter][link-99] if you have questions, comments, suggestions, or corrections. Thanks!
 
+**Update 4 Feb 2021:** For systems running `resolvectl` or the equivalent, I've found that adding `CISCO_SPLIT_DNS=domain1.com,domain2.com,domain3.com` to the custom script will configure the DNS search domains for that connection, which may help address situations where you need to resolve both local hostnames on your LAN as well as corporate hostnames.
+
 [link-1]: https://www.unix-ag.uni-kl.de/%7Emassar/vpnc/
 [link-2]: https://en.wikipedia.org/wiki/Split_tunneling
 [link-99]: https://twitter.com/scott_lowe
