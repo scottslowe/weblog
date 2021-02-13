@@ -11,7 +11,7 @@ title: Closing out the Tokyo Assignment
 url: /2021/02/13/closing-out-the-tokyo-assignment/
 ---
 
-In late 2019, I announced that I would be [temporarily relocating to Tokyo for a six-month assignment][xref-1] to build out a team focused on cloud-native services and offerings. A few months later, I was still in Colorado, and I explained what was happening in [a status update on the Tokyo assignment][xref-2]. I've had a few folks ask me about it, so I thought I'd go ahead and shared that the Tokyo assignment did not happen and will not happen.<!--more-->
+In late 2019, I announced that I would be [temporarily relocating to Tokyo for a six-month assignment][xref-1] to build out a team focused on cloud-native services and offerings. A few months later, I was still in Colorado, and I explained what was happening in [a status update on the Tokyo assignment][xref-2]. I've had a few folks ask me about it, so I thought I'd go ahead and share that the Tokyo assignment did not happen and will not happen.<!--more-->
 
 So why didn't it happen? In my March 2020 update, I mentioned that paperwork, approvals, and proper budget allocations had slowed down the assignment, but then the pandemic hit. Many folks, myself included, expected that the pandemic would work itself out, but---as we now clearly know---it did not. And as the pandemic dragged on (and continues to drag on), restrictions on travel and concerns over public health and safety continued to mean that the assignment was not going to happen. As many of you know all too well, travel restrictions still exist even today.
 
