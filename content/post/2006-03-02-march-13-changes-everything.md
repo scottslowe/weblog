@@ -6,6 +6,7 @@ date: 2006-03-02T16:50:02Z
 slug: march-13-changes-everything
 tags:
 - Personal
+- Career
 title: March 13 Changes Everything
 url: /2006/03/02/march-13-changes-everything/
 wordpress_id: 194
