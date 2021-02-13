@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Information
+categories: Personal
 comments: true
 date: 2020-03-09T15:45:00-07:00
 tags:

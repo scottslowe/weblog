@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: News
+categories: Personal
 comments: true
 date: 2019-12-30T16:00:00-07:00
 tags:
