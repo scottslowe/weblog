@@ -23,6 +23,7 @@ tags:
 - Fedora
 - Docker
 title: 'Technology Short Take 89'
+url: /2017/10/27/technology-short-take-89/
 ---
 
 Welcome to Technology Short Take 89! I have a collection of newer materials and some older materials this time around, but hopefully all of them are still useful. (I needed to do some housekeeping on my Instapaper account, which is where I bookmark stuff that frequently lands here.) Enjoy!<!--more-->
