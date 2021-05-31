@@ -9,7 +9,7 @@ tags:
 - Kubernetes
 - ToL
 title: 'Thinking Out Loud: The Future of Kubernetes'
-url: /2016/11/09/thinking-out-loud-future of kubernetes/
+url: /2016/11/09/thinking-out-loud-future-of-kubernetes/
 ---
 
 I've just wrapped up KubeCon/CloudNativeCon 2016 in Seattle, WA. There's no doubt the [Kubernetes][link-1] community is active and engaged, and [the project itself][link-2] is charging forward. As both the community and the project grow, though, what does that mean for the future of Kubernetes?

@@ -1,4 +1,5 @@
 {
+    "ignoreErrors": ["error-output-taxonomy"],
     "baseurl": "https://blog.scottlowe.org/",
     "rssLimit": 15,
     "disablePathToLower": false,
@@ -32,5 +33,34 @@
             "mediatype": "application/rss",
             "baseName": "feed"
         }
+    },
+    "deployment": {
+        "targets": [
+            {
+                "name": "aws",
+                "url": "s3://blog-scottlowe-org-cdn?region=us-east-1"
+            }
+        ],
+        "matchers": [
+            {
+                "pattern": "^.+\\.(js|css|svg|ttf)$",
+                "cacheControl": "max-age=31536000, no-transform, public",
+                "gzip": "true"
+            },
+            {
+                "pattern": "^.+\\.(png|jpg)$",
+                "cacheControl": "max-age=31536000, no-transform, public",
+                "gzip": "true"
+            },
+            {
+                "pattern": "^sitemap\\.xml$",
+                "contentType": "application/xml",
+                "gzip": "true"
+            },
+            {
+                "pattern": "^.+\\.(html|xml|json)$",
+                "gzip": "true"
+            }
+        ]
     }
 }
