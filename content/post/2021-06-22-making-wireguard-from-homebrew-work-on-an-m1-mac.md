@@ -27,7 +27,7 @@ Fortunately, there is a way to work around these issues. The following steps sho
 4. Edit the shebang line of the `wg-quick` script to say `#!/usr/bin/env -P/opt/homebrew/bin bash`. Basically, you're adding `-P/opt/homebrew/bin` to the shebang line, right before `bash`. (You can check `man env` to understand what the `-P` parameter does, but the "TL;DR" is that you're limiting where `env` will search to find a `bash` binary.)
 5. On or about line 44, the script defines a variable named `CONFIG_SEARCH_PATHS`. Edit this line to add `/opt/homebrew/etc/wireguard` to the existing list of directories that the script will search for the WireGuard configuration files.
 
-Once you've done these steps, you can proceed with configuring WireGuard as outlined in a variety of articles and posts. Replace any references to `/usr/local/etc/wireguard` in these posts with `/opt/homebrew/etc/wireguard`.
+Once you've done these steps, you can proceed with configuring WireGuard as outlined in a variety of articles and posts (such as this one I wrote on [configuring WireGuard on macOS via the CLI][xref-3]). Replace any references to `/usr/local/etc/wireguard` in these posts with `/opt/homebrew/etc/wireguard`.
 
 When you run `sudo wg-quick up wg0` to activate the VPN, your shell will find your modified version of this script first (because of step 2 above). This means your changes to the script will be in effect. Your modified version of this script will find the Homebrew-installed version of Bash (because of the change made in step 4, limiting where `env` will look to find the `bash` binary), which is compatible with WireGuard and will allow the script to complete properly. Finally, because you added the `/opt/homebrew/etc/wireguard` directory to the list of paths that `wg-quick` will search for WireGuard configuration files, it will find your configuration files and appropriately configure the interface(s).
 
@@ -39,3 +39,4 @@ The steps described above should get you a working WireGuard installation on an 
 [link-4]: https://twitter.com/scott_lowe
 [xref-1]: {{< relref "2021-04-01-using-wireguard-on-macos.md" >}}
 [xref-2]: {{< relref "2021-06-02-review-2020-m1-based-macbook-pro.md" >}}
+[xref-3]: {{< relref "2021-06-28-using-wireguard-on-mac-via-cli.md" >}}
