@@ -60,7 +60,7 @@ Once you have the WireGuard interface configuration finished, you can activate t
 
 Use `wg-quick down wg0` to take the VPN connection down.
 
-I did see some references to being able to use `launchd` on macOS to automatically start the WireGuard interface, but I haven't explored that configuration yet.
+I did see some references to being able to use `launchd` on macOS to automatically start the WireGuard interface. It took a bit of testing and exploration, but I eventually settled on [this configuration][xref-4].
 
 ## Troubleshooting the Connection
 
@@ -83,3 +83,4 @@ I hope this article is helpful. If you have any questions, comments, or correcti
 [xref-1]: {{< relref "2021-02-22-setting-up-wireguard-for-aws-vpc-access.md" >}}
 [xref-2]: {{< relref "2021-04-01-using-wireguard-on-macos.md" >}}
 [xref-3]: {{< relref "2021-06-22-making-wireguard-from-homebrew-work-on-an-m1-mac.md" >}}
+[xref-4]: {{< relref "2021-08-04-starting-wireguard-interfaces-automatically-launchd-macos.md" >}}
