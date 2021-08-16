@@ -117,6 +117,8 @@ Assuming everything is working as expected, the final step is to update the `kub
 
     kubeadm config upload from-file --config kubeadm.yaml
 
+(Newer versions of Kubernetes use the command `kubeadm init phase upload-config kubeadm --config kubeadm.yaml`. I _believe_ this change takes effect around the Kubernetes 1.15 release, but I may be mistaken. Thanks Sarye Haddadi for the correction!)
+
 You can verify the changes to the configuration were applied successfully with this command:
 
     kubectl -n kube-system get configmap kubeadm-config -o yaml
