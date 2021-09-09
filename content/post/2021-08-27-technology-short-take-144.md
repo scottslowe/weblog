@@ -25,7 +25,7 @@ title: 'Technology Short Take 144'
 url: /2021/08/27/technology-short-take-144/
 ---
 
-Welcome to Technology Short Take #144! I have a fairly diverse set of links for readers this time around, covering topics from microchips to improving your writing, with stops along the way in topics like Kubernetes, virtualization, Linux, and the popular JSON-parsing tool `jq` along the way. I hope you find something useful!<!--more-->
+Welcome to Technology Short Take #144! I have a fairly diverse set of links for readers this time around, covering topics from microchips to improving your writing, with stops along the way in topics like Kubernetes, virtualization, Linux, and the popular JSON-parsing tool `jq`. I hope you find something useful!<!--more-->
 
 ## Networking
 
