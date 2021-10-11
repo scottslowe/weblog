@@ -83,9 +83,12 @@ configurations:
 
 If you do need to edit `commonlabels.yaml`, the changes for CAPI v1alpha3 are the same as described in [the previous article][xref-1]. You'll then need to add an entry to your `configurations:` line, as noted above.
 
+For information on configuring `kustomize` transformers to support the v1beta1 version of Cluster API, please see [this follow-up post][xref-2].
+
 I hope this helps! Find [me on Twitter][link-2] or on [the Kubernetes Slack instance][link-3] if you have any questions, comments, or corrections.
 
 [link-1]: https://cluster-api.sigs.k8s.io/introduction.html
 [link-2]: https://twitter.com/scott_lowe
 [link-3]: https://kubernetes.slack.com
 [xref-1]: {{< relref "2020-03-13-configuring-kustomize-transformers-for-cluster-api.md" >}}
+[xref-2]: {{< relref "2021-10-11-kustomize-transformer-configurations-for-cluster-api-v1beta1.md" >}}
