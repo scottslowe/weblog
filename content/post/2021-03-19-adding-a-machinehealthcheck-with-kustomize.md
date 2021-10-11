@@ -7,6 +7,7 @@ tags:
 - CAPI
 - CLI
 - Kubernetes
+- Kustomize
 title: Adding a MachineHealthCheck using Kustomize
 url: /2021/03/19/adding-a-machinehealthcheck-with-kustomize/
 ---

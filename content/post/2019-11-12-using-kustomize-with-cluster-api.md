@@ -4,9 +4,10 @@ categories: Explanation
 comments: true
 date: 2019-11-12T19:57:00-07:00
 tags:
-- Kubernetes
 - CAPI
 - CLI
+- Kubernetes
+- Kustomize
 - YAML
 title: Using Kustomize with Cluster API Manifests
 url: /2019/11/12/using-kustomize-with-cluster-api-manifests/

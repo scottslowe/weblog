@@ -4,10 +4,11 @@ categories: Information
 comments: true
 date: 2020-03-17T15:42:00-07:00
 tags:
-- Kubernetes
-- YAML
 - CAPI
 - CLI
+- Kubernetes
+- Kustomize
+- YAML
 title: Kustomize Transformer Configurations for Cluster API v1alpha3
 url: /2020/03/17/kustomize-transformer-configuration-cluster-api-v1alpha3/
 ---

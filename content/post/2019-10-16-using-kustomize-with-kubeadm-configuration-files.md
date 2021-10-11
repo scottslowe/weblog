@@ -5,9 +5,10 @@ categories: Explanation
 comments: true
 date: 2019-10-16T10:00:00-07:00
 tags:
-- Kubernetes
-- Kubeadm
 - CLI
+- Kubeadm
+- Kubernetes
+- Kustomize
 - YAML
 title: Using Kustomize with Kubeadm Configuration Files
 url: /2019/10/16/using-kustomize-with-kubeadm-configuration-files/

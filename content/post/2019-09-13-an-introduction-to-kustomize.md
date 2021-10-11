@@ -4,8 +4,9 @@ categories: Explanation
 comments: true
 date: 2019-09-13T12:00:00Z
 tags:
-- Kubernetes
 - CLI
+- Kubernetes
+- Kustomize
 - YAML
 title: An Introduction to Kustomize
 url: /2019/09/13/an-introduction-to-kustomize/
