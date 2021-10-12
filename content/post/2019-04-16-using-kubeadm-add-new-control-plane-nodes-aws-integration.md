@@ -4,9 +4,10 @@ categories: Explanation
 comments: true
 date: 2019-04-16T12:00:00Z
 tags:
-- Kubernetes
 - AWS
 - CLI
+- Kubeadm
+- Kubernetes
 title: Using Kubeadm to Add New Control Plane Nodes with AWS Integration
 url: /2019/04/16/using-kubeadm-add-new-control-plane-nodes-aws-integration/
 ---

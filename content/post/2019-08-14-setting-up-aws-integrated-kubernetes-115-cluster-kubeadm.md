@@ -4,9 +4,10 @@ categories: Tutorial
 comments: true
 date: 2019-08-14T12:00:00Z
 tags:
-- Kubernetes
 - AWS
 - CLI
+- Kubeadm
+- Kubernetes
 - Linux
 title: "Setting up an AWS-Integrated Kubernetes 1.15 Cluster with Kubeadm"
 url: /2019/08/14/setting-up-aws-integrated-kubernetes-115-cluster-kubeadm/
@@ -46,7 +47,7 @@ The nodes in the cluster need to have specific permissions to AWS API objects in
 
 ## Assigning Tags to Resources
 
-The AWS cloud provider needs resources to be tagged with a tag named `kubernetes.io/cluster/<cluster-name>` (the value is immaterial). Based on all the documentation I've been able to find, this tag is needed on all nodes, on exactly one security group (the nodes should be a member of this security group), and on all subnets and route tables. Failing to have things properly tagged with result in odd failure modes, like ELBs being automatically created in response to the creation of a Service object of type `LoadBalancer`, but instances never being populated for the ELB (for example).
+The AWS cloud provider needs resources to be tagged with a tag named `kubernetes.io/cluster/<cluster-name>` (the value is immaterial). Based on all the documentation I've been able to find, this tag is needed on all nodes, on exactly one security group (the nodes should be a member of this security group), and on all subnets and route tables. Failing to have things properly tagged will result in odd failure modes, like ELBs being automatically created in response to the creation of a Service object of type `LoadBalancer`, but instances never being populated for the ELB (for example).
 
 ## Using Kubeadm Configuration Files
 

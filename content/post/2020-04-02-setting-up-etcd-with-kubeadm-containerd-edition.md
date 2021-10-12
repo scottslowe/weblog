@@ -4,9 +4,10 @@ categories: Tutorial
 comments: true
 date: 2020-04-02T09:30:00-07:00
 tags:
-- etcd
-- Kubernetes
 - CLI
+- etcd
+- Kubeadm
+- Kubernetes
 - Linux
 title: "Setting up etcd with Kubeadm, containerd Edition"
 url: /2020/04/02/setting-up-etcd-with-kubeadm-containerd-edition/

@@ -5,11 +5,12 @@ categories: Tutorial
 comments: true
 date: 2018-08-21T13:00:00Z
 tags:
-- etcd
 - CLI
+- etcd
+- Encryption
+- Kubeadm
 - Linux
 - Security
-- Encryption
 title: Bootstrapping an etcd Cluster with TLS using Kubeadm
 url: /2018/08/21/bootstrapping-etcd-cluster-with-tls-using-kubeadm/
 ---

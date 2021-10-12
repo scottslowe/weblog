@@ -4,11 +4,12 @@ categories: Tutorial
 comments: true
 date: 2019-07-12T12:00:00Z
 tags:
-- Kubernetes
-- Encryption
-- CLI
-- Linux
 - Ansible
+- CLI
+- Encryption
+- Kubeadm
+- Kubernetes
+- Linux
 title: Calculating the CA Certificate Hash for Kubeadm
 url: /2019/07/12/calculating-ca-certificate-hash-for-kubeadm/
 ---

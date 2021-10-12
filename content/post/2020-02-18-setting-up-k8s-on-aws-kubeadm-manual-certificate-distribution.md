@@ -4,9 +4,10 @@ categories: Tutorial
 comments: true
 date: 2020-02-18T06:00:00-05:00
 tags:
-- Kubernetes
 - AWS
 - CLI
+- Kubeadm
+- Kubernetes
 title: Setting up K8s on AWS with Kubeadm and Manual Certificate Distribution
 url: /2020/02/18/setting-up-k8s-on-aws-kubeadm-manual-certificate-distribution/
 ---

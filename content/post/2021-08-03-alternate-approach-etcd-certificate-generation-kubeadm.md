@@ -4,9 +4,10 @@ categories: Education
 comments: true
 date: 2021-08-03T15:25:00-06:00
 tags:
-- etcd
-- Kubernetes
 - CLI
+- etcd
+- Kubeadm
+- Kubernetes
 - Linux
 title: An Alternate Approach to etcd Certificate Generation with Kubeadm
 url: /2021/08/03/alternate-approach-etcd-certificate-generation-kubeadm/

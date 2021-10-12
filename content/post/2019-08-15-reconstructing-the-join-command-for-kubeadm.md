@@ -4,8 +4,9 @@ categories: Explanation
 comments: true
 date: 2019-08-15T12:00:00Z
 tags:
-- Kubernetes
 - CLI
+- Kubeadm
+- Kubernetes
 - Linux
 title: Reconstructing the Join Command for Kubeadm
 url: /2019/08/15/reconstructing-the-join-command-for-kubeadm/

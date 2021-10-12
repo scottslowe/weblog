@@ -4,9 +4,10 @@ categories: Explanation
 comments: true
 date: 2019-02-18T12:00:00Z
 tags:
-- Kubernetes
 - AWS
 - CLI
+- Kubeadm
+- Kubernetes
 title: Kubernetes, Kubeadm, and the AWS Cloud Provider
 url: /2019/02/18/kubernetes-kubeadm-and-the-aws-cloud-provider/
 ---

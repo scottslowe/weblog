@@ -4,10 +4,11 @@ categories: Tutorial
 comments: true
 date: 2018-09-06T15:00:00Z
 tags:
-- Kubernetes
-- CLI
-- Networking
 - Cilium
+- CLI
+- Kubeadm
+- Kubernetes
+- Networking
 title: Kubernetes with Cilium and Containerd using Kubeadm
 url: /2018/09/06/kubernetes-cilium-containerd-using-kubeadm/
 ---

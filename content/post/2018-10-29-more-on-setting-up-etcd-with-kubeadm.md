@@ -4,10 +4,11 @@ categories: Education
 comments: true
 date: 2018-10-29T12:00:00Z
 tags:
-- Kubernetes
-- etcd
-- Linux
 - CLI
+- etcd
+- Kubeadm
+- Kubernetes
+- Linux
 title: More on Setting up etcd with Kubeadm
 url: /2018/10/29/more-on-setting-up-etcd-with-kubeadm/
 ---
