@@ -43,7 +43,7 @@ spec:
 Reconcilation is active when the field isn't present; setting the field to false is essentially the same as removing the field. To pause reconciliation, set it to true. One way of doing this is using `kubectl patch`, like this:
 
 ```
-kubectl path cluster workload1 --type merge \
+kubectl patch cluster workload1 --type merge \
 -p '{"spec":{"paused": true}}'
 ```
 
@@ -82,7 +82,7 @@ When reconciliation is paused, the CAPI controllers **will not** make changes to
 When you're ready to resume reconciliation again, just change the field to false:
 
 ```
-kubectl path cluster workload1 --type merge \
+kubectl patch cluster workload1 --type merge \
 -p '{"spec":{"paused": false}}'
 ```
 
