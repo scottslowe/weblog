@@ -106,7 +106,7 @@ The big change from previous `kubeadm` configurations I've shared is that `cloud
 
 After you've bootstrapped the first control plane node (using `kubeadm init --config <filename>.yaml`) but before you add any other nodes---control plane or otherwise---you'll need to install the AWS cloud controller manager. Manifests are available, but you'll need to use `kustomize` to build them out:
 
-    kustomize build 'github.com/kubernetes/cloud-provider-aws/manifests/overlays/superset-role/?ref=master'
+    kustomize build 'github.com/kubernetes/cloud-provider-aws/examples/existing-cluster/overlays/superset-role/?ref=master'
 
 Review the output (to ensure the values supplied are correct for your environment), then send the results to your cluster by piping them into `kubectl apply -f -`.
 
@@ -166,6 +166,8 @@ As noted earlier, be sure to specify a correct and valid bootstrap token and the
 At this point, you should have a (mostly) functional Kubernetes cluster. You'll probably still want some sort of storage solution; see [here][link-1] for more details on the AWS EBS CSI driver.
 
 If you run into problems or issues getting this to work, please feel free to reach out to me. You can find me on [the Kubernetes Slack community][link-9], or you can contact [me on Twitter][link-10] (DMs are open). Also, if you're well-versed in this area and have corrections, clarifications, or suggestions for how I can improve this article, I welcome all constructive feedback. Thanks!
+
+**UPDATE 2021-11-02:** I updated the URL for building the manifests for installing the external AWS cloud provider.
 
 [link-1]: https://github.com/kubernetes-sigs/aws-ebs-csi-driver
 [link-2]: https://github.com/kubernetes/cloud-provider-aws
