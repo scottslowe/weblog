@@ -120,7 +120,7 @@ The file created by this command needs four changes made to it:
 1. The `caBundle` value supplied for all webhooks needs to be deleted (hence, the value you specify on the command line doesn't matter).
 2. All webhooks need to be annotated for the cert-manager [CA Injector](https://cert-manager.io/docs/concepts/ca-injector/) to automatically inject the correct `caBundle` value.
 3. The "kuma-control-plane" Deployment needs to be modified to mount the root CA certificate's Secret (created by cert-manager) as a volume.
-4. The "kuma-control-plane" Deployment needs to be changed to pass in a different value for the `KUMA_RUNTIME_KUBERNTES_INJECTOR_CA_CERT_FILE` environment variable (it should point to the `ca.crt` file on the volume added in step 3).
+4. The "kuma-control-plane" Deployment needs to be changed to pass in a different value for the `KUMA_RUNTIME_KUBERNETES_INJECTOR_CA_CERT_FILE` environment variable (it should point to the `ca.crt` file on the volume added in step 3).
 
 You _could_ make these changes manually, but since we're going for declarative why not use something like [Kustomize][link-8]?
 
