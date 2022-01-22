@@ -34,7 +34,7 @@ Welcome to Technology Short Take #151, the first Technology Short Take of 2022. 
 ## Servers/Hardware
 
 * The Next Platform takes [a look at Amazon's Graviton3 processor][link-3].
-* Ru Singh provides [a review][link-4] of his M1-based MacBook Air.
+* Ru Singh provides [a review][link-4] of her M1-based MacBook Air.
 * Here's [a great review of the Framework laptop][link-11].
 * Losing to Apple---whose M-series chips are widely regarded as faster and more efficient than Intel's chips---has apparently stung the chip giant into revving up the innovation engine. [These details on their 12th-generation H processors][link-12] shows that Intel appears to be intent to regain the lead. Time will tell how successful they are.
 * Chris Evans revisits the discussion regarding [Arm processor architectures in the public cloud][link-22].
