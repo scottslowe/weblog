@@ -102,7 +102,7 @@ spec:
 
 Make note of the `name` and `secretName` values for both certificates; they will be needed later.
 
-After all the TLS assets have been defined---they don't need to be actually applied against the cluster, just defined---then you're ready to modify the installation YAMl to make it reusable.
+After all the TLS assets have been defined---they don't need to be actually applied against the cluster, just defined---then you're ready to modify the installation YAML to make it reusable.
 
 ## Creating Reusable Installation YAML
 
