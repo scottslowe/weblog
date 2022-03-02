@@ -169,6 +169,8 @@ If you run into problems or issues getting this to work, please feel free to rea
 
 **UPDATE 2021-11-02:** I updated the URL for building the manifests for installing the external AWS cloud provider.
 
+**UPDATE 2022-03-01:** I heard from a reader who indicated that the `kubeletExtraArgs` section in the `kubeadm` configuration file for joining worker nodes to the cluster is no longer needed with Kubernetes 1.23. I have not yet had time to verify, but I will update here when I have more information.
+
 [link-1]: https://github.com/kubernetes-sigs/aws-ebs-csi-driver
 [link-2]: https://github.com/kubernetes/cloud-provider-aws
 [link-3]: https://kubernetes.io
