@@ -2,3 +2,4 @@
 output
 output/*
 Makefile
+.hugo_build.lock
