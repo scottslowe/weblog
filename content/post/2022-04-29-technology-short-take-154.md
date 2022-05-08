@@ -37,7 +37,7 @@ Welcome to Technology Short Take #154! My link of links and articles from around
 
 * Daniel Holback [talks about the addition of fuzzing to the Flux controllers][link-4], to improve the security posture of the Flux project.
 * Wojciech Reguła [shares][link-5] a trick for bypassing the macOS TCC protection using older applications.
-* It appears that [a well-known crytomining botnet has started targeting Docker][link-9]. (Hat tip to Teri Radichel for sharing this and making it appear on my Twitter timeline.)
+* It appears that [a well-known cryptomining botnet has started targeting Docker][link-9]. (Hat tip to Teri Radichel for sharing this and making it appear on my Twitter timeline.)
 * GitHub recently shared details on [a Git security vulnerability][link-14].
 * The idea of a software bill of materials (SBOM) is gaining traction; [here's an article][link-20] on a tool by Anchore that claims to be able to help.
 * Liam Galvin shows [a couple of ways][link-24] that Rego (the language behind Open Policy Agent) can be used maliciously.
