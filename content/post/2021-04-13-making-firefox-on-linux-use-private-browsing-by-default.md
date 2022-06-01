@@ -4,6 +4,7 @@ categories: Tutorial
 comments: true
 date: 2021-04-13T16:15:00-06:00
 tags:
+- Fedora
 - Firefox
 - Linux
 - Web

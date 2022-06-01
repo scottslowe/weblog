@@ -4,8 +4,9 @@ categories: Information
 comments: true
 date: 2022-05-27T16:00:00-06:00
 tags:
-- Linux
 - CLI
+- Fedora
+- Linux
 - Git
 title: Git Difftool and Meld as a Flatpak
 url: /2022/05/27/git-difftool-and-meld-as-a-flatpak/
