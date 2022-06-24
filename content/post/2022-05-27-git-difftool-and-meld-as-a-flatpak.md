@@ -44,6 +44,8 @@ However, when Meld is installed as a Flatpak, `/usr/bin/meld` doesn't exist. In 
     cmd = flatpak run org.gnome.Meld "$LOCAL" "$REMOTE"
 ```
 
+In addition to the change above, I found it necessary to use [Flatseal][link-5] to modify the permissions of the Meld Flatpak to include the `/tmp` directory. (You can optionally make that read-only as well.)
+
 After you make these changes, using Meld with `git difftool` should work as expected again.
 
 This is a pretty straightforward change, but hopefully documenting it here will prove helpful to someone. If you have any questions, feel free to contact [me on Twitter][link-4]. Thanks!
@@ -52,3 +54,4 @@ This is a pretty straightforward change, but hopefully documenting it here will 
 [link-2]: https://www.flatpak.org/
 [link-3]: https://meldmerge.org/
 [link-4]: https://twitter.com/scott_lowe
+[link-5]: https://github.com/tchx84/Flatseal
