@@ -50,9 +50,9 @@ While the documentation for the cloud provider is improving, this is one area th
 
 > Add the tag `kubernetes.io/cluster/<your_cluster_id>: owned` (if resources are owned and managed by the cluster) or `kubernetes.io/cluster/<your_cluster_id>: shared` (if resources are shared between clusters, and should not be destroyed if the cluster is destroyed) to your instances.
 
-Based on my knowledge of the in-tree provider and the testing I've done with the external provider, this is correct. However, additional tags are typically needed:
+Based on my knowledge of the in-tree provider and the testing I've done with the external provider, this is correct. (The verbiage above is taken from the AWS Cloud Provider site; note that `<your_cluster_id>` is the same as specifying the cluster name. You may see both `<your_cluster_id>` and `<cluster_name>` used interchangeably.) However, additional tags are typically needed:
 
-* Public (Internet-facing) subnets need a `kubernetes.io/elb: 1` tag, while private subnets need a `kubernetes.io/internal-elb: 1` tag.
+* Public (Internet-facing) subnets need a `kubernetes.io/role/elb: 1` tag, while private subnets need a `kubernetes.io/role/internal-elb: 1` tag.
 * All subnets need the `kubernetes.io/cluster/<your_cluster_id>: owned|shared` tag.
 * If the cloud controller manager isn't started with `--configure-cloud-routes: "false"`, then the route tables also needed to be tagged like the subnets.
 * At least one security group---one which the nodes should be a member of---needs the `kubernetes.io/cluster/<your_cluster_id>: owned|shared` tag.
