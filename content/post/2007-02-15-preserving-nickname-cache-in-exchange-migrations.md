@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2007-02-15T23:57:58Z
 slug: preserving-nickname-cache-in-exchange-migrations

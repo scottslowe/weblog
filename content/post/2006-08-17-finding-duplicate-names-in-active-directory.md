@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: true
 date: 2006-08-17T11:43:39Z
 slug: finding-duplicate-names-in-active-directory

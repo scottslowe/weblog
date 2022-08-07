@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: true
 date: 2017-03-02T00:00:00Z
 tags:
@@ -109,8 +109,6 @@ Although I haven't tested it yet, this process should be reasonably easy to repl
 ## Additional Resources
 
 To experiment with this sort of thing yourself, I've added some content to [my GitHub "learning-tools" repository][link-2] specifically addressing this topic. Look in the `centos-atomic/docker-tcp` directory (or the `centos-atomic/docker-tcp-ansible` directory if you want Ansible support) for a Vagrant environment that models what I've described in this post.
-
-
 
 [link-1]: https://docs.docker.com/engine/admin/systemd/
 [link-2]: https://github.com/scottslowe/learning-tools/

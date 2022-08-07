@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2011-08-12T09:00:00Z
 slug: a-deeper-look-at-vasa

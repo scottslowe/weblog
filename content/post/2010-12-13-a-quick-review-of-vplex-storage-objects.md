@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2010-12-13T09:00:00Z
 slug: a-quick-review-of-vplex-storage-objects

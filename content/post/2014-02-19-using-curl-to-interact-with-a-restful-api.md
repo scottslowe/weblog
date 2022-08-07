@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2014-02-19T16:54:04Z
 slug: using-curl-to-interact-with-a-restful-api

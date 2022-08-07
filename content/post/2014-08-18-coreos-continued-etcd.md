@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2014-08-18T09:00:00Z
 slug: coreos-continued-etcd

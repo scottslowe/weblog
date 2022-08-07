@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2015-12-11T00:00:00Z
 tags:
@@ -57,7 +57,6 @@ Note that some older versions of OpenSSH may have had some issues with combining
 I hope you've found this article helpful. If you have any questions, I would love to chat with you [on Twitter][link-5]. Thanks for reading!
 
 **UPDATE:** Jake Robinson pointed out to me on Twitter that OpenSSH 5.1 added a `MaxSessions` parameter to `sshd_config`. The default value is 10, meaning that at most 10 multiplexed connections are allowed. See [the OpenSSH 5.1 release notes][link-6] for full details. Thanks Jake!
-
 
 [link-1]: https://en.wikibooks.org/wiki/OpenSSH/Cookbook/Multiplexing
 [link-2]: https://en.wikipedia.org/wiki/Multiplexing

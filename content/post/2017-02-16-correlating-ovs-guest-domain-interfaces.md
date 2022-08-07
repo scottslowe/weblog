@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: true
 date: 2017-02-16T00:00:00Z
 tags:
@@ -62,8 +62,6 @@ What if you have lots and lots of ports on your OVS bridge? No problem, just run
 And you'll get some output that lists each interface name followed by the value of the "external_ids" field. From there it should be a piece of cake to match it against the MAC address from the guest, thereby giving you the specific OVS port the guest domain is using.
 
 Enjoy!
-
-
 
 [link-1]: https://openvswitch.org/
 [link-2]: https://libvirt.org/

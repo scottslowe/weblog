@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: false
 date: 2006-07-17T14:25:01Z
 slug: remotely-changing-user-account-passwords

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: true
 date: 2006-10-11T15:28:12Z
 slug: finding-recently-created-active-directory-accounts

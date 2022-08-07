@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-10-30T15:01:36Z
 slug: vmware-ha-vmware-ft-and-os-clustering

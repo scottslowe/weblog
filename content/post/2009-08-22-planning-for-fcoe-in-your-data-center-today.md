@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-08-22T15:08:05Z
 excerpt: Here are some thoughts on planning for Fibre Channel over Ethernet (FCoE)

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: true
 date: 2006-08-01T18:57:35Z
 slug: complex-queries-against-active-directory

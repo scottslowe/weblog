@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2012-08-21T14:07:34Z
 slug: working-with-kvm-guests

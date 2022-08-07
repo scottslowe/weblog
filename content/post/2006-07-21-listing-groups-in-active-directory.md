@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Information
 comments: false
 date: 2006-07-21T12:34:58Z
 slug: listing-groups-in-active-directory

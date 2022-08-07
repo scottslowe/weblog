@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: General
 comments: true
 date: 2012-11-08T09:00:00Z
 slug: a-call-for-open-vswitch-topics

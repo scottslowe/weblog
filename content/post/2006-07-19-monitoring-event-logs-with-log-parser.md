@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: false
 date: 2006-07-19T16:45:42Z
 slug: monitoring-event-logs-with-log-parser

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2006-11-15T17:55:25Z
 slug: report-of-logons-from-security-logs

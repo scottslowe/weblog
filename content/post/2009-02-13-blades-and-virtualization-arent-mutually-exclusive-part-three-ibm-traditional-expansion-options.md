@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-02-13T16:00:03Z
 slug: blades-and-virtualization-arent-mutually-exclusive-part-three-ibm-traditional-expansion-options

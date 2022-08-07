@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2015-06-01T08:30:00Z
 tags:
@@ -28,11 +28,9 @@ It's important to understand that Cumulus Linux isn't just a "Linux-based networ
 
 I know this is high-level stuff, and a bit abstract. I plan to publish more detailed posts on many of these topics in the near future, but wanted to go ahead and get these initial thoughts and "lessons learned" posted. If there are specific things about Cumulus Linux you're interested in hearing about, feel free to [hit me up on Twitter][link-3]---I'll do my best to cover all reasonable requests. In the meantime, stay tuned for more Cumulus Linux-centric posts coming soon.
 
-
 [link-1]: http://cumulusnetworks.com
 [link-2]: http://www.dell.com/us/business/p/open-networking-switches/pd
 [link-3]: https://twitter.com/scott_lowe
-
 [xref-1]: {{< relref "2006-01-27-gre-tunnels-on-a-cisco-router.md" >}}
 [xref-2]: {{< relref "2007-06-22-link-state-tracking-in-blade-deployments.md" >}}
 [xref-3]: {{< relref "2009-11-09-enabling-jumbo-frames-on-a-nexus-5000.md" >}}

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: General
 comments: true
 date: 2013-03-19T12:15:20Z
 slug: call-for-networking-topics

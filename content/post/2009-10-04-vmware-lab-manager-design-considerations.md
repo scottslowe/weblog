@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-10-04T23:18:37Z
 excerpt: I've done a number of VMware Lab Manager white boarding sessions, and I want

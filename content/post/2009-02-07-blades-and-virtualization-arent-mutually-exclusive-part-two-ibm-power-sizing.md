@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-02-07T15:20:42Z
 slug: blades-and-virtualization-arent-mutually-exclusive-part-two-ibm-power-sizing

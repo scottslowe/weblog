@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2015-11-11T00:00:00Z
 aliases: /2015/11/20/handy-cli-tool-json/

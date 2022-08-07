@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2011-05-21T22:15:29Z
 slug: a-quicksilver-primer

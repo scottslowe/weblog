@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2008-03-31T16:31:47Z
 slug: quick-guide-to-setting-up-netapp-deduplication

@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-02-04T19:40:49Z
 slug: blades-and-virtualization-arent-mutually-exclusive-part-one-hp-power-sizing

@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-02-16T16:00:05Z
 slug: blades-and-virtualization-arent-mutually-exclusive-part-four-hp-traditional-expansion-options

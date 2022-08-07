@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2010-06-07T11:00:00Z
 slug: a-deeper-look-at-vplex

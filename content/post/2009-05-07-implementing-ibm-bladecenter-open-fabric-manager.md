@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-05-07T14:57:54Z
 excerpt: Here are some notes I gathered from a recent implementation of IBM's BladeCenter
