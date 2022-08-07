@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2016-11-10T00:00:00Z
 tags:

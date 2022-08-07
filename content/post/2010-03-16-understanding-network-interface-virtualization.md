@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2010-03-16T17:33:24Z
 slug: understanding-network-interface-virtualization

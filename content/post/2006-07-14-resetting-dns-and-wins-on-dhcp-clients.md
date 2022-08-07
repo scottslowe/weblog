@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: false
 date: 2006-07-14T14:36:17Z
 slug: resetting-dns-and-wins-on-dhcp-clients

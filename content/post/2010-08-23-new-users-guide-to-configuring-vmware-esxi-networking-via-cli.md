@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2010-08-23T15:00:00Z
 slug: new-users-guide-to-configuring-vmware-esxi-networking-via-cli

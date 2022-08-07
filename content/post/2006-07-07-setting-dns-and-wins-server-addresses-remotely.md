@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: false
 date: 2006-07-07T15:10:45Z
 slug: setting-dns-and-wins-server-addresses-remotely

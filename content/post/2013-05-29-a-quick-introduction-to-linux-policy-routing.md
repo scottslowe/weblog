@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2013-05-29T09:00:00Z
 slug: a-quick-introduction-to-linux-policy-routing

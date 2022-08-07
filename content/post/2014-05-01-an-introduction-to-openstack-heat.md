@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2014-05-01T09:00:00Z
 slug: an-introduction-to-openstack-heat

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: false
 date: 2006-06-22T14:43:23Z
 slug: enumerating-universal-group-membership

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2013-09-04T09:00:00Z
 slug: introducing-linux-network-namespaces

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2014-09-12T11:24:08Z
 slug: a-quick-introduction-to-vagrant

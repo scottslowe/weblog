@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Information
 comments: true
 date: 2017-08-15T12:00:00Z
 tags:
@@ -148,8 +148,6 @@ To de-register container instances (instances running ECS Agent):
     aws ecs deregister-container-instance --cluster <value> --container-instance $INSTANCE_IDS --force
 
 If there are additional AWS CLI commands you think I should add here, feel free to hit me up on Twitter. Try to keep them as broadly applicable as possible, so that I can maximize the benefit to readers. Thanks!
-
-
 
 [link-1]: http://docs.aws.amazon.com/cli/latest/reference/
 [link-2]: https://stedolan.github.io/jq/

@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Introduction
 comments: true
 date: 2009-04-07T11:16:10Z
 excerpt: This post provides an introduction to some of the technical details surrounding

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2013-11-08T09:11:50Z
 slug: a-non-programmers-introduction-to-json

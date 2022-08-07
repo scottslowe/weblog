@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2013-08-12T09:38:10Z
 slug: introduction-to-networking-part-1-the-basics

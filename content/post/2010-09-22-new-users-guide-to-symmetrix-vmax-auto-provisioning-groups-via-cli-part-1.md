@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2010-09-22T13:41:20Z
 slug: new-users-guide-to-symmetrix-vmax-auto-provisioning-groups-via-cli-part-1

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Information
+categories: Introduction
 comments: true
 date: 2008-04-29T22:49:55Z
 slug: intro-to-io-virtualization

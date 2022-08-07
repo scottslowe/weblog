@@ -1,6 +1,6 @@
 ---
 author: adelp
-categories: Education
+categories: Introduction
 comments: true
 date: 2009-05-11T12:00:42Z
 excerpt: I wanted to follow up on my previous article on the Intel Nehalem CPUs with

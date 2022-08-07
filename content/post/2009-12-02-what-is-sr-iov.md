@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-12-02T23:39:37Z
 slug: what-is-sr-iov

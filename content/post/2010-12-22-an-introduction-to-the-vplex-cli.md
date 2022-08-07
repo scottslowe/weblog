@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2010-12-22T09:00:00Z
 slug: an-introduction-to-the-vplex-cli

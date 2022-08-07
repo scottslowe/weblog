@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: true
 date: 2006-07-17T11:42:31Z
 slug: listing-services-running-as-a-user-account

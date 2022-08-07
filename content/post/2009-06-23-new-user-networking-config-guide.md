@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2009-06-23T15:59:45Z
 slug: new-user-networking-config-guide

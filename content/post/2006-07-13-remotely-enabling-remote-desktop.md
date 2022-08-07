@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Tutorial
 comments: true
 date: 2006-07-13T16:10:07Z
 slug: remotely-enabling-remote-desktop

@@ -1,12 +1,12 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2018-06-12T12:00:00Z
 tags:
+- CLI
 - Kubernetes
 - Linux
-- CLI
 title: Examining X.509 Certificates Embedded in Kubeconfig Files
 url: /2018/06/12/examining-x509-certificates-embedded-in-kubeconfig-files/
 ---

@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: true
 date: 2009-11-27T10:03:52Z
 slug: understanding-npiv-and-npv

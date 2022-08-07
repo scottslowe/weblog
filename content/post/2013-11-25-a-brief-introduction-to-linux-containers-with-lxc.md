@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2013-11-25T09:00:00Z
 slug: a-brief-introduction-to-linux-containers-with-lxc

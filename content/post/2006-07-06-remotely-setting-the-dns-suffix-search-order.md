@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Explanation
 comments: false
 date: 2006-07-06T16:22:23Z
 slug: remotely-setting-the-dns-suffix-search-order

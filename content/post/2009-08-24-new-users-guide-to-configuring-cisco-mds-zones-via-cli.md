@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: Education
+categories: Introduction
 comments: true
 date: 2009-08-24T14:11:07Z
 slug: new-users-guide-to-configuring-cisco-mds-zones-via-cli
