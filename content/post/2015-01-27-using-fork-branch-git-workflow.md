@@ -45,7 +45,7 @@ That's it---you now have a copy of the original repository in your GitHub accoun
 
 ## Making a Local Clone
 
-Even though you have a copy of the original repository in your GitHub account, you don't yet have a way to make changes to your copy of the repository. Recall from the two earlier Git/GitHub articles that you first have to clone the repository down to your local system using `git clone`. Otherwise, you have no way of actually making changes to the forked repository in your GitHub account.
+Even though you have a copy of the original repository in your GitHub account, you don't yet have a way to make changes to your copy of the repository. Recall from the two earlier Git/GitHub articles that you first have to clone the repository down to your local system using `git clone`. Otherwise, you have no practical way of making changes to the forked repository in your GitHub account.
 
 Before you can run `git clone`, though, you need to determine the URL for the forked repository. That's pretty simple: just navigate to the forked repository (this is the copy of the original repository residing in your GitHub account) and look on the right-hand side of the web page. You should see an area that is labeled "HTTPS clone URL". Simple copy the URL there, and then use it with `git clone` like this (this is the clone URL for the OVS web site repository):
 
@@ -75,7 +75,7 @@ Now, you _could_ try pushing changes to the original repository using `git push`
 
 So far, you've forked a project repository, cloned it down to your local system, and added a Git remote to your clone that points to the original project repository on GitHub. Now you're ready to start making changes to your local Git repository. You can't just start making changes willy nilly, though; to effectively collaborate with others on the same repo, you should use a _branch_.
 
-There's a lot more to Git branches than I have room to discuss here (and a lot more that I have yet to learn), but suffice it to say for now that this is a way to create a separate line of changes (a "branch") that is independent from the main line (often referred to as "master"). There are lots of reasons to use branches in your development, but for the purposes of this discussion on using the "fork and branch" workflow to collaborate with others, the purpose of a branch is to help facilitate multiple users making changes to a repository at the same time.
+There's a lot more to Git branches than I have room to discuss here (and a lot more that I have yet to learn), but suffice it to say for now that this is a way to create a separate line of changes (a "branch") that is independent from the main line (often referred to as "main", formerly referred to as "master"---keep in mind this name may vary from project to project). There are lots of reasons to use branches in your development, but for the purposes of this discussion on using the "fork and branch" workflow to collaborate with others, the purpose of a branch is to help facilitate multiple users making changes to a repository at the same time.
 
 So, assuming that your goal is to issue a pull request to change your changes merged back into the original project, you'll need to use a branch. Often you'll see this referred to as a _feature branch_, because you'll typically be implementing a new feature in the project.
 
@@ -113,13 +113,13 @@ Be aware that, to help keep things manageable, some open source projects may hav
 
 ## Cleaning up After a Merged Pull Request
 
-If the maintainers accept your changes and merge them into the main repository, then there is a little bit of clean-up for you to do. First, you should update your local clone by using `git pull upstream master`. This pulls the changes from the original repository's (indicated by `upstream`) master branch (indicated by `master` in that command) to your local cloned repository. One of the commits in the commit history will be the commit that merged your feature branch, so after you `git pull` your local repository's master branch will have your feature branch's changes committed. This means you can delete the feature branch (because the changes are already in the master branch):
+If the maintainers accept your changes and merge them into the upstream repository, then there is a little bit of clean-up for you to do. First, switch to the `main` branch with `git checkout main` (replace `main` with whatever the name of the primary branch is, it could be `master` or `default` or something similar). Next, update your local clone by using `git pull upstream main`. This pulls the changes from the original repository's (indicated by `upstream`) primary branch (indicated by `main` in that command) to your local cloned repository. One of the commits in the commit history will be the commit that merged your feature branch, so after you `git pull` your local repository's primary branch will have your feature branch's changes committed. This means you can delete the feature branch (because the changes are already in the `main` branch):
 
 	git branch -d <branch name>
 
-Then you can update the master branch in your forked repository:
+Then you can update the `main` branch in your forked repository:
 
-	git push origin master
+	git push origin main
 
 And push the deletion of the feature branch to your GitHub repository (_update:_ an earlier version of this article listed `git push -d` below):
 
@@ -133,8 +133,8 @@ By the way, your forked repository doesn't automatically stay in sync with the o
 
 To keep your fork in sync with the original repository, use these commands:
 
-	git pull upstream master
-	git push origin master
+	git pull upstream main
+	git push origin main
 
 This pulls the changes from the original repository (the one pointed to by the `upstream` Git remote) and pushes them to your forked repository (the one pointed to by the `origin` remote). (Hopefully that makes a little bit of sense to you by now.)
 
@@ -142,6 +142,7 @@ This pulls the changes from the original repository (the one pointed to by the `
 
 I found [the Help on the GitHub site][link-5] to be particularly useful.
 
+**UPDATE 2022-08-18:** I've replaced "master" with "main", which seems to be the predominant name adopted by most projects and online Git services like GitHub, as well as cleaning up a few other areas. Thanks to the readers who took time to send me feedback!
 
 [link-1]: http://git-scm.com/
 [link-2]: https://github.com/
