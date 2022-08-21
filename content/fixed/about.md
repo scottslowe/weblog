@@ -7,7 +7,9 @@ weight: "1"
 type: fixed
 ---
 
-<img src="/public/img/slowe-inside-small-02-150x150.png" alt="" title="Scott Lowe" width="150" height="150" />Thanks for visiting my site! My name is Scott Lowe, and this is my weblog about various technical subjects and the occasional personal topic.
+![Picture of Scott Lowe](/public/img/color-headshot-2019.jpg)
+
+Thanks for visiting my site! My name is Scott Lowe, and this is my weblog about various technical subjects and the occasional personal topic.
 
 ## Personal Information
 
@@ -15,9 +17,9 @@ I live with my wife, Crystal, and our kids in the Denver, CO area. When I'm not 
 
 ## Professional Information
 
-I've been in the Information Technology field for more than 25 years, starting out with desktop support. Along the way, I've worked as an instructor, a technical trainer and Microsoft Certified Trainer (MCT), a systems administrator, an IT manager, a systems engineer, a consultant, as Chief Technology Officer (CTO) for a small start-up, as the practice lead for a national VAR's VMware practice, as a forward-looking technologist for a large enterprise storage company, and as a technologist for [VMware][8] focusing on network virtualization and modern applications platforms (the latter role as a result of VMware's acquisition of Heptio).
+I've been in the Information Technology field for more than 25 years, starting out in an entry-level desktop support role. Along the way, I've worked in a variety of roles---including (among others) as an instructor, technical trainer, systems administrator, IT manager, systems engineer, consultant, Chief Technology Officer (CTO) for a small start-up, practice lead for a national VAR's VMware practice, and as a technologist. I've worked for a variety of companies, both large and small, including EMC Corporation (acquired by Dell Technologies), Nirica (acquired by [VMware][8]), VMware (soon to be acquired by Broadcom), Heptio (acquired by VMware), and [Kong][6]. In the past, I also operated my own small consulting business.
 
-Currently, I work for [Kong, Inc.][6] as a Principal Field Engineer. In my role, I'm focused on helping customers solve service connectivity challenges through Kong's portfolio of products, including service mesh and API gateway.
+Currently, I work for [Pulumi Corporation][9] on the Developer Relations team. In my role, I'm focused on helping customers understand how to use and how to be successful with Pulumi's products and services.
 
 In addition, I am a former contributor to [SearchVMware.com][1], a VMware-focused website with technical articles, how-to's, tips, and news. I also had some articles published on [SearchServerVirtualization.com][2] and I am a former columnist for [Virtualization Review][3] magazine.
 
@@ -39,7 +41,7 @@ If you'd like more information, my LinkedIn profile is available [here][4], and 
 
 ## Disclaimer
 
-Any views or opinions expressed here are strictly my own and not those of my employer (or any past employer). While I am a blogger who works for Kong, blogging is not my job for that vendor; it's my personal passion. As this is a personal blog, not a corporate blog, I am solely responsible for all content published here. Content published here is not read, reviewed, or approved in advance by my employer and does not necessarily represent or reflect the views or opinions of my employer or any of its divisions, subsidiaries, or business partners.
+Any views or opinions expressed here are strictly my own and not those of my  current employer or any past employer. Blogging on this site is not my job for any employer or vendor; it's my personal passion. As this is a personal blog, not a corporate blog, I am solely responsible for all content published here. Content published here is not read, reviewed, or approved in advance by anyone other than myself, and does not represent or reflect the views or opinions of my employer or any of its divisions, subsidiaries, or business partners.
 
 ## Contact Me
 
@@ -53,3 +55,4 @@ If you'd like to send me an e-mail, you can reach me at scott dot lowe at scottl
 [6]: https://konghq.com
 [7]: https://github.com/scottslowe
 [8]: https://www.vmware.com/
+[9]: https://www.pulumi.com/
