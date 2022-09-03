@@ -15,9 +15,9 @@ wordpress_id: 1970
 
 This will be a very quick blog post just to address a growing trend I've noticed. It started with the wave of prominent bloggers getting hired by EMC for the vSpecialist team. With the [recent VMware vExpert 2010 awards][1], this trend has gotten even bigger. What is the trend? The trend I'm seeing is people starting blogs just to get attention in the industry.
 
-Of course everyone wants to be noticed in their industry. I understand that. I respect that. I want to be noticed in my industry, too---there's nothing wrong with that. But I cannot stress strongly enough that if you are starting a blog simply to make some noise in the industry, maybe win an award, or get hired by _<Insert Company Name Here>_, you are blogging for all the wrong reasons.
+Of course everyone wants to be noticed in their industry. I understand that. I respect that. I want to be noticed in my industry, too---there's nothing wrong with that. But I cannot stress strongly enough that if you are starting a blog simply to make some noise in the industry, maybe win an award, or get hired by `<Insert Company Name Here>`, you are blogging for all the wrong reasons.
 
-If you're going to blog (or tweet), do it for the right reasons. I mentioned this in my recent [chinwag with Mike Laverick](http://www.rtfm-ed.co.uk/2010/06/08/chinwag-with-scott-lowe-episode-15/). The successful bloggers are the bloggers who blog because of their _passion_ for the topic(s) about which they are blogging. Consider some of the well-known and well-respected bloggers out there:
+If you're going to blog (or tweet), do it for the right reasons. I mentioned this in my recent [chinwag with Mike Laverick](http://www.rtfm-ed.co.uk/2010/06/08/chinwag-with-scott-lowe-episode-15/). The successful bloggers are the bloggers who blog because of their _passion_ for the topic(s) about which they are blogging. Consider some of the well-known and well-respected VMware-related bloggers out there:
 
 * [Duncan Epping](http://www.yellow-bricks.com)  
 * [Jason Boche](http://www.boche.net/blog)  
