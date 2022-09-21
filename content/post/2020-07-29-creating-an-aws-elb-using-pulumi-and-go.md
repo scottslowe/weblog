@@ -4,8 +4,10 @@ categories: Tutorial
 comments: true
 date: 2020-07-29T17:10:00-07:00
 tags:
+- Automation
 - AWS
 - Go
+- IaC
 - Pulumi
 title: Creating an AWS ELB using Pulumi and Go
 url: /2020/07/29/creating-an-aws-elb-using-pulumi-and-go/

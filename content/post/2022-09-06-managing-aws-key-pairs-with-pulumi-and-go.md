@@ -4,10 +4,12 @@ categories: Explanation
 comments: true
 date: 2022-09-06T10:50:00-06:00
 tags:
+- Automation
 - AWS
 - Go
-- SSH
+- IaC
 - Pulumi
+- SSH
 title: Managing AWS Key Pairs with Pulumi and Go
 url: /2022/09/06/managing-aws-key-pairs-with-pulumi-and-go/
 ---

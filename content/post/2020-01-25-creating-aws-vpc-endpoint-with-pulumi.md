@@ -4,10 +4,11 @@ categories: Tutorial
 comments: true
 date: 2020-01-25T10:32:00-07:00
 tags:
+- Automation
+- AWS
+- IaC
 - Pulumi
 - TypeScript
-- AWS
-- Automation
 title: Creating an AWS VPC Endpoint with Pulumi
 url: /2020/01/25/creating-aws-vpc-endpoint-with-pulumi/
 ---

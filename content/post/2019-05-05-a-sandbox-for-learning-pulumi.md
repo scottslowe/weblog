@@ -4,11 +4,13 @@ categories: Information
 comments: true
 date: 2019-05-05T19:00:00Z
 tags:
-- Pulumi
-- Virtualization
-- Vagrant
+- Automation
 - AWS
 - CLI
+- IaC
+- Pulumi
+- Vagrant
+- Virtualization
 title: A Sandbox for Learning Pulumi
 url: /2019/05/05/a-sandbox-for-learning-pulumi/
 ---

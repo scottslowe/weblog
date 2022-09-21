@@ -7,6 +7,8 @@ tags:
 - Automation
 - AWS
 - Go
+- IaC
+- Networking
 - Pulumi
 title: Adopting the Default Route Table of an AWS VPC using Pulumi and Go
 url: /2020/06/25/adopting-default-route-table-aws-vpc-using-pulumi-go/

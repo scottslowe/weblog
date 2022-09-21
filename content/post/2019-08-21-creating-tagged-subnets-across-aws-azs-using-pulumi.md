@@ -4,8 +4,10 @@ categories: Tutorial
 comments: true
 date: 2019-08-21T21:00:00Z
 tags:
+- Automation
 - AWS
 - CLI
+- IaC
 - Pulumi
 - TypeScript
 title: Creating Tagged Subnets Across AWS AZs Using Pulumi

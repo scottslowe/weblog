@@ -4,9 +4,11 @@ categories: Tutorial
 comments: true
 date: 2021-08-26T09:25:00-06:00
 tags:
+- Automation
 - AWS
-- Networking
 - Go
+- IaC
+- Networking
 - Pulumi
 title: Establishing VPC Peering with Pulumi and Go
 url: /2021/08/26/establishing-vpc-peering-with-pulumi-and-go/

@@ -4,8 +4,10 @@ categories: Tutorial
 comments: true
 date: 2022-07-27T16:00:00-06:00
 tags:
+- Automation
 - AWS
 - Go
+- IaC
 - Networking
 - Pulumi
 title: Using Default AWS Resources with Pulumi

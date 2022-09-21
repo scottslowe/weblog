@@ -4,10 +4,11 @@ categories: Tutorial
 comments: true
 date: 2020-06-09T13:55:00-07:00
 tags:
+- Automation
 - AWS
+- IaC
 - Networking
 - Pulumi
-- Automation
 - TypeScript
 title: Creating a Multi-AZ NAT Gateway with Pulumi
 url: /2020/06/09/creating-multi-az-nat-gateway-with-pulumi/

@@ -7,6 +7,7 @@ tags:
 - Automation
 - AWS
 - Go
+- IaC
 - Networking
 - Pulumi
 - Security
