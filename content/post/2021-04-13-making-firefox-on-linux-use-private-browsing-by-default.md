@@ -14,7 +14,7 @@ url: /2021/04/13/making-firefox-on-linux-use-private-browsing-by-default/
 
 While there are a couple different methods to make [Firefox][link-2] use private browsing by default (see [this page][link-1] for a couple methods), these methods essentially _force_ private browsing and disable the ability to use "regular" (non-private) browsing. In this post, I'll describe what I consider to be a better way of achieving this, at least on Linux.<!--more-->
 
-It's possible this method will also work on Windows, but I haven't tested it. If anyone gets a chance to test it and let me know, I'll update this post and credit you accordingly. Just hit [me on Twitter][link-3] and let me know what you've found in your testing. I've also only tested this on [Fedora][link-5], but it should be the same or very similar for any distribution that uses GNOME.
+Note that this method doesn't work on Windows. According to feedback from readers (I haven't tested it), Windows uses a slightly different approach; see the bottom of the article for more information.I've also only tested this on [Fedora][link-5], but it should be the same or very similar for any distribution that uses GNOME. I've gotten feedback (thank you Dirk B) that this process works on Debian 11 with one small change (use `firefox-esr` instead of just `firefox`).
 
 GNOME uses the idea of "desktop files" (typically found in `/usr/share/applications` or `~/.local/share/applications`) to enable the launching of applications via the Activities screen or other mechanisms. (For more information on desktop files, see [here][link-4].) These desktop files specify where the executable is found, what command-line parameters to use, what icon to use, what name the application should go by, etc. Desktop files also allow application developers or users to define additional actions, such as opening a new window.
 
@@ -32,7 +32,9 @@ The advantage of this approach versus some of the others is that you still have 
 
 One caveat to this approach is that your changes to the Firefox desktop file get overwritten any time `dnf update` installs an update for Firefox. I'm sure there's probably a workaround for this, but I haven't found it yet.
 
-(By the way, the reason I say this _might_ work on Windows is because command-line parameters are exposed on Windows as well as on Linux through the use of shortcuts on the Start Menu. macOS does expose command-line parameters to a limited extent, but this functionality doesn't appear usable in any practical way.)
+Based on feedback from readers, it would seem that Firefox on Windows (at least with version 107.1) actually uses a different executable, named `private_browsing.exe` to invoke a private browsing window. The approach for Windows, then, is to change any shortcuts you're using (on the Task Bar and/or Start Menu) to point to this executable. Again, thanks to reader Dirk B for the information.
+
+I have not found a way to do this on macOS. macOS does expose command-line parameters to a limited extent, but this functionality doesn't appear usable in any practical way.
 
 I hope this information is helpful to someone. Feel free to contact [me on Twitter][link-3] if you have any feedback, corrections, or suggestions for improvement.
 
