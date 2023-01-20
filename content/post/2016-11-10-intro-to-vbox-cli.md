@@ -25,7 +25,7 @@ Let's start with some basic operations. Here are a few to get you started:
 
 * Once a VM is running, you'll switch to `vboxmanage controlvm <subcommand>` for most other operations. Valid `<subcommands>` related to VM state operations include pause, resume, reset, poweroff, and savestate. (There's a whole ton of additional subcommands, a few of which I'll discuss later in this post.)
 
-* To unregister (remove) a stopped VM, the command `vboxmanage unregister <name or UUID>` will do it for you. Keep in mind this does _not_ delete the VM's files. To delete the files, add the `--delete` flag to the command.
+* To unregister (remove) a stopped VM, the command `vboxmanage unregistervm <name or UUID>` will do it for you. Keep in mind this does _not_ delete the VM's files. To delete the files, add the `--delete` flag to the command.
 
 ## Viewing and Modifying the Configuration of a Stopped VM
 
