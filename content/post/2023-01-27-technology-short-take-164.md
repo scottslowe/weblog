@@ -61,7 +61,7 @@ Welcome to Technology Short Take #164! I've got another collection of links to a
 * Ever asked yourself "Why Kustomize?" [This article][link-18] may be helpful.
 * Marius Sandbu took the time to create [a graphical overview of Azure AD][link-19].
 * For something a bit on the lighter side, here's Sean Massey's explanation of [automating Minecraft server builds][link-20].
-* [This trick][link-22] for setting Git's `user.email` setting is incredibly useful.
+* [This trick][link-22] for setting Git's `user.email` setting is incredibly useful. (Massive kudos to Patrick Kelso for sharing this tip in one of the Slack communities I frequent!)
 * I'm not sure I ever expected to see "regular expression" and "modern" in the same description, but [here it is][link-24]. Anyone played with this yet?
 * It would seem that AWS is going to take on Docker Desktop with its Finch project; see [this blog post][link-25] for more details.
 * Rory McCune shares some [information on configuring Caddy][link-28], a Go-based open source web server. I played around a bit with [Caddy][link-29] last year, and generally liked it.
