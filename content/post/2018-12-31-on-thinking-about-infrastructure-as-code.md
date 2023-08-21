@@ -16,7 +16,7 @@ Some of these thoughts I was going to share in a planned presentation at Interop
 
 Anyway, let me get back to Sridharan's post. One of the things that jumped out to me right away was Sridharan's proposed hierarchy of needs for code:
 
-![Sridharan's hierarcy of needs for code](/public/img/sridharan-hierarchy-needs.png)
+![Sridharan's hierarchy of needs for code](/public/img/sridharan-hierarchy-needs.png)
 
 As you can see in the image (full credit for which belongs to Sridharan, as far as I know), making code _understandable_ lies at the bottom of the hierarchy of needs, meaning it is the most basic necessity needed. Until this need is satisfied, you can't move on to the other needs. Sridharan puts it this way:
 
