@@ -14,7 +14,7 @@ Building on the earlier article on [automatically transforming Git URLs][xref-1]
 
 Here's a configuration stanza from my own system-wide Git configuration:
 
-```
+```toml
 [includeIf "gitdir:~/Work/Code/Repos/"]
     path = ~/Work/Code/Repos/.gitconfig
 ```
@@ -23,7 +23,7 @@ The key here is the `includeIf` keyword. In this case, Git will include the refe
 
 Here's the additional configuration file:
 
-```
+```toml
 [user]
     email = name@work-domain.com
     name = Scott Lowe
