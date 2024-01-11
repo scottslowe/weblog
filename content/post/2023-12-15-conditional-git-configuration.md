@@ -31,7 +31,7 @@ Here's the additional configuration file:
     gpgsign = false
 ```
 
-As long as I group all work-relatd repositories in the specified directory path, these values override the system-wide values. This means I can specify my work e-mail address as the e-mail address to be associated with commits to work-related repositories while all others use a different e-mail address. This configuration also allows me to disable GPG signing of commits for work-related repositories (i.e., repositories in the specified path), since I don't have a GPG key associated with my work e-mail address.
+As long as I group all work-related repositories in the specified directory path, these values override the system-wide values. This means I can specify my work e-mail address as the e-mail address to be associated with commits to work-related repositories while all others use a different e-mail address. This configuration also allows me to disable GPG signing of commits for work-related repositories (i.e., repositories in the specified path), since I don't have a GPG key associated with my work e-mail address.
 
 Could you do this with per-repository configuration settings? _Absolutely._ This configuration mechanism allows you to apply configuration settings to groups of repositories based on their filesystem location, instead of having to do the same thing on a per-repository basis.
 
