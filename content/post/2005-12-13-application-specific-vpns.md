@@ -39,13 +39,15 @@ Here are a few examples of how you can use application specific VPNs:
 
 On Windows, there is no graphical user interface (GUI) for configuring Stunnel; all configuration must be done with the `stunnel.conf` configuration file. A sample `stunnel.conf` file is found below; this file listens on TCP port 1494 and forwards traffic to TCP port 3389 on the same system.  (Note that this would be a sample `stunnel.conf` file for a server-side configuration.)
 
-    CApath = c:\windows\system32\stunnel
-    cert = c:\windows\system32\stunnel\stunnel.pem
-    client = no
-    service = SSLTunnel
-    [rdp]
-    accept = 1494
-    connect = 3389
+```ini
+CApath = c:\windows\system32\stunnel
+cert = c:\windows\system32\stunnel\stunnel.pem
+client = no
+service = SSLTunnel
+[rdp]
+accept = 1494
+connect = 3389
+```
 
 Once Stunnel has been configured, running `stunnel --install` will install it as a system service; this service can then be stopped and started through the Services MMC console just like any other background service.
 
@@ -61,7 +63,9 @@ As with Stunnel, it's also possible to use SSH to create application specific VP
 
 On Mac OS X, the following command in Terminal will create an application specific VPN to encrypt IMAP traffic to a remote server:
 
-    ssh -L 1143:imapserver.domain.com:143 -N -f user@sshserver.domain.com
+```bash
+ssh -L 1143:imapserver.domain.com:143 -N -f user@sshserver.domain.com
+```
 
 This same technique could be used to encrypt WebDAV traffic to a remote web server, other types of mail traffic (POP3 or SMTP, for example), RDP (for Remote Desktop), etc. Note that it doesn't work well with HTTP traffic that requires the use of host headers.
 
@@ -74,7 +78,6 @@ Not being a regular day-to-day Linux user (not on the desktop, at least), I don'
 Most of the examples so far have been using SSH and/or Stunnel to connect endpoints (i.e., a single laptop or desktop computer) to a remote resource via an application specific VPN. However, it's also easily possible to create application specific site-to-site VPNs, whose purpose is to secure only a particular type of traffic between two locations.
 
 Consider this example. CompanyA wants to send e-mail to CompanyB, but wants that e-mail to be secure. If both mail servers support TLS, then the organizations could use TLS to secure the SMTP traffic. If not, then the companies can use Stunnel to establish an SSL connection between two systems. HostA at CompanyA can use Stunnel as a client side application to listen for unencrypted connections and pass them as encrypted connections to HostB at CompanyB. HostB at CompanyB is using Stunnel to listen for encrypted connections and passes them unencrypted to the mail server at CompanyB. With a simple configuration, the mail servers at both companies can be configured to pass mail connections for other company through the Stunnel connection. With no additional cost and very little configuration, all e-mail traffic between the two organizations has now been secured. All this without the complexity of a typical B-to-B VPN and the associated access controls.
-
 
 [1]: http://www.openssh.org/
 [2]: http://stunnel.mirt.net/index.html

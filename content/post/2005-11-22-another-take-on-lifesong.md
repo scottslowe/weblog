@@ -13,7 +13,7 @@ url: /2005/11/22/another-take-on-lifesong/
 wordpress_id: 120
 ---
 
-In my [earlier posting][1] about _Lifesong_, the second CD by the Christian group [Casting Crowns][2], I spoke primarily about their musical style and their sound. At the time, I was so wrapped up in how the music sounded in comparison with their debut album that I was disappointed in this latest effort.
+In my [earlier posting][xref-1] about _Lifesong_, the second CD by the Christian group [Casting Crowns][2], I spoke primarily about their musical style and their sound. At the time, I was so wrapped up in how the music sounded in comparison with their debut album that I was disappointed in this latest effort.
 
 I continued listening to the CD, concentrating mostly on the tracks that I really enjoyed---"Lifesong", "Praise You in This Storm", "Set Me Free", and "Father, Spirit, Jesus". As I listened---_truly listened_---to the words of these songs, and then took the time to listen to the other songs on the album as well, I realized that I was guilty of the very things that Casting Crowns sings about in these songs. And my first review was the perfect indicator of this.
 
@@ -25,5 +25,5 @@ That doesn't necessarily mean full-time ministry, and it doesn't mean just going
 
 It means letting our life(song) sing to the Lord.
 
-[1]: {{< relref "2005-09-25-lifesong-by-casting-crowns.md" >}}
 [2]: http://www.castingcrowns.org/
+[xref-1]: {{< relref "2005-09-25-lifesong-by-casting-crowns.md" >}}

@@ -23,9 +23,9 @@ I'm sure that Debian fans will point out that I surely did something incorrect a
 
 In the meantime, I'm going to shelve Debian GNU/Linux as a possible replacement OS and continue searching. At this point, [OpenBSD][6] is starting to look really good...
 
+[3]: http://www.debian.org/
+[6]: http://www.openbsd.org/
 [1]: {{< relref "2005-12-19-ntpd-on-centos-42.md" >}}
 [2]: {{< relref "2005-12-23-centos-ntpd-problem-mostly-resolved.md" >}}
-[3]: http://www.debian.org/
 [4]: {{< relref "2005-12-08-ubuntu-510.md" >}}
 [5]: {{< relref "2005-12-01-kubuntu-510.md" >}}
-[6]: http://www.openbsd.org/

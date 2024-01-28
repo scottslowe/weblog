@@ -30,25 +30,27 @@ With that information in hand, let's get started.
 
 First, we'll need to setup the PIX firewall. Use the commands below to configure the PIX for PPTP-based VPN connections that will authenticate against an Active Directory back-end.
 
-	ip local pool vpn-pool 10.10.10.1-10.10.10.254  
-	aaa-server vpn-auth inside host 10.10.10.5 secretkey  
-	aaa-server vpn-auth inside host 10.10.10.6 secretkey  
-	aaa-server vpn-auth protocol radius  
-	vpdn group vpn-pptp-group accept dialin pptp  
-	vpdn group vpn-pptp-group ppp authentication mschap  
-	vpdn group vpn-pptp-group ppp encryption mppe 128 required  
-	vpdn group vpn-pptp-group client configuration \  
-	address local vpn-pool  
-	vpdn group vpn-pptp-group client configuration \  
-	dns 10.10.10.5 10.10.10.6  
-	vpdn group vpn-pptp-group client configuration \  
-	wins 10.10.10.6 10.10.10.5  
-	vpdn group vpn-pptp-group client authentication aaa vpn-auth  
-	vpdn enable outside  
-	sysopt connect permit-pptp  
-	access-list acl-nat0 permit ip 10.10.1.0 255.255.255.0 \  
-	10.10.10.0 255.255.255.0  
-	nat (inside) 0 access-list acl-nat0
+```bash
+ip local pool vpn-pool 10.10.10.1-10.10.10.254  
+aaa-server vpn-auth inside host 10.10.10.5 secretkey  
+aaa-server vpn-auth inside host 10.10.10.6 secretkey  
+aaa-server vpn-auth protocol radius  
+vpdn group vpn-pptp-group accept dialin pptp  
+vpdn group vpn-pptp-group ppp authentication mschap  
+vpdn group vpn-pptp-group ppp encryption mppe 128 required  
+vpdn group vpn-pptp-group client configuration \  
+address local vpn-pool  
+vpdn group vpn-pptp-group client configuration \  
+dns 10.10.10.5 10.10.10.6  
+vpdn group vpn-pptp-group client configuration \  
+wins 10.10.10.6 10.10.10.5  
+vpdn group vpn-pptp-group client authentication aaa vpn-auth  
+vpdn enable outside  
+sysopt connect permit-pptp  
+access-list acl-nat0 permit ip 10.10.1.0 255.255.255.0 \  
+10.10.10.0 255.255.255.0  
+nat (inside) 0 access-list acl-nat0
+```
 
 (Note that I have placed a backslash to indicate text that is wrapped onto two lines here but should be entered all on a single line in the PIX configuration.)
 

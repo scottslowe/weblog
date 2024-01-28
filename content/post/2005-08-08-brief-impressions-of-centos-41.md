@@ -18,5 +18,4 @@ Barring some unforeseen problem that I have not yet encountered, I will probably
 
 By the way, it doesn't hurt that [Asterisk@Home](http://asteriskathome.sourceforge.net/) (the pre-packaged VoIP PBX installation) also runs on CentOS.
 
-
 [1]: {{< relref "2005-07-13-trying-a-new-linux-distribution.md" >}}

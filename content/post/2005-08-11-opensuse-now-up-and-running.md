@@ -13,5 +13,4 @@ wordpress_id: 73
 
 Mentioned earlier in [this posting][1], Novell's [OpenSuSE](http://www.opensuse.org/) site is now up and running, offering free downloads of SuSE 9.3 and beta versions of SuSE 10.0. I hope that [Novell](http://www.novell.com/) is as successful with OpenSuSE as [Red Hat](http://www.redhat.com/) was with Fedora. I may just give SuSE 9.3 a try to see if I like it.
 
-
 [1]: {{< relref "2005-08-03-novell-to-broaden-suses-reach.md" >}}

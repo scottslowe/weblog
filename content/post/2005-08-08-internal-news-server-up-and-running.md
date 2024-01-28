@@ -18,5 +18,4 @@ I have a newsfeed to transfer new postings from the proprietary application over
 
 One more nail in the coffin of a certain proprietary groupware application...
 
-
 [1]: {{< relref "2005-05-14-nonstandard-implementations.md" >}}

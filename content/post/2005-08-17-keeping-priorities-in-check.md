@@ -19,9 +19,8 @@ But sometimes we take it too far. As I was driving to work this morning, the son
 >Not this time son I've no time to waste  
 Maybe tomorrow we'll have time to play  
 And then he slips into his new BMW  
-And drives farther and farther and farther away
-
->So he works all day and tries to sleep at night  
+And drives farther and farther and farther away  
+So he works all day and tries to sleep at night  
 He says things will get better;  
 Better in time
 

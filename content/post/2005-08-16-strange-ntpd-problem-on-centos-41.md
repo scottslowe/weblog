@@ -17,5 +17,4 @@ The problem is it doesn't work. Yes, I've added the appropriate rules in iptable
 
 Finally, fed up with the problems, I just scheduled an hourly cron job with `ntpdate`. It's not ideal, but it works.
 
-
 [1]: {{< relref "2005-08-08-brief-impressions-of-centos-41.md" >}}

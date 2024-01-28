@@ -25,7 +25,6 @@ A couple of the resources I'm using for this effort are bookmarked in my [del.ic
 
 I also have yet to decide if I will use Samba/Winbind or LDAP to handle the cross-platform authentication. I'd love to hear any comments or feedback in this regard.
 
-
 [1]: {{< relref "2005-05-13-miscellaneous-projects.md" >}}
 [2]: {{< relref "2005-05-15-perdition-working-now.md" >}}
 [3]: {{< relref "2005-07-02-starttls-and-imap-in-mailapp.md" >}}

@@ -20,9 +20,9 @@ I think I have resolved one minor Linux-AD integration hiccup. In setting up the
 
 After fiddling with it for a while, I finally managed to make it work. The `ktpass` command should look something like this:
 
-	ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$
-	-crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL
-	-out filename
+    ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$
+    -crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL
+    -out filename
 
 The missing piece, for me, was specifying "DOMAIN\name$" for the mapuser parameter. Without it, the command kept generating an error.
 

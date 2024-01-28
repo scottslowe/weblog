@@ -15,7 +15,7 @@ url: /2005/12/06/watchguard-firebox-vpn-and-active-directory-integration/
 wordpress_id: 136
 ---
 
-A short while back, I posted an article on [Cisco PIX VPN and Active Directory integration][1]. Now, I'd like to follow that article up with a version looking at integration between Active Directory and [WatchGuard][2] Firebox VPNs.
+A short while back, I posted an article on [Cisco PIX VPN and Active Directory integration][xref-1]. Now, I'd like to follow that article up with a version looking at integration between Active Directory and [WatchGuard][2] Firebox VPNs.
 
 As with the PIX-AD integration document, this article assumes that you have some basic knowledge of how to work with the WatchGuard Firebox series of firewalls. This article was written using version 6.2 of the WatchGuard Firebox System software and Windows Server 2003; other versions of either the firewall software or Windows should be similar.
 
@@ -57,5 +57,5 @@ Make this policy the first policy (using the Move Up/Move Down commands in the I
 
 **UPDATE:** I've updated this entry to correct some errors pointed out in the comments. Thanks for the feedback!
 
-[1]: {{< relref "2005-11-22-cisco-pix-vpn-and-active-directory-integration.md" >}}
 [2]: http://www.watchguard.com/
+[xref-1]: {{< relref "2005-11-22-cisco-pix-vpn-and-active-directory-integration.md" >}}
