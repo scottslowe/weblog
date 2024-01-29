@@ -13,7 +13,7 @@ url: /2006/01/24/bypassing-roots-password/
 wordpress_id: 164
 ---
 
-I had a situation today where a customer forgot the root password to a [Debian](http://www.debian.org/) GNU/Linux 3.1 system in their office. That left it up to me to try to find a way to get into the system. Here's how I managed to gain access. 
+I had a situation today where a customer forgot the root password to a [Debian](http://www.debian.org/) GNU/Linux 3.1 system in their office. That left it up to me to try to find a way to get into the system. Here's how I managed to gain access.
 
 (Note: As far as I am aware, _NONE_ of the information I'm going to list in this article will work across the network; you _MUST_ have physical access to the server. Therefore, I'm not too terribly worried about "making it easier for the hackers." If you don't have physical security, then no amount of electronic security is going to help you!)
 

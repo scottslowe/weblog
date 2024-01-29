@@ -21,10 +21,12 @@ Rather than using the old `for /f` trick, instead we're going to redirect the ou
 
 Here's what the command will look like:
 
-    adfind -b ou=Workstations,dc=example,dc=net 
-    -f "(objectcategory=computer)" dNSHostName -list > 
-    c:\temp\pclist.txt && pspasswd @c:\temp\pclist.txt 
-    pcsupport HsaEAA2e! > c:\temp\audit.txt
+```text
+adfind -b ou=Workstations,dc=example,dc=net \
+-f "(objectcategory=computer)" dNSHostName -list > \
+c:\temp\pclist.txt && pspasswd @c:\temp\pclist.txt \
+pcsupport HsaEAA2e! > c:\temp\audit.txt
+```
 
 In this example, we use AdFind to search the Workstations OU in the example.net AD domain for computers, and return each computer's DNS host name in simple list format. This output is placed into the file `c:\temp\pclist.txt`. _If this command is successful_, then the PsPasswd command runs, reading the contents of that file and outputting the results into `c:\temp\audit.txt` for later review and storage.
 

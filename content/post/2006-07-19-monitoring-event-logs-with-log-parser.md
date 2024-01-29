@@ -35,18 +35,22 @@ Whew! That's a monster of a command. Let's break it down.
 
 1. First, we have the ever-useful `for /f` trick, which here is pulling two parameters from a file called `c:\servers.txt`. Obviously, the path and name of the file are irrelevant; just be sure to put the correct path and name in the command. The contents of this file should contain a list of servers and logs that will be checked by Log Parser, with a single server-event log pair on each line, separated by a comma. So, to check the System log on SERVERA, SERVERB, and SERVERC, the file would look something like this:  
 
-	SERVERA,System  
-	SERVERB,System  
-	SERVERC,System
+    ```text
+    SERVERA,System  
+    SERVERB,System  
+    SERVERC,System
+    ```
 
-Alternately, to review the Application log on SERVERA, the System log on SERVERB, and both Application and System on SERVERC, it would need to look like this:  
+    Alternately, to review the Application log on SERVERA, the System log on SERVERB, and both Application and System on SERVERC, it would need to look like this:  
 
-	SERVERA,Application  
-	SERVERB,System  
-	SERVERC,Application  
-	SERVERC,System
+    ```text
+    SERVERA,Application  
+    SERVERB,System  
+    SERVERC,Application  
+    SERVERC,System
+    ```
 
-Simply place all the log names from all the servers you'd like monitored into this text file (in the appropriate format).
+    Simply place all the log names from all the servers you'd like monitored into this text file (in the appropriate format).
 
 2. Next, we have the Log Parser command itself. This command specifies to use the Event log input format (`-i:EVT`) and uses a SQL SELECT statement to choose the specific fields from the event logs, filtering them by EventType (EventTypes 1 and 2 are Error events and Warning events) and by timestamp (only events in the preceding 24 hour period; refer to the Log Parser help file to try to decode the funky SQL math required to do that). The rows returned by the query are sorted according to time, and the output is set to CSV (`-o:CSV`).  The remaining options suppress other output (`-q:ON`) and suppress statistics (`-stats:OFF`). Note the parameter substitution for the source of the query; here is where the server name and event log name will be substituted as they are pulled from the text file specified in the `for /f` clause.
 

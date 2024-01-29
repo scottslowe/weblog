@@ -51,18 +51,21 @@ In addition to the switch from a computer account to a user account as described
 
 The original article calls for `/etc/ldap.conf` to include this line:
 
-    nss_base_group dc=mydomain,dc=com
+```text
+nss_base_group dc=mydomain,dc=com
+```
 
 To help optimize LDAP traffic against Active Directory, change the `/etc/ldap.conf` as follows:
 
-    nss_base_group dc=mydomain,dc=com?sub?
-    &(objectCategory=group)(gidnumber=*)
+```text
+nss_base_group dc=mydomain,dc=com?sub?&(objectCategory=group)(gidnumber=*)
+```
 
 (This should all be on a single line.) This will help reduce the query load on Active Directory by limiting the types of objects for which searches will be issued; in addition, the "objectCategory" type is indexed, which also also greatly speed operations.
 
-Speaking of indexing, if the pam\_login\_attribute is not modified (it defaults to uid), you'll also need to index the uid attribute in order to avoid heavy CPU utilization and delays in responses from Active Directory. This was mentioned in the updated [Linux-AD R2 instructions][4]. Alternately, you can change the pam\_login_attribute in `/etc/ldap.conf` to an indexed attribute, like sAMAccountName.
+Speaking of indexing, if the `pam_login_attribute` is not modified (it defaults to uid), you'll also need to index the uid attribute in order to avoid heavy CPU utilization and delays in responses from Active Directory. This was mentioned in the updated [Linux-AD R2 instructions][4]. Alternately, you can change the `pam_login_attribute` in `/etc/ldap.conf` to an indexed attribute, like sAMAccountName.
 
-Last, you may find it useful to edit `/etc/ldap.conf` and change the gecos field mapping from name to cn (i.e., use "nss\_map\_attribute gecos cn" instead of "nss\_map\_attribute gecos name").
+Last, you may find it useful to edit `/etc/ldap.conf` and change the gecos field mapping from name to cn (i.e., use `nss_map_attribute gecos cn` instead of `nss_map_attribute gecos name`).
 
 ## Linux-AD Integration (R2)
 
@@ -88,8 +91,9 @@ This article can be found posted [here][6].
 
 This one is a pretty recent article (published within the last week or so), and so already incorporates most of the changes suggested here. The information that I don't have yet, however, is exactly _how_ to incorporate some of the other suggested changes. For example, I'm not yet sure how to use the `ldapclient` command to modify the LDAP client profile (Solaris 10 doesn't use nss_ldap by default) to include the refined group query. I suspect that this command would work correctly:
 
-    ldapclient mod -a serviceSearchDescriptor=group:dc=example,dc=com?sub
-    ?&(objectCategory=group)(gidNumber=*)
+```text
+ldapclient mod -a serviceSearchDescriptor=group:dc=example,dc=com?sub?&(objectCategory=group)(gidNumber=*)
+```
 
 Of course, the `ldapclient` command syntax would change depending upon if this was an initial setup or a change to an existing setup.
 

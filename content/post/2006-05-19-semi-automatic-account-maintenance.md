@@ -21,17 +21,23 @@ Fortunately, there's a free third-party replacement that steps up to the plate t
 
 We'll start out with the `dsquery` command again, this time to find inactive accounts:
 
-	dsquery user -inactive 4
+```text
+dsquery user -inactive 4
+```
 
 This will find all the user accounts have have been inactive (not logged into) for more than 4 weeks. Pipe this into the `dsmod` command to automatically disable them:
 
-	dsquery user -inactive 4 | dsmod user -disabled yes
+```text
+dsquery user -inactive 4 | dsmod user -disabled yes
+```
 
 This ensures that any account that has not been used in more than 4 weeks will be automatically disabled. Now, we can bring in `AdMod` to help us keep those disabled accounts manageable:
 
-	dsquery user -disabled | admod -move "ou=Disabled 
-	Accounts,dc=example,dc=net" -safety 100
+```text
+dsquery user -disabled | admod -move "ou=Disabled \
+Accounts,dc=example,dc=net" -safety 100
+```
 
-This will automatically gather all the disabled accounts and move them into the Disabled Accounts OU automatically. Note the "-safety 100" parameter; this means that if more than 100 objects will be affected, the command won't proceed. This can be replaced with the "-unsafe" parameter if this fail-safe isn't necessary.
+This will automatically gather all the disabled accounts and move them into the Disabled Accounts OU automatically. Note the `-safety 100` parameter; this means that if more than 100 objects will be affected, the command won't proceed. This can be replaced with the `-unsafe` parameter if this fail-safe isn't necessary.
 
 So, put this into a batch file, schedule it to run once a week, and it will take care of those inactive accounts that are no longer being used. (This will make those security guys pretty happy.)

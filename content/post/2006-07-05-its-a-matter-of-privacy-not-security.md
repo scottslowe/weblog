@@ -16,7 +16,7 @@ wordpress_id: 291
 
 Daniel Jalkut, in his [Red Sweater Blog](http://www.red-sweater.com/blog/), recently posted that he had detected (via Little Snitch) some [network activity from Dashboard](http://www.red-sweater.com/blog/153/apple-phones-home-too) back to Apple's web site. Upon further investigation, he found that the activity was apparently tied to this one-line entry in the release notes for 10.4.7:
 
->You can now verify whether or not a Dashboard widget you downloaded is the same version as a widget featured on (www.apple.com) before installing it.
+>You can now verify whether or not a Dashboard widget you downloaded is the same version as a widget featured on [www.apple.com](www.apple.com) before installing it.
 
 To me, that doesn't do an adequate job of informing the end user that the computer will be contacting Apple on a regular basis to verify the installed widgets. What it says is that the OS _can_ (i.e., has the ability to), upon the user's request, verify a widget before installing it. Those are two different things.
 
@@ -30,7 +30,8 @@ I posted a comment to the article to see what methods, if any, are available to 
 
 **UPDATE:** This safety check can be disabled by using the command:
 
-    sudo launchctl unload -w /System/Library/LaunchDaemons/ 
-    com.apple.dashboard.advisory.fetch.plist
+```bash
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.dashboard.advisory.fetch.plist
+```
 
 (This should all be typed on a single line.) In addition, it's important to note that the dashboardadvisoryd process does not _send_ any information to Apple currently; it only fetches information from Apple and compares it to the list of currently installed widgets. Also, in the light of the extensive information shared with Apple as a result of using Software Update (an aspect I did not consider originally), I retract most of my concerns regarding privacy. I do, however, stand by the statement that Apple should have been more informative and forthcoming with information on exactly how this work, as well as given users a means whereby to control it.

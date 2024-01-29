@@ -22,23 +22,29 @@ The use of `csvde` to export data out of Active Directory is great---except when
 
 Suppose that all your users are listed in Active Directory as "Lastname, Firstname", such as this:
 
-	Smith, John  
-	Public, Joe  
-	Normal, Jane
+```text
+Smith, John  
+Public, Joe  
+Normal, Jane
+```
 
 If these users were stored in the built-in Users container, using a tool such as `dsquery` to output their distinguished name would produce these results:
 
-	"cn=Smith\, John,cn=Users,dc=example,dc=net"  
-	"cn=Public\, Joe,cn=Users,dc=example,dc=net"  
-	"cn=Normal\, Jane,cn=Users,dc=example,dc=net"
+```text
+"cn=Smith\, John,cn=Users,dc=example,dc=net"  
+"cn=Public\, Joe,cn=Users,dc=example,dc=net"  
+"cn=Normal\, Jane,cn=Users,dc=example,dc=net"
+```
 
 The use of the backslash here is to escape the following comma so that it is not treated as a field delimiter. The double quotes are used because there is a space in the name.
 
 Using `csvde`, however, produces these results:
 
-	"cn=Smith\\, John,cn=Users,dc=example,dc=net"  
-	"cn=Public\\, Joe,cn=Users,dc=example,dc=net"  
-	"cn=Normal\\, Jane,cn=Users,dc=example,dc=net"
+```text
+"cn=Smith\\, John,cn=Users,dc=example,dc=net"  
+"cn=Public\\, Joe,cn=Users,dc=example,dc=net"  
+"cn=Normal\\, Jane,cn=Users,dc=example,dc=net"
+```
 
 _Note the double backslash._ This will cause problems when Log Parser is used to put this information into LDIF format.
 

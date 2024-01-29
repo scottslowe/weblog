@@ -153,7 +153,9 @@ After this command has been run, Solaris will create the LDAP configuration in `
 
 I think it's necessary at this point to restart the LDAP client service:
 
-    svcadm restart svc:/network/ldap/client:default
+```text
+ svcadm restart svc:/network/ldap/client:default
+ ```
 
 Use the `svcs -a | grep ldap` command to verify the exact name of the LDAP client service on your Solaris server.
 

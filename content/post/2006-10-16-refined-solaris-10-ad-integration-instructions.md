@@ -84,7 +84,9 @@ The following steps need to be performed on each Solaris server that will authen
 
 To enable reliable TGT validation (this ensures that the Kerberos ticket returned by a KDC actually came from the KDC and not a spoofed server), you'll need to edit the hosts file. On Solaris 10, this is found in `/etc/inet/hosts` and is read-only, even for root. Edit this file (changing permissions as necessary) so that the line with the server's IP address looks something like this:
 
-    10.1.1.1        hostname.example.com hostname loghost
+```text
+10.1.1.1        hostname.example.com hostname loghost
+```
 
 What we're doing here is making sure that the server's fully qualified domain name (not just the short hostname) is the first name entry on the line for the server's IP address.
 
@@ -165,13 +167,17 @@ After this command has been run, Solaris will create the LDAP configuration in `
 
 While you're editing `/etc/nsswitch.conf`, be sure to add a "dns" entry at the end of the line for hosts:
 
-    hosts          files dns
+```text
+hosts          files dns
+```
 
 This will help ensure that Solaris is properly configured to use DNS for host name resolution.
 
 I think it's necessary at this point to restart the LDAP client service:
-    
-    svcadm restart svc:/network/ldap/client:default
+
+```text
+svcadm restart svc:/network/ldap/client:default
+```
 
 Use the `svcs -a | grep ldap` command to verify the exact name of the LDAP client service on your Solaris server.
 
@@ -179,7 +185,9 @@ Use the `svcs -a | grep ldap` command to verify the exact name of the LDAP clien
 
 You'll also need to make sure that the DNS client is enabled and running. Using `svcs -a | grep dns` will help you identify the correct service, which you can then enable with svcadm:
 
-    svcadm enable svc:/network/dns/client:default
+```text
+svcadm enable svc:/network/dns/client:default
+```
 
 Test DNS resolution using either the `host` or `nslookup` commands.
 

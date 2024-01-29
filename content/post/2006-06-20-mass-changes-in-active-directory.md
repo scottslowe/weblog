@@ -25,9 +25,11 @@ First, we need to get some raw data to work with. In this scenario, we're going 
 
 To get the information we need to accomplish that, we'll first use `csvde` to export information from Active Directory in CSV (comma-separated values) format:
 
-	csvde -f c:\output.csv
-	-d "ou=Users,ou=Atlanta,ou=Locations,dc=example,dc=net"
-	-r "(objectclass=user)" -l dn,mail
+```text
+csvde -f c:\output.csv
+-d "ou=Users,ou=Atlanta,ou=Locations,dc=example,dc=net"
+-r "(objectclass=user)" -l dn,mail
+```
 
 Be sure to type this command all on a single line, not wrapped as it is displayed here. This exports only the DN and mail attributes (as specified by the `-l` switch) for users in the Locations/Atlanta/Users OU to a file named `output.csv`.
 
@@ -82,7 +84,9 @@ The dash is important, by the way. Refer to [this Microsoft article](http://www.
 
 Now, with our freshly created `output.ldf` file ready, we can import the data back into Active Directory to make the desired changes:
 
-	ldifde -i -f c:\output.ldf
+```text
+ldifde -i -f c:\output.ldf
+```
 
 This will import the LDIF file back into Active Directory and make the requested changes. Be sure to use the `-j` switch if logs of the changes are needed; otherwise, no logging is performed.
 

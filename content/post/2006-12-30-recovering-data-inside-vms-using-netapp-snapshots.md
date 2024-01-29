@@ -68,8 +68,10 @@ We can view the list of snapshots using `snap list vol_name`, where "vol_name" i
 
 Now, we can make a LUN clone from one of these snapshots and map it to an igroup (this would normally all be on a single line, but I've wrapped it here for readability):
 
-	lun clone create /vol/vol_name/lun0_clone -b /vol/vol_name/lun0_vmfs nightly.1  
-	lun map /vol/vol_name/lun0_clone igroup_name 0
+```bash
+lun clone create /vol/vol_name/lun0_clone -b /vol/vol_name/lun0_vmfs nightly.1  
+lun map /vol/vol_name/lun0_clone igroup_name 0
+```
 
 The LUN clone has now been created and presented back to the igroup named "igroup\_name" as LUN ID 0. A rescan of the storage adapters in ESX Server (iSCSI was being used in this case) will now show the LUN clone as "snap-00000001-lun0_vmfs" (the number will change depending upon how many snapshot LUNs have been presented to the server farm). Now that we have access to the VMFS, we can do any number of things:
 

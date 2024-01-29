@@ -33,7 +33,7 @@ On top of Spotlight I've added a number of pieces:
 
 * _Saved searches:_ To help group together documents, I use a small selection of saved searches---aka Smart Folders---based on raw Spotlight queries. Using raw Spotlight queries allows a finer level of control over what items are returned by the search. For example, the following Spotlight query shows me only active project-related documents:
 
-	(kMDItemFinderComment =*Proj*) && (kMDItemFinderComment != *Inactive*)
+        (kMDItemFinderComment = *Proj*) && (kMDItemFinderComment != *Inactive*)
 
 I'm still fine-tuning my use of raw Spotlight queries, trying to make sure that I stick to indexed metadata so that Spotlight doesn't have to perform a real-time search everytime I open the Smart Folder. I'd appreciate anyone who has some tips there to share them in the comments.
 

@@ -60,10 +60,12 @@ The [VMware](http://www.vmware.com/) white paper then instructed to modify the `
 
 Next, I edited the `vmware-authd` file in `/etc/pam.d`, which connects the vmware-authd daemon to the PAM modules for authentication. After the edits, the `/etc/pam.d/vmware-authd` file looked like this:
 
-    #%PAM-1.0
-    auth       sufficient   /lib/security/pam_unix_auth.so shadow nullok
-    auth       required     /lib/security/pam_krb5.so use_first_pass
-    account    required     /lib/security/pam_unix_acct.so
+```text
+#%PAM-1.0
+auth       sufficient   /lib/security/pam_unix_auth.so shadow nullok
+auth       required     /lib/security/pam_krb5.so use_first_pass
+account    required     /lib/security/pam_unix_acct.so
+```
 
 Finally, still following the instructions, I created a user account on the ESX Server (using the `useradd` command there in the COS) that matched the username of an account in Active Directory. At this point, I was ready to test connectivity.
 

@@ -27,23 +27,31 @@ adfind -b ou=Groups,dc=example,dc=net -s subtree
 
 This produces a list of groups in the Groups OU at the root of the domain example.net in CSV format, listing the full DN and the group's display name. It will look a little something like this:
 
-	"CN=Dallas Users,DC=example,DC=net","Dallas Users"  
-	"CN=Sacramento Users,DC=example,DC=net","Sacramento Users"  
-	"CN=Lexington Users,DC=example,DC=net","Lexington Users"
+```text
+"CN=Dallas Users,DC=example,DC=net","Dallas Users"  
+"CN=Sacramento Users,DC=example,DC=net","Sacramento Users"  
+"CN=Lexington Users,DC=example,DC=net","Lexington Users"
+```
 
 Apply this regex to the file (using your regex-capable text editing tool of choice; I used a Win32 port of `sed`):
 
-	s/(\",\")/\1SG-/g
+```text
+s/(\",\")/\1SG-/g
+```
 
 The command line, if you were to use `sed`, would look something like:
 
-	sed -r -e s/(\",\")/\1SG-/g input-file.csv > output-file.csv`
+```bash
+sed -r -e s/(\",\")/\1SG-/g input-file.csv > output-file.csv
+```
 
 After this command (which would run _very_ fast, even for listings of thousands of groups), the file would look like this:
 
-	"CN=Dallas Users,DC=example,DC=net","SG-Dallas Users"  
-	"CN=Sacramento Users,DC=example,DC=net","SG-Sacramento Users"  
-	"CN=Lexington Users,DC=example,DC=net","SG-Lexington Users"
+```text
+"CN=Dallas Users,DC=example,DC=net","SG-Dallas Users"  
+"CN=Sacramento Users,DC=example,DC=net","SG-Sacramento Users"  
+"CN=Lexington Users,DC=example,DC=net","SG-Lexington Users"
+```
 
 Now, all your groups have an "SG-" prefix (for **S**ecurity **G**roup, of course).
 
@@ -61,19 +69,22 @@ adfind -b ou=NewCompanyB,dc=example,dc=net -s subtree
 
 This will create a more complex listing that includes full DN, name, and display name attributes of the users in that OU. With this file, use `sed` to transform it automagically:
 
-	sed -r -e s/(,DC=net\",\")(.*)(\",\")(.*)(\")($)/\1\2 [New 
-	Org]\3\4 [New Org]\5\6/g usr-compb-list-1.csv > output-file.csv
+```bash
+sed -r -e s/(,DC=net\",\")(.*)(\",\")(.*)(\")($)/\1\2 [New Org]\3\4 [New Org]\5\6/g usr-compb-list-1.csv > output-file.csv
+```
 
 You may find it easier to put the regex in a file (say, called `fixnames.sed` or similar) and use this command instead:
 
-	sed -r -f fixnames.sed usr-compb-list-1.csv > output-file.csv
+```bash
+sed -r -f fixnames.sed usr-compb-list-1.csv > output-file.csv
+```
 
 When this command is complete, your `output-file.csv` would look something like this:
 
-	"CN=Smith\, John,OU=NewCompanyB,DC=example,DC=net",  
-	"Smith, John [New Org]","Smith, John [New Org]"  
-	"CN=Public\, Joan,OU=NewCompanyB,DC=example,DC=net",  
-	"Public, Joan [New Org]","Public, Joan [New Org]"
+```text
+"CN=Smith\, John,OU=NewCompanyB,DC=example,DC=net","Smith, John [New Org]","Smith, John [New Org]"
+"CN=Public\, Joan,OU=NewCompanyB,DC=example,DC=net","Public, Joan [New Org]","Public, Joan [New Org]"
+```
 
 (Each entry would all be on a single line; they've been wrapped here for readability.)
 

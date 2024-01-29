@@ -18,5 +18,4 @@ RSS subscribers may see some "updated" articles as a result of the re-categoriza
 
 **UPDATE 1 Aug 2017:** As part of a category re-organization, the Virtualization category no longer exists. Check [the "virtualization" tag][1] instead for virtualization-related posts.
 
-
 [1]: /tags/virtualization/

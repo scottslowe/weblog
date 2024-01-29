@@ -102,7 +102,6 @@ Also, even though the "validate = true" setting in `/etc/krb5.conf` implies that
 
 If anyone finds any errors, discrepancies, or inaccuracies in this article, please let me know and I'll correct them as soon as possible.
 
-
 [1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
 [2]: {{< relref "2006-04-27-linux-ad-integration-with-windows-server-2003-r2.md" >}}
 [3]: {{< relref "2006-07-28-active-directory-and-vas.md" >}}

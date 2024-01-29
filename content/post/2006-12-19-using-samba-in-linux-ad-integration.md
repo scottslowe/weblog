@@ -52,6 +52,5 @@ I used this process to integrate a new [CentOS](http://www.centos.org/) 4.4 serv
 
 Thanks to those readers who suggested the use of Samba!
 
-
 [1]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
 [2]: {{< relref "2006-08-10-kerberos-based-sso-with-apache.md" >}}

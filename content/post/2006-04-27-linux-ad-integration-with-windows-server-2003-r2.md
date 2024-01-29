@@ -45,7 +45,7 @@ For each Linux-based server that will be authenticating against Active Directory
 
 2. Use the following command at a command prompt to configure the new computer account:  
 
-``` text
+```text
 ktpass -princ host/fqdn@REALM -mapuser DOMAIN\name$
 -crypto DES-CBC-MD5 -pass password -ptype KRB5_NT_PRINCIPAL
 -out filename
@@ -59,7 +59,7 @@ If you need to rebuild the Linux server for whatever reason, you'll need to dele
 
 Follow the steps below to configure the Linux server for authentication against Active Directory.
 
-1. Make sure that the appropriate Kerberos libraries, OpenLDAP, pam\_krb5, and nss\_ldap are installed. If they are not installed, install them.
+1. Make sure that the appropriate Kerberos libraries, OpenLDAP, `pam_krb5`, and `nss_ldap` are installed. If they are not installed, install them.
 
 2. Be sure that time is being properly synchronized between Active Directory and the Linux server in question. Kerberos requires time synchronization.
 
@@ -75,13 +75,13 @@ Follow the steps below to configure the Linux server for authentication against 
 
 That should be it. Once you do that, you should be able to use `kinit` from a Linux shell prompt (for example, `kinit aduser`) and generate a valid Kerberos ticket for the specified Active Directory account.
 
-At this point, any PAM-aware service that is configured to use the stacked system file (such as the system-auth configuration on Red Hat-based distributions) will use Active Directory for authentication. Note, however, that unless you also add the pam\_mkhomedir.so module in the PAM configuration, home directories will have to be created manually for any Active Directory account that may log on to that server. (I generally recommend the use of pam\_mkhomedir.so in this situation.)
+At this point, any PAM-aware service that is configured to use the stacked system file (such as the system-auth configuration on Red Hat-based distributions) will use Active Directory for authentication. Note, however, that unless you also add the `pam_mkhomedir.so` module in the PAM configuration, home directories will have to be created manually for any Active Directory account that may log on to that server. (I generally recommend the use of `pam_mkhomedir.so` in this situation.)
 
 This configuration was tested on Red Hat Linux 9.0 as well as CentOS 4.3.
 
 **UPDATE:** An [updated version][2] of these instructions has been posted.
 
-[1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
-[2]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}
 [gist-1]: https://gist.github.com/scottslowe/67a3f8c36270c7e6376b
 [gist-2]: https://gist.github.com/scottslowe/a7c89505c46a13d95ebe
+[1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
+[2]: {{< relref "2006-08-08-linux-active-directory-and-windows-server-2003-r2-revisited.md" >}}

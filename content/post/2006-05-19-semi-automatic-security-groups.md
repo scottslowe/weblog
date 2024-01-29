@@ -20,7 +20,7 @@ Using the `dsquery` and `dsmod` tools in Windows Server 2003, we can create a co
 
 First, we use the `dsquery *` command, which allows us to define a custom LDAP query to find any kind of object within Active Directory. Let's say we are interested in automatically populating departmental security groups based on the department attribute for each user object. To find all the members of the Engineering group in Atlanta, we'd use a command like this (this has been broken into three lines for readability, but should be typed in as a single line):
 
-``` text
+```text
 dsquery * ou=Users,ou=Atlanta,ou=Locations,dc=example,dc=net 
 -filter "(&(objectcategory=person)(objectclass=user)
 (department=Engineering))" -limit 1000
@@ -28,7 +28,7 @@ dsquery * ou=Users,ou=Atlanta,ou=Locations,dc=example,dc=net
 
 This command will return the DNs of those user objects in the Locations/Atlanta/Users OU whose department attribute is set to Engineering. We can then pipe that output to the `dsmod` command, like so (again, lines have been broken for readability but this should be entered as a single line):
 
-``` text
+```text
 dsquery * ou=Users,ou=Atlanta,ou=Locations,dc=example,dc=net 
 -filter "(&(objectcategory=person)(objectclass=user)
 (department=Engineering))" -limit 1000 | dsmod group "cn=Atlanta 
@@ -42,12 +42,14 @@ There's a couple of problems, however. Once the command has run once, then subse
 
 First, we get the members of the group using the `dsget` command:
 
-	dsget group "cn=Atlanta Engineering Dept,ou=Groups,
-	ou=Atlanta,ou=Locations,dc=example,dc=net" -members
+```text
+dsget group "cn=Atlanta Engineering Dept,ou=Groups,\
+ou=Atlanta,ou=Locations,dc=example,dc=net" -members
+```
 
 This returns a list of the DNs for those users that are currently members of the specified group. We pipe that to the `dsmod` command again to clear the group out:
 
-``` text
+```text
 dsget group "cn=Atlanta Engineering Dept,ou=Groups,
 ou=Atlanta,ou=Locations,dc=example,dc=net" -members | dsmod group 
 "cn=Atlanta Engineering Dept,ou=Groups,ou=Atlanta,ou=Locations,

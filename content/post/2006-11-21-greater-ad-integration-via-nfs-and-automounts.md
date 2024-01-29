@@ -110,7 +110,7 @@ Word of warning: be sure to include UNIX-enabled groups and/or users in the NTFS
 
 To test your NFS share, use this command from Solaris or Linux, respectively (the first command is for Solaris, the second is for Linux):
 
-	mount -F nfs nfssrvr.example.com:/home/nfs /mnt/nfs  
+    mount -F nfs nfssrvr.example.com:/home/nfs /mnt/nfs  
     mount -t nfs nfssrvr.example.com:/home/nfs /mnt/nfs
 
 If this mounts the NFS share without any problems, then you should be ready to roll.

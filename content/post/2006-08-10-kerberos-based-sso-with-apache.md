@@ -27,7 +27,7 @@ These steps need to be repeated for each Apache server that will authenticating 
 
 2. For each account that was created, run the `ktpass.exe` command to generate a unique keytab for each account. The command will look something like this (substitute the appropriate values where necessary):  
 
-``` text
+```text
 ktpass -princ HTTP/fqdn@REALM -mapuser DOMAIN\account  
 -crypto DES-CBC-MD5 +DesOnly -pass password -ptype KRB5_NT_PRINCIPAL  
 -out filename
@@ -43,11 +43,11 @@ Now we're ready to move on to configuring the Apache servers.
 
 Repeat these steps for each Apache server. In case I haven't already mentioned this, I'm assuming you're running Apache 2.0 on Linux, and not on some flavor of Windows.
 
-1. Download and install the mod\_auth\_kerb Apache module.
+1. Download and install the `mod_auth_kerb` Apache module.
 
 2. Add the following directives to the Apache configuration, either in `httpd.conf` or in the `conf.d` directory in its own file (my installation of mod_auth_kerb created an `auth_kerb.conf` in `conf.d`). You'll need to substitute the correct values for the KrbAuthRealms directive (which should be your Active Directory domain name in UPPERCASE) and the location and name of your keytab (which you'll copy over in the next step):
 
-    ``` apache
+    ```apache
     LoadModule auth_kerb_module modules/mod_auth_kerb.so  
 
     <Location /secured>  
@@ -67,7 +67,7 @@ Repeat these steps for each Apache server. In case I haven't already mentioned t
 
 5. Restart the Apache HTTP daemon for the configuration changes to be read and applied.
 
-Assuming that your Apache server is accessible as `web.example.com`, you should now be able to fire up a recent version of Internet Explorer (one that supports Integrated Windows Authentication) and navigate to the "http://web.example.com/secured" URL and gain access, _without getting prompted for authentication._ A quick review of the access logs (typically `/var/log/httpd/access_log`) shows that you are being authenticated as the user that is currently logged on to Windows. (If the browser you are using doesn't support the transparent authentication, you'll get prompted for a username and password, in which case you can enter your Active Directory username and password and gain access to the site.)
+Assuming that your Apache server is accessible as `web.example.com`, you should now be able to fire up a recent version of Internet Explorer (one that supports Integrated Windows Authentication) and navigate to the `http://web.example.com/secured` URL and gain access, _without getting prompted for authentication._ A quick review of the access logs (typically `/var/log/httpd/access_log`) shows that you are being authenticated as the user that is currently logged on to Windows. (If the browser you are using doesn't support the transparent authentication, you'll get prompted for a username and password, in which case you can enter your Active Directory username and password and gain access to the site.)
 
 If this doesn't work, go back and double-check your `ktpass.exe` command (noting that the case of the Kerberos principal specified by the "-princ" option is important, as it is case-sensitive). Also check the permissions on the keytab after it has been copied over to the Linux server; it must be readable by the Apache user (and should not be readable by any other users or groups). Finally, try unchecking the "Enable Integrated Windows Authentication" option in Internet Explorer, restarting IE, re-checking that box, and then restarting IE again. (Don't ask why, but it does seem to help in some instances.)
 

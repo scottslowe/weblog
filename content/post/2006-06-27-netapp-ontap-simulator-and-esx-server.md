@@ -29,7 +29,7 @@ Finally, after digging around in the documentation for the simulator, I came acr
 
 The fix is this:
 
-	echo PromiscuousAllowed yes > /proc/vmware/net/vmnic0/config
+    echo PromiscuousAllowed yes > /proc/vmware/net/vmnic0/config
 
 Replace `vmnic0` in this command with whatever virtual switch or NIC team the virtual machine in question is using. Once I did this (from the Service Console on the ESX Server) and rebooted the virtual machine running the ONTAP Simulator, it worked like a champ.
 

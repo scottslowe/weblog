@@ -38,7 +38,7 @@ Once these four steps are done, we are ready to move on to configuring ESX Serve
 
 As needed, you'll need to create flexible volumes (FlexVols) in which to store the LUNs. The command would look something like this:
 
-	vol create fv_serverluns -s volume <aggregate name> 100g
+    vol create fv_serverluns -s volume <aggregate name> 100g
 
 This creates a 100GB FlexVol named "fv_serverluns" with a volume space guarantee (meaning that the 100GB is preallocated to the volume and unavailable for use by other volumes in the same aggregate).
 
@@ -48,11 +48,11 @@ Since the volume will serve as the container for the LUN(s), you'll need to crea
 
 Now we'll create the LUNs that will be exposed to the servers for their use. Use the following command to create a LUN:
 
-	lun create -s 10g -t vmware <full path to LUN>
+    lun create -s 10g -t vmware <full path to LUN>
 
 For full path to LUN, specify the name of the containing volume and the name of the LUN you'd like to create. For example, to create a LUN called "citrix\_lun" on our volume named "fv\_serverluns", the path would be:
 
-	/vol/fv_serverluns/citrix_lun
+    /vol/fv_serverluns/citrix_lun
 
 Repeat this command for each LUN that needs to be created. Be mindful of the fractional reserve and snapshot reserve when allocating space in a volume to LUNs.
 
@@ -62,12 +62,12 @@ In order to make the LUNs visible to connected hosts, we must create an initiato
 
 To create an iSCSI igroup, use the following commands:
 
-	igroup create -i -t vmware <igroup name>  
-	igroup add <igroup name> <iSCSI node name of ESX host>
+    igroup create -i -t vmware <igroup name>  
+    igroup add <igroup name> <iSCSI node name of ESX host>
 
 For each ESX host that will connect to these LUNs, use this command (or set default security):
 
-	iscsi security add -i <iSCSI node name> -s CHAP -p <password> -n <username>
+    iscsi security add -i <iSCSI node name> -s CHAP -p <password> -n <username>
 
 Once the igroup has been created and security set, then you can map the LUNs to the igroup to make them visible to the hosts.
 
@@ -77,11 +77,11 @@ Mapping the LUNs merely makes a connection between the LUN and an associated igr
 
 To map the LUNs, use the following commands:
 
-	lun map <full path to LUN> <igroup name> <LUN ID>
+    lun map <full path to LUN> <igroup name> <LUN ID>
 
 For example, if you had a LUN named lun\_server1 in the flexible volume fv\_serverluns, then the full path to the LUN would be something like `/vol/fv_serverluns/lun_server1`. To connect that LUN to an igroup name "iscsi", you would use this command:
 
-	lun map /vol/fv_serverluns/lun_server1 iscsi 0
+    lun map /vol/fv_serverluns/lun_server1 iscsi 0
 
 That would map the LUN as LUN ID 0 to that initiator group. Of course, you must use a unique LUN ID for each LUN that you map to an initiator group. That is, LUN IDs must be unique within an initiator group, but not between initiator groups.
 
@@ -109,11 +109,11 @@ In VirtualCenter, enabling the software iSCSI initiator involves selecting a hos
 
 From the command-line (perhaps via an SSH session to the ESX server), you can simply type:
 
-	esxcfg-swiscsi -e
+    esxcfg-swiscsi -e
 
 That will enable software iSCSI. And while we're here at the command line, let's also enable outbound iSCSI traffic through the ESX firewall with this command:
 
-	esxcfg-firewall -e swISCSIClient
+    esxcfg-firewall -e swISCSIClient
 
 Now we're ready to move on to configuring the initiator.
 

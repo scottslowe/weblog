@@ -23,19 +23,23 @@ Second, we need to enumerate the membership of those universal groups so that we
 To find all the universal groups, we turn to the `dsquery *` command. The `dsquery group` command won't work here because it has no way of specifying to list/find only universal groups. Instead, we'll use a generic LDAP query with the `dsquery *` command to find universal groups.
 
 But how exactly do we identify universal groups? Kudos to Microsoft's Scripting Guy for providing the [method to identify universal groups](http://www.microsoft.com/technet/scriptcenter/resources/qanda/aug05/hey0817.mspx). Based on that information (follow the link and read the article real quick, then come back), we come up with this command:
-    
-    dsquery * "dc=example,dc=net" -scope subtree 
-    -filter "(&(objectCategory=group)(groupType=-2147483640))"
+
+```text
+dsquery * "dc=example,dc=net" -scope subtree \
+-filter "(&(objectCategory=group)(groupType=-2147483640))"
+```
 
 This command will return the DN of all universal groups. Note that it may be necessary to add a `-limit` parameter to allow the `dsquery` statement to return _all_ of the universal groups (the default is 100, if I recall correctly).
 
 ### Enumerating Membership in Universal Groups
 
 Now that we have the DNs for the universal groups, we can use the `dsget group` command to show the membership for those groups, like so:
-    
-    dsquery * "dc=example,dc=net" -scope subtree 
-    -filter "(&(objectCategory=group)(groupType=-2147483640))" |
-    dsget group -members
+
+```text
+dsquery * "dc=example,dc=net" -scope subtree \
+-filter "(&(objectCategory=group)(groupType=-2147483640))" | \
+dsget group -members
+```
 
 This will return the membership of each of the universal groups. It may be helpful to redirect the output to a text file for future storage or additional manipulation.
 

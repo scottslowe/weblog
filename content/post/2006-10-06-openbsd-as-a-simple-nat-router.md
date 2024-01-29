@@ -21,11 +21,15 @@ First, configure the network interfaces appropriately. Typically, this will invo
 
 Next, enable IP forwarding by editing `/etc/sysctl.conf` and making the following change (the line is present in a default installation, you just need to uncomment it):
 
-    net.inet.ip.forwarding=1
+```text
+net.inet.ip.forwarding=1
+```
 
 Next, we'll need to enable the OpenBSD packet filter, pf. This is typically done by creating/editing the file `/etc/rc.conf.local` and making sure the following line is present:
 
-    pf=YES
+```text
+pf=YES
+```
 
 Next, we'll configure pf for network address translation (NAT) and simple packet filtering. If you've never configured pf before, I highly recommend this [OpenBSD PF guide](http://www.openbsd.org/faq/pf/index.html); it will introduce you to the functionality of this very powerful packet filtering engine. (Sometimes I wish [Mac OS X](http://www.apple.com/macosx/) would switch to using pf.) You configure pf by placing a ruleset into `/etc/pf.conf`.
 

@@ -18,11 +18,15 @@ There are two pieces to the formula for bulk adding records to a DNS zone. First
 
 The format of the `dnscmd.exe` tool to add a record in DNS is:
 
-	dnscmd <server> /RecordAdd <zone> <node> <RR type> <RR data>
+```text
+dnscmd <server> /RecordAdd <zone> <node> <RR type> <RR data>
+```
 
 To create a host (A) record, the actual command would look like this:
 
-	dnscmd . /RecordAdd example.net host1 A 10.20.30.40
+```text
+dnscmd . /RecordAdd example.net host1 A 10.20.30.40
+```
 
 The "." syntax here refers to the local server; this can be easily substituted with an IP address or hostname of a remote DNS server.
 
@@ -35,9 +39,11 @@ for /f "tokens=1,2" %1 in (newhosts.txt) do
 
 This assumes that the "newhosts.txt" file contains something like this:
 
-	host1 10.20.30.40  
-	host2 11.22.33.44  
-	host3 12.24.36.48
+```text
+host1 10.20.30.40  
+host2 11.22.33.44  
+host3 12.24.36.48
+```
 
 Here's a small twist, though: What if your list isn't space delimited, but comma delimited? No problem, just adjust your command accordingly:
 

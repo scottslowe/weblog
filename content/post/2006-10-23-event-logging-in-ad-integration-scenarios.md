@@ -27,19 +27,19 @@ After the login, I reviewed the event logs and found a large number of entries f
 
 ```text
     Authentication Ticket Request:
-     	User Name:		bjones
-     	Supplied Realm Name:	EXAMPLE.NET
-     	User ID:			EXAMPLE\bjones
-     	Service Name:		krbtgt
-     	Service ID:		EXAMPLE\krbtgt
-     	Ticket Options:		0x40800000
-     	Result Code:		-
-     	Ticket Encryption Type:	0x17
-     	Pre-Authentication Type:	2
-     	Client Address:		172.16.28.111
-     	Certificate Issuer Name:	
-     	Certificate Serial Number:	
-     	Certificate Thumbprint:	
+        User Name:      bjones
+        Supplied Realm Name:    EXAMPLE.NET
+        User ID:            EXAMPLE\bjones
+        Service Name:       krbtgt
+        Service ID:     EXAMPLE\krbtgt
+        Ticket Options:     0x40800000
+        Result Code:        -
+        Ticket Encryption Type: 0x17
+        Pre-Authentication Type:    2
+        Client Address:     172.16.28.111
+        Certificate Issuer Name:    
+        Certificate Serial Number:  
+        Certificate Thumbprint: 
     
     For more information, see Help and Support Center at 
     http://go.microsoft.com/fwlink/events.asp.
@@ -51,16 +51,16 @@ OK, that takes care of the typical Linux system. Now, what about [Solaris](http:
 
 ```text
     Service Ticket Request:
-     	User Name:		bjones@EXAMPLE.NET
-     	User Domain:		EXAMPLE.NET
-     	Service Name:		host-solarishost01
-     	Service ID:		EXAMPLE\host-solarishost01
-     	Ticket Options:		0x40800000
-     	Ticket Encryption Type:	0x3
-     	Client Address:		172.16.28.112
-     	Failure Code:		-
-     	Logon GUID:		{3a653f45-928c-1f72-2c59-ca951986ac42}
-     	Transited Services:	-
+        User Name:      bjones@EXAMPLE.NET
+        User Domain:        EXAMPLE.NET
+        Service Name:       host-solarishost01
+        Service ID:     EXAMPLE\host-solarishost01
+        Ticket Options:     0x40800000
+        Ticket Encryption Type: 0x3
+        Client Address:     172.16.28.112
+        Failure Code:       -
+        Logon GUID:     {3a653f45-928c-1f72-2c59-ca951986ac42}
+        Transited Services: -
     
     For more information, see Help and Support Center at 
     http://go.microsoft.com/fwlink/events.asp.

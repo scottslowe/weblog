@@ -30,26 +30,26 @@ There's a bit of confusion regarding NIC teaming in ESX Server and when switch s
 
 To create a NIC team that will work for both inbound and outbound traffic, we'll create a port channel using the following commands:
 
-	s3(config)#int port-channel1  
-	s3(config-if)#description NIC team for ESX server  
-	s3(config-if)#int gi0/23  
-	s3(config-if)#channel-group 1 mode on  
-	s3(config-if)#int gi0/24  
-	s3(config-if)#channel-group 1 mode on
+    s3(config)#int port-channel1  
+    s3(config-if)#description NIC team for ESX server  
+    s3(config-if)#int gi0/23  
+    s3(config-if)#channel-group 1 mode on  
+    s3(config-if)#int gi0/24  
+    s3(config-if)#channel-group 1 mode on
 
 This creates port-channel1 (you'd need to change this name if you already have port-channel1 defined, perhaps for switch-to-switch trunk aggregation) and assigns GigabitEthernet0/23 and GigabitEthernet0/24 into team. Now, however, you need to ensure that the load balancing mechanism that is used by both the switch and ESX Server matches. To find out the switch's current load balancing mechanism, use this command in enable mode:
 
-	show etherchannel load-balance
+    show etherchannel load-balance
 
 This will report the current load balancing algorithm in use by the switch. On my Catalyst 3560 running IOS 12.2(25), the default load balancing algorithm was set to "Source MAC Address". On my ESX Server 3.0.1 server, the default load balancing mechanism was set to "Route based on the originating virtual port ID". The result? The NIC team didn't work at all---I couldn't ping any of the VMs on the host, and the VMs couldn't reach the rest of the physical network. It wasn't until I matched up the switch/server load balancing algorithms that things started working.
 
 To set the switch load-balancing algorithm, use one of the following commands in global configuration mode. To enable IP-based load balancing, use this command:
 
-	port-channel load-balance src-dst-ip
+    port-channel load-balance src-dst-ip
 
 To enable MAC-based load balancing, use this command:
 
-	port-channel load-balance src-mac
+    port-channel load-balance src-mac
 
 There are other options available, but these are the two that seem to match most closely to the ESX Server options. I was unable to make this work at all without switching the configuration to "src-dst-ip" on the switch side and "Route based on ip hash" on the ESX Server side. From what I've been able to gather, the "src-dst-ip" option gives you better utilization across the members of the NIC team than some of the other options. (Anyone care to contribute a URL that provides some definitive information on that statement?)
 
@@ -61,29 +61,29 @@ In my testing, I set up the NIC team and the VLAN trunk at the same time. When I
 
 To configure the VLAN trunking, use the following commands on the physical switch:
 
-	s3(config)#int port-channel1  
-	s3(config-if)#switchport trunk encapsulation dot1q  
-	s3(config-if)#switchport trunk allowed vlan all  
-	s3(config-if)#switchport mode trunk  
-	s3(config-if)#switchport trunk native vlan 4094
+    s3(config)#int port-channel1  
+    s3(config-if)#switchport trunk encapsulation dot1q  
+    s3(config-if)#switchport trunk allowed vlan all  
+    s3(config-if)#switchport mode trunk  
+    s3(config-if)#switchport trunk native vlan 4094
 
 This configures the NIC team (port-channel1, as created earlier) as a 802.1Q VLAN trunk. You then need to repeat this process for the member ports in the NIC team:
 
-	s3(config)#int gi0/23  
-	s3(config-if)#switchport trunk encapsulation dot1q  
-	s3(config-if)#switchport trunk allowed vlan all  
-	s3(config-if)#switchport mode trunk  
-	s3(config-if)#switchport trunk native vlan 4094  
-	s3(config-if)#int gi0/24  
-	s3(config-if)#switchport trunk encapsulation dot1q  
-	s3(config-if)#switchport trunk allowed vlan all  
-	s3(config-if)#switchport mode trunk  
-	s3(config-if)#switchport trunk native vlan 4094
+    s3(config)#int gi0/23  
+    s3(config-if)#switchport trunk encapsulation dot1q  
+    s3(config-if)#switchport trunk allowed vlan all  
+    s3(config-if)#switchport mode trunk  
+    s3(config-if)#switchport trunk native vlan 4094  
+    s3(config-if)#int gi0/24  
+    s3(config-if)#switchport trunk encapsulation dot1q  
+    s3(config-if)#switchport trunk allowed vlan all  
+    s3(config-if)#switchport mode trunk  
+    s3(config-if)#switchport trunk native vlan 4094
 
 If you haven't already created VLAN 4094, you'll need to do that as well:
 
-	s3(config)#int vlan 4094  
-	s3(config-if)#no ip address
+    s3(config)#int vlan 4094  
+    s3(config-if)#no ip address
 
 The `switchport trunk native vlan 4094` command is what fixes the problem I had last time I worked with [ESX Server and VLAN trunks][1]; namely, that most switches don't tag traffic from the native VLAN across a VLAN trunk. By setting the native VLAN for the trunk to something other than VLAN 1 (the default native VLAN), we essentially force the switch to tag all traffic across the trunk. This allows ESX Server to handle VMs that are assigned to the native VLAN as well as other VLANs.
 
