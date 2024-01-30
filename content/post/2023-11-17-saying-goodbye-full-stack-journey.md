@@ -18,7 +18,7 @@ That being said, some of you are probably wondering why it ended. I mentioned th
 
 What's next? I honestly don't know. I've toyed with the idea of launching another podcast, and I've toyed with the idea of joining a podcast as a co-host. I've contemplated creating some video content, since that seems to be rather popular. I don't know. If you have a suggestion for me to consider, feel free to hit me up; I'm around on a variety of social media channels and other community spots.
 
-Regardless of what I decide to do, I will always look fondly on my time hosting Full Stack Journey. To those of you who listened to least one of the shows, thank you; to those of you who were guests, I couldn't have done it without you---you're the real stars of the show. Hosting Full Stack Journey was definitely a journey itself, and it's one that I'm thankful I took. 
+Regardless of what I decide to do, I will always look fondly on my time hosting Full Stack Journey. To those of you who listened to least one of the shows, thank you; to those of you who were guests, I couldn't have done it without you---you're the real stars of the show. Hosting Full Stack Journey was definitely a journey itself, and it's one that I'm thankful I took.
 
 [link-1]: https://blog.scottlowe.org/2016/01/08/full-stack-journey-ep001/
 [link-2]: https://packetpushers.net/podcast/the-final-journey-of-full-stack-journey/

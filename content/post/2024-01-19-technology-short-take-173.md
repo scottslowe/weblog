@@ -31,7 +31,7 @@ Welcome to Technology Short Take #173! After a lull in links to share last time 
 
 ## Networking
 
-* This article on [running WireGuard in Docker][link-8] may prove useful if that's an approach I decide to adopt for my AWS lab infrastructure. 
+* This article on [running WireGuard in Docker][link-8] may prove useful if that's an approach I decide to adopt for my AWS lab infrastructure.
 * Natalie Marek [educates readers on VPC endpoints][link-13].
 * Russ White [laments some of the issues][link-19] facing network engineering.
 

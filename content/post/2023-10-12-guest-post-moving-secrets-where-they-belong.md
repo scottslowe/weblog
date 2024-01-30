@@ -12,7 +12,7 @@ title: "Guest Post: Moving Secrets Where They Belong"
 url: /2023/10/12/guest-post-moving-secrets-where-they-belong/
 ---
 
-_by Simen A.W. Olsen_
+(This is a guest post by Simen A.W. Olsen.)
 
 Pulumi recently shipped [Pulumi ESC][link-1], which adds the "Environment" tab to Pulumi Cloud. For us at Bjerk, this means we can move secrets into a secrets manager like Google Secrets Manager. Let me show you how we did it!<!--more-->
 
@@ -22,7 +22,7 @@ The secrets are shared between stacks using StackReferences, which has served us
 
 ## Improving security
 
-One issue with our current setup is that we publicly store encrypted secrets in our repository. Previously, we've thought of using Google Secrets Manager with the [`GetSecret`][link-5] function. That comes with its own territory, such as permissions to the secret and managing those permissions---not to mention that we already use multiple secret managers/vaults.
+One issue with our current setup is that we publicly store encrypted secrets in our repository. Previously, we've thought of using Google Secrets Manager with the [`GetSecret`][link-4] function. That comes with its own territory, such as permissions to the secret and managing those permissions---not to mention that we already use multiple secret managers/vaults.
 
 Now, with Pulumi ESC, it's time to pick this up again. Pulumi ESC enables us to compose environments, which means we can throw away the stack references.  With Pulumi ESC, we can also expose configuration and secrets as environment variables by running `esc run <environment> -- <command>`; more on that below.
 
@@ -40,7 +40,7 @@ $ pulumi env ls
 bjerk/common
 ```
 
-Next, we wanted to wire up Google Secrets Manager. The nice thing is that we're using [Workload Identity federation][link-6]---which I'm not going to go into right now---and that means we've given Pulumi Cloud access to create a short-lived access token to a service account.
+Next, we wanted to wire up Google Secrets Manager. The nice thing is that we're using [Workload Identity federation][link-5]---which I'm not going to go into right now---and that means we've given Pulumi Cloud access to create a short-lived access token to a service account.
 
 Our basic example looks like this:
 
@@ -107,9 +107,9 @@ GITHUB_TOKEN=a-secret
 
 ## What's next?
 
-We are eager to see how Pulumi ESC will evolve. It has already improved a lot of our secrets handling! 
+We are eager to see how Pulumi ESC will evolve. It has already improved a lot of our secrets handling!
 
-One thing I hope to see is a password manager as a provider. At Bjerk, we've learned that storing some secrets in a typical password manager is practical, such as the API keys that we cannot programmatically renew. 
+One thing I hope to see is a password manager as a provider. At Bjerk, we've learned that storing some secrets in a typical password manager is practical, such as the API keys that we cannot programmatically renew.
 
 I imagine being able to hook up Bitwarden or 1Password in the future with something like this:
 
@@ -148,5 +148,4 @@ _This article was written by Simen A. W. Olsen. Simen is the manager at Bjerk (a
 [link-2]: https://github.com/simenandre/rotate-pulumi-secret
 [link-3]: https://github.com/simenandre/get-pulumi-secret
 [link-4]: https://www.pulumi.com/registry/packages/gcp/api-docs/secretmanager/getsecret/
-[link-5]: https://www.pulumi.com/registry/packages/gcp/api-docs/secretmanager/getsecret/
-[link-6]: https://cloud.google.com/iam/docs/workload-identity-federation
+[link-5]: https://cloud.google.com/iam/docs/workload-identity-federation

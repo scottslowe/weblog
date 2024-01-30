@@ -82,7 +82,7 @@ Welcome to Technology Short Take #164! I've got another collection of links to a
 
 ## Career/Soft Skills
 
-* Ioannis Moustakis [shares 44 books for DevOps, site reliability engineering (SRE), and cloud engineers][link-4]. There are some familiar titles here, as well as a number of titles that I did not recognize, and I appreciate the inclusion of some business- and career-focused titles as well. 
+* Ioannis Moustakis [shares 44 books for DevOps, site reliability engineering (SRE), and cloud engineers][link-4]. There are some familiar titles here, as well as a number of titles that I did not recognize, and I appreciate the inclusion of some business- and career-focused titles as well.
 * I believe the central thesis of [this article][link-5] to be true: we do our best work when we truly focus.
 
 That's all for now! If you found something useful here, feel free to share a link to this post via your social media channels. I'd also love to hear from you if you have any feedback on how I might improve posts like this (or other content); feel free to contact me [on Twitter][link-99], [on Mastodon][link-98], or on Slack (the [Kubernetes][link-96] and [Pulumi][link-97] Slack communities are where you'll find me most often). Thanks for reading!

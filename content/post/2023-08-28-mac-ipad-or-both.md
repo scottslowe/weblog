@@ -26,7 +26,7 @@ Something else John says really resonates with me, though:
 
 > But I know I’m best off, productivity-wise, using my iPad basically as a single-tasking consumption device for long-form reading and video watching.
 
-In long-past articles (see [here][xref-1] and [here][xref-2]), I describe how I classify many of the applications I use into different "use case" categories: 
+In long-past articles (see [here][xref-1] and [here][xref-2]), I describe how I classify many of the applications I use into different "use case" categories:
 
 * _Consumption:_ These are the applications I use to gather ("consume") information. These would be things like NetNewsWire, web browsers, chat/messaging apps, and the like.
 * _Organization:_ These are the apps for organizing information. Mostly this categories resolves around organizing tasks/items/commitments.
