@@ -40,15 +40,17 @@ This approach doesn't work without both pieces. The Kerberos authentication take
 
 The problem lie with the `/etc/ldap.conf` file. See, the nss_ldap libraries (which are responsible for using LDAP---and other sources, as defined in `/etc/nsswitch.conf`---as the backend information database for account information) are controlled by this file, but `ldapsearch` does not use it. Specifically, the error was with the account that is used to bind (or connect) to Active Directory to perform the searches.
 
-There are two ways of specifying this account in `/etc/ldap.conf`. You can use the full DN, which looks something like "cn=Scott Lowe,cn=Users,dc=example,dc=com" or "cn=John Smith,ou=Marketing,ou=Departments,dc=example,dc=com". Alternately, you can use the universal principal name (UPN), which looks something like an e-mail address, such as "slowe@example.com" or "john.smith@example.com". In this particular case, Johnny (our reader with the problem) was using the full DN, but he was using the wrong attribute in the DN. Here's the information he had:
+There are two ways of specifying this account in `/etc/ldap.conf`. You can use the full DN, which looks something like "cn=Scott Lowe,cn=Users,dc=example,dc=com" or "cn=John Smith,ou=Marketing,ou=Departments,dc=example,dc=com". Alternately, you can use the universal principal name (UPN), which looks something like an e-mail address, such as `slowe@example.com` or `john.smith@example.com`. In this particular case, Johnny (our reader with the problem) was using the full DN, but he was using the wrong attribute in the DN. Here's the information he had:
 
-	First Name: John  
-	Last Name: Smith  
-	Full Name: John Smith  
-	Display Name: John Smith  
-	UPN: jsmith@example.com  
-	SAM Account Name (downlevel logon name): jsmith  
-	Object name: jsmith
+```text
+First Name: John  
+Last Name: Smith  
+Full Name: John Smith  
+Display Name: John Smith  
+UPN: jsmith@example.com  
+SAM Account Name (downlevel logon name): jsmith  
+Object name: jsmith
+```
 
 Which of these do you suppose should be used in the DN? Full name? No. Display name? No. It must be the **_object name_**, in this case "jsmith". You can double-check your object name (or CN) using ADSI Edit or a similar utility. You _could_ use Active Directory Users and Computers, but that's typically the confusing part. In any case, once Johnny fixed the syntax for the bind account then `getent passwd` and `getent group` worked like a champ.
 

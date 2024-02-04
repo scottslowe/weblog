@@ -79,7 +79,7 @@ To join the Linux server to Active Directory, follow these steps:
 
 1. Verify the Samba configuration. Be sure the following settings are specified in `/etc/samba/smb.conf`:  
 
-	``` text
+	```text
     workgroup = <NetBIOS name of AD domain> 
     security = ads
     realm = <DNS name of AD domain>
@@ -108,7 +108,6 @@ Once you've settled on and implemented a system for dealing with home directorie
 What's not addressed in this article? Password management. In this configuration, users will most likely _not_ be able to change their password from the Linux servers and have that change properly reflected in Active Directory. I'll try to work on that for version 5 of the instructions.
 
 I hope you find this information helpful. As always, feel free to post corrections, additions, or suggestions in the comments below.
-
 
 [1]: {{< relref "2005-12-22-complete-linux-ad-authentication-details.md" >}}
 [2]: {{< relref "2006-11-28-unix-attributes-tab-and-nispropdll.md" >}}

@@ -29,12 +29,14 @@ As I see it, there are two key benefits to using FlexClones in a VMware environm
 * Second, the time is takes to create a FlexClone is minimal and does not increase significantly with the amount of data involved. Creating a FlexClone of a 100GB volume is not significantly different in time required than creating a FlexClone of a 500GB volume.
 
 The storage space savings can be very significant, especially in larger deployments, and especially when extra care is taken to minimize changes from the original to the clone. Here's an example taken from my test lab:
-    
+
+```text
     Volume               Allocated          Used    Guarantee
     mstr_vdi_fvol       16956680KB     3024696KB       volume
     vdi_fvol_clone1       399148KB      399148KB         none
     vdi_fvol_clone2       704680KB      704680KB         none
     vdi_fvol_clone3       440220KB      440220KB         none
+```
 
 As you can see above, each of the clones occupies less than 1% of the original volume's size. As the number of FlexClones multiplies, then the space savings grow proportionally. In very large deployments (VDI deployments, for example, where there may be 500, 700, or even 1,000 VMs), the storage reduction can be very substantial, and the cost savings associated with that storage reduction can be very sizable. These aren't just "pie in the sky" savings, either---we're talking real, measurable savings in the amount of SAN storage that must be purchased to host the VMs.
 

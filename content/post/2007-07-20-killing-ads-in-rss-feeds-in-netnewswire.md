@@ -17,8 +17,10 @@ I don't like advertisements in my RSS feeds. I just don't. It's not that I begru
 So, when ads started showing up in my RSS feeds from a variety of sources, I looked for a way to kill them. I came across [this article](http://www.ollicle.com/2005/aug/15/feed_ad_block.html) (at least, I believe it was this one---I'm not entirely sure) that suggested the use of userContent.css to block ads in [NetNewsWire](http://www.newsgator.com/individuals/netnewswire/). It works like a champ!
 
 Basically, you have to edit the NetNewsWire stylesheet to include a reference to your ad-blocking code, like this:
-    
-    @import url(../userContent.css);
+
+```css
+@import url(../userContent.css);
+```
 
 Then put the `userContent.css` file of your choice (apparently there are many; I think I pulled down one of the files linked to in that article) in the `~/Library/Application Support/NetNewsWire/Stylesheets` folder, restart NNW, and away you go! No more pesky ads in the RSS feeds.
 

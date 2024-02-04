@@ -57,17 +57,21 @@ Some handy `esxupdate` commands are:
 * `esxupdate update <updatename>` - Installs the specified update; can use the "-noreboot" option to prevent a reboot, useful when installing multiple patches at the same time
 
 For additional information, the `/var/log/vmware/esxdupate.log` file contains additional information appended to the log every time esxupdate does something. Tools such as grep (a perennial favorite in these parts, as regular readers will know) can be used to pick up particular pieces of information. Brian particularly liked these two commands:
-    
-    grep -i summary esxupdate.log  
-    grep -i totals esxupdate.log
+
+```shell
+grep -i summary esxupdate.log  
+grep -i totals esxupdate.log
+```
 
 These commands will show more pertinent information on the patches installed, summary information, how many were installed and how many failed, etc.
 
 To use repositories (instead of local update files), simply add the "-r" parameter with the location of the repository, like so:
-    
-    esxupdate -r file:/path/to/filename update  
-    esxupdate -r http://http server name/path/updatename update  
-    esxupdate -r ftp://ftp server name/path/updatename update
+
+```shell
+esxupdate -r file:/path/to/filename update  
+esxupdate -r http://http server name/path/updatename update  
+esxupdate -r ftp://ftp server name/path/updatename update
+```
 
 Brian also suggested the use of a shared VMFS3 LUN to store update files. That's a pretty handy idea.
 

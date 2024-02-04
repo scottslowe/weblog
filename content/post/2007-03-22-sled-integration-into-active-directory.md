@@ -44,7 +44,7 @@ On the SLED 10 client setup your config files as illustrated in the following ex
 
 We'll start first with the `/etc/hosts` file:
 
-``` text
+```text
 127.0.0.1 localhost
 10.10.10.1 WINDOWS-DC-HOSTNAME.DOMAIN.COM WINDOWS-DC-HOSTNAME
 # special IPv6 addresses
@@ -73,7 +73,7 @@ SLED uses PAM (Pluggable Authentication Mechanism) to control authentication and
 
 All these files are in turn referenced by a "master" PAM configuration file, like this:
 
-``` text
+```text
 #%PAM-1.0
 ###########line above is part of this file#################
 #/etc/pam.d/su config file
@@ -112,8 +112,10 @@ At this point, if you were successful in using `su` to switch to a Windows user,
 
 NOTE: If you happen to get yourself locked out of the system, it will be likely an `/etc/nsswitch.conf` file problem. Simply boot to the SLED 10 installation disc using the "Recover System" option, then issue these commands to change the `/etc/nsswitch.conf` file:
 
-    mount -w /dev/hda1 /mnt  
-    vi /mnt/etc/nsswitch.conf
+```shell
+mount -w /dev/hda1 /mnt  
+vi /mnt/etc/nsswitch.conf
+```
 
 Replace "/dev/hda1" with the correct notation for your system partition, and when editing `/etc/nsswitch.conf` remove "ldap" from the passwd, group, and shadow lines; only "files" or "compat" should remain. Once that's done, you can now reboot and login as root so you can troubleshoot the problem.
 
@@ -124,6 +126,5 @@ Some additional resources and information:
 [http://forums.fedoraforum.org/archive/index.php/t-29825.html](http://forums.fedoraforum.org/archive/index.php/t-29825.html)
 
 Thanks again to Shannon VanWagner for sharing this information with me so that I could post it here. As always, feel free to post any questions, clarifications, or corrections in the comments below.
-
 
 [1]: {{< relref "2006-11-28-unix-attributes-tab-and-nispropdll.md" >}}

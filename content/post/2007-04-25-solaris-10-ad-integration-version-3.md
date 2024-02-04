@@ -18,7 +18,7 @@ url: /2007/04/25/solaris-10-ad-integration-version-3/
 wordpress_id: 447
 ---
 
-Thanks to some very helpful individuals in the #solaris channel on irc.freenode.net, I've been able to get ADS support working in [Samba](http://www.samba.org/) on [Solaris 10](http://www.sun.com/software/solaris/), and thus have been able to incorporate the use of Samba in the Solaris 10-AD integration instructions.
+Thanks to some very helpful individuals in the `#solaris` channel on irc.freenode.net, I've been able to get ADS support working in [Samba](http://www.samba.org/) on [Solaris 10](http://www.sun.com/software/solaris/), and thus have been able to incorporate the use of Samba in the Solaris 10-AD integration instructions.
 
 To refer to earlier versions of the Solaris 10-AD integration instructions, see [this article][1] or [this article][2]. I would expect that you won't need to refer to those posts, though, and will be able to get most of what you need directly from this post.
 
@@ -70,7 +70,9 @@ The following steps need to be performed on each Solaris server that will authen
 
 To enable reliable TGT validation (this ensures that the Kerberos ticket returned by a KDC actually came from the KDC and not a spoofed server), you'll need to edit the hosts file. On Solaris 10, this is found in `/etc/inet/hosts` and is read-only, even for root. Edit this file (changing permissions as necessary) so that the line with the server's IP address looks something like this:
 
-	10.1.1.1 hostname.example.com hostname loghost
+```text
+10.1.1.1 hostname.example.com hostname loghost
+```
 
 What we're doing here is making sure that the server's fully qualified domain name (not just the short hostname) is the first name entry on the line for the server's IP address.
 
@@ -90,7 +92,7 @@ _This_ is the key to getting ADS support into Samba on Solaris 10. I won't go in
 
 Once the CSWsamba package and related packages are installed, we'll need to configure Samba by creating `/opt/csw/etc/samba/smb.conf` with the following contents:
 
-``` text
+```text
 workgroup = <NetBIOS name of AD domain> 
 security = ads
 realm = <DNS name of AD domain>
@@ -104,7 +106,7 @@ At this point, we are ready to configure Kerberos and then proceed with testing 
 
 Solaris keeps its Kerberos configuration in the `/etc/krb5` directory as `krb5.conf`. Edit this file using your editor of choice to look something like the one below. Depending upon how you configured Solaris during the installation, some of this configuration may already be present.
 
-``` ini
+```ini
 [libdefaults]
         default_realm = EXAMPLE.COM
         dns_lookup_kdc = true
@@ -135,7 +137,7 @@ Solaris keeps its Kerberos configuration in the `/etc/krb5` directory as `krb5.c
         }
 ```
 
-There will also be a file named `cswkrb5.conf` in the `/etc` directory; you can configure this file with the contents of the [libdefaults], [realms], and [domain_realms] sections as listed above. You don't need to include the [logging] or [appdefaults] sections in this file.
+There will also be a file named `cswkrb5.conf` in the `/etc` directory; you can configure this file with the contents of the `[libdefaults]`, `[realms]`, and `[domain_realms]` sections as listed above. You don't need to include the `[logging]` or `[appdefaults]` sections in this file.
 
 Note that you can't simply copy and paste from here to the Solaris configuration files, as you'll need to customize your version for your particular network, hostnames, domain names, etc. If you must copy and paste from here, put it into a text editor first to customize it for your implementation.
 
@@ -143,7 +145,7 @@ Note that you can't simply copy and paste from here to the Solaris configuration
 
 We'll use the native Solaris `ldapclient` utility to configure the LDAP support in Solaris. The command you'll type in looks something like this (please _don't_ copy and paste this, as it contains generic/incorrect information that won't work!):
 
-``` text
+```shell
 ldapclient manual \
 -a credentialLevel=proxy \
 -a authenticationMethod=simple \
@@ -175,13 +177,17 @@ After this command has been run, Solaris will create the LDAP configuration in `
 
 While you're editing `/etc/nsswitch.conf`, be sure to add a "dns" entry at the end of the line for hosts:
 
-	hosts files dns
+```text
+hosts files dns
+```
 
 This will help ensure that Solaris is properly configured to use DNS for host name resolution.
 
 I think it's necessary at this point to restart the LDAP client service:
 
-	svcadm restart svc:/network/ldap/client:default
+```shell
+svcadm restart svc:/network/ldap/client:default
+```
 
 Use the `svcs -a | grep ldap` command to verify the exact name of the LDAP client service on your Solaris server.
 
@@ -189,7 +195,9 @@ Use the `svcs -a | grep ldap` command to verify the exact name of the LDAP clien
 
 You'll also need to make sure that the DNS client is enabled and running. Using `svcs -a | grep dns` will help you identify the correct service, which you can then enable with svcadm:
 
-	svcadm enable svc:/network/dns/client:default
+```shell
+svcadm enable svc:/network/dns/client:default
+```
 
 Test DNS resolution using the `nslookup` command. As mentioned previously, be sure to test both forward and reverse lookups.
 
@@ -197,7 +205,7 @@ Test DNS resolution using the `nslookup` command. As mentioned previously, be su
 
 The `/etc/pam.conf` file controls the PAM (Pluggable Authentication Mechanism) configuration on Solaris. You'll need to edit the `/etc/pam.conf` file to look something like what's shown below. I've edited away all the non-essential sections, so only change the sections listed below.
 
-``` text
+```text
 # Default definition for Authentication management
 #
 other   auth requisite          pam_authtok_get.so.1
@@ -238,7 +246,7 @@ This is the final step. Don't try this step until you've successfully tested the
 
 To join the Solaris server to Active Directory, follow these steps:
 
-1. Verify the Samba configuration as outlined earlier. Key to the configuration are the "security = ads" and "use kerberos keytab = true" directives.
+1. Verify the Samba configuration as outlined earlier. Key to the configuration are the `security = ads` and `use kerberos keytab = true` directives.
 
 2. Use `kdestroy` to destroy any existing Kerberos credentials you may have; then run `kinit <Domain administrative account>@AD.DOMAIN.NAME` to get a Kerberos ticket for an account that is a domain administrator account.
 
@@ -251,7 +259,6 @@ As with previous instructions, these instructions don't address password managem
 ## How I Tested
 
 This testing was done using Solaris 10 11/06 (Update 3) running on VMware ESX Server 3.0.1. Active Directory was running on a pair of servers with Windows Server 2003 R2, also virtual machines on ESX Server. Authentication testing was performed using SSH from a client system running Mac OS X.
-
 
 [1]: {{< relref "2006-10-16-refined-solaris-10-ad-integration-instructions.md" >}}
 [2]: {{< relref "2006-08-15-solaris-10-and-active-directory-integration.md" >}}

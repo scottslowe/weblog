@@ -26,7 +26,7 @@ So, with that being said, here's how I recently went about resizing some guest V
 
 4. Flipping to the graphical VI Client, change the CD-ROM of the guest VM to be the ISO image of the GParted LiveCD you downloaded earlier. Make sure it is set to connect at power on. Power on the VM and boot from the CD.  
 
-Note that booting from the CD can be a bit tricky. You may need to boot up several times before you catch it just right. _Be sure_ that if Windows starts booting up, you let it boot up and then shut it back down again. If you reset the VM in the midst of the Windows boot sequence, the NTFS filesystem will be marked as "dirty" and GParted won't make the changes you wanted.
+    Note that booting from the CD can be a bit tricky. You may need to boot up several times before you catch it just right. _Be sure_ that if Windows starts booting up, you let it boot up and then shut it back down again. If you reset the VM in the midst of the Windows boot sequence, the NTFS filesystem will be marked as "dirty" and GParted won't make the changes you wanted.
 
 5. GParted will boot up from the CD. You may need to press Enter a couple of times to accept the defaults (unless you need settings other than the defaults, of course) before the graphical environment loads and you see the GParted interface. Once the GParted interface is up, you should be able to figure out how to make the changes you want to make.
 

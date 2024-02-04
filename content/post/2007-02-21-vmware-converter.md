@@ -21,7 +21,7 @@ The first conversion I did was using VMware Converter's boot CD to move a worklo
 
 I'm still not sure why Converter wouldn't connect to VC; the only thing that may be a contributing factor was that the VC server was running on a non-standard port. However, even when specifying the port number, Converter still wouldn't connect. and the error message that was displayed after a failed attempt kept referencing TCP port 902. I also found that the delays when attempting to connect were _horrendous_; three or four attempts to connect took up well over 35 or 40 minutes of time just waiting for Converter to come back and tell us it couldn't connect. I hope to be able to try another offline P2V in this same environment soon to see if we can isolate and address the issues we ran into this time around. If anyone else has run into this issue and has a workaround, please share it in the comments.
 
-### What I Like:
+### What I Like
 
 * Able to import directly to VMFS on ESX Server farm, no need to use a helper VM or `vmkfstools`
 
@@ -29,7 +29,7 @@ I'm still not sure why Converter wouldn't connect to VC; the only thing that may
 
 * Good network throughput (roughly 8-9GB per hour)
 
-### What I Don't Like:
+### What I Don't Like
 
 * Had a problem logging in to VirtualCenter, had to connect to back-end ESX server instead
 
@@ -43,11 +43,13 @@ Once again, the process was very simple and straightforward. Using the VMware Co
 
 There were a few rough edges, though nothing major. You apparently can't install VMware Tools as part of the conversion; this adds an extra step to the configuration of the VM after it is created. It also seemed to take a few minutes before Sysprep launched on the VM; in fact, I thought that Sysprep wasn't even going to be invoked at all. Neither of these issues are major issues, however.
 
-### What I Like:
+<!-- markdownlint-disable MD024 -->
+### What I Like
 
 * Minimal downtime required on source physical machine (just a reboot, and sometimes not even that---apparently depends upon version of Windows)
 
-### What I Don't Like:
+### What I Don't Like
+<!-- markdownlint-enable MD024 -->
 
 * Slower network throughput than offline conversion
 
@@ -59,9 +61,10 @@ This last test surprised me, primarily because I was under the impression that V
 
 The downside, of course, is that this adds an extra step to the process. The upside is that this extra step only took about 13 minutes to move the data from VMware Server to ESX Server (_much_ less time than it took to get the data into VMware Server to start with). After taking an hour and a half or so to get the data onto VMware Server, another 15 minutes to get it into ESX Server is not, in my opinion, a big deal.
 
-This time around we were again able to install the VMware Tools during the conversion and ask for Sysprep to be run to customize the guest (although I had to reboot the VM once before the mini-Setup appeared). After Sysprep ran and went through mini-Setup, I noticed that VMware Tools were being reported as "out of date"; a quick perusal showed that the VM was running the VMware Server build of VMware Tools, not the ESX Server build.  Hence, the "out of date" indication. Further, once you did launch an installation of VMware Tools from the ESX Server, the installer detected the previous installation and offered the typical "Remove/Repair/Modify" dialog box, rather than performing an upgrade of the tools. Again, I'm not sure why that was the case. It's an issue that's relatively easily resolved, but it would've been nice to know that the "Instal VMware Tools" checkbox wasn't really going to help at all.
+This time around we were again able to install the VMware Tools during the conversion and ask for Sysprep to be run to customize the guest (although I had to reboot the VM once before the mini-Setup appeared). After Sysprep ran and went through mini-Setup, I noticed that VMware Tools were being reported as "out of date"; a quick perusal showed that the VM was running the VMware Server build of VMware Tools, not the ESX Server build.  Hence, the "out of date" indication. Further, once you did launch an installation of VMware Tools from the ESX Server, the installer detected the previous installation and offered the typical "Remove/Repair/Modify" dialog box, rather than performing an upgrade of the tools. Again, I'm not sure why that was the case. It's an issue that's relatively easily resolved, but it would've been nice to know that the "Install VMware Tools" checkbox wasn't really going to help at all.
 
-### What I Like:
+<!-- markdownlint-disable MD024 -->
+### What I Like
 
 * Speed (didn't take long to go from VMware Server to ESX Server)
 
@@ -69,7 +72,8 @@ This time around we were again able to install the VMware Tools during the conve
 
 * Can install VMware Tools during migration (see below)
 
-### What I Don't Like:
+### What I Don't Like
+<!-- markdownlint-enable MD024 -->
 
 * Apparently doesn't install ESX version of VMware Tools
 

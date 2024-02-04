@@ -24,12 +24,14 @@ Mandatory profiles, though, go hand-in-hand with roaming profiles; there doesn't
 Even so, we've found that profiles are still accumulating across machines, and occupying more space on the hosted desktops than we'd really prefer. So we had to come up with a way to get rid of these leftover profile remnants. That's where `Delprof.exe` came in.
 
 Great utility, yes, but almost useless in the logout script because it won't delete the current user's profile (as it's still loaded at that point). We needed a different way of handling it, so I came up with this little batch file-wannabe that is scheduled to run from the [VirtualCenter](http://www.vmware.com/products/vi/vc/) server on a nightly basis:
-    
-    dsquery computer "ou=Hosted Desktops,dc=example,dc=com" \
-    -o rdn > vdi-list.txt
-    sed -f stripquotes.sed vdi-list.txt > vdi-list2.txt
-    for /f "tokens=1" %1 in (vdi-list2.txt) do \
-    delprof.exe /q /i /c:\%1 /d:1
+
+```shell
+dsquery computer "ou=Hosted Desktops,dc=example,dc=com" \
+-o rdn > vdi-list.txt
+sed -f stripquotes.sed vdi-list.txt > vdi-list2.txt
+for /f "tokens=1" %1 in (vdi-list2.txt) do \
+delprof.exe /q /i /c:\%1 /d:1
+```
 
 (The lines above were wrapped for readability, with a backslash to indicate the continuation of a line.) It's pretty easy to see what this does, but let's break it down. First, it uses `dsquery computer` to list all the hosted desktops in the specified OU. Then, because `dsquery` returns the computer names inside double quotes and `Delprof` doesn't like computer names inside double quotes, we'll use `sed` to strip the quotes from the text file. The "stripquotes.sed" file is a simple regular expression to strip out double quotes. Finally, we use `for /f` (not seen here on this blog for quite a while now!) to feed the entries of the resulting text file to `Delprof.exe` to delete all profiles that have been inactive for more than 1 day.
 

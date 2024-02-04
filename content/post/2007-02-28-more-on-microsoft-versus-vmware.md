@@ -29,7 +29,7 @@ As I responded to a commenter on [my previous article][1], the problem in my min
 Furthermore, as again quoted by the Windows Server Divison themselves, a VMware deployment doesn't mean fewer Windows Server licenses (the quote is from [this Computerworld article](http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9011941&pageNumber=2)):
 
 >Bruce McMillan, manager of emerging technologies at Solvay Pharmaceuticals Inc. in Marietta, Ga., is using Windows servers in a VMware virtualized environment. McMillan has read the white paper posted by VMware and said he thinks it "is there as a means to help educate people about what's going on."
-
+>
 >But he said he hasn't run into the issues outlined in the document. And just because Solvay is using virtualization technology, McMillan added, "it doesn't mean we're going to buy less [Windows] licenses."
 
 If that is indeed the case---and my experience bears it out completely---what are the motivations behind Microsoft's licensing changes? And how does this affect specifications, such as VHD, that are covered by the [Microsoft Open Specification Promise](http://www.microsoft.com/interop/osp/default.mspx)? On one hand, the OSP states:

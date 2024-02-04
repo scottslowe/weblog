@@ -30,7 +30,7 @@ With these advantages and disadvantages in mind, let's have a look at the what t
 
 First, we'd review the list of available Snapshots using the `snap list <volname>` command. For example, for a volume named "nfs\_volume1", the command would be `snap list nfs_volume1`. The output of that command would look something like this:
 
-```
+```text
   %/used       %/total  date          name  
 ----------  ----------  ------------  --------  
   0% ( 0%)    0% ( 0%)  Oct 08 12:00  hourly.0  
@@ -40,14 +40,16 @@ First, we'd review the list of available Snapshots using the `snap list <volname
   0% ( 0%)    0% ( 0%)  Oct 07 16:00  hourly.3  
   0% ( 0%)    0% ( 0%)  Oct 07 12:00  hourly.4  
   0% ( 0%)    0% ( 0%)  Oct 07 08:00  hourly.5  
-  0% ( 0%)    0% ( 0%)  Oct 07 00:00  nightly.1`
+  0% ( 0%)    0% ( 0%)  Oct 07 00:00  nightly.1
 ```
 
 Once we identify the Snapshot that contains the data we need to recover (based on the date/time of the Snapshot), we create a FlexClone using that Snapshot as its backing:
 
-	vol clone create nfs_volume1_clone -s file -b nfs_volume1 nightly.0
+```shell
+vol clone create nfs_volume1_clone -s file -b nfs_volume1 nightly.0
+```
 
-This creates a FlexClone named nfs\_volume1\_clone based on the nightly.0 Snapshot of the volume nfs\_volume1. If you immediately run the `exportfs` command, you'll see that the new clone is already shared via NFS, too.
+This creates a FlexClone named "nfs\_volume1\_clone" based on the "nightly.0" Snapshot of the volume nfs\_volume1. If you immediately run the `exportfs` command, you'll see that the new clone is already shared via NFS, too.
 
 From here, the process is pretty straightforward:
 
