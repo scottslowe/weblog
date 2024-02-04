@@ -32,7 +32,7 @@ Welcome to Technology Short Take #161! It's been a little over a month since the
 
 ## Servers/Hardware
 
-* Howard Oakley has a great series on Apple Silicon; the series is up to three posts so far. The [first post][link-11] provides a high-level overview of how Apple Silicon M-series chips are different, and the [second post][link-18] has more details on the capabilities of the P and E cores. The [third post][link-13] discusses how macOS allocates threads to different cores to maximize performance. Good stuff! 
+* Howard Oakley has a great series on Apple Silicon; the series is up to three posts so far. The [first post][link-11] provides a high-level overview of how Apple Silicon M-series chips are different, and the [second post][link-18] has more details on the capabilities of the P and E cores. The [third post][link-13] discusses how macOS allocates threads to different cores to maximize performance. Good stuff!
 * Looks like some significant bandwidth increases could be on the horizon; see [this article][link-23] for more details.
 
 ## Security

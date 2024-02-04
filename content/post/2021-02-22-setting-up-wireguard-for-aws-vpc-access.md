@@ -52,7 +52,10 @@ By default, WireGuard uses UDP port 51280 as the listening port for the WireGuar
 
 Additionally, if you are going to route traffic through the VPN instance instead of masquerade traffic (use network address translation), then you'll need to disable the source/destination check for the VPN instance. This can be accomplished fairly easily using the AWS CLI:
 
-    aws ec2 modify-instance-attribute --no-source-dest-check --instance-id <instance-id>
+```shell
+aws ec2 modify-instance-attribute --no-source-dest-check \
+--instance-id <instance-id>
+```
 
 ## Setting up the WireGuard Interfaces
 
@@ -64,7 +67,7 @@ Most of the WireGuard tutorials I saw focused only on this approach, so you're l
 
 To set up a WireGuard interface using a configuration file from the CLI, create a `wg<X>.conf` file in `/etc/wireguard`, where `<X>` is the number of the interface. Typically you'd start with `wg0` for the first VPN interface, but I'm not aware of any requirement to start with `wg0`. In this file, place the following contents:
 
-``` ini
+```ini
 [Interface]
 PrivateKey = <private key for this machine>
 Address = <IP address for WireGuard interface>

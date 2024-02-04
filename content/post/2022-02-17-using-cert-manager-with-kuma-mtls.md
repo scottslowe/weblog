@@ -99,10 +99,12 @@ Well, you _could_ export the contents of the Kubernetes Secret created by cert-m
 
 In fact, there is. Using `yq` (here's [the GitHub repository][link-7] for it), you can do what you need with a single command (I'll break this command down in a moment):
 
-    yq e ".data.value = \
-    \"$(kubectl -n kuma-system get secret kuma-mtls-root-ca \
-    -jsonpath='{.data.tls\.crt}')\" secret-template.yaml | \
-    yq e '.metadata.name = "mtls-root-certificate"' -
+```shell
+yq e ".data.value = \
+\"$(kubectl -n kuma-system get secret kuma-mtls-root-ca \
+-jsonpath='{.data.tls\.crt}')\" secret-template.yaml | \
+yq e '.metadata.name = "mtls-root-certificate"' -
+```
 
 That's a doozy! What's happening here? You're using `yq` to modify the values of a couple of fields; there's two iterations of `yq`, each modifying a different field. The first iteration of `yq` modifies the `.data.value` field, making its value equal to the output of the `kubectl get secret` command (which is the base64-encoded CA certificate in the Secret created by cert-manager). `yq` expects double quotes around the value being assigned to the field, but double quotes are needed to do the command substitution so the "inner quotes" are backslash-escaped. The second iteration of `yq` modifies the `.metadata.name` field to be equal to "mtls-root-certificate". Since there's no command substitution in this iteration, you're using single quotes around the `yq` operation and unescaped double quotes around the value.
 
@@ -126,11 +128,13 @@ Just add one final pipe (pipe it into `kubectl apply -f -`) to the command above
 
 Repeat for the key:
 
-    yq e ".data.value = \
-    \"$(kubectl -n kuma-system get secret kuma-mtls-root-ca \
-    -jsonpath='{.data.tls\.key}')\" secret-template.yaml | \
-    yq e '.metadata.name = "mtls-root-key"' - | \
-    kubectl apply -f -
+```shell
+yq e ".data.value = \
+\"$(kubectl -n kuma-system get secret kuma-mtls-root-ca \
+-jsonpath='{.data.tls\.key}')\" secret-template.yaml | \
+yq e '.metadata.name = "mtls-root-key"' - | \
+kubectl apply -f -
+```
 
 You're now ready for the final step, which is configuring the Kuma mesh for mTLS.
 

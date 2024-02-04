@@ -109,6 +109,5 @@ Happy reading and learning! If you have any questions, comments, suggestions for
 [link-27]: https://www.kitploit.com/2021/02/cloudlist-tool-for-listing-assets-from.html?m=1
 [link-28]: https://opensource.com/article/20/2/linux-sox
 [link-29]: https://containerjournal.com/topics/container-networking/isovalent-container-networking-in-2021-using-ebpf/
-[link-30]: https://acloudguru.com/blog/engineering/from-student-to-engineer-how-to-study-smarter-for-cloud-certs
 [link-31]: https://indeni.com/cloudrail/
 [link-99]: https://twitter.com/scott_lowe

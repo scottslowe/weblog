@@ -35,8 +35,10 @@ The following sections describe each of these four areas in a bit more detail.
 
 Based on my testing---see my disclaimer in #1 above---the hostname for the OS needs to match the EC2 Private DNS entry for that particular instance. By default, this is typically something like `ip-10-11-12-13.us-west-2.compute.internal` (change the numbers and the region to appropriately reflect the private IP address and region of the instance, and be aware that the us-east-1 AWS region uses the `ec2.internal` DNS suffix). The fastest/easiest way I've verified to make sure this is the case is with this command:
 
-    sudo hostnamectl set-hostname \
-    $(curl -s http://169.254.169.254/latest/meta-data/local-hostname)
+```shell
+sudo hostnamectl set-hostname \
+$(curl -s http://169.254.169.254/latest/meta-data/local-hostname)
+```
 
 Be sure to set the hostname before starting the bootstrapping process. I have some references of putting this command in the user data for the instance, so that it runs automatically. I have not, however, specifically tested this approach.
 
@@ -46,7 +48,7 @@ The nodes in the cluster need permission to the AWS APIs in order for the AWS cl
 
 ## Tagging Cluster Resources
 
-While the documentation for the cloud provider is improving, this is one area that could still use some additional work. The "Getting Started" page on the Kubernetes AWS Cloud Provider site only says this about tags:
+While the documentation for the cloud provider is improving, this is one area that could still use some additional work. The ["Getting Started" page][link-7] on the Kubernetes AWS Cloud Provider site only says this about tags:
 
 > Add the tag `kubernetes.io/cluster/<your_cluster_id>: owned` (if resources are owned and managed by the cluster) or `kubernetes.io/cluster/<your_cluster_id>: shared` (if resources are shared between clusters, and should not be destroyed if the cluster is destroyed) to your instances.
 
@@ -106,7 +108,9 @@ The big change from previous `kubeadm` configurations I've shared is that `cloud
 
 After you've bootstrapped the first control plane node (using `kubeadm init --config <filename>.yaml`) but before you add any other nodes---control plane or otherwise---you'll need to install the AWS cloud controller manager. Manifests are available, but you'll need to use `kustomize` to build them out:
 
-    kustomize build 'github.com/kubernetes/cloud-provider-aws/examples/existing-cluster/overlays/superset-role/?ref=master'
+```shell
+kustomize build 'github.com/kubernetes/cloud-provider-aws/examples/existing-cluster/overlays/superset-role/?ref=master'
+```
 
 Review the output (to ensure the values supplied are correct for your environment), then send the results to your cluster by piping them into `kubectl apply -f -`.
 

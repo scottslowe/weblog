@@ -40,23 +40,28 @@ etcd:
       initial-advertise-peer-urls: https://FQDN:2380
 ```
 
+<!-- markdownlint-disable-next-line MD036 -->
 _(Note: the IP addresses above have been randomized and do not refer to actual instances in my account.)_
 
 This configuration file is lightly modified to use fully-qualified domain names (FQDNs) where possible/supported by etcd. The `listen-peer-urls` and `listen-client-urls` settings require an IP address, but the other settings support FQDNs.
 
 Aside from populating the `initial-cluster` line---which has to list all the etcd cluster members---I copy this file unchanged to each host. On each host, I then customize the file using these commands:
 
-    sed -i "s/FQDN/$(hostname -f)/g" kubeadm.yaml
-    sed -i "s/IP/$(hostname -i)/g" kubeadm.yaml
-    sed -i "s/HOST/$(hostname -s)/g" kubeadm.yaml
+```shell
+sed -i "s/FQDN/$(hostname -f)/g" kubeadm.yaml
+sed -i "s/IP/$(hostname -i)/g" kubeadm.yaml
+sed -i "s/HOST/$(hostname -s)/g" kubeadm.yaml
+```
 
 Once the configuration file is appropriately customized for that particular host, then it's just a matter of running the same commands as in the official documentation, just with slightly different parameters:
 
-    kubeadm init phase certs etcd-server --config=kubeadm.yaml
-    kubeadm init phase certs etcd-peer --config=kubeadm.yaml
-    kubeadm init phase certs etcd-healthcheck-client --config=kubeadm.yaml
-    kubeadm init phase certs apiserver-etcd-client --config=kubeadm.yaml
-    kubeadm init phase etcd local --config=kubeadm.yaml
+```shell
+kubeadm init phase certs etcd-server --config=kubeadm.yaml
+kubeadm init phase certs etcd-peer --config=kubeadm.yaml
+kubeadm init phase certs etcd-healthcheck-client --config=kubeadm.yaml
+kubeadm init phase certs apiserver-etcd-client --config=kubeadm.yaml
+kubeadm init phase etcd local --config=kubeadm.yaml
+```
 
 Run these commands on each node, and you should end up with a working three-node etcd cluster.
 

@@ -15,13 +15,16 @@ Seven years ago, I wrote a quick post on [bootstrapping servers into Ansible][xr
 
 In one of the Slack communities I frequent, someone asked about using the approach described in the original blog post. However, they were having issues connecting. Specifically, this error was cropping up in the Ansible output (names have been changed to protect the innocent):
 
-```
+```text
 fatal: [new-server.int.domain.test]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ansible@new-server.int.domain.test: Permission denied (publickey,password).", "unreachable": true}
 ```
 
 Now, this is odd, because the Ansible command-line being executed included the parameters I mentioned in the original blog post:
 
-    ansible-playbook bootstrap.yml -i inventory/hosts -K --extra-vars "hosts=new-server.int.domain.test user=john"
+```shell
+ansible-playbook bootstrap.yml -i inventory/hosts -K \
+--extra-vars "hosts=new-server.int.domain.test user=john"
+```
 
 For some reason, though, it was ignoring that parameter and attempting to connect as `ansible`. At first, I thought this was just an SSH error, but the person assured me that they were definitely able to SSH into the specified host as the specified user.
 
@@ -29,7 +32,10 @@ That was when we found the difference between this environment and the environme
 
 I asked the person to try specifying `ansible_user` instead of `user` on the command line, like so:
 
-    ansible-playbook bootstrap.yml -i inventory/hosts -K --extra-vars "hosts=new-server.int.domain.test ansible_user=john"
+```shell
+ansible-playbook bootstrap.yml -i inventory/hosts -K \
+--extra-vars "hosts=new-server.int.domain.test ansible_user=john"
+```
 
 It worked!
 

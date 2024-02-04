@@ -16,9 +16,11 @@ To conduct some testing, I recently needed to spin up a group of [Kubernetes][li
 
 Without the necessary tags, the AWS cloud provider---which is responsible for the integration that creates Elastic Load Balancers (ELBs) in response to the creation of a Service of type `LoadBalancer`, for example--- won't work properly. Specifically, the following tags are needed:
 
-    kubernetes.io/cluster/<cluster-name>
-    kubernetes.io/role/elb
-    kubernetes.io/role/internal-elb
+```text
+kubernetes.io/cluster/<cluster-name>
+kubernetes.io/role/elb
+kubernetes.io/role/internal-elb
+```
 
 The latter two tags are mutually exclusive: the former should be assigned to public subnets to tell the AWS cloud provider where to place public-facing ELBs, while the latter is assigned to private subnets to manage the placement of internal ELBs.
 
@@ -28,11 +30,17 @@ Now, I _could_ have logged into the AWS console and used "point-and-click" to wo
 
 To find the resources, I just had to make use of the tags that I'd made sure to assign to all the resources I created. So, to find all my public subnets, I used this AWS CLI command:
 
-    aws ec2 describe-subnets --filters Name=tag:Owner,Values="Scott Lowe" Name=tag:Name,Values="*pub*" --query 'Subnets[*].SubnetId' --output text
+```shell
+aws ec2 describe-subnets --filters Name=tag:Owner,Values="Scott Lowe" \
+Name=tag:Name,Values="*pub*" --query 'Subnets[*].SubnetId' --output text
+```
 
 Similarly, I could pull up my private subnets like this:
 
-    aws ec2 describe-subnets --filters Name=tag:Owner,Values="Scott Lowe" Name=tag:Name,Values="*priv*" --query 'Subnets[*].SubnetId' --output text
+```shell
+aws ec2 describe-subnets --filters Name=tag:Owner,Values="Scott Lowe" \
+Name=tag:Name,Values="*priv*" --query 'Subnets[*].SubnetId' --output text
+```
 
 Next, I had to prepare the tags I wanted added to each resource. For this, the parameter `--generate-cli-skeleton input` was very helpful; it generated the following framework:
 
@@ -55,10 +63,12 @@ Using this skeleton as the foundation, I created two JSON input files---one for 
 
 The documentation for the `aws ec2 create-tags` command indicated that it would take a space-delimited list of resource IDs, and the output from the `aws ec2 describe-subnets` command appeared to be space-delimited. At this point, I thought I'd be able to do something like this:
 
-    aws ec2 describe-subnets --filters Name=tag:Owner,Values="Scott Lowe" \
-    Name=tag:Name,Values="*priv*" --query 'Subnets[*].SubnetId' \
-    --output text | xargs -I {} aws ec2 create-tags --resources {} \
-    --cli-input-json file://priv-subnet-tags.json
+```shell
+aws ec2 describe-subnets --filters Name=tag:Owner,Values="Scott Lowe" \
+Name=tag:Name,Values="*priv*" --query 'Subnets[*].SubnetId' \
+--output text | xargs -I {} aws ec2 create-tags --resources {} \
+--cli-input-json file://priv-subnet-tags.json
+```
 
 Alas, this did not work. Further, no amount of messing around with the output of the `aws ec2 describe-subnets` command could get it into a format that `aws ec2 create-tags` liked. I'm sure it was an error of some sort on my part, but I couldn't figure it out.
 
@@ -66,10 +76,12 @@ I'd been spending a fair amount of time with `jq` recently (parsing a lot of Env
 
 Dropping the `--output text` and piping output through `jq` finally got me to a working command. Here's the command for the public subnets:
 
-    aws ec2 describe-subnets --filters Name=tag:Owner,Values="Scott Lowe" \
-    Name=tag:Name,Values="*pub*" --query 'Subnets[*].SubnetId' \
-    jq -r '.[]' | xargs -p -I {} -n 1 aws ec2 create-tags --resources {} \
-    --cli-input-json file://pub-subnet-tags.json
+```shell
+aws ec2 describe-subnets --filters Name=tag:Owner,Values="Scott Lowe" \
+Name=tag:Name,Values="*pub*" --query 'Subnets[*].SubnetId' \
+jq -r '.[]' | xargs -p -I {} -n 1 aws ec2 create-tags --resources {} \
+--cli-input-json file://pub-subnet-tags.json
+```
 
 There was also a corresponding version for the private subnets as well.
 

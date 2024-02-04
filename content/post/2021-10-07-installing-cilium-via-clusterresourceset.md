@@ -31,22 +31,28 @@ Let's look at these steps in a bit more detail.
 
 The [Cilium docs][link-4] generally recommend the use of the `cilium` CLI tool to install Cilium. The reasoning behind this is, as I understand it, that the `cilium` CLI tool can interrogate the Kubernetes cluster to gather information and then attempt to pick the best configuration options for you. Using `helm` is also another option recommended by the docs. For our purposes, however, neither of those approaches will work---using a ClusterResourceSet means you need to be able to supply YAML manifests.
 
-Fortunately, the fact that Cilium supports [Helm][link-7] gives us a path forward via the use of `helm template` to render the templates locally. As per the docs on `helm template`, there are some caveats/considerations, but this was the only way I found to create YAML manifests for installing Cilium.
+Fortunately, the fact that Cilium supports [Helm][link-6] gives us a path forward via the use of `helm template` to render the templates locally. As per the docs on `helm template`, there are some caveats/considerations, but this was the only way I found to create YAML manifests for installing Cilium.
 
 So, the first step to creating the ConfigMap you need is to set up the Helm repository:
 
-    helm repo add cilium https://helm.cilium.io
+```shell
+helm repo add cilium https://helm.cilium.io
+```
 
 Then render the templates locally:
 
-    helm template cilium cilium/cilium --version 1.10.4 \
-    --namespace kube-system > cilium-1.10.4.yaml
+```shell
+helm template cilium cilium/cilium --version 1.10.4 \
+--namespace kube-system > cilium-1.10.4.yaml
+```
 
 You may need to specify additional options/values as needed in the above command in order to accommodate your specific environment or requirements, of course.
 
 Once you have the templates rendered, then create the ConfigMap that the ClusterResourceSet needs:
 
-    kubectl create configmap cilium-crs-cm --from-file=cilium-1.10.4.yaml
+```shell
+kubectl create configmap cilium-crs-cm --from-file=cilium-1.10.4.yaml
+```
 
 This ConfigMap should be created on the appropriate CAPI management cluster, so ensure your Kubernetes context is set correctly.
 

@@ -61,8 +61,10 @@ For the most part, the job definition is pretty easy to figure out, but here's a
 
 Make sure this job definition is saved to an appropriate file name (`<label>.plist`) and it's found in the `/Library/LaunchDaemons` directory. Then run these commands to inform `launchd` of the new job definition you just created:
 
-    sudo launchctl enable system/com.wireguard.wg0
-    sudo launchctl bootstrap system /Library/LaunchDaemons/com.wireguard.wg0.plist
+```shell
+sudo launchctl enable system/com.wireguard.wg0
+sudo launchctl bootstrap system /Library/LaunchDaemons/com.wireguard.wg0.plist
+```
 
 After running these two commands, you should be able to run `wg show` and see your WireGuard interface up and running. It should get turned up every time you restart your computer and there is a network present/active.
 

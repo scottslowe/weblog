@@ -26,7 +26,7 @@ This will automatically create a new set of public and private keys, and auto-po
 
 Ultimately, you'd need the configuration to look something like this:
 
-```
+```text
 [Interface]
 PrivateKey = <some private key here>
 Address = <IP address of WireGuard interface>

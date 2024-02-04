@@ -30,7 +30,7 @@ This is where `conftest` comes in. The `conftest` command-line utility uses the 
 
 I'll start with the first change (removing the `caBundle` value). Here's a Rego stanza that will test for the presence of a `caBundle` value (I'll explain the code below):
 
-```
+```Rego
 warn[msg] {
     input.kind == "ValidatingWebhookConfiguration"
     some i; input.webhooks[i].clientConfig.caBundle
@@ -47,13 +47,15 @@ Before moving on to the other tests, let's break this one down a bit:
 
 I can place this test into a file, which `conftest` expects to be in a subfolder named "policy", and then pipe the output of `kumactl install control-plane` through it like this:
 
-    kumactl install control-plane | conftest test -
+```shell
+kumactl install control-plane | conftest test -
+```
 
 This will produce a warning, of course, but that's exactly what we wanted---we want to the test to indicate that the `caBundle` hasn't been removed.
 
 The test above checked for the `caBundle` value for validating webhooks; this slightly modified version does the same thing for mutating webhooks:
 
-```
+```rego
 warn[msg] {
     input.kind == "MutatingWebhookConfiguration"
     some i; input.webhooks[i].clientConfig.caBundle
@@ -63,7 +65,7 @@ warn[msg] {
 
 Let's look at another change and how we can test for it. What about change #4 from above---changing an environment variable being passed to the "kuma-control-plane" Deployment? Here's a Rego test for that:
 
-```
+```rego
 warn[msg] {
     input.kind == "Deployment"
     env := input.spec.template.spec.containers[0].env[_]
@@ -82,7 +84,7 @@ The syntax here is a bit different, so let's discuss it before moving on:
 
 The test for change #2 is reasonably straightforward:
 
-```
+```rego
 warn[msg] {
     input.apiVersion == "admissionregistration.k8s.io/v1"
     not input.metadata.annotations["cert-manager.io/inject-ca-from"]
@@ -100,7 +102,7 @@ Finally, I can write the tests for the last change: adding a volume and mounting
 
 As you might expect, then, I need three tests. In this case, I'm going to use a slightly different syntax that allows me to define a condition and then reference it later in a rule. First, let's set up the condition:
 
-```
+```rego
 general_ca_vol_present = true {
     input.kind == "Deployment"
     vols := input.spec.template.spec.volumes[_]
@@ -114,7 +116,7 @@ By now, this syntax should look pretty familiar to you, with the exception of th
 
 Next, a custom function to see if the volume is configured incorrectly (it doesn't point to the correct Secret):
 
-```
+```rego
 general_ca_vol_incorrect = true {
     input.kind == "Deployment"
     vols := input.spec.template.spec.volumes[_]
@@ -125,7 +127,7 @@ general_ca_vol_incorrect = true {
 
 Finally, a function to check to see if it is mounted into the container correctly:
 
-```
+```rego
 general_ca_crt_volume_mounted = true {
     input.kind == "Deployment"
     mounts := input.spec.template.spec.containers[0].volumeMounts[_]
@@ -137,7 +139,7 @@ general_ca_crt_volume_mounted = true {
 
 With the functions defined, I can now write the rules:
 
-```
+```rego
 warn[msg] {
     input.kind == "Deployment"
     not general_ca_vol_present
@@ -159,7 +161,9 @@ warn[msg] {
 
 With all the tests in place, running `kumactl install control-plane | conftest test -` will generate warnings, as expected. From here, I can start to write Kustomize configurations that will make the necessary changes, and run them back through the tests like this (this command assumes the Kustomize configuration is in a directory named "kuma" under the current directory):
 
-    kustomize build kuma | conftest test -
+```shell
+kustomize build kuma | conftest test -
+```
 
 When `conftest` finally reports zero warnings, I'll know my Kustomize configuration is making the changes I coded in my tests. Bam---I've just used the principles behind test-driven development in the creation of a Kustomize configuration.
 

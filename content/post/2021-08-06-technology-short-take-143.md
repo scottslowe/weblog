@@ -40,7 +40,7 @@ Welcome to Technology Short Take #143! I have what I think is an interesting lis
 
 ## Security
 
-* I saw [this blog post][link-6] about [Curiefense][link-7], an open source Envoy extension to add WAF (web application firewall) functionality to Envoy. 
+* I saw [this blog post][link-6] about [Curiefense][link-7], an open source Envoy extension to add WAF (web application firewall) functionality to Envoy.
 * [This post][link-8] on using SPIFFE/SPIRE, Kubernetes, and Envoy together shows how to implement mutual TLS (mTLS) for a simple application. As a learning resource, I thought this post was helpful. However, I wouldn't recommend trying to cobble together something like this for a production environment. If you need mTLS in production, use a service mesh that supports this sort of functionality.
 
 ## Cloud Computing/Cloud Management

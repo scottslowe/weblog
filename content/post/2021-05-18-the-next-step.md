@@ -16,7 +16,7 @@ Last week, I [announced via Twitter][link-1] that I was leaving VMware to explor
 
 (Rest assured, by the way, that stuff I learn will continue to make its way onto this site, just as it has for the last 16 years. I'll still be sharing my knowledge with anyone who's interested!)
 
-I'm also excited to get to know the Kong team. This is a "two for one" bonus for me; not only do I get to meet lots of new and very talented people from whom I can learn and grow, but I also get to work with some folks with whom I've worked before (you know who you are!). Our industry really is a small industry, and I'm thankful to cross paths with these folks once more. 
+I'm also excited to get to know the Kong team. This is a "two for one" bonus for me; not only do I get to meet lots of new and very talented people from whom I can learn and grow, but I also get to work with some folks with whom I've worked before (you know who you are!). Our industry really is a small industry, and I'm thankful to cross paths with these folks once more.
 
 Feel free to contact [me on Twitter][link-6] (my DMs are open), and stay tuned as I take this next step. New challenges, new accomplishments, new friendships, and new knowledge await!
 

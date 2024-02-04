@@ -44,7 +44,7 @@ Welcome to Technology Short Take #138. I have what I hope is an interesting and 
 
 ## Cloud Computing/Cloud Management
 
-* It took me a while to get around to reading it, but this post from Massimo Re Ferre on [the role of AWS Fargate in the container world][link-2] was useful in helping me wrap my head around this technology and its place. 
+* It took me a while to get around to reading it, but this post from Massimo Re Ferre on [the role of AWS Fargate in the container world][link-2] was useful in helping me wrap my head around this technology and its place.
 * [This blog post by Alex DeBrie on AWS API Gateway access logs][link-5] is a real _tour de force_. This is truly an information-dense article, and if working with the AWS API Gateway falls into your job responsibilities then this is probably a good post to read.
 * If you're interested in doing some customization of Tanzu Basic, [this post][link-7] may prove useful.
 * William Lam shares [a few Kubernetes tips and tricks][link-13].

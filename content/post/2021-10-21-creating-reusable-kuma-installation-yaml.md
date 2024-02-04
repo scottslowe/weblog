@@ -110,8 +110,10 @@ Once you've defined the TLS assets, then you can make the necessary changes to t
 
 Begin by creating a starting point with `kumactl` and piping the output to a file:
 
-    kumactl install control-plane --tls-general-secret=kuma-tls-general \
-    --tls-general-ca-bundle=$(echo "blah") > kuma.yaml
+```shell
+kumactl install control-plane --tls-general-secret=kuma-tls-general \
+--tls-general-ca-bundle=$(echo "blah") > kuma.yaml
+```
 
 For the `--tls-general-secret` parameter, you're specifying the name of the Secret created by the general TLS certificate you defined earlier with cert-manager.
 

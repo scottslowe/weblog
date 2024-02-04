@@ -28,7 +28,7 @@ Welcome to Technology Short Take #150! This is the last Technology Short Take of
 ## Networking
 
 * Ivan Pepelnjak has a post on [running network automation tools in a container][link-28]. In fact, he's already built some container images, and the post has information on running tools from his prebuilt container image. Well worth reading!
-* Tom Hollingsworth [likens][link-29] networking disaggregation to "cutting the cord" and switching away from cable. 
+* Tom Hollingsworth [likens][link-29] networking disaggregation to "cutting the cord" and switching away from cable.
 
 ## Servers/Hardware
 

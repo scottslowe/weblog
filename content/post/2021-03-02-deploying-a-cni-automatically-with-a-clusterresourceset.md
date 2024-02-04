@@ -67,7 +67,9 @@ Most CNI plugins provide a YAML manifest that will define the CustomResourceDefi
 
 To create a ConfigMap that contains the YAML manifest to install Calico, you'd first download the desired version of the Calico manifest (we'll assume you call the downloaded manifest `calico.yaml`) and then run this command against the management cluster:
 
-    kubectl create configmap calico-crs-configmap --from-file=calico.yaml
+```shell
+kubectl create configmap calico-crs-configmap --from-file=calico.yaml
+```
 
 Make a note of the name you use (this example calls the ConfigMap "calico-crs-configmap"), as you'll need it in the next step when you create the ClusterResourceSet itself.
 
@@ -97,7 +99,9 @@ The `resources` field references the ConfigMap created in the previous step, whi
 
 The ClusterResourceSet is defined on the management cluster, so once you've created the YAML manifest you'd use `kubectl apply` to apply it against the management cluster:
 
-    kubectl apply -f calico-crs.yaml
+```shell
+kubectl apply -f calico-crs.yaml
+```
 
 All the setup is now completed, and you're ready to use the ClusterResourceSet with your workload cluster(s).
 

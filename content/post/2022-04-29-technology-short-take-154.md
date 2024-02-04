@@ -96,7 +96,6 @@ That's all for now! I'll be back in a couple weeks with another Technology Short
 [link-15]: https://blog.jim-nielsen.com/2022/inspecting-web-views-in-macos/
 [link-16]: http://advecti.io/2022/13-automating-hugo-k8s-deployment-with-gitlab-cicd/
 [link-17]: https://cloudblogs.microsoft.com/opensource/2022/02/22/getting-linux-based-ebpf-programs-to-run-with-ebpf-for-windows/
-[link-18]: https://blog.dowhile0.org/2022/04/22/fedora-36-a-brave-new-drm-kms-only-world/
 [link-19]: https://blog.dowhile0.org/2022/04/22/fedora-36-a-brave-new-drm-kms-only-world/
 [link-20]: https://anchore.com/sbom/how-to-generate-an-sbom-with-free-open-source-tools/
 [link-21]: https://andidog.de/blog/2022-04-21-grafana-dashboards-best-practices-dashboards-as-code
