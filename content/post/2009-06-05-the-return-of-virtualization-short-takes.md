@@ -35,13 +35,13 @@ My irregular "Virtualization Short Takes" series was put on hold some time ago a
 
 * Chad Sakac of EMC and co-conspirator for the storage portion of _Mastering VMware vSphere 4_ (pre-order [here](http://www.amazon.com/Mastering-Vmware-Infrastructure-Scott-Lowe/dp/0470481382/ref=sr_1_3/189-1468669-0910930?ie=UTF8&s=books&qid=1241107850&sr=1-3)), has been putting out some very good posts:
 
-  - [More on Exchange on vSphere (including FT)](http://virtualgeek.typepad.com/virtual_geek/2009/05/more-on-exchange-on-vsphere-including-ft.html)
+    * [More on Exchange on vSphere (including FT)](http://virtualgeek.typepad.com/virtual_geek/2009/05/more-on-exchange-on-vsphere-including-ft.html)
 
-  - [Integrated vSphere enterprise workloads - all together, at scale](http://virtualgeek.typepad.com/virtual_geek/2009/05/integrated-vsphere-enterprise-workloads-all-together-at-scale.html)
+    * [Integrated vSphere enterprise workloads - all together, at scale](http://virtualgeek.typepad.com/virtual_geek/2009/05/integrated-vsphere-enterprise-workloads-all-together-at-scale.html)
 
-  - [Using vSphere and HW offload for improved Celerra VSA performance](http://virtualgeek.typepad.com/virtual_geek/2009/05/using-vsphere-and-hw-offload-for-improved-celerra-vsa-performance.html)
+    * [Using vSphere and HW offload for improved Celerra VSA performance](http://virtualgeek.typepad.com/virtual_geek/2009/05/using-vsphere-and-hw-offload-for-improved-celerra-vsa-performance.html)
 
-  - [vSphere and 2TB LUNs - changes from VI3.x](http://virtualgeek.typepad.com/virtual_geek/2009/06/vsphere-and-2tb-luns-changes-from-vi3x.html)
+    * [vSphere and 2TB LUNs - changes from VI3.x](http://virtualgeek.typepad.com/virtual_geek/2009/06/vsphere-and-2tb-luns-changes-from-vi3x.html)
 
 * [Leo Raikhman](http://blog.core-it.com.au) pointed me to [this article](http://www.tuxyturvy.com/blog/index.php?/archives/37-Troubleshooting-VMware-ESX-network-performance.html) about IRQ sharing between the Service Console and the VMkernel. I think I've mentioned this issue here before...but after over a 1,000 posts, it's hard to keep track of everything. In any case, there's also a [VMware KB article](http://kb.vmware.com/selfservice/viewContent.do?externalId=1003710&sliceId=2#determine) on the matter.
 

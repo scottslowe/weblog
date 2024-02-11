@@ -41,7 +41,7 @@ VIMA is a virtual appliance packaged as OVF and is distributed, maintained, and 
 
 In "classic" ESX, management agents and hardware agents ran in the Service Console; with VIMA, updated management agents will talk through the VI API and hardware agents will talk through CIM SMASH. An example of this is the APC PowerChute Network Shutdown (PCNS), which is being rewritten to use the VI API and will run in VIMA.
 
-Anyone interested in VIMA can e-mail vima_request@vmware.com and request access to pre-GA versions of VIMA. VIMA is expected for general release in the fourth quarter of this year. All VIMA releases will work with both ESX and ESXi (again, pointing to the desire to keep parity between these two products).
+Anyone interested in VIMA can e-mail `vima_request@vmware.com` and request access to pre-GA versions of VIMA. VIMA is expected for general release in the fourth quarter of this year. All VIMA releases will work with both ESX and ESXi (again, pointing to the desire to keep parity between these two products).
 
 Future versions of VIMA may add Active Directory support; authentication through vCenter Servers; improved automation, configuration, and updates; UI integration in the VI Client; additional VMware components pre-installed. Finally, VMware Studio will be used to build future versions of VIMA.
 

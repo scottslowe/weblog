@@ -40,7 +40,9 @@ I won't bore readers with the details of the rebuild, but it took about a day or
 
 On to task #3. This was pretty simple and straightforward and easily accomplished via [Samba](http://www.samba.org/), with nothing really unique to document here. The one interesting thing that I did find was a way to map the long usernames that Mac OS X uses (like "Bob Jones") to a short username (like "bjones"). I used this command in the `/etc/samba/smb.conf` file:
 
-	username map = /etc/samba/usermap.conf
+```text
+username map = /etc/samba/usermap.conf
+```
 
 In this file, I simply placed lines that mapped the long usernames to the short usernames. Since Mac OS X defaults to the long username when connecting to the server, this allows me to simply type in a password and connect. I searched for hours trying to find a way to have Mac OS X supply my current password to the Samba server so that I wouldn't get prompted, but could not find any information. If anyone knows the trick, I'd love to hear about it. After configuring a few shares, setting Linux permissions and the umask, and then testing from both my Mac laptop and a Windows laptop, task #3 was finished.
 
@@ -52,7 +54,9 @@ The final task was installing [Netatalk](http://netatalk.sourceforge.net/) to pr
 
 Upon installing Netatalk, I also noticed that Netatalk started advertising automatically via Avahi as well, but using the IP address of the server. In order to be able to control how Netatalk advertises via Avahi, I had to change this line in `/etc/avahi/avahi-daemon.conf`:
 
-	enable-dbus=no
+```text
+enable-dbus=no
+```
 
 The suggestion for this change came from [this thread on the Ubuntu Forums](http://ubuntuforums.org/archive/index.php/t-347019.html). Upon making the change and restarting Avahi, the odd Netatalk entry went away, but so did Firefly! To advertise both Netatalk and Firefly, I added a couple of files to `/etc/avahi/services`:
 
@@ -105,7 +109,9 @@ Along the way, I also configured screen sharing [as outlined here](http://www.za
 
 The last step was to enable Time Machine backups to the Ubuntu server via AFP. First, the hack to enable non-Time Capsule network backups (this should be all on one line):
 
-	defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1
+```shell
+defaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1
+```
 
 I was then able to select the Ubuntu-hosted AFP volume for Time Machine backups. Attempting to run a Time Machine, backup, however, reported an error about being "unable to create the disk image". Fortunately, a number of different articles pointed to the use of `hdiutil` to create the disk image, and that seemed to fix the problem. Time Machine is now backing up to the AFP volume, although I suspect I still have a few issues to work through (for example, it looks as though I have to keep the Time Machine AFP volume mounted in order for automatic backups to run).
 
@@ -113,12 +119,12 @@ So, when everything is said and done, I was able to achieve all my stated goals.
 
 Along the way, I found the following sites to be quite helpful. I'm sure there are others that I used along the way, and I apologize if I've failed to extend credit where credit is due.
 
-[Limit size of Time Machine backups on Time Capsule](http://www.macosxhints.com/article.php?story=20080519051720677)  
+[Limit size of Time Machine backups on Time Capsule](http://www.macosxhints.com/article.php?story=20080519051720677)
 
-[Set up Time Machine on a NAS in three easy steps](http://www.macosxhints.com/article.php?story=20080420211034137)  
+[Set up Time Machine on a NAS in three easy steps](http://www.macosxhints.com/article.php?story=20080420211034137)
 
-[Make Ubuntu a Perfect Mac File Server and Time Machine Volume](http://www.kremalicious.com/2008/06/ubuntu-as-mac-file-server-and-time-machine-volume/)  
+[Make Ubuntu a Perfect Mac File Server and Time Machine Volume](http://www.kremalicious.com/2008/06/ubuntu-as-mac-file-server-and-time-machine-volume/)
 
-[Five Guides on How to Integrate Ubuntu into a Mac OS X Network](http://www.zaphu.com/2008/04/30/five-guides-on-how-to-integrate-ubuntu-into-a-mac-os-x-network/)  
+[Five Guides on How to Integrate Ubuntu into a Mac OS X Network](http://www.zaphu.com/2008/04/30/five-guides-on-how-to-integrate-ubuntu-into-a-mac-os-x-network/)
 
 [Time Machine Wireless Backups without Time Capsule](http://adamcohenrose.blogspot.com/2008/02/time-machine-wireless-backup-without.html)

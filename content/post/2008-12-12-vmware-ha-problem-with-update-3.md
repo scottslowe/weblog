@@ -32,7 +32,7 @@ To reconfigure the host to change the heartbeat delay, follow the steps below:
 2. Login to the VMware ESX server via SSH and obtain root permissions. Remember that best practices specify not to allow root SSH login, so you'll need to login as an ordinary user and then use `su -` to become root.
 
 3. Using a text editor such as nano or vi, edit the file `/etc/vmware/hostd/config.xml` and set the value of heartbeatDelayInSecs to 0, like this:
-    
+
     ``` xml
     <vmsvc>  
         <heartbeatDelayInSecs>0</heartbeatDelayInSecs>  

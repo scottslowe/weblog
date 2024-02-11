@@ -17,9 +17,9 @@ url: /2009/02/13/blades-and-virtualization-arent-mutually-exclusive-part-three-i
 wordpress_id: 1176
 ---
 
-_By Aaron Delp_
+(This guest post was written by Aaron Delp.)
 
-_UPDATE: I have made some corrections to the 10GB and iSCSI sections based on feedback. Thank you!_
+**UPDATE:** I have made some corrections to the 10GB and iSCSI sections based on feedback. Thank you!
 
 Welcome to part 3 of my series on blades and virtualization. I will be breaking the expansion articles into four parts: traditional IBM options, traditional HP options, virtualized IBM options, and virtualized HP options. By "virtualized options" I mean the IBM and HP blade I/O virtualization solutions (like IBM Blade Open Fabric Manager and HP VirtualConnect), not a server configuration that will run virtualization. Today, we will be covering IBM traditional options.
 

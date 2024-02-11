@@ -25,15 +25,15 @@ Dave Malcolm (DM): I believe cloud computing is defined as a pool of abstracted,
 
 2. _Self-Service Based Usage Model -_ Interacting with the cloud requires a self-service oriented approach. Self-service clouds must be intuitive and easy to use. The capabilities should include the ability to upload, build, deploy, schedule, manage, and report on the users' business services, so they can manage the lifecycle of those services.
 
-3. _Minimally or Self Managed -_ In order for an IT team or a service provider to efficiently provide a cloud for its constituents, they must leverage a technology platform that is self managed. Best-of-breed clouds enable self-management via software automation, leveraging the following capabilities:  
+3. _Minimally or Self Managed -_ In order for an IT team or a service provider to efficiently provide a cloud for its constituents, they must leverage a technology platform that is self managed. Best-of-breed clouds enable self-management via software automation, leveraging the following capabilities:
 
-  * Deployment and recovery of business services and their computing resources (in the cloud)
+    * Deployment and recovery of business services and their computing resources (in the cloud)
 
-  * Self-service scheduling and reserving resource capacity
+    * Self-service scheduling and reserving resource capacity
 
-  * Configuration, management, and reporting of resource capacity allocations
+    * Configuration, management, and reporting of resource capacity allocations
 
-  * Access control and policies for usage of resources by users
+    * Access control and policies for usage of resources by users
 
 4. _Business Service Centric -_ Cloud computing must be business service centric. This is in stark contrast to more traditional system- or server-centric models. In most cases, users of the cloud generally want to run some business service or application for a specific, timely purpose; they don't want to get bogged down in the system and network administration of the environment. They would prefer to quickly and easily access a dedicated instance of an entire business service---such as selecting to instantiate an ERP system in the cloud (even if it is a complex multi-server networked environment).
 

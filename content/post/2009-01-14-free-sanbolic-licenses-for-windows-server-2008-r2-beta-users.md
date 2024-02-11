@@ -23,10 +23,10 @@ Expect the official announcement on the free La Scala and Melio FS licenses to s
 
 In the meantime, feel free to review these other articles I've written about Sanbolic, Melio FS, La Scala, and/or Kayo FS:
 
-  * [Melio FS, Hyper-V, and VMware ESX][2]
-  * [Sanbolic Looking to Capitalize on Hyper-V Opportunity][3]
-  * [Sanbolic Now Providing Shared LUN Access for Hyper-V Guests][4]
-  * [Sanbolic Optimizes Melio FS, Adds Virtualization Support][5]
+* [Melio FS, Hyper-V, and VMware ESX][2]
+* [Sanbolic Looking to Capitalize on Hyper-V Opportunity][3]
+* [Sanbolic Now Providing Shared LUN Access for Hyper-V Guests][4]
+* [Sanbolic Optimizes Melio FS, Adds Virtualization Support][5]
 
 **UPDATE:** Sanbolic issued the official press release today (April 2, 2009; no direct link available for the press release), making the announcement about the free evaluation version of Melio FS for Windows Server 2008 R2 beta users. Visit the [Sanbolic web site](http://www.sanbolic.com/) for more information.
 

@@ -17,47 +17,47 @@ As I fully expected, another day at VMworld 2008 has passed and I seriously, _se
 
 In any case, here's a round-up of more coverage of VMworld 2008 from various places around the Internet:
 
-**Brian Madden**
+## Brian Madden
 
 [New VMware CEO makes the desktop a core focus for the company, with SIX desktop announcements at VMworld](http://www.brianmadden.com/blog/BrianMadden/New-VMware-CEO-makes-the-desktop-a-core-focus-for-the-company-with-SIX-desktop-announcements-at-VMworld)
 
-**Alessandro Perilli**
+## Alessandro Perilli
 
 [Live from VMworld 2008: Day 2 - VMware Keynote](http://www.virtualization.info/2008/09/live-from-vmworld-2008-day-2-vmware.html)
 
-**Rich Brambley**
+## Rich Brambley
 
 [VMworld 2008 General Session Day 2](http://vmetc.com/2008/09/17/vmworld-2008-general-session-day-2/)  
 
 [Linux Strategy and Roadmap #TA3201](http://vmetc.com/2008/09/17/linux-strategy-and-roadmap-ta3201/)
 
-**Matthias Mller-Prove**
+## Matthias Mller-Prove
 
 [Sun Ray Connector for VMware VDM certified](http://blogs.sun.com/mprove/entry/sun_ray_connector_certified)
 
-**Colin McNamara**
+## Colin McNamara
 
 [Altor Virtual Network Security Analyzer (VNSA) integrated with Cisco's Nexus 1000v for VMware](http://www.colinmcnamara.com/2008/09/17/altor-virtual-network-security-analyzer-vnsa-integrated-with-ciscos-nexus-1000v-for-vmware)
 
-**Rick Blythe**
+## Rick Blythe
 
 [VMware Fault Tolerance](http://www.vmwarewolf.com/vmware-fault-tolerance/)
 
-**Bob Plankers**
+## Bob Plankers
 
 [VMworld 2008 Day 2 General Session](http://lonesysadmin.net/2008/09/17/vmworld-2008-day-2-general-session/)
 
-**Virtualfuture.info**
+## Virtualfuture.info
 
 [VMworld 2008 - Wednesday general session](http://virtualfuture.info/2008/09/vmworld-2008-wednesday-general-session/)  
 
 [VMworld 2008 - Tech preview: vCenter Orchestrator](http://virtualfuture.info/2008/09/vmworld-2008-tech-preview-vcenter-orchestrator/)
 
-**Virtualization.com**
+## Virtualization.com
 
 [VMworld 2008 - VMware CTO Dr. Stephen Herrod Keynote liveblog](http://virtualization.com/news/2008/09/17/vmworld-2008-vmware-cto-dr.-stephen-herrod-keynote-liveblog/)
 
-**Bill Petro**
+## Bill Petro
 
 [VMworld 2008: Day 2 Review - Virtually Anything is Possible](http://techtrends.billpetro.com/2008/09/17/vmworld-2008-day-2-review-virtually-anything-is-possible/)
 

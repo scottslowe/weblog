@@ -16,7 +16,7 @@ url: /2009/05/11/introduction-to-nehalem-memory/
 wordpress_id: 1339
 ---
 
-_By Aaron Delp_
+(This guest post was written by Aaron Delp.)
 
 I wanted to relay some information regarding choosing memory speeds and types for the new Intel Xeon 5500 (Nehalem family) processors. As stated in my previous [article on the Nehalem CPUs][1], there are some decisions that need to be made when choosing the memory and processor combinations. Lets start off with what the memory architecture looks like.
 
@@ -55,7 +55,7 @@ Here is link to an _awesome_ [IBM white paper](ftp://ftp.software.ibm.com/common
 Here's an example 12 DIMM slot Nehalem configuration:
 
 | CPU (Speed)     | Max Mem   | Bank 1    | Bank 2    |
-|                 | Speed     | Populated | Populated |   
+|                 | Speed     | Populated | Populated |
 |-----------------|-----------|-----------|-----------|
 | X5570 (2.93GHz) | 1333 MHz  | 1333 MHz  | 1066 MHz* |
 | X5560 (2.80GHz) | 1333 MHz  | 1333 MHz  | 1066 MHz* |
@@ -70,7 +70,7 @@ Here's an example 12 DIMM slot Nehalem configuration:
 Here's an example 18 DIMM slot Nehalem configuration:
 
 | CPU (Speed)     | Max Mem   | Bank 1    | Bank 2    |
-|                 | Speed     | Populated | Populated |   
+|                 | Speed     | Populated | Populated |
 |-----------------|-----------|-----------|-----------|
 | X5570 (2.93GHz) | 1333 MHz  | 1066 MHz* | 800 MHz   |
 | X5560 (2.80GHz) | 1333 MHz  | 1066 MHz* | 800 MHz   |

@@ -14,6 +14,8 @@ wordpress_id: 899
 
 VMware's using the "Virtually anything is possible" tagline or slogan this year in Las Vegas at VMworld 2008. During dinner last night after the VMware Partner Technical Advisory Board (PTAB) meeting, we came up with a new slogan or tagline for VMware:
 
+<!-- markdownlint-disable MD036 -->
 **VMware: The Cutting Edge of Cool**
+<!-- markdownlint-enable MD036 -->
 
 Good, eh? OK, VMware, you've got to admit that's a good slogan. When should we expect to start seeing it around?

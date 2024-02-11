@@ -17,7 +17,7 @@ url: /2009/02/07/blades-and-virtualization-arent-mutually-exclusive-part-two-ibm
 wordpress_id: 1162
 ---
 
-_By Aaron Delp_
+(This guest post was written by Aaron Delp.)
 
 This is the second part of a series of articles on blades and virtualization. [The first article is found here.][1] Today, I will present IBM rack servers versus blade servers and explore the power consumption for each.
 

@@ -20,7 +20,10 @@ Recently, though, I picked up a new MacBook Pro running Snow Leopard. Unfortunat
 
 First, you'll need to create a sparse disk image using the following command from Terminal.app:
 
-	hdiutil create -size 500G -fs HFS+J -volname 'Time Machine' -type SPARSEBUNDLE <filename>.sparsebundle
+```shell
+hdiutil create -size 500G -fs HFS+J -volname 'Time Machine' \
+-type SPARSEBUNDLE <filename>.sparsebundle
+```
 
 Leopard required that the name of the sparse disk image be a concatenation of the computer's name and the MAC address of the Ethernet interface (en0) on the system. (By the way, you have to use the MAC address of en0 even if you are performing wireless backups over en1.) It appears that Snow Leopard does not have this restriction. I followed it anyway, just in case. `hdiutil` will create it in whatever directory you are in when you run the command. If you aren't in the TimeMachine directory on your ix4-200d (which would have a path of `/Volumes/TimeMachine` on your local Mac), then you'll need to copy the sparse disk image later. That's OK.
 
@@ -39,11 +42,15 @@ Second, you'll need to create a file named `com.apple.TimeMachine.MachineID.plis
 
 You'll need to put your system's UUID here; you can get this value from System Profiler. Once you've created this file with the appropriate values, copy it into the sparse disk image you created. I did this with the Finder and it works fine, but if you want to use Terminal.app you can use this command:
 
-	cp com.apple.TimeMachine.MachineID.plist <filename>.sparsebundle
+```shell
+cp com.apple.TimeMachine.MachineID.plist <filename>.sparsebundle
+```
 
 Finally, copy---if necessary---the sparse disk image from wherever you created it to the TimeMachine share on the Iomega ix4-200d. Make sure you've mounted the TimeMachine share via AFP and then copy the sparsebundle over using this command:
 
-	cp -pfr <filename>.sparsebundle /Volumes/TimeMachine/<filename>.sparsebundle
+```shell
+cp -pfr <filename>.sparsebundle /Volumes/TimeMachine/<filename>.sparsebundle
+```
 
 After you've completed all these steps, you can go into the Time Machine preferences and activate Time Machine against the ix4-200d. It worked seamlessly for me on Mac OS X 10.6.2, but your mileage may vary.
 

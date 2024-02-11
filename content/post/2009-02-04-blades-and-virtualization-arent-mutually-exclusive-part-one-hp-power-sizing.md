@@ -17,14 +17,14 @@ url: /2009/02/04/blades-and-virtualization-arent-mutually-exclusive-part-one-hp-
 wordpress_id: 1144
 ---
 
-_By Aaron Delp_
+(This guest post was written by Aaron Delp.)
 
 I have seen a lot of misconceptions recently when it comes to blade servers and virtualization. Many seem to think that if you are using blades you can't use virtualization. Most recently, someone shared [this article](http://get-admin.com/blog/?p=392) with me. I couldn't disagree with this viewpoint more. I will explore the reasons why in the next few articles. For today's article, I will present a foundation for comparison and I will use this basis going forward.
 
 Bar none, the most common misconception surrounding blades is power consumption. Many think that blade servers consume more power than their rack mount counterparts. If you have ever seen a fully loaded blade chassis, I can see why many come to this conclusion. They are loud, move a ton of air, and require larger power circuits that many people don't normally see in a data center ("Look at the size of that plug! This thing must be a power monster!").
 
 But, if you are installing more than a few servers, this isn't true. First, let me present my basis for comparison and the tools I will be using. I have chosen a middle of the road VMware ESX configuration that is supported by both IBM and HP. Here is the configuration:
-	
+
 * 2 x E5450 3.0 Ghz quad-core processors  
 * 32 GB memory in an 8 x 4GB configuration  
 * 2 on-board NICs  

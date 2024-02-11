@@ -17,7 +17,7 @@ url: /2009/02/16/blades-and-virtualization-arent-mutually-exclusive-part-four-hp
 wordpress_id: 1188
 ---
 
-_By Aaron Delp_
+(This guest post was written by Aaron Delp.)
 
 Welcome to Part 4 in our series on blades and virtualization. Please note that I will be covering the HP virtualized I/O offerings in a near future post. I plan to cover Virtual Connect, Flex-10, and the BL495 blade at that time.
 

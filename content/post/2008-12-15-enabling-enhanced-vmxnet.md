@@ -21,16 +21,18 @@ The funny thing is this: even though the Enhanced VMXNet adapters are supported 
 
 Fortunately, there's a way to also do this in the .VMX file. You'll need to remove the VM from the VirtualCenter inventory (right-click, Remove From Inventory), then edit the .VMX file to add these entries:
 
-	ethernet0.virtualDev = "vmxnet"  
-	ethernet0.features = "15"
+```text
+ethernet0.virtualDev = "vmxnet"  
+ethernet0.features = "15"
+```
 
 Once these lines have been added---changing ethernet0 to ethernet1 or whatever the appropriate value is for the VM---you can use the Datastore Browser to add the VM back into the inventory. The NICs will now be listed as "Enhanced vmxnet". In addition, Windows itself will now recognize greater offload functionality. The two screenshots below show the output of the command `netsh int ip show offload`; the first one is from a non-Enhanced VMXNet adapter:
 
-![](/public/img/offload-regvmxnet.png)
+![A terminal showing NIC offload capabilities](/public/img/offload-regvmxnet.png)
 
 Now for the output of the same command from a VM configured with an Enhanced VMXNet adapter:
 
-![](/public/img/offload-enhvmxnet.png)
+![A terminal showing enhanced NIC offload capabilities](/public/img/offload-enhvmxnet.png)
 
 This technique allows you to preserve the "integrity" of the guest OS selection by enabling Enhanced VMXNet without requiring users to change their guest OS selection to 64-bit Windows Server 2003 Enterprise Edition. Once the Enhanced VMXNet adapter is enabled, then users are free to begin working with jumbo frames and TSO. More on that in a future post...
 

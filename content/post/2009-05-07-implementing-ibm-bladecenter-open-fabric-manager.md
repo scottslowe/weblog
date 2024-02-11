@@ -16,7 +16,7 @@ url: /2009/05/07/implementing-ibm-bladecenter-open-fabric-manager/
 wordpress_id: 1323
 ---
 
-_By Aaron Delp_
+(This guest post was written by Aaron Delp.)
 
 A few months ago I implemented the Basic version IBM's BladeCenter Open Fabric Manager (BOFM) and I wanted to share some of my notes with everyone. It has been awhile so this is very high level; most of the small details have since fallen out of my head.
 

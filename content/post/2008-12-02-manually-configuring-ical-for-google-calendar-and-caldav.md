@@ -27,11 +27,11 @@ For the benefit of everyone else out there who prefers to do things the hard way
 
 2. Click the + sign to add a new account.
 
-3. Specify a description. For username, add your Google Calendar login information, like "username@gmail.com", and put in your password.
+3. Specify a description. For username, add your Google Calendar login information, like `username@gmail.com`, and put in your password.
 
 4. Expand the "Server Options" section to expose the Account URL setting.
 
-5. For Account URL, specify "https://www.google.com/calendar/dav/**[Google Calendar ID]**/user". Note that it's actually "/user" there at the end, not your user name. The Google Calendar ID in brackets is visible in Google Calendar by going to the settings for a calendar and looking toward the bottom of the Calendar Details tab. You'll see some funky junk like "asdfjklasdfjklasdjklasdjkl@group.calendar.google.com" or similar. That's the Google Calendar ID.
+5. For Account URL, specify `https://www.google.com/calendar/dav/<Google Calendar ID>/user`. Note that it's actually "/user" there at the end, not your user name. The Google Calendar ID in brackets is visible in Google Calendar by going to the settings for a calendar and looking toward the bottom of the Calendar Details tab. You'll see some funky junk like `asdfjklasdfjklasdjklasdjkl@group.calendar.google.com` or similar. That's the Google Calendar ID.
 
 6. Click Add.
 

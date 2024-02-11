@@ -16,7 +16,7 @@ url: /2009/04/07/introduction-to-nehalem-cpus/
 wordpress_id: 1272
 ---
 
-_By Aaron Delp_
+(This guest post was written by Aaron Delp.)
 
 Hello everyone! It's Aaron again. Im sorry for falling off the radar for a bit. A new generation of Intel processors is upon us and I felt the need to come out of seclusion to share some recent findings regarding the new architecture. Todays article will explore the new processor offerings. I will be following this up with one (or more depending on the length) about the memory architecture and interconnects.
 

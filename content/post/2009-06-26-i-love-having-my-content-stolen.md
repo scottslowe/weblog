@@ -17,11 +17,13 @@ You know, it's really irritating when you pour your heart and soul into somethin
 
 I have no problem with other sites syndicating my content _**as long as proper attribution of the original author and original site is provided.**_ Do me a favor: visit some of the URLs below (I'm not going to hyperlink them and give the site a traffic boost) and tell me how any of the examples I've listed below provide proper attribution of the original author and the original site:
 
+```text
 http://networkvirtualization.com/content/unified-fabric-inevitability  
 
 http://networkvirtualization.com/content/vmware-io-queues-micro-bursting-and-multipathing  
 
 http://networkvirtualization.com/content/tap-vsphere-pvscsi-performance-separate-vm-boot-and-data-drives
+```
 
 Let's see...content from my site, [Chad Sakac's site](http://virtualgeek.typepad.com/), and [Rich Brambley's site](http://vmetc.com/), all syndicated on their site without any clear attribution back to the original post---except for a very small link near the bottom of the article. If you hadn't been looking for that link, or if I hadn't told you that the articles above were written by me, Chad, and Rich, respectively, would you have known? And those are just the authors I recognized! How many more are there that I don't recognize?
 
