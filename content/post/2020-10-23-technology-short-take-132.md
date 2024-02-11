@@ -82,7 +82,6 @@ Welcome to Technology Short Take #132! My list of links and articles from around
 That's all for now, folks! Thanks for taking the time to read, and I hope that I was able to share something you'll find useful. If you have any feedback on this post, or on the site in general, feel free to hit [me on Twitter][link-99]. I'd love to hear your feedback!
 
 [link-1]: http://www.patrickkremer.com/using-the-vmc-api-to-troubleshoot-the-connected-vpc/
-[link-2]: https://www.learncloudnative.com/blog/2020-09-26-init-containers/
 [link-3]: https://brandonwillmott.com/2020/10/01/important-directories-to-know-for-kubernetes-cka-exam/
 [link-4]: http://www.yellow-bricks.com/2020/09/30/announcing-vmware-cloud-disaster-recovery/
 [link-5]: https://www.nginx.com/blog/performance-testing-nginx-ingress-controllers-dynamic-kubernetes-cloud-environment/

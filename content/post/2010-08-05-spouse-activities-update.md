@@ -17,7 +17,7 @@ url: /2010/08/05/spouse-activities-update/
 wordpress_id: 2011
 ---
 
-_Note: This is a guest post by my wife, Crystal, who is organizing spouse activities for VMworld. This is the third consecutive year for VMworld spouse activities and I'm happy to help support her efforts.)_
+(Note: This is a guest post by my wife, Crystal, who is organizing spouse activities for VMworld. This is the third consecutive year for VMworld spouse activities and I'm happy to help support her efforts.)
 
 [VMworld 2010](http://www.vmworld.com) in San Francisco, CA, is right around the corner! I'm excited about the activities planned for VMworld this year and I wanted to give you a quick update on activities planning and deadlines. Make a note of these deadlines---you don't want to miss out!
 

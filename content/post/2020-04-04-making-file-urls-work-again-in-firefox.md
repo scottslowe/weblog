@@ -22,10 +22,12 @@ Here's the process I followed:
 
 2. In the `user.js`, add these entries:
 
-        // Allow file:// links
-        user_pref("capability.policy.policynames", "localfilelinks");
-        user_pref("capability.policy.localfilelinks.sites", "file://");
-        user_pref("capability.policy.localfilelinks.checkloaduri.enabled", "allAccess");
+    ```text
+    // Allow file:// links
+    user_pref("capability.policy.policynames", "localfilelinks");
+    user_pref("capability.policy.localfilelinks.sites", "file://");
+    user_pref("capability.policy.localfilelinks.checkloaduri.enabled", "allAccess");
+    ```
 
 3. In your Firefox configuration (accessible using `about:config` in a Firefox tab), change the value of `privacy.file_unique_origin` from `true` to `false`.
 
@@ -40,6 +42,5 @@ Hit [me on Twitter][link-5] if you have questions. Thanks!
 [link-1]: https://www.mozilla.org/en-US/firefox/
 [link-2]: https://ubuntu.com/
 [link-3]: http://kb.mozillazine.org/Profile_folder_-_Firefox
-[link-4]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 [link-5]: https://twitter.com/scott_lowe
 [xref-1]: {{< relref "2017-03-07-linux-migration-creating-presentations.md" >}}

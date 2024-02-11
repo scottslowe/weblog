@@ -12,7 +12,7 @@ title: Setting up K8s on AWS with Kubeadm and Manual Certificate Distribution
 url: /2020/02/18/setting-up-k8s-on-aws-kubeadm-manual-certificate-distribution/
 ---
 
-_Credit for this post goes to Christian Del Pino, who created this content and was willing to let me publish it here._
+(Credit for this post goes to Christian Del Pino, who created this content and was willing to let me publish it here.)
 
 The topic of setting up Kubernetes on AWS (including the use of the AWS cloud provider) is a topic I've tackled a few different times here on this site (see [here][xref-1], [here][xref-2], and [here][xref-3] for other posts on this subject). In this post, I'll share information provided to me by a reader, Christian Del Pino, about setting up Kubernetes on AWS with `kubeadm` but using manual certificate distribution (in other words, not allowing `kubeadm` to distribute certificates among multiple control plane nodes). As I pointed out above, all this content came from Christian Del Pino; I'm merely sharing it here with his permission.<!--more-->
 
@@ -61,7 +61,9 @@ The explanation of this configuration file is already pretty well-covered [in th
 Once you have the configuration file set to your liking, run the
 following command to setup your first control plane:
 
-    kubeadm init --config=init.yaml
+```shell
+kubeadm init --config=init.yaml
+```
 
 (Replace `init.yaml` with the correct filename, of course.)
 
@@ -69,7 +71,9 @@ Assuming the process of initializing the first control plane node works as expec
 
 To confirm that your first control plane is up and ready, just run this command:
 
-    kubectl get nodes
+```shell
+kubectl get nodes
+```
 
 If this command completes successfully and shows the first control plane node as "Ready," then you are now ready to add more control plane nodes. However, since the `--upload-certs` flag was not specified during the `kubeadm init` command, the certificates generated on the first control plane node will not be shared across all the control plane nodes automatically. The next section explains how to manually copy the appropriate files across to additional control plane nodes.
 
@@ -81,14 +85,16 @@ You could also use S3 as a means of distributing certificates (more on that shor
 
 Regardless of the method, here is the exact list of certificates that need to be copied over from the first control plane node:
 
-    /etc/kubernetes/pki/etcd/ca.key
-    /etc/kubernetes/pki/etcd/ca.crt
-    /etc/kubernetes/pki/sa.key
-    /etc/kubernetes/pki/sa.pub
-    /etc/kubernetes/pki/front-proxy-ca.crt
-    /etc/kubernetes/pki/front-proxy-ca.key
-    /etc/kubernetes/pki/ca.crt
-    /etc/kubernetes/pki/ca.key
+```text
+/etc/kubernetes/pki/etcd/ca.key
+/etc/kubernetes/pki/etcd/ca.crt
+/etc/kubernetes/pki/sa.key
+/etc/kubernetes/pki/sa.pub
+/etc/kubernetes/pki/front-proxy-ca.crt
+/etc/kubernetes/pki/front-proxy-ca.key
+/etc/kubernetes/pki/ca.crt
+/etc/kubernetes/pki/ca.key
+```
 
 If you'd like to use `scp`, then simply copy these files across to the EC2 instance(s) you'd like to use as additional control plane nodes.
 
@@ -100,14 +106,16 @@ Before adding more control planes, it is necessary to pull down the
 certificates from the S3 bucket using the `aws s3 cp` command into the
 /etc/kubernetes/pki directory (if you didn't copy them across directly using `scp`). You must keep the same structure as in the first control plane:
 
-    /etc/kubernetes/pki/etcd/ca.key
-    /etc/kubernetes/pki/etcd/ca.crt
-    /etc/kubernetes/pki/sa.key
-    /etc/kubernetes/pki/sa.pub
-    /etc/kubernetes/pki/front-proxy-ca.crt
-    /etc/kubernetes/pki/front-proxy-ca.key
-    /etc/kubernetes/pki/ca.crt
-    /etc/kubernetes/pki/ca.key
+```text
+/etc/kubernetes/pki/etcd/ca.key
+/etc/kubernetes/pki/etcd/ca.crt
+/etc/kubernetes/pki/sa.key
+/etc/kubernetes/pki/sa.pub
+/etc/kubernetes/pki/front-proxy-ca.crt
+/etc/kubernetes/pki/front-proxy-ca.key
+/etc/kubernetes/pki/ca.crt
+/etc/kubernetes/pki/ca.key
+```
 
 Once the certificates are in place, you can build the configuration
 file for your joining control planes:
@@ -136,7 +144,9 @@ Refer back to [the earlier post][xref-3] for information on the parameters in th
 Once the file is complete, proceed to run the following to join your
 additional control plane nodes:
 
-    kubeadm join --config=cp-join.yaml
+```shell
+kubeadm join --config=cp-join.yaml
+```
 
 (Replace `cp-join.yaml` with the correct filename you used.)
 
@@ -166,7 +176,9 @@ nodeRegistration:
 
 As outlined here, you'll need to be sure your version of this file uses the correct bootstrap token, the correct API server endpoint, the correct CA certificate hash, and the correct node name. Once the file is complete, you will run the following to join your worker nodes:
 
-    kubeadm join --config=worker-join.yaml
+```shell
+kubeadm join --config=worker-join.yaml
+```
 
 (Substitute the filename you used for `worker-join.yaml` in the above command.)
 

@@ -46,14 +46,18 @@ Files #1 and #2 are, in the event of a typical `kubeadm`-bootstrapped etcd clust
 
 Once you have this files, create the first Secret using this command:
 
-    kubectl create secret tls <cluster-name>-apiserver-etcd-client \
-    --cert /path/to/apiserver-etcd-client.crt \
-    --key /path/to/apiserver-etcd-client.key
+```shell
+kubectl create secret tls <cluster-name>-apiserver-etcd-client \
+--cert /path/to/apiserver-etcd-client.crt \
+--key /path/to/apiserver-etcd-client.key
+```
 
 Next, create the second Secret with this command:
 
-    kubectl create secret tls <cluster-name>-etcd \
-    --cert /path/to/etcd/ca.crt --key /path/to/etcd/ca.key
+```shell
+kubectl create secret tls <cluster-name>-etcd \
+--cert /path/to/etcd/ca.crt --key /path/to/etcd/ca.key
+```
 
 In both of these commands, you'll need to replace `<cluster-name>` with the name of the workload cluster you're going to create with CAPI.
 

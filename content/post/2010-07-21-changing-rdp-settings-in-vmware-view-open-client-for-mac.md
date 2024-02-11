@@ -41,4 +41,4 @@ Voila! No more sounds being sent across my RDP connection. I haven't yet found a
 
 The key drawback to this mechanism is, of course, that you can't selectively apply these settings to different VDI connections. For example, I might not want to bring sound across for my corporate VDI session, but what if I'm connecting to a partner's VDI environment and I want sound for that session? By modifying the template `vmware-view.rdp` file inside the View Open Client itself, the changes you make apply to **all** sessions. Perhaps a future revision of the View Open Client will give us some per-session granular control over these settings? (Hey, I can dream!)
 
-Have a better way of accomplishing this? Let me know in the comments! Courteous and professional comments are welcome. 
+Have a better way of accomplishing this? Let me know in the comments! Courteous and professional comments are welcome.

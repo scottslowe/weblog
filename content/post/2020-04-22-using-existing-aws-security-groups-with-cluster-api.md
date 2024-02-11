@@ -21,7 +21,7 @@ In order to make a CAPI workload cluster able to communicate with other EC2 inst
 1. _You could add other instances or services to the CAPI-created security groups._ The Cluster API Provider for AWS (CAPA) automatically creates a set of security groups for use by the EC2 instances and ELBs created when it bootstraps a workload cluster. You could manually add other instances or services into these groups to enable connectivity, but this approach is fraught with problems (not the least of which is coupling two things with different lifecycles).
 2. _You could add CAPI-created instances to pre-existing security groups._ This solves the problem of splitting the lifecycle of the workload cluster from the connectivity needs of workloads outside the cluster, but how do you have this happen automatically when new workload clusters are provisioned? Any sort of manual operations just won't scale, and will become a potential source of failures and outages down the road.
 
-Fortunately for us and for this blog post, CAPI provides an answer to how to take approach #2 above and automate it. In reviewing [the API specification for CAPA v1alpha3][link-1], I noted that the AWSMachine spec includes a way to reference additional AWS security groups. 
+Fortunately for us and for this blog post, CAPI provides an answer to how to take approach #2 above and automate it. In reviewing [the API specification for CAPA v1alpha3][link-1], I noted that the AWSMachine spec includes a way to reference additional AWS security groups.
 
 For example, in an AWSMachine spec, you could do the following:
 

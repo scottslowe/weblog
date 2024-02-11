@@ -55,7 +55,7 @@ Because I'm so far behind, I have a _ton_ of other links that I've been collecti
 
 [How does "das.maxvmrestartcount" work?](http://www.yellow-bricks.com/2010/06/30/how-does-das-maxvmrestartcount-work/)  
 
-[Yes, You Really *Can* Run Tier-1 Enterprise Applications on vSphere](http://blogs.vmware.com/oracle/2010/06/yes-you-really-can-run-tier1-enterprise-applications-on-vsphere.html)  
+[Yes, You Really _Can_ Run Tier-1 Enterprise Applications on vSphere](http://blogs.vmware.com/oracle/2010/06/yes-you-really-can-run-tier1-enterprise-applications-on-vsphere.html)  
 
 [How to Configure Likewise "Open" Integration on vMA](http://www.virtuallyghetto.com/2010/06/how-to-configure-likewise-open-ad.html)  
 

@@ -72,13 +72,15 @@ Substitute the `12345` in the command above for whatever local port you're going
 
 Once the SAN entry for `127.0.0.1` is on the API server certificate and your local Kubeconfig file has been updated, then it is just a matter of opening the SSH tunnel:
 
-    ssh -fNT -L 12345:api.server.address:6443 user@ssh-bastion-host
+```shell
+ssh -fNT -L 12345:api.server.address:6443 user@ssh-bastion-host
+```
 
 _(Your `ssh` parameters may be slightly different, depending on your SSH version and OS.)_
 
 Again, change `12345` to match whatever you specified in the Kubeconfig file. After you've established the tunnel, then running `kubectl` commands should work without any issues. Voila!
 
-As I mentioned at the start of this post, this is just one way of using SSH to help access a Kubernetes cluster that isn't otherwise directly accessible. There are other ways! If you're interested in having me explore some of those other ways in future posts, let me know---either find [me on Twitter][link-99] or on [the Kubernetes Slack community][link-2].
+As I mentioned at the start of this post, this is just one way of using SSH to help access a Kubernetes cluster that isn't otherwise directly accessible. There are other ways! If you're interested in having me explore some of those other ways in future posts, let me know---either find [me on Twitter][link-99] or on [the Kubernetes Slack community][link-3].
 
 [link-1]: https://godoc.org/k8s.io/kubernetes/cmd/kubeadm/app/apis/kubeadm/v1beta2
 [link-2]: https://cluster-api.sigs.k8s.io/

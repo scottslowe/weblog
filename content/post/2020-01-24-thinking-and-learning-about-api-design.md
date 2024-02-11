@@ -46,7 +46,7 @@ Next up, I added _RESTful Web APIs_ by Leonard Richardson, Sam Ruby, and Mike Am
 
 It's clear that something _more_ than just encoding data in JSON is required.
 
-The question, for me, is how much more? And what to include, exactly? Richardson et al. seem to advocate [the Collection+JSON format][link-4], but it's only a personal standard (see his book for definitions of various standards) and not necessarily widely accepted/used. However, even within Collection+JSON, the specific links provided as hypermedia are left as "implementation details." So what sort of information makes sense? 
+The question, for me, is how much more? And what to include, exactly? Richardson et al. seem to advocate [the Collection+JSON format][link-4], but it's only a personal standard (see his book for definitions of various standards) and not necessarily widely accepted/used. However, even within Collection+JSON, the specific links provided as hypermedia are left as "implementation details." So what sort of information makes sense?
 
 Given that Polyglot is intended to be a simple order entry/lookup system, a few potential ideas come to mind:
 

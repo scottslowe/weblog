@@ -52,7 +52,7 @@ Welcome to Technology Short Take #131! I'm back with another collection of artic
 ## Operating Systems/Applications
 
 * I use `scp` all the time. Per [this article][link-9], I guess it's time to switch to `rsync`!
-* If you're relatively new to the Linux/macOS/UNIX/*BSD side of the world, this post on [making the most of OpenSSH][link-17] may prove quite useful. Heck, even if you're not new to OpenSSH, you might pick up something new.
+* If you're relatively new to the Linux/macOS/UNIX/\*BSD side of the world, this post on [making the most of OpenSSH][link-17] may prove quite useful. Heck, even if you're not new to OpenSSH, you might pick up something new.
 * Stepan Stipl writes about [detecting and dealing with deprecated APIs in Kubernetes][link-21].
 * Not sure how consensus algorithms work? No worries, start [here][link-24].
 * [This][link-28] is an interesting article about why the CockroachDB team created Pebble, a KV store intended to replace RocksDB.
@@ -73,8 +73,6 @@ Welcome to Technology Short Take #131! I'm back with another collection of artic
 
 OK, that's all for now. Hopefully you've found something useful in this post. If so, I'd love to hear about it---feel free to reach out to [me on Twitter][link-99]. Similarly, if you have suggestions for how I might improve the content of these types of posts, I'm open to all constructive criticism. Thanks for reading!
 
-[link-1]: https://aws.amazon.com/blogs/containers/aws-controllers-for-kubernetes-ack/
-[link-2]: https://carvel.dev/
 [link-3]: https://arstechnica.com/gadgets/2020/08/a-chrome-feature-is-creating-enormous-load-on-global-root-dns-servers/
 [link-4]: https://blog.apnic.net/2020/08/21/chromiums-impact-on-root-dns-traffic/
 [link-5]: https://vdr.one/vmware-vcenter-7-0-0c-high-cpu-usage/

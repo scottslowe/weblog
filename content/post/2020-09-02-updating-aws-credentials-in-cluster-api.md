@@ -19,25 +19,33 @@ Why might you need to update the credentials being used by CAPA? Security profes
 
 CAPA stores the credentials it uses as a Secret in the "capa-system" namespace. You can use `kubectl -n capa-system get secrets` and you'll see the "capa-manager-bootstrap-credentials" Secret. The credentials themselves are stored as a key named `credentials`; you can use this command to retrieve the credentials and decode them (if you're using macOS, change the `-d` to `-D`):
 
-    kubectl -n capa-system get secret capa-manager-bootstrap-credentials \
-    -o jsonpath="{.data.credentials}" | base64 -d
+```shell
+kubectl -n capa-system get secret capa-manager-bootstrap-credentials \
+-o jsonpath="{.data.credentials}" | base64 -d
+```
 
 The command will return something like this (but with valid access key ID, secret access key, and region values, obviously):
 
-    [default]
-    aws_access_key_id = <access-key-id-value-here>
-    aws_secret_access_key = <secret-access-key-value-here>
-    region = <aws-region-here>
+```text
+[default]
+aws_access_key_id = <access-key-id-value-here>
+aws_secret_access_key = <secret-access-key-value-here>
+region = <aws-region-here>
+```
 
 There's a couple different ways to update this information. What I'll describe below is _one way_ to do it.
 
 First, you'll need to encode a correct/working set of credentials into a Base64-encoded string. Fortunately, the `clusterawsadm` command can do this for you. Before running `clusterawsadm`, be sure to set---as needed---the AWS_PROFILE, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, and the AWS_REGION environment variables. If you're using version 0.5.4 or earlier of `clusterawsadm`, you can use this `clusterawsadm` command to generate the necessary Secret materials:
 
-    clusterawsadm alpha bootstrap encode-aws-credentials
+```shell
+clusterawsadm alpha bootstrap encode-aws-credentials
+```
 
 If you're using `clusterawsadm` 0.5.5 or later, the command changes to this:
 
-    clusterawsadm bootstrap credentials encode-as-profile
+```shell
+clusterawsadm bootstrap credentials encode-as-profile
+```
 
 Keep the output of this command handy; you'll need it shortly.
 
@@ -45,8 +53,10 @@ Next, use `kubectl -n capa-system edit secret capa-manager-bootstrap-credentials
 
 For the CAPA controller manager to pick up the new credentials in the Secret, restart it with this command:
 
-    kubectl -n capa-manager rollout restart \
-    deployment capa-controller-manager
+```shell
+kubectl -n capa-manager rollout restart \
+deployment capa-controller-manager
+```
 
 The AWS infrastructure provider in your CAPI management cluster should now be good to go with the updated credentials.
 
@@ -57,7 +67,6 @@ If you have any questions about this process, if I've explained something incorr
 [link-1]: https://cluster-api.sigs.k8s.io/
 [link-2]: https://github.com/kubernetes-sigs/cluster-api-provider-aws/
 [link-3]: https://cluster-api.sigs.k8s.io/introduction.html
-[link-4]: https://cluster-api.sigs.k8s.io/user/quick-start.html
 [link-5]: https://twitter.com/scott_lowe
 [link-6]: https://kubernetes.slack.com
 [xref-1]: {{< relref "2019-08-26-an-introduction-to-kubernetes-cluster-api.md" >}}

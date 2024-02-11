@@ -34,7 +34,9 @@ I won't go into great detail on setting up Ubuntu Linux as there are plenty of r
 
 Once you have Ubuntu Linux installed and configured appropriately, the first step is to go ahead and install some dependencies using `apt-get`:
 
-	sudo apt-get install dynagen python-qt4
+```shell
+sudo apt-get install dynagen python-qt4
+```
 
 This should download and install both Dynagen and the Python-QT4 libraries. Next, you'll need to download and install GNS3 0.6.1. There are newer versions of GNS3 available, but earlier attempts to get this environment running with the newer version of GNS3 resulted in problems. Again, your results might differ. Version 0.6.1 of GNS3 is available from [the GNS3 SourceForge site](http://sourceforge.net/projects/gns-3/files/).
 

@@ -65,7 +65,7 @@ Regardless of which option you take---preloading the container images into the p
 
 The Kubernetes-related images that should be present when you run this command are:
 
-```
+```text
 k8s.gcr.io/coredns
 k8s.gcr.io/etcd
 k8s.gcr.io/kube-apiserver
@@ -77,7 +77,7 @@ k8s.gcr.io/pause
 
 You'll also need to see listed some container images for your CNI plugin. For recent versions of Calico, for example, you should see:
 
-```
+```text
 calico/cni
 calico/kube-controllers
 calico/node

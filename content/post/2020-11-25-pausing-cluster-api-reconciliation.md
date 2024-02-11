@@ -42,7 +42,7 @@ spec:
 
 Reconcilation is active when the field isn't present; setting the field to false is essentially the same as removing the field. To pause reconciliation, set it to true. One way of doing this is using `kubectl patch`, like this:
 
-```
+```shell
 kubectl patch cluster workload1 --type merge \
 -p '{"spec":{"paused": true}}'
 ```
@@ -73,7 +73,7 @@ spec:
 
 If you check the logs for the CAPI controllers, you'll see messages like this:
 
-```
+```text
 I1125 17:31:40.287717       1 machine_controller.go:170] controllers/Machine "msg"="Reconciliation is paused for this object" "machine"="workload1-md-0-58c6df55bc-cqt86" "namespace"="workload1"
 ```
 
@@ -81,7 +81,7 @@ When reconciliation is paused, the CAPI controllers **will not** make changes to
 
 When you're ready to resume reconciliation again, just change the field to false:
 
-```
+```shell
 kubectl patch cluster workload1 --type merge \
 -p '{"spec":{"paused": false}}'
 ```

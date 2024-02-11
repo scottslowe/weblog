@@ -40,7 +40,7 @@ The presenters next moved into a demonstration of using vApp properties and OVF 
 
 The VMware OVF Tool 2.0 is available with Fusion 3.1 and Workstation 7.1 or can be downloaded from [http://www.vmware.com/go/ovf](http://www.vmware.com/go/ovf). OVF Tool can convert OVF to OVA and a variety of other tasks. Another tool is called vAppRun, which integrates with OVFTool and lets you work with vApps and OVF Properties while using Fusion and Workstation. It can be downloaded from [http://labs.vmware.com/flings/vapprun](http://labs.vmware.com/flings/vapprun). The presenters showed a demo of using OVF Tool to deploy OVF templates. They also showed using OVF Tool to deploy from Workstation to vSphere, and finally they demonstrated a more complex deployment like SugarCRM. This showed how to deploy complex vApps from the command line using OVF Tool. (Pretty cool, in my opinion, even if it did include a very long and very complex command line instruction.)
 
-VMware Studio 2.1 is a free application that can help in the creation of virtual appliances/vApps and supports full OVF 1.1 support and integration. It's available from http://www.vmware.com/go/studio.
+VMware Studio 2.1 is a free application that can help in the creation of virtual appliances/vApps and supports full OVF 1.1 support and integration. It's available from [this URL](http://www.vmware.com/go/studio).
 
 After this the session wrapped up and went into a question-and-answer session.
 

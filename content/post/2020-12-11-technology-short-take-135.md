@@ -86,7 +86,6 @@ That's all for this time around. I'll be back in early 2021 with the next Techno
 [link-3]: https://eclecticlight.co/lockrattler-systhist/
 [link-4]: https://dev.to/bowmanjd/upgrade-ssh-client-keys-and-remote-servers-after-fedora-33-s-new-crypto-policy-47ag
 [link-5]: https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html
-[link-6]: https://www.antitree.com/2020/11/pod-security-policies-are-being-deprecated-in-kubernetes/
 [link-7]: https://dannys.cloud/aws-solutions-architect-associate-exam-guide
 [link-8]: https://www.tecmint.com/sudoers-configurations-for-setting-sudo-in-linux/
 [link-9]: https://bitfieldconsulting.com/golang/rust-vs-go

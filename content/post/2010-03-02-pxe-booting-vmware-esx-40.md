@@ -54,11 +54,15 @@ Once the necessary files have been placed into the root directory of the TFTP se
 
 The file should be placed into a folder named pxelinux.cfg under the root of the TFTP server. The filename of the PXE configuration file should be named something like this:
 
-	01-<MAC address of network interface on host>
+```text
+01-<MAC address of network interface on host>
+```
 
 If the MAC address of the host was 01:02:03:04:05:06, the name of the text file in the `pxelinux.cfg` folder on the TFTP server would be:
 
-	01-01-02-03-04-05-06
+```text
+01-01-02-03-04-05-06
+```
 
 The PoC in which I was engaged involved Cisco UCS, so we knew in advance what the MAC addresses were going to be (the MAC address is assigned in the UCS service profile).
 

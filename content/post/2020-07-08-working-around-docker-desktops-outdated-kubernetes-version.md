@@ -16,7 +16,9 @@ As of the time that I published this blog post in early July 2020, [Docker Deskt
 
 First, you'll note that Docker Desktop automatically symlinks its version of `kubectl` into your system path at `/usr/local/bin`. You can verify the version of Docker Desktop's `kubectl` by running this command:
 
-    /usr/local/bin/kubectl version --client=true
+```shell
+/usr/local/bin/kubectl version --client=true
+```
 
 On my macOS 10.14.6-based system, this returned a version of 1.15.5. [According to GitHub][link-4], v1.15.5 was released in October of 2019. Per [the Kubernetes version skew policy][link-5], this version of `kubectl` would work with with 1.14, 1.15, and 1.16. What if I need to work with a 1.17 or 1.18 cluster? Simple---it just won't work. In my case, I regularly need to work with newer Kubernetes versions, hence the issue with this old bundled version of `kubectl`.
 
@@ -44,7 +46,7 @@ fi
 
 With this in `~/.bash_profile`, _if_ a `$HOME/bin` or `$HOME/.local/bin` directory exists, it gets added to the _start_ of the search path---thus placing it before `/usr/local/bin`, and thus making sure that any executables or symlinks placed there will be found _before_ those in `/usr/local/bin`. Therefore, when I place a symlink to a newer version of `kubectl` in one of these directories, it will get found _before_ Docker Desktop's outdated version. Problem solved! (You can, of course, still access the older Docker Desktop version by using the full path.)
 
-Folks who are familiar with UNIX/Linux are probably already very familiar with this sort of approach. However, I suspect there are a fair number of my readers who may be using macOS-based systems but aren't well-versed in the intricacies of manipulating the `$PATH` environment variable. Hopefully, this article helps those folks. Feel free to contact me on Twitter if you have any questions or feedback on what I've shared here.
+Folks who are familiar with UNIX/Linux are probably already very familiar with this sort of approach. However, I suspect there are a fair number of my readers who may be using macOS-based systems but aren't well-versed in the intricacies of manipulating the `$PATH` environment variable. Hopefully, this article helps those folks. Feel free to contact [me on Twitter][link-6] if you have any questions or feedback on what I've shared here.
 
 **UPDATE 2020-07-09:** Several folks contacted me on Twitter (thank you!) to point out that a slightly newer version of Docker Desktop may be available in the stable channel, although I have not been able to update my installation thus far. The new version, version 2.3.0.3, comes with Kubernetes 1.16.5, and therefore may not be as problematic for folks as the older version I have on my system. Regardless, the workaround remains valid. Thanks to the readers who responded!
 

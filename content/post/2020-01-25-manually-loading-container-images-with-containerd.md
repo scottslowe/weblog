@@ -21,7 +21,9 @@ In my specific example, I had a bastion host with Internet access, and a couple 
 
 1. On the bastion host, first I downloaded (pulled) the image from a public registry using `ctr image pull` (the example I'll use here is for the Calico node container image, used by the Calico CNI in Kubernetes clusters):
 
-        ctr image pull docker.io/calico/node:v3.11.2
+    ```shell
+    ctr image pull docker.io/calico/node:v3.11.2
+    ```
 
     (Note that `sudo` may be needed for all these `ctr` commands; that will depend on your system configuration.)
 
@@ -31,12 +33,16 @@ In my specific example, I had a bastion host with Internet access, and a couple 
 
 2. Still on the bastion host, I exported the pulled images to standalone archives:
 
-        ctr image export calico-node-v3.11.2.tar \
-        docker.io/calico/node:v3.11.2
+    ```shell
+    ctr image export calico-node-v3.11.2.tar \
+    docker.io/calico/node:v3.11.2
+    ```
 
     The general format for this command looks like this:
 
-        ctr image export <output-filename> <image-name>
+    ```shell
+    ctr image export <output-filename> <image-name>
+    ```
 
     If you don't know what the image name (according to `containerd`) is, use `ctr image ls`.
 
@@ -44,16 +50,20 @@ In my specific example, I had a bastion host with Internet access, and a couple 
 
 3. After transferring the standalone archives to the other systems (using whatever means you prefer; I used `scp`), then load (or import) the images into `containerd` with this command:
 
-        ctr image import <filename-from-previous-step>
+    ```shell
+    ctr image import <filename-from-previous-step>
+    ```
 
     Repeat as needed for additional images. It appears, by the way, that using wildcards in the `ctr image import` command won't work; I had to manually specify each individual file for import.
 
     _If you need these images to be available to [Kubernetes][link-9]_, you **must** be sure to add the `-n=k8s.io` flag to the `ctr image import` command, like this:
 
-        ctr -n=k8s.io images import <filename-from-previous-step>
+    ```shell
+    ctr -n=k8s.io images import <filename-from-previous-step>
+    ```
 
 4. Verify that the image(s) are present and recognized by `containerd` using `ctr image ls`.
-    
+
     If you specified the `k8s.io` namespace when importing the images in the previous step---so as to make the images available to Kubernetes---then you can verify that CRI (Container Runtime Interface, the means by which Kubernetes talks to `containerd`) sees these images by running `crictl images` (again, `sudo` may be required, based on your configuration).
 
 That should do it for you!

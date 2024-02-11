@@ -13,9 +13,9 @@ wordpress_id: 1778
 
 With [the job change][1], some of my contact information is also changing. Naturally, my ePlus.com e-mail address will go away, but also going away (effective immediately) are my three ePlus-related instant messaging accounts:
 
-MSN Messenger (slowe@eplus.com)  
-Yahoo Messenger (eplusslowe)  
-AOL Instant Messenger (eplusslowe)
+MSN Messenger (`slowe@eplus.com`)  
+Yahoo Messenger (`eplusslowe`)  
+AOL Instant Messenger (`eplusslowe`)
 
 If you are using my ePlus e-mail address or any of these instant messaging accounts to stay in touch with me, you'll need to update your contact information. I don't have my official EMC e-mail address yet, but my personal e-mail address is available on the About page of this site. I also have Google Talk, AIM, and MSN Messenger accounts that use my personal e-mail address as the user ID; you can use these as a replacement for the ePlus-related instant messaging accounts. I won't be creating a new Yahoo Messenger account.
 

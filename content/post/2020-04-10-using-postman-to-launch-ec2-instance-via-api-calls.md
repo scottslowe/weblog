@@ -65,7 +65,9 @@ To help in crafting these API calls, I found [the AWS EC2 API reference][link-8]
 
 Each of these Actions will share a common API endpoint, which is what you'll specify as the URL for the API request. If you included AWS region as a variable in your environment, then you can reference that region in the API endpoint to make your API requests more region-independent, like this:
 
-    https://ec2.{{region}}.amazonaws.com/
+```shell
+https://ec2.{{region}}.amazonaws.com/
+```
 
 Each of these Actions will also share one common parameter---the Version parameter, with a value of "2016-11-15". Otherwise, the parameters for each Action (each API call) will be different. Let's take a look at those.
 

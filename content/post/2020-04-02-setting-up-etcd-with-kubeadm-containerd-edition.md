@@ -23,7 +23,7 @@ Finally, this post builds upon the official Kubernetes documentation on [setting
 
 The official documentation provides a systemd drop-in to configure the Kubelet to operate in a "stand-alone" mode. Unfortunately, this drop-in won't work with containerd. Here is a replacement drop-in for containerd:
 
-```
+```text
 [Service]
 ExecStart=
 ExecStart=/usr/bin/kubelet --address=127.0.0.1 --pod-manifest-path=/etc/kubernetes/manifests --cgroup-driver=systemd --container-runtime=remote --runtime-request-timeout=15m --container-runtime-endpoint=unix:///run/containerd/containerd.sock
