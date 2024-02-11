@@ -54,7 +54,7 @@ There you have it---a `kubeadm` configuration file that allows you to use `kubea
 
 ## Additional Notes
 
-I tested this using Kubernetes 1.14.0, but it should work the same way with Kubernetes 1.13.x as well. I used an external etcd cluster, but it should also work with stacked masters (etcd co-located with the control plane components). Note that I did *not* test the `--experimental-upload-certs` functionality in Kubernetes 1.14 (it's on my list of things to do).
+I tested this using Kubernetes 1.14.0, but it should work the same way with Kubernetes 1.13.x as well. I used an external etcd cluster, but it should also work with stacked masters (etcd co-located with the control plane components). Note that I did _not_ test the `--experimental-upload-certs` functionality in Kubernetes 1.14 (it's on my list of things to do).
 
 If you have any questions, comments, suggestions, or corrections, please [contact me on Twitter][link-99]. I'd love to hear from you.
 

@@ -78,7 +78,6 @@ Have questions? Spotted an error in this post? Feel free to [contact me via Twit
 
 **UPDATE 13 September 2019:** I've updated this post with some information from the CAPI v1alpha2 release.
 
-[link-1]: /tags/capi/
 [link-2]: https://kubernetes.io/
 [link-3]: https://twitter.com/scott_lowe
 [link-4]: https://github.com/kubernetes-sigs/cluster-api-provider-aws

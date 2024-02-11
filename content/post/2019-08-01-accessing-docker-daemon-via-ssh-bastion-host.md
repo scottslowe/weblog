@@ -18,11 +18,15 @@ If you're not familiar with the concept of an SSH bastion host, it is a (typical
 
 The syntax for connecting to a Docker daemon via SSH looks something like this:
 
-    docker -H ssh://user@host <command>
+```shell
+docker -H ssh://user@host <command>
+```
 
 So, if you wanted to run `docker container ls` to list the containers running on a remote system, you'd run this command:
 
-    docker -H ssh://slowe@10.11.12.13 container ls
+```shell
+docker -H ssh://slowe@10.11.12.13 container ls
+```
 
 Note that there's no way to pass `sudo` via this syntax, so you'll need to ensure that the user you specify on the command line has the ability to run `docker` commands without privilege escalation. (You could add them to the "docker" group on the remote system, for example.)
 
@@ -46,7 +50,9 @@ So, if you have a working SSH bastion configuration, the cool thing about access
 
 Using the working configuration described above, this command will work straight out of the box:
 
-    docker -H ssh://10.100.15.25 container ls
+```shell
+docker -H ssh://10.100.15.25 container ls
+```
 
 SSH will connect to the remote Docker daemon via the configured bastion host, with no additional effort or configuration required on your part. (All you need is a working SSH bastion host configuration already in place.)
 

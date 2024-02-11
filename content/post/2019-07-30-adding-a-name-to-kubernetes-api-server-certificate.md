@@ -30,7 +30,10 @@ To do this, you'll first need a `kubeadm` configuration file. If you used a conf
 
 To pull the `kubeadm` configuration from the cluster into an external file, run this command:
 
-    kubectl -n kube-system get configmap kubeadm-config -o jsonpath='{.data.ClusterConfiguration}' > kubeadm.yaml
+```shell
+kubectl -n kube-system get configmap kubeadm-config \
+-o jsonpath='{.data.ClusterConfiguration}' > kubeadm.yaml
+```
 
 This creates a file named `kubeadm.yaml`, the contents of which may look something like this (the file from your cluster may have different values):
 
@@ -80,11 +83,15 @@ Once you've updated the `kubeadm` configuration file---either the default one pu
 
 First, move the existing API server certificate and key (if `kubeadm` sees that they already exist in the designated location, it won't create new ones):
 
-    mv /etc/kubernetes/pki/apiserver.{crt,key} ~
+```shell
+mv /etc/kubernetes/pki/apiserver.{crt,key} ~
+```
 
 Then, use `kubeadm` to _just_ generate a new certificate:
 
-    kubeadm init phase certs apiserver --config kubeadm.yaml
+```shell
+kubeadm init phase certs apiserver --config kubeadm.yaml
+```
 
 This command will generate a new certificate and key for the API server, using the specified configuration file for guidance. Since the specified configuration file includes a `certSANs` list, then `kubeadm` will automatically add those SANs when creating the new certificate.
 
@@ -107,7 +114,9 @@ One way to verify the change is to edit the `server` line for that cluster in yo
 
 Another way to verify the change---and a handy troubleshooting step as well---is to use `openssl` on the Kubernetes control plane node to decode the certificate and show the list of SANs on the certificate:
 
-    openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text
+```shell
+openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text
+```
 
 Look for the "X509v3 Subject Alternative Name" line, after which will be a list of all the DNS names and IP addresses that are included on the certificate as SANs. After following this procedure, you _should_ see the newly-added names and IP addresses you specified in the modified `kubeadm` configuration file. If you don't, then something went wrong along the way. Common mistakes in this process include forgetting to remove the previous certificate and key (`kubeadm` won't create new ones if they already exist), or failing to include the `--config kubeadm.yaml` on the `kubeadm init phase certs` command.
 
@@ -115,13 +124,17 @@ Look for the "X509v3 Subject Alternative Name" line, after which will be a list 
 
 Assuming everything is working as expected, the final step is to update the `kubeadm` ConfigMap stored in the cluster. This is important so that when you use `kubeadm` to orchestrate a cluster upgrade later, the updated information will be present in the cluster. Thankfully, this is pretty straightforward:
 
-    kubeadm config upload from-file --config kubeadm.yaml
+```shell
+kubeadm config upload from-file --config kubeadm.yaml
+```
 
 (Newer versions of Kubernetes use the command `kubeadm init phase upload-config kubeadm --config kubeadm.yaml`. I _believe_ this change takes effect around the Kubernetes 1.15 release, but I may be mistaken. Thanks Sarye Haddadi for the correction!)
 
 You can verify the changes to the configuration were applied successfully with this command:
 
-    kubectl -n kube-system get configmap kubeadm-config -o yaml
+```shell
+kubectl -n kube-system get configmap kubeadm-config -o yaml
+```
 
 ## Final Thoughts
 

@@ -37,11 +37,15 @@ This article won't attempt to explain _all_ the various fields that could be pre
 
 When a user runs `kustomize build .` in the directory with the `kustomization.yaml` and the referenced resources (the files `deployment.yaml` and `service.yaml`), the output is the customized text with the changes found in the `kustomization.yaml` file. Users can redirect the output if they want to capture the changes:
 
-    kustomize build . > custom-config.yaml
+```shell
+kustomize build . > custom-config.yaml
+```
 
 The output is deterministic (given the same inputs, the output will always be the same), so it may not be necessary to capture the output in a file. Instead, users could pipe the output into another command:
 
-    kustomize build . | kubectl apply -f -
+```shell
+kustomize build . | kubectl apply -f -
+```
 
 Users can also invoke `kustomize` functionality with `kubectl -k` (as of Kubernetes 1.14). However, be aware that the standalone `kustomize` binary is more recent than the functionality bundled into `kubectl` (as of the Kubernetes 1.15 release).
 
@@ -51,7 +55,7 @@ The benefits of `kustomize` become more apparent in more complex `kustomize` use
 
 To help illustrate the idea of overlays with base resources, let's assume the following directory structure:
 
-```
+```yaml
 - base
   - deployment.yaml
   - service.yaml
@@ -106,6 +110,10 @@ There are quite a few good articles and posts written about `kustomize`; here ar
 
 [Customizing Upstream Helm Charts with Kustomize][link-11]
 
+[RFC 6902][link-5] (useful when using JSON patches with Kustomize)
+
+[Examples from the Kustomize GitHub repository][link-6]
+
 If anyone has questions or suggestions for improving this post, I'm always open to reader feedback. Feel free to [contact me via Twitter][link-12], or hit me up on [the Kubernetes Slack instance][link-13]. Have fun customizing your manifests with `kustomize`!
 
 [link-1]: https://levelup.gitconnected.com/kubernetes-change-base-yaml-config-for-different-environments-prod-test-6224bfb6cdd6
@@ -114,7 +122,6 @@ If anyone has questions or suggestions for improving this post, I'm always open 
 [link-4]: https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
 [link-5]: https://tools.ietf.org/html/rfc6902
 [link-6]: https://github.com/kubernetes-sigs/kustomize/tree/master/examples
-[link-7]: https://kubectl.docs.kubernetes.io/pages/app_customization/introduction.html
 [link-8]: https://github.com/kubernetes-sigs/kustomize
 [link-9]: https://kubernetes.io/
 [link-10]: https://github.com/kubernetes-sigs/kustomize/blob/master/docs/fields.md

@@ -116,7 +116,7 @@ Here's a JSON 6902 patch encoded as JSON:
 ]
 ```
 
-<small><em>(This example, as well as other examples in this post, are wrapped for readability; it is perfectly acceptable to have each operation formatted as a single line.)</em></small>
+(This example, as well as other examples in this post, are wrapped for readability; it is perfectly acceptable to have each operation formatted as a single line.)
 
 In this example, the patches are provided in a JSON list (denoted by the brackets), and each patch is a JSON object with three properties: `op`, `path`, and `value`. (Readers who are unfamiliar with JSON may find [this post][xref-4] helpful.) This patch makes two changes to the original manifest. First, it modifies the `metadata.name` field to use "usw2-cluster1" as the value. Second, it modifies the `spec.infrastructureRef.name` field to also use "usw2-cluster1" as the value.
 

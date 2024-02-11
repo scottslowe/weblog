@@ -28,5 +28,3 @@ I will, of course, continue blogging as frequently as possible. (Don't worry, I'
 So what do you think---am I crazy? I'd love to hear from you, so if you have tips on learning Japanese, suggestions for things I should do while I'm in Tokyo, or if you just want to say hi, [hit me up on Twitter][link-1].
 
 [link-1]: https://twitter.com/scott_lowe
-[link-2]: 
-[link-3]: 

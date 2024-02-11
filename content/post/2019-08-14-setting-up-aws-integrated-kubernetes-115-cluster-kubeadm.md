@@ -36,8 +36,10 @@ Let's dig into each of these areas in a bit more detail. (Most, if not all, of t
 
 The hostname for the OS _must_ match the EC2 Private DNS entry for that particular instance. By default, this is typically something like `ip-10-11-12-13.us-west-2.compute.internal` (change the numbers and the region to appropriately reflect the private IP address and region of the instance). The fastest/easiest way I've verified to make sure this is the case is with this command:
 
-    sudo hostnamectl set-hostname \
-    $(curl -s http://169.254.169.254/latest/meta-data/local-hostname)
+```shell
+sudo hostnamectl set-hostname \
+$(curl -s http://169.254.169.254/latest/meta-data/local-hostname)
+```
 
 Be sure to set the hostname before starting the bootstrapping process. Anecdotally, I've heard of some success putting this command in the user data for the instance, so that it runs automatically.
 
@@ -182,4 +184,3 @@ Enjoy!
 [xref-2]: {{< relref "2019-02-18-kubernetes-kubeadm-and-the-aws-cloud-provider.md" >}}
 [xref-3]: {{< relref "2019-04-16-using-kubeadm-add-new-control-plane-nodes-aws-integration.md" >}}
 [xref-4]: {{< relref "2019-07-12-calculating-ca-certificate-hash-for-kubeadm.md" >}}
-[xref-5]: {{< relref "" >}}

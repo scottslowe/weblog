@@ -20,7 +20,7 @@ Split tunneling, as explained in [this Wikipedia article][link-2], allows remote
 
 First, go ahead and create a configuration file for `vpnc`. For example, here's a fictional configuration file:
 
-```
+```text
 IPSec gateway vpn.company.com
 IPSec ID VPNGroup
 IPSec secret donttellanyone
@@ -31,7 +31,7 @@ All this information, naturally, has to reflect the correct configuration for yo
 
 To do split tunneling, add this line at the end of your configuration file:
 
-```
+```text
 Script /etc/vpnc/custom-script
 ```
 

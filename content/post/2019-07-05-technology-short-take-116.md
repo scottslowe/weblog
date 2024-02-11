@@ -35,7 +35,7 @@ Welcome to Technology Short Take #116! This one is a bit shorter than usual, due
 
 ## Security
 
-* If you're unfamiliar with public key infrastructure (PKI), digital certificates, or encryption, you may find [this Linux Journal article][link-3] helpful. It provides the basics behind X.509v3 digital certificates, how they help enable asymmetric (public/private key) encryption, and the connection to Transport Layer Security (TLS). Plus, there are some handy `openssl` commands! 
+* If you're unfamiliar with public key infrastructure (PKI), digital certificates, or encryption, you may find [this Linux Journal article][link-3] helpful. It provides the basics behind X.509v3 digital certificates, how they help enable asymmetric (public/private key) encryption, and the connection to Transport Layer Security (TLS). Plus, there are some handy `openssl` commands!
 * As would be expected with any maturing open source project that is starting to see increased adoption, Kubernetes has seen its share of security vulnerabilities over the last couple of months. [This article][link-8] talks about a recent vulnerability in the `kubectl` command, which is typically used to interact with Kubernetes clusters.
 * Lennart Koopmann provides a guide to [Yubikey authentication in the real world][link-10].
 

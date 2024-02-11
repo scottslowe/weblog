@@ -72,7 +72,7 @@ Nothing this time; sorry! I'll be on the lookout for stuff I can include next ti
 ## Virtualization
 
 * Are you running an all-VMware shop and want to add some Kubernetes to the mix? [This blog post][link-5] has a link to a white paper that could be useful.
-* Phil Chapman talks about [using PowerCLI to modify settings for an existing Horizon View pool][link-22].
+* Phil Chapman talks about [using PowerCLI to modify settings for an existing Horizon View pool][link-23].
 * Maarten Van Driessen [shares a workaround][link-25] for an error updating standalone ESXi hosts to version 6.5.
 
 ## Career/Soft Skills

@@ -16,19 +16,25 @@ Recently, while troubleshooting a separate issue, I had a need to get more infor
 
 Service Account tokens are stored as Secrets in the "kube-system" namespace of a Kubernetes cluster. To retrieve just the token portion of the Secret, use `-o jsonpath` like this (replace "sa-token" with the appropriate name for your environment):
 
-    kubectl -n kube-system get secret sa-token \
-    -o jsonpath='{.data.token}'
+```shell
+kubectl -n kube-system get secret sa-token \
+-o jsonpath='{.data.token}'
+```
 
 The output is Base64-encoded, so just pipe the output into `base64`:
 
-    kubectl -n kube-system get secret sa-token \
-    -o jsonpath='{.data.token}' | base64 --decode
+```shell
+kubectl -n kube-system get secret sa-token \
+-o jsonpath='{.data.token}' | base64 --decode
+```
 
 The result you're seeing is a JSON Web Token (JWT). You could use [the JWT web site][link-2] to decode the token, but given that I'm a fan of the CLI I decided to use [this JWT CLI utility][link-1] instead:
 
-    kubectl -n kube-system get secret sa-token \
-    -o jsonpath='{.data.token}' | base64 --decode | \
-    jwt decode -
+```shell
+kubectl -n kube-system get secret sa-token \
+-o jsonpath='{.data.token}' | base64 --decode | \
+jwt decode -
+```
 
 The final `-`, for those who may not be familiar, is the syntax to tell the `jwt` utility to look at STDIN for the JWT it needs to decode (this functionality was added in a very recent release of `jwt`, by the way).
 

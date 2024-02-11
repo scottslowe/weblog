@@ -66,7 +66,7 @@ Welcome to Technology Short Take #114! There will be a longer gap than usual bef
 
 ## Career/Soft Skills
 
-* Sometimes I'll include productivity-related stuff in this section. Here's an article I found recently on [a variation of the Pomodoro technique called FlowTime][link-17]. 
+* Sometimes I'll include productivity-related stuff in this section. Here's an article I found recently on [a variation of the Pomodoro technique called FlowTime][link-17].
 
 OK, that's all for now. As always, feel free to provide any feedback [via Twitter][link-99]. Have a great weekend!
 
