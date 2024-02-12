@@ -22,19 +22,19 @@ My primary focus in this post will be how each of these protocols handles traffi
 
 First, let's look at VXLAN. The figure below is taken from my [revised L3 connectivity with VXLAN post][1], which I encourage you to read for more details.
 
-![](/public/img/fixed-l3-postmig.png)
+![A network diagram illustrating connectivity with a VXLAN overlay network](/public/img/fixed-l3-postmig.png)
 
 As you can see, once a VM inside a VXLAN segment is migrated to a new network, the traffic "trombones" back and forth across the VXLAN segment because all traffic has to pass through a single vShield Edge (VSE) instance. This brings up a key limitation of VXLAN that I think is important to point out: VXLAN has an innate dependency on VSE, and **VSE cannot be made redundant.** That's right---you can't have VSE-specific failover functionality; instead, you have to rely on vSphere HA, VM Monitoring, and other features. That means failover times in the minutes, not seconds. What do you think that will do to network connections?
 
 Now, let's compare VXLAN's L3 connectivity with OTV. First, here's a diagram to show connectivity with OTV before a VM is migrated to the second site:
 
-![](/public/img/otv-l3-premig.png)
+![A network diagram showing connectivity with a VM when using OTV](/public/img/otv-l3-premig.png)
 
 No real surprises here. I'll just point out here that a typical OTV deployment following "recommended practices" will use redundant Nexus 7000 switches, as shown here. That's a key advantage that OTV has over VXLAN---the ability to provide redundancy is there and redundancy is easily built into the solution, with failover times in the seconds (or better).
 
 Now, take a look at the post-migration traffic flows with OTV:
 
-![](/public/img/otv-l3-postmig.png)
+![A network diagram showing traffic flows with OTV after a VM migration](/public/img/otv-l3-postmig.png)
 
 In case you didn't notice it, let me point out the obvious: **note the lack of traffic tromboning here.** Here's how it's accomplished (and documented in [this blog post](http://ccie5851.blogspot.com/2011/03/otv-deep-dive-part-3.html) by Ron Fuller, aka [@ccie5851](http://twitter.com/ccie5851) or VDCBadger to his friends):
 

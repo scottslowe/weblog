@@ -51,7 +51,7 @@ While the 4._x_ branch of [Twitterrific](http://twitterrific.com/mac) dropped so
 
 Regardless of the new apps you might adopt, as a new Mac user you're bound to find things that you still need to do in Windows. For those times, [VMware Fusion](http://www.vmware.com/products/fusion/overview.html) is the way to go. Yes, there are other options (Parallels Desktop), but I've been using Fusion since the very earliest "Friends and Family" pre-beta releases in 2006 and have never experienced even the first problem with it.
 
-## SSH Client: OpenSSH, built-in!
+## SSH Client: OpenSSH, built-in
 
 As a former Windows user, you had to download and install an SSH client (typically [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/)). No longer! Mac OS X comes with [OpenSSH](http://www.openssh.com/) preinstalled, and all you need to do is open up Terminal (found in Applications > Utilities), use the `ssh` command, and you're good to go.
 

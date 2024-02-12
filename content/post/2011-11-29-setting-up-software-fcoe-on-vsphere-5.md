@@ -23,11 +23,11 @@ In order to use the software FCoE initiator, you must have a network interface c
 
 If you have a NIC that doesn't support FCoE offloads, you won't even be able to add a software FCoE initiator:
 
-![](/public/img/sw-fcoe-not-enabled.jpg)
+![A dialog box with software FCoE grayed out and disabled](/public/img/sw-fcoe-not-enabled.jpg)
 
 If, on the other hand, your NIC _does_ support FCoE offloads, you'll see the option to add a software FCoE initiator, like this:
 
-![](/public/img/sw-fcoe-enabled.jpg)
+![A dialog box with both software iSCSI and software FCoE enabled](/public/img/sw-fcoe-enabled.jpg)
 
 Obviously, you'll want to be sure that your NIC does support FCoE offloads before continuing.
 
@@ -45,7 +45,8 @@ Once you have those VLAN IDs, you can then proceed with the networking setup:
 
 3. After you've created the VMkernel port, modify the NIC teaming policy to only use the physical uplink that is physically connected to fabric A. This might require a bit of sleuthing and/or using CDP/LLDP data to ensure that you have the right uplink selected.
 
-4. Create a second VMkernel port on your ESXi host, this time specifying the FCoE VLAN ID for fabric B and modifying the NIC teaming policy 
+4. Create a second VMkernel port on your ESXi host, this time specifying the FCoE VLAN ID for fabric B and modifying the NIC teaming policy.
+
 When creating the VMkernel ports, specify the appropriate VLAN IDs---one for fabric A, one for fabric B. Modify the NIC teaming policy to only use the physical uplink connected to fabric B, again using physical tracing and CDP/LLDP data as needed to verify it.
 
 At this point, you should now have two VMkernel ports, each with separate (unused) IP addresses and configured for separate VLAN IDs and separate physical uplinks. The VLAN IDs and the physical uplinks should correspond to the FCoE fabrics (fabric A and fabric B).
@@ -56,15 +57,15 @@ With the networking in place, you can actually add the software FCoE initiator u
 
 That option opens the following dialog box:
 
-![](/public/img/add-sw-fcoe-adapter.jpg)
+![A dialog box with multiple entry fields for adding a software FCoE adapter](/public/img/add-sw-fcoe-adapter.jpg)
 
 You'll note that the VLAN ID is 0 and isn't changeable. I couldn't find any way to enable this field, and in my testing it proved unnecessary to change it (it worked anyway). Select the appropriate physical uplink and click OK. You'll do this twice---once for fabric A, and again for fabric B. After you've done this twice, you'll have two software FCoE adapters:
 
-![](/public/img/fcoe-adapters-added.jpg)
+![A screenshot showing a list of software FCoE adapters](/public/img/fcoe-adapters-added.jpg)
 
 For each of these two software FCoE adapters, you'll see a node WWN and a port WWN listed. You can use these values in creating the zones and zonesets (see [here][1] for more information). First, though, you'll want to be sure that the software FCoE adapter is actually talking to the fabric correctly; the best way to do that is to use the `show flogi data` command (on a Nexus 5000; other vendors' switches will use a slightly different command). The outcome of the `show flogi data` command will look something like this:
 
-![](/public/img/sw-fcoe-flogi-results.jpg)
+![The output of a command run on an FCoE switch](/public/img/sw-fcoe-flogi-results.jpg)
 
 In this screenshot (taken from an SSH session into a Nexus 5010), you can see that a device has logged into `vfc1009` on VSAN 300. If you compare the port name and node name, you'll see that they match one of the software FCoE adapters shown earlier. This is only one of the two fabrics; a matching result was seen from the other fabric, showing that both software FCoE adapters successfully logged into their respective fabrics.
 

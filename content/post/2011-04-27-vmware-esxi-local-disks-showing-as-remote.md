@@ -27,6 +27,6 @@ This morning, I think I found the answer. While reading this post about [scratch
 
 What _really_ caught my attention, though, was a little blurb at the bottom of the KB article in reference to examples where scratch space may not be automatically defined on persistent storage. Check this out (emphasis mine):
 
->2. ESXi deployed in a Boot from SAN configuration or to a SAS device. **_A Boot from SAN or SAS LUN is considered Remote_**, and could potentially be shared among multiple ESXi hosts. Remote devices are not used for scratch to avoid collisions between multiple ESXi hosts.
+>...ESXi deployed in a Boot from SAN configuration or to a SAS device. **_A Boot from SAN or SAS LUN is considered Remote_**, and could potentially be shared among multiple ESXi hosts. Remote devices are not used for scratch to avoid collisions between multiple ESXi hosts.
 
 There's the answer: although these drives are physically inside the server and are local to the server, they are considered remote during the VMware ESXi installation because they are SAS drives. Mystery solved!

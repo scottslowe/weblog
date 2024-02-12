@@ -17,11 +17,11 @@ If there's one thing I miss about trying to avoid Microsoft Word and stick with 
 
 Now that I'm trying eschew Microsoft Word for more lightweight applications and text-based file formats, I'm finding that I really miss styles. So, I set out to try and find a way to provide some of the consistent formatting I had with styles, but in a way that is in alignment with my goals. I built a solution using these tools:
 
-  * [TextMate](http://www.macromates.com/), for creating [MultiMarkdown](http://fletcherpenney.net/multimarkdown/) source files
+* [TextMate](http://www.macromates.com/), for creating [MultiMarkdown](http://fletcherpenney.net/multimarkdown/) source files
 
-  * [Pandoc](http://johnmacfarlane.net/pandoc/), for converting the MultiMarkdown sources into RTF
+* [Pandoc](http://johnmacfarlane.net/pandoc/), for converting the MultiMarkdown sources into RTF
 
-  * [TextSoap](http://www.unmarked.com/), for applying some regex-based formatting to the RTF destination file.
+* [TextSoap](http://www.unmarked.com/), for applying some regex-based formatting to the RTF destination file.
 
 It's not the greatest solution in the world, but it does work (so far). Here's the basic flow of the solution:
 
@@ -34,4 +34,3 @@ It's not the greatest solution in the world, but it does work (so far). Here's t
 This process is by no means perfect, but it does allow me to generate all my content using Markdown in TextMate, then spin it off to RTF for quick and easy formatting using TextSoap. This splits the content creation and content formatting steps into separate steps, and allows me to focus on "content first, appearance later."
 
 The next evolution in the process will be to use AppleScript to tie the Markdown-to-RTF conversion and the formatting together in a single step (yet another reason to choose TextSoap: it supports and can be driven by AppleScript for automation).
-

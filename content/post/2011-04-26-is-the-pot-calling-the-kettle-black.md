@@ -21,17 +21,13 @@ A recent post by Microsoft on the Windows Virtualization Team Blog titled ["Hype
 
 What really caught my eye was the part of the article where the author compares and contrasts Microsoft's approach and others' approaches. I've taken a screenshot here in case the original article changes. Keep in mind that the article is based on the discussion of _maximum_ virtual CPUs (or VPs, as WSV_GUY calls them) per logical CPU:
 
-![Microsoft blog quote](/public/img/wsv-article-quote.png)  
-
-**Figure 1. Screenshot of Microsoft blog post**
+![Microsoft blog quote](/public/img/wsv-article-quote.png)
 
 So, two things pop to mind immediately. Let's take these in order.
 
 First---since it's fairly obvious that Microsoft is targeting VMware as the primary "other virtualization vendor"--it should be noted that VMware does not consistently use cores as their unit of measure. As a point of proof, I present to you this screenshot taken from VMware's Configuration Maximums document for vSphere 4.1 (available in PDF [here](http://www.vmware.com/pdf/vsphere4/r41/vsp_41_config_max.pdf)). I've taken the liberty of highlighting the two key takeaways:
 
-![VMware configuration maximums document](/public/img/vmw-config-max-shot.png)  
-
-**Figure 2. Screenshot of VMware configuration maximums document**
+![VMware configuration maximums document](/public/img/vmw-config-max-shot.png)
 
 As you can see from the documentation, VMware inconsistently switches back and forth from logical CPUs to cores. From that perspective, VMware has some work to do on presenting consistent messaging and consistent documentation. Point taken. VMware, are you listening?
 

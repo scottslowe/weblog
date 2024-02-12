@@ -22,16 +22,16 @@ I had a reader contact me and ask if he could ask the rest of the readers a vSph
 >
 >The issues I've run into in the past revolved around managing these virtual servers differently than other guests since they couldn't readily be moved between hosts. We also found that the reboot time on these hosts with MSCS/WFC using RDMs was extremely slow (in excess of 45 minutes to fully reboot, we could speed this up by pulling the fibre cables).
 >
->Some of the design considerations I'm curious about would include:  
-> 
+>Some of the design considerations I'm curious about would include:
+>
 >* Where do people put the VMFS/RDM file links?
-> 
+>
 >* Do people put the guests in different clusters? Is this even possible?
-> 
+>
 >* How do people separate active/passive nodes? Do people use host based affinity rules to accomplish this?
-> 
+>
 >* Do reboot times on hosts with lots of RDMs get linearly slower as more MSCS/WFC RDMs are presented to a host?
-> 
+>
 >* Do people really push back and try to get database mirroring instead of clustering? If so, what caveats around this have people encountered?
 >
 >I'm just curious how others are handling situations like this or if anyone is really doing it at scale.

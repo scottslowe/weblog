@@ -22,13 +22,13 @@ Instead---and this makes perfect sense now that my flawed thinking was pointed o
 
 Consider this diagram, which shows how a workload external to a VXLAN segment communicates with a workload inside a VXLAN segment:
 
-![](/public/img/fixed-l3-premig.png)
+![A network diagram illustrating VM connectivity with a VXLAN overlay network](/public/img/fixed-l3-premig.png)
 
 Note that in this diagram, the Linux workload outside the VXLAN segment communicates via the VSE instance handling NAT for that particular VXLAN segment. The VSE instance (VSE 1) passes that communication to the internal workload, and the return traffic follows the same path. Layer 3 connectivity outside of the VXLAN segment is handled via traditional/normal Layer 2/3 methods.
 
 Now consider this diagram, which shows the same communication, but after the Windows-based workload inside the VXLAN segment has now migrated to a different location:
 
-![](/public/img/fixed-l3-postmig.png)
+![A diagram showing tromboning network traffic over a VXLAN network after a VM migration](/public/img/fixed-l3-postmig.png)
 
 Note that even though the Windows-based workload inside the VXLAN segment now resides on a completely separate VTEP (ESXi 2, in this case), the traffic from the Linux-based workload outside the VXLAN segment continues to move through VSE 1. That's because VSE 1 is still the Layer 3 default gateway for the IP subnet inside the VXLAN segment. Therefore---and this is where I was wrong earlier---Layer 3 connectivity is **not** broken, but it does have to "horseshoe" across to the other data center and then back again, as illustrated above. This is the classic traffic pattern that we see with other overlay technologies, like OTV.
 

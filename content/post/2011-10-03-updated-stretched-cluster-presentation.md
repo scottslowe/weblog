@@ -21,6 +21,6 @@ As usual, feel free to speak up with any comments, suggestions, clarifications, 
 
 **UPDATE:** During the blog migration in late 2014, embedded presentations were converted to linked presentations.
 
+[3]: http://www.slideshare.net/lowescott/elastic-vsphere-now-with-more-stretch
 [1]: {{< relref "2010-09-30-stretched-cluster-presentation-from-denver-vmug.md" >}}
 [2]: {{< relref "2011-05-10-stretched-clustering-presentation.md" >}}
-[3]: http://www.slideshare.net/lowescott/elastic-vsphere-now-with-more-stretch

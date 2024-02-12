@@ -22,5 +22,5 @@ Here is [a link to the presentation][2] on Slideshare.
 
 As always, I welcome any questions, suggestions, or other feedback in the comments. Thank you for reading!
 
-[1]: {{< relref "2011-07-18-video-of-stretched-cluster-presentation.md" >}}
 [2]: http://www.slideshare.net/lowescott/20110628vspherenetworkingdesignpreso
+[1]: {{< relref "2011-07-18-video-of-stretched-cluster-presentation.md" >}}

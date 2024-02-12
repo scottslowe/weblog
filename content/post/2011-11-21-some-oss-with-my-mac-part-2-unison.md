@@ -43,7 +43,7 @@ As I mentioned above in the overview, installing Unison is like installing any o
 
 ## Creating the Unison Profiles
 
-While the Unison GUI provides a very sparse UI for creating profiles, you will _most assuredly_ need to supplement the GUI with editing the profile yourself by hand. Profiles created by Unison are stored in `~/Library/Application Support/Unison` as *.prf files that can be edited by any text editor (I use [TextMate](http://macromates.com/)).
+While the Unison GUI provides a very sparse UI for creating profiles, you will _most assuredly_ need to supplement the GUI with editing the profile yourself by hand. Profiles created by Unison are stored in `~/Library/Application Support/Unison` as `*.prf` files that can be edited by any text editor (I use [TextMate](http://macromates.com/)).
 
 Follow this general procedure to get a Unison profile set up properly:
 
@@ -63,7 +63,9 @@ The executable at `/usr/bin/unison` simply launches the Unison GUI. If you try t
 
 The fix is to specify the full path the Unison executable that is buried inside the Mac application package. Let's say you install Unison (which is an application bundle; bundles look like folders at the command line) to `/Applications/Utilities`, like I did. In that case, the right binary to point to is this one:
 
-	/Applications/Utilities/Unison.app/Contents/MacOS/Unison
+```text
+/Applications/Utilities/Unison.app/Contents/MacOS/Unison
+```
 
 When you specify that value for the `servercmd` statement in the Unison profile, everything works (assuming that your public key authentication via SSH is working as expected).
 
@@ -77,7 +79,7 @@ I highly recommend you read [this page](https://alliance.seas.upenn.edu/~bcpierc
 
 Here's a sanitized version of the Unison profile that I'm using to keep files synchronized:
 
-```
+```text
 root = /Local/Path/To/Files
 root = ssh://username@remote.host.com//Remote/Path/To/Files
 servercmd = /usr/bin/unison

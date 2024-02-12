@@ -26,7 +26,7 @@ Welcome to Technology Short Take #13. It's been a while since my last Technology
 
 ## Networking
 
-* Here's a good post by Jeremy Waldrop on [Cisco Nexus 5000/7000 FEX (fabric extender) topologies](http://jeremywaldrop.wordpress.com/2011/06/30/cisco-nexus-50007000-fex-topologies/). I also saw this reference by Jeremy on [Nexus 7000 I/O modules](http://jeremywaldrop.wordpress.com/2011/06/30/cisco-nexus-7000-io-module-cheat-sheet/). Both of these are useful references for folks like me who don't use this sort of information every day. 
+* Here's a good post by Jeremy Waldrop on [Cisco Nexus 5000/7000 FEX (fabric extender) topologies](http://jeremywaldrop.wordpress.com/2011/06/30/cisco-nexus-50007000-fex-topologies/). I also saw this reference by Jeremy on [Nexus 7000 I/O modules](http://jeremywaldrop.wordpress.com/2011/06/30/cisco-nexus-7000-io-module-cheat-sheet/). Both of these are useful references for folks like me who don't use this sort of information every day.
 
 * This post by Ivan Pepelnjak on [data center fabric architectures](http://www.ioshints.info/Data_Center_Fabric_Architectures) is a good overview of the various approaches companies are taking to build so-called "data center fabrics". I have to say, I am regularly impressed by Ivan's work. He has become one of my top networking-focused resources. Great job, Ivan!
 
