@@ -22,7 +22,7 @@ Some high-level tips for reducing the number of layers:
 
 * Use shared base images where possible.
 * Limit the data written to the ocntainer layer.
- 
+
 (Fuller advanced the presentation before I was able to capture the last two bullets from that list.)
 
 In general, Fuller advises to use the cache whenever you can; it's a small step but it can save lots of time when building container images. She advises attendees to review the information available in the community on maximizing the use of cache (no specific resources provided or recommended).

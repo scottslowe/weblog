@@ -61,8 +61,6 @@ As I mentioned in [my last post][xref-6] on corporate collaboration, whether or 
 
 I'll keep posting "in progress" updates as well as summary updates like this one when there is useful information to share. In the meantime, if you have questions, feedback, or suggestions, feel free to connect with me [on Twitter][link-19].
 
-
-
 [link-1]: https://www.ubuntu.com/desktop
 [link-2]: https://getfedora.org/
 [link-3]: https://www.mozilla.org/en-US/thunderbird/

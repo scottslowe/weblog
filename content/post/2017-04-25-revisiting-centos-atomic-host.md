@@ -40,8 +40,6 @@ Aside from these particular issues, there are still a number of differences betw
 
 So what's the final verdict? The answer certainly isn't as clear-cut as my misinformed view in the original post 2 years ago (see the updates on that original post for why I called my view misinformed). As with so many things in IT, it really boils down to requirements. Is there a need for some sort of host OS automation/configuration? If so, then Atomic Host might make more sense. Would the organization benefit from some consistency between a general-purpose OS (RHEL/CentOS) and a container-optimized OS (Atomic Host)? If not, then perhaps going with CoreOS Container Linux is the right approach. Either way, both are good options---for different reasons---for a container-optimized Linux distribution.
 
-
-
 [link-1]: https://projectatomic.io/
 [link-2]: https://www.virtualbox.org/
 [link-3]: https://getfedora.org/

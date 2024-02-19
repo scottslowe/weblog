@@ -62,7 +62,7 @@ Welcome to Technology Short Take #76, the first Technology Short Take of 2017. N
 * As a counterpoint to the "Docker isn't ready" articles from the previous bullet, consider [this article][link-23]. The author (Pat Robinson, I'm guessing from the URL) shares some viewpoints on why Docker is ready for production _for his use case._ (Hat tip to John Troyer for a pointer to this article.)
 * Cody Bunch has this nice tip on [enabling/disabling OS X Finder tabs][link-24].
 * This post is a bit older, but still useful, I think. Zhenyun Zhuang and the LinkedIn Engineering time have a post on [not letting Linux control groups be uncontrolled][link-25]. One key takeaway from the article is that control groups (cgroups) don't reserve memory, so it's still quite possible for memory contention to occur.
-* Trishna Guha has an article on [using Docker remotely on Atomic Host][link-26] (something I struggled with myself).
+* Trishna Guha has an article on [using Docker remotely on Atomic Host][link-27] (something I struggled with myself).
 * Want to get all your data out of Evernote following the revelation that their employees have access to your data? Check [this][link-28] out.
 
 ## Storage
@@ -71,7 +71,7 @@ I don't have anything this time, but I'll keep alert for links or articles to in
 
 ## Virtualization
 
-* Feidhlim O'Leary has a post warning of [a potential concern with password expiration on the VCHA user account][link-10] (this is in the vSphere 6.5 release). 
+* Feidhlim O'Leary has a post warning of [a potential concern with password expiration on the VCHA user account][link-10] (this is in the vSphere 6.5 release).
 * Simon Sharwood of El Reg has the details on [a Windows Server 2016 Hotfix for Update Rollup 1][link-22] (how's that for a mouthful?). Apparently, the rollup introduces issues with live migrations, and the hotfix addresses those issues.
 
 ## Career/Soft Skills
@@ -80,8 +80,6 @@ I don't have anything this time, but I'll keep alert for links or articles to in
 * Andy Callow has [a nice summary of pioneer/settler/town planner (PST) articles and implementations][link-17]. If you're a fan of this three-mode model or just want to learn more, have a look at Andy's article. Andy also references [this article][link-18] by Neil Perkin, which I found very useful as well.
 
 OK, that's it for this time around. I have a ton more content I'd love to include, but this post is already packed to the gills as it is. I guess I'll just have to save it for the next one. Until then, enjoy!
-
-
 
 [link-1]: https://www.openfogconsortium.org/
 [link-2]: https://thinkerbit.com/articles/change-twitter-username

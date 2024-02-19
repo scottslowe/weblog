@@ -18,21 +18,25 @@ The ["How to Compile" page on the MMD-6 Wiki][link-4] is quite sparse, so a fair
 
 Once the VM was running, I installed the necessary packages to compile the source code. It turns out only the following packages were necessary:
 
-    sudo dnf install gcc make cmake gcc-c++
+```sh
+sudo dnf install gcc make cmake gcc-c++
+```
 
 Then I downloaded the source code for MMD-6:
 
-    curl -LO https://github.com/fletcher/MultiMarkdown-6/archive/6.2.3.tar.gz
+```sh
+curl -LO https://github.com/fletcher/MultiMarkdown-6/archive/6.2.3.tar.gz
+```
 
 Unpacking the archive with `tar` created a `MultiMarkdown-6-6.2.3` directory. Changing into that directory, then the instructions from the Wiki page worked as expected:
 
-    make
-    cd build
-    make
+```sh
+make
+cd build
+make
+```
 
 I did _not_ run `make test`, though perhaps I should have to ensure the build worked as expected. In any case, once the second `make` command was done, I was left with a `multimarkdown` binary that I copied out to my Fedora 27 host system via `scp`. Done!
-
-
 
 [link-1]: https://github.com/fletcher/MultiMarkdown-6/
 [link-2]: https://daringfireball.net/projects/markdown/

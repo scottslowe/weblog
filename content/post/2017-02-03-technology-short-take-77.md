@@ -86,8 +86,6 @@ Welcome to Technology Short Take #77. I've got a new collection of links and art
 
 That's all this time around. Here's hoping you found something useful!
 
-
-
 [link-1]: https://www.if-not-true-then-false.com/2010/install-virtualbox-guest-additions-on-fedora-centos-red-hat-rhel/
 [link-2]: http://www.virtuallyghetto.com/2017/01/functional-usb-c-thunderbolt-3-ethernet-adapter-for-esxi-5-5-6-0-6-5.html
 [link-3]: http://bensdoings.com/2017/01/19/vics-uncool-ga/

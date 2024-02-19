@@ -25,7 +25,7 @@ Next, you're probably going to want to have the ODrive Sync Agent run automatica
 
 Here's a sample systemd unit you could use:
 
-```
+```text
 [Unit]
 Description=odrive Sync Agent daemon
 
@@ -46,14 +46,18 @@ In ODrive's web interface, you'll connect ODrive to various storage services---[
 
 When you use `odrive mount`, you're creating the equivalent of a filesystem mount point, mounting a remote cloud storage provider onto a local directory. The example that ODrive provides on their web site says to use this command:
 
-    odrive mount /path/to/local/dir /
+```sh
+odrive mount /path/to/local/dir /
+```
 
 This command mounts the "root" of the ODrive to a local path. Each of the storage services comes in as a subdirectory according to the name assigned (either by default or by you when you renamed it) found in the ODrive web interface. So, if you have Google Drive mapped in to ODrive and have named it GDrive, then you'll see a GDrive folder under the mount point that represents your Google Drive.
 
 If you're like me, you'll probably start thinking about wanting to use multiple ODrive mount points, so that you can map storage services into your local filesystem in more flexible ways. For example, to create provider-specific mounts you could do something like this:
 
-    odrive mount ~/Local-GDrive /GDrive
-    odrive mount ~/AmazonDrive /AmznDrv
+```sh
+odrive mount ~/Local-GDrive /GDrive
+odrive mount ~/AmazonDrive /AmznDrv
+```
 
 This is neat, _except for the fact that this is only a Premium feature._ (You have to have a paid subscription.) This is **not** clear from their documentation; it's only by trying it and failing will you discover this little nugget of information. After digging around for a while, I found a brief, unclear mention of this fact in their features comparison list. (By the way, I have _no_ problem with ODrive charging for premium features---my complaint is the incredibly sparse documentation and lack of clarity.)
 
@@ -65,7 +69,9 @@ I'm a huge CLI fan (in case you hadn't guessed), so normally a CLI-only solution
 
 The reason the lack of support for recursion or wildcards/filename globbing is such an issue is because the ODrive Sync Agent won't, by default, automatically start syncing files to your local system from the cloud storage provider. In my case, I already had files in my OneDrive for Business (OD4B) account. ODrive will "see" the files and directories in OD4B, and will create placeholder files to represent them: a `.cloud` file for every file, and a `.cloudf` file for every directory. In order to actually sync these files and directories down to your system, you need to use the `odrive` command line against one of these placeholder files, like this:
 
-    odrive sync cloud-folder.cloudf
+```sh
+odrive sync cloud-folder.cloudf
+```
 
 This will then sync _this folder_ down to your local system, but not any files or subfolders in it. You'll need to repeat this process for subfolders, or for individual files in the folder. Naturally, you can see why recursion (syncing an entire directory tree) or filename globbing (grabbing all files) would be quite useful. Lack of support for either of these features means that there is a fair amount of manual work needed when you're adding a cloud storage service where there's already content present.
 
@@ -78,8 +84,6 @@ There are some quasi-workarounds to this; you can, for example, write a small sc
 ODrive has the potential to be a very useful, particularly if you need to access services like OD4B where there is no native Linux client from the provider. However, its usefulness/usability is severely hampered by a lack of thorough documentation, no GUI functionality, and a hobbled CLI. That being said, if you can live with the current limitations, it may still win a place on your Linux system. (It has on mine.)
 
 Feel free to hit me up on Twitter if you have questions, comments, or corrections about this post. Thank you for reading!
-
-
 
 [link-1]: https://www.odrive.com/
 [link-2]: https://docs.odrive.com/docs/odrive-sync-agent

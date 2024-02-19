@@ -46,8 +46,6 @@ Spousetivities will also be back at [AWS re:Invent][link-7] in Las Vegas. The ex
 
 All these activities are being sponsored by [VMware NSX][link-8]. Their sponsorship makes it possible for Crystal to cover her own travel and expenses and to subsidize the cost of the customized private tours that have been arranged for participants. If you're a conference attendee at one of these events whose spouse/partner/significant other will be able to travel with you because of Spousetivities, please let VMware NSX know how much you appreciate their support!
 
-
-
 [link-1]: http://spousetivities.com/
 [link-2]: https://europe-2017.dockercon.com/
 [link-3]: https://spousetivities.ticketleap.com/dockercon-copenhagen-2017/

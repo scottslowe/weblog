@@ -33,5 +33,4 @@ Graf provides an update on the Cilium project. It's early yet, but there is a Va
 
 Graf wraps up the session by reiterating the need for HTTP-aware network and security functions, and reiterating his believe that BPF/XDP are the vehicles that will drive this functionality in the Linux kernel moving forward. At this point, Graf opens up for questions from session attendees.
 
-
 [link-1]: http://cilium.io/

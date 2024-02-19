@@ -34,8 +34,6 @@ Devine switches to perform a demo of the new image mirroring functionality. Beca
 
 Devine closes out the session by letting users know about a free 4 hour demo of Docker EE that's available, in case attendees are interested in trying out any of the features that were discussed in the session. Following some Q&A, Devine ends the session.
 
-
-
 [link-1]: https://www.docker.com/enterprise-edition
 [link-2]: https://www.vmware.com/products/personal-desktop-virtualization.html
 [xref-1]: {{< relref "2017-04-18-black-belt-cilium.md" >}}

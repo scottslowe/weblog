@@ -41,8 +41,6 @@ Note that a number of the articles I read on this topic recommended you install 
 
 I hope this helps!
 
-
-
 [link-1]: https://www.virtualbox.org/
 [link-2]: http://www.vmware.com/products/fusion.html
 [link-3]: https://getfedora.org/

@@ -18,8 +18,10 @@ First, if you're not familiar with `make` and its use of a `Makefile`, check out
 
 In this use case, we'll re-purpose the `Makefile` functionality to define how we go about creating a particular output format based on a source Markdown document. For example, the following rule defines how to build the file `report.html`, which has as a dependency the source file `report.md`:
 
-    report.html: report.md
-        multimarkdown --to=html --full --smart $< >> $@
+```makefile
+report.html: report.md
+    multimarkdown --to=html --full --smart $< >> $@
+```
 
 There's a few weird things here that may deserve some explanation:
 
@@ -31,27 +33,29 @@ When you run `make report.html`, Make will first check to see if the dependencie
 
 Naturally, defining the source and destination file name every time you create a new Markdown file isn't ideal, so we can take this idea and make it more generic through the use of wildcards. With this one change to the earlier rule, we've now make it possible to create an HTML file from _any_ source Markdown file:
 
-    %.html: %.md
-        multimarkdown --to=html --smart $< >> $@
+```makefile
+%.html: %.md
+    multimarkdown --to=html --smart $< >> $@
+```
 
 By extending this example to other formats, I can create easily create a set of rules for generating any number of output formats from a single Markdown document. Here's an example set of rules:
 
-    %.html: %.md
-        multimarkdown --to=html --smart $< >> $@
+```makefile
+%.html: %.md
+    multimarkdown --to=html --smart $< >> $@
 
-    %.rtf: %.md
-        pandoc --from=markdown --to=rtf --smart --standalone --output=$@ $<
+%.rtf: %.md
+    pandoc --from=markdown --to=rtf --smart --standalone --output=$@ $<
 
-    %.docx: %.md
-        pandoc --from=markdown --to=docx --smart --standalone --output=$@ $<
+%.docx: %.md
+    pandoc --from=markdown --to=docx --smart --standalone --output=$@ $<
+```
 
 Using an approach like this makes it really easy to generate a variety of output formats. If I need to generate a Rich Text Format (RTF) document from a Markdown source file, I just run `make <filename>.rtf`. Make will find the matching Markdown source file and---using `pandoc`---create the RTF file. If the target already exists and the Markdown file hasn't been updated (based on file modification date), then Make will do nothing. Likewise, if I need to create a DOCX (Microsoft Word) file, I can just run `make <filename>.docx`. It's pretty straightforward, to be honest.
 
 As I mentioned earlier, Make is _so_ much more powerful than what I've shown you here (or even what I'm using at the moment). Currently, I'm exploring the use of Make to help streamline the creation of new documents; stay tuned for more details after I've worked through a few of the details.
 
 Until then, if you're looking for a new way to handle output formats for your Markdown documents, I'd encourage you to investigate whether using Make and a `Makefile` will work for you.
-
-
 
 [link-1]: http://daringfireball.com/markdown/
 [link-2]: http://fletcherpenney.net/multimarkdown/

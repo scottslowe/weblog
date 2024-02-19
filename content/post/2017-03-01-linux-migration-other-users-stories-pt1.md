@@ -47,6 +47,4 @@ I've modified my working style so that I have my Windows 10 work VM on one monit
 
 Switching to Linux as your primary desktop OS won't be for everyone, but if you're like me and stick with it for a few good weeks you'll never look back!
 
-
-
 [xref-1]: {{< relref "2016-12-16-linux-migration-initial-progress-report.md" >}}

@@ -41,7 +41,7 @@ Sorry, I don't have anything this time around. Check back next time!
 
 ## Security
 
-* Mike Foley tackles the topic of [TLS 1.2 and vSphere][link-14]. 
+* Mike Foley tackles the topic of [TLS 1.2 and vSphere][link-14].
 * Cossack Labs recently released [Acra][link-18], a database encryption suite designed to protect applications against data leaks by providing strong encryption. In this respect, it seems similar to [HexaTier][link-19], a company I spoke with last year (as of this writing, the HexaTier product was no longer available per their website). As opposed to just encrypting data at the transport level (although Acra does that between components of its architecture) or just encrypting data at the storage level (using an encrypted file system or similar), Acra targets encrypting data at the table/row/column level within a database. Acra is open source and available [via GitHub][link-20].
 * Federacy recently published an article about the results of their [Docker image vulnerability research][link-22]. There's some good information in this article; I recommend reading it.
 * Cisco Systems recently disclosed a vulnerability affecting more than 300 models of switches; see [this Ars Technica article][link-30] for more details. While this may seem like a big deal, it relies on the device being configured for telnet (which is itself something you should have addressed already, IMHO). Thanks to Devender Sharma for the link.
@@ -80,8 +80,6 @@ Sorry, I don't have anything this time around. Check back next time!
 * Greg Schulz has a two-part series on tradecraft that I found interesting ([part 1][link-31] and [part 2][link-32]). Although he's discussing tradecraft in the context of storage, I think some of the points he makes are applicable to any career (and certainly any IT career).
 
 That's it for this time around. Look for the next Technology Short Take in approximately two weeks. Thanks for reading!
-
-
 
 [link-1]: https://www.linkedin.com/pulse/network-automation-part-1-using-netmiko-python-library-mekonnen
 [link-2]: https://blogs.vmware.com/cloudnative/docker-containerd-explained-plain-words/

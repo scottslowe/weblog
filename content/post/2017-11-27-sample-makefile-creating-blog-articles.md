@@ -32,7 +32,7 @@ url: /2017/11/27/sample-blog-post-title/
 
 There are obviously a lot of different ways to automate the creation of this front-matter (text expansion utilities, text editor snippets, macros, etc.). I chose to tackle this using a `Makefile` so that I had some level of independence from the specific editor or operating system I was using (`make` is easily accessible on both macOS and Linux). After some trial and error, I finally arrived at this `Makefile`:
 
-```
+```makefile
 POST_TEMPLATE := ~/Templates/blog-post-template.md
 editor ?= /usr/local/bin/subl -n
 name ?= new-blog-post
@@ -70,8 +70,6 @@ Using this `Makefile` is pretty straightforward:
 In all these examples, the file is immediately opened in [Sublime Text][link-7], as instructed by the default value of `editor`. If I wanted to change that, I can just type `make new name=a-third-specific-name editor=atom` and it would open in [Atom][link-8] instead. This provides some additional flexibility if needed.
 
 I'll continue to refine this `Makefile` as I learn more, and readers are encouraged to [hit me on Twitter][link-6] with suggestions for improvement. I hope this information proves useful to other bloggers using static site generators.
-
-
 
 [link-1]: https://aws.amazon.com/s3/
 [link-2]: https://aws.amazon.com/cloudfront/

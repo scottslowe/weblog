@@ -63,7 +63,7 @@ To describe the Amazon Machine Images (AMIs) you could use to launch an instance
 
     aws ec2 describe-images
 
-This command alone isn't all that helpful; it returns too much information. Filtering the information is pretty much required in order to make it useful. 
+This command alone isn't all that helpful; it returns too much information. Filtering the information is pretty much required in order to make it useful.
 
 To filter the list of images by owner:
 

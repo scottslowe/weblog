@@ -86,8 +86,6 @@ Nothing this time around, but I've had some volunteers offer to share some links
 
 That's all for this time, but don't worry---I'll be back in a couple of weeks (approximately) with more links, articles, and thoughts to share. Until then, enjoy!
 
-
-
 [link-1]: https://strikerttd.wordpress.com/2017/05/31/configuring-fedora-25-as-a-hypervisor-using-virtual-machine-manager/
 [link-2]: http://www.colliernotes.com/2017/06/kicking-tires-of-prometheus-using.html
 [link-3]: https://blog.russellbryant.net/2017/05/30/ovn-geneve-vs-vxlan-does-it-matter/

@@ -36,8 +36,6 @@ In any case, for all these reasons I really felt that Fedora was better suited f
 
 In upcoming posts on the Linux migration, I'll tackle updates on topics like corporate collaboration. Until then, feel free to hit me up [on Twitter][link-8] if you have any questions or feedback.
 
-
-
 [link-1]: https://www.ubuntu.com/
 [link-2]: https://getfedora.org/
 [link-3]: https://www.virtualbox.org/

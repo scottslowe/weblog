@@ -81,8 +81,6 @@ Welcome to Technology Short Take 91! It's been a bit longer than usual since the
 
 That's all for now (but I think that should be enough to keep you busy for a little while, at least!). I'll have another Tech Short Take in 2 weeks, though given the holiday season is nigh upon us it might be a bit light on content. Until then!
 
-
-
 [link-1]: https://cloudplatform.googleblog.com/2017/11/introducing-Certified-Kubernetes-and-Google-Kubernetes-Engine.html
 [link-2]: https://blogs.vmware.com/cloudnative/2017/11/13/vmware-pivotal-container-service-achieves-kubernetes-certification/
 [link-3]: https://blog.mobyproject.org/containerd-namespaces-for-docker-kubernetes-and-beyond-d6c43f565084

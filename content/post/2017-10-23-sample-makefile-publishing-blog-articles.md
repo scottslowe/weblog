@@ -26,7 +26,7 @@ In general, the process for publishing a blog post using Hugo and S3/CloudFront 
 
 Some of these steps are easy to automate; what I've tackled with `make` and a `Makefile` are steps 3, 4, and 5. Here's the current version of the `Makefile` I'm using (with a few randomizations to protect some of my information):
 
-```
+```makefile
 SRC_DIR := public/
 CF_DIST := ABCDEFG1234567
 BUCKET := my-destination-bucket
@@ -62,8 +62,6 @@ In earlier versions of the `Makefile`, I didn't have all the different targets (
 One thing I haven't quite worked out yet is the "server" target, which simply runs `hugo server` (for serving up a local version of the site). The hyphen at the front of this command tells `make` to ignore errors returned by the command it runs (so that it will ignore the error produced when I press Ctrl-C to stop Hugo), but this doesn't work so well. If anyone has any suggestions to work around this, I'm open to hearing them (hit [me on Twitter][link-1]).
 
 In any case, in the event any readers out there are considering the use of a static site generator, I hope this information on helping to streamline and automate the process of publishing a post using a `Makefile` proves helpful.
-
-
 
 [link-1]: https://twitter.com/scott_lowe
 [xref-1]: {{< relref "2017-08-10-information-recent-site-migration.md" >}}

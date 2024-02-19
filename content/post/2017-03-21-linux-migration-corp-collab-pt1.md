@@ -48,8 +48,6 @@ This setup seems to work well, is stable, and doesn't introduce unnecessary fric
 
 In the next post on corporate collaboration, I'll discuss calendaring.
 
-
-
 [link-1]: https://products.office.com/en-us/business/office
 [link-2]: https://www.mozilla.org/en-US/thunderbird/
 [link-3]: https://wiki.gnome.org/Apps/Evolution/

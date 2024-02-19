@@ -57,6 +57,4 @@ At this point the session wraps up.
 
 **UPDATE:** Antoni Segura Puimedon (one of the speakers) sent me [this URL][link-1] with more information on focus areas for the project.
 
-
-
 [link-1]: https://docs.google.com/document/d/138Smryl2Bg8JD2AzGN_9RjtHZQ32dTxwkDMWblcRWH8/edit?usp=sharing

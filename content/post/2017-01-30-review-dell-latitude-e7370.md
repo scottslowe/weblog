@@ -30,8 +30,6 @@ I had a few folks online make some condescending remarks about the Dell, calling
 
 Finally, with regard to my Linux migration, I'm happy to say that [Fedora][link-2] 25 runs flawlessly on the E7370, with everything working as expected _out of the box._ If you're considering moving to Linux, the E7370 may be a good platform to consider.
 
-
-
 [link-1]: https://www.apple.com/macbook-pro/specs/
 [link-2]: https://getfedora.org/
 [xref-1]: {{< relref "2016-12-16-linux-migration-initial-progress-report.md" >}}

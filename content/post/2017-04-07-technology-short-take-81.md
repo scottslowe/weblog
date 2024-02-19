@@ -83,8 +83,6 @@ OK, it's time to wrap this thing up. Surprisingly, I _actually_ managed to keep 
 
 Take care, folks!
 
-
-
 [link-1]: https://sferik.github.io/t/
 [link-2]: https://brianragazzi.wordpress.com/2017/03/17/a-downside-to-vvols/
 [link-3]: http://hokstadconsulting.com/devops/writing-systemd-units

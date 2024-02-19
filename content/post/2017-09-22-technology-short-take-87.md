@@ -78,8 +78,6 @@ Nothing this time around, but stay tuned for something next time.
 
 Alright, it's time to wrap up now. I hope you've found something useful, and look for the next Technology Short Take in about 2 weeks.
 
-
-
 [link-1]: http://alexander.holbreich.org/kubernetes-on-ubuntu/
 [link-2]: http://www.devsecops.cc/devsecops/hardening_docker_hosts.html
 [link-3]: http://dtrace.org/blogs/bmc/2017/09/04/the-sudden-death-and-eternal-life-of-solaris/

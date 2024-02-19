@@ -78,8 +78,6 @@ Nothing this time around, sorry!
 
 That's all for this time, folks. Hopefully something I included here was useful to you, or made you think. Have a great weekend!
 
-
-
 [link-1]: http://danielallendeutsch.com/blog/16-using-tmux-properly.html
 [link-2]: http://openstack-in-production.blogspot.ch/2015/08/numa-and-cpu-pinning-in-high-throughput.html
 [link-3]: https://blogs.msdn.microsoft.com/virtual_pc_guy/2017/02/03/hyper-v-vs-kvm-for-openstack-performance/

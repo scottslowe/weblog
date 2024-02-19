@@ -15,7 +15,7 @@ url: /2017/04/18/dockercon-2017-day-1-keynote/
 
 This is a liveblog of the day 1 keynote (general session) of DockerCon 2017 in Austin, TX.<!--more-->
 
-At 9:05am, Ben Golub, CEO of Docker, Inc., takes the stage to kick off the general session and the conference. Golub starts the presentation by reviewing Docker's four-year history and all the things that have changed over the last three years since the very first DockerCon---from the size of Gordon (Docker's tortoise mascot) to the amount of growth in Docker usage (via statistics in the number of Docker hosts, the number of Docker-ized apps, the number of image pulls from Docker Hub, and so forth). 
+At 9:05am, Ben Golub, CEO of Docker, Inc., takes the stage to kick off the general session and the conference. Golub starts the presentation by reviewing Docker's four-year history and all the things that have changed over the last three years since the very first DockerCon---from the size of Gordon (Docker's tortoise mascot) to the amount of growth in Docker usage (via statistics in the number of Docker hosts, the number of Docker-ized apps, the number of image pulls from Docker Hub, and so forth).
 
 Golub continues by mentioning some of the various use cases for Docker. One use case mentioned is Intuit's use of Docker, and Golub points out that the person responsible for running Intuit's systems is confident enough in their systems that they're attending DockerCon on Tax Day (when as many as 25 million tax returns are expected to be processed).
 
@@ -83,8 +83,6 @@ Hykes walks through a few examples of using Moby assemblies:
 Following up on this discussion, Hykes brings out Rolf Neugebauer to help him demo Moby. The first demo involves building "RedisOS," which is a minimal OS that only runs Redis, and booting "RedisOS" on a Mac, on Windows, and on bare metal. It looks like Moby uses a YAML file to define the components in a Moby assembly. Moby sort of feels a bit like HashiCorp's Packer tool in that it can produce "artifacts"---VM images, ISO images, etc.---just by modifying the Moby assembly. The second example in the demo builds an etcd cluster on Google Cloud, including the use of Prometheus to monitor the cluster. The third and final example is turning up Kubernetes using HyperKit, LinuxKit, containerD, etcd, SSH, and Kubernetes on a Mac.
 
 With the end of the demo, Hykes closes out the general session.
-
-
 
 [link-1]: https://twitter.com/solomonstre
 [link-2]: https://github.com/linuxkit/linuxkit

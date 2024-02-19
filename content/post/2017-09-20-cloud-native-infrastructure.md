@@ -27,6 +27,4 @@ Wrapping up the presentation, Nova tells attendees to stop managing infrastructu
 
 With that, Nova ends the session.
 
-
-
 [link-1]: http://www.cnibook.info/

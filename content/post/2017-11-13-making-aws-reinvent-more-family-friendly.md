@@ -22,8 +22,6 @@ Want a sneak peek at what's planned? Have a look:
 
 [Registration is open right now][link-1], so sign up before it's too late. Prices for these activities is reduced from standard retail rates thanks to sponsorship from [VMware NSX][link-3].
 
-
-
 [link-1]: https://spousetivities.ticketleap.com/aws-reinvent-2017/
 [link-2]: https://reinvent.awsevents.com/
 [link-3]: https://www.vmware.com/products/nsx.html

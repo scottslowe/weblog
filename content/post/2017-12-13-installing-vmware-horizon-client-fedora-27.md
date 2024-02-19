@@ -20,19 +20,21 @@ Based on information found [here][link-1] and [here][link-2], I took the followi
 
 2. I then created a symbolic link for the `libudev.so.0` library that the Horizon client requires:
 
-        sudo ln -s /usr/lib64/libudev.so.1 /usr/lib64/libudev.so.0
+    ```sh
+    sudo ln -s /usr/lib64/libudev.so.1 /usr/lib64/libudev.so.0
+    ```
 
 3. I created a symbolic link for the `libffi.so.5` library the Horizon client expects to have available:
 
-        sudo ln -s /usr/lib64/libffi.so.6 /usr/lib64/libffi.so.5
+    ```sh
+    sudo ln -s /usr/lib64/libffi.so.6 /usr/lib64/libffi.so.5
+    ```
 
 With these packages and symbolic links in place, I proceeded to install the VMware Horizon client using the install bundle downloaded from the public VMware web site (for version 4.6.0 of the client). Per the guidelines in [this GitHub gist][link-2], I deselected most all of the options (Smart Card, Real-Time Audio-Video, and Multimedia Redirection were all deselected; if I recall correctly, only Virtual Printing, Client Drive Redirection, and USB Redirection were left selected). The installation proceeded without incident, and the scan at the end reported success on all fronts.
 
 Once the installation was complete, I was able to launch the Horizon client and proceed without further issues.
 
 Here's hoping this information helps others who may be looking to use the Horizon Client for Linux. If you have questions, feel free to [hit me up on Twitter][link-4].
-
-
 
 [link-1]: https://ask.fedoraproject.org/en/question/96796/vmware-horizon-client-fedora-24/
 [link-2]: https://gist.github.com/pcurylo/e0893230d3f50f9143f97ba46b15add5

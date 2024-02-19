@@ -78,8 +78,6 @@ Hmm...I didn't find anything again this time around. Perhaps I should remove thi
 
 That's all for now. Check back again in about 2 weeks for the next Technology Short Take. In the meantime, feel free to [hit me on Twitter][link-27] if you have a link you think I should include in a future post. Thanks for reading!
 
-
-
 [link-1]: https://blogs.vmware.com/cloudnative/2017/10/10/solving-container-networking-challenges-vsphere-integrated-containers/
 [link-2]: https://github.com/ligurio/openbsd-cookbooks
 [link-3]: https://xiix.wordpress.com/2008/06/26/python-regex-for-mac-addresses/

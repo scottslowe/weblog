@@ -16,7 +16,7 @@ A long time ago in a galaxy far, far away (OK, so it was 2008 and it was here in
 
 Registration is [here][link-3], and here's a quick look at some of the activities planned for VMworld US in Las Vegas:
 
-* On Monday, August 28, Spousetivities will kick the week off with a "Welcome Breakfast", including---as usual!---the opportunity to win some great prizes. iPads, Apple Watches, VR headsets, GoPro cameras, and more have all been prizes in previous years. (What? You expected me to spill the beans on what's being given away this year?) 
+* On Monday, August 28, Spousetivities will kick the week off with a "Welcome Breakfast", including---as usual!---the opportunity to win some great prizes. iPads, Apple Watches, VR headsets, GoPro cameras, and more have all been prizes in previous years. (What? You expected me to spill the beans on what's being given away this year?)
 * The breakfast is followed by a scavenger hunt, including a visit to an ice bar and the chance for more prizes. [Veeam][link-4] is sponsoring the scavenger hunt.
 * On Tuesday, August 29, there is an option for a _very_ cool helicopter tour of the Grand Canyon (including landing on the floor of the canyon---[register soon][link-3], space is limited!), and a "cabana day" by the pool (the latter is sponsored by [ActualTech Media][link-2]).
 * On Wednesday, August 30, participants have a couple of different options: a zip line adventure on the iconic Fremont Street _or_ a visit to Madame Tussaud's. Both are followed by a quick food tour.
@@ -32,8 +32,6 @@ To help defray costs for participants, Spousetivities has a great set of sponsor
 If you're planning on attending VMworld US this year, I strongly encourage you to consider bringing your spouse/partner/significant other along and getting them involved in Spousetivities. [Registration is open now][link-3], and space is limited for some events (so don't wait too long).
 
 See you in Vegas!
-
-
 
 [link-1]: http://www.spousetivities.com/
 [link-2]: http://www.actualtech.io

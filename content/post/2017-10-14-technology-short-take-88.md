@@ -84,8 +84,6 @@ Nothing this time (sorry!). I'll keep an eye open for links to include next time
 
 That's all for this time around. Thanks for reading!
 
-
-
 [link-1]: https://www.vladan.fr/how-to-create-vmware-esxi-iso-with-latest-patches/
 [link-2]: https://virtualhobbit.com/2017/09/27/wednesday-tidbit-fix-missing-puppet-attributes-on-vrealize-automation-blueprints/
 [link-3]: http://www.projectatomic.io/blog/2017/09/running-kubernetes-on-fedora-atomic-26/

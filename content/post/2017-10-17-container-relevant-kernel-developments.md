@@ -37,6 +37,4 @@ The last topic of Andersen's talk centers on the Kernel Self Protection Project 
 
 Andersen then wraps up the session with a few additional resources, and then opens up for questions.
 
-
-
 [link-1]: http://landlock.io/

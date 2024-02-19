@@ -35,8 +35,6 @@ Johnston now comes back to the stage following IBM's presentation and demo to th
 
 In closing, Johnston reviews some breakout sessions that will provide more information and/or insight on the topics covered in the general session, and then closes the session.
 
-
-
 [link-1]: https://twitter.com/scottcjohnnston
 [xref-1]: {{< relref "2017-10-17-dockercon-eu-day-1-keynote.md" >}}
 [xref-2]: {{< relref "2017-10-17-some-thoughts-on-docker-kubernetes-announcement.md" >}}

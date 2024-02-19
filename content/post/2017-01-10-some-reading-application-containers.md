@@ -24,8 +24,6 @@ So, in no particular order, here are a few articles I found about using Linux co
 
 I was successful in using Docker to containerize Firefox (see [my "dockerfiles" repository on GitHub][link-8]), and was also successful in using `systemd-nspawn` in the same way, including the use of overlayfs. My experiments have been quite helpful and informative; I have some ideas that may percolate into future blog posts.
 
-
-
 [link-1]: http://blog.exppad.com/article/a-docker-like-container-management-using-systemd
 [link-2]: http://jvns.ca/blog/2016/10/26/running-container-without-docker/
 [link-3]: https://ramsdenj.com/2016/09/23/containerizing-graphical-applications-on-linux-with-systemd-nspawn.html

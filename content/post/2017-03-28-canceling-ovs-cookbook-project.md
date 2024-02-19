@@ -19,8 +19,6 @@ It really comes down to wanting to be a better member of the OVS community. I ho
 
 And what about my goal for launching an open source book project? I'll continue to evaluate options on that front to see if it makes sense, and I'll post here if and when something happens.
 
-
-
 [link-1]: http://docs.openvswitch.org/en/latest/
 [link-2]: http://docutils.sourceforge.net/rst.html
 [xref-1]: {{< relref "2017-01-31-looking-ahead-2017-projects.md" >}}

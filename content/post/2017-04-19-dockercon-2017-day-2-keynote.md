@@ -48,6 +48,4 @@ Ades spends a few minutes talking about MetLife (which is celebrating 150 years 
 
 Golub comes back to the stage to close up the keynote. He reviews some of the sessions that will revisit some of the topics covered in the general session, and points out some of the customer use case sessions that will take place later in the day as well. Notably, Golub does _not_ say anything about the potential logo change to which he alluded at the start of the keynote.
 
-
-
 [xref-1]: {{< relref "2017-04-18-dockercon-2017-day-1-keynote.md" >}}

@@ -28,7 +28,9 @@ Recently, I revisited using the Libvirt provider for Vagrant on my Fedora laptop
 
 Obviously, you'll need Vagrant installed; I chose to install Vagrant from the Fedora repositories using `dnf install vagrant`. At the time of this writing, that installed version 1.9.8 of Vagrant. You'll also need the Libvirt plugin, which is  available via `dnf`:
 
-    dnf install vagrant-libvirt vagrant-libvirt-doc
+```sh
+dnf install vagrant-libvirt vagrant-libvirt-doc
+```
 
 At the time of writing, this installed version 0.40.0 of the Libvirt plugin, which is the latest version. You could also install the plugin via `vagrant plugin install vagrant-libvirt`, though I didn't test this approach. (In theory, it should work fine.)
 
@@ -82,8 +84,6 @@ To remove the files from the Libvirt storage pool, run `virsh pool-edit default`
 So far---though my testing has been fairly limited---I'm reasonably pleased with the Libvirt provider when running against a local Libvirt daemon. The performance is good, and I haven't had to "jump through hoops" to make the virtualization provider work (as I did with VirtualBox on Fedora).
 
 If you have any questions or feedback, [hit me up on Twitter][link-9]. Thanks!
-
-
 
 [link-1]: https://github.com/vagrant-libvirt/vagrant-libvirt
 [link-2]: https://www.vagrantup.com/

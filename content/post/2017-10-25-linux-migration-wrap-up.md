@@ -31,7 +31,7 @@ So, as much as I _loved_ working in Linux, I felt that I was actively fighting t
 
 So what does this mean for others who might be pondering the switch to Linux as their primary OS? Truly and honestly, it's going to depend on the applications you use. For personal use only---where you're just surfing the web, managing personal e-mail, some light photo editing, etc.---you may be fine. For corporate use, the question is far less clear (in my opinion):
 
-* If your employer relies heavily on Office 365, I think you'll find it challenging (unless you resort to using a VM extensively). 
+* If your employer relies heavily on Office 365, I think you'll find it challenging (unless you resort to using a VM extensively).
 * If your employer relies heavily on Microsoft-centric collaboration tools, I think you'll find it challenging to use Linux as your primary OS (again, unless you resort to using a Windows VM most of the time, in which case I would challenge whether you are really using Linux as your primary OS).
 * If your employer relies heavily on Google Apps and you don't travel a lot, you'll probably be OK (assuming #1 is not also true).
 * If your employer is more into "Linux-friendly" tools like Slack, IRC, standards-based e-mail/calendaring/contacts (IMAP/SMTP/CalDAV/CardDAV), and online platforms like wikis/blogs for information sharing, then you'll probably be fine (although calendaring may be an issue).

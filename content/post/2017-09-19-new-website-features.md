@@ -22,8 +22,6 @@ It's not much, I know, but I'm hoping this new functionality makes it easier for
 
 If you have feedback for me on what additional functionality you'd find useful on the site, feel free [to hit me up on Twitter][link-4]. Thanks for reading!
 
-
-
 [link-1]: /categories/general/
 [link-2]: https://gohugo.io/content-management/related/#performance-considerations
 [link-3]: https://gohugo.io/

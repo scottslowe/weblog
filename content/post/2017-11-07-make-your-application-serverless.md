@@ -50,7 +50,7 @@ Qinling uses Kubernetes on the backend to orchestrate containers that will, in t
 * Scale up/scale down
 * Supports OpenStack CLI
 
-Qinling can also consume/integrate with Aodh, Zaqar, and Swift (as mentioned above). 
+Qinling can also consume/integrate with Aodh, Zaqar, and Swift (as mentioned above).
 
 Kong now moves into a pair of demos. The first demo models a common Lambda use case surrounding an action executing after an object is uploaded to S3. In this demo, a Qinling function consumes an alarm from Aodh generated from an object being uploaded to Swift. The demo works, but is a bit slow; Kong explains that this is due to _cold start_ considerations (first-time invocation takes longer than subsequent invocations).
 

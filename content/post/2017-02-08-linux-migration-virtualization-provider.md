@@ -37,8 +37,6 @@ Based on this assessment, I've settled on using VirtualBox as my virtualization 
 
 I know a lot of folks have been curious about how I'm addressing corporate collaboration and communication from Linux, and I promise I will try to address that soon. I'm still doing some additional testing, and I'd like to have that completed before I share anything. Until then, feel free to [hit me up on Twitter][link-11] if you have any questions or feedback.
 
-
-
 [link-1]: https://www.virtualbox.org/
 [link-2]: http://www.vmware.com/products/fusion.html
 [link-3]: http://www.vmware.com/products/workstation-for-linux.html

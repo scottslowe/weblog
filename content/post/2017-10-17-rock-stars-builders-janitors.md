@@ -36,6 +36,4 @@ What are some rock star tasks? Researching new projects or creating demo mockups
 
 Finally, Goldfuss summarizes the key points from her presentation, and concludes the presentation.
 
-
-
 [link-1]: https://twitter.com/alicegoldfuss

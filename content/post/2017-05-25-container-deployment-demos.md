@@ -39,8 +39,6 @@ To build these demos, I took inspiration and knowledge from a _huge_ variety of 
 
 I'm sure there are many more that I did not capture as I was researching, but these resources were certainly instrumental in building the demos. So---thanks to these authors for sharing their knowledge.
 
-
-
 [link-1]: https://rsmitty.github.io/Multi-Cloud-Swarm/
 [link-2]: http://ngerakines.me/2016/11/20/terraform_docker_swarm_and_aws/
 [link-3]: http://thisendout.com/2016/09/13/deploying-docker-swarm-with-ansible/

@@ -53,10 +53,7 @@ For me, though, these limitations haven't yet posed a significant problem. Never
 
 I also experimented with Markdown-based presentations while still using OS X; [here's a post][xref-2] with more information.
 
-
-
 [link-1]: https://github.com/astefanutti/decktape
-[link-2]: https://github.com/gnab/remark
 [link-3]: http://www.sublimetext.com
 [link-4]: http://daringfireball.com/markdown/
 [link-5]: https://github.com/gnab/remark

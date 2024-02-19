@@ -16,7 +16,7 @@ I've been spending some time recently with CentOS Atomic Host, the container-opt
 
 The default configuration of Docker Engine on CentOS Atomic Host uses a systemd unit file that references an external environment file; specifically, it references values set in `/etc/sysconfig/docker`, as you can see from this snippet of the `docker.service` unit file:
 
-```
+```text
 ExecStart=/usr/bin/dockerd-current \
           --add-runtime docker-runc=/usr/libexec/docker/docker-runc-current \
           --default-runtime=docker-runc \
@@ -32,7 +32,7 @@ ExecStart=/usr/bin/dockerd-current \
 
 The `$OPTIONS` variable, along with the other variables at the end of the ExecStart line, are defined in `/etc/sysconfig/docker`. That value, by default, looks like this:
 
-```
+```text
 OPTIONS='--selinux-enabled --log-driver=journald --signature-verification=false'
 ```
 
@@ -40,7 +40,7 @@ I _could_, therefore, simply modify `/etc/sysconfig/docker` to make it listen on
 
 First, I'd use a systemd socket file for the local UNIX socket. This systemd socket file looks like this:
 
-```
+```text
 [Unit]
 Description=UNIX Socket for the Docker API
 PartOf=docker.service
@@ -57,7 +57,7 @@ WantedBy=sockets.target
 
 Next, I'd use a second systemd socket file to listen on a TCP port (the default non-SSL port of 2375). This socket file looks like this:
 
-```
+```text
 [Unit]
 Description=TCP Socket for the Docker API
 
@@ -72,7 +72,7 @@ WantedBy=sockets.target
 
 Third and finally, I'd use a systemd drop-in to modify the default systemd unit for the Docker Engine _without_ having to modify the default unit file. This drop-in looks like this:
 
-```
+```text
 [Service]
 ExecStart=
 ExecStart=/usr/bin/dockerd-current -H fd:// \

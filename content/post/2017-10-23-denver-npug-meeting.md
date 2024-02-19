@@ -24,7 +24,5 @@ As I mentioned, there will be food and beverages provided for attendees so pleas
 
 I'd love to see you there!
 
-
-
 [link-1]: https://www.meetup.com/Denver-NPUG/events/243186218/
 [link-2]: http://shop.oreilly.com/product/0636920042082.do

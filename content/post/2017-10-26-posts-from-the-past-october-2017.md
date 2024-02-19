@@ -93,8 +93,6 @@ Last year I was sharpening skills with various tools I'd learned, like [Vagrant]
 [A Triple-Provider Vagrant Environment][xref-20]  
 [Managing AWS Infrastructure with Ansible][xref-21]
 
-
-
 [link-1]: http://openvswitch.com/
 [link-2]: https://puppet.com/
 [link-3]: https://www.vagrantup.com/

@@ -86,8 +86,6 @@ Nothing this time around. Should I keep this section, or ditch it? Feel free to 
 
 That's all for now---after all, I have to save some stuff for the next one (which you can expect in about 2 weeks). I hope you found something useful, and have a great weekend!
 
-
-
 [link-1]: https://medium.com/@cloud_opinion/upcoming-saasocalypse-34e7e2ecf3ca#.irsb76h8d
 [link-2]: https://wattersjames.com/2013/05/09/economics-of-application-virtulization-on-aws/
 [link-3]: https://learntemail.sam.today/blog/selinux-concepts-but-for-humans/

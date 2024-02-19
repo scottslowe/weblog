@@ -17,8 +17,10 @@ Alas, it turned out not to be so simple (if it had been simple, this blog post w
 
 With the Azure CLI upgraded, I proceeded to ensure that I was appropriately logged in (via `az login`), created a resource group in "west us 2" (via `az group create`), and then tried to launch an ACS cluster:
 
-    az acs create --orchestrator-type=kubernetes --resource-group=my-rg \
-    --name=my-k8s-cluster --generate-ssh-keys
+```sh
+az acs create --orchestrator-type=kubernetes --resource-group=my-rg \
+--name=my-k8s-cluster --generate-ssh-keys
+```
 
 The Azure CLI created a service principal for me (as expected), but then errored out with a permissions-related error referencing a _different_ service principal.
 
@@ -30,9 +32,11 @@ That didn't work either; same error (I had to correct a few subscription-related
 
 After a while, Dave contacted me and suggested I run a few commands. After some trial and error, the correct set of commands that ultimately enabled `az acs create` to work as expected were these:
 
-    az provider register -n Microsoft.Compute
-    az provider register -n Microsoft.Network
-    az provider register -n Microsoft.Storage
+```sh
+az provider register -n Microsoft.Compute
+az provider register -n Microsoft.Network
+az provider register -n Microsoft.Storage
+```
 
 After running these commands and giving some time for the registrations to fully complete (the `az provider show` command doesn't really help much, to be honest, despite the suggestion from the Azure CLI otherwise), then creating a Kubernetes-powered ACS cluster using `az acs create` worked as expected. Hurray!
 
@@ -43,8 +47,6 @@ So, what are the lessons I learned from this experience?
 * Dave Strebel is a great example of community advocacy.
 
 On to more adventures!
-
-
 
 [link-1]: http://hypernephelist.com/2017/10/17/getting-started-with-traefik-and-k8s-using-acs.html
 [link-2]: https://twitter.com/dave_strebel

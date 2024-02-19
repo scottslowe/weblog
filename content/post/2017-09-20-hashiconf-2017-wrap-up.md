@@ -35,8 +35,6 @@ I did like the inclusion of high-top tables at the back of the breakout rooms; m
 
 All in all, I'm thankful for the opportunity to attend the event, and I hope that my coverage of the event was helpful in some way.
 
-
-
 [xref-1]: {{< relref "2017-09-19-hashiconf-2017-day-1-keynote.md" >}}
 [xref-2]: {{< relref "2017-09-19-liveblog-journey-to-cloud-packer-terraform.md" >}}
 [xref-3]: {{< relref "2017-09-19-liveblog-terraform-abstractions-safety-power.md" >}}

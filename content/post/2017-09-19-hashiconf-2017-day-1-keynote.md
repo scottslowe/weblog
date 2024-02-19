@@ -18,7 +18,7 @@ At 9:43am, the keynote kicks off with someone (I don't know who, he doesn't iden
 
 Hashimoto starts out his talk by reviewing a bit of the history and growth of both HashiConf (and, indirectly, HashiCorp). Last year, HashiCorp has grown from about 50 employees to now over 130 employees. HashiCorp has also seen significant community growth, Hashimoto says, and he reviews the growth in in the use of HashiCorp's products (Vagrant, Packer, Terraform, Vault, Consul, and Nomad). Hashimoto also reviews the growth in their commercial products (Consul Enterprise, Vault Enterprise, and Terraform Enterprise). Hashimoto also discusses HashiCorp's commitment to open source software and the desire to properly balance commercial (paid) products versus free (open source) projects.
 
-Hashimoto now transitions his discussion into a look at how HashiCorp (from here on referred to just as HC) products are deeply involved in companies' transition to cloud-based operational models. 
+Hashimoto now transitions his discussion into a look at how HashiCorp (from here on referred to just as HC) products are deeply involved in companies' transition to cloud-based operational models.
 
 Starting his review of product updates within the four major categories, Hashimoto starts with Terraform (a favorite project of mine). Terraform has seen tremendous growth, both in use and in functionality, and Hashimoto says he believes Terraform is emerging as the "standard" for provisioning infrastructure. This leads to the announcement of the Terraform Registry, a place to find Terraform modules. Terraform Registry will include partner modules (from HashiCorp partners), as well as Verified modules (modules that HashiCorp has reviewed, vetted, and approved). He next shows a recorded demo of how easy it is to publish a Terraform module in the Registry. The Registry is available immediately at [https://registry.terraform.io][link-1].
 
@@ -72,6 +72,5 @@ At this point, Hashimoto brings out Dave McJannet, CEO of HashiCorp, to the stag
 McJannet talks about how the company focuses on workflows, not technologies; automation through codification; and being open and extensible.
 
 McJannet wraps up the keynote by pointing out the breakout sessions, the Hub (sponsor area), and a preview of tomorrow's keynote speakers.
-
 
 [link-1]: https://registry.terraform.io

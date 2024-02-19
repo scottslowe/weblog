@@ -50,7 +50,5 @@ As Tucker wraps up his presentation, Sell returns to the stage to introduce the 
 
 Collier and Sell return to the stage to wrap up the presentations, providing a "shout out" to the Science Working Group and their efforts in supporting OpenStack in science.
 
-
-
 [link-1]: https://www.openstack.org/
 [link-2]: https://openstack.org/passport/

@@ -43,7 +43,7 @@ My employer uses both S4B as well as Slack (and some other internal tools that a
 
 ## Document formats
 
-A vast majority of companies out there use Microsoft Office as their standard productivity suite, and therefore rely heavily on the Office document formats. For most use cases, [LibreOffice][link-15] works well enough that exchanging documents with other users is pretty seamless. It will begin to break down as the documents grow more and more complex, so keep that in mind. This appears to be especially prominent with complex PowerPoint presentations. Given that today's corporate world tends to use PowerPoint for everything, keep this in mind.
+A vast majority of companies out there use [Microsoft Office][link-1] as their standard productivity suite, and therefore rely heavily on the Office document formats. For most use cases, [LibreOffice][link-15] works well enough that exchanging documents with other users is pretty seamless. It will begin to break down as the documents grow more and more complex, so keep that in mind. This appears to be especially prominent with complex PowerPoint presentations. Given that today's corporate world tends to use PowerPoint for everything, keep this in mind.
 
 Note that there are a few other options out there besides LibreOffice (like its forerunner, OpenOffice), but LibreOffice seems to be where the Linux community has converged.
 
@@ -66,8 +66,6 @@ ODrive is an interesting solution that I'll be discussing more in the future, so
 ## Summary
 
 This wraps-up the series on corporate collaboration and communication using Linux. As you can see from reading the posts, some areas are far easier to solve than others, and a lot depends on the corporate solution being used on the backend. I suspect that a great majority of organizations out there are heavily reliant on Microsoft technologies (Exchange, Office, etc.), so using Linux in such environments _might_ be a bit challenging depending on your job role. If your employer has gone "all in" on Office 365 and related services/offerings _and_ you need to often host meetings and calls, then using Linux as your primary desktop OS is probably going to mean keeping a Windows VM running as well. If your employer is also leveraging some other technologies _or_ meetings/calendaring isn't quite as important, then you may be in better shape to adopt Linux as your primary desktop OS. As always, readers should evaluate their situation based on their specific needs and make the decision that is right for them, whether that means Windows, OS X, or Linux.
-
-
 
 [link-1]: https://products.office.com/en-us/business/office
 [link-2]: https://tel.red/linux.php

@@ -21,8 +21,6 @@ This is (clearly and obviously) not a comprehensive list, but here's what folks 
 
 I'll update this post with additional resources as I find them (or as folks share them with me). I hope these are helpful!
 
-
-
 [link-1]: https://habd.as/zero-to-http-2-aws-hugo/
 [link-2]: https://circleci.com/blog/build-test-deploy-hugo-sites/
 [link-3]: https://static-site.jolexa.us/?__s=smmxtq8pks5yjd519tws

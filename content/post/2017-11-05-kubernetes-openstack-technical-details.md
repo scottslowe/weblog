@@ -50,7 +50,7 @@ Next, Lees provides some recommendations for deployment:
 * Try to avoid Flannel or Weave when running on Neutron; instead, shoot for Kubenet (deprecated), Calico, or Flannel (Host-GW)
 * Lees seems less enthusiastic about Calico as opposed to Flannel with the host gateway backend
 
-Lees provides a sample `cloud.conf` configuration (used to configure the OpenStack provider for Kubernetes), and mentions the Cinder API support and how to work around it (this won't be necessary in a year). 
+Lees provides a sample `cloud.conf` configuration (used to configure the OpenStack provider for Kubernetes), and mentions the Cinder API support and how to work around it (this won't be necessary in a year).
 
 Looking ahead to future work, Lees talks about efforts to make things more automatic with smart defaults. Development efforts are also working to move stuff out of `cloud.conf` into per-object annotations. Within the Kubernetes community, a lot of work is happening around moving cloud providers out of the core Kubernetes code base, and obviously the OpenStack provider would be affected by this effort.
 

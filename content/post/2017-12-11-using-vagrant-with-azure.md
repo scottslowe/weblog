@@ -19,19 +19,27 @@ If you aren't already familiar with Vagrant, I'd highly recommend first taking a
 
 Naturally, you'll need to first ensure that you have Vagrant installed. This is really well-documented already, so I won't go over it here. Next, you'll need to install the Azure provider for Vagrant, which you can handle using this command:
 
-    vagrant plugin install vagrant-azure
+```sh
+vagrant plugin install vagrant-azure
+```
 
 You'll also (generally) want to have the Azure CLI installed. (You'll need it for a one-time configuration task I'll mention shortly.) I've published a couple posts on installing the Azure CLI; see [here][xref-7] or [here][xref-8].
 
 Once you've installed the `vagrant-azure` plugin and the Azure CLI, you'll next need to install a box that Vagrant can use. Here, the use of Vagrant with Azure is different than the use of Vagrant with a provider like [VirtualBox][link-2] or [VMware Fusion][link-3]/[VMware Workstation][link-4]. Like when using Vagrant with AWS, when you're using Vagrant with Azure the box is a "dummy box" that doesn't really do anything; instead, you're relying on Azure VM images. You can install a "dummy box" for Azure with this command:
 
-    vagrant box add azure-dummy https://github.com/azure/vagrant-azure/raw/v2.0/dummy.box --provider azure
+```sh
+vagrant box add azure-dummy \
+https://github.com/azure/vagrant-azure/raw/v2.0/dummy.box \
+--provider azure
+```
 
 You'll then reference this "dummy box" in your `Vagrantfile`, as I'll illustrate shortly.
 
 The last and final step is to create an Azure Active Directory (AD) service principal for Vagrant to use when connecting to Azure. This command will create a service principal for you to use with Vagrant:
 
-    az ad sp create-for-rbac
+```sh
+az ad sp create-for-rbac
+```
 
 Make note of the values returned in the command's JSON response; you'll need them later. You'll also want to know your Azure subscription ID, which you can obtain by running `az account list --query '[?isDefault].id' -o tsv`. _(Note: as pointed out by reader Jochen Schissler, the command listed above creates an entity with Contributor permissions at the Subscription level. For some folks, this isn't possible/acceptable due to security policies. It is perfectly fine to create a service principal and grant permissions at the resource group level, although it must still have Contributor permissions.)_
 
@@ -43,7 +51,7 @@ When I use Vagrant, I prefer to keep the Vagrant configuration (stored in the fi
 
 Here's a snippet of a `Vagrantfile` you could use to spin up Azure VMs using Vagrant:
 
-``` ruby
+```ruby
 # Require the Azure provider plugin
 require 'vagrant-azure'
 

@@ -29,8 +29,6 @@ Next Clemenko sets up a demo that he knows will fail (he uses an older version o
 
 Oruganti and Clemenko wrap up the session by pointing attendees to the same 4 hour trial available of Docker EE, and then open the session up to questions from the audience.
 
-
-
 [link-1]: https://twitter.com/_ashfall_
 [link-2]: https://twitter.com/aclemenko
 [xref-1]: {{< relref "2017-10-18-docker-ee-deep-dive.md" >}}

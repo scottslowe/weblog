@@ -33,8 +33,6 @@ Stay tuned for more updates as this project progresses.
 
 **UPDATE 28 March 2017:** I'm canceling this project. See this post for more details.
 
-
-
 [link-1]: http://openvswitch.org/
 [link-2]: https://github.com/scottslowe/ovs-cookbook
 [link-3]: https://www.gitbook.com/book/scottslowe/ovs-cookbook/details

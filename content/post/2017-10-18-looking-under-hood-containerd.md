@@ -33,6 +33,4 @@ Moving on from LinuxKit, Coulton now turns to Kubernetes and containerD. In orde
 
 At this point, Coulton wraps up his content and opens up the session to questions from the audience.
 
-
-
 [link-1]: https://github.com/kubernetes-incubator/cri-containerd

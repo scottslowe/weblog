@@ -87,8 +87,6 @@ Welcome to Technology Short Take #85! This is my irregularly-published collectio
 
 I think that's enough for this time around; here's hoping you found something useful and pertinent. As I mentioned above in the Storage section, if you have some links you've found useful that you'd like to share with me, I'd love to see them (and maybe they'll make their way into a future Tech Short Take!). Thanks for reading, and have a great weekend!
 
-
-
 [link-1]: https://www.projectatomic.io/blog/2017/06/6-reasons-why-cri-o-is-the-best-runtime-for-kubernetes/
 [link-2]: https://www.ovirt.org/blog/2017/04/up-and-running-with-ovirt-4.1-and-gluster-storage/
 [link-3]: http://www.zdnet.com/article/microsofts-nano-server-what-to-expect-this-fall/

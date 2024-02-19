@@ -33,7 +33,5 @@ When I say that to customers and attendees, I can see the "light bulb" suddenly 
 
 Anyway, I hope this is somewhat helpful.
 
-
-
 [xref-1]: {{< relref "2017-08-28-vmworld-2017-day-1-keynote.md" >}}
 [xref-2]: {{< relref "2017-08-29-vmworld-2017-day-2-keynote.md" >}}

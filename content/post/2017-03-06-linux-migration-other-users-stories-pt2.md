@@ -61,8 +61,6 @@ Although most of the applications run well and the workflow for using the distri
 
 I started out on Fedora 25 using the Cinnamon desktop, a desktop system which I had used extensively in the past. In fact, I used Cinnamon with Linux Mint 13 for two years as my main work machine without any issues. At first all worked well on this new Fedora build. However, I soon started seeing issues with stability, and there were times when I couldn’t even log in due to the desktop system not responding at all. So in the end I made the decision to switch to GNOME. It’s definitely not as customizable as Cinnamon, but it does work well enough for me to want to stick with it for now.
 
-
-
 [link-1]: https://linuxmint.com/
 [link-2]: https://www.ubuntu.com/
 [link-3]: https://centos.org/

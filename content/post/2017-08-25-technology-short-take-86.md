@@ -76,10 +76,6 @@ Nothing this time around. Feel free to submit something for inclusion in the nex
 
 That's it for now. Next week is VMworld in Las Vegas, NV, and I'll be there live-blogging the keynotes (no sessions though, unfortunately---VMware employees generally can't get into sessions). However, I'll be around, so be sure to look me up if you're going to be there. Thanks for reading!
 
-
-
-[link-1]: https://napalm-automation.net/yang-for-dummies/
-[link-2]: https://rclone.org
 [link-3]: https://jvns.ca/blog/2017/08/06/learning-at-work/
 [link-4]: https://fedoramagazine.org/ssh-key-aws-regions/
 [link-5]: http://ludiclinux.com/Nspawn-Steam-Container/

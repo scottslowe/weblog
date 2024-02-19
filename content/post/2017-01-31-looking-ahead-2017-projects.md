@@ -34,8 +34,6 @@ So there's my list of 2017 projects, and---importantly---associated goals for ea
 
 I'd love to hear your feedback (positive or negative, but try to be constructive if at all possible). Feel free to [contact me on Twitter][link-2]. Thanks!
 
-
-
 [link-1]: http://shop.oreilly.com/product/0636920042082.do
 [link-2]: https://twitter.com/scott_lowe
 [link-3]: http://ethancbanks.com/2017/01/27/starting-a-podcast-is-easy-continuing-is-hard/

@@ -34,8 +34,6 @@ Over the next few weeks, I'll be fine-tuning the SEO of the site and making othe
 
 Hopefully, this helps answer some questions about why I migrated the site (again), and what is currently in use behind the scenes to power the site. If anyone has additional questions, feel free to [hit me up on Twitter][link-11]. Thanks for reading!
 
-
-
 [link-1]: http://jekyllrb.com/
 [link-2]: https://pages.github.com/
 [link-3]: https://wordpress.org/

@@ -16,7 +16,7 @@ This post addresses a (mostly) cosmetic issue with the current way that Arista d
 
 If you follow Arista's instructions, then you'll end up with something like this when you run `vagrant box list`:
 
-```
+```text
 arista-veos-4.18.0    (virtualbox, 0)
 bento/ubuntu-16.04    (virtualbox, 2.3.1)
 centos/6              (virtualbox, 1611.01)
@@ -30,7 +30,7 @@ Note that the version of the vEOS box is embedded in the name. Now, you _could_ 
 
 Fortunately, there's an easy fix (inspired by the way CoreOS distributes their Vagrant box). Just create a file with the following contents:
 
-``` json
+```json
 {
   "name": "arista-veos",
   "description": "Arista vEOS",
@@ -56,7 +56,7 @@ Obviously, you'll want to make sure the "version" value is correct for whatever 
 
 Vagrant will re-add the box, but this time using metadata from the JSON file you created. When you run `vagrant box list`, you'll see something like this:
 
-```
+```text
 arista-veos           (virtualbox, 4.18.0)
 bento/ubuntu-16.04    (virtualbox, 2.3.1)
 centos/6              (virtualbox, 1611.01)
@@ -69,8 +69,6 @@ debian/jessie64       (virtualbox, 8.7.0)
 Ah, much better! Not only is it cosmetically better, but you can now have multiple versions of the vEOS Vagrant box on your system, all with the same name and differentiated only by version. This, in turn, simplifies your ability to test the same Vagrant environment with different vEOS versions.
 
 Mostly, though, I like it because it _looks_ better.
-
-
 
 [link-1]: https://eos.arista.com/using-veos-with-vagrant-and-virtualbox/
 [link-2]: https://www.vagrantup.com/

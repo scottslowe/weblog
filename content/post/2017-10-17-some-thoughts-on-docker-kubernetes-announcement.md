@@ -24,8 +24,6 @@ Done reviewing the announcement? Here are some thoughts; some of them are mine, 
 
 As others have said, this is definitely an interesting time in which to work in the technology field. Look for more liveblogging from DockerCon EU 2017 tomorrow, where I'll be covering the general session in the morning and as many breakout sessions as I can cram into my schedule.
 
-
-
 [link-1]: http://blog.nigelpoulton.com/kubernetes-vs-swarm-and-the-winner-is/
 [link-2]: https://blog.codeship.com/docker-and-kubernetes/
 [link-3]: http://rancher.com/rancher2-0/

@@ -20,7 +20,7 @@ All in all, it was pretty straightforward---with one significant exception. As I
 
 Fortunately, there's a workaround (credit to Dusty Mabe for the workaround). The final version of the `cloud-init` configuration looks like this (I'll explain the workaround after this code):
 
-``` yaml
+```yaml
 #cloud-config
 
 groups:
@@ -103,8 +103,6 @@ So there you have it: a way to use `cloud-init` to configure Docker Engine on Ce
 If you'd like to play around with this yourself, check out the `centos-atomic/docker-cloudinit` directory in [my GitHub "learning-tools" repository][link-4]. The `cloud-init` configuration is there, as is a simple Bash shell script to launch an instance on AWS to try this out.
 
 Enjoy!
-
-
 
 [link-1]: https://github.com/scottslowe/learning-tools/tree/master/centos-atomic/docker-tcp-ansible
 [link-2]: https://bugzilla.redhat.com/show_bug.cgi?id=1457978

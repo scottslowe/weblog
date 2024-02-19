@@ -17,8 +17,6 @@ This brings me to the big news: **the Full Stack Journey podcast is joining the 
 
 The first episode of Full Stack Journey as part of Packet Pushers---featuring none other than Anthony Burke---should be live very soon (if it isn't already live), and more episodes are in the works. Stay tuned for more details on the transition.
 
-
-
 [link-1]: https://packetpushers.net/
 [link-2]: http://packetpushers.net/series/datanauts-podcast/
 [link-3]: http://ethancbanks.com/2017/01/27/starting-a-podcast-is-easy-continuing-is-hard/

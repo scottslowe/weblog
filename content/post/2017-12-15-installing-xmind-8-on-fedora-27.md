@@ -27,24 +27,32 @@ First, you'll need to install the "java-1.8.0-openjdk" package using `dnf instal
 
 Next, download the XMind 8 ZIP archive, and extract it into an `xmind` directory:
 
-    unzip xmind-8-update6-linux.zip -d xmind
+```sh
+unzip xmind-8-update6-linux.zip -d xmind
+```
 
 For simplicity's sake, I chose to work within my own `~/Downloads` directory, but you should be able to work from within any directory where you have write permissions.
 
 Third, create a user-specific area for XMind to store information:
 
-    mkdir -p ~/.config/xmind/workspace
+```sh
+mkdir -p ~/.config/xmind/workspace
+```
 
 I chose the `~/.config` directory since it was already present and utilized for application-specific information. You can use a different directory, but the rest of the instructions will assume this path was used.
 
 Fourth, go ahead and remove the 32-bit version of the XMind executable; it's pretty likely you won't need it:
 
-    rm -rf xmind/XMind_i386
+```sh
+rm -rf xmind/XMind_i386
+```
 
 Fifth, copy over two directories into the user-specific area you created earlier:
 
-    cp -a xmind/XMind_amd64/configuration ~/.config/xmind/
-    cp -a xmind/XMind_amd64/p2 ~/.config/xmind/
+```sh
+cp -a xmind/XMind_amd64/configuration ~/.config/xmind/
+cp -a xmind/XMind_amd64/p2 ~/.config/xmind/
+```
 
 Based on my testing, this step should be the only step needed to make XMind work for additional users on your Fedora system (i.e., you'll want to run this step for other users on the system as well in order for them to be able to run XMind).
 
@@ -57,12 +65,14 @@ You're almost done! In the `fonts` subdirectory of the `xmind` directory in whic
 
 Finally, move the `xmind` directory to its final location and lock down the permissions:
 
-    sudo mv xmind /opt/
-    sudo chown -R root:root /opt/xmind
+```sh
+sudo mv xmind /opt/
+sudo chown -R root:root /opt/xmind
+```
 
 The last and final step is to create a desktop entry file so that XMind is accessible via the launcher. Here's a sample file:
 
-```
+```text
 [Desktop Entry]
 Comment=Create and share mind maps
 Exec=/opt/xmind/XMind_amd64/XMind %F
@@ -84,8 +94,6 @@ Unfortunately, there are some caveats and limitations:
 * This manual installation doesn't create a MIME type for XMind documents so that you can open an XMind document from within the Nautilus file manager. (The simplistic shell script supplied in the XMind download doesn't either.) I've done a bit of work on this, but haven't come to a workable solution yet.
 
 So there you have it: how to get XMind 8 installed and running in some reasonable fashion on Fedora 27. If you have questions, comments, or corrections, feel free to [hit me up on Twitter][link-4].
-
-
 
 [link-1]: https://www.xmind.net/m/PuDC
 [link-2]: https://www.xmind.net/

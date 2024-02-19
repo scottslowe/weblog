@@ -29,7 +29,5 @@ Here are the steps to install the Azure CLI into a Python virtual environment on
 
 That's it!
 
-
-
 [link-1]: https://getfedora.org/
 [xref-1]: {{< relref "2017-08-13-manually-installing-azure-cli-fedora-25.md" >}}

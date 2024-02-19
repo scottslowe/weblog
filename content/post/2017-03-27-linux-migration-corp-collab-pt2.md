@@ -22,7 +22,7 @@ As I mentioned in part 1, my employer uses [Office 365][link-1] (O365). While O3
 3. You can use [GNOME Calendar][link-6] (which leverages the Evolution back-end along with Evolution's support for Exchange Web Services [EWS]).
 4. You can use [Microsoft Outlook][link-7], either via a VM (or possibly via WINE, though I haven't tested the latter approach).
 
-I'd already ruled out Evolution for e-mail, so it didn't make a lot of sense (to me, at least) to use Evolution for calendaring. Further, I ideally wanted a solution that would let me leverage CalDAV for my personal calendars as well as handling my corporate calendar (this was a luxury to which I'd grown accustomed on OS X). 
+I'd already ruled out Evolution for e-mail, so it didn't make a lot of sense (to me, at least) to use Evolution for calendaring. Further, I ideally wanted a solution that would let me leverage CalDAV for my personal calendars as well as handling my corporate calendar (this was a luxury to which I'd grown accustomed on OS X).
 
 GNOME Calendar provides the standalone calendar experience I was seeking, and can handle my corporate calendar via the Evolution EWS support. However, there are a number of shortcomings:
 
@@ -45,8 +45,6 @@ Note that a number of folks have suggested alternative calendar applications. I'
 As you can see, this is most definitely _not_ a solved problem. In fact, if I had to pick one area that is most problematic for me right now, this would be it. Most of the other areas have reasonable solutions---not necessarily ideal solutions, but reasonable solutions. Calendaring and scheduling does not have any reasonable solutions (in my opinion).
 
 In part 3 of the series on corporate collaboration, I tackle the "grab bag" of remaining issues, such as document sharing, meetings/teleconferences, and chat/instant messaging.
-
-
 
 [link-1]: https://products.office.com/en-us/business/office
 [link-2]: https://www.mozilla.org/en-US/thunderbird/

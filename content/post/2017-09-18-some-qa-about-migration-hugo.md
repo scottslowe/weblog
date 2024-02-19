@@ -50,8 +50,6 @@ _**Q:** Are you adding comments back to the site?_
 
 There you have it---feel free to [hit me up on Twitter][link-14] if you have additional questions.
 
-
-
 [link-1]: https://pages.github.com/
 [link-2]: https://jekyllrb.com/
 [link-3]: https://gohugo.io/

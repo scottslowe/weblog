@@ -25,8 +25,6 @@ Austin in the spring should be a great place to visit, and Crystal has some real
 
 Crystal's [blog post on the Spousetivities site][link-2] has a few more details, and [registration is open right now][link-3].
 
-
-
 [link-1]: http://2017.dockercon.com/
 [link-2]: http://spousetivities.com/2017/02/2nd-annual-spousetivities-at-dockercon/
 [link-3]: https://spousetivities.ticketleap.com/spousetivities-at-dockercon-austin/

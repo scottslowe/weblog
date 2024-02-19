@@ -46,8 +46,6 @@ Using this process should largely address issue #5, leaving only #2 and #4. I in
 
 So there you have it---a system for using plain text-based files for task management and productivity. Stay tuned for more updates as I continue to test and refine my process and tools.
 
-
-
 [link-1]: http://www.omnigroup.com/omnifocus/
 [link-2]: https://www.taskpaper.com/
 [link-3]: https://www.ubuntu.com/

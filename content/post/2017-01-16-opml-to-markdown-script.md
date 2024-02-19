@@ -21,7 +21,9 @@ The script has two basic parts:
 
 1. A `pandoc` command converts the OPML to MultiMarkdown. The command looks something like this:
 
-        pandoc --from=opml --to=markdown_mmd --atx-headers
+    ```sh
+    pandoc --from=opml --to=markdown_mmd --atx-headers
+    ```
 
     The result of the command is sent to STDOUT.
 
@@ -34,8 +36,6 @@ You can see the entire script in [my GitHub "scripts" repository][link-2], where
 I'd like to briefly talk about why I needed this script. See, I use OPML as an outline that includes data, not just headings. Most OPML-to-Markdown conversion tools, including `pandoc`, simply assume that each line in an OPML file should be a heading. For me (and this may vary for others), any second-level or higher entries in the OPML file are data, _not_ headings. Thus, I use `sed` and regular expressions to convert second-level and third-level headings into bulleted lists.
 
 Thanks!
-
-
 
 [link-1]: http://pandoc.org/
 [link-2]: https://github.com/scottslowe/scripts

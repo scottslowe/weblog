@@ -89,8 +89,6 @@ Nothing this time around. I'll stay alert for items to include next time!
 
 OK, that's it for now. Hopefully I've included something you found helpful; if so, please feel free to share a link back to this article using Twitter or your social media platform of choice. Thanks for reading!
 
-
-
 [link-1]: http://start.jcolemorrison.com/aws-iam-policies-in-a-nutshell/
 [link-2]: https://nakedsecurity.sophos.com/2016/08/18/nists-new-password-rules-what-you-need-to-know/
 [link-3]: http://www.vmtocloud.com/how-to-configure-harbor-registry-to-use-amazon-s3-storage/

@@ -22,14 +22,15 @@ CoreOS publishes a JSON feed of the latest AMI for each of their channels (stabl
 
 Putting these two reasons together, you end up with a command that looks something like this:
 
-    curl -s https://coreos.com/dist/aws/aws-stable.json | jq -r '."us-west-2".hvm'
+```sh
+curl -s https://coreos.com/dist/aws/aws-stable.json | jq -r '."us-west-2".hvm'
+```
 
 This command pulls the stable JSON feed, then parses it using `jq` to look for the "us-west-2" AMI. Note the somewhat odd quoting necessary for `jq` to work properly. The `-s` parameter to `curl` suppresses any output, and the `-r` parameter to `jq` returns plain, unformatted (raw) text. Use some [Bash command substitution][link-2] to assign the output of this command to a variable and you've got an easy, always up-to-date way of determining the AMI ID for the latest release of CoreOS Container Linux in your AWS region of choice.
 
 Now, if only other organizations would do the same...
 
 Enjoy!
-
 
 [link-1]: https://coreos.com/os/docs/latest/booting-on-ec2.html
 [link-2]: http://wiki.bash-hackers.org/syntax/expansion/cmdsubst

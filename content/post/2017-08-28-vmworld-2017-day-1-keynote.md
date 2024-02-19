@@ -85,8 +85,6 @@ Poonen talks about 200 customers presenting this week, and its his goal to drive
 
 At this point, the general session wraps up.
 
-
-
 [link-1]: https://www.vmware.com/company/news/releases/vmw-newsfeed.VMware-Advances-Software-to-Help-Customers-Modernize-Data-Centers.2184711.html
 [link-2]: https://www.vmware.com/company/news/releases/vmw-newsfeed.VMware-Advances-Software-to-Help-Customers-Modernize-Data-Centers.2184711.html
 [link-3]: https://www.vmware.com/company/news/releases/vmw-newsfeed.VMware-Helps-Enterprises-Succeed-in-the-Multi-Cloud-Era.2184714.html

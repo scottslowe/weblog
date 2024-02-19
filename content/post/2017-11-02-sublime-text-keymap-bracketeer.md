@@ -11,11 +11,11 @@ title: A Sublime Text Keymap for Bracketeer
 url: /2017/11/02/sublime-text-keymap-bracketeer/
 ---
 
-I've made no secret of the fact that I'm a fan of [Sublime Text][link-1] (ST). I've evaluated other editors, like [Atom][link-2], but still find that ST offers the right blend of performance, functionality, customizability, and cross-platform support. One nice thing about ST (other editors have this too) is the ability to extend it via packages. [Bracketeer][link-3] is one of many packages that can be used to customize ST's behavior; in this post, I'd like to share a keymap I'm using with Bracketeer that I've found very helpful.<!--more--> 
+I've made no secret of the fact that I'm a fan of [Sublime Text][link-1] (ST). I've evaluated other editors, like [Atom][link-2], but still find that ST offers the right blend of performance, functionality, customizability, and cross-platform support. One nice thing about ST (other editors have this too) is the ability to extend it via packages. [Bracketeer][link-3] is one of many packages that can be used to customize ST's behavior; in this post, I'd like to share a keymap I'm using with Bracketeer that I've found very helpful.<!--more-->
 
 Bracketeer is a package that modifies ST's default bracketing behavior. I first started using Bracketeer to help with writing Markdown documents, as it makes adding brackets (or parentheses) around existing text easier (it automatically advances the insertion point after the closing bracket). After using Bracketeer for a little while, I realized I could extend the keymap for Bracketeer to have it also help me with "wrapping" text in backticks and a few other characters. I did this by adding this line to the default keymap:
 
-``` json
+```json
 {
   "keys": [ "`" ],
   "command": "bracketeer",
@@ -32,7 +32,7 @@ Unfortunately, there was a drawback: If I wanted just a single backtick, I'd sti
 
 To put this into action, I added a context to the keymap entry above to make it look like this:
 
-``` json
+```json
 {
   "keys": ["`"],
   "command": "bracketeer",

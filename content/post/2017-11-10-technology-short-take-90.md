@@ -69,8 +69,6 @@ Welcome to Technology Short Take 90! This post is a bit shorter than most, as I'
 
 Thanks for reading! Feel free to [hit me up on Twitter][link-24] if you have feedback or would like to share a link I should include in a future Technology Short Take.
 
-
-
 [link-1]: https://jmetz.com/2016/07/storage-forces/
 [link-2]: http://nigelhickey.com/vmworld-2017-spouses-perspective/
 [link-3]: http://cloudmaniac.net/powercli-nsx-t-module/

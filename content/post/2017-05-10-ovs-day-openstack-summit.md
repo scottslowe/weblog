@@ -32,7 +32,7 @@ The lightning talks were all under 5 minutes, so a brief summary of these are pr
 
 ## OpenStack NFV: Performance with OVS-DPDK for NFV and Connection Tracking
 
-This session provided some in-depth discussions on performance implications of using connection tracking in OVS-DPDK environments. In the first part of the session, the presenters provided a good overview of how connection tracking works with OVS, and showed performance statistics resulting from the use of connection tracking with OVS-DPDK. 
+This session provided some in-depth discussions on performance implications of using connection tracking in OVS-DPDK environments. In the first part of the session, the presenters provided a good overview of how connection tracking works with OVS, and showed performance statistics resulting from the use of connection tracking with OVS-DPDK.
 
 In the second part of the presentation, the presenters provided some information on OVS-DPDK in real-world telco use cases, mostly focusing on debugging and fine-tuning performance. The presenters did a _great_ job of covering how to debug OVS flows and troubleshoot performance, showing exactly the commands that were needed and the key metrics to examine.
 
@@ -53,7 +53,5 @@ This session described a mechanism that eBay is using to scale OVN in a Kubernet
 This session described an alternate approach to an OVS datapath that would supposedly marry the benefits of the OVS kernel datapath (integrated in the Linux kernel) and the DPDK datapath. If I understood the presentation correctly, though, this new approach would require "re-upstreaming" into the Linux kernel, which is not an insignificant effort.
 
 That wrapped up the OVS Open Source Day at the OpenStack Summit. I _think_ the audio from the sessions may have been recorded; if I find any information on where those recordings may be available, I'll update this post.
-
-
 
 [link-1]: http://docs.openvswitch.org/en/latest/tutorials/ovn-openstack/

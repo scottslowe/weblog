@@ -15,13 +15,13 @@ In [my previous post][xref-1] on how to install [Sublime Text 3][link-1] (ST3) o
 
 The fix is to add this line to the `sublime-text.desktop` file (typically found in `/usr/share/applications`):
 
-    StartupWMClass=subl
+```text
+StartupWMClass=subl
+```
 
 This tells Fedora and GNOME that when a window with the WMClass of "subl" appears, it should be considered a Sublime Text window. Once you add this line to the `sublime-text.desktop` file, then launching ST3 either via the GUI or via the `subl` command should create only a single ST3 icon in the Dash.
 
 Now, back to trying to figure out this LibreOffice icon issue...
-
-
 
 [link-1]: http://www.sublimetext.com/
 [link-2]: https://getfedora.org/

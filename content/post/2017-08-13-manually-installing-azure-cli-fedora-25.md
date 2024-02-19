@@ -64,8 +64,6 @@ Note that I did have the XCode command-line tools installed---in order to have `
 
 So there you have it: how to install the Azure CLI using `virtualenv` and `pip` on Fedora 25 and macOS. Stay tuned for more Azure-related posts later this year.
 
-
-
 [link-1]: https://azure.microsoft.com/en-us/
 [link-2]: https://getfedora.org/
 [link-3]: https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
