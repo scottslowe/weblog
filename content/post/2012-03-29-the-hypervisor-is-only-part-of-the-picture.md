@@ -27,7 +27,7 @@ If you go back and look at the presentations that VMware has given at VMworld ov
 2. Applications (or platforms)
 3. End-user computing
 
-If you like to think in terms of *aaS, you might think of the first one as Infrastructure as a Service (IaaS) and the second one as Platform as a Service (PaaS) or Software as a Service (SaaS). Sorry, I don't have a *aaS acronym for the third one.
+If you like to think in terms of \*aaS, you might think of the first one as Infrastructure as a Service (IaaS) and the second one as Platform as a Service (PaaS) or Software as a Service (SaaS). Sorry, I don't have a \*aaS acronym for the third one.
 
 I believe that VMware knows that relying on the hypervisor as its sole differentiating factor will come to end. We can debate how quickly that will happen or which competitors will be most effective in making that happen, but those issues are beside the point. This is not to say that VMware is ceding the infrastructure/IaaS market, but instead recognizing that it cannot be all that VMware is. VMware must be _more_.
 

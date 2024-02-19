@@ -19,7 +19,7 @@ After a bit more research, I found that there was a `raml-cli` NPM package that 
 
 A bit of work later I had this `Dockerfile` (which you can find in [my "dockerfiles" GitHub repository][link-3]):
 
-```
+```docker
 FROM node:6.14.3-alpine
 
 LABEL maintainer "Scott Lowe <scott.lowe@scottlowe.org>"

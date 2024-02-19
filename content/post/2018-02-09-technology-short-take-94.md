@@ -81,8 +81,6 @@ Nothing this time around (sorry!). I'll stay alert for content that I might be a
 
 And that's another Tech Short Take in the bag. I hope you found something useful here! As always, feel free to [hit me up on Twitter][link-29] if you have any feedback (or even if you just want to chat).
 
-
-
 [link-1]: https://blogs.vmware.com/networkvirtualization/2017/09/nsx-t-routing-where-you-need-it.html/
 [link-2]: https://blogs.vmware.com/networkvirtualization/2018/01/nsx-t-routing-part-2.html/
 [link-3]: https://blogs.vmware.com/networkvirtualization/2018/01/nsx-t-openapi-sdks.html/

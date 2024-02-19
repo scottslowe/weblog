@@ -18,7 +18,9 @@ As with most of the other Docker Machine providers, using Docker Machine with Az
 
 The only _required_ parameter is `--azure-subscription-id`, which specifies your Azure subscription ID. If you don't know this, or want to obtain it programmatically, you can use this Azure CLI command:
 
-    az account show --query "id" -o tsv
+```sh
+az account show --query "id" -o tsv
+```
 
 If you have more than one subscription, you'll probably need to modify this command to filter it down to the specific subscription you want to use.
 
@@ -33,12 +35,14 @@ Additional parameters that you can supply include (but aren't limited to):
 
 So what would a complete command look like? Using Bash command substitution to supply the Azure subscription ID, a sample command might look like this:
 
-    docker-machine create -d azure \
-    --azure-subscription-id $(az account show --query "id" -o tsv) \
-    --azure-location westus2 \
-    --azure-ssh-user ubuntu \
-    --azure-size "Standard_B1ms" \
-    dm-azure-test
+```sh
+docker-machine create -d azure \
+--azure-subscription-id $(az account show --query "id" -o tsv) \
+--azure-location westus2 \
+--azure-ssh-user ubuntu \
+--azure-size "Standard_B1ms" \
+dm-azure-test
+```
 
 This would create an Azure VM named "dm-azure-test", based on the (default) Ubuntu 16.04 LTS image, in the "westus2" Azure region and using a username of "ubuntu". Once the VM is running and responding across the network, Docker Machine will provision and configure Docker Engine on the VM.
 
@@ -53,8 +57,6 @@ Once the VM is up, all the same `docker-machine` commands are available:
 Clearly, there's more available, but this should be enough to get most folks rolling.
 
 If I've missed something (or gotten it incorrect), please [hit me up on Twitter][link-3]. I'll happily make corrections where applicable.
-
-
 
 [link-1]: https://www.docker.com/products/docker-machine
 [link-2]: https://docs.docker.com/machine/drivers/azure/

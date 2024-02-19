@@ -15,17 +15,23 @@ url: /2018/05/01/installing-gitkraken-on-fedora-27/
 
 First, download the latest release of GitKraken. You can do this via the terminal with this command:
 
-    curl -LO https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz
+```sh
+curl -LO https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz
+```
 
 Extract the contents of the GitKraken download into its own directory under `/opt` using this command (you can use a different directory if you like, but I prefer to install third-party applications like this under `/opt`):
 
-    sudo tar -C /opt -xvf gitkraken-amd64.tar.gz
+```sh
+sudo tar -C /opt -xvf gitkraken-amd64.tar.gz
+```
 
 This will extract everything into `/opt/gitkraken`.
 
 Next, you'll create a symbolic link to an existing library to fix an error with GitKraken when running on Fedora (this is documented here):
 
-    sudo ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4
+```sh
+sudo ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4
+```
 
 Once this is done, you _could_ just run `/opt/gitkraken/gitkraken` from the Terminal and GitKraken would fire up.
 
@@ -33,7 +39,7 @@ However, you may find it easier to create a desktop launcher for GitKraken. Befo
 
 Now create the file `/usr/share/applications/gitkraken.desktop` and put these contents into the file:
 
-``` text
+```text
 [Desktop Entry]
 Name=GitKraken
 Comment=Graphical Git client

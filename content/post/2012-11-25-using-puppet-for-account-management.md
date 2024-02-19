@@ -32,7 +32,7 @@ Essentially what you're going to do to create the class and defined type is crea
 
 I'll come to the `init.pp` in a moment; somewhat counter-intuitively, we'll start with the `virtual.pp` manifest first. Here's the contents of that manifest (download this from GitHub [here][gist-1]):
 
-``` puppet
+```puppet
 # Defined type for creating virtual user accounts
 #
 define accounts::virtual ($uid,$realname,$pass) {
@@ -67,7 +67,7 @@ I used the latest version of `puppet-lint` to ensure that all stylistic recommen
 
 Now that the defined type is done, we can use it to actually create the virtual user resources. We'll actually do that in the `accounts/manifests/init.pp` file, like this (download from GitHub [here][gist-2]):
 
-``` puppet
+```puppet
 # Used to define/realize users on Puppet-managed systems
 #
 class accounts {
@@ -84,7 +84,7 @@ You'll just repeat that snippet of test as many times as necessary to create a v
 
 Once you're ready to actually instantiate an virtual resource, you do that with a snippet of code like this (available [here][gist-3] from GitHub):
 
-``` puppet
+```puppet
 node default {
 }
 
@@ -105,7 +105,6 @@ Let's break that down real quick:
 With this structure in place, when the node named "server.domain.net" runs Puppet and connects to the Puppet master, it will create the realized resources---user account, group account, and home directory---specified in the node definition. Pretty cool, huh?
 
 I freely admit that I'm still relatively new to Puppet, so I'm sure there are numerous ways this approach could be improved. I tested this code on both CentOS 6.3 as well as Ubuntu 12.04, and it seems to work fine on both platforms. Feel free to submit suggestions for improvement, corrections, or clarifications in the comments below.
-
 
 [gist-1]: https://gist.github.com/scottslowe/4050213
 [gist-2]: https://gist.github.com/scottslowe/4050229

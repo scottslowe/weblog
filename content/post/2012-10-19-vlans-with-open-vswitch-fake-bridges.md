@@ -18,13 +18,17 @@ wordpress_id: 2898
 
 In other posts, I've (briefly) talked about how to [configure][1] Open vSwitch (OVS) for use with VLANs. If you know the port to which a guest is connected, you can configure that particular port as a VLAN trunk like this:
 
-    ovs-vsctl set port <port name> trunks=10,11,12
+```shell
+ovs-vsctl set port <port name> trunks=10,11,12
+```
 
 This configuration would pass the VLAN tags for VLANs 10, 11, and 12 all the way up to the guest, where---assuming the OS installed in the guest has VLAN support---you could configure network connectivity appropriately.
 
 Alternately, if you know the port to which a particular guest is connected, you could configure that port as a VLAN access port with a command like this:
 
-    ovs-vsctl set port <port name> tag=15
+```shell
+ovs-vsctl set port <port name> tag=15
+```
 
 This command makes the guest a member of VLAN 15, much like the use of the `switchport access vlan 15` command on a Cisco switch.
 
@@ -42,11 +46,15 @@ This post was written using Ubuntu 12.04.1 LTS with Open vSwitch 1.4.0 (straight
 
 To create a fake bridge, you'll use a modified form of the `ovs-vsctl add-br` command. The command is so subtly different that I missed it quite a few times when reading through the documentation for `ovs-vsctl`. Here's the command you'll need:
 
-    ovs-vsctl add-br <fake bridge> <parent bridge> <VLAN>
+```shell
+ovs-vsctl add-br <fake bridge> <parent bridge> <VLAN>
+```
 
 Let's look at an example. Suppose you had an existing OVS bridge named ovsbr0, and you wanted to add a fake bridge to support VLAN 100. You would use this command:
 
-    ovs-vsctl add-br vlan100 ovsbr0 100
+```shell
+ovs-vsctl add-br vlan100 ovsbr0 100
+```
 
 When you create (or edit) a guest domain, you'll assign it to the new fake bridge (named `vlan100` in this example). So, looking at the libvirt XML code for a guest domain, it might look something like this:
 
@@ -62,20 +70,22 @@ Naturally, you could also create a libvirt virtual network that corresponds to t
 
 Then, when you powered up the guest domain and ran `ovs-vsctl show`, you'd see something like this:
 
-    Bridge "ovsbr0"
-        Port "bond0"
-            Interface "eth1"
-            Interface "eth2"
-        Port "ovsbr0"
-            Interface "ovsbr0"
-                type: internal
-        Port "vnet0"
-            tag: 100
-            Interface "vnet0"
-        Port "vlan100"
-            tag: 100
-            Interface "vlan100"
-                type: internal
+```text
+Bridge "ovsbr0"
+    Port "bond0"
+        Interface "eth1"
+        Interface "eth2"
+    Port "ovsbr0"
+        Interface "ovsbr0"
+            type: internal
+    Port "vnet0"
+        tag: 100
+        Interface "vnet0"
+    Port "vlan100"
+        tag: 100
+        Interface "vlan100"
+            type: internal
+```
 
 Note that the guest domain's port/interface are automatically given the fake bridge's VLAN tag, without any further interaction/configuration required by the user or administrator. Much better!
 

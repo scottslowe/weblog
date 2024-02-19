@@ -39,7 +39,7 @@ I started out with a CentOS 6.3 x86_64 system that already had KVM and libvirt i
 
 7. Finally, I restarted libvirtd with `service libvirtd restart`. The daemon restarted on my system cleanly and without any errors.
 
-Failing to run `ldconfig` at the end of the make/make install series, by the way, resulted in numerous errors when trying to run `virsh`. 
+Failing to run `ldconfig` at the end of the make/make install series, by the way, resulted in numerous errors when trying to run `virsh`.
 
 From there, I was able to run `libvirtd --version` or `virsh --version` to verify that the system was, in fact, running libvirt 0.10.1. All in all, it was pretty straightforward, and I was pleasantly surprised that it wasn't more complicated or troublesome.
 

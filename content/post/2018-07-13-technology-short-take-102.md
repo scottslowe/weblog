@@ -62,7 +62,7 @@ Welcome to Technology Short Take 102! I normally try to get these things publish
 
 ## Virtualization
 
-* Mike Foley walks you through [configuring TPM 2.0 on a vSphere 6.7 host][link-8]. (This must be the "future TPM content" that Mike mentioned.)
+* Mike Foley walks you through [configuring TPM 2.0 on a vSphere 6.7 host][link-9]. (This must be the "future TPM content" that Mike mentioned.)
 * Ed Haletky [documents][link-21] the approach he uses to produce segregated virtual-in-virtual test environments that live within his production environment.
 * It seems as if there's quite a bit of complexity in [this article][link-22] on using KubeVirt witih GlusterFS, but I can't tell if that is a byproduct of KubeVirt, GlusterFS, or the combination of the two.
 

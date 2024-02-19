@@ -29,7 +29,9 @@ It's important that the name of the Node object in Kubernetes matches the privat
 
 If you're unsure what it is, or if you're looking for a programmatic way to retrieve the FQDN, just `curl` the AWS metadata server:
 
-    curl http://169.254.169.254/latest/meta-data/local-hostname
+```shell
+curl http://169.254.169.254/latest/meta-data/local-hostname
+```
 
 Make sure you set the hostname before attempting to bootstrap the Kubernetes cluster, or you'll end up with nodes whose name in Kubernetes doesn't match up, and you'll see various "permission denied"/"unable to enumerate" errors in the logs. For what it's worth, preliminary testing indicates that this step---setting the hostname to the FQDN---is necessary for Ubuntu but may not be needed for CentOS/RHEL.
 
@@ -65,7 +67,7 @@ On the Kubernetes side of the house, you'll need to make sure that the `--cloud-
 
 If you're using `kubeadm` to set up your cluster, you can have `kubeadm` add the flags to the API server and controller manager by using the "apiServerExtraArgs" and "controllerManagerExtraArgs" sections in a configuration file, like this:
 
-``` yaml
+```yaml
 apiServerExtraArgs:
   cloud-provider: aws
 controllerManagerExtraArgs:
@@ -74,7 +76,7 @@ controllerManagerExtraArgs:
 
 Likewise, you can use the "nodeRegistration" section of a `kubeadm` configuration file to pass extra arguments to the Kubelet, like this:
 
-``` yaml
+```yaml
 nodeRegistration:
   kubeletExtraArgs:
     cloud-provider: aws
@@ -82,7 +84,7 @@ nodeRegistration:
 
 I'd probably also recommend setting the name of the Kubelet to the node's private DNS entry in EC2 (this ensures it matches the hostname, as described earlier in this article). Thus, the full "nodeRegistration" section might look like this:
 
-``` yaml
+```yaml
 nodeRegistration:
   name: ip-10-15-30-45.us-west-1.compute.internal
   kubeletExtraArgs:
@@ -93,9 +95,11 @@ You would need to substitute the correct fully-qualified domain name for each in
 
 Finally, for dynamic provisioning of Persistent Volumes you'll need to create a default Storage Class. The AWS cloud provider has one, but it doesn't get created automatically. Use this command to define the default Storage Class:
 
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/kubernetes/master/cluster/addons/storage-class/aws/default.yaml
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/kubernetes/master/cluster/addons/storage-class/aws/default.yaml
+```
 
-This will create a Storage Class named "gp2" that has the necessary annotation to make it the default Storage Class (see [here][link-1]). Once this Storage Class is defined, dynamic provisioning of Persistent Volumes should work as expected.
+This will create [a Storage Class][link-2] named "gp2" that has the necessary annotation to make it the default Storage Class (see [here][link-1]). Once this Storage Class is defined, dynamic provisioning of Persistent Volumes should work as expected.
 
 ## Troubleshooting
 

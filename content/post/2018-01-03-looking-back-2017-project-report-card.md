@@ -38,8 +38,6 @@ Overall, my progress was reasonable---not stellar, but not awful. (That's an imp
 
 Have some feedback for me? Feel free to [hit me up on Twitter][link-4], or drop me an email (my address is here on the site). Thanks!
 
-
-
 [link-1]: http://shop.oreilly.com/product/0636920042082.do
 [link-2]: http://packetpushers.net/
 [link-3]: http://docs.openvswitch.org/en/latest/

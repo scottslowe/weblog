@@ -49,4 +49,3 @@ Rice now brings out Melanie Cebula from AirBnB to talk about AirBnB's use of Kub
 Rice returns to the stage to wrap up the keynotes and remind folks of the evening events, and then closes the keynotes.
 
 [link-1]: /tags/kubecon2018/
- 

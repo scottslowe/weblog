@@ -22,13 +22,17 @@ In previous posts, I've shown you how to use [Open vSwitch (OVS) with VLANs thro
 
 First, let's recap what we know so far. If you know the port to which a particular domain (guest VM) is connected, you can configure that particular port as a VLAN trunk like this:
 
-	ovs-vsctl set port <port name> trunks=10,11,12
+```shell
+ovs-vsctl set port <port name> trunks=10,11,12
+```
 
 This configuration would pass the VLAN tags for VLANs 10, 11, and 12 all the way up to the domain, where---assuming the OS installed in the domain has VLAN support---you could configure network connectivity appropriately. (I hope to have a blog post up on this soon.)
 
 Along the same lines, if you know the port to which a particular domain is connected, you could configure that port as a VLAN access port with a command like this:
 
-	ovs-vsctl set port <port name> tag=15
+```shell
+ovs-vsctl set port <port name> tag=15
+```
 
 This command makes the domain a member of VLAN 15, much like the use of the `switchport access vlan 15` command on a Cisco switch. (I probably don't need to state that this isn't the _only_ way---see the other OVS/VLAN related posts above for more techniques to put a domain into a particular VLAN.)
 
@@ -50,7 +54,7 @@ The easiest way I've found to create the virtual network is to craft the network
 
 Here's some sample XML code (I'll break down the relevant parts after the code):
 
-``` xml
+```xml
 <network>
   <name>ovs-network</name>
   <forward mode='bridge'/>
@@ -95,7 +99,7 @@ As far as I'm aware, to include the appropriate network definitions in the domai
 
 Here's the relevant snippet of domain XML configuration:
 
-``` xml
+```xml
 <interface type='network'>
   <mac address='11:22:33:44:55:66'/>
   <source network='ovs-network' portgroup='vlan-02'/>
@@ -115,7 +119,6 @@ Once the appropriate configuration is in place, you can see the OVS configuratio
 In this post, I've shown you how to create libvirt virtual networks that integrate with OVS to provide persistent VLAN configurations for domains connected to an OVS bridge. The key benefit that arises from this configuration is that you longer need to know to which OVS port a given domain is connected. Because the VLAN configuration is stored _with_ the domain and applied to OVS automatically when the domain is started, you can be assured that a domain will always be attached to the correct VLAN when it starts.
 
 As usual, I encourage your feedback on this article. If you have questions, thoughts, corrections, or clarifications, you are invited to speak up in the comments below.
-
 
 [1]: {{< relref "2012-10-19-vlans-with-open-vswitch-fake-bridges.md" >}}
 [2]: {{< relref "2012-10-22-wrapping-libvirt-virtual-networks-around-open-vswitch-fake-bridges.md" >}}

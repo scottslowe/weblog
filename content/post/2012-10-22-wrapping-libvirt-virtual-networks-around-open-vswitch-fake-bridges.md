@@ -23,7 +23,9 @@ You might ask, "Why wrap a libvirt virtual network around an OVS fake bridge whe
 
 Now that we have that out of the way, the process for using a libvirt virtual network with an OVS fake bridge is actually pretty straightforward. First, create the appropriate OVS fake bridges using the instructions in [this article][1]. So, for example, you might create a fake bridge for VLAN 100 like this:
 
-    ovs-vsctl add-br vlan100 ovsbr0 100
+```shell
+ovs-vsctl add-br vlan100 ovsbr0 100
+```
 
 Next, create an XML definition for a libvirt virtual network. For a fake bridge named `vlan100`, your XML definition might look something like this:
 

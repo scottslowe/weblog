@@ -40,7 +40,7 @@ Obviously, the answers to many (if not all) of these questions will be determine
 
 There are also other discussions that result from the Seacliff Trail announcement around convergence, but I'm going to hold on those discussions for the time being until I've had a bit more time to research and reflect. In the meantime, feel free to speak up in the comments below with your thoughts about what Seacliff Trail and Intel's move into the networking hardware space means to you. Please be sure to provide industry/employer affiliations where appropriate.
 
-_(My disclosure: I work for EMC, but I'm attending IDF at the request of Intel. Intel is covering my expenses and provided a pass for the show.)_
+(My disclosure: I work for EMC, but I'm attending IDF at the request of Intel. Intel is covering my expenses and provided a pass for the show.)
 
 [1]: {{< relref "2012-09-11-idf-2012-keynote-day-1.md" >}}
 [2]: {{< relref "2012-09-11-spcs001-intel-next-generation-haswell-microarchitecture.md" >}}

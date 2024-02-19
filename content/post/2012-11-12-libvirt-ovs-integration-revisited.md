@@ -21,7 +21,7 @@ A few days ago, I posted an article about [using VLANs with Open vSwitch (OVS) a
 
 In my [earlier OVS-libvirt post][1], I supplied this snippet of XML to define a libvirt network that you could use with OVS:
 
-``` xml
+```xml
 <network>
   <name>ovs-network</name>
   <forward mode='bridge'/>
@@ -50,7 +50,7 @@ In my [earlier OVS-libvirt post][1], I supplied this snippet of XML to define a 
 
 You would use that libvirt network definition in conjunction with a domain configuration like this:
 
-``` xml
+```xml
 <interface type='network'>
   <mac address='11:22:33:44:55:66'/>
   <source network='ovs-network' portgroup='vlan-02'/>
@@ -62,6 +62,5 @@ I just tested this on Ubuntu 12.04.1 with libvirt 0.10.2, and _it worked just fi
 I haven't yet tested this on earlier versions of libvirt, but I can confirm that it works with Ubuntu 12.04 using manually compiled versions of libvirt 0.10.2 and libvirt 1.0.0.
 
 If anyone has any additional information to share, please speak up in the comments.
-
 
 [1]: {{< relref "2012-11-07-using-vlans-with-ovs-and-libvirt.md" >}}

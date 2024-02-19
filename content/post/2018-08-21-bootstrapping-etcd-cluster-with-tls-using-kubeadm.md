@@ -41,7 +41,9 @@ With all the binaries in place, you'll start by generating all the certificates 
 
 First, create a self-signed CA for etcd:
 
-    kubeadm alpha phase certs etcd-ca
+```shell
+kubeadm alpha phase certs etcd-ca
+```
 
 This will create a CA certificate and key in `/etc/kubernetes/pki/etcd`. The files will be named `ca.crt` and `ca.key`. Copy these files to the same location on the other etcd nodes (you may need to create the directory structure first with `mkdir -p`).
 
@@ -49,7 +51,7 @@ Before you can continue with the next steps---generating server and peer certifi
 
 Here's the configuration file (this is for an EC2 instance in the "us-west-2" region with the private IP address 192.168.1.100, substitute your correct values here):
 
-``` yaml
+```yaml
 apiVersion: "kubeadm.k8s.io/v1alpha2"
 kind: MasterConfiguration
 etcd:
@@ -65,19 +67,23 @@ This configuration file syntax is specific to 1.11 (and possibly newer); it won'
 
 With the `kubeadm` configuration in place, you can create the etcd server certificate (assuming the configuration file is stored as `etcd.yaml`):
 
-    kubeadm alpha phase certs etcd-server --config etc.yaml
+```shell
+kubeadm alpha phase certs etcd-server --config etc.yaml
+```
 
 This will create a `server.crt` and `server.key` in `/etc/kubernetes/pki/etcd`. Repeat this process on the other etcd nodes---don't copy certificates across nodes as the hostnames on the certificate won't match up. Make sure you appropriately customize the `etcd.yaml` configuration file for each host so that the hostnames and IP addresses assigned to the certificates are correct.
 
 Next, create the etcd peer certificates:
 
-    kubeadm alpha phase certs etcd-peer --config etcd.yaml
+```shell
+kubeadm alpha phase certs etcd-peer --config etcd.yaml
+```
 
 This creates two files (`peer.crt` and `peer.key`) in the same directory as the previous steps (`/etc/kubernetes/pki/etcd`). As with the previous step, repeat this command on the other etcd nodes; don't copy certificates around.
 
 You now have the etcd binaries in place and have all the necessary certificates for securing etcd. The next step is to create the systemd unit file that will start etcd. It should look something like this:
 
-```
+```text
 [Unit]
 Description=etcd
 Documentation=https://github.com/coreos/etcd
@@ -100,7 +106,7 @@ WantedBy=multi-user.target
 
 The systemd unit references an environment file to keep the systemd unit file as simple and straightforward as possible. Here's the environment file that would go along with this systemd unit file:
 
-```
+```text
 ETCD_NAME="node1"
 ETCD_DATA_DIR="/var/lib/etcd"
 ETCD_LISTEN_CLIENT_URLS="https://0.0.0.0:2379"
@@ -126,19 +132,23 @@ Note that you **must** customize this environment file for each system in the cl
 
 Because you've modified systemd's configuration by adding a new unit file, you'll need to run `systemctl daemon-reload`, and then you can enable and start etcd:
 
-    systemctl enable etcd
-    systemctl start etcd
+```shell
+systemctl enable etcd
+systemctl start etcd
+```
 
 Use `systemctl status etcd` and/or `journalctl -u etcd` to make sure that the cluster formed, a leader was elected, and that etcd is serving client requests.
 
 The final step is just to verify that etcd is working as expected. You can use `etcdctl` to perform this test:
 
-    ETCDCTL_API=3 etcdctl --cacert=/etc/kubernetes/pki/etcd/ca.crt \
-    --cert=/etc/kubernetes/pki/etcd/peer.crt \
-    --key=/etc/kubernetes/pki/etcd/peer.key \
-    --endpoints=https://192.168.1.100:2379,https://192.168.1.101:2379,\
-    https://192.168.1.102:2379
-    endpoint health
+```shell
+ETCDCTL_API=3 etcdctl --cacert=/etc/kubernetes/pki/etcd/ca.crt \
+--cert=/etc/kubernetes/pki/etcd/peer.crt \
+--key=/etc/kubernetes/pki/etcd/peer.key \
+--endpoints=https://192.168.1.100:2379,https://192.168.1.101:2379,\
+https://192.168.1.102:2379
+endpoint health
+```
 
 It may be obvious but it's worth pointing out/reminding readers that you'll need to customize the `--endpoints=` parameter to reflect the correct IP addresses of the systems in your cluster.
 

@@ -58,7 +58,7 @@ Welcome to Technology Short Take 92, the first Technology Short Take of 2018. Th
 
 ## Operating Systems/Applications
 
-* I came across [this mention of Mitogen][link-2], a project whose goal---as described by the creator---is to "make it childsplay [_sic_] to run Python code on remote machines". 
+* I came across [this mention of Mitogen][link-2], a project whose goal---as described by the creator---is to "make it childsplay [_sic_] to run Python code on remote machines".
 * From the "interesting-but-not-practicallly-useful" department, Nick Janetakis shows [how to use Docker to run a PDP-11 simulator][link-3]. The magic here, in my opinion, is in the simulator (not in Docker), but it's still an interesting look at how one might use Docker.
 * Also from Nick, [here's an attempt][link-18] to the answer the question, "Do I learn Docker Swarm or Kubernetes?"
 * I debated on adding this link because I wasn't sure how useful it might be to readers, but decided to include it anyway. [Apache Guacamole][link-4] describes itself as "a clientless remote desktop gateway" supporting standard protocols like SSH, VNC, and RDP.
@@ -82,8 +82,6 @@ Welcome to Technology Short Take 92, the first Technology Short Take of 2018. Th
 * Although targeted at "creatives," I think there are some tips and ideas in [this post][link-30] that are equally applicable to IT professionals.
 
 That's it for this time around. Look for the next Technology Short Take in a couple of weeks, where I'll have another curated collection of links and articles for you. Until then, enjoy!
-
-
 
 [link-1]: https://cloudnull.io/2017/06/nspawning-openstack-ansible/
 [link-2]: http://pythonsweetness.tumblr.com/post/165366346547/mitogen-an-infrastructure-code-baseline-that

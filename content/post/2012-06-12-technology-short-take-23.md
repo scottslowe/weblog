@@ -78,7 +78,7 @@ Welcome to Technology Short Take #23, another collection of links and thoughts r
 
 ## Virtualization
 
-* Frank Denneman continues to do a great job writing solid technical articles. The latest article to catch my eye (and I'm sure that I missed some) was this post on [combining affinity rule types](http://blogs.vmware.com/vsphere/2012/05/combining-affinity-rule-types.html). 
+* Frank Denneman continues to do a great job writing solid technical articles. The latest article to catch my eye (and I'm sure that I missed some) was this post on [combining affinity rule types](http://blogs.vmware.com/vsphere/2012/05/combining-affinity-rule-types.html).
 
 * This is an interesting post on [a vSphere 5 networking bug affecting iSCSI](http://vmtoday.com/2012/02/vsphere-5-networking-bug-affects-software-iscsi/) that was fixed in vSphere 5.0 Update 1.
 

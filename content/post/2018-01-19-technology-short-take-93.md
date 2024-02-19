@@ -77,8 +77,6 @@ Nothing this time around. Feel free to [hit me up on Twitter][link-29] if you ha
 
 OK, that's all I have this time around. Check back in a couple weeks for the next Technology Short Take!
 
-
-
 [link-1]: https://blogs.vmware.com/cloudnative/2017/12/18/kubernetes-1-9-expanded-ecosystem-workloads-api-storage-visibility/
 [link-2]: https://blogs.msdn.microsoft.com/powershell/2018/01/10/powershell-core-6-0-generally-available-ga-and-supported/
 [link-3]: https://www.virtualizationhowto.com/2018/01/roll-back-vmware-meltdown-and-spectre-microcode-patch/

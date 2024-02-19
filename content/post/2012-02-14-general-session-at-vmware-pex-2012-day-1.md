@@ -14,15 +14,15 @@ wordpress_id: 2536
 
 VMware Partner Exchange (PEX) is VMware's premier partner-focused event, and this morning I'm in the general session kicking off this year's PEX at The Venetian in Las Vegas. It will be interesting to see how the session shapes up. I'm writing this post during the session and I'll be updating it as the session progresses.
 
-**9:05 AM**
+## 9:05 AM
 
 The session kicks off with a legal disclaimer about forward-looking statements and such. I suppose that's expected and required from a publicly owned company such as VMware. That's followed up by a series of partner videos; first EMC, then HP, NetApp, Dell, and Cisco. All part of their sponsorships of the event, I suppose.
 
-**9:12 AM**
+## 9:12 AM
 
 The session then transitions into someone drawing on the screen and a guy talking about looking up at the sky and seeing shapes in the clouds. Naturally, this morphs into seeing technologies inside "cloud computing." He then eloquently extolls the virtues of cloud computing.
 
-**9:17 AM**
+## 9:17 AM
 
 Scott Aronson, SVP of Global Channels and Alliances now takes the stage. Aronson calls out the Diamond sponsors---Cisco, Dell, EMC, HP, and NetApp (in alphabetical order) and reminds attendees of the Solutions Exchange and all the vendors participating there.
 
@@ -48,7 +48,7 @@ VMware Grid is a program offered at no cost to partners to help with lead genera
 
 According to Aronson, competent partners have 350% more revenue than non-competent partners. This moves into a discussion of Advantage+, which---if I recall correctly---is VMware's partner-focused deal registration service. Aronson details some additional discounts that partners will get through Advantage+ if they sell to new customers, achieve competencies, and make recurring solutions-focused sales. Aronson indicates that VMware is "doubling down" on investment in the channel when other companies are drawing back.
 
-**9:44 AM**
+## 9:44 AM
 
 Paul Maritz takes the stage. Maritz reviews the stats that VMware likes to throw around--1 VM every 6 seconds, 25 million VMs running on vSphere, >50% of workloads virtualized, >50,000 partners, etc.
 
@@ -66,7 +66,7 @@ The key technologies in front-end transformation are View and Horizon, according
 
 Maritz reiterates that leadership requires a commitment to execution (so that partners can rely on VMware), a commitment to enablement (so that partners have the knowledge and rewards), and a commitment to innovation (so that partners can be confident in VMware). With that, Maritz transfers the stage to Steve Herrod.
 
-**10:07 AM**
+## 10:07 AM
 
 Steven Herrod, VMware's CTO, now takes the stage. Herrod couches his discussion around the idea of a IT consumers just "needing to get their job done", where PaaS, IaaS, or SaaS might be more efficient or effective for the end users in getting their job done.
 

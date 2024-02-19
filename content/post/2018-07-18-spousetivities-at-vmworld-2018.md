@@ -17,23 +17,23 @@ This year's activities are funded in part by the generous and community-minded s
 
 Here's a brief peek at what's planned for VMworld in Las Vegas this August:
 
-**Monday, August 27**
+## Monday, August 27
 
 * It's a tradition to kick the week off with a Welcome/"Getting to Know You" breakfast, and this year---year 11 for Spousetivities at VMworld---is no different! There will be great food, great company, and the opportunity to win some cool prizes.
 * On Monday afternoon you can secure a spot in a private pod on the High Roller, including an open bar. Nice!
 * Monday is also the first of three (yes, _three_) cabana days by the pool. This is the perfect way to relax by the Mandalay Bay pool! Monday's cabana day is sponsored by [ActualTech Media][link-3].
 
-**Tuesday, August 28**
+## Tuesday, August 28
 
 * On Tuesday, Spousetivities participants will head to Zion National Park. I went to Zion earlier this year, and let me tell you---it is _absolutely_ amazing. Don't miss this trip if you enjoy spectacular natural views.
 * A cabana day is available for those who would prefer to relax by the pool and catch some sun. Tuesday's cabana day is also brought to you by [ActualTech Media][link-3].
 
-**Wednesday, August 29**
+## Wednesday, August 29
 
 * The third and final cabana day is available on Wednesday. Haven't had your chance in the sun yet, or can't get enough time by the pool? No worries, you still have another chance! Wednesday's cabana day is sponsored by [Datrium][link-4].
 * For those seeking a different kind of adventure, how about an ATV adventure through the Valley of Fire? This sounds like so much fun, and the Spousetivities price is nearly 50% off the retail price.
 
-**Thursday, August 30**
+## Thursday, August 30
 
 Thursday's sole activity is a walking food tour, available with or without specialty cocktails. Don't worry: if you partied hard at the official event party the previous evening, this event doesn't start until noon, so you have time to recover.
 

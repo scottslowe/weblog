@@ -24,4 +24,4 @@ As a result, I can't say that I was terribly surprised when someone on Twitter p
 
 So, I'd like to take this opportunity to issue a call to the storage experts out there (which I am not, and have said that on numerous occasions) to chime in and **provide what they think are the "best" RAID recommendations or storage configurations to support a VMware vSphere environment.** Keep in mind the challenges I described earlier---you need recommendations that are broadly applicable to many users, many environments, many situations. Please add your thoughts in the comments below, and---where applicable---please provide any relevant affiliations or disclosures. All courteous comments are welcome!
 
-_(Full disclosure: I do work for EMC, although this is not an EMC blog and "Mastering VMware vSphere 5" was not sponsored or supported by EMC in any way. I speak only for myself.)_
+(Full disclosure: I do work for EMC, although this is not an EMC blog and "Mastering VMware vSphere 5" was not sponsored or supported by EMC in any way. I speak only for myself.)

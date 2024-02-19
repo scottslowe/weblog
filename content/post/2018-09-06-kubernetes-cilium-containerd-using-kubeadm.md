@@ -25,7 +25,7 @@ Ready? Let's go! I'll organize the content below according to the section headin
 
 Up until this point, everything remains the same (no changes are needed to accommodate an alternate container runtime or a specific CNI plugin). Once you get to this point and you're ready to bootstrap the first control plane node, some additional changes are needed. Specifically, you need to add the following content to the `kubeadm` configuration file:
 
-``` yaml
+```yaml
 nodeRegistration:
   criSocket: /var/run/containerd/containerd.sock
 ```
@@ -34,8 +34,10 @@ This assumes, naturally, that you're using the default location for the runtime 
 
 I also had to do the following on my Ubuntu 16.04 nodes, but I take this as more of an issue with my images (you may not need these commands):
 
-    modprobe br_netfilter
-    sysctl -w net.ipv4.ip_forward=1
+```shell
+modprobe br_netfilter
+sysctl -w net.ipv4.ip_forward=1
+```
 
 With this content added, you're good to go to run `kubeadm init --config <config-file-name>` to bootstrap the first master. `kubectl get nodes` will report it as NotReady until you install the CNI, but that's OK. You can proceed with the next steps in the procedure.
 
@@ -43,7 +45,7 @@ With this content added, you're good to go to run `kubeadm init --config <config
 
 The only change here is to (again) add this content to the `kubeadm` config file:
 
-``` yaml
+```yaml
 nodeRegistration:
   criSocket: /var/run/containerd/containerd.sock
 ```

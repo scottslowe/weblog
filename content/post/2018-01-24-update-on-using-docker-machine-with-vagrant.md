@@ -19,15 +19,17 @@ As part of a project on which I'm working, I've been spending some time working 
 
 As a brief recap to [the original article][xref-1], I showed how you could use Vagrant to quickly and easily spin up a VM, then use Docker Machine's `generic` driver to add it to Docker Machine, like this:
 
-    docker-machine create -d generic \
-    --generic-ssh-user vagrant \
-    --generic-ssh-key ~/.vagrant.d/insecure_private_key \
-    --generic-ip-address <IP address of VM> \
-    <name of VM>
+```sh
+docker-machine create -d generic \
+--generic-ssh-user vagrant \
+--generic-ssh-key ~/.vagrant.d/insecure_private_key \
+--generic-ip-address <IP address of VM> \
+<name of VM>
+```
 
 This approach works fine _if the Vagrant-created VM is reachable without port forwarding_. What do I mean? In the past, the VMware provider for Vagrant used functionality in [VMware Fusion][link-4] or [VMware Workstation][link-5] to provide an RFC 1918-addressed network that had external access via network address translation (NAT). In Fusion, for example, this was the default "Share with my Mac" network. Thus, when you created a VM using Vagrant and the VMware provider for Vagrant, the first network interface card (NIC) in the VM would be assigned to this default NAT network and get an RFC 1918-style private IP address (on my Mac Pro, this network uses the 192.168.70.0/24 network range, but I don't know if that's the default for all systems). As a result, when you would run `vagrant ssh-config` for such a VM, you'd get something like this:
 
-``` text
+```text
 Host coreos-01
   HostName 192.168.70.132
   User core
@@ -42,7 +44,7 @@ Host coreos-01
 
 With version 5 of the VMware provider for Vagrant (which is required in order to use the latest versions of Fusion and Workstation), this behavior _seems_ to have changed, although it's not clear if this is intentional or not (there's [an open GitHub issue][link-3] about this change). Sometimes Vagrant will report connection information as shown above, but other times it will report using a forwarded port on the loopback address:
 
-``` text
+```text
 Host coreos-01
   HostName 127.0.0.1
   User core
@@ -63,25 +65,27 @@ All of this brings us to the original matter at hand: using Docker Machine and V
 
 If, on the other hand, you're using a provider that _does_ use a forwarded port on the loopback address, then you'll need to amend the command slightly:
 
-    docker-machine create -d generic \
-    --generic-ssh-user vagrant \
-    --generic-ssh-key ~/.vagrant.d/insecure_private_key \
-    --generic-ssh-port 2222 \
-    --generic-ip-address 127.0.0.1 \
-    <name of VM>
+```sh
+docker-machine create -d generic \
+--generic-ssh-user vagrant \
+--generic-ssh-key ~/.vagrant.d/insecure_private_key \
+--generic-ssh-port 2222 \
+--generic-ip-address 127.0.0.1 \
+<name of VM>
+```
 
 Naturally, you'll need to replace `2222` with the SSH port reported by `vagrant ssh-config`, since it may change when you're running multiple VMs under Vagrant. (You may also need to change the username specified via `--generic-ssh-user`, since some distributions---I'm looking at you, [CoreOS Container Linux][link-6]---use a different username.)
 
 Additionally, you'll also need to forward port 2376 (the port that Docker uses to communicate across the network) in your `Vagrantfile` by adding a snippet like this:
 
-    # Configure port forwarding to support remote access to Docker Engine
-    config.vm.network "forwarded_port", guest: 2376, host: 2376
+```text
+# Configure port forwarding to support remote access to Docker Engine
+config.vm.network "forwarded_port", guest: 2376, host: 2376
+```
 
 With the forwarded port specified in the `Vagrantfile` and the updated `docker-machine` command that includes the correct SSH port, then you'll be able to use Vagrant to provision/manage the VM(s) and use Docker Machine to provision/manage the Docker Engine(s).
 
 If you have questions or corrections, feel free to drop me an email (my address isn't terribly hard to find) or [hit me up on Twitter][link-7].
-
-
 
 [link-1]: https://docs.docker.com/machine/overview/
 [link-2]: https://www.vagrantup.com/

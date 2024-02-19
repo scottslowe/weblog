@@ -82,8 +82,6 @@ Nothing this time around (which surprises me---I almost _always_ find material t
 
 OK, that's all this time around, but I've already started gathering material for next time. Look for the next Technology Short Take in about two weeks. Thanks for reading!
 
-
-
 [link-1]: https://everythingshouldbevirtual.com/bringing-devops-to-routing-cisco-xr/
 [link-2]: https://dotmesh.com/
 [link-3]: https://krausefx.com/blog/mac-privacy-sandboxed-mac-apps-can-take-screenshots

@@ -20,10 +20,12 @@ The information here isn't revolutionary or unique, but hopefully it will still 
 
 To launch an instance on Azure and provision it with Docker using `docker-machine`:
 
-    docker-machine create -d azure \
-    --azure-subscription-id $(az account show --query "id" -o tsv) \
-    --azure-ssh-user azureuser \
-    --azure-size "Standard_B1ms" azure-test
+```sh
+docker-machine create -d azure \
+--azure-subscription-id $(az account show --query "id" -o tsv) \
+--azure-ssh-user azureuser \
+--azure-size "Standard_B1ms" azure-test
+```
 
 The first time you run this you'll probably need to allow Docker Machine access to your Azure subscription (you'll get prompted to log in via a browser and allow access). This will create a service principal that is visible via `az ad sp list`. Note that you may be prompted for authentication for future uses, although it will re-use the existing service principal once it is created.
 
@@ -42,15 +44,16 @@ A more detailed post on [using Vagrant with Azure is available here][xref-1]; it
 
 OK, maybe the Azure CLI isn't exactly an "existing tool," but given my affinity for CLI-based tools I think it's probably reasonable to include it here. To launch an instance using the Azure CLI, it would look something like this:
 
-    az vm create -n vm-name -g group-name --image UbuntuLTS --size Standard_B1ms --no-wait
+```sh
+az vm create -n vm-name -g group-name --image UbuntuLTS \
+--size Standard_B1ms --no-wait
+```
 
 Of course, this assumes a pre-existing resource group. More details are available [here][link-5].
 
 If you need to install the Azure CLI, see [here][xref-2] or [here][xref-3] for some additional information.
 
 Happy experimenting!
-
-
 
 [link-1]: https://github.com/Azure/vagrant-azure
 [link-2]: https://www.docker.com/products/docker-machine

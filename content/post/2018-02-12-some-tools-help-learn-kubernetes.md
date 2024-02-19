@@ -39,7 +39,7 @@ The [`kops` tool][link-5] can be used to (relatively) quickly and easily stand u
 
 However, you can also use it to set up quick and simple Kubernetes clusters for learning purposes. Here's an example command-line that could be used to turn up a small Kubernetes cluster using `kops`:
 
-```
+```sh
 kops create cluster \
 --node-count 3 \
 --zones us-west-2a \
@@ -64,16 +64,20 @@ Using the [Azure CLI][link-13], it's pretty easy to spin up a Kubernetes cluster
 
 You can use ACS (Azure Container Service) and specify Kubernetes as the orchestrator type (ACS supports other types of orchestrators as well):
 
-    az acs create --orchestrator-type=kubernetes \
-    --resource-group=my-grp --name=my-clus \
-    --ssh-key-value=/path/to/public/key
+```sh
+az acs create --orchestrator-type=kubernetes \
+--resource-group=my-grp --name=my-clus \
+--ssh-key-value=/path/to/public/key
+```
 
 After a 5-7 minutes, the command should complete and you'll be ready to roll with a Kubernetes cluster running in Azure. Use the `az acs kubernetes get-credentials` to configure `kubectl` to talk to the new cluster.
 
 You can also use AKS (Azure Container Service, a newer offering that---as I understand it---supersedes/replaces ACS) to turn up a Kubernetes cluster (AKS only supports Kubernetes):
 
-    az aks create --resource-group=my-grp --name=my-clus \
-    --ssh-key-value /path/to/public/key
+```sh
+az aks create --resource-group=my-grp --name=my-clus \
+--ssh-key-value /path/to/public/key
+```
 
 As with `az acs create`, after a few minutes you'll have a shiny new Kubernetes cluster up and running. From there, you can use `az aks upgrade` to potentially upgrade your cluster, or `az aks get-credentials` to pull down a configuration that allows `kubectl` to interact with your new cluster.
 
@@ -88,8 +92,6 @@ As a hosted/managed solution, GKE would fall into the same category as ACS/AKS. 
 If you don't mind jumping through hoops to get `gcloud` installed (or if you'd prefer to use a GUI), then I'm sure GKE is a perfectly acceptable option.
 
 There you have it...a few options for quickly and easily getting Kubernetes up and running (and you don't need a massive home lab, either). Enjoy!
-
-
 
 [link-1]: https://kubernetes.io/
 [link-2]: https://github.com/kubernetes/minikube

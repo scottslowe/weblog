@@ -25,12 +25,14 @@ Here are some details on the environment I'll use to walk you through how this w
 
 To verify this, I'll run a container in the `foo` namespace and test that the ExternalName Services are working as expected:
 
-    kubectl -n foo run -it --rm --restart=Never debug \
-    --image=quay.io/mauilion/debug /bin/bash
+```shell
+kubectl -n foo run -it --rm --restart=Never debug \
+--image=quay.io/mauilion/debug /bin/bash
+```
 
 This will, after a minute, open a prompt inside a container running in the `foo` namespace, at which point I can run `host extname-1` and see these results:
 
-```
+```text
 extname-1.foo.svc.cluster.local is an alias for aws.amazon.com.
 aws.amazon.com is an alias for 0.aws-lbr.amazonaws.com.
 0.aws-lbr.amazonaws.com is an alias for aws-us-east-1.amazon.com.
@@ -41,20 +43,24 @@ Repeating this process for `extname-2` and `extname-3`, I see similar results---
 
 Now, let's create a new namespace (named `bar`, of course) and repeat this process:
 
-    kubectl create namespace bar
-    kubectl -n bar run -it --rm --restart=Never debug \
-    --image=quay.io/mauilion/debug /bin/bash
+```shell
+kubectl create namespace bar
+kubectl -n bar run -it --rm --restart=Never debug \
+--image=quay.io/mauilion/debug /bin/bash
+```
 
 When I run `host extname-1` in this container in this new namespace, I instead get `Host extname-1 not found: 3(NXDOMAIN)`---indicating the ExternalName Services are _not_ in this namespace, as fully expected.
 
 Here's where we bring in Ark. I'll create a backup of the Services in the `foo` namespace:
 
-    ark backup create foo-svc --include-namespaces foo \
-    --include-resources services
+```shell
+ark backup create foo-svc --include-namespaces foo \
+--include-resources services
+```
 
 As suggested in the output of this command, I'll run `ark backup describe foo-svc` to see the status of the backup job:
 
-```
+```text
 Name:         foo-svc
 Namespace:    heptio-ark
 Labels:       <none>
@@ -93,12 +99,14 @@ Persistent Volumes: <none included>
 
 Now comes the neat trick---I'll restore this backup into the `bar` namespace, using the `--namespace-mappings` option to Ark:
 
-    ark restore create bar-svc --from-backup foo-svc \
-    --namespace-mappings foo:bar
+```shell
+ark restore create bar-svc --from-backup foo-svc \
+--namespace-mappings foo:bar
+```
 
 Now, I could run `ark restore describe bar-svc`, but let's just jump directly to see if the services have been restored. Running `kubectl -n bar get services` shows they're present:
 
-```
+```text
 NAME       TYPE          CLUSTER-IP  EXTERNAL-IP        PORT(S)  AGE
 extname-1  ExternalName  <none>      aws.amazon.com     <none>   18m
 extname-2  ExternalName  <none>      httpbin.org        <none>   18m

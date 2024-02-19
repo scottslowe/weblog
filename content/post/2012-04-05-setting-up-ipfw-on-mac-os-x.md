@@ -88,7 +88,9 @@ I believe---but I could be mistaken---that you'll need to set ownership of the L
 
 Once the plist file is in place, reboot your Mac. Once your Mac boots up and you've logged in, fire up the Terminal and run this command (you will need to use `sudo` if your account has administrative privileges; if your account doesn't have administrative privileges, you should log in as an account that does in order to test things):
 
-    sudo ipfw list
+```shell
+sudo ipfw list
+```
 
 This command should return the list of firewall rules you embedded in the configuration file. If it doesn't, then go back and double-check your setup. Be sure that the plist file has the correct reference to the startup shell script, and that the startup shell script has the correct reference to the configuration file. You should also check to ensure that you made the startup shell script executable (using the `chmod` command).
 

@@ -24,17 +24,25 @@ In this post, I'll be using Fedora 27 Atomic Host (via [Vagrant][link-4] with [V
 
 As it turns out, running OVS on Fedora Atomic Host using the Kelda Docker images is really straightforward. As stated in [Kelda's README for the OVS Docker images][link-6], you just have to launch a couple of containers. First, you'd launch a container for the OVSDB server:
 
-    docker run -itd --net=host --name=ovsdb-server keldaio/ovs ovsdb-server
+```sh
+docker run -itd --net=host --name=ovsdb-server keldaio/ovs ovsdb-server
+```
 
 Next, you'd run a container for the ovs-vswitchd daemon:
 
-    docker run -itd --net=host --name=ovs-vswitchd --volumes-from=ovsdb-server --privileged keldaio/ovs ovs-vswitchd
+```sh
+docker run -itd --net=host --name=ovs-vswitchd \
+--volumes-from=ovsdb-server --privileged \
+keldaio/ovs ovs-vswitchd
+```
 
 That gets the core, essential parts of OVS up and running, but you're not fully functional yet. The final ingredient is to load the OVS kernel module, which is part of the upstream Linux kernel. Normally, starting OVS-related daemons would initiate loading the kernel module, but with OVS encapsulated in Docker containers it won't happen automatically. However, a quick `sudo modprobe openvswitch` will easily remedy that and get the OVS kernel module loaded.
 
 From this point, running `ovs-vsctl` to configure OVS involves appending your command to a `docker exec` command, like this:
 
-    docker exec -it ovs-vswitchd ovs-vsctl show
+```sh
+docker exec -it ovs-vswitchd ovs-vsctl show
+```
 
 This will run `ovs-vsctl show` in the "ovs-vswitchd" container, which is where the ovs-vswitchd daemon is running. All the standard `ovs-vsctl` commands should work here, such as adding a bridge (`add-br`), adding a port (`add-port`), deleting a port (`del-port`), and deleting a bridge (`del-br`).
 
@@ -44,22 +52,28 @@ Obviously, that's not ideal. One possible solution is to use Docker volumes to s
 
 Here's how you'd make this work. First, you'd create some Docker volumes:
 
-    docker volume create var-lib-ovs
-    docker volume create var-log-ovs
-    docker volume create var-run-ovs
-    docker volume create etc-ovs
+```sh
+docker volume create var-lib-ovs
+docker volume create var-log-ovs
+docker volume create var-run-ovs
+docker volume create etc-ovs
+```
 
 Then, you'd amend the command line for launching the "ovsdb-server" container to look like this instead:
 
-    docker run -itd --net=host --name=ovsdb-server -v var-lib-ovs:/var/lib/openvswitch -v var-log-ovs:/var/log/openvswitch -v var-run-ovs:/var/run/openvswitch -v etc-ovs:/etc/openvswitch keldaio/ovs ovsdb-server
+```sh
+docker run -itd --net=host --name=ovsdb-server \
+-v var-lib-ovs:/var/lib/openvswitch \
+-v var-log-ovs:/var/log/openvswitch \
+-v var-run-ovs:/var/run/openvswitch \
+-v etc-ovs:/etc/openvswitch keldaio/ovs ovsdb-server
+```
 
 The command line for launching the ovs-vswitchd container remains unchanged, since it just mounts the same volumes as the OVSDB server container.
 
 With this approach, the OVS configuration is now stored separate from the containers where the OVSDB server and ovs-vswitchd processes run, which means we can easily kill and restart those containers _without_ negatively impacting OVS configuration. This configuration also brings us one step closer to using systemd to manage the OVS containers since we can now persist data across container instances.
 
 I'm still exploring this sort of configuration, so I'll share additional information I uncover in future blog posts. In the meantime, if I've made an error in this post or if there is a suggestion you'd like to make to improve the post, feel free to [contact me on Twitter][link-7].
-
-
 
 [link-1]: http://openvswitch.org/
 [link-2]: https://www.projectatomic.io/

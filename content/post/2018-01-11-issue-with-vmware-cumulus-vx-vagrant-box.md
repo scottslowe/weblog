@@ -16,7 +16,9 @@ I recently had a need to revisit the use of Cumulus VX (the [Cumulus Networks][l
 
 The latest version (as of this writing) of Cumulus VX was 3.5.0, and for this version both VirtualBox-formatted and Libvirt-formatted boxes are provided. For a VMware-formatted box, the latest version is 3.2.0, which you can install with this command:
 
-    vagrant box add CumulusCommunity/cumulus-vx --box-version 3.2.0
+```sh
+vagrant box add CumulusCommunity/cumulus-vx --box-version 3.2.0
+```
 
 When this Vagrant box is installed using the above command, what actually happens is _something_ like this (at a high level):
 
@@ -39,8 +41,6 @@ Once you've deleted that file, then using `vagrant up` to instantiate a Vagrant 
 (Side note: If you are planning to use version 3.2.0 of the VMware-formatted Cumulus VX box, there's one additional oddity. When you use `vagrant box add` as outlined above to download and install the box, you'll be prompted with a set of options for which provider to use. Be sure to use option 4---the one labeled "vmware_desktop"---and not option 5, labeled "vmware_fusion". The latter reports an error after downloading the box and the command fails.)
 
 Hopefully Cumulus Networks will release an updated version of the Cumulus VX Vagrant box for VMware products that addresses these issues.
-
-
 
 [link-1]: https://cumulusnetworks.com
 [link-2]: https://www.vagrantup.com/

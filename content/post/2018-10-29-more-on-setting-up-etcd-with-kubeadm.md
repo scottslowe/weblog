@@ -27,7 +27,7 @@ In my testing on Ubuntu 16.04 images prepared using [Wardroom][link-3], the Dock
 
 If this affects you, you can amend the 1.12.x systemd drop-in to add a `--cgroup-driver=systemd` flag, so that the complete drop-in now looks like this:
 
-```
+```text
 [Service]
 ExecStart=
 ExecStart=/usr/bin/kubelet --address=127.0.0.1 --pod-manifest-path=/etc/kubernetes/manifests --allow-privileged=true --cgroup-driver=systemd

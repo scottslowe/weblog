@@ -45,7 +45,7 @@ Welcome to Technology Short Take #20, the latest collection of various data cent
 
 ## Storage
 
-* Clint Kitson recently published a guide on [setting up the FC zoning for WAN communications on a VPLEX Metro cluster](http://velemental.com/2012/01/06/an-fc-dive-preparing-fc-switches-for-a-vplex-metro-install/). This article is a good complement to my own MDS zoning articles ([creating MDS zones][5], [managing MDS zones][6], [using device aliases][7]) and shows some practical examples of those commands in action. 
+* Clint Kitson recently published a guide on [setting up the FC zoning for WAN communications on a VPLEX Metro cluster](http://velemental.com/2012/01/06/an-fc-dive-preparing-fc-switches-for-a-vplex-metro-install/). This article is a good complement to my own MDS zoning articles ([creating MDS zones][5], [managing MDS zones][6], [using device aliases][7]) and shows some practical examples of those commands in action.
 
 * Simon Seagrave [points out](http://www.techhead.co.uk/iomega-ix2-ix4-os-x-lion-time-machine-update-fix) a firmware update for Iomega IX2 and IX4 storage devices that fixes problems with Time Machine under Mac OS X 10.7 "Lion". Thanks Simon!
 

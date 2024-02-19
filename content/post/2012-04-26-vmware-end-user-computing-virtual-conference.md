@@ -15,7 +15,7 @@ wordpress_id: 2604
 
 VMware is holding an "End User Computing Virtual Conference" next week. Here's the text of the announcement/invitation that I saw (and yes, I made sure that VMware was OK with me posting it here so that others could attend if interested):
 
->Please join VMware as we discuss the next step forward in end-user computing for the post-PC era. 
+>Please join VMware as we discuss the next step forward in end-user computing for the post-PC era.
 >
 >Watch Vittorio Viarengo, VP of End-User Computing, discuss the latest advancements in the VMware End-User Computing Platform.  Understand how VMware provides solutions to simplify traditional technology silos, enable policy driven management, and connect people to technology and each other in new and collaborative ways.
 >

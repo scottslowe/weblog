@@ -42,14 +42,14 @@ You can look at the XML configuration of a KVM guest (more properly referred to 
 Here's a snippet of the XML configuration for a KVM guest:
 
 ```xml
-        <devices>
-        <emulator>/usr/bin/kvm</emulator>
-        <disk type='file' device='disk'>
-          <driver name='qemu' type='raw'/>
-          <source file='/var/lib/libvirt/images/vm01.img'/>
-          <target dev='hda' bus='ide'/>
-          <address type='drive' controller='0' bus='0' unit='0'/>
-        </disk>
+<devices>
+<emulator>/usr/bin/kvm</emulator>
+<disk type='file' device='disk'>
+    <driver name='qemu' type='raw'/>
+    <source file='/var/lib/libvirt/images/vm01.img'/>
+    <target dev='hda' bus='ide'/>
+    <address type='drive' controller='0' bus='0' unit='0'/>
+</disk>
 ```
 
 The second component of a KVM guest is the storage; as I mentioned earlier, this can be a file on a file system or it can be a volume managed by a logical volume manager (LVM). The XML snippet above shows the configuration for a disk image stored as a file on a file system. This particular disk image is in QEMU raw format.
@@ -66,12 +66,14 @@ There are a couple of different ways to create a KVM guest:
 
 Here's a quick example of creating a KVM guest using `virt-install` (I've inserted backslashes and line breaks for readability):
 
-    virt-install --name vmname --ram 1024 --vcpus=1 \
-    --disk path=/var/lib/libvirt/images/vmname.img,size=20 \
-    --network bridge=br0 \
-    --cdrom /var/lib/libvirt/images/os-install.iso \
-    --graphics vnc --noautoconsole --hvm \
-    --os-variant win2k3
+```shell
+virt-install --name vmname --ram 1024 --vcpus=1 \
+--disk path=/var/lib/libvirt/images/vmname.img,size=20 \
+--network bridge=br0 \
+--cdrom /var/lib/libvirt/images/os-install.iso \
+--graphics vnc --noautoconsole --hvm \
+--os-variant win2k3
+```
 
 This command creates a KVM guest named "vmname", with 1024 MB of RAM, a single vCPU, a 20 GB virtual disk (in the default QEMU raw format, thin provisioned so that not all 20 GB are allocated up front), connected to an OS installation ISO at the path specified and using hardware virtualization. The network connection is to a bridge called `br0`, which might be a fake bridge on Open vSwitch (which in my case it is). Access to the console is handled via VNC.
 
@@ -98,11 +100,11 @@ For improved performance, you can also use paravirtualized drivers. (This is the
 To use virtio drivers for networking, edit the guest configuration like this (the `model` line is the line that needs to be added):
 
 ```xml
-    <interface type='bridge'>
-      <mac address='52:54:00:a0:55:ef'/>
-      <source bridge='br0'/>
-      <model type='virtio'/>
-    </interface>
+<interface type='bridge'>
+    <mac address='52:54:00:a0:55:ef'/>
+    <source bridge='br0'/>
+    <model type='virtio'/>
+</interface>
 ```
 
 I found [this page](https://help.ubuntu.com/community/KVM/Networking) to be quite helpful in determining exactly how to enable the virtio network drivers. This part is the same for both Ubuntu and Windows guests; for Windows guests, you also have to install the virtio drivers into Windows. That can be a bit more problematic; I'd recommend copying them across the network _before_ making the change above.

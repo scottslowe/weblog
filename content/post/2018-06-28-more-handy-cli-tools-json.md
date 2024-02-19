@@ -24,29 +24,41 @@ However, you can also use JMESPath on the client-side through [the `jp` command-
 
 Let's assume we are working with the output of the command `aws ec2 describe-security-groups`, which returns---as JSON---a list of security groups and their properties. Naturally, parsing this data down to find only the specific information you need is a prime use case for `jp`. Perhaps you know that a security group named "internal-only" exists, but you don't know anything else---only the name. Using `jp`, we could get more details on that specific group with this command:
 
-    aws ec2 describe-security-groups | jp "SecurityGroups[?GroupName == 'internal-only']"
+```shell
+aws ec2 describe-security-groups | \
+jp "SecurityGroups[?GroupName == 'internal-only']"
+```
 
 The AWSCLI command will return all the security groups, and `jp` will filter through the data to return only the properties of the security group whose name (as defined in the "GroupName" field/property) is equal to "internal-only." Compare that syntax to the equivalent `jq` syntax:
 
-    aws ec2 describe-security-groups | jq '.SecurityGroups[] | select (.GroupName == "internal-only")'
+```shell
+aws ec2 describe-security-groups | \
+jq '.SecurityGroups[] | select (.GroupName == "internal-only")'
+```
 
 That's handy, but what if we needed only a particular property of that security group? No problem, we'd just append the property name to the end of the query:
 
-    aws ec2 describe-security-groups | jp "SecurityGroups[?GroupName == 'internal-only'].GroupId"
+```shell
+aws ec2 describe-security-groups | \
+jp "SecurityGroups[?GroupName == 'internal-only'].GroupId"
+```
 
 This is fundamentally equivalent to this `jq` command:
 
-    aws ec2 describe-security-groups | jq '.SecurityGroups[] | select (.GroupName == "internal-only").GroupId'
+```shell
+aws ec2 describe-security-groups | \
+jq '.SecurityGroups[] | select (.GroupName == "internal-only").GroupId'
+```
 
 However, if you try both `jp` and `jq` as described above, you'll note a significant difference in the output. First, here's the output of a `jq` command like the one above:
 
-``` text
+```text
 "sg-7f7efe02"
 ```
 
 Now compare that to the output of the equivalent `jp` command:
 
-``` text
+```json
 [
   "sg-7f7efe02"
 ]
@@ -54,13 +66,19 @@ Now compare that to the output of the equivalent `jp` command:
 
 As you can see, `jq` returns a specific value, whereas `jp` returns an array of values (with only a single item in the array). In order to get all the way down to a single value with `jp`, you have to extend the query:
 
-    aws ec2 describe-security-groups | jp "SecurityGroups[?GroupName == 'internal-only'].GroupId | [0]"
+```shell
+aws ec2 describe-security-groups | \
+jp "SecurityGroups[?GroupName == 'internal-only'].GroupId | [0]"
+```
 
 This command will return _only_ the value of the "GroupId" field. `jp` does support a `-u` command-line option that is equivalent to the `-r` option to `jq` in order to return unquoted (raw) strings. This is helpful when storing the command output into a variable for use later.
 
 If you need more than a single property, you can build a JSON object from multiple properties by listing them in curly braces at the end of the query, like this:
 
-    aws ec2 describe-security-groups | jp "SecurityGroups[?GroupName == 'internal-only'].{ Name: GroupName, ID: GroupId, VPC: VpcId }"
+```shell
+aws ec2 describe-security-groups | \
+jp "SecurityGroups[?GroupName == 'internal-only'].{ Name: GroupName, ID: GroupId, VPC: VpcId }"
+```
 
 This will return a JSON object with the properties listed.
 
@@ -72,7 +90,9 @@ What if you're not all that well-versed in the JMESPath syntax? Well, there are 
 
 To use `jid`, simply pipe in some JSON data. For example, you could direct the output of the AWS CLI into `jid`:
 
-    aws ec2 describe-instances | jid
+```shell
+aws ec2 describe-instances | jid
+```
 
 This puts you into an interactive screen where you can explore and parse the data to find exactly what you need. `jid` will supply "suggested" queries at the top of the screen in green; just press Tab to accept the suggestion. Adjust the query at the top until you have the data you need, then press Enter. The specific data you'd selected in `jid` will be output to the shell. This is a super-handy way, in my opinion, of exploring JSON data structures with which you aren't already familiar.
 

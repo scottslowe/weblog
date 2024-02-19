@@ -17,7 +17,7 @@ The solution I'll describe here has been tested on Fedora 28, but it should work
 
 First, you'll want to define the MIME type by creating an XML file in the `~/.local/share/mime/packages` directory, as outlined [here][link-1]. I called my file `application-vnd-xmind-workbook.xml`, but I don't know if the filename actually matters. (I derived the filename from [this list of XMind file types][link-2].) The contents of the file should look something like this:
 
-``` xml
+```xml
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
   <mime-type type="application/vnd.xmind.workbook">
     <comment>XMind Workbook</comment>
@@ -32,7 +32,7 @@ You'll note that multiple glob patterns are included to help deal with case sens
 
 Next, you'll want to adjust the desktop launcher for XMind. Add the `MimeType=application/vnd.xmind.workbook` line to the desktop launcher file. I'm using a desktop launcher that is user-specific, and found in the `~/.local/share/applications` directory. It should look something like this when you're done:
 
-``` text
+```text
 [Desktop Entry]
 Comment=Create and share mind maps
 Exec=/opt/xmind/XMind_amd64/XMind %F
@@ -51,16 +51,20 @@ It also appears that the `Path=` statement in the desktop file is important; it 
 
 Finally, update the MIME and application databases, respectively:
 
-    update-mime-database ~/.local/share/mime/packages
-    update-desktop-database ~/.local/share/applications
+```shell
+update-mime-database ~/.local/share/mime/packages
+update-desktop-database ~/.local/share/applications
+```
 
 You can run the `gio` commands outlined [here][link-1] (look toward the bottom of the page) to test to make sure that the MIME type and application are correctly defined and linked, if you like.
 
 For a custom icon (otherwise GNOME will use the generic text document icon for XMind files) the process is a bit trickier. I use the [Numix icon theme][link-5], so I ran the following commands:
 
-    cd /usr/share/icons/Numix/48/mimetypes
-    sudo ln -s inode-symlink.svg application-vnd.xmind.workbook.svg
-    sudo gtk-update-icon-cache /usr/share/icons/Numix
+```shell
+cd /usr/share/icons/Numix/48/mimetypes
+sudo ln -s inode-symlink.svg application-vnd.xmind.workbook.svg
+sudo gtk-update-icon-cache /usr/share/icons/Numix
+```
 
 After that, the icons for XMind files immediately changed. For readers using a different theme, you'll need to substitute the correct paths and the correct filenames; the trick, of course, is to end up with a filename that matches the new MIME type defined earlier.
 
