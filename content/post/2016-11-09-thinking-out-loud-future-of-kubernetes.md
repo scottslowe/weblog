@@ -29,8 +29,6 @@ All this brings us to these core questions:
 
 One could make some [OpenStack][link-5] comparisons here (I have a separate post brewing on the future of OpenStack), but I'm not sure such a comparison would be valid. Unlike OpenStack, Kubernetes seems to have really strong technical guidance from a single source (Google), which may outweigh the pull of the community in multiple directions. It's entirely possible that the influence of a single strong source (Google) may help keep the project on-track and growing effectively. Time will tell.
 
-
-
 [link-1]: http://kubernetes.io/
 [link-2]: https://github.com/kubernetes/kubernetes/
 [link-3]: http://kubernetes.io/docs/admin/daemons/

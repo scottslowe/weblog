@@ -22,7 +22,7 @@ How do you choose which one to use? Burgin shares the "four pillars of performan
 
 1. _Right-sizing:_ choosing the cheapest instance available while meeting performance requirements
 2. _Purchasing options:_ Burgin will discuss this in more detail; this is the primary focus of the discussion
-3. _Increase elasticity:_ turning off ("scaling down") instances that don't need to be running (example: turn off development workloads when the developers aren't working) 
+3. _Increase elasticity:_ turning off ("scaling down") instances that don't need to be running (example: turn off development workloads when the developers aren't working)
 4. _Measure, monitor, and improve:_ tagging resources; identitying always-on instances; identifying instances that can be downsized; recommending Reserved Instances (RIs) where it makes sense; dashboards and reports
 
 Burgin points out the key AWS pricing principles (no up-front investment; pay as you go; pay less when you reserve; pay less when AWS grows), and how that means that you aren't "locked in" based on decisions you make. (When I say "locked in", I mean that decisions can be changed/undone relatively easily; I'm not referring to vendor/techology lock-in.)

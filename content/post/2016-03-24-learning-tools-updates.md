@@ -26,8 +26,6 @@ This is an entirely new area of the repo. Thanks in part to being able to comple
 
 I have plans to add a great deal more content here throughout this year, as I continue to refine my expertise in specific areas based on [my 2016 project list][xref-2]. If you have specific things you'd like to see, a GitHub issue is probably the best way to make that request and enable me to track it.
 
-
-
 [link-1]: https://github.com/scottslowe/learning-tools
 [link-2]: http://www.vagrantup.com
 [link-3]: http://www.terraform.io

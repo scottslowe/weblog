@@ -37,5 +37,4 @@ Golub returns to the stage and resumes his "it takes an ecosystem" theme, this t
 
 At this point Golub takes the stage again to close out the keynote.
 
-
 [xref-1]: {{< relref "2016-06-20-dockercon-2016-day-1-keynote.md" >}}

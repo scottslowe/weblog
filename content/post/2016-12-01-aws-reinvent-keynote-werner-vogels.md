@@ -72,11 +72,13 @@ Vogels returns to the stage, pointing out that 80% of what we call analytics is 
 
 The reality is that all of your data sources are sitting in different silos, and this will be the case for quite some time to come. Any solution needs to deal with all these different silos. Can one address the modern data architecture with AWS? Here's how AWS services map against the 10 steps listed earlier:
 
+<!-- markdownlint-disable MD029 -->
 1. S3 upload, S3 acceleration, Kinesis, Snowball/Snowball Edge/Snowmobile
 2. S3, EFS, EBS, DynamoDB, RDS
 3. S3 storage management, Glacier
 5. Config, CloudTrail, and KMS
-7. EMR 
+7. EMR
+<!-- markdownlint-enable MD029 -->
 
 There are some missing pieces, and that leads Vogel to announce AWS Glue. Glue is a fully-managed data catalog and transformation tool. It can access data sources in the cloud as well as data sources on-premises, and then prepare that data for analytics. Finally, Glue can schedule and orchestrate analysis of the data. Vogels believes that the combination of Glue and other AWS services enables users to address all 10 aspects of a modern data architecture.
 

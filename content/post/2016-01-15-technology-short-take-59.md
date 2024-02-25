@@ -74,8 +74,6 @@ Welcome to Technology Short Take #59, the first Technology Short Take of 2016. A
 
 That's it for this time around. If you have any questions or comments about any of the information included here, feel free to [hit me up on Twitter][link-33]. Thanks for reading!
 
-
-
 [link-1]: http://anticdent.org/persistent-irc-considered-harmful.html
 [link-2]: https://developer.ibm.com/opentech/2015/12/20/irc-the-secret-to-success-in-open-source/
 [link-3]: http://maffulli.net/2015/12/21/balancing-irc-and-email-the-secret-of-success-for-open-collaboration/

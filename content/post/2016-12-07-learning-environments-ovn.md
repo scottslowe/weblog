@@ -24,8 +24,6 @@ Here's more details on the two new learning environments:
 
 I hope that these two environments prove useful to others who are new to OVN and are interested in learning more.
 
-
-
 [link-1]: https://github.com/scottslowe/learning-tools
 [link-2]: http://openvswitch.org/
 [link-3]: https://www.vagrantup.com/

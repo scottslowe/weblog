@@ -41,8 +41,6 @@ I'll update this post as soon as the fix rolls into a Vagrant release and this w
 
 **UPDATE 2016-11-19**: This fix is now available in Vagrant 1.8.7.
 
-
-
 [link-1]: https://vmware.github.io/photon/
 [link-2]: https://www.vagrantup.com/
 [link-3]: https://github.com/mitchellh/vagrant/issues/7808

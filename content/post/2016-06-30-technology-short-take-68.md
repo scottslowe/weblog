@@ -84,8 +84,6 @@ Nothing this time around, but I'll stay tuned for items to include in future pos
 
 I have _so much_ more content that I'd like to include, but it will have to wait until the next Technology Short Take. (This one is already too long!) Until then, enjoy and never stop learning!
 
-
-
 [link-1]: http://hicu.be/macvlan-vs-ipvlan
 [link-2]: https://sreeninet.wordpress.com/2016/05/29/macvlan-and-ipvlan/
 [link-3]: https://sreeninet.wordpress.com/2016/05/29/docker-macvlan-and-ipvlan-network-plugins/

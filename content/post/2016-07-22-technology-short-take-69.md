@@ -83,8 +83,6 @@ Nothing this time around, but I'll keep my eyes peeled for content I can include
 
 OK, I'd better wrap this up before it gets any longer. (I've already exceeded my "generally don't include more than this number of links" threshold.) Hopefully something I've listed here will prove useful to you. Until next time!
 
-
-
 [link-1]: http://www.vm5280.com/2016/07/new-vmware-nsx-dod-stig-released.html
 [link-2]: http://lkhill.com/netmiko-support-for-brocade-icx-and-mlxe/
 [link-3]: http://mplstutorial.com/mpls-basics

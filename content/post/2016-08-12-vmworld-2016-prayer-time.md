@@ -27,5 +27,4 @@ As in previous years, there’s no need to RSVP or let me know that you’ll be 
 
 See you there!
 
-
 [link-1]: http://www.vmworld.com/

@@ -20,14 +20,18 @@ Right now, macvlan supported is implemented via [an unsupported Docker Network p
 
 You'll want to start by first confirming that your Linux distribution has support for macvlan interfaces. An easy way of doing this is to run the following commands (run these as root, or use `sudo`):
 
-    modprobe macvlan
-    lsmod | grep macvlan
+```sh
+modprobe macvlan
+lsmod | grep macvlan
+```
 
 If you get an error, or if the `lsmod` command returns no results, then you don't have macvlan support in your kernel. I tested this on Ubuntu 14.04 as well as Debian 8.1 and had no issues.
 
 Assuming that your Linux distribution supports macvlan interfaces, the next step is to get the appropriate Linux plugin onto your system by cloning the GitHub repo:
 
-    git clone https://github.com/gopher-net/macvlan-docker-plugin
+```sh
+git clone https://github.com/gopher-net/macvlan-docker-plugin
+```
 
 This will clone the repository into a directory named `macvlan-docker-plugin` beneath your current directory.
 
@@ -35,10 +39,12 @@ For the next few steps, you may want to use `screen` or `tmux`, at least at firs
 
 First, launch the macvlan plugin with the following set of commands:
 
-    cd macvlan-docker-plugin/binaries
-    ./macvlan-docker-plugin-0.2-Linux-x86_64 \
-    --macvlan-subnet "192.168.100.0/24" --gateway "192.168.100.1" \
-    --host-interface "eth1"
+```sh
+cd macvlan-docker-plugin/binaries
+./macvlan-docker-plugin-0.2-Linux-x86_64 \
+--macvlan-subnet "192.168.100.0/24" --gateway "192.168.100.1" \
+--host-interface "eth1"
+```
 
 A quick note on these options:
 
@@ -48,18 +54,22 @@ A quick note on these options:
 
 Next (in another terminal window or another session in `tmux`), create a Docker network using the macvlan driver:
 
-    docker network create -d macvlan --subnet=192.168.100.0/24 \
-    --gateway=192.168.100.1 -o host_iface=eth1 network-name
+```sh
+docker network create -d macvlan --subnet=192.168.100.0/24 \
+--gateway=192.168.100.1 -o host_iface=eth1 network-name
+```
 
 The values given to the `--subnet`, `--gateway`, and `-o host_iface` parameters all need to match the ones given to the macvlan driver when it was launched. In my testing with this plugin, I found that omitting the parameters when creating the network caused errors, even though the parameters used when creating the network are duplicates of the values used when launching the macvlan driver.
 
 Finally, launch a Docker container attached to the Docker network you just created:
 
-    docker run -it --rm --net=network-name ubuntu
+```sh
+docker run -it --rm --net=network-name ubuntu
+```
 
 This will drop you at a Bash prompt in an Ubuntu container. From here, you can use `ping` to verify connectivity to other systems. You can also run `ip -d link list` within the container; note the last line of the output (shown here):
 
-```
+```text
 7: eth0@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN mode DEFAULT group default
     link/ether 5a:7b:f3:63:51:68 brd ff:ff:ff:ff:ff:ff promiscuity 0
     macvlan  mode bridge
@@ -72,7 +82,6 @@ So there you have it---how to use macvlan interfaces to provide network connecti
 ## More Resources
 
 If you're interested in trying this out for yourself, check out the `docker-macvlan` directory in [my GitHub "learning-tools" repository][link-3].
-
 
 [link-1]: http://www.docker.com/
 [link-2]: https://github.com/gopher-net/macvlan-docker-plugin

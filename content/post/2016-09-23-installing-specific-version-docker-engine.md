@@ -16,17 +16,21 @@ In this post, I'm going to show you how to install a specific version of the [Do
 
 If you've followed the instructions to add the Docker Apt repos to your system as outlined [here][link-1], then installing the Docker Engine (latest version) would be done something like this:
 
-    apt-get install docker-engine
+```sh
+apt-get install docker-engine
+```
 
 If you do an `apt-cache search docker-engine`, though, you'll find that the "docker-engine" package is a metapackage that refers to a variety of different versions of the Docker Engine. To install a specific version of the Docker Engine, then, simply append the version (as described by the results of the `apt-cache search docker-engine` command) to the end, like this:
 
-    apt-get install docker-engine=1.11.2-0~trusty
+```sh
+apt-get install docker-engine=1.11.2-0~trusty
+```
 
 This will install version 1.11.2 of the Docker Engine.
 
 You'll use the same syntax when you need to install a specific version of the Docker Engine via [Ansible][link-4] (which is what I was trying to do). For example, this snippet of an Ansible playbook would install version 1.11.2 of the Docker Engine:
 
-``` yaml
+```yaml
 - name: Install Docker packages
   apt:
     name: "docker-engine=1.11.2-0~trusty"
@@ -36,8 +40,6 @@ You'll use the same syntax when you need to install a specific version of the Do
 ```
 
 As I said, it's not terribly difficult or complex, but it also wasn't spelled out plainly anywhere that I found in my Internet searches. Hopefully this post will make it easier for others who find themselves in a similar situation.
-
-
 
 [link-1]: https://docs.docker.com/engine/installation/linux/ubuntulinux/
 [link-2]: https://www.docker.com/products/docker-engine

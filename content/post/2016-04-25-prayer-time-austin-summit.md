@@ -19,6 +19,4 @@ Anyone is welcome to join us, but please note that this will be a distinctly Chr
 
 You don't need to RSVP or let me know you'll be there; just feel free to stop by. I hope to see you there!
 
-
-
 [link-1]: https://www.openstack.org/summit/austin-2016/

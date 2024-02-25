@@ -84,7 +84,6 @@ Welcome to Technology Short Take #62. Sorry for the long delay since the last TS
 
 That's a wrap, folks! I fear if I include anything more I might cause some heads to explode, and we wouldn't want that. I hope you found something useful here!
 
-
 [link-1]: http://networkinferno.net/powernsx
 [link-2]: http://blog.couchbase.com/2016/february/enabling-docker-remote-api-docker-machine-mac-osx
 [link-3]: http://www.inthedc.com/wp/moving-the-build-vs-buy-line-with-vxrail/

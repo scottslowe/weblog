@@ -73,8 +73,6 @@ Nothing this time around. Maybe next time?
 
 It's time to wrap up now before this post gets any longer. Here's hoping you found something useful here!
 
-
-
 [link-1]: https://dzone.com/articles/manage-aws-ec2-ssh-access-with-iam
 [link-2]: https://github.com/russellballestrini/botoform
 [link-3]: http://www.kitchensoap.com/2016/04/28/abstract-as-a-verb/

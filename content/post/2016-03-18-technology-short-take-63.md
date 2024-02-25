@@ -68,8 +68,6 @@ Sorry, I don't have anything for you this time.
 
 That's all, folks! In the interest of not taking up _too_ much of your time, I'll wrap up here. As always, I hope you found something useful here. Thanks for reading!
 
-
-
 [link-1]: http://www.virtuallyghetto.com/2016/03/vsphere-6-0-update-2-hints-at-nested-esxi-support-for-paravirtual-scsi-pvscsi-in-the-future.html
 [link-2]: https://blogs.microsoft.com/blog/2016/03/07/announcing-sql-server-on-linux/
 [link-3]: http://www.slideshare.net/lowescott/an-overview-of-linux-networking-options

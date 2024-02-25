@@ -49,5 +49,4 @@ Gelsinger re-takes the stage. He recaps what's been shown in today's general ses
 
 After a few minutes of discussion with Dell, Gelsinger reiterates the key messages from the general session, and wraps up his presentation.
 
-
 [link-1]: http://www.vmware.com/company/news/releases/vmw-newsfeed.VMware-Unveils-New-Cross-Cloud-Architecture(TM)-to-Give-Customers-Cloud-Freedom-and-Control.2089557.html

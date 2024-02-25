@@ -23,7 +23,7 @@ One thing I'd been shooting for was a `Vagrantfile` that would work with multipl
 
 Let's take a look at the `Vagrantfile` that I created. Here's the first part of the Vagrant configuration, with ample comments to explain what's happening:
 
-``` ruby
+```ruby
 # Specify minimum Vagrant version and Vagrant API version
 Vagrant.require_version '>= 1.6.0'
 VAGRANTFILE_API_VERSION = '2'
@@ -61,7 +61,7 @@ Most of the stuff you see in this section is self-explanatory and I've probably 
 
 Now let's look at the next section of the `Vagrantfile`:
 
-``` ruby
+```ruby
   # Loop through YAML file and set per-VM information
   machines.each do |machine|
     config.vm.define machine['name'] do |srv|
@@ -87,7 +87,7 @@ Now let's look at the next section of the `Vagrantfile`:
 
 Here you see using a loop to iterate through the values of an external YAML file (the one loaded in the first snippet). This is a technique I first described [here][xref-3], and one I've used extensively since that time. What _is_ new is the `machine['aws']['user']` syntax, which is used to pull data from a multi-level YAML file. In this particular case, the YAML file looks something like this:
 
-``` yaml
+```yaml
 ---
 - name: "instance-01"
   box:
@@ -107,7 +107,7 @@ In any case, getting back to the `Vagrantfile` in question, you can see that it'
 
 Overrides are used pretty extensively in the last section of the Vagrant environment, which configures the VMware and VirtualBox providers. Here's that code:
 
-``` ruby
+```ruby
       # Set per-machine VMware provider configuration/overrides
       srv.vm.provider 'vmware_fusion' do |vmw, override|
         override.vm.box = machine['box']['vmw']
@@ -137,8 +137,6 @@ So, to use this environment, one needs only to edit the external YAML file and s
 Using this sort of technique to support multiple providers in a single Vagrant environment provides a clean, consistent workflow regardless of backend provider. Naturally, this could be extended to include other providers using the same basic techniques I've used here. I'll leave that as an exercise to the readers.
 
 If you'd like to play around with a sample environment, have a look in the `multi-provider-simple` directory in [my GitHub "learning-tools" repository][link-2]. Enjoy!
-
-
 
 [link-1]: https://www.vagrantup.com/
 [link-2]: https://github.com/scottslowe/learning-tools/

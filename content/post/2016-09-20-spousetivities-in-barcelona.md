@@ -44,8 +44,6 @@ Tickets for these events are also [available now][link-2].
 
 As you can see, there's some overlap between the two weeks, but there is still more than enough to keep anyone busy for both weeks!
 
-
-
 [link-1]: https://spousetivities.ticketleap.com/vmworld2016emea/
 [link-2]: https://spousetivities.ticketleap.com/openstack-summit-2016-barcelona/
 [link-3]: http://www.vmware.com/products/nsx.html

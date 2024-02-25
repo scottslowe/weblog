@@ -25,7 +25,6 @@ On the Spousetivities site, Crystal has [more details on the activities][link-1]
 
 I'll be at the Summit, so I hope to see you in Austin!
 
-
 [link-1]: http://spousetivities.com/2016/03/austin-bbq-openstack-and-spousetivities/
 [link-2]: http://spousetivities.com
 [link-3]: https://www.openstack.org/summit/austin-2016/

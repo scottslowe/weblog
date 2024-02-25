@@ -28,8 +28,6 @@ If you're interested in getting signed up, please head over to [the VMworld 2016
 
 Thanks, and I look forward to seeing you in Las Vegas!
 
-
-
 [link-1]: http://spousetivities.com/2016/07/welcome-to-the-9th-anniversary-of-spousetivities-at-vmworld/
 [link-2]: http://chefphillipdell.com/
 [link-3]: http://www.vmware.com/products/nsx.html

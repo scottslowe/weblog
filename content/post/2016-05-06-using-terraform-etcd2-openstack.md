@@ -15,7 +15,7 @@ title: Using Terraform to Build an etcd2 Cluster on OpenStack
 url: /2016/05/06/using-terraform-etcd2-openstack/
 ---
 
-In this post I'll build on [my earlier introduction to Terraform][xref-1] to show a practical example of using [Terraform][link-1] to build a [CoreOS][link-3]-based etcd2 cluster on [OpenStack][link-2]. This information is based upon a demo that I created for a session at the Austin OpenStack Summit in late April, so all the files I reference in this post are available in [the GitHub repo for that session][link-5].
+In this post I'll build on [my earlier introduction to Terraform][xref-1] to show a practical example of using [Terraform][link-1] to build a [CoreOS][link-3]-based [etcd2][link-4] cluster on [OpenStack][link-2]. This information is based upon a demo that I created for a session at the Austin OpenStack Summit in late April, so all the files I reference in this post are available in [the GitHub repo for that session][link-5].
 
 You may recall that Terraform is a platform-independent orchestration tool that allows you to create _configurations_ (in either Terraform format or JSON format) specifying resources to be created/modified/deleted. This allows users to take an "infrastructure as code" approach where infrastructure configuration can be declaratively defined and managed via well-known version control mechanisms. In my previous post, I used JSON for the Terraform configurations; in this post, I'll use the "standard" Terraform format.
 
@@ -29,7 +29,7 @@ Note that there's no provider configuration here; instead, it relies on the use 
 
 First up is the `vars.tf` file. I won't post the full file here (go see [the GitHub repo][link-5] for the full file), but here's a snippet:
 
-``` text
+```text
 # Image ID for CoreOS Stable 899.13.0 image
 variable "image" {
     default = "6ebd5b1e-f5d5-4bf7-9ca8-713a2696307f"
@@ -47,7 +47,7 @@ All these values are referenced by `main.tf`, which is the core part of the Terr
 
 The contents of `main.tf` are pretty self-explanatory. For example, here's a snippet that attaches a tenant logical router to the newly-created subnet and an external provider network:
 
-``` text
+```text
 # Attach Swarm router to new Swarm network created earlier
 resource "openstack_networking_router_interface_v2" "swarm-rtr-if" {
     router_id = "${openstack_networking_router_v2.swarm-rtr.id}"
@@ -59,7 +59,7 @@ Not shown here but also included in `main.tf` and referenced here are the tenant
 
 The code for defining the instances is fairly straightforward as well, with one new addition that you may not have seen before:
 
-``` text
+```text
 resource "openstack_compute_instance_v2" "node-01" {
     name = "node-01"
     image_id = "${var.image}"
@@ -76,7 +76,7 @@ resource "openstack_compute_instance_v2" "node-01" {
 
 The new part that you may not have seen before is the `user_data` line, which allows you to provide a cloud-init configuration script to the instance being created. CoreOS has a rather robust implementation of cloud-init (it's one of the things I really like about CoreOS);the file listed there (`cloud-config.yml`) looks something like this:
 
-``` yaml
+```yaml
 #cloud-config
 
 coreos:
@@ -115,7 +115,7 @@ This cloud-init script does a couple of things:
 
 The last part is the `output.tf` file, which contains only enough information to have Terraform spit out the floating IP address for each instance launched, like this:
 
-``` text
+```text
 output "addr-node-01" {
     value = "${openstack_compute_floatingip_v2.node-01-fip.address}"
 }
@@ -134,8 +134,6 @@ Putting it all together, what this Terraform configuration does is this:
 Handy!
 
 If you'd like to give this a try in your own OpenStack environment, feel free to clone [the GitHub repo][link-5], which also contains some [Vagrant][link-6], [Ansible][link-7], and [Docker Machine][link-8]-related content along with the Terraform configurations I've described in this post. You can then modify them as needed with your own information. Have fun!
-
-
 
 [link-1]: https://www.terraform.io/
 [link-2]: http://www.openstack.org/

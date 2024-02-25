@@ -24,16 +24,16 @@ The podcast audio recording is [available on Soundcloud][link-32].
 * Bart's view is that a full-stack engineer knows about operations, the hardware stack (compute, storage, network), the software (network, operating system [OS], management, logging), and most importantly knows how to "code" an immutable infrastructure. An operations full-stack engineer can read code, work with developers, and be part of a DevOps team of support DevOps teams in deploying code into production both to on-premises solutions and off-premises solutions.
 * IT folks don't need to be strictly involved in software engineering to benefit from a journey toward a more full-stack role.
 * His journey from Microsoft-centric engineer to cloud-native engineer encompasses learning the following areas:
-    - Getting a good understanding of microservices (recommends book _Building Microservices_ by Sam Newman; [here's a link][link-5])
-    - Container technologies ([Docker][link-15], most notably, but also [CoreOS][link-16] and [etcd][link-17]); recommends [this Docker course][link-4]
-    - PaaS/container orchestration ([Mesos][link-18]/[Mesosphere][link-19], [OpenShift][link-20], Docker Swarm, [Kubernetes][link-21])
-    - AWS (10x the size of all competitors), Joyent
-    - [Microsoft][link-29] and/or [VMware][link-30], but _do not start here_ (start elsewhere)
-    - [Otto][link-22] and [Terraform][link-23] by Hashicorp
-    - [Ansible][link-26] (not Chef, Puppet, or Salt)
-    - [Cassandra][link-24] and [Neo4j][link-25]
-    - [Git][link-27]
-    - VXLAN
+    * Getting a good understanding of microservices (recommends book _Building Microservices_ by Sam Newman; [here's a link][link-5])
+    * Container technologies ([Docker][link-15], most notably, but also [CoreOS][link-16] and [etcd][link-17]); recommends [this Docker course][link-4]
+    * PaaS/container orchestration ([Mesos][link-18]/[Mesosphere][link-19], [OpenShift][link-20], Docker Swarm, [Kubernetes][link-21])
+    * AWS (10x the size of all competitors), Joyent
+    * [Microsoft][link-29] and/or [VMware][link-30], but _do not start here_ (start elsewhere)
+    * [Otto][link-22] and [Terraform][link-23] by Hashicorp
+    * [Ansible][link-26] (not Chef, Puppet, or Salt)
+    * [Cassandra][link-24] and [Neo4j][link-25]
+    * [Git][link-27]
+    * VXLAN
 * He highly recommends using OS X on Apple hardware (he bought a used MacBook Pro, including SSD, for less than 300 euros).
 * Safari Books Online ([link][link-9]) a great resource, highly recommended.
 * Bart believes attending meetups, if available in your area, is a valuable source of information.
@@ -64,8 +64,7 @@ MirageOS videos from around the world: [https://mirage.io/blog/videos-around-wor
 
 Unikernel Screencasts: [https://www.youtube.com/playlist?list=PLmqXqqjZSStnG33E_865NgHONETzM8kVb][link-13]
 
-Why are computers so @#!*, and what can we do about it?: [https://media.ccc.de/v/31c3_-_6574_-_en_-_saal_1_-_201412301245_-_why_are_computers_so_and_what_can_we_do_about_it_-_peter_sewell#video][link-14]
-
+Why are computers so @#!\*, and what can we do about it?: [https://media.ccc.de/v/31c3_-_6574_-_en_-_saal_1_-_201412301245_-_why_are_computers_so_and_what_can_we_do_about_it_-_peter_sewell#video][link-14]
 
 [link-1]: https://github.com/smartbitnl
 [link-2]: https://github.com/smartbit

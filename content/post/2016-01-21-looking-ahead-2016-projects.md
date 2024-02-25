@@ -31,7 +31,6 @@ What I've _not_ included in this list are things like continuing to blog (which 
 
 Anyway, there you have it. Feel free to [contact me on Twitter][link-5] if you have any feedback (positive or negative) or questions.
 
-
 [link-1]: http://shop.oreilly.com/product/0636920042082.do
 [link-2]: http://www.openstack.org/
 [link-3]: https://github.com/scottslowe

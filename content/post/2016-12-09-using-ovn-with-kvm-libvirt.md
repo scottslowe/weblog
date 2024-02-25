@@ -38,7 +38,7 @@ For the purposes of this post, I'll assume you're using Ubuntu 16.04 and will pu
 * ovn-common
 * ovn-host
 
-On only *one* system, you'll also want to install the "ovn-central" package. Make note of the IP address where this package is installed; you'll need it later. I'll refer to the IP address of the system where "ovn-central" is installed as CENTRAL_IP.
+On only _one_ system, you'll also want to install the "ovn-central" package. Make note of the IP address where this package is installed; you'll need it later. I'll refer to the IP address of the system where "ovn-central" is installed as CENTRAL_IP.
 
 Naturally, since we're discussing the use of OVN with KVM/Libvirt here, you'd also want to install the packages for those features as well ("qemu-kvm" and "libvirt-bin", for example).
 
@@ -46,21 +46,27 @@ Once the packages are installed, then it's necessary to configure OVN appropriat
 
 1. First, stop OVN's local component (the "ovn-controller" component) with this command:
 
-        /usr/share/openvswitch/scripts/ovn-ctl stop_controller
+    ```sh
+    /usr/share/openvswitch/scripts/ovn-ctl stop_controller
+    ```
 
 2. Next, you'll need to configure the local OVN controller to talk to OVN's central components. You'll do this by setting some values in the OVS database using `ovs-vsctl`. To set the correct values, run this command:
 
-        ovs-vsctl set Open_vSwitch . \
-        external_ids:ovn-remote="tcp:CENTRAL_IP:6642" \
-        external_ids:ovn-nb="tcp:CENTRAL_IP:6641" \
-        external_ids:ovn-encap-ip=<IP address on this system> \
-        external_ids:ovn-encap-type=geneve
+    ```sh
+    ovs-vsctl set Open_vSwitch . \
+    external_ids:ovn-remote="tcp:CENTRAL_IP:6642" \
+    external_ids:ovn-nb="tcp:CENTRAL_IP:6641" \
+    external_ids:ovn-encap-ip=<IP address on this system> \
+    external_ids:ovn-encap-type=geneve
+    ```
 
     So, what does all this do? You're populating the "external_ids" column of the Open_vSwitch database with values that configure OVN. The "ovn-remote" and "ovn-nb" values tell OVN's local component (a piece called "ovn-controller") how to talk to OVN's central component (running on the sytem where you installed the "ovn-central" package). The "ovn-encap-ip" tells OVS/OVN what IP address to use for overlay tunnels, and the "ovn-encap-type" tells OVS/OVN what encapsulation protocol to use (Geneve, in this case, but others are supported).
- 
+
 3. Restart the local OVN controller:
 
-        /usr/share/openvswitch/scripts/ovn-ctl start_controller
+    ```sh
+    /usr/share/openvswitch/scripts/ovn-ctl start_controller
+    ```
 
 At this point, OVN should be up and running. You can verify this by running `ovs-vsctl show`, and you should see that OVN has automatically performed some configuration on the local OVS instance, including setting up Geneve tunnel ports to the other hypervisors in the OVN environment.
 
@@ -72,7 +78,7 @@ Now you're ready to look at integrating KVM/Libvirt with OVN.
 
 One part of the Libvirt-OVS integration that is critical to making it work with OVN pertains to the _interface ID_. This is a value that is written into both the OVS database and the VM's Libvirt XML definition. For example, after launching a VM using Libvirt-OVS integration, you can see the interface ID in the Libvirt XML code using `virsh dumpxml <domain>` (the excerpt below shows only the network interface section of the XML):
 
-``` xml
+```xml
 <interface type='bridge'>
   <mac address='52:54:00:93:05:25'/>
   <source network='ovs' bridge='br-int'/>
@@ -88,7 +94,7 @@ One part of the Libvirt-OVS integration that is critical to making it work with 
 
 Note the `parameters interfaceid` element. Now, let's look at the corresponding OVS port (which we know to be "vnet0" from the XML configuration above, as specified by `target dev=vnet0`) using `ovs-vsctl list interface vnet0`:
 
-``` text
+```text
 _uuid               : 1948c2bc-c768-4b77-9275-78923eae80bd
 admin_state         : up
 bfd                 : {}
@@ -141,33 +147,48 @@ Assuming that an OVN logical switch has already been created (you can use `ovn-n
 
 To extract the interface ID from OVS, you can use this command:
 
-    ovs-vsctl get interface <name> external_ids:iface-id
+```sh
+ovs-vsctl get interface <name> external_ids:iface-id
+```
 
 So, if the VM was attached to interface "vnet0", then the command would look like:
 
-    ovs-vsctl get interface vnet0 external_ids:iface-id
+```sh
+ovs-vsctl get interface vnet0 external_ids:iface-id
+```
 
 Now, you might think you could use Bash command substitution to store the output of that command into a variable and use it later, and you'd be _mostly_ correct. `ovs-vsctl` returns the value surrounded by double quotes, and OVN requires the value not have any quotes. So, if you wanted to extract a value you could use in a Bash script, you'd have to do a little manipulation:
 
-    ovs-vsctl get interface vnet0 external_ids:iface-id | sed s/\"//g
+```sh
+ovs-vsctl get interface vnet0 external_ids:iface-id | sed s/\"//g
+```
 
-Let's say you store that value in a variable named IFACE_ID. To create an OVN logical port that matches the OVS virtual port, you'd use this command:
+Let's say you store that value in a variable named `IFACE_ID`. To create an OVN logical port that matches the OVS virtual port, you'd use this command:
 
-    ovn-nbctl lsp-add <switch name> $IFACE_ID
+```sh
+ovn-nbctl lsp-add <switch name> $IFACE_ID
+```
 
 OK, that takes care of creating the OVN logical port on an OVN logical switch. Using the interface ID links the OVN logical port back to OVS, which is in turn linked (via the Libvirt XML) to the VM's network interface using the same value.
 
 Next, you'll need to tell OVN which addresses are associated with that logical port. OVS already has this information, but OVN needs it in order to create logical flows for traffic to move from VM to VM. We can extract the necessary information from OVS using this command:
 
-    ovs-vsctl get interface <name> external_ids:attached-mac
+```sh
+ovs-vsctl get interface <name> external_ids:attached-mac
+```
 
 To use this information with OVN, though, we'll have to strip the double quotes away. Here's how to do that, and store the output into a variable for use later:
 
-    MAC_ADDR=$(ovs-vsctl get interface vnet0 external_ids:attached-mac | sed s/\"//g)
+```sh
+MAC_ADDR=$(ovs-vsctl get interface vnet0 external_ids:attached-mac | \
+sed s/\"//g)
+```
 
 We can now use that value to populate the addresses on the OVN logical port:
 
-    ovn-nbctl lsp-set-addresses $IFACE_ID $MAC_ADDR
+```sh
+ovn-nbctl lsp-set-addresses $IFACE_ID $MAC_ADDR
+```
 
 You can verify that the addresses are linked to the logical ports using `ovn-nbctl show`, and you can verify that the logical ports are linked to OVS using `ovn-nbctl list Logical_Switch_Port $IFACE_ID` (the "up" value should be "true", meaning that the link to OVS is working).
 
@@ -178,7 +199,6 @@ You now have Libvirt-managed KVM-based VMs connected to OVN via OVS. There's so 
 ## Additional Resources
 
 There's quite a bit of information out there about OVN (see [Russell Bryant's web site][link-3], for example), but not much about using OVN with KVM/Libvirt. To help make it easier for readers to work with this sort of setup, I've created a Vagrant-based environment. This Vagrant-based environment is found in [my GitHub "learning-tools" repository][link-2], in the `ovn-kvm` directory.
-
 
 [link-1]: http://openvswitch.org/
 [link-2]: https://github.com/scottslowe/learning-tools

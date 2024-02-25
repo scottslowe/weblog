@@ -23,7 +23,9 @@ The effort involved in getting the dedicated site up took up a fair amount of ti
 
 The Full Stack Journey podcast continues to be [available via iTunes][link-4] for easy subscription. I did have to move off SoundCloud, so if you're subscribed to the podcast via the SoundCloud feed you'll want to update the podcast feed URL:
 
-    http://fullstackjourney.com/podcast.xml
+```text
+http://fullstackjourney.com/podcast.xml
+```
 
 I've already updated the iTunes podcast listing to reflect the new podcast feed, and I've configured SoundCloud to redirect subscribers to the new feed. Hopefully, this should make the transition as smooth as possible. I apologize for any inconvenience.
 
@@ -53,8 +55,6 @@ If you've listened the podcast before, you know I'm focused on making the podcas
 Of course, guests are not limited to only these topics; _any_ topic that would fit into the journey of broadening your technical horizons could potentially be a fit. Feel free to hit me up, either [via Twitter][link-9] or via e-mail (first name at fullstackjourney.com).
 
 Thanks!
-
-
 
 [link-1]: http://fullstackjourney.com
 [link-2]: http://jekyllrb.com/

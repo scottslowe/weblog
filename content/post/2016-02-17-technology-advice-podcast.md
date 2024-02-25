@@ -29,7 +29,6 @@ Here are a few takeaways from my conversation on the podcast:
 
 Thanks to Interop and Technology Advice for the opportunity to participate on the podcast!
 
-
 [link-1]: /tags/interop2015
 [link-2]: https://soundcloud.com/b2bnationit/vmware
 [link-3]: http://technologyadvice.com/

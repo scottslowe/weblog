@@ -32,7 +32,5 @@ Enjoy!
 
 **UPDATE**: Via Twitter, I also found [this post by Matt Fischer][link-2], which has some outstanding information on configuring `lightdm.conf`. This is an excellent resource.
 
-
-
 [link-1]: http://www.ubuntu.com/
 [link-2]: http://www.mattfischer.com/blog/?p=343

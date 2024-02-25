@@ -16,7 +16,7 @@ I wanted to provide readers a quick "heads up" about some unexpected behavior re
 
 This post builds on the earlier post I published on [using Docker Machine with OpenStack][xref-1]; specifically, the section about using Docker Machine's native OpenStack driver to provision instances on an OpenStack cloud. As a quick recap, recall that you can provision instances on an OpenStack cloud (and have Docker Engine installed and configured on those instances) with a command like this:
 
-``` bash
+```bash
 docker-machine create -d openstack \
 --openstack-flavor-id 3 \
 --openstack-image-name "Ubuntu 14.04.3 LTS x64" \
@@ -37,8 +37,6 @@ Yes, you saw that right: Docker Machine will remove the pre-existing SSH keypair
 Based on a quick review of the [GitHub issues for Docker Machine][link-4], this is "expected" and "normal," and the expectation is for users to simply re-provision the keypair into OpenStack again via manual means. Personally, I find this behavior to run completely counter to what I would expect. However, until this behavior is changed/fixed in a future release, please plan accordingly when using Docker Machine with OpenStack.
 
 **UPDATE:** Nathan LeClaire, one of the Docker Machine maintainers, has opened [a new GitHub issue][link-5] to track this behavior.
-
-
 
 [link-1]: https://www.docker.com/products/docker-machine
 [link-2]: http://www.openstack.org/

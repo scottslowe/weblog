@@ -24,8 +24,6 @@ All in all, it sounds like a great set of activities. Also, I'm very impressed t
 
 If you're interested in signing up for any of the activities Crystal has planned, visit [the Spousetivities registration page][link-3]. I'll see you in Seattle!
 
-
-
 [link-1]: http://spousetivities.com/
 [link-2]: http://2016.dockercon.com/
 [link-3]: http://spousetivities.ticketleap.com/dockercon/

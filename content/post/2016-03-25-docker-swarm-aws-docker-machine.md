@@ -28,25 +28,33 @@ Let's take a look at these steps in a bit more detail.
 
 There's at least a couple ways to do this, but they pretty much all involve a Linux VM using the Swarm Docker image. It's up to you exactly how you want to do this---you can use a local VM, or you can use an AWS instance. The Docker documentation tutorial uses a local VM with the VirtualBox driver:
 
-    docker-machine create -d virtualbox local
-    env $(docker-machine env local)
-    docker run swarm create
+```sh
+docker-machine create -d virtualbox local
+env $(docker-machine env local)
+docker run swarm create
+```
 
 The first command above creates a VirtualBox VM (named "local") and provisions Docker Engine on that VM. The second command configures the local Docker client to use this VM as its Docker host, and the final command runs `swarm create`, which pulls down the Docker Swarm image, contacts Docker Hub, and obtains a Swarm discovery token (which is output to the screen).
 
 You could do the same thing with Docker Machine's [VMware Fusion][link-6] driver, which would change the first command to this:
 
-    docker-machine create -d vmwarefusion local
+```sh
+docker-machine create -d vmwarefusion local
+```
 
 Similarly, you could use an existing VM and use Docker Machine's generic driver. I described this process in an earlier post about [using Docker Machine and Vagrant together][xref-2].
 
 Finally, you could use an AWS instance, which would change the first command to something like this:
 
-    docker-machine create -d amazonec2 token
+```sh
+docker-machine create -d amazonec2 token
+```
 
 This command uses the default values of Docker Machine's Amazon EC2 driver (uses the us-east-1 region, Ubuntu 15.10, "ubuntu" user, and a generated SSH key). Because we're using a different name in this command, then the second command would need to reference this new name:
 
-    eval $(docker-machine env token)
+```sh
+eval $(docker-machine env token)
+```
 
 Once you have the output from the final `docker run swarm create` command, note that discovery token somewhere safe, as you'll need it in just a couple moments.
 
@@ -54,10 +62,12 @@ Once you have the output from the final `docker run swarm create` command, note 
 
 With the Swarm discovery token from Docker Hub safely in hand, you're now ready to provision the Swarm master. The idea here is to provision the entire Swarm cluster on EC2, so the command would look something like this:
 
-    docker-machine create -d amazonec2 \
-    --swarm --swarm-master \
-    --swarm-discovery token://<Swarm discovery token> \
-    master-node
+```sh
+docker-machine create -d amazonec2 \
+--swarm --swarm-master \
+--swarm-discovery token://<Swarm discovery token> \
+master-node
+```
 
 This command uses the default values for Docker Machine's Amazon EC2 driver; refer back to [my earlier post on Docker Machine with AWS][xref-1] for some examples of how to customize this behavior (to provision into a specific region, for example).
 
@@ -67,9 +77,11 @@ When the Swarm master is done provisioning, you're ready to proceed with provisi
 
 The command to provision the Swarm nodes will look pretty much like the command to provision the Swarm master, but without the `--swarm-master` flag:
 
-    docker-machine create -d amazonec2 \
-    --swarm --swarm-discovery token://<Swarm discovery token> \
-    node-01
+```sh
+docker-machine create -d amazonec2 \
+--swarm --swarm-discovery token://<Swarm discovery token> \
+node-01
+```
 
 Repeat this command as needed (specifying a unique name for each node you add). This example command uses Docker Machine's default values for the Amazon EC2 driver; you might need to add extra flags to modify the behavior (to use a different AMI, a different SSH user, a custom SSH key, or a different AWS region).
 
@@ -79,7 +91,9 @@ After you're done provisioning the nodes, then there's just one thing left: conn
 
 The `docker-machine` CLI has a small extra parameter needed when you connect to a Swarm cluster: the `--swarm` parameter. Here's an example:
 
-    eval $(docker-machine env --swarm master-node)
+```sh
+eval $(docker-machine env --swarm master-node)
+```
 
 This will populate the appropriate environment variables so that you can run commands like `docker info` and it will connect to the Swarm cluster running on AWS.
 
@@ -90,8 +104,6 @@ Note also that Docker Machine's Amazon EC2 driver will automatically create and 
 Unless you're running this cluster for production workloads, you're going to want to shut down the cluster (and the corresponding AWS instances) when you're done (to avoid a hefty AWS bill). Just run `docker-machine rm <name>` for each of the AWS instances listed in the output of `docker-machine ls`. Docker Machine will automatically shut down and terminate the AWS instances.
 
 There you have it---now you can go create Swarm clusters running on AWS using Docker Machine. Have fun!
-
-
 
 [link-1]: https://docs.docker.com/swarm/provision-with-machine/
 [link-2]: https://www.docker.com/products/docker-machine

@@ -23,8 +23,6 @@ The second change is still underway and will (hopefully) be completely transpare
 
 If you have any questions, or if you run into _any_ problems with the site, please let me know. You're welcome to drop me an e-mail (address is on my About page) or [hit me up on Twitter][link-4].
 
-
-
 [link-1]: /feed.xml
 [link-2]: http://feeds.scottlowe.org/slowe/content/feed/
 [link-3]: https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0

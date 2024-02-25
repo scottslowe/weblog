@@ -72,7 +72,7 @@ I don't have anything this time around, but I'll stay alert for content to inclu
 
 ## Career/Soft Skills/Productivity
 
-* I like this post by Massimo Re Ferre' on [DevOps for Dummies][link-11]. The term "DevOps" has been thrown around by so many different people in so many different contexts that it's now incredibly difficult to understand what is meant when someone says "DevOps". Massimo does a good job (as usual!) of breaking it down and making it consumable. 
+* I like this post by Massimo Re Ferre' on [DevOps for Dummies][link-11]. The term "DevOps" has been thrown around by so many different people in so many different contexts that it's now incredibly difficult to understand what is meant when someone says "DevOps". Massimo does a good job (as usual!) of breaking it down and making it consumable.
 * Following up on the IRC vs. mailing list vs. whatever discussion from previous Technology Short Takes, here's an article on [setting up a ZNC bouncer][link-26] (which is a way to improve your reachability on IRC). [This post][link-27] by Sean Dague (upon which the first post I referenced is also based) may also be useful.
 
 That's enough for this time around. See you next time around! Until then, feel free to [contact me on Twitter][link-31] if you have any questions, comments, or thoughts.

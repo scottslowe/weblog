@@ -19,11 +19,15 @@ If you aren't already familiar with Vagrant, I'd highly recommend first taking a
 
 Naturally, you'll need to first ensure that you have Vagrant installed. This is really well-documented already, so I won't go over it here. Next, you'll need to install the AWS provider for Vagrant, which you can handle using this command:
 
-    vagrant plugin install vagrant-aws
+```sh
+vagrant plugin install vagrant-aws
+```
 
 Once you've installed the `vagrant-aws` plugin, you'll next need to install a box that Vagrant can use. Here, the use of Vagrant with AWS is a bit different than the use of Vagrant with a provider like [VirtualBox][link-2] or [VMware Fusion][link-3]/[VMware Workstation][link-4]. In those cases, the box is a VM template that is then cloned/copied to instantiate running VMs. When using Vagrant with AWS, you'll leverage AWS' Amazon Machine Images (AMIs), and so the role of the Vagrant box is really nothing more than a formality. In fact, Mitchell Hashimoto (the author of Vagrant and the `vagrant-aws` plugin) has a "dummy" box you can add:
 
-    vagrant box add aws-dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
+```sh
+vagrant box add aws-dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
+```
 
 You can name this box whatever you like; in the command above, I've called it "aws-dummy".
 
@@ -35,7 +39,7 @@ In my use of Vagrant, I prefer to keep the Vagrant configuration (stored in the 
 
 Here's a snippet of a `Vagrantfile` you could use to instantiate AWS instances using Vagrant:
 
-``` ruby
+```ruby
 # Require the AWS provider plugin
 require 'vagrant-aws'
 
@@ -98,8 +102,6 @@ In situations where you are creating more "permanent" infrastructure---such as d
 To help make using Vagrant with AWS easier, I've created a couple learning environments that are part of [my GitHub "learning-tools" repository][link-6]. Specifically, see the `vagrant-aws` and `vagrant-aws-multi` directories for sample Vagrant configurations.
 
 Additionally, see the documentation for [the `vagrant-aws` plugin on GitHub][link-7] for more details.
-
-
 
 [link-1]: https://www.vagrantup.com
 [link-2]: https://www.virtualbox.org

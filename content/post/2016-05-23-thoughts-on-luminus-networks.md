@@ -30,9 +30,7 @@ From what I've been able to gather from both Kelly and Cyrus---I haven't yet see
 
 I'm looking forward to seeing more of what Luminus is doing and how their solution shapes up.
 
-_(Disclaimer: I've talked extensively with Kelly and Cyrus from Luminus, and I provided feedback on the article that was published on SDx Central. I have not received any form of compensation, nor do I expect any. This post reflects my own thoughts on what Luminus Networks is doing.)_
-
-
+(Disclaimer: I've talked extensively with Kelly and Cyrus from Luminus, and I provided feedback on the article that was published on SDx Central. I have not received any form of compensation, nor do I expect any. This post reflects my own thoughts on what Luminus Networks is doing.)
 
 [link-1]: http://www.luminusnetworks.com/
 [link-2]: https://www.sdxcentral.com/articles/contributed/networking-revolution-network-operations-cyrus-durgin/2016/05/

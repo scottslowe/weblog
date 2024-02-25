@@ -39,20 +39,24 @@ If you install Git on your OS X system using the XCode command-line tools (see [
 
 The `git-prompt.sh` file is what adds the checked out Git branch to your Bash prompt. When you're using the functionality in this file, your prompt will look something like this (this is my prompt on my system named "relentless"):
 
-    relentless:learning-tools slowe (master)$
+```text
+relentless:learning-tools slowe (master)$
+```
 
 The `git-completion.bash` file is what enables tab completion for Git commands, branches, and remotes.
 
 To leverage the functionality in these two files, you only need to edit the `.bashrc` in your home directory. Add these lines to your `.bashrc`:
 
-``` bash
+```bash
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 ```
 
 Then, add `$(__git_ps1)` to your PS1 definition. For example, the PS1 for my prompt above looks like this:
 
-    \h:\W \u$(__git_ps1)\$
+```text
+\h:\W \u$(__git_ps1)\$
+```
 
 Once you add this and restart your shell, then the name of the checked-out branch in Git will be added to the prompt whenever you're in a Git repository. Cool, eh?
 
@@ -66,22 +70,28 @@ The `docker-machine-prompt.bash` file is---as you've probably guessed---the file
 
 Like the Git awareness, all you need to do is source these files from your `.bashrc`, like this (obviously, you'll want to make sure the paths below are correct for your system---these paths are customized to my system):
 
-``` bash
+```bash
 source /usr/local/docker/share/docker-machine-prompt.bash
 source /usr/local/docker/share/docker-machine.bash
 ```
 
 And then modify your PS1 definition to include `$(__docker_machine_ps1)`, like so (this definition includes both the Git and Docker Machine additions):
 
-    \h:\W \u$(__git_prompt_ps1)$(__docker_machine_ps1)\$
+```text
+\h:\W \u$(__git_prompt_ps1)$(__docker_machine_ps1)\$
+```
 
 After you've restarted your shell and you have an active Docker host, you'll see this in your prompt:
 
-    relentless:ubuntu-wily slowe [docker-01]$
+```text
+relentless:ubuntu-wily slowe [docker-01]$
+```
 
 The functionality is cumulative, of course:
 
-    relentless:docker-macvlan (master) [docker-01]$
+```text
+relentless:docker-macvlan (master) [docker-01]$
+```
 
 I don't know about you, but I find this added functionality to be extraordinarily helpful. I hope you do too!
 

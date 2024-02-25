@@ -26,8 +26,6 @@ Finally, from an event perspective: this event is _huge._ Word has it there are 
 
 That's it from day 1 here at re:Invent. I'll have more liveblogging tomorrow, so check out [all the posts tagged "reInvent2016"][link-1]. Thanks!
 
-
-
 [link-1]: /tags/reinvent2016/
 [xref-1]: {{< relref "2016-11-29-scaling-first-10mil-users.md" >}}
 [xref-2]: {{< relref "2016-11-29-hybrid-bridging-gap-to-cloud.md" >}}

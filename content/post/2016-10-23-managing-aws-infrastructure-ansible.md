@@ -37,8 +37,10 @@ As for Ansible itself, I'm a fan of using per-project Ansible configuration file
 
 2. It allowed me to address the issue of running Ansible in a Python virtualenv. If you do run Ansible in a Python virtualenv, then the default Python interpreter (which defaults to `/usr/bin/python` on my OS X system) won't have Ansible or the "boto" library installed (because these are in a virtualenv). However, a very quick and simply change to the inventory file fixes this:
 
-        [local]
-        localhost ansible_python_interpreter=python
+    ```text
+    [local]
+    localhost ansible_python_interpreter=python
+    ```
 
     Making this simple change means that Ansible picks up whatever Python interpreter is in the path, thus picking up the Python from the virtualenv and working as expected. Nifty trick, right? (Not mine---I got it from [here][link-7].)
 
@@ -50,7 +52,7 @@ Once the configuration is done, you're ready to proceed with using the playbooks
 
 Provisioning (creating) AWS infrastructure is pretty straightforward. Here's a sample Ansible playbook (some values have been changed to protect the innocent):
 
-``` yaml
+```yaml
 ---
 - hosts: "localhost"
   connection: "local"
@@ -111,7 +113,7 @@ Lots and lots of articles showed examples of how to create (provision) AWS infra
 
 To tear down infrastructure, you'll need to leverage the `ec2.py` dynamic inventory script. This will query the AWS APIs to retrieve information about the instances, and Ansible can then leverage this to delete instances. Here's a playbook that tears down the infrastructure created using the playbook from the previous section:
 
-``` yaml
+```yaml
 ---
 - hosts: "tag_tool_ansible"
   connection: "local"
@@ -159,7 +161,9 @@ This playbook is a bit more complex than the previous one, so let's break it dow
 
 To run this playbook, we have to specify the inventory, so the command looks like this:
 
-    ansible-playbook -i ./ec2.py delete.yml
+```sh
+ansible-playbook -i ./ec2.py delete.yml
+```
 
 When the playbook executes, it will run the dynamic inventory script to generate an inventory. The inventory includes a group that corresponds to each tag/value assigned to the instances, generated as "tag_name_value" (i.e., like "tag_tool_ansible" or "tag_env_test"). You can use this group as the target for a play (as we did in the playbook), and since the tasks need to run locally on the system where the playbook is executing, use `delegate_to` to assign the task to the local system.
 
@@ -167,9 +171,7 @@ So there you have it---example Ansible playbooks to not only create infrastructu
 
 ## Additional Resources
 
-To make this easier to test out yourself, I've made all the playbooks and such discussed in this article available via [my "learning-tools" GitHub repository][link-6]. Just have a look in the `ansible-aws` directory.
-
-
+To make this easier to test out yourself, I've made all the playbooks and such discussed in this article available via [my "learning-tools" GitHub repository][link-6]. Just have a look in the `ansible-aws` directory. You may also find [this blog post][link-3] helpful.
 
 [link-1]: https://aws.amazon.com/
 [link-2]: https://www.ansible.com/

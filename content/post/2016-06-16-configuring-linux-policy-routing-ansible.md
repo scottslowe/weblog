@@ -24,7 +24,7 @@ All three of these tasks can be handled via Ansible.
 
 To address step #1, you can use Ansible's "lineinfile" module to add a reference to the new routing table in `/etc/iproute2/rt_tables`. For example, consider this Ansible task:
 
-```
+```text
 - lineinfile: dest=/etc/iproute2/rt_tables line="200 eth1"
 ```
 
@@ -34,7 +34,7 @@ For tasks #2 and #3, you can use a Jinja2 template. Because the creation of the 
 
 Consider this Jinja2 template:
 
-``` liquid
+```liquid
 {% raw %}
 {% if item.bootproto == 'static' %}
 auto {{ item.device }}
@@ -72,7 +72,7 @@ post-down ip link set {{ item.device }} down
 
 To render this template into an actual interface configuration file, use this snippet (or something like it) in an Ansible playbook:
 
-``` yaml
+```yaml
 - name: Use Jinja2 template to create interface config file
   template:
     src: "ifcfg.j2"
@@ -83,7 +83,7 @@ To render this template into an actual interface configuration file, use this sn
 
 This snippet only runs when the variable `network_interfaces` is defined, which you can handle with this bit of YAML in an Ansible variables file (either as a host variable, a group variable, or a role variable):
 
-``` yaml
+```yaml
 network_interfaces:
   - device: eth1
     bootproto: static
@@ -94,19 +94,17 @@ network_interfaces:
 
 With this setup in place---the Jinja2 template, the `template` task in an Ansible playbook, and the `network_interfaces` variable defined with the appropriate values---then it all comes together to dynamically build an interface configuration file that looks something like this (this is the file that would be created using the information supplied in this article):
 
-``` text
+```text
 auto eth1
 address 192.168.100.101
 netmask 255.255.255.0
 up ip route add default via 192.168.100.254 dev eth1 table eth1
 up ip rule add from 192.168.100.101 table eth1
 down ip route del default table eth1
-``` 
+```
 
 Obviously, the beauty of this solution is that it's automated: you simply edit the variables file to contain the information you wish, and Ansible will take care of the rest. There's a lot of stuff I didn't list here, like flushing routes and such, that you'd want to add, but this should give you a pretty good starting point.
 
-
 [link-1]: http://www.ansible.com/
-
 [xref-1]: {{< relref "2013-05-29-a-quick-introduction-to-linux-policy-routing.md" >}}
 [xref-2]: {{< relref "2013-05-30-a-use-case-for-policy-routing-with-kvm-and-open-vswitch.md" >}}

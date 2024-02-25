@@ -83,8 +83,6 @@ Welcome to Technology Short Take #70! In this post you'll find a collection of l
 
 OK folks, that's all for now! I'll keep my eyes peeled for content to add in future posts, and feel free to hit me up via social media (I'm not that hard to find) if you find anything you feel should be included in the next post. Until then, take care!
 
-
-
 [link-1]: https://dreezman.wordpress.com/2016/02/02/redirecting-nsx-firewall-logs-into-smartlog/
 [link-2]: https://dreezman.wordpress.com/2016/02/15/nsx-firewall-very-cool-enterprise-ready-toy/
 [link-3]: http://storagemojo.com/2016/07/22/a-look-at-symbolic-ios-patents/

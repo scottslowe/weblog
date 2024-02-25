@@ -57,8 +57,6 @@ Not all configuration options can be modified for a running VM, but for those th
 
 Obviously, this is only a subset of what you can do with `vboxmanage`; use `vboxmanage <command> help` to get more information on the options available for each command. What I've included here will help you at least get started. Have fun!
 
-
-
 [link-1]: https://www.virtualbox.org/
 [link-2]: https://www.virtualbox.org/manual/UserManual.html
 [xref-1]: {{< relref "2016-09-28-why-now-using-virtualbox-with-vagrant.md" >}}

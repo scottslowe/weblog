@@ -12,7 +12,7 @@ title: Using Docker Machine with AWS
 url: /2016/03/22/using-docker-machine-with-aws/
 ---
 
-As part of a broader effort (see the post on [my 2016 projects][xref-1]) to leverage public cloud resources more than I have in the past, some [Docker Engine][link-2]-related testing I've been conducting recently has been done using AWS EC2 instances instead of VMs in my home lab. Along the way, I've found [Docker Machine][link-3] to be quite a handy tool, and in this post I'll share how to use Docker Machine with AWS.
+As part of a broader effort (see the post on [my 2016 projects][xref-1]) to leverage public cloud resources more than I have in the past, some [Docker Engine][link-2]-related testing I've been conducting recently has been done using AWS EC2 instances instead of VMs in my home lab. Along the way, I've found [Docker Machine][link-3] to be quite a handy tool, and in this post I'll share how to use Docker Machine with [AWS][link-4].
 
 By and large, using Docker Machine with AWS is pretty straightforward. You can get an idea of what information Docker Machine needs by running `docker-machine create -d amazonec2 --help`. (You can also view [the documentation for the AWS driver][link-7] specifically.) The key pieces of information you need are:
 
@@ -28,11 +28,13 @@ There are some additional parameters that you can use to fine-tune the behavior 
 
 Putting all this together, an example command might look something like this:
 
-    docker-machine create -d amazonec2 \
-    --amazonec2-region us-west-2 \
-    --amazonec2-instance-type "t2.micro" \
-    --amazonec2-ssh-keypath ~/.ssh/ssh_key \
-    aws-test
+```sh
+docker-machine create -d amazonec2 \
+--amazonec2-region us-west-2 \
+--amazonec2-instance-type "t2.micro" \
+--amazonec2-ssh-keypath ~/.ssh/ssh_key \
+aws-test
+```
 
 This would create a machine named "aws-test", with an instance type of t2.micro in the us-west-2 region, based on a daily Ubuntu 15.10 AMI, and using the SSH key found in the file `~/.ssh/ssh_key`. Once this instance is up and running, Docker Machine would provision and configure Docker Engine on the instance. Along the way, Docker Machine also creates a security group named "docker-machine" that allows the necessary Docker Engine-related traffic.
 
@@ -57,8 +59,6 @@ Please note that plenty of other folks have written about using Docker Machine o
 [Docker Machine Provisioning on AWS][link-1]  
 [Using Docker Machine with AWS][link-5]  
 [A lap around AWS and docker-machine][link-6]  
-
-
 
 [link-1]: http://networkstatic.net/docker-machine-provisioning-on-aws/
 [link-2]: https://www.docker.com/products/docker-engine

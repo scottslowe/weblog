@@ -77,7 +77,6 @@ Nothing here this time around, but rest assured I'll be watching for content to 
 
 Despite the fact that I'm trying to publish these Short Takes more frequently, I'm finding it difficult to keep the length manageable. So, before this thing gets any longer, let's wrap it up for this time around. Stay tuned for the next Technology Short Take very soon!
 
-
 [link-1]: https://ahmetalpbalkan.com/blog/azure-docker-extension/
 [link-2]: https://coreos.com/blog/rkt-hits-1.0.html
 [link-3]: https://coreos.com/blog/getting-started-with-rkt-1.0.html

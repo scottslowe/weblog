@@ -65,9 +65,6 @@ As I mentioned earlier, you can access [a read-only version of my schedule via y
 
 I look forward to speaking with you at VMworld!
 
-
-
 [link-1]: https://fruux.com/calendars/public/a3298273721/2161D197-7A51-4703-B7FE-6066D871BB65/
 [link-2]: http://www.vmworld.com/
-
 [xref-1]: {{< relref "2016-08-12-vmworld-2016-prayer-time.md" >}}

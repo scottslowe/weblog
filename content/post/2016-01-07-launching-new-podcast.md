@@ -52,6 +52,5 @@ _Why?_
 
 Why launch a podcast? Why this podcast? Why me, and not someone else? These are all valid questions. I'm constantly telling folks they need to challenge themselves by moving outside their comfort zone. This is me moving outside my comfort zone. I saw a need that I didn't feel was being addressed, and I'm going to try to address it. I might fail, but at least I tried.
 
-
 [link-1]: https://soundcloud.com/fullstackjourney
 [link-2]: https://soundcloud.com/fullstackjourney/full-stack-journey-episode-001

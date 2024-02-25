@@ -78,8 +78,6 @@ Welcome to Technology Short Take #73. Sorry for the long delay since the last Te
 
 I'll cut it off there before it gets any longer. Still so much content, but so little room to share it all! I suppose I'll save it for the next Technology Short Take, and give you a reason to return here. Until then, best of luck!
 
-
-
 [link-1]: http://www.jeffgeerling.com/blog/2016/using-ansible-through-windows-10s-subsystem-linux
 [link-2]: https://github.com/vagrant-libvirt/vagrant-libvirt
 [link-3]: https://twitter.com/scott_lowe

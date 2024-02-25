@@ -21,7 +21,7 @@ The end result is that when you try to create a Vagrant VM with multiple network
 
 As you may know, I'm a fan of using parameterized data stored in YAML files with Vagrant (see [here][xref-1] and [here][xref-2] for more information). So most of my Vagrant environments have this snippet of code in the `Vagrantfile`:
 
-``` ruby
+```ruby
 if server['ip_addr'] != nil
   srv.vm.network 'private_network', ip: server['ip_addr']
 end # if server['ip_addr']
@@ -31,7 +31,7 @@ This snippet of code basically says that if a value exists for `ip_addr` in the 
 
 Obviously, given the issue with Vagrant and Ubuntu 15.10, this won't work. The workaround, then, is to simply not use Vagrant's network interface functionality, like this:
 
-``` ruby
+```ruby
 if server['ip_addr'] != nil
   srv.vm.network 'private_network', auto_config: false
 end # if server['ip_addr']
@@ -40,8 +40,6 @@ end # if server['ip_addr']
 This modified snippet says that if a value exists for `ip_addr` in the YAML file, create an additional network interface but _do not configure the interface._ This works---Vagrant will create the VM with the additional interface, but won't try to configure the interface in any way, shape, form, or fashion.
 
 Once the interface has been created by Vagrant, then you can configure the interface manually, using [Ansible][link-5], or via whatever tool makes the most sense to you. I'm still working through some methods for configuring the interface via either an ERB template or via Ansible; I've run into a few snags but hope to have those worked out soon. In the meantime, if you're using Ubuntu 15.10 with Vagrant, keep this potential issue in mind and plan to work around the problem until a (permanent) fix is available.
-
-
 
 [link-1]: https://wiki.ubuntu.com/WilyWerewolf/ReleaseNotes
 [link-2]: https://www.vagrantup.com/

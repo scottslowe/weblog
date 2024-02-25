@@ -18,7 +18,7 @@ If you're unfamiliar with Vagrant, I'd start with [my introduction to Vagrant][x
 
 To use a JSON-formatted data file as an external data source for Vagrant, the code in the `Vagrantfile` looks really similar to the code you'd use for YAML:
 
-``` ruby
+```ruby
 # -*- mode: ruby -*-
 # # vi: set ft=ruby :
  
@@ -53,7 +53,7 @@ For the most part, this `Vagrantfile` is very similar to what I've already shown
 
 And what does the external data file look like? Here's a JSON-formatted data file that would work with this `Vagrantfile`:
 
-``` json
+```json
 [
     {
         "name": "jessie",
@@ -85,8 +85,6 @@ I've used both these approaches in many of my own personal Vagrant environments 
 This post was inspired primarily by James Thorne's post on [using JSON and loops to create multi-machine Vagrant environments][link-1]. The idea of using JSON instead of YAML is not mine, but his; I just wanted to present similar information (but with the JSON separated into a different file instead of embedded into the `Vagrantfile`).
 
 If you're interested in experimenting with JSON and Vagrant yourself, have a look at the `vagrant-json` directory in [my GitHub "learning-tools" repository][link-2]. It has a `Vagrantfile` and an associated JSON data file.
-
-
 
 [link-1]: http://thornelabs.net/2014/11/13/multi-machine-vagrantfile-with-shorter-cleaner-syntax-using-json-and-loops.html
 [link-2]: https://github.com/scottslowe/learning-tools

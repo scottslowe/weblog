@@ -24,6 +24,5 @@ The dates for these events are still being finalized (I'll update this post when
 
 Aside from these VMUG events, if you're in one of these regions, are a current (or potential) customer of VMware, and you'd like to meet to talk about NSX, please let me know. I'd love to meet with you while I'm in the area!
 
-
 [link-1]: https://www.vmug.com/p/cm/ld/fid=12366
 [link-2]: https://www.vmug.com/p/cm/ld/fid=12406

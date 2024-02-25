@@ -54,7 +54,6 @@ Ramaswami relinquishes the stage to Yanbing Li to talk about hyperconvergence vi
 
 Li shares that VSAN will be the default storage platform for VIC and Photon Platform, how the VSAN team is driving innovation in analytics and policy-based management, and shares work being done on encryption with VSAN (both in the private cloud and the public cloud). Li demonstrates some of this functionality via a demo before turning the stage back over to O'Farrell to wrap things up.
 
-
 [link-1]: https://github.com/vmware/photon-controller
 [link-2]: https://github.com/vmware/vic
 [link-3]: https://github.com/vmware/harbor

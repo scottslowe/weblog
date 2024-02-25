@@ -81,8 +81,6 @@ Nothing this time around. Maybe next time!
 
 It's time to wrap up now, or I'll never get this thing published. Happy Friday everyone!
 
-
-
 [link-1]: https://michaelryom.dk/log-insight-netflow-awesome/#.VvsWNV9OLCQ
 [link-2]: http://blog.think-v.com/?p=3649
 [link-3]: http://blog.dustinkirkland.com/2016/03/ubuntu-on-windows.html

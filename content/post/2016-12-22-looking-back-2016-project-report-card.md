@@ -47,8 +47,6 @@ Times like these can be times of growth, if approached correctly, and I want to 
 
 While there may be a couple more blog posts before 2017 arrives, I'd like to take this moment and thank everyone for taking the time to visit the site and read my posts over the last year. Thanks for making 2016 a great year, and here's looking forward to a great 2017!
 
-
-
 [link-1]: http://shop.oreilly.com/product/0636920042082.do
 [link-2]: https://github.com/scottslowe/learning-tools
 [xref-1]: {{< relref "2016-01-21-looking-ahead-2016-projects.md" >}}

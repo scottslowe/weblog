@@ -86,8 +86,6 @@ Nothing this time, but I'll stay alert for content to include in the future.
 
 That's all for this time. The next Technology Short Take will be published on Friday, December 30, and will be the last Technology Short Take of 2016. Until then, Happy Holidays!
 
-
-
 [link-1]: https://www.linkedin.com/pulse/hybrid-clouds-comparing-openstack-vmwares-divergent-aws-raghuram-1
 [link-2]: http://www.internetnews.com/blog/skerner/openstack-zun-debuts-new-approach-to-cloud-containers.html
 [link-3]: http://www.virtuallyghetto.com/2016/10/virtual-nvme-and-nested-esxi-6-5.html

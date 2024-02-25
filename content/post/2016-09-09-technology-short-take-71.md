@@ -79,8 +79,6 @@ Welcome to Technology Short Take #71! As always, I have a list of links related 
 
 I'd love to keep going, but I suppose I'd better wrap it up before this post gets too long! Don't worry---if this post wasn't enough, I'll have another Technology Short Take up for you in just a couple weeks.
 
-
-
 [link-1]: http://www.sneaku.com/2015/08/27/scripting-nsx-v-bulk-dfw-rule-creation/
 [link-2]: https://blogs.technet.microsoft.com/windowsserver/2016/05/10/a-closer-look-at-shielded-vms-in-windows-server-2016/
 [link-3]: http://sflanders.net/2016/07/17/log-insight-converting-agent-groups-manifests

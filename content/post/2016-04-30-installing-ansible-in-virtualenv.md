@@ -22,13 +22,17 @@ Here's what the process looks like:
 
 1. First, you'll need to install support for Python virtualenvs. Although some folks have said **not** to use `sudo` when installing via Pip, I found it necessary:
 
-        sudo -H pip install virtualenv
+    ```sh
+    sudo -H pip install virtualenv
+    ```
 
     Note that you might need to install Pip first, which---fortunately---is pretty straightforward (`easy_install pip`).
 
 2. Once you have virtualenv support installed, then create a virtualenv into which you'll install the Ansible dependencies:
 
-        virtualenv --system-site-packages ansible
+    ```sh
+    virtualenv --system-site-packages ansible
+    ```
 
     This will create a virtualenv called "ansible" in a directory named "ansible" in the current working directory. I used the `--system-site-packages` flag to allow this virtualenv to have access to the system site packages. I saw various recommendations both for and against this approach; my line of thinking was that this would help prevent some duplication of modules.
 

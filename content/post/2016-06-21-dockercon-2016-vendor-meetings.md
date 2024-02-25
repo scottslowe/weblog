@@ -43,8 +43,6 @@ Finally, I stopped in at the [JFrog][link-5] booth. JFrog was a company I'd hear
 
 I suspect I have a lot more to learn about the application deployment cycle/pipeline before I can truly appreciate what JFrog has to offer, but it certainly seems pretty useful. StorageOS is (very) young yet, but is worth watching to see how it develops. As for the networking solutions---Plumgrid, Calico, and MidoNet---each of them has both strengths and weaknesses. I like Plumgrid's use of eBPF to create in-kernel VNFs, MidoNet's distributed control plane, and Calico's use of well-known building blocks like BGP. I'm a bit partial to overlays and therefore lean a bit more toward Plumgrid/MidoNet, but that's just me.
 
-
-
 [link-1]: http://www.plumgrid.com/
 [link-2]: https://www.projectcalico.org/
 [link-3]: http://storageos.com/

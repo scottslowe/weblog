@@ -92,8 +92,6 @@ I have nothing this time, but I'll stay alert for content to include in the next
 
 That's it for TST #72; thanks for reading! I hope you found something useful (or possibly just entertaining, I'll settle for that) along the way.
 
-
-
 [link-1]: https://blog.online.net/2016/09/14/build-your-infrastructure-with-terraform-nomad-and-consul-on-scaleway/
 [link-2]: http://blog.mcchan.io/ipv6-in-mininet
 [link-3]: http://blog.codybunch.com/2016/08/22/Revisiting-BGP-on-Linux-w-Cumulus-Topology-Converter/

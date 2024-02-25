@@ -78,8 +78,6 @@ Welcome to Technology Short Take #64. Normally, I try to publish Short Takes on 
 
 It's time to wrap up now. See you again soon!
 
-
-
 [link-1]: http://networkphil.com/2016/03/18/fate-sharing-in-the-network-core/
 [link-2]: http://www.linux.com/learn/tutorials/893685-introduction-to-docker-compose-tool-for-multi-container-applications
 [link-3]: http://blog.arungupta.me/docker-machine-swarm-compose-couchbase-wildfly/

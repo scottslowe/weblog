@@ -22,8 +22,6 @@ Moving to the Linux Foundation allows OVS to continue to grow and flourish witho
 
 For more information, refer to [the official Linux Foundation press release][link-4].
 
-
-
 [link-1]: http://openvswitch.org/
 [link-2]: https://www.linuxfoundation.org/
 [link-3]: http://openvswitch.org/support/ovscon2015/17/1255-graf.pdf

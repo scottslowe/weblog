@@ -22,16 +22,18 @@ To get GNOME Keyring support for storing Git credentials, then, all one has to d
 
 1. You can use the `git config` command, like this:
 
-        git config --global credential.helper /usr/libexec/git-core/git-credential-gnome-keyring
+    ```sh
+    git config --global credential.helper /usr/libexec/git-core/git-credential-gnome-keyring
+    ```
 
 2. You can edit `~/.gitconfig` directly, using the text editor of your choice. Add this text:
 
-        [credential]
-        helper = /usr/libexec/git-core/git-credential-gnome-keyring
+    ```text
+    [credential]
+    helper = /usr/libexec/git-core/git-credential-gnome-keyring
+    ```
 
 Once you add this directive to your Git configuration, then the next time you need to supply credentials, Git will store them in the GNOME Keyring automatically. You can verify this using [Seahorse][link-3], the GUI front-end to the GNOME Keyring.
-
-
 
 [link-1]: https://git-scm.com/
 [link-2]: https://wiki.gnome.org/action/show/Projects/GnomeKeyring

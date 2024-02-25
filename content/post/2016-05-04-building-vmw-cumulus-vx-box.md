@@ -20,11 +20,13 @@ If you're not familiar with Cumulus VX, it's a virtual appliance version of [Cum
 
 Naturally, this sounds like a perfect fit to use with Vagrant, so if you're interested---as I am/was---in running Cumulus VX with Vagrant using a VMware desktop hypervisor, then the process described below should get you all fixed up.
 
-First, you'll want to get a hold of the VMware version of Cumulus VX. Navigate over to [the Cumulus VX download page][link-6] (a free registration is required), and download the VMware version. This will download an OVA file. _Don't_ download the Vagrant box; this is formatted for VirtualBox and won't work (at least, it didn't work for me). 
+First, you'll want to get a hold of the VMware version of Cumulus VX. Navigate over to [the Cumulus VX download page][link-6] (a free registration is required), and download the VMware version. This will download an OVA file. _Don't_ download the Vagrant box; this is formatted for VirtualBox and won't work (at least, it didn't work for me).
 
 OVA files are just TAR files, so after it has finished downloaded unpack the OVA file into separate files (the filename might be slightly different for you):
 
-    tar xvzf CumulusVX-2.5.6-4048c0a8213324c0-vmware.ova
+```sh
+tar xvzf CumulusVX-2.5.6-4048c0a8213324c0-vmware.ova
+```
 
 You'll end up with a VMware virtual disk (VMDK) file and an OVF manifest.
 
@@ -34,24 +36,28 @@ Once the VM is imported, boot the VM. The Cumulus VX user guide provides the def
 
 Now it's time to configure the Cumulus VX instance to support Vagrant. The first step will be to copy the Vagrant default insecure SSH key into the Cumulus VX VM. Cumulus VX has `wget` installed by default, so you could use this command:
 
-    wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub
+```sh
+wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub
+```
 
 Then install the Vagrant insecure SSH key you just downloaded into the VM's `authorized_keys` file:
 
-    cat vagrant.pub >> ~/.ssh/authorized_keys
-    chmod 0600 ~/.ssh/authorized_keys
+```sh
+cat vagrant.pub >> ~/.ssh/authorized_keys
+chmod 0600 ~/.ssh/authorized_keys
+```
 
 That's it for changes to the Cumulus VX instance; you can go ahead and shut down the VM.
 
 In the same directory where the VM's files are located, create a file named `metadata.json` with these contents:
 
-``` json
+```json
 {"provider": "vmware_desktop"}
 ```
 
 In the same directory as `metadata.json` and the rest of the VM's files, create another file named `Vagrantfile` with these contents:
 
-``` ruby
+```ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby
 
@@ -74,15 +80,21 @@ Finally, remove any `*.plist` files from the directory with the VM's files, and 
 
 Now you're ready to package it all up. Vagrant boxes, like OVA files, are just TAR files, so create the Vagrant box with this command:
 
-    tar cvzf cumulus-vx.box ./*
+```sh
+tar cvzf cumulus-vx.box ./*
+```
 
 After that command completes, add the new Vagrant box so that Vagrant can start using it:
 
-    vagrant box add cumulus-vx-2.5.6 cumulus-vx.box
+```sh
+vagrant box add cumulus-vx-2.5.6 cumulus-vx.box
+```
 
 While you're at the CLI, add the `vagrant-cumulus` plugin you'll need as well:
 
-    vagrant plugin install vagrant-cumulus
+```sh
+vagrant plugin install vagrant-cumulus
+```
 
 You can now start creating Vagrant environments that include Cumulus VX instances.
 

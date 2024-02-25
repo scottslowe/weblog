@@ -22,8 +22,6 @@ As is a tradition with Spousetivities, participants in the activities have the c
 
 Crystal's [blog post on the Spousetivities site][link-2] has a few more details, and [registration is open right now][link-3].
 
-
-
 [link-1]: https://reinvent.awsevents.com/
 [link-2]: http://spousetivities.com/2016/11/first-time-ever-spousetivities-at-aws-reinvent/
 [link-3]: https://spousetivities.ticketleap.com/aws-reinvent-2016/details

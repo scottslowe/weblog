@@ -19,29 +19,37 @@ I generally prefer to run Ansible in a [Python virtualenv][link-3], but I don't 
 
 To create a Python virtualenv, you'll first need virtualenv installed. I prefer to install virtualenv globally for all users using this command:
 
-    sudo -H pip install virtualenv
+```sh
+sudo -H pip install virtualenv
+```
 
 Once virtualenv is installed, then create a virtualenv for Ansible:
 
-    virtualenv ~/Envs ansible
+```sh
+virtualenv ~/Envs ansible
+```
 
 Then activate the virtualenv:
 
-    source ~/Envs/ansible/bin/activate
+```sh
+source ~/Envs/ansible/bin/activate
+```
 
 At this point, you can try a `pip install ansible`, but it will fail. First, you need to install some additional development libraries that are required in order to install Ansible:
 
-    sudo dnf install libffi-devel redhat-rpm-config python-devel openssl-devel
+```sh
+sudo dnf install libffi-devel redhat-rpm-config python-devel openssl-devel
+```
 
 Once those packages are installed, _then_ you're finally ready to install Ansible into the virtualenv:
 
-    pip install ansible
+```sh
+pip install ansible
+```
 
 (Note that `sudo` is _not_ used here because you are installing Ansible into your own virtual environment.)
 
 That's it---you're now ready to roll. Enjoy!
-
-
 
 [link-1]: https://getfedora.org/
 [link-2]: https://www.ansible.com/
