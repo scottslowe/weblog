@@ -18,7 +18,7 @@ In this post, I'll show you how I extended my solution for [managing user accoun
 
 Just to refresh your memory, here's the original Puppet manifest code I posted in the original article; this code uses define-based virtual user resources that you then realize on a per-host basis (click [here](https://gist.github.com/scottslowe/4050213) for an option to download this code snippet).
 
-``` puppet
+```puppet
 # Defined type for creating virtual user accounts
 #
 define accounts::virtual ($uid,$realname,$pass) {
@@ -53,7 +53,7 @@ Since I posted this original code, I've made a few changes. I switched some of t
 
 Here's the code after I modified it to include managing SSH authorized keys for user accounts (again, click [here](https://gist.github.com/scottslowe/7064759) for an option to download the code):
 
-``` puppet
+```puppet
 define accounts::virtual ($uid,$realname,$pass,$sshkeytype,$sshkey) {
   include accounts::params
 
@@ -122,7 +122,7 @@ Let's walk through the changes between the two snippets of code:
 
 With this code in place, you'd then define a user like this:
 
-``` puppet
+```puppet
 @accounts::virtual { 'jsmith':
   uid             =>  5001,
   realname        =>  'John Smith',
@@ -136,7 +136,6 @@ With this code in place, you'd then define a user like this:
 The requirement for `Class['accounts::config']` is to ensure that various configuration tasks are finished before the user account is defined; I discussed this in more detail in this post on [Puppet, user accounts, and configuration files][2]. Now, when I realize a virtual user resource, Puppet will also ensure that the user's SSH public key is automatically added to the user's `.ssh/authorized_keys` file on that host. Pretty sweet, eh? Further, if the key ever changes, you need only change it on the Puppet server itself, and on the next Puppet agent run the hosts will update themselves.
 
 I freely admit that I'm not a Puppet expert, so there might be better/faster/more efficient ways of doing this. If you _are_ a Puppet expert, please feel free to weigh in below in the comments. I welcome all courteous comments!
-
 
 [1]: {{< relref "2012-11-25-using-puppet-for-account-management.md" >}}
 [2]: {{< relref "2013-01-29-puppet-user-accounts-and-configuration-files.md" >}}

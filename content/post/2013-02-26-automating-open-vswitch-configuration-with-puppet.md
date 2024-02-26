@@ -53,6 +53,5 @@ As I said, this is a bit of a brutish hack---not an elegant solution, but one th
 
 If you have corrections, clarifications, or suggestions, please feel free to speak up in the comments below. Courteous comments are both encouraged and welcomed!
 
-
 [1]: {{< relref "2013-02-07-exploring-rhel-ovs-integrations.md" >}}
 [2]: {{< relref "2012-07-05-using-puppet-with-multiple-operating-systems.md" >}}

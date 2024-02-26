@@ -33,7 +33,6 @@ I had the pleasure of attending the OpenStack Summit in Portland, OR last week. 
 
 If anyone has any other liveblog sessions that should be added to this list, drop me a comment and let me know.
 
-
 [1]: {{< relref "2013-04-15-openstack-summit-2013-getting-from-grizzly-to-havana-a-devops-upgrade-pattern.md" >}}
 [2]: {{< relref "2013-04-15-openstack-summit-2013-nicira-nvp-deep-dive.md" >}}
 [3]: {{< relref "2013-04-15-openstack-summit-2013-considerations-for-building-a-private-cloud-folsom-update.md" >}}

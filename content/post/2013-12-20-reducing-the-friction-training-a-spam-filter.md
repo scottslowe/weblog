@@ -23,7 +23,7 @@ I recently moved my e-mail services off Google and onto [Fastmail](http://www.fa
 
 To help make this easier, I came up with a bit of AppleScript:
 
-``` applescript
+```applescript
 -- This script moves messages to a spam training folder
 -- Set some default values to be used later in the script; not all values may be used
 property destMailbox : "Spam Training"
@@ -55,7 +55,7 @@ As you can tell by the comments in the code, this script was designed to be run 
 
 I hope this helps someone out there!
 
+[gist-1]: https://gist.github.com/scottslowe/7990921
 [1]: {{< relref "2013-06-21-reducing-the-friction-processing-e-mail.md" >}}
 [2]: {{< relref "2013-07-19-reducing-the-friction-processing-e-mail-part-2.md" >}}
 [3]: {{< relref "2013-12-04-divorcing-google.md" >}}
-[gist-1]: https://gist.github.com/scottslowe/7990921

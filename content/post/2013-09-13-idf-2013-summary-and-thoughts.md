@@ -59,7 +59,7 @@ As with other relevant industry conferences (like VMworld, for example), one of 
 
 Anyway, that's it for my IDF 2013 coverage. I hope that some of the information I shared proves useful to you in some way. As usual, courteous comments (with vendor disclosures, where needful) are always welcome.
 
-_(Disclosure: I work for VMware, but was invited to attend IDF at Intel's expense.)_
+(Disclosure: I work for VMware, but was invited to attend IDF at Intel's expense.)
 
 [1]: {{< relref "2013-09-10-idf-2013-keynote-day-1.md" >}}
 [2]: {{< relref "2013-09-10-idf-2013-enhancing-openstack-with-intel-technologies.md" >}}

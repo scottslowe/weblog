@@ -44,19 +44,23 @@ Let's walk through how I built this environment to do the testing.
 
 I built KVM Host 1 using Ubuntu 12.04.2, and installed KVM, libvirt, and OVS. On KVM Host 1, I built a guest domain, attached it to OVS via a libvirt network, and configured the VLAN tag for its OVS port with this command:
 
-    ovs-vsctl set port vnet0 tag=10
+```sh
+ovs-vsctl set port vnet0 tag=10
+```
 
 In the guest domain, I configured the OS (also Ubuntu 12.04.2) to use the IP address 10.1.1.2/24.
 
 Also on KVM Host 1, I created the network namespace, created the veth pair, moved one of the veth interfaces, and attached the other to the OVS bridge. This set of commands is what I used:
 
-    ip netns add red
-    ip link add veth0 type veth peer name veth1
-    ip link set veth1 netns red
-    ip netns exec red ip addr add 10.1.2.1/24 dev veth1
-    ip netns exec red ip link set veth1 up
-    ovs-vsctl add-port br-int veth0
-    ovs-vsctl set port veth0 tag=20
+```sh
+ip netns add red
+ip link add veth0 type veth peer name veth1
+ip link set veth1 netns red
+ip netns exec red ip addr add 10.1.2.1/24 dev veth1
+ip netns exec red ip link set veth1 up
+ovs-vsctl add-port br-int veth0
+ovs-vsctl set port veth0 tag=20
+```
 
 Most of the commands listed above are taken straight from the [network namespaces article][4] I wrote, but let's break it down anyway just for the sake of full understanding:
 
@@ -74,23 +78,29 @@ When I'm done, I'm left with KVM Host 1 running a guest domain on VLAN 10 and a 
 
 I repeated the process on KVM Host 2, installing Ubuntu 12.04.2 with KVM, libvirt, and OVS. Again, I built a guest domain (also running Ubuntu 12.04.2), configured the operating system to use the IP address 10.1.2.2/24, attached it to OVS via a libvirt network, and configured its OVS port:
 
-    ovs-vsctl set port vnet0 tag=20
+```sh
+ovs-vsctl set port vnet0 tag=20
+```
 
 Similarly, I also created a new network namespace and pair of veth interfaces, but I configured them as a "mirror image" of KVM Host 1, reversing the VLAN assignments for the guest domain (as shown above) and the network namespace:
 
-    ip netns add blue
-    ip link add veth0 type veth peer name veth1
-    ip link set veth1 netns blue
-    ip netns exec blue ip addr add 10.1.1.1/24 dev veth1
-    ip netns exec blue ip link set veth1 up
-    ovs-vsctl add-port br-int veth0
-    ovs-vsctl set port veth0 tag=10
+```sh
+ip netns add blue
+ip link add veth0 type veth peer name veth1
+ip link set veth1 netns blue
+ip netns exec blue ip addr add 10.1.1.1/24 dev veth1
+ip netns exec blue ip link set veth1 up
+ovs-vsctl add-port br-int veth0
+ovs-vsctl set port veth0 tag=10
+```
 
 That leaves me with KVM Host 2 running a guest domain on VLAN 20 and a network namespace on VLAN 10.
 
 The final step was to [create the GRE tunnel between the OVS bridges][3]. However, after I established the GRE tunnel, I configured the GRE port to be a VLAN trunk using this command (this command was necessary on both KVM hosts):
 
-    ovs-vsctl set port gre0 trunks=10,20,30
+```sh
+ovs-vsctl set port gre0 trunks=10,20,30
+```
 
 So I now had the environment I'd envisioned for my testing. VLAN 10 had a guest domain on one host and a veth interface on the other; VLAN 20 had a veth interface on one host and a guest domain on the other. Between the two hosts was a GRE tunnel configured to act as a VLAN trunk.
 
@@ -98,7 +108,7 @@ Now came the critical test---would the guest domain be able to ping the veth int
 
 [![Ping results](/public/img/dom2ns-ping-test-small.png)](/public/img/dom2ns-ping-test-fullsize.png)
 
-Success! Although not shown here, I also tested all other combinations as well, and they worked. (Note you'd have to use `ip netns exec ping ` to ping from the veth1 interface in the network namespace.) I now had a configuration where I could integrate multiple network namespaces with GRE tunnels and OVS. Unfortunately---and this is where the whole "technically interesting but practically useless" statement comes from---this isn't really a usable configuration:
+Success! Although not shown here, I also tested all other combinations as well, and they worked. (Note you'd have to use `ip netns exec ping` to ping from the veth1 interface in the network namespace.) I now had a configuration where I could integrate multiple network namespaces with GRE tunnels and OVS. Unfortunately---and this is where the whole "technically interesting but practically useless" statement comes from---this isn't really a usable configuration:
 
 * The VLAN configurations were manually applied to the OVS ports; this means they disappeared if the guest domains were power-cycled. (This could be fixed using libvirt portgroups, but I hadn't bothered with building them in this environment.)
 

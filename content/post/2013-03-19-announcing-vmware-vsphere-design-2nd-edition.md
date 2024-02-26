@@ -16,7 +16,7 @@ wordpress_id: 3113
 
 I've been phenomenally lucky to be involved in a number of book projects around VMware vSphere. I think that most people probably know me for the wildly popular _Mastering VMware vSphere 4_ and _Mastering VMware vSphere 5_ books (released at VMworld 2009 and VMworld EMEA 2011, respectively), but in late 2010/early 2011 I also had the opportunity to collaborate with Forbes Guthrie and Maish Saidel-Keesing on _VMware vSphere Design_. Even though that book hasn't sold as many units as the _Mastering_ books, it's a work of which I'm equally proud. The topic of designing vSphere environments can be difficult to address, but I think we did a pretty good job.
 
-Today I'm excited to announce that Forbes Guthrie and I---along with some support from Kendrick Coleman---have undertaken a revision of that book, to be released as _VMware vSphere Design, 2nd Edition_. 
+Today I'm excited to announce that Forbes Guthrie and I---along with some support from Kendrick Coleman---have undertaken a revision of that book, to be released as _VMware vSphere Design, 2nd Edition_.
 
 ![VMware vSphere Design, 2nd Edition](/public/img/bk-vmw-vsp-dsgn-2e.jpg)
 

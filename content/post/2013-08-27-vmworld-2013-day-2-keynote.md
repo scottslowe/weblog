@@ -27,7 +27,7 @@ The keynote kicks off with Carl Eschenbach. Supposedly there are more than 22,00
 
 Carl brings out Kit Colbert, a principal engineer at VMware (and someone who relatively well-recognized within the virtualization community). They show a clip from a classic "I Love Lucy" episode that is intended to help illustrate the disconnect between the line of business and IT. After a bit of back and forth about the needs of the line of business versus the needs of IT, Kit moves into a demo of vCloud Automation Center (vCAC). The demo shows how to deploy applications to a variety of different infrastructures, including the ability to look at costs (estimated) across those infrastructures. The demo includes various database options as well as auto-scaling options.
 
-So what does this functionality give application owners? Choice and visibility. What does it give IT? Governance (control), all made possible by automation. 
+So what does this functionality give application owners? Choice and visibility. What does it give IT? Governance (control), all made possible by automation.
 
 The next view of the demo takes a step deeper, showing VMware Application Director deploying the sample application (called Project Vulcan in the demo). vCloud Application Director deploys complex application topologies in an automated fashion, and includes integration with tools like Puppet and Chef. Kit points out that what they're showing isn't just a vApp, but a "full blown" multi-tier application being deployed end-to-end.
 

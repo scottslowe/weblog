@@ -23,49 +23,69 @@ Now that you have a rough idea of what containers are, let's take a closer look 
 
 Installing LXC is pretty straightforward, at least on Ubuntu. To install LXC, simply use `apt-get`:
 
-    apt-get install lxc
+```sh
+apt-get install lxc
+```
 
 Once you have LXC installed, your next step is creating a container. To create a container, you'll use the `lxc-create` command and supply the name of the container template as well as the name you want to assign to the new container:
 
-    lxc-create -t <template> -n <container name>
+```sh
+lxc-create -t <template> -n <container name>
+```
 
 You'll need Internet access to run this command, as it will download (via your configured repositories) the necessary files to build a container according to the template you specified on the command line. For example, to use the "ubuntu" template and create a new container called "cn-01", the command would look like this:
 
-    lxc-create -t ubuntu -n cn-01
+```sh
+lxc-create -t ubuntu -n cn-01
+```
 
 Note that the "ubuntu" template specified in this command has some additional options supported; for example, you can opt to create a container with a different release of Ubuntu (it defaults to the latest LTS) or a different architecture (it defaults to the host's architecture).
 
 Once you have at least one container created, you can list the containers that exist on your host system:
 
-    lxc-list
+```sh
+lxc-list
+```
 
 This will show you all the containers that have been created, grouped according to whether the container is stopped, frozen (paused), or running.
 
 To start a container, use the `lxc-start` command:
 
-    lxc-start -n <container name>
+```sh
+lxc-start -n <container name>
+```
 
 Using the `lxc-start` command as shown above is fine for initial testing of your container, to ensure that it boots up as you expect. However, you won't want to run your containers long-term like this, as the container "takes over" your console with this command. Instead, you want the container to run in the background, detached from the console. To do that, you'll add the "-d" parameter to the command:
 
-    lxc-start -d -n <container name>
+```sh
+lxc-start -d -n <container name>
+```
 
 This launches your container in the background. To attach to the console of the container, you can use the `lxc-console` command:
 
-    lxc-console -n <container name>
+```sh
+lxc-console -n <container name>
+```
 
 To escape out of the container's console back to the host's console, use the "Ctrl-a q" key sequence (press Ctrl-a, release, then press q).
 
 You can freeze (pause) a container using the `lxc-freeze` command:
 
-    lxc-freeze -n <container name>
+```sh
+lxc-freeze -n <container name>
+```
 
 Once frozen, you can unfreeze (resume) a container just as easily with the `lxc-unfreeze` command:
 
-    lxc-unfreeze -n <container name>
+```sh
+lxc-unfreeze -n <container name>
+```
 
 You can also make a clone (a copy) of a container:
 
-    lxc-clone -o <existing container> -n <new container name>
+```sh
+lxc-clone -o <existing container> -n <new container name>
+```
 
 On Ubuntu, LXC is configured by default to start containers in `/var/lib/lxc`. Each container will have a directory there. In a container's directory, that container's configuration will be stored in a file named `config`. I'm not going to provide a comprehensive breakdown of the settings available in the container's configuration (this is a _brief_ introduction), but I will call out a few that are worth noting in my opinion:
 
@@ -77,7 +97,7 @@ On Ubuntu, LXC is configured by default to start containers in `/var/lib/lxc`. E
 
 * The configuration option `lxc.rootfs` specifies where the container's root file system is stored. By default it is `/var/lib/lxc/<container name>/rootfs`.
 
-There are a great deal of other configuration options, naturally; check out `man 5 lxc.conf` for more information. You may also find [this Ubuntu page on LXC](https://help.ubuntu.com/lts/serverguide/lxc.html) to be helpful; I certainly did. 
+There are a great deal of other configuration options, naturally; check out `man 5 lxc.conf` for more information. You may also find [this Ubuntu page on LXC](https://help.ubuntu.com/lts/serverguide/lxc.html) to be helpful; I certainly did.
 
 I'll have more posts on Linux containers in the future, but this should suffice to at least help you get started. If you have any questions, any suggestions for additional resources other readers should consider, or any feedback on the post, please add your comment below. I'd love to hear from you (courteous comments are always welcome).
 

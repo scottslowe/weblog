@@ -80,7 +80,7 @@ The problem in this particular case, though, is that I didn't need a dependency 
 
 With the dependency on the subclass, the code to define the virtual users looks like this:
 
-``` puppet
+```puppet
 # Used to define virtual users on Puppet-managed systems
 # Includes subclass dependency on accounts::config
 #
@@ -100,6 +100,5 @@ The use of the `require` statement creates a dependency not on a single resource
 It's such a simple solution I can't believe I didn't see it at first, and when it was pointed out to me (via the #puppet IRC channel, thanks), I had a "Duh!" moment. Even though it is a simple and straightforward solution, if I overlooked it then others might overlook it as well---a problem that hopefully this blog post will help fix.
 
 As always, I welcome feedback from readers, so feel free to weigh in with questions, clarifications, or corrections. Courteous comments are always welcome!
-
 
 [1]: {{< relref "2012-11-25-using-puppet-for-account-management.md" >}}

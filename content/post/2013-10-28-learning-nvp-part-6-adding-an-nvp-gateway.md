@@ -17,15 +17,15 @@ wordpress_id: 3319
 
 Welcome to part 6 of the Learning NVP blog series. In this part, I'm going to show you how to add an NVP gateway appliance to your NVP environment. In future posts, you'll use this NVP gateway to host either L2 or L3 gateway services (more on those in a moment). First, though, let's take a quick recap of what's transpired so far:
 
-  * In part 1, I provided a [high-level overview of NVP][1] and its core components.
+* In part 1, I provided a [high-level overview of NVP][1] and its core components.
 
-  * In part 2, I showed you how to [build NVP controllers and configure them into a controller cluster][2].
+* In part 2, I showed you how to [build NVP controllers and configure them into a controller cluster][2].
 
-  * In part 3, you saw how to [install and configure NVP Manager][3], a web-based GUI that you can use to configure certain aspects of NVP.
+* In part 3, you saw how to [install and configure NVP Manager][3], a web-based GUI that you can use to configure certain aspects of NVP.
 
-  * In part 4, I walked you through the process of [adding hypervisors to NVP][4].
+* In part 4, I walked you through the process of [adding hypervisors to NVP][4].
 
-  * In part 5, I showed you how to [create a logical network][5] that could be used to connect VMs to each other independent of the underlying physical network topology.
+* In part 5, I showed you how to [create a logical network][5] that could be used to connect VMs to each other independent of the underlying physical network topology.
 
 In this part, I'm going to walk you through setting up an NVP gateway appliance. If you'll recall from our [introductory high-level architecture overview][1], the role of the gateway is to provide L2 (switched/bridged) and L3 (routed) connectivity between logical networks and physical networks. So, adding a gateway would then enable you to extend the [logical network you created in part 5][5] to include either L2 or L3 connectivity to the outside world.
 

@@ -32,7 +32,7 @@ In looking at these steps, it occurs to me that there are 2 places where we can 
 
 Obviously, how we tackle automating the task of filing messages away according to some system will depend on the system we use. I use a system whereby all messages are filed away by year. All the messages in 2012 get archived into a 2012 folder (or mailbox), messages from 2013 are filed into a 2013 mailbox, etc. To help simplify this process, I wrote an AppleScript that takes the selected messages and moves them to a folder. Here's the script (click [here](https://gist.github.com/scottslowe/5788136) for an option to download the script):
 
-``` applescript
+```applescript
 -- This script moves messages to a mailbox for the current year
 -- Set some default values to be used later in the script
 property theMailbox : "Archive"
@@ -63,7 +63,7 @@ I think part of the reason my people use lots of different folders if that they 
 
 As I said, I archive all messages for a given year into a single mailbox. To help with the categorization of messages (or to help provide additional context to every message), I assign at least one keyword to every message. Where applicable, I also assign a project. You can create rules in Mail.app that will automatically assign keywords and/or projects, and I highly recommend that. However, you'll also want to make it very easy to assign keywords manually. Fortunately, MailTags supports AppleScript, so I was able to write a quick script to do this (click [here](https://gist.github.com/scottslowe/5788104) for an option to download the script):
 
-``` applescript
+```applescript
 -- This script assigns MailTags keywords to the selected messages
 -- Set some default values to be used later in the script
 property assignedKeywords : {"Personal"}
@@ -87,13 +87,14 @@ end run
 
 If you want to assign multiple keywords, just modify the script to change the value of `assignedKeywords` to something like this:
 
-    {"Keyword1", "Keyword2", "Keyword3"}
+```text
+{"Keyword1", "Keyword2", "Keyword3"}
+```
 
 Naturally, you could modify this script to assign a project (I'll leave that as an exercise for the reader), and you could use FastScripts to create an application-specific keyboard shortcut to run the script. This means that you can easily tag your messages with one keystroke, then file them away with another.
 
 When used in conjunction with a good set of rules, I think these scripts can really make step #3 of the four-step mail processing pipeline a lot easier.
 
 Of course, this is just how _I_ work, and your own workflow might be very different. I encourage you, though, to examine your workflow and see if there are ways you could "reduce the friction." I hope this post provides some ideas to help make that happen.
-
 
 [1]: {{< relref "2013-06-14-reducing-the-friction-using-keyboard-shortcuts.md" >}}

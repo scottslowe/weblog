@@ -41,21 +41,29 @@ To configure OVS manually, you would need to:
 
 To identify which vnet port needs to be modified, you'll want to figure out the guest domain interface(s) that is/are connected to the vnet port. You can do this by using this command (substitute the desired vnet port name in place of `vnet0` in the following command):
 
-    ovs-vsctl list interface vnet0
+```sh
+ovs-vsctl list interface vnet0
+```
 
 In the output of the command, look for the `external_ids` line; it will contain an entry called "attached-mac", and that represents the MAC address of the interface in the guest domain OS attached to this particular vnet port. You can compare this to the output of `ip addr list` or `ifconfig -a` in Ubuntu to find a matching MAC address in the guest domain. Correlating the two values allows you to determine which guest domain is attached to which vnet port, and then you can modify the correct vnet port appropriately.
 
 You'd modify the vnet port using this command:
 
-    ovs-vsctl set port vnet0 trunks=20,30,40
+```sh
+ovs-vsctl set port vnet0 trunks=20,30,40
+```
 
 You'd want to substitute the appropriate values for `vnet0` and the VLAN IDs that you want passed up to the guest domain. Once you've made the change, you can verify the changes using this command (replacing `vnet0` with the correct port):
 
-    ovs-vsctl list port vnet0
+```sh
+ovs-vsctl list port vnet0
+```
 
 Note that if you want the guest domain to receive both untagged (native VLAN) traffic as well as tagged (trunked) traffic, there is an additional setting you must set:
 
-    ovs-vsctl set port vnet0 vlan_mode=native-untagged
+```sh
+ovs-vsctl set port vnet0 vlan_mode=native-untagged
+```
 
 With this setting in place, the OS installed into the guest domain will be able to communicate over the untagged (native) VLAN as well as using VLAN tags.
 
@@ -65,7 +73,7 @@ If the manual method of configuring OVS seems a bit cumbersome, using the libvir
 
 Basically, you'll follow the configuration outlined in [this blog post][2] to create a libvirt network that corresponds to an OVS bridge. Here's an example of the XML code to accomplish this task (click [here][gist-1] for an option to download this code snippet):
 
-``` xml
+```xml
 <network>
   <name>ovs-network</name>
   <forward mode='bridge'/>
@@ -104,7 +112,7 @@ Once you've followed the steps outlined above and have OVS configured correctly,
 
 Assuming that eth0 is the interface in the guest domain that is receiving tagged traffic from OVS, this snippet in `/etc/network/interfaces` will create and configure a VLAN interface (click [here][gist-2] for an option to download this snippet):
 
-``` text
+```text
 auto eth0.20
 iface eth0.20 inet static
   vlan-raw-device eth0
@@ -121,7 +129,6 @@ You can repeat this configuration for multiple VLAN interfaces.
 ## Use Case
 
 I'll have to admit that I can't immediately think of some useful use cases for this sort of configuration. At first glance, you might think that it would be useful in situations where you need logical separation, but I think there are better ways than VLANs to accomplish this task (and those ways are probably simpler). I primarily set out to document this in order to better solidify my knowledge of how OVS works and is configured. However, I'd be happy to hear from others on what they think might be interesting or useful use cases for this sort of configuration. Feel free to add your thoughts in the comments below. Courteous comments are always welcome!
-
 
 [gist-1]: https://gist.github.com/scottslowe/4057683
 [gist-2]: https://gist.github.com/scottslowe/5658227

@@ -39,38 +39,44 @@ The basic gist of the RHEL-OVS integration is support for the use of the scripts
 
 Let's start with a very basic example. Let's say that you want to create a single OVS bridge named `ovsbr0`. To do that, you'd create a file named `ifcfg-ovsbr0` in the `/etc/sysconfig/network-scripts` directory, and make the contents look like this:
 
-    DEVICE="ovsbr0"
-    ONBOOT="yes"
-    DEVICETYPE="ovs"
-    TYPE="OVSBridge"
-    BOOTPROTO="none"
-    HOTPLUG="no"
+```text
+DEVICE="ovsbr0"
+ONBOOT="yes"
+DEVICETYPE="ovs"
+TYPE="OVSBridge"
+BOOTPROTO="none"
+HOTPLUG="no"
+```
 
 Now let's say that you want to create a link aggregate on that bridge. To create a link aggregate on `ovsbr0` (the bridge you just created), create a file named `ifcfg-bond0` in the same directory, and make its contents look like this:
 
-    DEVICE="bond0"
-    ONBOOT="yes"
-    DEVICETYPE="ovs"
-    TYPE="OVSBond"
-    OVS_BRIDGE="ovsbr0"
-    BOOTPROTO="none"
-    BOND_IFACES="eth0 eth1"
-    OVS_OPTIONS="bond_mode=balance-tcp lacp=active"
-    HOTPLUG="no"
+```text
+DEVICE="bond0"
+ONBOOT="yes"
+DEVICETYPE="ovs"
+TYPE="OVSBond"
+OVS_BRIDGE="ovsbr0"
+BOOTPROTO="none"
+BOND_IFACES="eth0 eth1"
+OVS_OPTIONS="bond_mode=balance-tcp lacp=active"
+HOTPLUG="no"
+```
 
 Note that this is an LACP-enabled link aggregate, so you'll also have to configure your physical switch appropriately.
 
 Finally, suppose that you want to create an internal interface (it will appear as a physical interface to Linux, but is hosted on OVS) across which you can run your management traffic. No problem! Just create a file named `ifcfg-mgmt0` and make the contents of the file look like this:
 
-    DEVICE="mgmt0"
-    BOOTPROTO="static"
-    ONBOOT="yes"
-    DEVICETYPE="ovs"
-    TYPE="OVSIntPort"
-    IPADDR=10.11.12.13
-    NETMASK=255.255.255.0
-    OVS_BRIDGE="ovsbr0"
-    HOTPLUG="no"
+```text
+DEVICE="mgmt0"
+BOOTPROTO="static"
+ONBOOT="yes"
+DEVICETYPE="ovs"
+TYPE="OVSIntPort"
+IPADDR=10.11.12.13
+NETMASK=255.255.255.0
+OVS_BRIDGE="ovsbr0"
+HOTPLUG="no"
+```
 
 Each of these scripts will create the corresponding structures/configurations within OVS. **There is a drawback, however.** In order for these changes to take effect, you must restart the network (perform a `service network restart`). This doesn't appear to be an OVS limitation of any sort; if you've read any of the other OVS posts, you know that you can make these changes live via the `ovs-vsctl` command. Instead, it simply appears to be a limitation of the fact that these scripts are only evaluated during a network stop/start event.
 
@@ -94,7 +100,6 @@ Once these scripts have been evaluated, though, you should end up with a configu
 Given the limitation, I can imagine that a natural question to ask would be, "Why use this integration, which requires a network restart, when you could just make the configuration changes yourself?" Excellent question. I see this as a way of establishing a "baseline" configuration for OVS, upon which you could (dynamically) add all the other configurations you need. In addition, because the base OVS configuration exists as a set of files, this opens up some other interesting possibilities. I'll explore those possibilities in a future post.
 
 As always, courteous comments are welcome, so feel free to add your questions, thoughts, corrections, or clarifications in the comments below.
-
 
 [1]: {{< relref "2013-02-07-looking-ahead-my-2013-projects.md" >}}
 [2]: {{< relref "2013-01-16-building-libvirt-1-0-1-rpms-for-centos-6-3.md" >}}

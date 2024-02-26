@@ -32,11 +32,13 @@ With these assumptions out of the way, let's look at how you would set this up.
 
 First, you'll create a custom policy routing table, as outlined [here][1]. I'll use the name "tunnel" for my new table:
 
-    echo 200 tunnel >> /etc/iproute2/rt_tables
+```sh
+echo 200 tunnel >> /etc/iproute2/rt_tables
+```
 
 Next, you'll need to modify `/etc/network/interfaces` for the `tep0` interface so that a custom policy routing rule and custom route are installed whenever this interface is brought up. The new configuration stanza would look something like this:
 
-```
+```text
 auto tep0
 iface tep0 inet static
   address 192.168.200.10

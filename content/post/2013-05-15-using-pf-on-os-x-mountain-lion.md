@@ -47,14 +47,16 @@ I'll assume you're going to use option #2. What you'll need, then, are (at a min
 
 Since we're bypassing the existing configuration file, all you really need is an extremely simple configuration file that points to your anchor and loads it, like this:
 
-    anchor "org.scottlowe.pf"
-    load anchor "org.scottlowe.pf" from "/etc/pf.anchors/org.scottlowe.pf.rules"
+```text
+anchor "org.scottlowe.pf"
+load anchor "org.scottlowe.pf" from "/etc/pf.anchors/org.scottlowe.pf.rules"
+```
 
 The other file you need has the actual options and rules that will be passed to `pf` when it starts. You can get fancy here and use a separate file to define macros and tables, or you can bundle the macros and tables in with the rules. Whatever approach you take, be **sure** that you have the commands in this file in the right order: options, normalization, queueing, translation, and filtering. Failure to put things in the right order will cause `pf` not to enable and will leave your system without this additional layer of network protection.
 
 A _very_ simple set of rules in an anchor might look something like this (click [here](https://gist.github.com/scottslowe/5581710) for an option to download this code snippet):
 
-``` text
+```text
 # Options
 set block-policy drop
 set fingerprints "/etc/pf.os"
@@ -96,7 +98,9 @@ Once you have the configuration file in place and at least one anchor defined wi
 
 _However_, there is one additional thing you might want to do first---test your rules to be sure everything is correct. Use this command in a terminal window while running as an administrative user:
 
-    sudo pfctl -v -n -f <path to configuration file>
+```sh
+sudo pfctl -v -n -f <path to configuration file>
+```
 
 If this command reports errors, go back and fix them before proceeding.
 
@@ -106,7 +110,7 @@ Creating the launchd item simply involves creating a properly-formatted XML file
 
 Here's a launchd item you might use for `pf` (click [here](https://gist.github.com/scottslowe/5581726) for an option to download this code snippet):
 
-``` xml
+```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer/DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -149,6 +153,5 @@ Once this file is in place with the right ownership, you can either use `launchc
 Finally, it's important to note that I found a few different web sites helpful during my experimentations with `pf` on OS X. [This write-up](http://krypted.com/mac-os-x/a-cheat-sheet-for-using-pf-in-os-x-lion-and-up/) was written with Lion in mind, but applies equally well to Mountain Lion, and [this site](https://calomel.org/pf_config.html)--while clearly focused on OpenBSD and FreeBSD---was nevertheless quite helpful as well.
 
 It should go without saying, but I'll say it nevertheless: courteous comments are welcome! Feel free to add your thoughts, ideas, questions, or corrections below.
-
 
 [1]: {{< relref "2012-04-05-setting-up-ipfw-on-mac-os-x.md" >}}

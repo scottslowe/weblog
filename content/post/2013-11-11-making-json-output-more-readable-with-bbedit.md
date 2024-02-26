@@ -27,11 +27,13 @@ First, let's take a look at some JSON-serialized output. Here's [a GitHub gist][
 
 As you can see, it _is_ human-readable, but just barely. How can we make this a bit easier for humans to read and parse? Well, it turns out that OS X (and probably most recent flavors of Linux) come with a version of Python pre-installed, and the pre-installed version of Python comes with the ability to "prettify" (make more human readable) JSON text. (In the case of OS X 10.8 "Mountain Lion", the pre-installed version of Python is version 2.7.2.) With grateful thanks to the folks on Twitter who introduced me to this trick, the command you would use in this instance is as follows:
 
-    python -m json.tool
+```sh
+python -m json.tool
+```
 
-Very simple, right? To turn this into a BBEdit Text Filter, we need only wrap this into a very simple shell script, such as this:
+Very simple, right? To turn this into a BBEdit Text Filter, we need only wrap this into a very simple shell script, such as this (GitHub gist [here][gist-2]):
 
-``` bash
+```bash
 #!/bin/sh
 
 python -m json.tool
@@ -39,7 +41,7 @@ python -m json.tool
 
 Place this script (or a link to this script) in the `~/Library/Application Support/BBEdit/Text Filters` directory, restart BBEdit, and you should be good to go. Now you can copy and paste the output from an API call like the output above, run it through this text filter, and get output that looks like this:
 
-``` json
+```json
 {
     "result_count": 3, 
     "results": [
