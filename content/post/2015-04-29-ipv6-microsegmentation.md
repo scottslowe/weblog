@@ -41,5 +41,4 @@ So why bother with all these solutions? First, they remove all IPv6 first-hop se
 
 With that, Ivan wraps up the session.
 
-
 [link-1]: http://ipspace.net

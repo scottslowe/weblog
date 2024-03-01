@@ -25,7 +25,7 @@ At DockerCon 2015 in San Francisco, I had the opportunity to meet with a few ven
 
 ## SignalFx
 
-[SignalFx][link-3] is the second of the two analytics-focused SaaS offerings I encountered this week. Unlike Sumo Logic, SignalFx's key differentiator is real-time, in-stream data analytics, especially for metrics coming from instrumented, cloud-native applications. Log data is certainly important, but aggregating logs and letting users slice/dice/query that data isn't what SignalFx is really trying to do. Instead, they're focusing on companies building next-gen applications, providing a SaaS offering that will enable developers at these companies to build instrumentation into their next-gen apps and have the metrics from that instrumentation provide greater visibility into behaviors, trends, issues, etc. In other words, the real power of SignalFx comes when an organization wants to gain deeper real-time visibility into their applications *and* are willing to have their developers add instrumentation to make that happen. Thus, the "sweet spot" of the market for SignalFx are the companies where that can happen. If you're a shop with lots of COTS software, this isn't for you. However, if you're a shop where developers consume resources from a private cloud and need to support the apps you're writing and deploying, this might be an option to explore.
+[SignalFx][link-3] is the second of the two analytics-focused SaaS offerings I encountered this week. Unlike Sumo Logic, SignalFx's key differentiator is real-time, in-stream data analytics, especially for metrics coming from instrumented, cloud-native applications. Log data is certainly important, but aggregating logs and letting users slice/dice/query that data isn't what SignalFx is really trying to do. Instead, they're focusing on companies building next-gen applications, providing a SaaS offering that will enable developers at these companies to build instrumentation into their next-gen apps and have the metrics from that instrumentation provide greater visibility into behaviors, trends, issues, etc. In other words, the real power of SignalFx comes when an organization wants to gain deeper real-time visibility into their applications _and_ are willing to have their developers add instrumentation to make that happen. Thus, the "sweet spot" of the market for SignalFx are the companies where that can happen. If you're a shop with lots of COTS software, this isn't for you. However, if you're a shop where developers consume resources from a private cloud and need to support the apps you're writing and deploying, this might be an option to explore.
 
 ## ClusterHQ
 
@@ -34,8 +34,6 @@ At DockerCon 2015 in San Francisco, I had the opportunity to meet with a few ven
 ## Skyport Systems
 
 I also had a very brief conversation with Doug Gourlay and Nils Swart from [Skyport Systems][link-5]. They are doing something _very_ interesting with regards to---to use their phrase---hyper-secured infrastructure. I won't go into great detail here, but I'm looking forward to talking with them again to gain more details and a better understanding of what their solution looks like. Stay tuned for more.
-
-
 
 [link-1]: http://stackengine.com
 [link-2]: https://www.sumologic.com

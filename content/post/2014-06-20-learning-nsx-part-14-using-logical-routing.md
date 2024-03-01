@@ -60,7 +60,7 @@ One key component of NSX's logical routing functionality that you _can't_ see in
 
 [![List of flows in OVS](/public/img/part-14-ovs-flow-list-small.png)](/public/img/part-14-ovs-flow-list.png)
 
-_(Click the image above for a larger version.)_
+(Click the image above for a larger version.)
 
 These flow rules include actions like re-writing source and destination MAC addresses and decrementing the TTL, both tasks carried out by "normal" routers when routing traffic between networks. These flow rules also provide some insight into the differences between a logical router and a distributed logical router. While both are logical entities, the way in which the data plane is implemented is different for each:
 
@@ -90,11 +90,15 @@ When using the web-based Dashboard user interface, you can only create centraliz
 
 On a system with the `neutron` CLI client installed, you can create a logical router like this:
 
-    neutron router-create <router name>
+```sh
+neutron router-create <router name>
+```
 
 This creates a centralized logical router. If you want to create a distributed logical router, it's as simple as this:
 
-    neutron router-create <router name> --distributed True
+```sh
+neutron router-create <router name> --distributed True
+```
 
 The `neutron router-show` command will return output about the specified logical router; that output will tell you if it is a distributed logical router.
 
@@ -102,7 +106,7 @@ The `neutron` CLI client also offers commands to update a logical router's routi
 
 If you want to create a logical router as part of a stack created via OpenStack Orchestration (Heat), you could use this YAML snippet in a HOT-formatted template to create a distributed logical router (click [here](https://gist.github.com/scottslowe/6affeae4551e4fb0aafb) for an option to download this code snippet):
 
-``` yaml
+```yaml
 heat_template_version: 2013-05-23
 description: >
   A simple Heat template to create a distributed logical router.

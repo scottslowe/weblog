@@ -35,7 +35,7 @@ The "trick" here lies in the Ansible configuration file and the Ansible inventor
 
 Here's a very generic Ansible configuration file I use:
 
-```
+```text
 [defaults]
 inventory = ./hosts
 private_key_file = /Users/slowe/.vagrant.d/insecure_private_key
@@ -60,13 +60,14 @@ The complete workflow looks something like this:
 * From that directory, run `vagrant up` to create the VMs defined in the `Vagrantfile`.
 * Once the VMs are provisioned, run Ansible ad-hoc commands (or run playbooks using `ansible-playbook`). For example, I wanted to verify some of the facts that are gathered by Ansible across various Linux distributions. I can show that information with this command:
 
-        ansible -m setup all
+    ```sh
+    ansible -m setup all
+    ```
 
     No need to specify the username (found in the configuration file named `ansible.cfg` in the same directory), the authentication method (it will use the private SSH key from the configuration file), or the inventory (also supplied by the configuration file). Just run Ansible and be done.
 * When you're done with the environment, just run `vagrant destroy`. If you want to start with a clean, fresh environment, then `vagrant up` again and you're off to the races.
 
 As I said earlier, I don't think there's anything terribly unique here, but it _is_ a pretty useful configuration (for me, at least). Hopefully others will find it useful as well.
-
 
 [link-1]: http://www.ansible.com/home
 [link-2]: https://www.vagrantup.com

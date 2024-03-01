@@ -20,7 +20,6 @@ url: /2015/09/22/spousetivites-vmworld-emea/
 
 For more detailed descriptions of the activities, I encourage you to visit [the Spousetivities site][link-3]. When you're ready to get signed up, head on over to [the registration page][link-1]. These are some pretty great activities!
 
-
 [link-1]: https://www.eventbrite.com/e/vmworld-barcelona-spousetivities-2015-tickets-4118665038
 [link-2]: http://spousetivities.com
 [link-3]: http://spousetivities.com/2015/09/lets-go-to-barcelona/

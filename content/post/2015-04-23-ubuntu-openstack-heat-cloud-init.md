@@ -119,4 +119,3 @@ As I said at the beginning of this post, this might be something you already kno
 
 [link-1]: http://cloudinit.readthedocs.org/en/latest/
 [link-2]: https://wiki.openstack.org/wiki/Heat
-[link-3]: http://docs.openstack.org/user-guide/content/user-data-boot-scripts-and-cloud-init.html

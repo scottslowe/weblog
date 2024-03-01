@@ -52,5 +52,4 @@ Here's an important takeaway: **Every failure should improve the procedures.** L
 
 And with that, Denise opens the floor to questions and the session wraps up.
 
-
 [link-1]: https://twitter.com/denisefishburne/

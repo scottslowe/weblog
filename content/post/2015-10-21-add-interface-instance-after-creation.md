@@ -56,7 +56,5 @@ I found the following sites extremely helpful in figuring out the commands shown
 [OpenStack Interface Hot Plugging][link-1]  
 [Configure Multiple Network Interfaces on an OpenStack Instance][link-2]  
 
-
-
 [link-1]: http://blog.aaronorosen.com/openstack-interface-hot-plugging/
 [link-2]: http://thornelabs.net/2014/09/03/configure-multiple-network-interfaces-on-an-openstack-instance.html

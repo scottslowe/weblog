@@ -21,7 +21,7 @@ In any case, enough about that---let's start talking about Paw. Once you downloa
 
 ![Blank Paw document window](/public/img/blank-paw-window-small.png)
 
-_(Click [here][link-2] for a full-size version of the image.)_
+(Click [here][link-2] for a full-size version of the image.)
 
 On the left-most side of the window are the various URL requests that are found in this Paw document (each Paw document is a collection of URL requests, each with its own parameters, headers, etc.). The center pane has the details for the selected URL request, and the right-most pane shows the response of the URL request (once you've sent it to the remote server).
 
@@ -32,8 +32,10 @@ To provide some continuity with my other API-related posts, I'll use the OpenSta
 1. In the URL section in the middle pane, change "GET" to "POST" and put in the URL for your Keystone service endpoint (it will be something like `http://192.168.100.100:5000/v2.0/tokens`).
 2. Under the URL section, select "Body" and enter the JSON text that contains the username, password, and tenant. The JSON text would look something like this:
 
-        { "auth": { "passwordCredentials": { "username": "demo",
-        "password": "password" }, "tenantName": "demo" } }
+    ```json
+    { "auth": { "passwordCredentials": { "username": "demo",
+    "password": "password" }, "tenantName": "demo" } }
+    ```
 
 3. Click "Headers" and add a header with the name "Content-Type" and the value "application/json". (These values should auto-populate.)
 4. Assuming you have the cURL Code Generator installed, change "HTTP" to "cURL", and Paw will show you the cURL command line that corresponds to the request you just built.
@@ -41,7 +43,7 @@ To provide some continuity with my other API-related posts, I'll use the OpenSta
 
 ![URL request and response](/public/img/paw-request-response-small.png)
 
-_(Click [here][link-3] for a full-size version of the image.)_
+(Click [here][link-3] for a full-size version of the image.)
 
 Paw has actually taken the response from the server and parsed it into objects, but you can see the JSON text by changing "JSON" to "JSON Text", or even to "Text" to see the unformatted response (the "Raw" view also includes HTTP headers). This will give you an idea of the response from the server. If you're unfamiliar with JSON text, you may find viewing the parsed response easiest. Switch back to "JSON", and you can easily find the token ID, which you'll need for future URL requests.
 
@@ -63,8 +65,6 @@ This should give you a rough idea of what you could do, but I'll carry it out a 
 Pretty cool, eh? Along with the cURL Code Generator, you can see the `curl` commands used to make each request. Install the Python + Requests Code Generator, and you can see Python code that will generate the HTTP request. Install the HTTPie Code Generator, and you can see the command line for HTTPie that would generate this request. This is one of the key reasons I like Paw for someone like me who is just learning his way around various languages and command-line tools. Using the response parser, you can get a better familiarity with JSON objects and how to use tools like `jq` to filter the JSON response.
 
 Anyway, I hope this has been helpful in some way. I know that I'll likely find Paw---and similar tools---very helpful as I continue on my full-stack journey.
-
-
 
 [link-1]: https://luckymarmot.com/paw
 [link-2]: /public/img/blank-paw-window.png

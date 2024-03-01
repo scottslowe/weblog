@@ -31,5 +31,4 @@ I look forward to meeting you there!
 
 **UPDATE:** It turns out the pool I had originally chosen isn't accessible to the general public, so we need to move the location. I've updated the post to reflect that we are now meeting at the koi pond directly in front of the Grand Prince Hotel Takanawa (building #4, the orange building on the Summit map).
 
-
 [link-1]: https://www.openstack.org/summit/tokyo-2015/campus-maps/

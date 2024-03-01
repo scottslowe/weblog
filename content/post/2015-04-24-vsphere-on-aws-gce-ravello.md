@@ -45,7 +45,6 @@ So, what was the result of our project?
 
 All in all, it was a pretty nice project in which to be involved, and it demonstrated Ravello's ability to host sizable vSphere environments through their platform. I'm keen to see how the community and the customers use this functionality from Ravello.
 
-
 [link-1]: http://www.ravellosystems.com/news/nested-esxi-cloud-launch
 [link-2]: http://www.virtuallyghetto.com/2015/04/running-nested-esxi-vsan-home-lab-on-ravello.html
 [link-3]: http://vinfrastructure.it/2015/04/ravello-system-and-its-lab-as-a-service-solution/

@@ -32,7 +32,9 @@ Here are the details on using Vagrant with OpenStack.
 
 First, install the OpenStack provider plugin (obviously, this only needs to be done once):
 
-    vagrant plugin install vagrant-openstack-provider
+```sh
+vagrant plugin install vagrant-openstack-provider
+```
 
 Next, create a `Vagrantfile` with the right settings. The full list of settings for the OpenStack provider is available from [the provider's GitHub page][link-3], but here are a few of the highlights (all these fall under the `config.vm.provider` scope):
 
@@ -88,7 +90,6 @@ I tested this combination using the following software versions:
 * The OpenStack cloud was running the Juno release on Ubuntu 14.04 LTS, KVM hypervisors, and VMware NSX for networking.
 
 As always, feel free to hit me up on Twitter (or drop me an e-mail) if you have any questions or comments.
-
 
 [link-1]: http://www.openstack.org/
 [link-2]: http://www.vagrantup.com/

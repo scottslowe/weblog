@@ -38,15 +38,20 @@ You're going to use a couple of different command-line options:
 
 If you want to embed the authentication credentials into the command line, then your command would look something like this:
 
-    curl -d '{"auth":{"passwordCredentials":{"username": "admin",
-    "password": "secret"},"tenantName": "customer-A"}}'
-    -H "Content-Type: application/json" http://192.168.100.100:5000/v2.0/tokens
+```sh
+curl -d '{"auth":{"passwordCredentials":{"username": "admin",
+"password": "secret"},"tenantName": "customer-A"}}'
+-H "Content-Type: application/json" http://192.168.100.100:5000/v2.0/tokens
+```
 
 I've wrapped the text above for readability, but on the actual command line it would all run together with no breaks. (So don't try to copy and paste, it probably won't work.) You'll naturally want to substitute the correct values for the username, password, tenant, and OpenStack Identity URL.
 
 As you might have surmised by the use of the "-H" header in that command, the authentication data you're passing via the "-d" parameter is actually JSON. (Run it through `python -m json.tool` and see.) Because it's actually JSON, you could just as easily put this information into a file and pass it to the server that way. Let's say you put this information (which you could format for easier readability) into a file named `credentials.json`. Then the command would look something like this (you might need to include the full path to the file):
 
-    curl -d @credentials.json -H "Content-Type: application/json" http://192.168.100.100:35357/v2.0/tokens
+```sh
+curl -d @credentials.json -H "Content-Type: application/json" \
+http://192.168.100.100:35357/v2.0/tokens
+```
 
 What you'll get back from OpenStack---assuming your command is successful---is a wealth of JSON. I highly recommend piping the output through `python -m json.tool` as it can be difficult to read otherwise. (Alternately, you could pipe the output into a file.) Of particular usefulness in the returned JSON is a section that gives you a token ID. Using this token ID, you can prove that you've authenticated to OpenStack, which allows you to run subsequent commands (like listing tenants, users, etc.).
 
@@ -64,7 +69,10 @@ In this example, you'll need to use a different set of `curl` command-line optio
 
 Putting all this together, the command to authenticate to VMware NSX would look something like this (naturally you'd want to substitute the correct username and password where applicable):
 
-    curl --insecure -c cookies.txt -X POST -d 'username=admin&password;=admin' https://192.168.100.50/ws.v1/login
+```sh
+curl --insecure -c cookies.txt -X POST \
+-d 'username=admin&password;=admin' https://192.168.100.50/ws.v1/login
+```
 
 ## Example 3: Gathering Information from OpenStack
 
@@ -72,15 +80,21 @@ Once you've gotten an authentication token from OpenStack as I showed you in exa
 
 For example, let's say you wanted to list the instances for a particular tenant. Once you've authenticated, you'd want to get the ID for the tenant in question, so you'd need to ask OpenStack to give you a list of the tenants (you'll only see the tenants your credentials permit). The command to do that would look something like this:
 
-    curl -H "X-Auth-Token: <Token ID>" http://192.168.100.70:5000/v2.0/tenants
+```sh
+curl -H "X-Auth-Token: <Token ID>" http://192.168.100.70:5000/v2.0/tenants
+```
 
 The value to be substituted for token ID in the above command is returned by OpenStack when you authenticate (that's why it's important to pay attention to the data being returned). In this case, the data returned by the command will be a JSON-encoded list of tenants, tenant IDs, and tenant descriptions. From that data, you can get the ID of the tenant for whom you'd like to list the instances, then use a command like this:
 
-    curl -H "X-Auth-Token: <Token ID>" http://192.168.100.70:8774/v2/<Tenant ID>/servers
+```sh
+curl -H "X-Auth-Token: <Token ID>" http://192.168.100.70:8774/v2/<Tenant ID>/servers
+```
 
 This will return a stream of JSON-encoded data that includes the list of instances and each instance's unique ID---which you could then use to get more detailed information about that instance:
 
-    curl -H "X-Auth-Token: <Token ID>" http://192.168.100.70:8774/v2/<Tenant ID>/servers/<Server ID>
+```sh
+curl -H "X-Auth-Token: <Token ID>" http://192.168.100.70:8774/v2/<Tenant ID>/servers/<Server ID>
+```
 
 By and large, the API is reasonably well-documented; you just need to be sure that you are pointing the API call against the right endpoint. For example, authentication has to happen against the server running Keystone, which may or may not be the same server that is running the Nova API services. (In the examples I just provided, Keystone and the Nova API services are running on the same host, which is why the IP address is the same in the command lines.)
 
@@ -98,12 +112,14 @@ Getting information from VMware NSX using the RESTful API is very much like what
 
 When you put it all together, it looks something like this (substituting appropriate values where applicable):
 
-    curl --insecure -b cookies.txt -d @new-switch.json 
-    -H "Content-Type: application/json" -X POST https://192.168.100.50/ws.v1/lswitch
+```sh
+curl --insecure -b cookies.txt -d @new-switch.json \
+-H "Content-Type: application/json" -X POST https://192.168.100.50/ws.v1/lswitch
+```
 
 As I mentioned earlier, you're passing JSON-encoded data to the NSX controller; here are the contents of the `new-switch.json` file referenced in the above command example:
 
-``` json
+```json
 {
   "display_name": "test-lswitch", 
   "port_isolation_enabled": false, 

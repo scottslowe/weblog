@@ -18,33 +18,41 @@ If you're not familiar with JSON, I suggest having a look at [this non-programme
 
 Let's start by getting an authorization token for OpenStack, using the following `curl` command:
 
-    curl -d '{"auth":{"passwordCredentials":\
-    {"username": "admin","password": "secret"},\
-    "tenantName": "customer-A"}}' \
-    -H "Content-Type: application/json" \
-    http://192.168.100.100:5000/v2.0/tokens
+```sh
+curl -d '{"auth":{"passwordCredentials":\
+{"username": "admin","password": "secret"},\
+"tenantName": "customer-A"}}' \
+-H "Content-Type: application/json" \
+http://192.168.100.100:5000/v2.0/tokens
+```
 
 This will return a pretty fair amount of JSON in the response, and it presents the first opportunity to use `jq`. Let's say you _only_ wanted the authorization token, and not all the other output. Simply add the following `jq` command to the end of your `curl` request:
 
-    curl -d '{"auth":{"passwordCredentials":\
-    {"username": "admin","password": "secret"},\
-    "tenantName": "customer-A"}}' \
-    -H "Content-Type: application/json" \
-    http://192.168.100.100:5000/v2.0/tokens | \
-    jq '.[].token.id'
+```sh
+curl -d '{"auth":{"passwordCredentials":\
+{"username": "admin","password": "secret"},\
+"tenantName": "customer-A"}}' \
+-H "Content-Type: application/json" \
+http://192.168.100.100:5000/v2.0/tokens | \
+jq '.[].token.id'
+```
 
 This is just the tip of the iceberg for `jq`, though. Now that you have a token, let's get the list of tenants:
 
-    curl -H "X-Auth-Token: <Value from previous command>" \
-    -H "Content-Type: application/json" \
-    http://192.168.100.100:5000/v2.0/tenants
+```sh
+curl -H "X-Auth-Token: <Value from previous command>" \
+-H "Content-Type: application/json" \
+http://192.168.100.100:5000/v2.0/tenants
+```
 
 This gives you another opportunity show off what `jq` can do. We're primarily only interested in the name and ID of the tenants, so you can use `jq` to "reformat" the JSON output from OpenStack to include only that information. That's done with this snippet:
 
-    curl -H "X-Auth-Token: <Value from previous command>" \
-    -H "Content-Type: application/json" \
-    http://192.168.100.100:5000/v2.0/tenants | \
-    jq '.tenants[] | {name: .name, uuid: .id}'
+```sh
+curl -H "X-Auth-Token: <Value from previous command>" \
+-H "Content-Type: application/json" \
+http://192.168.100.100:5000/v2.0/tenants | \
+jq '.tenants[] | {name: .name, uuid: .id}'
+```
 
 This will provide output that will look something like this:
 
@@ -63,23 +71,29 @@ This makes it really easy to parse out the specific information you need.
 
 Now that you're armed with both an authorization token and a tenant ID, you can ask OpenStack to list the instances belonging to a tenant:
 
-    curl -H "X-Auth-Token: <Value from previous command>" \
-    -H "Content-Type: application/json"
-    http://192.168.100.100:8774/v2/<Tenant ID>/servers
+```sh
+curl -H "X-Auth-Token: <Value from previous command>" \
+-H "Content-Type: application/json"
+http://192.168.100.100:8774/v2/<Tenant ID>/servers
+```
 
 And once again, we can use `jq` to easily pull out just the information we want:
 
-    curl -H "X-Auth-Token: <Value from previous command>" \
-    -H "Content-Type: application/json" \
-    http://192.168.100.100:8774/v2/<Tenant ID>/servers | \
-    jq '.servers[] | {name: .name, uuid: .id}'
+```sh
+curl -H "X-Auth-Token: <Value from previous command>" \
+-H "Content-Type: application/json" \
+http://192.168.100.100:8774/v2/<Tenant ID>/servers | \
+jq '.servers[] | {name: .name, uuid: .id}'
+```
 
 This will pull out only the name and ID of the servers returned by the API call. Using one of the IDs returned by the call, you can then gather information about that instance, and use `jq` to format (pretty print) the resulting output:
 
-    curl -H "X-Auth-Token: <Value from previous command>" \
-    -H "Content-Type: application/json" \
-    http://192.168.100.100:8774/v2/<Tenant ID>/servers/<server ID> | \
-    jq '.'
+```sh
+curl -H "X-Auth-Token: <Value from previous command>" \
+-H "Content-Type: application/json" \
+http://192.168.100.100:8774/v2/<Tenant ID>/servers/<server ID> | \
+jq '.'
+```
 
 (For this last use case, you could also use `python -m json.tool`.)
 

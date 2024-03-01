@@ -19,7 +19,7 @@ I've written about [CoreOS][link-1] a fair amount (see [here][xref-1], [here][xr
 
 Now, you could probably go into your CoreOS instance and manually make these changes, but that's still thinking the old way. In addition to thinking about keeping persistent data separate, we (data center/cloud architects) also need to think about how we can keep configuration separate from instantiation. We _don't want_ configuration details tied into an instance of CoreOS; we want that configuration applied automatically. This is why I'm using cloud-init to make these changes---this allows you to just re-deploy your CoreOS instances and they'll pick up the new configuration.
 
-CoreOS has some pretty good [documentation][link-7], but as I set out to figure out how to mount an NFS share from a CoreOS instance there were a few missing details. This post, while focused on [GlusterFS][link-4], gave me the missing details I needed. It turns out that two pieces are required to make this work:
+CoreOS has some pretty good [documentation][link-7], but as I set out to figure out how to mount an NFS share from a CoreOS instance there were a few missing details. [This post][link-3], while focused on [GlusterFS][link-4], gave me the missing details I needed. It turns out that two pieces are required to make this work:
 
 1. Creating an NFS environment file that enables the rpc-statd daemon to start.
 2. Creating a systemd mount unit file to mount the NFS share.

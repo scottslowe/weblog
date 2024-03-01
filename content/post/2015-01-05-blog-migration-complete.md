@@ -16,7 +16,7 @@ As of right now, there are 2 outstanding issues:
 
 1. While all the content is here, what's **not** here is the comments (yet). I'm still working through some issues with Disqus, but I hope to have the issues resolved soon.
 
-2. Also, depending on when you read this, my original domain ("blog.scottlowe.org") may or may not be working with the new content. 
+2. Also, depending on when you read this, my original domain ("blog.scottlowe.org") may or may not be working with the new content.
 
 I appreciate your patience as I work through these issues.
 

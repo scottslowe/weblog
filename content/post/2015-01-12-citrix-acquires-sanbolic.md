@@ -17,6 +17,5 @@ It will be interesting to see how this acquisition affects the virtualization in
 
 So the big question becomes, "Will the Sanbolic acquisition change things?" Will the addition of a storage virtualization solution that supports multiple operating systems and multiple hypervisors give Citrix an edge that will allow it to gain the lead in the server virtualization or cloud computing markets? The pundits and experts---categories which do not include people like me---will make their predictions, but only time will tell for sure.
 
-
 [link-1]: http://www.citrix.com/news/announcements/jan-2015/citrix-acquires-sanbolic.html
 [link-2]: http://techcrunch.com/2015/01/12/citrix-scoops-up-virtual-storage-vendor-sanbolic/

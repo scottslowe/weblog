@@ -43,16 +43,18 @@ Perhaps an example will help. Let's take a look at an example Terraform configur
 
 This example Terraform configuration will perform the following tasks:
 
-- Create a new Neutron network and subnet.
-- Create a new Neutron logical router connected the new network and with an uplink to an external network.
-- Create a new instance, assign some security groups, and associate a floating IP.
+1. Create a new Neutron network and subnet.
+1. Create a new Neutron logical router connected the new network and with an uplink to an external network.
+1. Create a new instance, assign some security groups, and associate a floating IP.
 
 To do this, we'll split the information Terraform needs into four different files:
 
-    provider.tf.json
-    vars.tf.json
-    main.tf.json
-    output.tf.json
+```text
+provider.tf.json
+vars.tf.json
+main.tf.json
+output.tf.json
+```
 
 The `provider.tf.json` file contains information specific to Terraform's OpenStack provider. Splitting this into a separate file makes it easier to share the Terraform configuration without sharing confidential credentials.
 
@@ -64,7 +66,7 @@ Finally, the `output.tf.json` file contains information that should be output to
 
 Let's start with the `provider.tf.json` file. For the OpenStack provider, it should look something like this:
 
-``` json
+```json
 {
     "provider": {
         "openstack": {
@@ -77,11 +79,11 @@ Let's start with the `provider.tf.json` file. For the OpenStack provider, it sho
 }
 ```
 
-Technically, this file isn't required; Terraform can leverage OpenStack-specific environment variables (like OS_AUTH_URL and similar) that are typically required by the OpenStack command-line clients anyway.
+Technically, this file isn't required; Terraform can leverage OpenStack-specific environment variables (like `OS_AUTH_URL` and similar) that are typically required by the OpenStack command-line clients anyway.
 
 Next up is the variables file, `vars.tf.json`. This is the file that would change most between uses of the configuration, since it contains the information specific to that particular use case. Here's an example of what it might look like:
 
-``` json
+```json
 {
     "variable": {
         "image": {
@@ -113,7 +115,7 @@ Next up is the variables file, `vars.tf.json`. This is the file that would chang
 
 On its own, this file doesn't make a whole lot of sense. However, when viewed in light of the main configuration file (`main.tf.json`) it makes a lot more sense:
 
-``` json
+```json
 {
     "resource": {
         "openstack_networking_network_v2": {
@@ -196,7 +198,7 @@ Let's break this down a little bit:
 
 Somewhat anti-climactically, the final file in our solution is `output.tf.json`, which simply defines what information Terraform will display when the configuration is applied. Here's a sample `output.tf.json` file:
 
-``` json
+```json
 {
     "output": {
         "address": {

@@ -78,8 +78,6 @@ Welcome to Technology Short Take #58. This will be the last Technology Short Tak
 
 I had more stuff to share with you, but I constrained myself to publish this last Short Take of 2015 no later than today, so I'll stop here. I hope that you found something useful!
 
-
-
 [link-1]: http://dailyhypervisor.com/vmware-nsx-for-vsphere-6-1-step-by-step-installation/
 [link-2]: https://blogs.vmware.com/networkvirtualization/2015/12/vmware-nsx-vrealize-automation.html
 [link-3]: https://ahmetalpbalkan.com/blog/docker-swarm-azure/

@@ -13,7 +13,7 @@ title: Choosing CoreOS over Project Atomic
 url: /2015/03/08/choosing-coreos-over-atomic/
 ---
 
-Upon hearing [the news that Red Hat had released the Atomic Host variant of Red Hat Enterprise Linux][link-3], I decided that it would be a good idea for me to take a look at the [CentOS][link-5] flavor of the Atomic Host variant. In case you're unfamiliar, the Atomic Host variant is the result of [Project Atomic][link-2], which aimed to provide a container-optimized flavor of RHEL/CentOS/Fedora. This container-optimized flavor would leverage [rpm-ostree][link-1] for atomic system updates (hence the name) and come with [Docker][link-5] preinstalled. What I found, frankly, disappointed me.
+Upon hearing [the news that Red Hat had released the Atomic Host variant of Red Hat Enterprise Linux][link-3], I decided that it would be a good idea for me to take a look at the [CentOS][link-5] flavor of the Atomic Host variant. In case you're unfamiliar, the Atomic Host variant is the result of [Project Atomic][link-2], which aimed to provide a container-optimized flavor of RHEL/CentOS/Fedora. This container-optimized flavor would leverage [rpm-ostree][link-1] for atomic system updates (hence the name) and come with [Docker][link-4] preinstalled. What I found, frankly, disappointed me.
 
 Before I continue, I will make two very important disclaimers:
 
@@ -41,7 +41,6 @@ Since publishing this post, I've had the opportunity to speak with someone from 
 * Initial indications seem to point to an interaction between the use of rpm-ostree and cloud-init (version 0.7.5) as causing the cloud customization problems I described above. This isn't something the Red Hat team saw during their testing, but it's something into which they are currently looking.
 
 My sincere thanks goes to Steve Gordon for taking the time to talk with me about the issues that I uncovered.
-
 
 [link-1]: https://github.com/projectatomic/rpm-ostree
 [link-2]: http://www.projectatomic.io

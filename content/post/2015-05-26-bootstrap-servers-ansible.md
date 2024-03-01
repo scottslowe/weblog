@@ -35,14 +35,18 @@ Every Ansible playbook starts with this header, and these lines tell it against 
 
 Let's look at an example. I knew that my preseed file always created a user account (I'll call that account "admin"). I also knew that the preseed file assigned a standard password to that account. Now, I _could_ have used this account for Ansible to connect, but I preferred to have a dedicated account for Ansible. So, using a command like this (which I've line-wrapped for your readability):
 
-    ansible-playbook bootstrap.yml -i hosts -k -K --extra-vars \
-    "hosts=newhost.domain.com user=admin"
+```sh
+ansible-playbook bootstrap.yml -i hosts -k -K --extra-vars \
+"hosts=newhost.domain.com user=admin"
+```
 
 I could execute the `bootstrap.yml` playbook (which is the playbook that set up a dedicated Ansible user account, with `sudo` access and an SSH key for authentication) against _ONLY_ "newhost.domain.com", using the "admin" user that I knew existed as a result of the configuration in the preseed file. If, for whatever reason, I wanted to bring another system into Ansible, but it wasn't built with my preseed file, then I could easily just change the value of the `user` parameter---no problem. (The "-k" and "-K" parameters just tell Ansible to prompt for password this time around.)
 
 Once this playbook has executed though, the system now has a dedicated Ansible user account with `sudo` access and an SSH key for authentication, so no special variables or treatment is required for future playbook execution. If my main Ansible playbook is called `site.yml`, then I can execute it against all systems in my inventory with this command:
 
-    ansible-playbook -i hosts site.yml
+```sh
+ansible-playbook -i hosts site.yml
+```
 
 Ansible will connect to the hosts in the inventory file (named "hosts" in this case) and execute the playbook, using the default user name (the dedicated Ansible user account) and an SSH key for authentication. Because the bootstrap playbook has created all the necessary pieces, subsequent playbook runs require no additional user interaction whatsoever.
 

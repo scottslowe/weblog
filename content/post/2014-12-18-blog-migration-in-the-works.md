@@ -23,7 +23,6 @@ Once the migration actually happens (and I'll post something letting everyone kn
 
 Thanks for reading!
 
-
 [1]: http://lowescott.github.io
 [2]: https://github.com/poole/lanyon
 [3]: https://disqus.com

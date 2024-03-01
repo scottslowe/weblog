@@ -77,8 +77,6 @@ Welcome to Technology Short Take #56! In this post, I've collected a few links o
 
 I'd better wrap this up now, before it gets any longer (it's already long enough!). I'll have more links, articles, and posts for you next time around. Until then, thanks for reading!
 
-
-
 [link-1]: http://www.dasblinkenlichten.com/an-introduction-to-network-namespaces/
 [link-2]: https://blog.plein.org/2015/08/11/how-to-customize-docker0-network-options-in-docker/
 [link-3]: http://blog.russellbryant.net/2015/05/14/an-ez-bake-ovn-for-openstack/

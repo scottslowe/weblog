@@ -23,8 +23,6 @@ More details on these activities is available on [the Spousetivities site][link-
 
 The activities are funded in part by [VMware NSX][link-1] and [Blue Box][link-2] (their sponsorship helps reduce the cost of activities for participants). If you have a loved one (spouse, domestic partner, family member, friend, whatever!) traveling with you to Tokyo, head on over to [the registration page][link-3] to get them signed up for some great activities while you're at the Summit.
 
-
-
 [link-1]: http://www.vmware.com/products/nsx/
 [link-2]: https://www.blueboxcloud.com/
 [link-3]: https://www.eventbrite.com/e/spousetivities-at-openstack-summit-tokyo-2015-tickets-18814031274

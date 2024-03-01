@@ -75,8 +75,6 @@ Nothing this time around, but I'll keep searching for useful articles to include
 
 That's it for now. There's so much content out there; I'd love to include more but these posts are already long enough as it is. I guess I need to try to increase the frequency at which I publish these things!
 
-
-
 [link-1]: http://blog.bennycornelissen.nl/consul-the-end-of-the-cname/
 [link-2]: http://blog.nigelpoulton.com/docker-on-windows-state-of-play/
 [link-3]: http://blog.think-v.com/?page_id=3277

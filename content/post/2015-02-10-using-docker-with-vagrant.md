@@ -47,13 +47,17 @@ But what if you _don't want_ to use boot2docker? What if you'd rather use Ubuntu
 
 No problem---you can change this behavior by adding a line in the `Vagrantfile` that spins up your Docker containers. The specific line would look something like this (I'll provide more concrete examples later in the post):
 
-	docker.vagrant_vagrantfile = "path/to/host/VM/Vagrantfile"
+```sh
+docker.vagrant_vagrantfile = "path/to/host/VM/Vagrantfile"
+```
 
 That's right: all you have to do is create a `Vagrantfile` that spins up a VM running the Linux distribution of your choice, and then reference that `Vagrantfile` in the one that creates your Docker containers. Of course, since Vagrant expects the filename to be `Vagrantfile`, that means the file defining the host VM _must_ be in a different directory than the file defining the Docker containers. Hence, you need to specify the path to the host VM `Vagrantfile`. (There might be a way to combine the files, but I haven't figured out how.)
 
 Although Vagrant expects Docker to be running inside this host VM, it does provide a way to simplify that by allowing you to provision (install) Docker into the VM when you run `vagrant up` (much in the same way Vagrant can provision other things into a VM when it is first instantiated). This is done with a simple command in the host VM `Vagrantfile`:
 
-	config.vm.provision "docker"
+```sh
+config.vm.provision "docker"
+```
 
 Pretty straightforward, right? Let's take a look at a full example of a `Vagrantfile` that could be used to define a host VM for the Vagrant Docker provider:
 

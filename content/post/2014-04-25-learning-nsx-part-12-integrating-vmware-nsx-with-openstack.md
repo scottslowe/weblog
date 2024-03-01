@@ -31,7 +31,7 @@ Once you understand how the different components of Neutron and NSX will interac
 
 Let's take a more in-depth look at each of these steps.
 
-# Installing the VMware NSX plugin for Neutron
+## Installing the VMware NSX plugin for Neutron
 
 VMware distributes a set of compiled binary packages for OpenStack Neutron plus the VMware NSX plugin from the VMware NSX support portal (available to VMware NSX customers). Source code is also available, if you'd prefer that. These builds provided by VMware represent the latest fixes to both Neutron and NSX based off the "official" OpenStack Neutron releases. A single download contains all the different components of Neutron that you need (it's a tarred and gzipped file that you just unpack).
 
@@ -51,17 +51,17 @@ From here, you would proceed with setting up OpenStack Neutron as outlined in a 
 
 This helps you get Neutron up and running; in the "Configuring Neutron for VMware NSX" section below, I'll provide additional specifics around how to configure Neutron to communicate with VMware NSX. For now, let's make sure that VMware NSX is ready for Neutron.
 
-# Configuring VMware NSX for Neutron
+## Configuring VMware NSX for Neutron
 
 VMware NSX was designed to be cloud platform-agnostic, so there isn't a whole lot that needs to be done here. There are, however, a few tasks you'll want to make sure you've done inside VMware NSX:
 
-  1. You'll want to ensure that you've added at least one NSX gateway appliance to your installation. ([Part 6][4] describes how to add an NVP/NSX gateway appliance.)
+1. You'll want to ensure that you've added at least one NSX gateway appliance to your installation. ([Part 6][4] describes how to add an NVP/NSX gateway appliance.)
 
-  2. You'll want to ensure that you've added an L3 gateway service, as described in [part 9][5] of the series. The L3 gateway service replaces the L3 agent in OpenStack Neutron and is therefore necessary to provide routed/NAT'd connectivity into or out of logical (tenant) networks. Use NSX Manager to get the UUID of the L3 gateway service you've added; you'll need that when you configure Neutron.
+2. You'll want to ensure that you've added an L3 gateway service, as described in [part 9][5] of the series. The L3 gateway service replaces the L3 agent in OpenStack Neutron and is therefore necessary to provide routed/NAT'd connectivity into or out of logical (tenant) networks. Use NSX Manager to get the UUID of the L3 gateway service you've added; you'll need that when you configure Neutron.
 
-  3. You'll need to make sure you've already created a transport zone, as described in [part 4][3] and explained in greater detail in [part 5][6]. Use NSX Manager to get the UUID of the transport zone that you want Neutron to use when creating overlay networks; you'll need that when configuring the NSX plugin for Neutron.
+3. You'll need to make sure you've already created a transport zone, as described in [part 4][3] and explained in greater detail in [part 5][6]. Use NSX Manager to get the UUID of the transport zone that you want Neutron to use when creating overlay networks; you'll need that when configuring the NSX plugin for Neutron.
 
-# Configuring Neutron for VMware NSX
+## Configuring Neutron for VMware NSX
 
 Now, let's get into some nitty gritty specifics on how we configure OpenStack Neutron to interact with VMware NSX.
 
@@ -93,7 +93,9 @@ That should be all the settings you need on the controller node. However, you'll
 
 Once you restart all relevant services so that they pick up the new settings, you should have Neutron talking to VMware NSX correctly. To test if everything is working correctly, use the Neutron CLI to create a logical network:
 
-    neutron net-create test-network
+```sh
+neutron net-create test-network
+```
 
 In my environment (running OpenStack Havana and NSX 4.0.0), that produced output that looked like this:
 

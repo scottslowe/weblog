@@ -79,8 +79,6 @@ Sorry, Charlie! No security-focused links or articles to share this time around.
 
 Well, that's all this time around. I hope you found something useful. Feel free to hit me up on Twitter if you have resources or links that you think I should include in the next Technology Short Take. Thanks!
 
-
-
 [link-1]: https://www.subbu.org/blog/2015/08/lessons-from-the-cloud-bunker
 [link-2]: http://www.morethanseven.net/2015/08/21/operating-unikernel-challenges/
 [link-3]: https://blog.starkandwayne.com/2015/05/06/configuring-openstack-for-cloud-foundry/

@@ -31,7 +31,6 @@ I know this doesn't seem like a very big deal, but I felt like it needed to be m
 
 I think a variation of this saying is applicable here: you can't chide other products for their external dependencies while overlooking your own.
 
-
 [link-1]: http://mesosphere.com/2015/01/21/mesos-dns-service-discovery/
 [link-2]: https://github.com/mesosphere/mesos-dns
 [link-3]: http://mesos.apache.org/

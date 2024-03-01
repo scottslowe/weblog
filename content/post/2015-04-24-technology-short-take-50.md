@@ -65,8 +65,6 @@ Welcome to Technology Short Take #50, the latest in my series of posts sharing v
 
 Well, this post has already gotten longer than it should, so let's wrap it up here. I hope that you've found something useful here. Feel free to hit me up via Twitter if you'd like to discuss or comment on anything shared here. Thanks for reading!
 
-
-
 [link-1]: https://crate.io/blog/deploying-crate-with-docker-machine-swarm/
 [link-2]: https://blog.berendt.io/simple-auto-scaling-environment-with-heat/
 [link-3]: https://jreypo.wordpress.com/2015/02/02/a-first-look-into-vmware-integrated-openstack-vio/

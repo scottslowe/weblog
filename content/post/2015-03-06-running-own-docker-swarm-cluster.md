@@ -48,7 +48,7 @@ The Consul web site provides documentation for all these parameters, but let's w
 
 * The `bootstrap_expect` line tells Consul to form a cluster when at least 3 nodes are present. This allows us to start Consul nodes independently, but none of them will start working as expected until 3 are online and communicating.
 * The `server` line instructs the Consul agent (running as a daemon) to operate as a server.
-*  The `data_dir` directory instructs Consul to store its working files in `/var/consul`. Note you'll need to create that directory (and assign appropriate permissions).
+* The `data_dir` directory instructs Consul to store its working files in `/var/consul`. Note you'll need to create that directory (and assign appropriate permissions).
 * The `log_level` and `enable_syslog` lines configure logging (which, by default, will go to `/var/log/consul.log`).
 * The `retry_join` line provides a list of addresses for other expected members of the Consul cluster. I use the `retry_join` line instead of `join` so that we can independently start the Consul nodes. You'll want/need to edit this line to use IP addresses that are applicable/correct for your environment.
 * Finally, the `client_addr` line tells Consul to listen on all interfaces (not just loopback, which is the default).
@@ -81,8 +81,10 @@ end script
 
 You can see that this script assumes the Consul binary is in `/usr/local/bin`; if you store it elsewhere, be sure to adjust this script accordingly. Store this file as `consul.conf` in `/etc/init`; then you can use these commands to start and stop Consul, respectively:
 
-	sudo service consul start
-	sudo service consul stop
+```sh
+sudo service consul start
+sudo service consul stop
+```
 
 Ideally, you'll also want to create a dedicated user for Consul, and assign ownership/permissions on the `/etc/consul.d` and `/var/consul` directories to that user.
 
@@ -107,11 +109,15 @@ You'll also need to ensure that Docker Engine on each node is configured to list
 
 Setting up the Swarm cluster is pretty straightforward. On each Docker Engine node (CoreOS in my example), launch a Docker container with the following command line:
 
-	docker run -d swarm join --addr=<node IP address>:2375 consul://<IP address of Consul server in cluster>:8500/swarm
+```sh
+docker run -d swarm join --addr=<node IP address>:2375 consul://<IP address of Consul server in cluster>:8500/swarm
+```
 
 Substitute the IP address of the Docker Engine node for the `--addr` parameter, and substitute the IP address of a member of the Consul cluster for the `consul://` discovery URL. Therefore, if your Docker Engine node was at 192.168.1.104 and one of the Consul servers was at 192.168.1.101, the command would look like this:
 
-	docker run -d swarm join --addr=192.168.1.104:2375 consul://192.168.1.101:8500/swarm
+```sh
+docker run -d swarm join --addr=192.168.1.104:2375 consul://192.168.1.101:8500/swarm
+```
 
 Note that the "/swarm" on the end of the discovery URL is an arbitrary path; just be sure to use the same value everywhere in the Swarm cluster.
 
@@ -119,21 +125,29 @@ Repeat this process on every node that should be a part of the Docker Swarm clus
 
 Finally, on a system running Docker Engine (it can be a separate system or a system that is part of the cluster), run a Docker container that will enable managing the Swarm cluster:
 
-	docker run -d -p <Swarm port>:2375 swarm manage consul://<<IP address of Consul server in cluster>:8500/swarm
+```sh
+docker run -d -p <Swarm port>:2375 swarm manage consul://<<IP address of Consul server in cluster>:8500/swarm
+```
 
 Replace `<Swarm port>` with a port number, and specify the IP address of one of the servers in the Consul cluster. If you used a path other than "/swarm", be sure to use the same path here. This command sets up an endpoint against which you'll run Docker commands---only in this case those Docker commands will be executed against the entire cluster.
 
 So, let's say you want to run an Nginx container named "www" somewhere on the Swarm cluster. Assuming that you used 8333 as the Swarm port when launching the Swarm manager and that the Swarm manager was running on a system with the IP address 192.168.1.104, you'd do that with this command:
 
-	docker -H tcp://192.168.1.104:8333 run -d --name www -p 80:80 nginx
+```sh
+docker -H tcp://192.168.1.104:8333 run -d --name www -p 80:80 nginx
+```
 
 If you wanted to see a list of the containers running across all the systems in the Swarm cluster, you'd run this command:
 
-	docker -H tcp://192.168.1.104:8333 ps
+```sh
+docker -H tcp://192.168.1.104:8333 ps
+```
 
 If you wanted to see information about the cluster, the nodes in the cluster, and the containers running across the cluster, you'd run this command:
 
-	docker -H tcp://192.168.1.104:8333 info
+```sh
+docker -H tcp://192.168.1.104:8333 info
+```
 
 Of course, you could also set the `DOCKER_HOST` environment variable, and then you could skip the `-H tcp://...` portion of the commands above.
 
@@ -147,7 +161,12 @@ Adding this functionality to the existing Consul-backed Docker Swarm cluster is 
 
 To run a Consul client as a container on a Docker Engine node in the Swarm cluster, use this command (executed against the Docker Engine directly, not through Swarm):
 
-	docker run -d -p 8300:8300 -p 8301:8301 -p 8301:8301/udp -p 8302:8302 -p 8302:8302/udp -p 8400:8400 -p 8500:8500 -p 8600:8600/udp --name <container-name> -h <hostname> progrium/consul -rejoin -advertise <external IP address> -join <Consul server IP address>
+```sh
+docker run -d -p 8300:8300 -p 8301:8301 -p 8301:8301/udp -p 8302:8302 \
+-p 8302:8302/udp -p 8400:8400 -p 8500:8500 -p 8600:8600/udp \
+--name <container-name> -h <hostname> progrium/consul -rejoin \
+-advertise <external IP address> -join <Consul server IP address>
+```
 
 OK, that's a hefty command, so let's break it down:
 
@@ -164,7 +183,9 @@ After launching this container, you can verify that it is working as expected vi
 
 Almost done! Next, launch a Registrator container on each Docker Engine node (directly, not using Swarm) with this command:
 
-	docker run -d --name <container name> -h <hostname> -v /var/run/docker.sock:/tmp/docker.sock progrium/registrator consul://<Consul server IP address>:8500
+```sh
+docker run -d --name <container name> -h <hostname> -v /var/run/docker.sock:/tmp/docker.sock progrium/registrator consul://<Consul server IP address>:8500
+```
 
 As with the Consul client container, be sure to use a unique container name and hostname, and substitute the IP address of one of the Consul servers in the `consul://` URL.
 
@@ -172,11 +193,15 @@ You can use `docker logs` to verify Registrator's operation; you should see a se
 
 You can also query Consul directly to see if Registrator registered the services in Consul by using this command:
 
-	curl http://<Consul server IP address>:8500/v1/catalog/services | python -m json.tool
+```sh
+curl http://<Consul server IP address>:8500/v1/catalog/services | python -m json.tool
+```
 
 You should see JSON output listing the services (unique TCP and UDP ports) from the containers across the Docker Swarm cluster. To get more information about a particular service, modify the previous command to include the service name. For example, if you'd launched an Nginx container on the cluster the command would look like this:
 
-	curl http://<Consul server IP address>:8500/v1/catalog/service/nginx-80 | python -m json.tool
+```sh
+curl http://<Consul server IP address>:8500/v1/catalog/service/nginx-80 | python -m json.tool
+```
 
 That will provide JSON-formatted output that lists all the instances of this service across the cluster, the IP addresses and nodes associated with the service, and any metadata (which probably won't exist).
 

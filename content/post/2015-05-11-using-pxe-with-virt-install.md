@@ -18,17 +18,18 @@ I shared how to use the `virt-install` command to build KVM guest domains in a b
 
 However, there may be times when you would prefer to use PXE instead of an ISO image. To build a KVM guest domain and instruct the guest domain to boot via PXE, you would use this command (I've inserted backslashes and line returns to improve readability):
 
-	sudo virt-install --name=guest-name --ram=2048 --vcpus=1 \  
-	--disk path=/var/lib/libvirt/images/guest-disk.qcow2,bus=virtio \  
-	--pxe --noautoconsole --graphics=vnc --hvm \  
-	--network network=net-name,model=virtio \  
-	--os-variant=ubuntuprecise
+```sh
+sudo virt-install --name=guest-name --ram=2048 --vcpus=1 \  
+--disk path=/var/lib/libvirt/images/guest-disk.qcow2,bus=virtio \  
+--pxe --noautoconsole --graphics=vnc --hvm \  
+--network network=net-name,model=virtio \  
+--os-variant=ubuntuprecise
+```
 
 The key here is the `--pxe` parameter, which `virt-install` uses to instruct the guest domain to PXE boot instead of booting from a virtual CD-ROM backed by an ISO image.
 
 Naturally, you'd want to substitute the desired values for the KVM guest domain name, the vCPUs and RAM allocated to the guest domain, the path to the disk image (here specified as a QCOW2 file), the network name, and the OS distribution.
 
 Happy PXE booting your KVM guests!
-
 
 [xref-1]: {{< relref "2012-08-21-working-with-kvm-guests.md" >}}

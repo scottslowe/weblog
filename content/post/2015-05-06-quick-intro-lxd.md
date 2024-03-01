@@ -98,14 +98,12 @@ That being said, while LXC is stable LXD is still undergoing rapid development. 
 
 I recommend reviewing [this article][link-8], which covers a lot of the same information presented here as well as some additional tasks (like copying files into or out of a container with `lxc file`). In addition, I encourage you to use the Vagrant environment in the `lxd` directory of [my GitHub "learning-tools" repository][link-7] to easily spin up your own LXD-equipped VMs; this will make it easy to get some hands-on time with the technology.
 
-
-
 [link-1]: https://www.docker.com
 [link-2]: https://github.com/coreos/rkt/
 [link-3]: https://linuxcontainers.org/lxc/introduction
 [link-4]: https://linuxcontainers.org/lxd/introduction
-[link-5]: {{< relref "2013-11-25-a-brief-introduction-to-linux-containers-with-lxc.md" >}}
 [link-6]: /tags/lxc/
 [link-7]: https://github.com/scottslowe/learning-tools
 [link-8]: https://insights.ubuntu.com/2015/04/28/getting-started-with-lxd-the-container-lightervisor/
 [link-9]: http://michaeldehaan.net/post/111599240017/skipping-docker-for-lxc-for-local-development
+[link-5]: {{< relref "2013-11-25-a-brief-introduction-to-linux-containers-with-lxc.md" >}}

@@ -18,14 +18,15 @@ As you may have picked up from some of my recent posts, I'm focused on building 
 
 The new Vagrant box I've created is running Ubuntu 14.04.1 and has Open vSwitch 2.3.1---the latest available release---pre-installed. To install this Vagrant box for use in your Vagrant environments, simply run this command:
 
-	vagrant box add slowe/ubuntu-1404-x64-ovs
+```sh
+vagrant box add slowe/ubuntu-1404-x64-ovs
+```
 
 Vagrant will download and install the box. (Note that this box is formatted for the "vmware_desktop" provider, which means you'll need VMware Fusion or VMware Workstation as well as the Vagrant plugin for VMware.) Once the box is installed on your system, then you can begin using it in a `Vagrantfile` by just referencing the box name. As with the other Vagrant boxes I've published, VMware Tools is installed already, so you can use Vagrant's shared folders feature to easily move files into or out of VMs spun up by Vagrant.
 
 I'll be leveraging this box in the near future as I build (and share) more Vagrant environments. All these Vagrant environments will be shared via [my GitHub "learning-tools" repository][link-4].
 
 Here's hoping this is useful!
-
 
 [link-1]: http://openvswitch.org/
 [link-2]: http://www.vagrantup.com/

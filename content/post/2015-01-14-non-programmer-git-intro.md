@@ -43,14 +43,18 @@ I've mentioned several times that Git, as a distributed version control system, 
 
 Cloning a Git repository is super simple: just use the `git clone` command with a URL, like this (this is the GitHub repo that contains this blog):
 
-	https://github.com/scottslowe/lowescott.github.io.git
+```text
+https://github.com/scottslowe/lowescott.github.io.git
+```
 
 I need to point out a couple of things here. First, don't conflate Git and [GitHub][link-2]. GitHub provides a service for hosting Git repositories, but you aren't **required** to use GitHub---you could use a private server running Git, or a competing public service like BitBucket. The underlying process for cloning a remote Git repository is the same. Second, this particular example uses HTTPS, but other protocols are supported. The protocol you should use will depend on how you're using Git. In this post, I'll use GitHub and HTTPS in my examples.
 
 In addition to making a full copy of the remote repository on the system where you run `git clone`, a link back to the original remote is also created. You can see this link by running the command `git remote -v`, which will produce output something like this:
 
-	origin	https://github.com/scottslowe/lowescott.github.io.git (fetch)
-	origin	https://github.com/scottslowe/lowescott.github.io.git (push)
+```text
+origin	https://github.com/scottslowe/lowescott.github.io.git (fetch)
+origin	https://github.com/scottslowe/lowescott.github.io.git (push)
+```
 
 This link is needed in order to allow users to collaborate. Although each Git repository is completely standalone, this link allows users to push changes to a remote repository or pull changes from a remote repository.
 
@@ -62,9 +66,11 @@ OK, so you have a Git repository. Now what? Well, now it's time to start adding 
 
 To add files to the repository to be tracked, use `git add <path to file>`. You can use wildcards, so all these are valid commands:
 
-	git add public/*.css
-	git add headers/*.h
-	git add _posts/2014-*.md
+```sh
+git add public/*.css
+git add headers/*.h
+git add _posts/2014-*.md
+```
 
 `git add` is a multi-purpose command---not only will you use it to add new files to a Git repository, you'll also use it to "add" already-tracked files that have been modified. That can be a bit confusing (it was to me, at least), so let me walk through it:
 
@@ -101,7 +107,6 @@ On my own journey of exploration/learning with Git, I found some of these resour
 [Git Immersion][link-7]
 
 Good luck!
-
 
 [link-1]: http://git-scm.com
 [link-2]: https://github.com

@@ -30,8 +30,6 @@ None of these problems are insurmountable, but the friction they cause---recalli
 
 While plain text-based formats have worked wonderfully for me for writing and presentations, it looks like the existing raft of plain text-based productivity solutions don't have quite the functionality and robustness that I need. Others, though, might find that they work perfectly fine. So, don't be afraid to run your own plain text productivity experiment...you might be surprised at the results!
 
-
-
 [link-1]: http://todotxt.com
 [link-2]: http://www.hogbaysoftware.com/products/taskpaper
 [link-3]: http://code.google.com/p/taskpaper-bbedit/

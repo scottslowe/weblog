@@ -39,7 +39,9 @@ However, it may be easier/more effective to use `fleetctl` from outside the clus
 
 This method is pretty straightforward and simple. Just set an environment variable named `FLEETCTL_ENDPOINT`, like this:
 
-    export FLEETCTL_ENDPOINT=http://10.1.1.7:4001
+```sh
+export FLEETCTL_ENDPOINT=http://10.1.1.7:4001
+```
 
 Obviously, you'd want to make sure that you have the correct IP address (can be any node in the etcd cluster) and port (4001 is the default, I believe). With this environment variable set, now anytime you use `fleetctl` it will direct traffic to the endpoint you specified. If that specific node in the etcd cluster becomes unavailable, then `fleetctl` will stop working, and you'll need to point it to a different node in the cluster.
 
@@ -49,7 +51,9 @@ The second way of using `fleetctl` remotely is to tunnel the traffic through SSH
 
 To make `fleetctl` tunnel its communications with etcd through SSH, set an environment variable called `FLEETCTL_TUNNEL` to the IP address of any node in the etcd cluster, like this:
 
-    export FLEETCTL_TUNNEL=10.1.1.7
+```sh
+export FLEETCTL_TUNNEL=10.1.1.7
+```
 
 However, the configuration involves more than just setting the environment variable. The `fleetctl` doesn't expose any options to configure the SSH connection, and it assumes you'll be using public key authentication. This means you'll need access to a public key that will work against the nodes in your etcd cluster. If you followed my instructions on [deploying CoreOS on OpenStack via Heat][4], then you can review the Heat template to see which key was specified to be injected when the instances were spawned. Once you know which key was used, then you'll need to either:
 
@@ -59,17 +63,21 @@ However, the configuration involves more than just setting the environment varia
 
 There's still at least one more step required (possibly two). Because `fleetctl` doesn't expose any SSH options, you're going to need to run an SSH agent on the system you're using. OS X provides an SSH agent by default, but on Linux systems you will probably have to manually run an SSH agent and add the appropriate SSH key:
 
-    eval `ssh-agent -s`
-    ssh-add ~/.ssh/keyfile.pem
+```sh
+eval `ssh-agent -s`
+ssh-add ~/.ssh/keyfile.pem
+```
 
 Once the SSH agent is running and the appropriate key is loaded (you'd clearly need to make sure the path and filename are correct in the command listed above), then the last step is to configure your `~/.ssh/config` file with options for the CoreOS instances. It's possible you might be able to get by without this step; I haven't conducted enough testing to say with absolute certainty one way or another. I suspect it will be needed.
 
 In the `~/.ssh/config` file, add a stanza for the system through which you'll be tunneling the `fleetctl` traffic. The stanza will need to look something like this:
 
-    Host node-01
-      User core
-      Hostname 10.1.1.7
-      IdentityFile ~/.ssh/keyfile.pem
+```text
+Host node-01
+  User core
+  Hostname 10.1.1.7
+  IdentityFile ~/.ssh/keyfile.pem
+```
 
 This configuration stanza ensures that when the system you're using attempts to communicate with the IP address listed above, it will use the specified username and public key. Since the SSH agent is loaded, it won't prompt for any password for the public key (even if the public key doesn't have a password associated, you'll still need the SSH agent), and the SSH connection will be successful _without any user interaction._ That last point is important---`fleetctl` doesn't expose any SSH options, so the connection needs to be completely automatic.
 
@@ -81,17 +89,21 @@ Once you have access to the etcd cluster via `fleetctl` using one of the three m
 
 First, you can list all the machines in the cluster with this command:
 
-    fleetctl list-machines
+```sh
+fleetctl list-machines
+```
 
 Note the "METADATA" column; this allows you to do some custom scheduling by associating systemd units with specific metadata parameters. Metadata can be assigned either via cloud-config parameters passed when the instance is spawned, or via modifications to the fleet config files.
 
 To see the units about which the cluster knows, use this command:
 
-    fleetctl list-units
+```sh
+fleetctl list-units
+```
 
 If you're just getting your etcd cluster up and running, the output of this command is probably empty. Let's deploy a unit that spawns a Docker container running the popular Nginx web server. Here's a (very) simple unit file that will spin up an Nginx container via Docker:
 
-```
+```text
 [Unit]
 Description=Nginx web front-end
 After=docker.service
@@ -108,13 +120,15 @@ ExecStop=/usr/bin/docker stop nginx
 
 With this file in place on the system where you are running `fleetctl`, you can submit this to the etcd cluster with this command:
 
-    fleetctl submit nginx.service
+```sh
+fleetctl submit nginx.service
+```
 
 Then, when you run `fleetctl list-units`, you'll see the new unit submitted (but not started). Start it with `fleetctl start nginx.service`.
 
 Where fleet becomes _really_ useful (in my opinion) is when you want to run multiple units across the cluster. If you take the simple Nginx unit I showed you earlier and extend it slightly, you get this:
 
-```
+```text
 [Unit]
 Description=Nginx web front-end
 After=docker.service
@@ -134,11 +148,15 @@ X-Conflicts=nginx.*.service
 
 Note the difference here: the Docker container name is changed (to `nginx-01`) and the filename is different (now `nginx.1.service`). If you make multiple copies of this file, changing the Docker container name and the unit filename, you can submit all of the units to the etcd cluster at the same time. For example, let's say you wanted to run 3 Nginx containers on the cluster. Make three copies of the file (`nginx.1.service`, `nginx.2.service`, and `nginx.3.service`), modifying the container name in each copy. Make sure that you have the "X-Conflicts" line in there; that tells fleet not to place two Nginx containers on the same system in the cluster. Then submit them with this command:
 
-    fleetctl submit nginx.*.service
+```sh
+fleetctl submit nginx.*.service
+```
 
 And start (launch) them with this command:
 
-    fleetctl start nginx.*.service
+```sh
+fleetctl start nginx.*.service
+```
 
 Give it a few minutes to download the latest Nginx Docker image (assuming it isn't already downloaded), then run `fleetctl list-units` and you should see three Nginx containers distributed across three different CoreOS instances in the etcd cluster, all listed as "loaded" and "active". (You can then test connectivity to those Nginx instances using something like `curl`.) Congratulations---you've just deployed multiple containers automatically across a cluster of systems!
 

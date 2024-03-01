@@ -35,7 +35,6 @@ On a more personal note, writing an O'Reilly book is something of a "bucket list
 
 Here's hoping you find this new book helpful and informative! Remember, the Early Release edition is [available now from O'Reilly's web site][link-1].
 
-
 [link-1]: http://shop.oreilly.com/product/0636920042082.do
 [link-2]: http://jedelman.com/home/the-network-automation-book/
 [link-3]: http://keepingitclassless.net/2015/12/training-next-generation-network-engineer/

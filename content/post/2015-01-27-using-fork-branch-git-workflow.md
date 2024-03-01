@@ -49,7 +49,9 @@ Even though you have a copy of the original repository in your GitHub account, y
 
 Before you can run `git clone`, though, you need to determine the URL for the forked repository. That's pretty simple: just navigate to the forked repository (this is the copy of the original repository residing in your GitHub account) and look on the right-hand side of the web page. You should see an area that is labeled "HTTPS clone URL". Simple copy the URL there, and then use it with `git clone` like this (this is the clone URL for the OVS web site repository):
 
-	git clone https://github.com/openvswitch/openvswitch.github.io.git
+```sh
+git clone https://github.com/openvswitch/openvswitch.github.io.git
+```
 
 Naturally, you'd replace the URL after `git clone` with the appropriate HTTPS clone URL for your forked project repository. (You have to clone your forked repository, **not** the original.)
 
@@ -65,7 +67,9 @@ Recall that the generic form of `git push` is this `git push <remote> <branch>`;
 
 To use the "fork and branch" workflow, you'll need to add a Git remote pointing back to the **original** repository (the one you forked on GitHub). You can call this Git remote anything you want; most documents and guides I've read recommend using the term "upstream". Let's say you forked the OVS web site repo, and then cloned it down to your system. You'd want to add a Git remote that points back to the original repository, like this:
 
-	git remote add upstream https://github.com/openvswitch/openvswitch.github.io.git
+```sh
+git remote add upstream https://github.com/openvswitch/openvswitch.github.io.git
+```
 
 Of course, you'd want to replace the URL after `git remote add upstream` with the appropriate clone URL for the original project repository. For the rest of this article, I'm going to assume you used `upstream` as the name for this additional Git remote.
 
@@ -89,7 +93,9 @@ Because of the way that Git works, it's incredibly fast and easy for developers 
 
 To create a new branch and check it out (meaning tell Git you will be making changes to the branch), use this command:
 
-	git checkout -b <new branch name>
+```sh
+git checkout -b <new branch name>
+```
 
 Note that some projects have specific requirements around branch names for pull requests, so be aware of any such guidelines. Once the new branch is created and checked out, then you can make the necessary changes in this branch to implement the specific feature or change you want the original project to merge into their repository. As a general rule of thumb, you should limit a branch to _one logical change._ The definition of one logical change will vary from project to project and developer to developer, but the basic idea is that you should only make the necessary changes to implement one specific feature or enhancement.
 
@@ -101,7 +107,9 @@ So let's say you've made the changes necessary to implement the specific feature
 
 If you were working in a branch called `new-feature`, then pushing the changes you made in that branch back to GitHub would look like this:
 
-	git push origin new-feature
+```sh
+git push origin new-feature
+```
 
 Again, recall that the generic form of this command is `git push <remote> <branch>`. In this case, you're pushing changes in the `new-feature` branch to the `origin` remote.
 
@@ -115,15 +123,21 @@ Be aware that, to help keep things manageable, some open source projects may hav
 
 If the maintainers accept your changes and merge them into the upstream repository, then there is a little bit of clean-up for you to do. First, switch to the `main` branch with `git checkout main` (replace `main` with whatever the name of the primary branch is, it could be `master` or `default` or something similar). Next, update your local clone by using `git pull upstream main`. This pulls the changes from the original repository's (indicated by `upstream`) primary branch (indicated by `main` in that command) to your local cloned repository. One of the commits in the commit history will be the commit that merged your feature branch, so after you `git pull` your local repository's primary branch will have your feature branch's changes committed. This means you can delete the feature branch (because the changes are already in the `main` branch):
 
-	git branch -d <branch name>
+```sh
+git branch -d <branch name>
+```
 
 Then you can update the `main` branch in your forked repository:
 
-	git push origin main
+```sh
+git push origin main
+```
 
 And push the deletion of the feature branch to your GitHub repository (_update:_ an earlier version of this article listed `git push -d` below):
 
-	git push --delete origin <branch name>
+```sh
+git push --delete origin <branch name>
+```
 
 And that's it! You've just successfully created a feature branch, made some changes, committed those changes to your repository, pushed them to GitHub, opened a pull request, had your changes merged by the maintainers, and then cleaned up. Pretty neat, eh?
 
@@ -133,8 +147,10 @@ By the way, your forked repository doesn't automatically stay in sync with the o
 
 To keep your fork in sync with the original repository, use these commands:
 
-	git pull upstream main
-	git push origin main
+```sh
+git pull upstream main
+git push origin main
+```
 
 This pulls the changes from the original repository (the one pointed to by the `upstream` Git remote) and pushes them to your forked repository (the one pointed to by the `origin` remote). (Hopefully that makes a little bit of sense to you by now.)
 
@@ -150,7 +166,5 @@ I found [the Help on the GitHub site][link-5] to be particularly useful.
 [link-4]: http://openvswitch.org/
 [link-5]: https://help.github.com
 [link-6]: http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html
-
-
 [xref-1]: {{< relref "2015-01-14-non-programmer-git-intro.md" >}}
 [xref-2]: {{< relref "2015-01-26-using-git-with-github.md" >}}

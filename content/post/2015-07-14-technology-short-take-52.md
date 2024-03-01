@@ -19,7 +19,7 @@ title: 'Technology Short Take #52'
 url: /2015/07/14/technology-short-take-52/
 ---
 
-Welcome to Technology Short Take #52, the latest collection of news, links, and articles from around the web on data center technologies. 
+Welcome to Technology Short Take #52, the latest collection of news, links, and articles from around the web on data center technologies.
 
 ## Networking
 
@@ -72,8 +72,6 @@ Nothing this time around, but I'll stay tuned for items to include next time!
 * While many folks think "DevOps = Technology," what they're overlooking is the cultural, personal, and procedural aspects. [This recent article][link-6] by John Willis (of Docker) that connects Docker with the "First Way of DevOps" (systems thinking) is helpful in that it serves to help folks see technology not as an end unto itself, but as a tool to achieve a goal (something I think a lot of people overlook/forget).
 
 It's time to wrap up now. I hope that I was able to include something useful for you. In the meantime, stay tuned for the next Technology Short Take, and thanks for reading!
-
-
 
 [link-1]: http://blogs.vmware.com/performance/2015/05/running-transactional-workloads-using-docker-containers-vsphere-6-0.html
 [link-2]: http://openvswitch.org/pipermail/ovs-dev/2015-March/052663.html

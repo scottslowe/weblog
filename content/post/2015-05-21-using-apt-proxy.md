@@ -16,17 +16,19 @@ This isn't the first time I've discussed apt-cacher-ng; almost two years ago I s
 
 On the server side, setting up an Apt proxy is as simple as one command:
 
-    apt-get install apt-cacher-ng
+```sh
+apt-get install apt-cacher-ng
+```
 
 I'm sure there are some optimizations or advanced configurations, but this is enough to get the Apt proxy up and running.
 
 On the client side, there are a couple of ways to configure the system. You could use a tool like Puppet (as described [here][link-2]), or manually configure the system. If you choose manual configuration, you can place the configuration in either `/etc/apt/apt.conf` or in a standalone file in `/etc/apt/apt.conf.d`. Either way, the contents to add look like this:
 
-    Acquire::http { Proxy "http://apt-proxy-name.domain.com:3142"; };
+```text
+Acquire::http { Proxy "http://apt-proxy-name.domain.com:3142"; };
+```
 
 (Naturally, you'll want to substitute the correct server name/FQDN instead of `apt-proxy-name.domain.com` shown above.)
-
-
 
 [link-1]: https://www.unix-ag.uni-kl.de/~bloch/acng/
 [link-2]: {{< relref "2013-10-10-using-puppet-to-configure-ubuntu-to-use-apt-cacher-ng.md" >}}

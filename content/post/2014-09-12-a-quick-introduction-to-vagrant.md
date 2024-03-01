@@ -53,7 +53,9 @@ This `Vagrantfile` sets the box ("ubuntu/precise64"), the box URL (retrieves fro
 
 To have Vagrant then use this set of instructions, run this command from the directory where the `Vagrantfile` is sitting:
 
-    vagrant up
+```sh
+vagrant up
+```
 
 You'll see a series of things happen; along the way you'll see a note that the machine is booted and ready, and that shared folders are getting mounted. (If you are using VirtualBox and the box I'm using, you'll also see a warning about the VirtualBox Guest Additions version not matching the version of VirtualBox.) When it's all finished, you'll be deposited back at your prompt. From there, you can easily log in to the newly-created VM using nothing more than `vagrant ssh`. That's pretty handy.
 

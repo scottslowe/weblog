@@ -23,7 +23,9 @@ What you _won't_ do, though, is make changes directly to the GitHub repository. 
 
 I talked about how to clone a repository in my earlier article, but let's look at it again. GitHub supports cloning via SSH as well as via HTTPS; I tend to use HTTPS as it is more likely to work in all environments (SSH can be blocked in many environments). So, to clone the GitHub repository for my weblog, I'd use the `git clone` command, like this:
 
-	git clone https://github.com/scottslowe/lowescott.github.io.git
+```sh
+git clone https://github.com/scottslowe/lowescott.github.io.git
+```
 
 The generic form of this command is `git clone <URL>`. As I mentioned in my earlier Git article, this clones the entire repository down to your local system and automatically adds a Git remote (a link, if you will) back to the repository on GitHub. (You can see the Git remote by running `git remote -v`.) In the specific instance of using GitHub, you'll automatically have a Git remote named `origin` that refers to the GitHub repository.
 
@@ -31,7 +33,9 @@ Once you have the repository cloned to your system, you can begin to work with t
 
 What _does_ change, though, is that now you have the ability to take the changes you've made to your local repository and send them up to GitHub. You do that using the `git push` command. For example, if I wanted to push changes to the GitHub repository for my weblog, I'd use this command:
 
-	git push origin master
+```sh
+git push origin master
+```
 
 The generic form of this command is `git push <remote> <branch>`. Recall that GitHub automatically added the `origin` remote when you cloned the repository, so that's why this command uses `origin`. The `master` comes from the default "master" branch. If I were working in a different branch (I haven't discussed branches yet, so bear with me), then the command would look a bit different. To ensure that you have permissions to push changes to the repository, GitHub would prompt you for credentials. This means that you will need a GitHub account, naturally. (Note that on some systems, the credentials can be saved and automatically supplied in the future. OS X is one such system.)
 
@@ -39,7 +43,9 @@ It can be difficult sometimes to keep track of whether you've pushed changes to 
 
 If you have multiple clones of the repository (say, a clone on your laptop and a clone on a development workstation at the office), you can keep those clones in sync by pushing changes to GitHub (using `git push`) and then pulling those changes down on other systems. Naturally---as you've probably guessed already---the command to do that is `git pull`. If I pushed some changes to my weblog's repository from my MacBook Air and now need to update the clone of the repository on my Mac Pro, then I'd run this command:
 
-	git pull origin master
+```sh
+git pull origin master
+```
 
 Again, the generic form of the command is `git pull <remote> <branch>`, so if the Git remote to the GitHub repository was named something other than `origin` and/or you're working in a different branch than `master`, the command would look different. The `git pull` command pulls down all the changes from GitHub and then applies them to the local clone to bring it up to date.
 
@@ -55,8 +61,6 @@ To quickly recap, then:
 ## Additional Resources
 
 I found [Matt Brender's #vBrownBag session on using Git and GitHub][link-2] to be useful. As I mentioned in the introductory Git post, I also found GitHub's online help pages to be useful, and I **really** encourage you to read the _Pro Git_ book by Scott Chacon. It's available for download [here][link-3].
-
-
 
 [link-1]: https://github.com
 [link-2]: http://professionalvmware.com/2014/10/vbrownbag-devops-follow-up-git-with-matthew-brender-mjbrender/

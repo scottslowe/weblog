@@ -19,15 +19,19 @@ Cloud instances are a slightly different beast than manually-built servers prima
 
 For reference, here's the command I use when bootstrapping manually-built servers into Ansible:
 
-    ansible-playbook bootstrap.yml -k -K --extra-vars \
-    "hosts=newhost.domain.com user=admin"
+```sh
+ansible-playbook bootstrap.yml -k -K --extra-vars \
+"hosts=newhost.domain.com user=admin"
+```
 
 The `bootstrap.yml` playbook simply creates an Ansible user, populates the appropriate SSH keys, and sets `sudo` permissions. The playbook relies upon the variables passed on the command-line, which tell it what hosts should be affected and what user account (and password, via the `-k` and `-K` parameters) to use to modify the remote server.
 
 With a cloud instance, this needed to change. First, you don't know the password; you're required to use an SSH key for authentication. You generally _do_ know the user account, but not the password. After a short bit of trial and error, I found the following command-line worked with a freshly-booted cloud instance:
 
-    ansible-playbook bootstrap.yml --extra-vars \
-    "hosts=172.16.6.7 user=ubuntu" --private-key=~/.ssh/cloudkey.pem
+```sh
+ansible-playbook bootstrap.yml --extra-vars \
+"hosts=172.16.6.7 user=ubuntu" --private-key=~/.ssh/cloudkey.pem
+```
 
 The command is largely the same, with two major changes:
 
@@ -36,8 +40,6 @@ The command is largely the same, with two major changes:
 * You'll note I omitted the `-i` parameter to specify an inventory file; this is because I created an `ansible.cfg` in this directory and specified the inventory file there. (It makes the command-line easier and simpler.)
 
 As before, I use the `--extra-vars` parameter to supply the specific host being bootstrapped into Ansible as well as the name of the initial user account (in this case, I'm bootstrapping an Ubuntu cloud image, so the initial user is "ubuntu"). Once the initial bootstrap process completes successsfully, I can then run subsequent playbooks against this cloud instance with no further configuration or command-line parameters required.
-
-
 
 [link-1]: http://www.ansible.com/
 [xref-1]: {{< relref "2015-05-26-bootstrap-servers-ansible.md" >}}

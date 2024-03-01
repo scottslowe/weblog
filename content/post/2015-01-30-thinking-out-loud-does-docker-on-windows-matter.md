@@ -41,7 +41,6 @@ My point, though, is this: Docker support on Windows (which, as far as we know, 
 
 Of course, these are my thoughts only.
 
-
 [link-1]: https://twitter.com/lynxbat/status/561203439917494272
 [link-2]: http://blog.nigelpoulton.com/esxi-vs-hyper-v-could-docker-support-be-significant/
 [link-3]: https://twitter.com/scott_lowe/status/561216003506311168

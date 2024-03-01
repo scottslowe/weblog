@@ -28,7 +28,9 @@ Ready? Let's get started.
 
 You can create your container using the standard LXC tools:
 
-    lxc-create -n cn-01 -t ubuntu
+```sh
+lxc-create -n cn-01 -t ubuntu
+```
 
 As you may already know, this will create a container named "cn-01" based on the Ubuntu template. The configuration for this container will be found, by default, at `/var/lib/lxc/cn-01/config`. By default, unless you've changed the configuration of your system, this container will be configured to use virtual Ethernet network interfaces and be attached to the default LXC bridge.
 
@@ -36,7 +38,9 @@ The changes required to make the container connect to OVS are, fortunately, quit
 
 Next, add a configuration line to run a script after creating the network interfaces. In my examples here, I'll assume the script is called "ovsup" and is stored in the `/etc/lxc/` directory. The configuration parameter should look something like this:
 
-    lxc.network.script.up = /etc/lxc/ovsup
+```text
+lxc.network.script.up = /etc/lxc/ovsup
+```
 
 (Note that there is also a corresponding `lxc.network.script.down` configuration parameter, but I won't be using it in this example.)
 
@@ -46,7 +50,7 @@ Once you've made these changes to the container's configuration, then you're rea
 
 Your script---the one referenced on the `lxc.network.script.up` in the container's configuration file---should look something like this:
 
-```
+```bash
 #!/bin/bash
 
 BRIDGE="br-int"

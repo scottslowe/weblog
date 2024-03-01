@@ -21,6 +21,5 @@ I've tried to mitigate the loss of comments through the social sharing links bel
 
 If you have any suggestions for how to resolve this situation, I'm all ears. Drop me an e-mail or hit me up on Twitter.
 
-
 [link-1]: http://jekyllrb.com
 [link-2]: http://perltricks.com/article/104/2014/7/29/Your-users-deserve-better-than-Disqus

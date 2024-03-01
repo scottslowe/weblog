@@ -20,5 +20,4 @@ Thanks, and I look forward to hearing from you soon!
 
 **UPDATE:** Thanks for everyone who took the time to contact me! I'm all set now, so no need for future folks to contact me (unless they just really want to!).
 
-
 [link-1]: https://twitter.com/scott_lowe

@@ -39,8 +39,6 @@ I did not expect this behavior. From what I've been able to find (see [this issu
 
 I still have more testing to do (and more learning to do), and I'll continue to share the results of my testing/learning here.
 
-
-
 [link-1]: https://www.docker.com
 [link-2]: https://github.com/gliderlabs/registrator
 [link-3]: https://www.consul.io

@@ -98,8 +98,6 @@ Other Docker commands, like `docker run`, `docker ps`, etc., also work in the sa
 
 Congratulations---you've just set up an etcd-backed Docker Swarm cluster! If you're feeling really adventurous, you can review the "Setting up Service Registration and Discovery" portion of [this blog post][xref-2] and adapt it for your new etcd-backed Docker Swarm cluster.
 
-
-
 [link-1]: https://docs.docker.com/swarm/
 [link-2]: https://github.com/coreos/etcd
 [link-3]: https://github.com/scottslowe/learning-tools/

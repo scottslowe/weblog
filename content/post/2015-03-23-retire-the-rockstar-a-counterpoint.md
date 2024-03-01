@@ -42,11 +42,9 @@ The folks that are likely to be called "rockstars" are probably the commandos/pi
 
 Let me close by saying, once again, I agree with many of the recommendations Tyler makes in his post. However, I'm not convinced (yet) that simply retiring the use of "rockstar" is going to accomplish what we're seeking---to inspire others to do their best, to encourage everyone to give credit where credit is due, to recognize that our individual success is built on the success and contributions of others. I look forward to working with others to foster these values in our community and industry, but I hope you'll forgive me if I call someone a "rockstar" when their outstanding work and excellence warrants a compliment.
 
-
 [link-1]: http://vmtyler.com/retire-the-rockstar/
 [link-2]: https://medium.com/the-aspen-journal-of-ideas/the-myth-of-the-lone-genius-6a5146c7da10
 [link-3]: http://jmetz.com/2014/06/23/you-do-good-work/
 [link-4]: http://blog.codinghorror.com/commandos-infantry-and-police/
 [link-5]: http://blog.gardeviance.org/2012/06/pioneers-settlers-and-town-planners.html
-
 [xref-1]: {{< relref "2013-12-12-no-man-is-an-island.md" >}}

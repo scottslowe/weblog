@@ -44,8 +44,6 @@ Because the `Vagrantfile` from my repository leverages an external YAML file for
 
 I have more Photon-related content planned, so stay tuned. In the meantime, enjoy working with Photon and learning your way around.
 
-
-
 [link-1]: https://github.com/vmware/photon
 [link-2]: http://www.vmware.com/products/fusion
 [link-3]: http://www.vagrantup.com

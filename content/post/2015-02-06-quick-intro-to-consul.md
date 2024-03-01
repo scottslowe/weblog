@@ -51,7 +51,6 @@ Now, if you're wondering how you might put this to use in your environment, I'll
 
 So that's a quick introduction to Consul. Have I whetted your appetite for more? I hope so, because I'll be building on this introduction soon. Stay tuned.
 
-
 [link-1]: https://www.consul.io
 [link-2]: https://www.serfdom.io
 [link-3]: https://github.com/coreos/etcd/

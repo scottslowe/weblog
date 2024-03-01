@@ -30,11 +30,13 @@ Let's take a look at each approach.
 
 In [this earlier post][xref-1], I showed how to use the Docker Machine `generic` driver with a Vagrant-managed local VM. Using the `generic` driver with an existing OpenStack instance is largely the same:
 
-    docker-machine create -d generic \
-    --generic-ssh-user ubuntu \
-    --generic-ssh-key ~/.ssh/openstack.pem \
-    --generic-ip-address 192.168.100.1 \
-    dm-generic
+```sh
+docker-machine create -d generic \
+--generic-ssh-user ubuntu \
+--generic-ssh-key ~/.ssh/openstack.pem \
+--generic-ip-address 192.168.100.1 \
+dm-generic
+```
 
 This example is taken from using the `generic` driver to consume an Ubuntu instance; hence, the value of "ubuntu" for the `--generic-ssh-user` parameter. Obviously, you'd need to change values around for your environment:
 
@@ -58,18 +60,20 @@ As I mentioned earlier, I think this is actually the more interesting approach t
 
 Here's the syntax for using the `openstack` driver for Docker Machine:
 
-    docker-machine create -d openstack \
-    --openstack-username <OpenStack username of user> \
-    --openstack-password <password of OpenStack user account> \
-    --openstack-tenant-name <name of OpenStack tenant> \
-    --openstack-auth-url http://<IP address of controller>:5000/v2.0 \
-    --openstack-flavor-id <ID of flavor to use> \
-    --openstack-image-id <ID of image to use> \
-    --openstack-net-name <name of private network> \
-    --openstack-floatingip-pool <name of external network> \
-    --openstack-ssh-user <default username> \
-    --openstack-sec-groups <comma separated list of security groups> \
-    <name>
+```sh
+docker-machine create -d openstack \
+--openstack-username <OpenStack username of user> \
+--openstack-password <password of OpenStack user account> \
+--openstack-tenant-name <name of OpenStack tenant> \
+--openstack-auth-url http://<IP address of controller>:5000/v2.0 \
+--openstack-flavor-id <ID of flavor to use> \
+--openstack-image-id <ID of image to use> \
+--openstack-net-name <name of private network> \
+--openstack-floatingip-pool <name of external network> \
+--openstack-ssh-user <default username> \
+--openstack-sec-groups <comma separated list of security groups> \
+<name>
+```
 
 Wow...that's quite a bit more complicated than using the `generic` driver! You can simplify the command line a bit by setting some commonly-used OpenStack environment variables:
 
@@ -101,8 +105,6 @@ Here's my line of thinking. OpenStack is really more of an _infrastructure orche
 Anyway, that's my 2 cents. I hope you found this information to be helpful, and feel free to hit me up on Twitter or drop me an e-mail if you have any feedback. Thanks!
 
 **UPDATE:** Nathan Ness pointed out that there was an error in the command for the OpenStack driver; it should be `--openstack-auth-url` instead of `--openstack_auth_url`. I've corrected the post. Thanks!
-
-
 
 [link-1]: https://docs.docker.com/machine/drivers/openstack/
 [link-2]: https://docs.docker.com/machine/drivers/generic/

@@ -25,8 +25,6 @@ I'm hesitant to believe that a configuration management system alone is enough t
 
 I don't know the answers to these questions (yet).
 
-
-
 [link-1]: https://twitter.com/vcdx001
 [link-2]: https://puppet.com/
 [link-3]: https://saltstack.com/

@@ -20,53 +20,55 @@ As you probably already know if you read [my recent introduction to Terraform bl
 
 Broadly speaking, interpolation allows Terraform to reference variables or attributes of other objects created by Terraform. For example, how does one refer to a network that he or she has just created? Here's an example taken from the introductory blog post:
 
-``` json
-   "resource": {
-        "openstack_compute_instance_v2": {
-            "tf-instance": {
-                "name": "tf-instance",
-                "image_name": "${var.image}",
-                "flavor_name": "${var.flavor}",
-                "key_pair": "${var.key_pair}",
-                "floating_ip": "${openstack_compute_floatingip_v2.tf-fip.address}",
-                "security_groups": [
-                    "default",
-                    "basic-services"
-                ],
-                "network": {
-                    "uuid": "${openstack_networking_network_v2.tf-net.id}"
-                }
+```json
+"resource": {
+    "openstack_compute_instance_v2": {
+        "tf-instance": {
+            "name": "tf-instance",
+            "image_name": "${var.image}",
+            "flavor_name": "${var.flavor}",
+            "key_pair": "${var.key_pair}",
+            "floating_ip": "${openstack_compute_floatingip_v2.tf-fip.address}",
+            "security_groups": [
+                "default",
+                "basic-services"
+            ],
+            "network": {
+                "uuid": "${openstack_networking_network_v2.tf-net.id}"
             }
         }
     }
+}
 ```
 
 I'll call your attention to the `floating_ip` and `uuid` lines, which reference an attribute from another object. In this case, I'm referencing the address of the floating IP object and the UUID of the network object.
 
 Terraform can, as part of a configuration, create a security group. A simple security group might look something like this:
 
-``` json
-    "resource": {
-        "openstack_compute_secgroup_v2": {
-            "ssh": {
-                "name": "ssh",
-                "description": "Allow SSH traffic",
-                "rule": {
-                    "from_port": "22",
-                    "to_port": "22",
-                    "ip_protocol": "tcp",
-                    "cidr": "0.0.0.0/0"
-                }
+```json
+"resource": {
+    "openstack_compute_secgroup_v2": {
+        "ssh": {
+            "name": "ssh",
+            "description": "Allow SSH traffic",
+            "rule": {
+                "from_port": "22",
+                "to_port": "22",
+                "ip_protocol": "tcp",
+                "cidr": "0.0.0.0/0"
             }
         }
     }
+}
 ```
 
 As you can probably determine, this allows TCP port 22 (SSH) from any remote source. If you later wanted to associate this security group, you'd need to use interpolation to reference the security group when defining the instance.
 
 Here's where the potential issue comes into play. You can use interpolation to reference the security group by its UUID, like this:
 
-    "${openstack_compute_secgroup_v2.ssh.id}"
+```hcl
+"${openstack_compute_secgroup_v2.ssh.id}"
+```
 
 In this case, `ssh` is the name of the object (_not_ the value of the `name` attribute, although I'd recommend making them one and the same for your sanity), and you're referencing the UUID of the security group. This will work just fine..._until you need to modify the security group._
 
@@ -74,14 +76,15 @@ If you modify the security group in the Terraform configuration (such as adding 
 
 Fortunately, there is a workaround, and it's a simple (albeit currently undocumented) one. Instead of referencing the security group's UUID via interpolation, reference the security group's name attribute, like this:
 
-    "${openstack_compute_secgroup_v2.ssh.name}"
+```hcl
+"${openstack_compute_secgroup_v2.ssh.name}"
+```
 
 (Again, I'll remind you that `ssh` in the above example is the name of the object, _not_ the value of the `name` attribute.) By simply switching from referencing the UUID to referencing the name, you'll work around the issue with updating security groups, and you'll once again be able to freely modify the security group's configuration using Terraform.
 
 As you can see in [the GitHub issue for this problem][link-3], it's likely that this potential problem will be documented in the Terraform documentation soon.
 
 **UPDATE:** I issued a pull request (and it was subsequently merged) to add some documentation recommending that users reference the security group using the `name` attribute. As of today (17 Dec 2015), the update wasn't yet live on the Terraform website, but it should be soon.
-
 
 [link-1]: http://terraform.io
 [link-2]: http://www.openstack.org

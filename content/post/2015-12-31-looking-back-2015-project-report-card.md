@@ -38,8 +38,6 @@ I'll spend the next few weeks reflecting on the progress toward my 2015 projects
 
 Thanks for another awesome year!
 
-
-
 [link-2]: http://www.ansible.com/
 [link-3]: http://openvswitch.org/
 [link-4]: http://www.openstack.org/

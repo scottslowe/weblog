@@ -26,5 +26,4 @@ The culture changes ("Robots vs. Oompa-Loompas", for example) were a lot of work
 
 And with that, Wray wraps up his session.
 
-
 [link-1]: https://twitter.com/jaredwray

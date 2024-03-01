@@ -26,12 +26,14 @@ As it turns out, you can combine these two tools to gain some of the flexibility
 3. Once Vagrant has created and started the VMs, verify that you have SSH connectivity using `vagrant ssh` (or `vagrant ssh <VM-name>` if you have more than one VM in the Vagrant environment).
 4. Provision Docker into the new VM(s) using this command (note that I've line-wrapped the command here with backslashes):
 
-        docker-machine create -d generic \
-        --generic-ssh-user vagrant \
-        --generic-ssh-key ~/.vagrant.d/insecure_private_key \
-        --generic-ip-address <IP address of VM> \
-        --engine-install-url "https://test.docker.com" \
-        <vm-name>
+    ```sh
+    docker-machine create -d generic \
+    --generic-ssh-user vagrant \
+    --generic-ssh-key ~/.vagrant.d/insecure_private_key \
+    --generic-ip-address <IP address of VM> \
+    --engine-install-url "https://test.docker.com" \
+    <vm-name>
+    ```
 
     There are a couple of notable things about this command:
 
@@ -52,8 +54,6 @@ Because you're using Vagrant to provision the VMs, you have all the flexibility 
 I hope someone else finds this useful.
 
 **UPDATE**: I published [this update][xref-2] to add some information about using Vagrant and Docker Machine together with Vagrant providers that leverage a forwarded port on the loopback address for connectivity.
-
-
 
 [link-1]: http://www.vagrantup.com/
 [link-2]: https://www.docker.com/

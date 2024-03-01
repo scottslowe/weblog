@@ -55,13 +55,12 @@ I've already talked about some of the tools I used, but let me recap them here:
 
 I hope this post helps provide some context and information on why I switched to Jekyll, how I handled the migration, and some of the tools that were useful during the migration. There's so much more to be shared about the migration, so stay tuned for more posts in the near future.
 
-
 [link-1]: https://speakerdeck.com/slowe/closing-the-cloud-skills-gap
 [link-2]: http://git-scm.com
 [link-3]: https://github.com
-[link-4]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
 [link-5]: http://vagrantup.com
-[link-6]: {{< relref "2013-05-31-reducing-the-friction-bbedit-to-marsedit.md" >}}
 [link-7]: http://www.allthingsdistributed.com/2011/08/Jekyll-amazon-s3.html
 [link-8]: https://github.com/thomasf/exitwp
 [link-9]: http://www.unmarked.com/textsoap/
+[link-4]: {{< relref "2014-09-12-a-quick-introduction-to-vagrant.md" >}}
+[link-6]: {{< relref "2013-05-31-reducing-the-friction-bbedit-to-marsedit.md" >}}

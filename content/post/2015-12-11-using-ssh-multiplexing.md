@@ -24,10 +24,12 @@ I see a couple of use cases, then, emerging for the use of SSH multiplexing:
 
 Now that I've established a bit of a foundation for SSH multiplexing and why it might be useful, let's look at how it is configured. The configuration is actually really straightforward. Here's a sample configuration that enables SSH multiplexing for a specific host:
 
-    Host demo-server.domain.com
-      ControlPath ~/.ssh/cm-%r@%h:%p
-      ControlMaster auto
-      ControlPersist 10m
+```text
+Host demo-server.domain.com
+  ControlPath ~/.ssh/cm-%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
+```
 
 This is a fairly standard SSH configuration block, but let's break it down a bit:
 
@@ -40,17 +42,19 @@ With this sort of configuration, no extra effort is required on your part, as th
 
 I mentioned earlier that one use case for SSH multiplexing was in conjunction with an SSH bastion host. For example, consider this SSH configuration:
 
-    Host bastion
-      Hostname server.example.com
-      ForwardAgent yes
-      ControlPath ~/.ssh/cm-%r@%h:%p
-      ControlMaster auto
-      ControlPersist 10m
+```text
+Host bastion
+  Hostname server.example.com
+  ForwardAgent yes
+  ControlPath ~/.ssh/cm-%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
 
-    Host 172.16.*
-      ProxyCommand ssh user@bastion -W %h:%p
+Host 172.16.*
+  ProxyCommand ssh user@bastion -W %h:%p
+```
 
-In this case, the first time you connect to an SSH host in the 172.16.* address space, SSH will establish a master connection to the bastion host (`server.example.com`, in this case). The connection to the private server will be proxied through the bastion host. When you connect to a second SSH host in the 172.16.* address space, the _existing_ master connection to the bastion host is leveraged, and a new SSH session is established with the second private server. The same goes for _all_ subsequent SSH sessions to servers in the private address space that are being proxied through the bastion host---they all share the same master connection to the bastion. Naturally, this can make connecting to the private servers through the bastion faster than it would be otherwise without SSH multiplexing.
+In this case, the first time you connect to an SSH host in the `172.16.*` address space, SSH will establish a master connection to the bastion host (`server.example.com`, in this case). The connection to the private server will be proxied through the bastion host. When you connect to a second SSH host in the `172.16.*` address space, the _existing_ master connection to the bastion host is leveraged, and a new SSH session is established with the second private server. The same goes for _all_ subsequent SSH sessions to servers in the private address space that are being proxied through the bastion host---they all share the same master connection to the bastion. Naturally, this can make connecting to the private servers through the bastion faster than it would be otherwise without SSH multiplexing.
 
 Note that some older versions of OpenSSH may have had some issues with combining `ProxyCommand` and `ControlMaster`, so make sure you do some testing. I tested with relatively recent versions of OpenSSH (OpenSSH 6.9p1 on OS X 10.11.2 and OpenSSH 6.6.1p1 on Ubuntu 14.04 LTS) and was not able to reproduce any issues. Your mileage may vary, of course.
 

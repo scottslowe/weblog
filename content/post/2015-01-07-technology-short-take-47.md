@@ -75,7 +75,6 @@ Welcome to Technology Short Take #47! This is the first Technology Short Take fo
 
 It's time to wrap up now; this post has already gotten too long. (What can I say? There's just so much good information out there!) I hope you were able to find something useful here.
 
-
 [link-1]: http://sniaesfblog.org/?p=368
 [link-2]: http://longwhiteclouds.com/2014/11/13/installing-cumulus-linux-from-a-macbook-pro/
 [link-3]: http://weaveblog.com/2014/11/13/life-and-docker-networking/

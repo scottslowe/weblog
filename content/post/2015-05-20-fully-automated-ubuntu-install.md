@@ -37,15 +37,17 @@ I chose to set up a new Ubuntu 14.04.2 VM that would run TFTP (via the `tftpd-hp
 
 There are a lot of different examples of menu configuration files out there, but nothing that I found did a very good job of explaining the various options or how those options may (or may not) affect the Ubuntu installer. In the end, I found that there were a few options that _had_ to be included in the menu configuration file---even if they were also in the preseed file, which I'll discuss in the next section---in order for the installation to be fully automated. Here's a snippet from the menu configuration file; this is for a generic Ubuntu 14.04 installation:
 
-    LABEL generic
-        MENU LABEL Install generic Ubuntu 14.04
-        KERNEL pxe/ubuntu/ubuntu-14.04-x86_64
-        IPAPPEND 1
-        APPEND initrd=pxe/ubuntu/ubuntu-14.04-x86_64.img ksdevice=eth0 \
-        locale=en_US.UTF-8 keyboard-configuration/layoutcode=us \
-        interface=eth0 hostname=unassigned \
-        url=http://192.168.100.240/preseed/14.04-generic-nolvm.cfg \
-        live-installer/net-image=http://192.168.100.240/ubuntu/14.04.2/install/filesystem.squashfs
+```text
+LABEL generic
+    MENU LABEL Install generic Ubuntu 14.04
+    KERNEL pxe/ubuntu/ubuntu-14.04-x86_64
+    IPAPPEND 1
+    APPEND initrd=pxe/ubuntu/ubuntu-14.04-x86_64.img ksdevice=eth0 \
+    locale=en_US.UTF-8 keyboard-configuration/layoutcode=us \
+    interface=eth0 hostname=unassigned \
+    url=http://192.168.100.240/preseed/14.04-generic-nolvm.cfg \
+    live-installer/net-image=http://192.168.100.240/ubuntu/14.04.2/install/filesystem.squashfs
+```
 
 (Note I've line-wrapped and added backslashes to improve readability.)
 
@@ -71,11 +73,13 @@ In my particular environment, I wanted a fully customized installation routine f
 
 ## Local HTTP Source
 
-At this point, you have a fully functional PXE boot environment, but no way of serving up the installation files. You could also use an existing HTTP server instance if you have one, and just adjust the URL provided in the menu command (see previous section) and the preseed file (see next section). I chose to install the Apache web server (via `apt-get install apache2`) on the same server that's providing the PXE boot infrastructure. Either way, once you have an HTTP server up and running, you need to make the installation files available via the web server. 
+At this point, you have a fully functional PXE boot environment, but no way of serving up the installation files. You could also use an existing HTTP server instance if you have one, and just adjust the URL provided in the menu command (see previous section) and the preseed file (see next section). I chose to install the Apache web server (via `apt-get install apache2`) on the same server that's providing the PXE boot infrastructure. Either way, once you have an HTTP server up and running, you need to make the installation files available via the web server.
 
 There's a couple of different ways to accomplish this task: you can copy the files from the installation media, or mount the installation media (ISO) at a mount point under the web server's document root. I chose the second path:
 
-    mount -o loop ubuntu-14.04.2-server-amd64.iso /var/www/html/ubuntu/14.04.2
+```sh
+mount -o loop ubuntu-14.04.2-server-amd64.iso /var/www/html/ubuntu/14.04.2
+```
 
 Obviously, you'll want to provide the correct filenames and/or paths in that mount command, and you'll also want to edit `/etc/fstab` if you want the ISO mounted automatically when you (re)boot the server.
 
@@ -89,7 +93,7 @@ To keep this post from getting too much longer I've created [a GitHub Gist][link
 * Lines 12 and 13 tell the Ubuntu installer where to find the installation files. This should correspond to the information for the HTTP server you set up in the previous section (and where the installation files were made available on that HTTP server).
 * Line 15 should again correspond to the correct URL (server and path) for where the initial filesystem is available.
 * The partitioning recipe (lines 28 through 53) is for an LVM-based system. It creates a primary partition for /boot, followed by a logical volume for / and a logical volume for swap. There aren't a lot of great resources out there on the partitioning recipes, but I did find [this documentation][link-8] and [this example][link-9] of how to create partitioning recipes. I settled on this particular recipe after a fair amount of trial and error. (This recipe is intended to be used with a small physical disk---in my case, a low-cost 32GB SSD).
-* The `preseed/late_command` option also deserves a bit of explanation. When you PXE boot and install over HTTP from an internal server, the `/etc/apt/sources.list` file contains _only_ references to the internal server---not to the "usual" repositories. The first `wget` command fixes that. The second `wget` command installs a customized `/etc/apt/apt.conf` that specifies an Apt proxy (using apt-cacher-ng).
+* The `preseed/late_command` option also deserves a bit of explanation. When you PXE boot and install over HTTP from an internal server, the `/etc/apt/sources.list` file contains _only_ references to the internal server---not to the "usual" repositories. The first `wget` command fixes that. The second `wget` command installs a customized `/etc/apt/apt.conf` that specifies an Apt proxy (using [apt-cacher-ng][link-1]).
 
 Clearly, you'll want to customize the preseed file to match your environment (for example, to provide the correct hostname, domain name, URLs, etc.). In my case, I created multiple, customized preseed files (one for each server I knew I wanted to build). Each preseed file has the correct hostname, volume group and logical volume names, etc. The various PXE menu commands (each server I wanted to build has its own PXE boot menu option) then reference the specific preseed for that particular server.
 
@@ -100,12 +104,12 @@ You'll host these preseed files on the HTTP server you set up earlier.
 With the addition of the preseed file, you now have all the components you need for a fully automated installation. Let's see how all this comes together:
 
 1. You boot a new server, and it obtains an IP address from a DHCP server (which you've configured, via the `filename` and `next-server` options, to direct the new server to the PXE server).
-2. The new server retrieves the Linux kernel and initial RAM disk image (via TFTP using the network device specified in the `ksdevice` option) and boots up.
-3. The installer retrieves the preseed file from the internal HTTP server (using the URL provided in the `url` parameter of the `APPEND` line) and parses the preseed file to see how the installation should proceed.
-4. The preseed file tells the installer to retrieve the installation files from the internal HTTP server (via the `d-i mirror/http/hostname` and `d-i mirror/http/directory` directives).
-5. The installer installs the system, using the internal HTTP server as the source mirror and using the preseed file to answer any questions along the way.
-6. At the end of the installation, the `preseed/late-command` runs and copies over two files (hosted on the internal HTTP server) to the newly-built Ubuntu installation.
-6. When the installer completes, the new server reboots. You're done!
+1. The new server retrieves the Linux kernel and initial RAM disk image (via TFTP using the network device specified in the `ksdevice` option) and boots up.
+1. The installer retrieves the preseed file from the internal HTTP server (using the URL provided in the `url` parameter of the `APPEND` line) and parses the preseed file to see how the installation should proceed.
+1. The preseed file tells the installer to retrieve the installation files from the internal HTTP server (via the `d-i mirror/http/hostname` and `d-i mirror/http/directory` directives).
+1. The installer installs the system, using the internal HTTP server as the source mirror and using the preseed file to answer any questions along the way.
+1. At the end of the installation, the `preseed/late-command` runs and copies over two files (hosted on the internal HTTP server) to the newly-built Ubuntu installation.
+1. When the installer completes, the new server reboots. You're done!
 
 ## Summary
 

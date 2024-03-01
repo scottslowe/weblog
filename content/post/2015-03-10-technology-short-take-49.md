@@ -83,7 +83,6 @@ Nothing this time around, but I'll keep my eyes peeled for content to include in
 
 Well, this post turned out to be quite hefty (over 1600 words!) Sorry for the length; there's just so much good content out there that I want to share with my readers. In any case, thanks for sticking around to read the whole post.
 
-
 [link-1]: http://keepingitclassless.net/2015/02/five-next-gen-net-skills/
 [link-2]: http://www.git-scm.com/
 [link-3]: https://speakerdeck.com/slowe/closing-the-cloud-skills-gap

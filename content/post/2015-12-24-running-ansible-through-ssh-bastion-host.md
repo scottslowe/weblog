@@ -40,7 +40,7 @@ This is pretty straightforward, and something that I've already discussed in my 
 
 Here's a sample SSH configuration file. I'll break down some of the various settings found here below.
 
-```
+```text
 Host 10.10.10.*
   ProxyCommand ssh -W %h:%p bastion.example.com
   IdentityFile ~/.ssh/private_key.pem
@@ -65,13 +65,13 @@ You can store this file wherever you like, but make note of where the file is st
 
 This custom SSH configuration file is useless without explicitly telling Ansible to use these settings when connecting to Ansible-managed hosts. This is accomplished by creating (or modifying) `ansible.cfg` and adding the following setings:
 
-```
+```text
 [ssh_connection]
 ssh_args = -F ./ssh.cfg -o ControlMaster=auto -o ControlPersist=30m
 control_path = ~/.ssh/ansible-%%r@%%h:%%p
 ```
 
-This is an area where I found a lot of incorrect and/or incomplete information. A number of articles failed to note that these settings need to be in the `[ssh_connection]` portion of `ansible.cfg`; based on my testing, it won't work properly unless the settings are in the right section. 
+This is an area where I found a lot of incorrect and/or incomplete information. A number of articles failed to note that these settings need to be in the `[ssh_connection]` portion of `ansible.cfg`; based on my testing, it won't work properly unless the settings are in the right section.
 
 The `-F` parameter is where you'll provide the path (full/absolute or relative) to the custom SSH configuration file you created earlier. To simplify being able to keep all these files in source control, I prefer to place `ansible.cfg` in the current directory with my playbooks, inventory, roles, and host/group variables. I also prefer to keep the custom SSH configuration file here, which is why you see `-F ./ssh.cfg` in the example text above. Obviously, you'll want to tailor this to your specific environment.
 
@@ -79,7 +79,9 @@ Once you have these two pieces of configuration in place, you'll be able to run 
 
 For example, let's say I wanted to run the playbook `hypervisors.yml` against one of the remote servers using the sample values/configuration I've shown in this article. I could run something like this:
 
-    ansible-playbook hypervisors.yml --limit 10.10.10.23
+```sh
+ansible-playbook hypervisors.yml --limit 10.10.10.23
+```
 
 This would run the `hypervisors.yml` playbook against _only_ the host 10.10.10.23, which would need to have an entry in the inventory. (Note that I didn't specify an inventory file; this is because I typically use `ansible.cfg` to tell Ansible to look in the current directory for the inventory file.) The connection to 10.10.10.23 would occur via the SSH bastion host named "bastion.example.com" using the specified private key and specified user account, and would leverage SSH multiplexing to speed up the SSH connections and Ansible transactions occurring over those connections.
 
@@ -94,8 +96,6 @@ If you have any questions or want more information, [hit me up on Twitter][link-
 **UPDATE 14 Sep 2016:** I've removed the information on SSH agent forwarding from this article, as it is not required when using an SSH bastion host.
 
 **UPDATE 17 Aug 2017:** In Ansible 2, you're able to do this "natively" in Ansible; see [this entry in the FAQ][link-6].
-
-
 
 [link-1]: https://gist.github.com/seansawyer/8fe009e67f7e01344328
 [link-2]: http://dotfiles.tnetconsulting.net/articles/2015/0506/empowering-openssh.html

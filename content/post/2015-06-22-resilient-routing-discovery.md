@@ -17,7 +17,7 @@ Not surprisingly (you'd understand this if you walked Eskilden's presentation fr
 
 Eskilden reinforces that companies shouldn't be implementing Docker solely for the sake of implementing Docker; it should be for a reason, a purpose (for him, it's making sure Shopify's services stay up and available). Resiliency is about building a reliable system from a bunch of unreliable components. Total availability is the availability per service to the power of the number of services. This means that the more services there are, the lower the total availability is. (To help understand this, realize that 100 services who individually have 99.99% availability will, together, have about 90% availability.)
 
-One very important and powerful optimization is that applications should be designed to provide a fallback level of functionality. The failure of a single service should not cause the entire application to be unavailable; instead, limited functionality should continue to be available. 
+One very important and powerful optimization is that applications should be designed to provide a fallback level of functionality. The failure of a single service should not cause the entire application to be unavailable; instead, limited functionality should continue to be available.
 
 One way of testing the behavior of application is to use a Shopify project called Toxiproxy (available at [https://github.com/shopify/toxiproxy][link-2]). This allows users to test all the various parts of an application that might have failed, be unreachable, or be responding slowly. Slowness is the killer in distributed systems---a refused connection is a luxury. Beating Little's Law is the first priority as you add services (Little's Law says that as latency goes up, throughput goes down).
 
@@ -41,7 +41,6 @@ The final topic Eskilden touches on is routing (what some people call networking
 Eskilden wraps up the session with a reminder to the attendees: Be careful, be sure to map out what you _really_ need. Don't overcompensate! Reliability is your metric. Build resiliency into the system, don't make it optional, and make sure the infrastructure teams own the integration points.
 
 At this point, the session wraps up.
-
 
 [link-1]: https://twitter.com/sirupsen
 [link-2]: https://github.com/shopify/toxiproxy

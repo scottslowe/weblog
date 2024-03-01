@@ -26,25 +26,29 @@ If you want to use Docker Machine with Photon, there are four major requirements
 
     To enable Docker on Photon OS, you'll need to run this command:
 
-        systemctl enable docker.service
+    ```sh
+    systemctl enable docker.service
+    ```
 
     To start Docker on Photon OS, you'll need to run this command:
 
-        systemctl start docker.service
+    ```sh
+    systemctl start docker.service
+    ```
 
 4. You'll need Internet connectivity. (This is probably a given, but I wanted to point it out nevertheless.)
 
 Once you've satisfied these 4 conditions, then it's super easy. Just run Docker Machine using a command that looks something like this (this command is for a Vagrant-managed Photon OS instance):
 
-    docker-machine create -d generic \
-    --generic-ssh-user vagrant \
-    --generic-ssh-key ~/.vagrant.d/insecure_private_key \
-    --generic-ip-address 192.168.100.101 \
-    photon-01
+```sh
+docker-machine create -d generic \
+--generic-ssh-user vagrant \
+--generic-ssh-key ~/.vagrant.d/insecure_private_key \
+--generic-ip-address 192.168.100.101 \
+photon-01
+```
 
 Obviously, you'd need to substitute the correct values for your environment. Once Docker Machine completes successfully, then you can run `eval "$(docker-machine env photon-01)"` and your system will be ready to run the Docker client against the Docker daemon inside the Photon OS instance. All set!
-
-
 
 [link-1]: http://docs.docker.com/machine/
 [link-2]: https://vmware.github.io/photon/

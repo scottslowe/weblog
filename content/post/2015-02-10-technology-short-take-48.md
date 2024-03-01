@@ -72,7 +72,6 @@ I'm adding this section this time around because I have a couple of articles I w
 
 It's time to wrap up now; this post is already longer than it probably should be. Here's hoping you found something useful! Although I haven't (yet) enabled comments on the new site, you're always welcome to drop me an e-mail or hit me up on Twitter with any feedback you might have.
 
-
 [link-1]: https://coreos.com/docs/running-coreos/cloud-providers/ecs/
 [link-2]: http://aws.amazon.com/ecs/
 [link-3]: http://blogs.vmware.com/vcloud/2014/12/login-vcloud-air-linux-instances-using-ssh-keys.html

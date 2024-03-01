@@ -27,12 +27,12 @@ Welcome to Technology Short Take #55! Here's hoping I've managed to find somethi
 * I recently came across Kuryr, an OpenStack project aimed at connecting Docker's libnetwork efforts to OpenStack Neutron. The end result, as I understand it, would be to allow _any_ Neutron plugin to be able to provide container networking functionality to Docker via libnetwork. This makes sense to me, although I think that network virtualization products are still going to need to integrate directly with libnetwork so that they can be used in environments outside of OpenStack. If you're interested in getting more information on Kuryr, check out Gal Sagie's post [here][link-1] or read this follow-up post on [using Kuryr and OVN][link-27] (Open Virtual Network) together.
 * Drew Conry-Murray has a post up on the Packet Pushers blog talking about [the benefits and challenges of a single OS][link-2]; specifically, the benefits and challenges pertaining to Arista and EOS. Lots of companies like to tout the "single OS" banner, but there can be value in having specialized OSes custom-built for specific purposes.
 * Here's an article that combines two of my favorite companies: Cumulus Networks and Ravello Systems. How so? The article shows you [how to build a Cumulus VX lab on Ravello Systems][link-5]. Very nifty stuff.
-*  CloudBase Solutions recently [announced the beta availability of Open vSwitch (OVS) 2.4 on Hyper-V][link-7]---bringing VXLAN and STT support to Hyper-V and enabling interoperable tunneling between Hyper-V hosts and KVM hosts running OVS. A [follow-up blog post][link-20] talks about how to use OVS on Hyper-V outside of an OpenStack context.
+* CloudBase Solutions recently [announced the beta availability of Open vSwitch (OVS) 2.4 on Hyper-V][link-7]---bringing VXLAN and STT support to Hyper-V and enabling interoperable tunneling between Hyper-V hosts and KVM hosts running OVS. A [follow-up blog post][link-20] talks about how to use OVS on Hyper-V outside of an OpenStack context.
 * Lim Wei Chiang has a nice write-up on [using ERSPAN with the vSphere Distributed Switch to do packet analysis][link-15].
 * Anthony Burke has an article on [a method for performing ingress optimization with NSX for vSphere][link-19] that leverages information from the hypervisor to help NSX make smarter routing decisions/updates. This is pretty cool and underscores the power of pooling data from compute, storage, and networking in a software-defined data center environment.
 * Matt Oswalt is one of a number of forward-thinking networking pros who's helping to lead the charge in transforming what it means to be a "networking professional." In [this post on network automation][link-23], he encourages folks to "be bold" and really pursue network automation instead of "settling" for templating configurations.
 * If you're running some Juniper equipment and are interested in getting started with network automation on that equipment, this article by Jason Edelman on [Juniper vSRX automation with Ansible][link-24] is a good resource.
- 
+
 ## Servers/Hardware
 
 * Dell is buying EMC. What---you hadn't heard? There are _tons_ of articles discussing the acquisition; check out this pair of articles from Chris Evans ([part 1][link-37], [part 2][link-38]).
@@ -76,8 +76,6 @@ Welcome to Technology Short Take #55! Here's hoping I've managed to find somethi
 * Chris Wahl posted [a brief discussion][link-28] on his use of [the Pomodoro technique][link-29] as a way of enhancing his learning efforts.
 
 OK, I'd better stop before this gets any longer! Whew...so much good stuff out there, it's really hard to choose what's included and what's omitted. In any case, I hope something here was helpful to you. Thanks for reading!
-
-
 
 [link-1]: https://galsagie.github.io/sdn/openstack/docker/kuryr/neutron/2015/08/24/kuryr-part1/
 [link-2]: http://packetpushers.net/arista-eos-benefits-challenges/

@@ -26,7 +26,6 @@ For the detailed explanation of how the developers were able to see such incredi
 
 Keep up the great work, Congress team!
 
-
 [link-1]: http://ruleyourcloud.com/2015/03/12/scaling-up-congress.html
 [link-2]: https://wiki.openstack.org/wiki/Congress
 [link-3]: https://github.com/stackforge/congress

@@ -88,8 +88,6 @@ This command tells RouterOS to translate a VLAN ID of 0 on port ether20 to a VLA
 
 Hopefully this information is helpful to someone else out there. RouterOS is actually quite powerful, and exposes a lot of features and functions---although accessing and configuring those features and functions is sometimes more difficult or unintuitive than perhaps it should be.
 
-
-
 [link-1]: http://wiki.mikrotik.com/wiki/Manual:CRS_examples
 [link-2]: http://routerboard.com/CRS226-24G-2SplusIN
 [link-3]: http://wiki.mikrotik.com/wiki/Main_Page

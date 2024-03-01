@@ -25,7 +25,6 @@ So what will I be sharing, you might ask? Well, a couple of things at least:
 
 I have two goals with this effort. First, I want to make it easier for other people to learn what Vagrant is and how they can put it to use in their career. Second, I want to make it easier for people to learn other new technologies that will help arm them for success in the IT industry. Hopefully I'll be able to make some progress toward these goals.
 
-
 [link-1]: http://www.vagrantup.com/
 [link-2]: http://www.vmware.com/products/fusion/
 [link-3]: http://www.vmware.com/products/workstation/

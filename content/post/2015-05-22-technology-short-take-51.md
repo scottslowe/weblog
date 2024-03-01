@@ -75,8 +75,6 @@ Nothing this time around, but I'll keep my eyes peeled for content to include in
 
 I still have so much more to share with you, but I'd better wrap this up now before it gets any longer. Otherwise, I'll have to start calling these posts "Technology Long Takes"!
 
-
-
 [link-1]: http://galsagie.github.io/sdn/openstack/ovs/2015/04/20/ovn-1/
 [link-2]: http://galsagie.github.io/ovs/virtualization/2015/01/16/ovn-distributed-controller/
 [link-3]: http://galsagie.github.io/sdn/openstack/ovs/2015/04/26/ovn-containers/

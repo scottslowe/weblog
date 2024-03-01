@@ -21,21 +21,28 @@ To help simplify this process, I wrote a regex that I used in conjunction with T
 
 Here's the regex that matches against URLs to posts on my own site:
 
-	(\(?)http://blog.scottlowe.org/(2[0-9]{3})/([0-9]{2})/([0-9]{2})/(.*)/(\)?)
+```text
+(\(?)http://blog.scottlowe.org/(2[0-9]{3})/([0-9]{2})/([0-9]{2})/(.*)/(\)?)
+```
 
 Using backreferences, the matching text is replaced with this:
 
-	{% post_url $2-$3-$4-$5 %}
+```text
+{% post_url $2-$3-$4-$5 %}
+```
 
 This takes a URL like this (this is the URL for the very first post on my site):
 
-	http://blog.scottlowe.org/2005/05/11/welcome/
+```text
+http://blog.scottlowe.org/2005/05/11/welcome/
+```
 
 And turns it into this:
 
-	{% post_url 2005-05-11-welcome %}
+```text
+{% post_url 2005-05-11-welcome %}
+```
 
 The nice thing about this regex is that it's still useful even after the migration. Why? Well, it's a lot easier to find the article I want to reference via an Internet search engine like DuckDuckGo or Google than it is to search through the Markdown source files. So, I find the article I want to reference, copy the URL, then use this regex to turn it into a Jekyll reference in another blog post. Handy!
-
 
 [xref-1]: {{< relref "2015-01-06-the-story-behind-the-migration.md" >}}

@@ -21,7 +21,7 @@ At this point, Patrick takes over to run a live demo. Here are some of the compo
 
 * Chef: Chef handles the hosts and laying down the configuration for the Mesos master, the Marathon framework, the ZooKeeper endpoint configurations, etc. Chef also handles the initial setup of Consul and HAProxy.
 * Docker: Docker is the packaging solution. Services are packaged using Docker. The Dockerfile for an application resides in the application repo. Application builds include building the Docker image and pushing it to the appropriate registry.
-* Mesos: Mesos provides cluster scheduling, placing containers onto hosts. All interaction with Mesos comes through the frameworks (i.e., Marathon, spark, Cassandra, etc.). 
+* Mesos: Mesos provides cluster scheduling, placing containers onto hosts. All interaction with Mesos comes through the frameworks (i.e., Marathon, spark, Cassandra, etc.).
 * Marathon: The main framework in use is Marathon, which enables running Docker on Mesos. Marathon deployments (handled via JSON descriptions) will deploy Docker images and configure them appropriately (which image to use, which ports to expose, etc.). Health checks are also included in the Marathon deployment file. Marathon also allows Disney to define the upgrade strategy, which enables them to control how new images are deployed.
 * Consul: Disney only uses the distributed key-value store functionality of Consul (not the service discovery aspect). Containers use consul-template to pull information from Consul to customize the configuration at run-time.
 * HAProxy: HAProxy handles the routing of requests. Two health checks are involved: one on the HAProxy side, and one on the back-end service side. HAProxy is completely configured via Marathon's service discovery mechanism.

@@ -32,8 +32,6 @@ In both these examples, you're going to want (dare I say _need_?) some type of m
 
 Hopefully this post has provided some insight and information on _when_ and _why_ you might find an SSH bastion host a useful addition to your design. If you have any questions, feel free [to hit me up on Twitter][link-4]. Thanks!
 
-
-
 [link-1]: http://docs.docker.com/swarm/
 [link-2]: https://github.com/coreos/etcd
 [link-3]: http://openstack.org/

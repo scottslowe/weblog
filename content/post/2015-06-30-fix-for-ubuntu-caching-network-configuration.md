@@ -16,7 +16,7 @@ I've been wrestling with an [Ubuntu][link-1] network configuration issue over th
 
 Here's a bit more context: I was switching some of the network interfaces in my Ubuntu 14.04.2 servers from a "standard" network configuration to using VLAN interfaces (after all, it seemed like such a shame to not more fully utilize the 10GbE and 40GbE interfaces in these servers). Before the reconfiguration, the servers had a network interface configuration file (located in `/etc/network/interfaces.d` and sourced in `/etc/network/interfaces`) that looked something like this:
 
-```
+```text
 auto p55p1
 iface p55p1 inet static
 address 172.16.3.201
@@ -27,7 +27,7 @@ This interface was connected to a port on a [Cumulus Linux][link-2]-powered [Del
 
 After reconfiguration (done using [Ansible][link-4], more on that in a future post), I had _two_ interface configuration files---one for the physical interface, and one for the VLAN interface. The physical interface file looked like this:
 
-```
+```text
 auto p55p1
 iface p55p1 inet manual
 up ip link set p55p1 up
@@ -36,7 +36,7 @@ down ip link set p55p1 down
 
 And the VLAN interface file looked like this:
 
-```
+```text
 auto p55p1.3
 iface p55p1.3 inet static
 address 172.16.3.201
