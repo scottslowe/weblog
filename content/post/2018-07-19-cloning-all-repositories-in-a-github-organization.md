@@ -18,26 +18,36 @@ I've recently started playing around with [Ballerina][link-3], and upon the sugg
 
 Fairly quickly after I posted [my tweet asking about a solution][link-4], a follower responded indicating that I should be able to get the list of repositories via the GitHub API. He was, of course, correct:
 
-    curl -s https://api.github.com/orgs/ballerina-guides/repos
+```bash
+curl -s https://api.github.com/orgs/ballerina-guides/repos
+```
 
 This returns a list of the repositories in JSON format. Now, if you've been paying attention to my site, you know there's [a really handy way of parsing JSON data at the CLI][xref-1] (namely, the `jq` utility). However, to use `jq`, you need to know the overall _structure_ of the data. What if you don't know the structure?
 
 No worries, [this post][xref-2] outlines another tool---`jid`---that allows us to interactively explore the data. So, I ran:
 
-    curl -s https://api.github.com/orgs/ballerina-guides/repos | jid
+```bash
+curl -s https://api.github.com/orgs/ballerina-guides/repos | jid
+```
 
 This let me explore the data being returned by the GitHub API call, and I quickly determined that I needed the `clone_url` property for each repository. With this information in hand, I can now construct this command:
 
-    curl -s https://api.github.com/orgs/ballerina-guides/repos |
-    jq -r '.[].clone_url'
+```bash
+curl -s https://api.github.com/orgs/ballerina-guides/repos |
+jq -r '.[].clone_url'
+```
 
 Now I have a list of all the clone URLs for all the repositories, right? Not quite---the GitHub API paginates results, so a minor adjustment is needed:
 
-    curl -s https://api.github.com/orgs/ballerina-guides/repos?per_page=200 | jq -r '.[].clone_url'
+```bash
+curl -s https://api.github.com/orgs/ballerina-guides/repos?per_page=200 | jq -r '.[].clone_url'
+```
 
 From here it's a simple matter of piping the results to `xargs`, like this:
 
-    curl -s https://api.github.com/orgs/ballerina-guides/repos?per_page=200 | jq -r '.[].clone_url' | xargs -n 1 git clone
+```bash
+curl -s https://api.github.com/orgs/ballerina-guides/repos?per_page=200 | jq -r '.[].clone_url' | xargs -n 1 git clone
+```
 
 Boom! Problem solved. As fate would have it, I'm not the only one thinking along these lines; here's [another example][link-1]. Several others also  suggested solutions involving Ruby; here's [one such example][link-2] (this is written for GitHub Enterprise but should work for "ordinary" GitHub).
 

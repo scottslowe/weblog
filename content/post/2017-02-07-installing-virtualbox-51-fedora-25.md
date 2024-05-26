@@ -22,18 +22,24 @@ After a number of attempts (using a test VM to iron out the "best" procedure), h
 
 3. Next, use `dnf` to install some prerequisite packages (note: On my installation of Fedora 25, almost all of these packages were _already_ installed):
 
-        dnf install binutils gcc make patch libgomp glibc-headers glibc-devel
+    ```bash
+    dnf install binutils gcc make patch libgomp glibc-headers glibc-devel
+    ```
 
 4. Now you're going to install some kernel-related packages. I'm listing these separately because you want to pin the packages that get installed to the current kernel version you're actually running (this sidesteps that issue I mentioned where the available packages don't match the kernel version you're running). I would imagine you could combine these into a single command, if you really wanted to. Here's the additional packages:
 
-        dnf install "kernel-devel-`uname -r`"
-        dnf install "kernel-headers-`uname -r`"
+    ```bash
+    dnf install "kernel-devel-`uname -r`"
+    dnf install "kernel-headers-`uname -r`"
+    ```
 
 5. Now install the "akmods" package using `dnf install akmods`. This will also install a number of dependencies.
 
 6. Finally, you're ready to install VirtualBox itself (note the case on these packages, they _are_ case-sensitive):
 
-        dnf install VirtualBox akmod-VirtualBox
+    ```bash
+    dnf install VirtualBox akmod-VirtualBox
+    ```
 
     When this is complete, reboot your system to allow Linux to build and install the VirtualBox kernel modules it needs in order to run correctly. You may note that your next boot takes a bit longer; this is due to the kernel modules getting compiled and installed.
 

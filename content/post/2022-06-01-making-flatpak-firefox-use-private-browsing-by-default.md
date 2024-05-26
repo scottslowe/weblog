@@ -18,19 +18,25 @@ When working with the non-Flatpak version of Firefox, the GNOME desktop file ins
 
 With the Flatpak version of Firefox, there is still a shared GNOME desktop file, and support for a locally-customized version as well. The shared desktop file, installed with the Flatpak, is found here on my Fedora system:
 
-    /var/lib/flatpak/app/org.mozilla.firefox/current/active/export/share/applications
+```text
+/var/lib/flatpak/app/org.mozilla.firefox/current/active/export/share/applications
+```
 
 (It's worth noting that the `current` and `active` portions of the directory path are symlinks.)
 
 You _can_ edit the `org.mozilla.firefox.desktop` file at this location to add the `--private-window` parameter to the first `Exec` line, like this (it's all on a single line; I've wrapped it here for you):
 
-    Exec = /usr/bin/flatpak run --branch=stable --arch=x86_64 \
-    --command=firefox --file-forwarding org.mozilla.firefox \
-    --private-window @@u %u @@
+```text
+Exec = /usr/bin/flatpak run --branch=stable --arch=x86_64 \
+--command=firefox --file-forwarding org.mozilla.firefox \
+--private-window @@u %u @@
+```
 
 However, when the Flatpak gets updated, then this change will get overwritten. Instead, it would be better to copy `org.mozilla.firefox.desktop` from the path above to the corresponding local path:
 
-    ~/.local/share/flatpak/exports/share/applications
+```text
+~/.local/share/flatpak/exports/share/applications
+```
 
 Then edit this local desktop file to include the `--private-window` parameter on the first `Exec` line. Making the change to the local copy ensures that the change will not get overwritten or replaced when the Flatpak gets updated.
 

@@ -43,7 +43,9 @@ You now have multiple versions installed. **However**, due to the caveats/limita
 
 So what to do? Probably the easiest thing to do is this:
 
-    ln -s $HOME/bin/kumactl-1.1.6 /opt/homebrew/Cellar/kumactl/1.1.6/bin/kumactl
+```bash
+ln -s $HOME/bin/kumactl-1.1.6 /opt/homebrew/Cellar/kumactl/1.1.6/bin/kumactl
+```
 
 Replace `$HOME/bin` with the path of your choice, preferably something already in `$PATH`. This allows you to run the older version by specifying the binary (via symbolic link) with the version in the name, and running the latest version by just using the binary's name. It's not a great solution, but it works.
 

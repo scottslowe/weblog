@@ -43,7 +43,10 @@ To build your own "CAPI bootstrapper image":
 3. Clone [my "packer-templates" GitHub repository][link-5] to your local system.
 4. From the cloned repository, run this command:
 
-        packer build templates/aws-capi-bootstrapper-1.18.2.json
+    ```bash
+    packer build templates/aws-capi-bootstrapper-1.18.2.json
+    ```
+
     You may need to specify the full path to the `packer` binary, depending on how/where it is installed.
 
 Once the Packer process completes, you'll have an AMI with all the prerequisites for getting started with Cluster API on AWS. Spin up an instance based on that AMI and you're almost completely ready to roll; the only additional step needed is to configure the AWS CLI in the instance with your credentials, as mentioned earlier. (I can't do that for you.)

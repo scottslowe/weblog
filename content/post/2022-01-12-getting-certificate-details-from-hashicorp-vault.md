@@ -17,37 +17,51 @@ For the commands and API calls I've shared below, I'm using "pki" as the name/pa
 
 To use the Vault CLI to see the list of certificates issued by Vault, you can use this command:
 
-    vault list pki/certs
+```bash
+vault list pki/certs
+```
 
 This will return a list of the serial numbers of the certificates issued by this PKI. Looking at just serial numbers isn't terribly helpful, though. To get more details, you first need to read the certificate details (note singular "cert" here versus plural "certs" in the previous command):
 
-    vault read pki/cert/<serial-num>
+```bash
+vault read pki/cert/<serial-num>
+```
 
 Now the output is a formatted response that includes the PEM-encoded certificate. That's a bit more useful, but still not quite all the way to seeing all the details about the certificate. Fortunately, the Vault CLI supports a `-format=json` parameter, and you can couple that with the trusty tool `jq` to parse the output (see [this post][xref-1] if you're not familiar with `jq`):
 
-    vault read -format=json pki/cert/<serial-num> | jq -r '.data.certificate'
+```bash
+vault read -format=json pki/cert/<serial-num> | jq -r '.data.certificate'
+```
 
 Finally! One more step: pipe the output of the command through `openssl x509`, like this:
 
-    vault read -format=json pki/cert/<serial-num> | \
-    jq -r '.data.certificate' | \
-    openssl x509 -in - -noout -text
+```bash
+vault read -format=json pki/cert/<serial-num> | \
+jq -r '.data.certificate' | \
+openssl x509 -in - -noout -text
+```
 
 Bam! Now you have all the details on the certificate.
 
 It's also possible to do this via Vault's HTTP API. Using `curl`, you can retrieve the list of certificate serial numbers with this API call:
 
-    curl -s --request LIST https://<vault-ip-or-hostname>/v1/pki/certs
+```bash
+curl -s --request LIST https://<vault-ip-or-hostname>/v1/pki/certs
+```
 
 Armed with a serial number, you can then retrieve a specific certificate:
 
-    curl -s https://<vault-ip-or-hostname>/v1/pki/cert/<serial-num>
+```bash
+curl -s https://<vault-ip-or-hostname>/v1/pki/cert/<serial-num>
+```
 
 And then, naturally, you can use `jq` and `openssl` to see the certificate details:
 
-    curl -s https://<vault-ip-or-hostname>/v1/pki/cert/<serial-num> | \
-    jq -r '.data.certificate' | \
-    openssl x509 -in - -noout -text
+```bash
+curl -s https://<vault-ip-or-hostname>/v1/pki/cert/<serial-num> | \
+jq -r '.data.certificate' | \
+openssl x509 -in - -noout -text
+```
 
 Per [the Vault API docs][link-2], the endpoints for retrieving the list of certificates or retrieving a specific certificate are unauthenticated endpoints, so there's no need to include the "X-Vault-Token" header with your API requests.
 

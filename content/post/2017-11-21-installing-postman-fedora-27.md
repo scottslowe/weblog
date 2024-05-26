@@ -19,11 +19,15 @@ Here are the steps I followed:
 
 1. Download the installation tarball, either via your browser of choice or via the command line. If you'd prefer to use the command line, this command should take care of you:
 
-        curl -L https://www.getpostman.com/app/download/linux64 -O postman-linux-x64.tar.gz
+    ```bash
+    curl -L https://www.getpostman.com/app/download/linux64 -O postman-linux-x64.tar.gz
+    ```
 
 2. Unpack the tarball into the directory of your choice. I prefer to put third-party applications such as this into the `/opt` directory; you can (obviously) put it wherever you prefer. This command should do the trick:
 
-        sudo tar xvzf postman-linux-x64.tar.gz -C /opt
+    ```bash
+    sudo tar xvzf postman-linux-x64.tar.gz -C /opt
+    ```
 
     If you prefer a directory _other_ than `/opt`, specify the appropriate directory in the command above.
 
@@ -31,21 +35,25 @@ Here are the steps I followed:
 
 4. Create a symbolic link in a directory included in your PATH. In this example, I'm creating the symbolic link in `/usr/local/bin`, but you could use any directory included in your PATH:
 
-        sudo ln -s /opt/postman/Postman /usr/local/bin/postman
+    ```bash
+    sudo ln -s /opt/postman/Postman /usr/local/bin/postman
+    ```
 
 5. At this point, you should be able to launch Postman by just running `postman` from the terminal. However, ideally you'll want to be able to use a graphical launcher. To do that, you need to create a "desktop launcher." Create a file named `postman.desktop` in `~/.local/share/applications` with these contents:
 
-        [Desktop Entry]
-        Name=Postman
-        GenericName=API Client
-        X-GNOME-FullName=Postman API Client
-        Comment=Make and view REST API calls and responses
-        Keywords=api;
-        Exec=/opt/bin/postman
-        Terminal=false
-        Type=Application
-        Icon=/opt/postman/resources/app/assets/icon.png
-        Categories=Development;Utilities;
+    ```bash
+    [Desktop Entry]
+    Name=Postman
+    GenericName=API Client
+    X-GNOME-FullName=Postman API Client
+    Comment=Make and view REST API calls and responses
+    Keywords=api;
+    Exec=/opt/bin/postman
+    Terminal=false
+    Type=Application
+    Icon=/opt/postman/resources/app/assets/icon.png
+    Categories=Development;Utilities;
+    ```
 
 6. Log out and log back in, and after a few minutes you should be able to see a Postman icon in your list of applications. You can now launch Postman either by using the graphical launcher _or_ by running `postman` in the terminal.
 

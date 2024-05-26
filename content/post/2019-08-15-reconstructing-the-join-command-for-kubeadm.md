@@ -18,17 +18,21 @@ Fortunately, the values needed for a `kubeadm join` command are relatively easy 
 
 Here's the skeleton of a `kubeadm join` command for a control plane node:
 
-    kubeadm join <endpoint-ip-or-dns>:<port> \
-    --token <valid-bootstrap-token> \
-    --discovery-token-ca-cert-hash <ca-cert-sha256-hash> \
-    --control-plane \
-    --certificate-key <certificate-key>
+```bash
+kubeadm join <endpoint-ip-or-dns>:<port> \
+--token <valid-bootstrap-token> \
+--discovery-token-ca-cert-hash <ca-cert-sha256-hash> \
+--control-plane \
+--certificate-key <certificate-key>
+```
 
 And here's the skeleton of a `kubeadm join` command for a worker node:
 
-    kubeadm join <endpoint-ip-or-dns>:<port> \
-    --token <valid-bootstrap-token> \
-    --discovery-token-ca-cert-hash <ca-cert-sha256-hash> \
+```bash
+kubeadm join <endpoint-ip-or-dns>:<port> \
+--token <valid-bootstrap-token> \
+--discovery-token-ca-cert-hash <ca-cert-sha256-hash> \
+```
 
 As you can see, the information needed for the worker node is a subset of the information needed for a control plane node.
 

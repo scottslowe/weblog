@@ -17,38 +17,52 @@ The error was manifesting itself in that I was able to successfully connect to t
 
 Since the application's error message was extremely vague (and not even remotely TLS-related), I decided to try using `curl` to verify that TLS was working correctly. First I ran this command:
 
-    curl --cacert /path/to/CA/certificate https://127.0.0.1 -v
+```bash
+curl --cacert /path/to/CA/certificate https://127.0.0.1 -v
+```
 
 After some output, `curl` reported this error:
 
-    curl: (35) gnutls_handshake() failed: certificate is bad
+```bash
+curl: (35) gnutls_handshake() failed: certificate is bad
+```
 
 At first, I took this to mean that something was actually wrong with the certificate, but I quickly realized this was an expected error---TLS authentication was enabled, and I hadn't given `curl` the correct parameters. So I tried it again, this time with the correct parameters:
 
-    curl --cacert /path/to/CA/certificate \
-    --cert /path/to/client/certificate \
-    --key /path/to/client/certificate/key \
-    https://127.0.0.1 -v
+```bash
+curl --cacert /path/to/CA/certificate \
+--cert /path/to/client/certificate \
+--key /path/to/client/certificate/key \
+https://127.0.0.1 -v
+```
 
 This time the connection succeeded, and the output of the `curl` command showed that TLS encryption and authentication were in place and successful. The next step was to try it against the IP address assigned to the network adapter (where it had been failing):
 
-    curl --cacert /path/to/CA/certificate \
-    --cert /path/to/client/certificate \
-    --key /path/to/client/certificate/key \
-    https://10.200.10.1 -v
+```bash
+curl --cacert /path/to/CA/certificate \
+--cert /path/to/client/certificate \
+--key /path/to/client/certificate/key \
+https://10.200.10.1 -v
+```
 
 And the output tells me, clearly, what's wrong:
 
-    curl: (51) SSL: certificate subject name (ip-10-200-10-1) does not match target host name '10.200.10.1'
+```bash
+curl: (51) SSL: certificate subject name (ip-10-200-10-1) does not match target host name '10.200.10.1'
+```
 
 Ah, now that's much more informative, but unexpected---was the certificate, in fact, not configured correctly? Fortunately, it was relatively easy to double-check:
 
-    openssl x509 -in /path/to/server/certificate -text
+```bash
+openssl x509 -in /path/to/server/certificate -text
+```
 
 Clearly noted in the output under the "X509v3 Extensions" section is the answer:
 
-    X509v3 Subject Alternative Name:
-        DNS:ip-10-200-10-1, DNS:localhost, IP Address:127.0.0.1, IP Address:0:0:0:0:0:0:0:1
+```bash
+X509v3 Subject Alternative Name:
+    DNS:ip-10-200-10-1, DNS:localhost, IP Address:127.0.0.1, IP Address:0:0:0:0:0:0:0:1
+```
 
 Sure enough, the certificate was missing a Subject Alternative Name (SAN) for the network adapter's IP address, and that was enough to cause the application (rightfully so) to fail.
 

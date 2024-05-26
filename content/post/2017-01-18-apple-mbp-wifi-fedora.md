@@ -22,13 +22,17 @@ Once the RPM Fusion repositories (both Free and Nonfree) repositories are enable
 
 1. First, install the "kernel-devel" package appropriate for your current kernel. The command to use is:
 
-        sudo dnf install "kernel-devel-uname-r == $(uname -r)"
+    ```bash
+    sudo dnf install "kernel-devel-uname-r == $(uname -r)"
+    ```
 
     This could be user error on my part, but I've found that it's necessary to use the full package (including version) instead of just "kernel-devel". Otherwise, Fedora seems to have a tendency to install the latest package, which may not match the current kernel you're actually running.
 
 2. Next, install the "akmods" and "broadcom-wl" packages:
 
-        sudo dnf install akmods broadcom-wl
+    ```bash
+    sudo dnf install akmods broadcom-wl
+    ```
 
 3. After these packages have been installed, build the kernel modules with `sudo akmods`. This will take a moment, then it should return you to the terminal prompt after an "OK" message.
 

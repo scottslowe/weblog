@@ -21,17 +21,23 @@ In this clean build VM, I perform the following steps to build a `multimarkdown`
 
 1. Install the necessary packages with this command:
 
-        sudo apt install gcc make cmake git build-essential
+    ```bash
+    sudo apt install gcc make cmake git build-essential
+    ```
 
 2. Clone the source code repository:
 
-        git clone https://github.com/fletcher/MultiMarkdown-6
+    ```bash
+    git clone https://github.com/fletcher/MultiMarkdown-6
+    ```
 
 3. Switch into the directory where the repository was cloned and run these commands to build the binary:
 
-        make
-        cd build
-        make
+    ```bash
+    make
+    cd build
+    make
+    ```
 
 4. Once the second `make` command is done, you're left with a `multimarkdown` binary. Copy that to the host system (`scp` works fine). Use `vagrant destroy` to clean up the temporary build VM once you've copied the binary to your host system.
 

@@ -17,7 +17,9 @@ The [tool that I've found is `yq`][link-1], which is an _incredibly_ useful tool
 
 In any case, you can use `yq` to replace the `grep` plus `awk` combo outlined in [my earlier article][xref-1] on examining certificate data in Kubeconfig files. Instead, to pull out _only_ the client certificate data, just use this `yq` command (you _did_ know that Kubeconfig files are YAML, right?):
 
-    yq '.users[0].user.client-certificate-data' < ~./kube/config
+```bash
+yq '.users[0].user.client-certificate-data' < ~./kube/config
+```
 
 (Of course, this command assumes your Kubeconfig file is named `config` in the `~/.kube` directory; adjust the command as necessary based on your specific environment.)
 
@@ -25,7 +27,9 @@ The `.users[0]` portion of the `yq` command refers to the first user in the list
 
 From there, you can decode the Base64-encoded content and then pipe it to OpenSSL, just as described in the other post, to get a look at the actual certificate encoded within the Kubeconfig file. Here's the full command:
 
-    yq '.users[0].user.client-certificate-data' < ~/.kube/config | base64 -D | openssl x509 -text
+```bash
+yq '.users[0].user.client-certificate-data' < ~/.kube/config | base64 -D | openssl x509 -text
+```
 
 (Note that this command is for macOS; I believe you'll need to use a `base64 -d` on GNU/Linux systems.)
 

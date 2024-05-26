@@ -21,19 +21,25 @@ There's only one small problem with this approach: what if you're using another 
 
 The fix for this is to bind mount a host path into the container instead of using a named volume. First, create the `~/.config/gcloud` directory on your system. Then you'll initialize and authenticate with this command:
 
-    docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud \
-    google/cloud-sdk gcloud init
+```bash
+docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud \
+google/cloud-sdk gcloud init
+```
 
 This will take you through the initialization/authentication process, and will store the authentication information outside the container (so that tools like Packer can still access them). From there, just include the bind mount for future invocations of the Docker image. For example, to see a list of your GKE clusters:
 
-    docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud \
-    google/cloud-sdk gcloud container clusters list
+```bash
+docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud \
+google/cloud-sdk gcloud container clusters list
+```
 
 You could then make this easier for yourself with a Bash alias:
 
-    alias gcloud="docker run --rm -ti \
-    -v $HOME/.config/gcloud:/root/.config/gcloud \
-    google/cloud-sdk gcloud"
+```bash
+alias gcloud="docker run --rm -ti \
+-v $HOME/.config/gcloud:/root/.config/gcloud \
+google/cloud-sdk gcloud"
+```
 
 Nothing terribly new or revolutionary here, but I hope it's useful to someone nevertheless.
 

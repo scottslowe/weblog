@@ -17,37 +17,49 @@ Before I proceed any further, I'll provide the disclaimer that this information 
 
 Getting the necessary information from Git is actually far easier than one might think. This variation of the `git log` command will print only the full hash of the last commit to the repository:
 
-    git log -1 --format=%H
+```bash
+git log -1 --format=%H
+```
 
 If you prefer the shortened commit hash (which is what I use currently), then just change the `%H` to `%h`, like this:
 
-    git log -1 --format=%h
+```bash
+git log -1 --format=%h
+```
 
 Getting the information _out_ of Git is only half the puzzle, though; the other half is getting it _into_ the Docker image. The answer lies in some changes to the `Dockerfile` and the use of an additional command-line flag when building the image.
 
 First, you'll need to add lines like this to your `Dockerfile`:
 
-    ARG GIT_COMMIT=unspecified
-    LABEL git_commit=$GIT_COMMIT
+```dockerfile
+ARG GIT_COMMIT=unspecified
+LABEL git_commit=$GIT_COMMIT
+```
 
 The first line defines a build-time argument, and the use of `=unspecified` means that if the built-time argument is omitted or not supplied, it will default to the value of "unspecified". The second line takes the information from the argument and adds it as a label on the image.
 
 With the `Dockerfile` prepared to leverage Git commit information, all that's necessary is to build the image with the `--build-arg` flag, like this (here I'm showing the command I'd use to build the "flask-web-svc" image for the Flask application I've been building):
 
-    docker build -t flask-local-build --build-arg GIT_COMMIT=$(git log -1 --format=%h) .
+```bash
+docker build -t flask-local-build --build-arg GIT_COMMIT=$(git log -1 --format=%h) .
+```
 
 Here I'm using Bash command substitution to take the output of `git log -1 --format=%h` and supply it to `docker build` as the GIT_COMMIT argument (i.e., what the `Dockerfile` is expecting). This command assumes that you're building the Docker image from the latest Git commit; if this isn't the case, then you'll need to modify your command. As I mentioned earlier, if you omit the `--build-arg` parameter, then the label will be assigned with the default value of "unspecified".
 
 When you build the image this way, you can then see the Git commit attached to the image as a label using this command:
 
-    docker inspect flask-local-build | jq '.[].ContainerConfig.Labels'
+```bash
+docker inspect flask-local-build | jq '.[].ContainerConfig.Labels'
+```
 
 Note I'm using the incredibly-useful `jq` tool here. (If you're not familiar with `jq`, check out [my introductory post][xref-1].)
 
 Assuming that the build was successful and the container operates as expected/desired, then you can tag the image and push it to a registry:
 
-    docker tag flask-local-build slowe/flask-web-svc:0.3
-    docker push slowe/flask-web-svc:0.3
+```bash
+docker tag flask-local-build slowe/flask-web-svc:0.3
+docker push slowe/flask-web-svc:0.3
+```
 
 I also create a GitHub release corresponding to the Git commit used to build an image, so I can easily correlate a particular version of the Docker image with the appropriate commit in the repository. This makes it easier to quickly jump to the `Dockerfile` for each version of the Docker image. So, for example, when I release version 0.3 of the Docker image (which I recently did), I also have [a matching v0.3 release in GitHub][link-4] that points to the specific Git commit from which version 0.3 of the Docker image is built. This allows me---and anyone else consuming my Docker image---to have full traceability from a particular version of a Docker image all the way back to the specific Git commit from which that Docker image was built.
 

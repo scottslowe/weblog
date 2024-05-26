@@ -72,17 +72,21 @@ The fourth step is to update the other control plane components to communicate w
 
 The files that need to be modified are:
 
-    /etc/kubernetes/controller-manager.conf
-    /etc/kubernetes/scheduler.conf
+```text
+/etc/kubernetes/controller-manager.conf
+/etc/kubernetes/scheduler.conf
+```
 
 These files are standard Kubeconfig files. The only line that needs to be changed is the `server:` line that specifies the API endpoint (this is currently probably pointing to the IP address or hostname of the single control plane node). Edit each of these files to point to an IP address or DNS name for the load balancer (and for which a SAN exists on the API server certificate).
 
 For these components to pick up the change, you'll need to restart them. Assuming that Docker is the container runtime in use, these commands will kill the container for each component:
 
-    docker kill $(docker ps | grep kube-controller-manager | \
-    grep -v pause | cut -d' ' -f1)
-    docker kill $(docker ps | grep kube-scheduler | grep -v pause | \
-    cut -d' ' -f1)
+```bash
+docker kill $(docker ps | grep kube-controller-manager | \
+grep -v pause | cut -d' ' -f1)
+docker kill $(docker ps | grep kube-scheduler | grep -v pause | \
+cut -d' ' -f1)
+```
 
 If you're using containerd as your container runtime, the commands will look a bit different. Use `crictl pods | grep kube-controller-manager | cut -d' ' -f1` to get the Pod ID. Then use `crictl stopp <pod-id>` to stop the Pod, and `crictl rmp <pod-id>` to remove the Pod. Repeat as needed for other control plane components.
 
@@ -110,7 +114,9 @@ As pointed out in [this post][xref-1], `kubeadm` stores some configuration in a 
 
 First, pull the current configuration from the ConfigMap with this command:
 
-    kubectl -n kube-system get configmap kubeadm-config -o jsonpath='{.data.ClusterConfiguration}' > kubeadm.yaml
+```bash
+kubectl -n kube-system get configmap kubeadm-config -o jsonpath='{.data.ClusterConfiguration}' > kubeadm.yaml
+```
 
 Currently, the `controlPlaneEndpoint` is most likely empty (just a pair of double quotes). Edit this value to point to the DNS CNAME of the load balancer you created and configured for the control plane. (As I mentioned earlier, the use of a DNS CNAME for the control plane load balancer is recommended.)
 
@@ -118,7 +124,9 @@ You should also be able to see the `certSANs` section that was added as part of 
 
 Once you've edited the file, upload it back to the cluster with this command:
 
-    kubeadm config upload from-file --config kubeadm.yaml
+```bash
+kubeadm config upload from-file --config kubeadm.yaml
+```
 
 You also need to update the "cluster-info" ConfigMap in the "kube-public" namespace, which contains a Kubeconfig file with a `server:` line that points to the single control plane node. It's easist to just use `kubectl -n kube-public edit cm cluster-info` and update the `server:` line to point to the load balancer for the control plane. _(Thanks to Fabrizio Pandini for pointing this out!)_
 
@@ -136,10 +144,12 @@ There are a few caveats/considerations to keep in mind:
 
 Once you have a valid certificate key, a valid bootstrap token, and the correct SHA256 hash of the CA certificate, you can join a new control plane node with this command:
 
-    kubeadm join <DNS CNAME of load balancer>:6443 \
-    --token <bootstrap-token> \
-    --discovery-token-ca-cert-hash sha256:<CA certificate hash> \
-    --control-plane --certificate-key <certificate-key>
+```bash
+kubeadm join <DNS CNAME of load balancer>:6443 \
+--token <bootstrap-token> \
+--discovery-token-ca-cert-hash sha256:<CA certificate hash> \
+--control-plane --certificate-key <certificate-key>
+```
 
 (If you're using 1.14, replace `--control-plane` with `--experimental-control-plane`.)
 

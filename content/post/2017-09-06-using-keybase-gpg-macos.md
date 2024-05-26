@@ -24,13 +24,17 @@ With those assumptions in mind, let's assume that you'd like to be able to use t
 
 1. First, you'll need to export the PGP public key out of Keybase and into GPG. With the `keybase` CLI tool installed (installed as part of the Keybase app), this is very simple:
 
-        keybase pgp export | gpg --import
+    ```bash
+    keybase pgp export | gpg --import
+    ```
 
     This assumes you have only a single PGP key in Keybase; if you have multiple keys, first use `keybase pgp list` to see the keys and their key IDs, then add `-q <keyID>` to the `keybase pgp export` command above (the `-q <keyID>` lets you specify exactly which key to export).
 
 2. Repeat this process to get the PGP secret key out of Keybase and into GPG:
 
-        keybase pgp export -q keyID --secret | gpg --import --allow-secret-key-import
+    ```bash
+    keybase pgp export -q keyID --secret | gpg --import --allow-secret-key-import
+    ```
 
     This command assumes multiple PGP keys in Keybase; if you have only a single key, you can omit the `-q keyID` portion of the command. Note that you'll be prompted for your passphrase in order to complete this operation.
 

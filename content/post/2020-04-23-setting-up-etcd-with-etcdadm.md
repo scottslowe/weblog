@@ -32,9 +32,11 @@ Once you have a binary build of `etcdadm`, the process for setting up an etcd cl
 
 Once you've added the desired number of nodes to the etcd cluster, you can use this `etcdctl` command to check the health of the cluster:
 
-    ETCDCTL_API=3 /opt/bin/etcdctl --cert /etc/etcd/pki/peer.crt \
-    --key /etc/etcd/pki/peer.key --cacert /etc/etcd/pki/ca.crt \
-    --endpoints https://10.45.88.87:2379 endpoint health --cluster
+```bash
+ETCDCTL_API=3 /opt/bin/etcdctl --cert /etc/etcd/pki/peer.crt \
+--key /etc/etcd/pki/peer.key --cacert /etc/etcd/pki/ca.crt \
+--endpoints https://10.45.88.87:2379 endpoint health --cluster
+```
 
 Assuming you get healthy responses to the above command, you're good to go. Pretty easy, right? This is why I tweeted earlier today that I think there is real promise in this tool.
 

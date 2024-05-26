@@ -28,11 +28,13 @@ Follow the steps below to make KinD work with Docker Machine. In all the command
 3. Get the IP address of your Docker Machine VM using `docker-machine inspect vm | jq -r '.Driver.IPAddress'`. Make a note of this IP address; you'll need it shortly.
 4. Create a configuration file for KinD with the following contents, and make a note of the name (I'll assume you called it `kind.yaml`). Replace `<insert-ip-address-here>` with the IP address of your Docker Machine VM, obtained in the previous step.
 
-        ---
-        apiVersion: kind.x-k8s.io/v1alpha4
-        kind: Cluster
-        networking:
-          apiServerAddress: "<insert-ip-address-here>"
+    ```yaml
+    ---
+    apiVersion: kind.x-k8s.io/v1alpha4
+    kind: Cluster
+    networking:
+      apiServerAddress: "<insert-ip-address-here>"
+    ```
 
 5. Run `kind create cluster --config kind.yaml` to stand up a Kubernetes cluster using the Docker daemon running in your Docker Machine VM. If you used a filename _other_ than `kind.yaml` for the file generated in the previous step, substitute that filename in the `kind create cluster` command.
 

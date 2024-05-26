@@ -22,14 +22,18 @@ These instructions assume you have a `dnf`-installed version of Firefox (typical
 3. Remove the version of Firefox installed from the Fedora repositories with `dnf remove firefox`. This will remove the `firefox.desktop` file you copied in the previous step (which is why you copied it somewhere else).
 4. Use `bunzip2` to decompress the downloaded Firefox 60 archive. This will leave you with a plain `.tar` file:
 
-        bunzip2 firefox-60.0.tar.bz2
+    ```bash
+    bunzip2 firefox-60.0.tar.bz2
+    ```
 
 5. Extract the archive into your `/opt` directory:
 
-        sudo tar -C /opt -xvf firefox-60.0.tar
+    ```bash
+    sudo tar -C /opt -xvf firefox-60.0.tar
+    ```
 
     This will create a `firefox` directory underneath the `/opt` directory. (You can modify this as desired to install Firefox 60 into a different location.)
-6. Edit the saved copy of `firefox.desktop` (from step 2) and replace the "Exec=" lines with the correct path to the new Firefox 60 binary (if you're following these instructions, the correct path will be `/opt/firefox/firefox`).
+6. Edit the saved copy of `firefox.desktop` (from step 2) and replace the `Exec=` lines with the correct path to the new Firefox 60 binary (if you're following these instructions, the correct path will be `/opt/firefox/firefox`).
 7. Copy the edited `firefox.desktop` file (from the previous step) back into `/usr/share/applications`.
 
 And that's it! You should now be good to go with Firefox 60 on your Fedora 27 system. If you run into any problems or have any additional questions, feel free to [hit me up on Twitter][link-4].
