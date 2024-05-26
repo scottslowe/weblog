@@ -22,7 +22,8 @@ wordpress_id: 367
 
 This solution builds upon the integration of Solaris 10 and Linux (again, CentOS specifically, but I'll use Linux here instead of mentioning the specific distribution) into Active Directory for authentication and authorization as outlined in these related articles:
 
-[Refined Solaris 10-AD Integration Instructions][1]  
+[Refined Solaris 10-AD Integration Instructions][1]
+
 [Linux, Active Directory, and Windows Server 2003 R2 Revisited][2]
 
 In these articles, I describe a configuration whereby you can use Kerberos against Active Directory for authentication, and LDAP against Active Directory for user and group lookups. This allows you to centralize the user account information (username, UID number, home directory, login shell, etc.) into Active Directory so that when an account is provisioned in AD it is also available to associated UNIX and Linux systems (as applicable). Using the information in this article, you can extend that integration to auto-mounted shared home directories between Solaris and Linux.
@@ -37,14 +38,18 @@ Configuring Solaris is pretty straightforward; it's pretty much designed out of 
 
 The only real change that needs to be made is to the `/etc/auto_home` file, which specifies the auto-mounted home directory mappings. The easiest thing to do is use a wildcard mapping, like this:
 
-    *   nfssrvr.example.com:/home/&
+```text
+*   nfssrvr.example.com:/home/&
+```
 
-Here, the asterisk (*) and the ampersand (&) will be replaced with the appropriate information. So, if a user name "bjones" logs on, then the the `/home/bjones` NFS share on the server nfssrvr.example.com would be mounted on `/home/bjones` on the Solaris server. Useful, eh?
+Here, the asterisk (`*`) and the ampersand (`&`) will be replaced with the appropriate information. So, if a user name "bjones" logs on, then the the `/home/bjones` NFS share on the server nfssrvr.example.com would be mounted on `/home/bjones` on the Solaris server. Useful, eh?
 
 Note that autofs _may_ be disabled in your installation of Solaris; it wasn't in mine, but I've seen references elsewhere that this is not typical. Use these commands to check the status and enable autofs, if necessary:
 
-    svcs -a | grep autofs  
-    svcadm -v enable svc:/system/filesystem/autofs
+```bash
+svcs -a | grep autofs  
+svcadm -v enable svc:/system/filesystem/autofs
+```
 
 At this point, Solaris should be ready to go. Let's look at the Linux configuration.
 
@@ -54,17 +59,23 @@ The Linux configuration is only slightly more complicated than the Solaris confi
 
 So we must first edit `/etc/auto.master` and add the following line:
 
-    /home   /etc/auto.home
+```text
+/home   /etc/auto.home
+```
 
 This tells autofs to look in the file `/etc/auto.home` to find the automounted directories under `/home`. Then we create the `/etc/auto.home` file with the following line:
 
-    *   nfssrvr.example.com:/home/&
+```text
+*   nfssrvr.example.com:/home/&
+```
 
 (Just like the Solaris box in this case.) Finally, we can check for the autofs startup status, fix it, and start autofs with the following commands, respectively:
 
-    chkconfig --list autofs  
-    chkconfig autofs on  
-    service autofs start
+```bash
+chkconfig --list autofs  
+chkconfig autofs on  
+service autofs start
+```
 
 In fact, you will need to restart the autofs daemon (with `service autofs restart`) in order for the changes to `/etc/auto.master` and `/etc/auto.home` to be recognized. (The same goes for Solaris, too, only using the `svcadm -v restart svc:/system/filesystem/autofs` command instead.)
 
@@ -110,8 +121,10 @@ Word of warning: be sure to include UNIX-enabled groups and/or users in the NTFS
 
 To test your NFS share, use this command from Solaris or Linux, respectively (the first command is for Solaris, the second is for Linux):
 
-    mount -F nfs nfssrvr.example.com:/home/nfs /mnt/nfs  
-    mount -t nfs nfssrvr.example.com:/home/nfs /mnt/nfs
+```bash
+mount -F nfs nfssrvr.example.com:/home/nfs /mnt/nfs  
+mount -t nfs nfssrvr.example.com:/home/nfs /mnt/nfs
+```
 
 If this mounts the NFS share without any problems, then you should be ready to roll.
 

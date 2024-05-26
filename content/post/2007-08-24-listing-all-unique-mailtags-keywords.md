@@ -20,18 +20,22 @@ After figuring out yesterday how to [list all the unique MailTags projects][1] i
 
 Here are the commands I used to parse down the list of unique keywords (this command is broken across two lines, but should be typed all on one line):
 
-	mdls <path to mailbox> | grep kMDItemKeywords |
-	awk '{print $3 $4 $5 $6 $7 $8 $9}' >> outputfile.txt
+```bash
+mdls <path to mailbox> | grep kMDItemKeywords |
+awk '{print $3 $4 $5 $6 $7 $8 $9}' >> outputfile.txt
+```
 
 This uses the `mdls` command to list all the metadata from the messages in the specified directory, pipes that through `grep` to pick out only the lines containing "kMDItemKeywords", then uses `awk` to list all the keywords (which are in a comma-delimited list surrounded by parentheses. You'll want to repeat this command for every mailbox you use (I have different mailboxes to archive messages by year, so I had to repeat this for 2005, 2006, etc.)
 
 Once we have the keywords list, then we munge it:
 
-	cat outputfile.txt | tr ',' '\n' > outputfile2.txt  
-	sed s/\(//g < outputfile2.txt > outputfile3.txt  
-	sed s/\)//g < outputfile2.txt > outputfile3.txt  
-	sort outputfile3.txt > sorted-file.txt  
-	uniq sorted-file.txt > unique-file.txt
+```bash
+cat outputfile.txt | tr ',' '\n' > outputfile2.txt  
+sed s/\(//g < outputfile2.txt > outputfile3.txt  
+sed s/\)//g < outputfile2.txt > outputfile3.txt  
+sort outputfile3.txt > sorted-file.txt  
+uniq sorted-file.txt > unique-file.txt
+```
 
 This replaces commas with a newline (the `tr` command), strips out the parentheses (the next two `sed` commands), then sorts it and returns only the unique values. The end result, stored in `unique-file.txt`, contains a list of unique MailTags keywords used in all your mailboxes.
 

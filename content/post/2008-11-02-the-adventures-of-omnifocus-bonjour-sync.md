@@ -21,11 +21,15 @@ In addition, version 1.5 of OmniFocus for Mac (OF/Mac)--currently at RC2 status-
 
 Unfortunately, in the late hours last night, I just couldn't get things to work. No matter how hard I tried, OF/iPhone just wouldn't synchronize with OF/Mac. It would see my laptop advertising via Bonjour, but wouldn't synchronize. My first suspicion proved to be a good one: the IPFW firewall on my laptop. (I use a custom IPFW ruleset in addition to Little Snitch to control traffic moving into and out of my laptop.) I was able to confirm that the firewall was blocking the traffic with this command:
 
-	sudo ipfw show
+```bash
+sudo ipfw show
+```
 
 Sure enough, I saw the default deny rule's counters incrementing every time I tried to synchronize. With this command I quickly disabled the IPFW rules:
 
-	sudo ipfw flush
+```bash
+sudo ipfw flush
+```
 
 OK, that got me a bit farther, but OF/iPhone was still reporting an error. The error was different this time, though, so I was convinced that I had made some progress. Unsure of what could be wrong next, I tested a hunch and logged into the Squid proxy server that controls outbound HTTP/HTTPS traffic and checked the access logs. Bingo---OF/iPhone was hitting the proxy every time I tried to synchronize. But how to fix that? My network is configured such that the Cisco PIX firewall won't allow any traffic out that doesn't first go through the Squid proxy, so turning the proxy settings off on my iPhone would be a temporary fix at best. Nevertheless, to test my settings I disabled the proxy settings on the iPhone (under Settings > Wi-Fi and scroll all the way to the bottom). That did it---OF/iPhone was now able to synchronize with my laptop. Rather quickly, too, might I add, which is a definite improvement over the WebDAV setup I'd been using previously.
 
@@ -33,19 +37,17 @@ But I was still left with two problems: a) the firewall on my laptop was disable
 
 Fixing the firewall should be easy, right? Just find out what port OF/Mac listens on and create a firewall rule to allow the traffic. It would be easy, _except_ for the fact that the port on which OF/Mac listens changes every time the application launches. OmniGroup, if you're listening: change this to a static port, PLEASE! Or at least provide some sort of hidden preference that would allow geeks like me to make it use a static port. As it stands right now, I had to use a rule that opens up a broad range of ports. That really, _really_ stinks. OK, firewall issue resolved.
 
-The proxy issue proves to be more challenging. There's no way to configure the proxy to ignore the traffic; that has to be done client side. Unlike the full-blown version of Mac OS X, there's no option in the iPhone to ignore certain network ranges or certain DNS domains. But---and here's the kicker---the iPhone does support automatic proxy configuration via a PAC file. So I create a very simple PAC file like this:
+The proxy issue proves to be more challenging. There's no way to configure the proxy to ignore the traffic; that has to be done client side. Unlike the full-blown version of Mac OS X, there's no option in the iPhone to ignore certain network ranges or certain DNS domains. But---and here's the kicker---the iPhone does support automatic proxy configuration via a PAC file. So I created a very simple PAC file like this:
 
-	function FindProxyForURL(url, host)  
-	{  
-	if (isInNet(host, "172.16.1.0", "255.255.255.0"))  
-	{  
-	return "DIRECT";  
-	}  
-	else  
-	{  
-	return "PROXY server.domain.com:3128";  
-	}  
-	}
+```javascript
+function FindProxyForURL(url, host) {
+    if (isInNet(host, "172.16.1.0", "255.255.255.0")) {
+        return "DIRECT";
+    } else {
+        return "PROXY server.domain.com:3128";
+    }
+}
+```
 
 The first round of testing didn't go so well; the Apache HTTPd configuration on my server didn't allow files with a .PAC extension. Oops! After fixing that problem, testing from my laptop went very well. A few seconds later, I had my iPhone reconfigured with the PAC file. And it worked! I was able to successfully synchronize OF/iPhone with OF/Mac while still maintaing access to Internet-based resources. And since the PIX firewall won't allow traffic direct from the iPhone to the Internet, I know that the proxy is still involved in those connections. Reviewing the Squid proxy's access logs also confirmed that the iPhone was not hitting the proxy during synchronization attempts.
 

@@ -20,40 +20,42 @@ Outlook Web Access (OWA) is the web-based interface for accessing e-mail and oth
 
 Here's a skeleton of an `httpd.conf` file to support Apache as a reverse proxy in front of OWA:
 
-    NameVirtualHost 1.2.3.4:80
-    NameVirtualHost 1.2.3.4:443
-    ProxyRequests Off
-     
-    <VirtualHost 1.2.3.4:443>
-    ServerAdmin webmaster@domain.com
-    ServerName webmail.domain.com
-    DocumentRoot /var/www/webmail
-    RequestHeader set Front-End-Https â€œOnâ€
-    ProxyRequests Off
-    ProxyPreserveHost On
-     
-    SSLEngine On
-    SSLCertificateFile conf/webmail-ssl-cert.pem
-     
-    <Location /exchange>
-    ProxyPass http://mail.domain.com/exchange
-    ProxyPassReverse http://mail.domain.com/exchange
-    SSLRequireSSL
-    </Location>
-     
-    <Location /exchweb>
-    ProxyPass http://mail.domain.com/exchweb
-    ProxyPassReverse http://mail.domain.com/exchweb
-    SSLRequireSSL
-    </Location>
-     
-    <Location /public>
-    ProxyPass http://mail.domain.com/public
-    ProxyPassReverse http://mail.domain.com/public
-    SSLRequireSSL
-    </Location>
-     
-    </VirtualHost>
+```text
+NameVirtualHost 1.2.3.4:80
+NameVirtualHost 1.2.3.4:443
+ProxyRequests Off
+ 
+<VirtualHost 1.2.3.4:443>
+ServerAdmin webmaster@domain.com
+ServerName webmail.domain.com
+DocumentRoot /var/www/webmail
+RequestHeader set Front-End-Https â€œOnâ€
+ProxyRequests Off
+ProxyPreserveHost On
+ 
+SSLEngine On
+SSLCertificateFile conf/webmail-ssl-cert.pem
+ 
+<Location /exchange>
+ProxyPass http://mail.domain.com/exchange
+ProxyPassReverse http://mail.domain.com/exchange
+SSLRequireSSL
+</Location>
+ 
+<Location /exchweb>
+ProxyPass http://mail.domain.com/exchweb
+ProxyPassReverse http://mail.domain.com/exchweb
+SSLRequireSSL
+</Location>
+ 
+<Location /public>
+ProxyPass http://mail.domain.com/public
+ProxyPassReverse http://mail.domain.com/public
+SSLRequireSSL
+</Location>
+ 
+</VirtualHost>
+```
 
 The key portions of this configuration are described below, along with some supporting information.
 

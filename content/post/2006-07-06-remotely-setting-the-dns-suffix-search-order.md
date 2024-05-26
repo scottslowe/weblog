@@ -21,8 +21,10 @@ If it can't be done via GPO, though, there aren't a lot of options---unless you 
 
 First, let's look at the full command, then we'll break it down. Here's the full command:
 
-    wmic /node:@input.txt nicconfig call SetDNSSuffixSearchOrder 
-    (legacydomain.com,newdomain.net,some.other.domain.org)
+```text
+wmic /node:@input.txt nicconfig call \
+SetDNSSuffixSearchOrder(legacydomain.com,newdomain.net,some.other.domain.org)
+```
 
 OK, so what does this command do, exactly? Here's the breakdown.
 
@@ -36,16 +38,20 @@ OK, so what does this command do, exactly? Here's the breakdown.
 
 By combining WMIC with the handy `for /f` batch command, we can do even more. For example, let's say we wanted to use `dsquery.exe` to produce a list of all the computers in a particular OU. That's pretty straightforward:
 
-    dsquery computer "ou=Workstations,dc=example,dc=net" -o rdn
+```text
+dsquery computer "ou=Workstations,dc=example,dc=net" -o rdn
+```
 
 The "-o rdn" switch is used here to output the _relative distinguished name (RDN)_ instead of the full DN.
 
 Embed that command into a for loop like so:
 
-    for /f "tokens=1" %1 in ('dsquery computer 
-    "ou=Workstations,dc=example,dc=net" -o rdn') do 
-    @wmic /node:%1 nicconfig call SetDNSSuffixSearchOrder 
-    (example.net,subdomain.example.net,otherdomain.org)
+```text
+for /f "tokens=1" %1 in ('dsquery computer 
+"ou=Workstations,dc=example,dc=net" -o rdn') do 
+@wmic /node:%1 nicconfig call SetDNSSuffixSearchOrder 
+(example.net,subdomain.example.net,otherdomain.org)
+```
 
 And just like that, we've taken the dynamic output of the `dsquery.exe` tool and plugged into WMIC to set the DNS suffix search order for all the systems in a particular OU in Active Directory.
 

@@ -23,7 +23,9 @@ After a few minutes of messing around, I recreated the original path. Upon immed
 
 Upon digging around in the Registry, I found this location for NFS export data:
 
-	HKEY_LOCAL_MACHINE\Software\Microsoft\Server for NFS\CurrentVersion\Exports
+```text
+HKEY_LOCAL_MACHINE\Software\Microsoft\Server for NFS\CurrentVersion\Exports
+```
 
 Under this key is a zero-based list---where the first export starts as 0--that contains the NFS export information. I deleted the key and now exporting the new folder with the original alias works as expected.
 

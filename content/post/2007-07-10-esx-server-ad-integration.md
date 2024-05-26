@@ -28,7 +28,9 @@ Let's take a look at what part esxcfg-auth does accomplish for us, then look at 
 
 The `esxcfg-auth` command will help automate a good portion of the work required to integrate ESX Server into Active Directory; specifically, it will automate the Kerberos configuration. To use `esxcfg-auth` to enable AD authentication, use the following command:
 
-	esxcfg-auth --enablead --addomain=example.com --addc=dc1.example.com
+```bash
+esxcfg-auth --enablead --addomain=example.com --addc=dc1.example.com
+```
 
 Obviously, you'll want to substitute the appropriate values for "example.com" and "dc1.example.com" on the command above. So what does this command do, exactly? Here's the breakdown:
 
@@ -54,9 +56,11 @@ Please note that you'll need to create an account in Active Directory (a Domain 
 
 Next, you'll need to configure `/etc/nsswitch.conf`. You only need to modify the passwd, group, and shadow lines, and you only need to add "ldap" at the end of the lines. The lines will end up looking something like this:
 
-	group: files ldap  
-	passwd: files ldap  
-	shadow: files ldap
+```text
+group: files ldap  
+passwd: files ldap  
+shadow: files ldap
+```
 
 At this point, you should be able to test the nss_ldap configuration. Run `getent passwd <AD user account>` and you should get back information about that account's home directory, login shell, UID, and name. If you don't get back any information, go back and double-check your configuration.
 

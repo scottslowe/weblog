@@ -25,7 +25,9 @@ I enabled NTP client traffic in VirtualCenter again, but returning to the ESX ho
 
 So, to avoid any other problems, I enabled NTP with the following command:
 
-    esxcfg-firewall -e ntpClient
+```bash
+esxcfg-firewall -e ntpClient
+```
 
 The `esxcfg-firewall -q ntpClient` command now listed the service as enabled, but what did VirtualCenter say? Even after a reboot and a disconnect/reconnect sequence, VirtualCenter _still_ did not report NTP client traffic as enabled.
 

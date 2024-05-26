@@ -23,9 +23,11 @@ After doing some brief research, I settled on using [CentOS](http://www.centos.o
 
 I setup a 10GB logical volume using LVM2 and configured IET to present it via iSCSI by editing `/etc/ietd.conf` to show this:
 
-    Target iqn.2006-08.com.example:vmware.lun1
-        IncomingUser isanuser secretpw
-        Lun 0 Path=/dev/VolGroup00/lvol0,Type=fileio
+```text
+Target iqn.2006-08.com.example:vmware.lun1
+    IncomingUser isanuser secretpw
+    Lun 0 Path=/dev/VolGroup00/lvol0,Type=fileio
+```
 
 (Obviously, you'd need to adjust this as appropriate for your own installation.)
 

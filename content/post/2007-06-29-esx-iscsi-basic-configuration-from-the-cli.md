@@ -22,19 +22,27 @@ Unfortunately, the commands weren't able to do all the configuration I needed---
 
 Here are the commands I used. First, to enable the software iSCSI initiator:
 
-	esxcfg-swiscsi -e  
+```bash
+esxcfg-swiscsi -e  
+```
 
 Next, to configure the ESX Service Console firewall (iptables) to allow the traffic from the software iSCSI initiator:
 
-	esxcfg-firewall -e swISCSIClient  
+```bash
+esxcfg-firewall -e swISCSIClient  
+```
 
 Next, set the target IP address for the vmhba40 adapter (the adapter that represents the software iSCSI initiator):
 
-	vmkiscsi-tool -D -a 192.168.100.50 vmhba40  
+```bash
+vmkiscsi-tool -D -a 192.168.100.50 vmhba40  
+```
 
 Finally, rescan for storage devices on vmhba40:
 
-	esxcfg-rescan vmhba40  
+```bash
+esxcfg-rescan vmhba40  
+```
 
 I'm sure there are more commands available; for more information, you can refer to Mike Laverick's excellent [Guide to ESX 3 Service Console](http://www.rtfm-ed.eu/docs/vmwdocs/esx3.x-vc2.x-serviceconsole-guide.pdf). In addition, please note that the ESX Server software iSCSI initiator is simply the open source version of an old Cisco iSCSI initiator for Linux, so you can use [that command reference](http://www.cuddletech.com/articles/iscsi/ar01s07.html) as well (I believe [this information](http://linux-iscsi.sourceforge.net/) is also applicable). Just preface the commands from the CuddleTech article with "vmk" and it should work just as listed.
 

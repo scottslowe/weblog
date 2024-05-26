@@ -19,29 +19,31 @@ The real power of ExchMbx is demonstrated when combined with `dsquery` (a Micros
 
 So, let's say you wanted to mailbox-enable all the users in a particular OU. With AdFind, you could enumerate all the users in an OU like this:
 
-    adfind -dsq -b "OU=Users,OU=Department,DC=example,DC=net"
-    -f "(objectclass=user)"
+```text
+adfind -dsq -b "OU=Users,OU=Department,DC=example,DC=net" -f "(objectclass=user)"
+```
 
 (Be sure to type commands like this on a single line, not broken across lines for appearance's sake as shown here.)
 
 This will produce a quoted DN listed similar to the output of `dsquery` (hence the "-dsq" switch). Then, this output can be fed to ExchMbx:
 
-    adfind -dsq -b "OU=Users,OU=Location,DC=example,DC=net"
-    -f "(objectclass=user)" | exchmbx -cr "SERVER1:First Storage 
-    Group:Mailbox Store (SERVER1)"
+```text
+adfind -dsq -b "OU=Users,OU=Location,DC=example,DC=net" -f "(objectclass=user)" | exchmbx -cr "SERVER1:First Storage Group:Mailbox Store (SERVER1)"
+```
 
 Here, the DN output from AdFind is piped to ExchMbx to create a mailbox on the database named "Mailbox Store (SERVER1)" in the First Storage Group on SERVER1.
 
 Or, you could move all the user objects for the HR personnel to a new Exchange server or database:
 
-    adfind -dsq -b "OU=Users,OU=Location,DC=example,DC=net" 
-    -f "(&(objectclass=user)(department=HR))" | 
-    exchmbx -move "SERVER1:First Storage Group:Second Database"
+```text
+adfind -dsq -b "OU=Users,OU=Location,DC=example,DC=net" -f "(&(objectclass=user)(department=HR))" | exchmbx -move "SERVER1:First Storage Group:Second Database"
+```
 
 To find which accounts don't have an Exchange mailbox (perhaps you only created Exchange mailboxes for a subset of your users), this command will help you out:
 
-    adfind -dsq -b "ou=RTP,dc=legacyad,dc=net" 
-    -f "(&(objectclass=user)(!(homeMDB=*)))"
+```text
+adfind -dsq -b "ou=RTP,dc=legacyad,dc=net" -f "(&(objectclass=user)(!(homeMDB=*)))"
+```
 
 You could then pipe this to ExchMbx again to create mailboxes, repeating the process until the AdFind command did not find any more accounts out there without mailboxes.
 

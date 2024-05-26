@@ -19,15 +19,21 @@ The NTPd problem that I [wrestled with in CentOS 4.1][1] and [again in CentOS 4.
 
 Since these servers are virtual servers running under [VMware][3], I first consulted the VMware Knowledge Base and turned up this article on [slow and fast clocks for Linux guest VMs][4]. Based on that information, I added a few extra commands to the grub configuration:
 
-    noapic nosmp nolapic clock=pit
+```text
+noapic nosmp nolapic clock=pit
+```
 
 In addition, I found a number of forum postings in various sites (too many to list or link here) that referenced problems with NTP and ACPI. So, based on that information, I further edited the grub configuration to look like this:
 
-    noapic nosmp nolapic clock=pit acpi=no
+```text
+noapic nosmp nolapic clock=pit acpi=no
+```
 
 Finally, based on information regarding NTP itself and the NTP configuration parameters, I added the "burst iburst" parameters to the server lines in my `ntp.conf` file, like this:
 
-    server W.X.Y.Z burst iburst
+```text
+server W.X.Y.Z burst iburst
+```
 
 This helped, as at least now NTP would synchronize against something other than the local clock (which was more than it had done previously). For some reason, though, the `/var/log/messages` log file was filling up with messages about synchronizing against the local clock, then synchronizing against the server, then against the local clock, etc. (You get the picture.)
 

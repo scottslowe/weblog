@@ -20,7 +20,9 @@ It's certainly very possible to do this with command-line tools such as AdFind o
 
 The way to do this is define a custom query using this string:
 
-	(objectCategory=Person)(objectClass=User)(uidNumber=*)
+```text
+(objectCategory=Person)(objectClass=User)(uidNumber=*)
+```
 
 If you add _just this text_ and nothing else in the "Find Custom Search" dialog box (the Advanced tab), then the console will automatically add ampersands and additional parentheses to turn it into a "proper" LDAP query that will show you any account that has a UID number configured. Certainly, additional fields like loginShell or unixHomeDirectory could be added as well, but this query will probably be sufficient for most instances.
 

@@ -21,7 +21,9 @@ In a straight STMP-only situation, the nickname cache can be quite harmless duri
 
 For example, when you mailbox-enable (i.e., create a mailbox for) a user object, Active Directory and Exchange will stamp the legacyExchangeDN attribute with an address that looks something like this:
 
-    /o=VMware Test Lab/ou=Raleigh/cn=Recipients/cn=scott.lowe
+```text
+/o=VMware Test Lab/ou=Raleigh/cn=Recipients/cn=scott.lowe
+```
 
 This is an X.500 address, and if an Outlook user sends an e-mail to this mailbox-enabled user object, this X.500 address will get added to the nickname cache. For an Outlook user creates a contact for an Exchange recipient from the GAL, this X.500 address will be the address that is saved with the contact. If this mailbox is moved to a new organization, this X.500 address---by default---_won't go with it_, and that is the root cause of the most of nickname cache problems in a migration.
 

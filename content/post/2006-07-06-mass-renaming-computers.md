@@ -20,10 +20,12 @@ First, you'll need to prepare a comma-separated list of the old computer name (t
 
 Once the CSV file is in place, the command looks something like this:
 
-    for /f "tokens=1,2 delims=," %1 in (file.csv) do 
-    @echo %1 >> results.txt &&
-    @netdom renamecomputer %1 /newname:%2 /ud:DomainAdmin /pd:AdminPass 
-    /uo:LocalAdmin /po:AdminPass /force /reboot >> results.txt
+```text
+for /f "tokens=1,2 delims=," %1 in (file.csv) do 
+@echo %1 >> results.txt &&
+@netdom renamecomputer %1 /newname:%2 /ud:DomainAdmin /pd:AdminPass 
+/uo:LocalAdmin /po:AdminPass /force /reboot >> results.txt
+```
 
 Please note that you can run this command across domains with a trust relationship in place; the "/ud" switch assumes the computer's current domain unless told otherwise, and the "/uo" parameter assumes a local account unless specified otherwise.
 
@@ -31,11 +33,13 @@ You'll note we're doing a couple of new things here. First, we're echoing the ol
 
 The resulting output (results.txt in the example above) looks like this:
 
-    pcname1
-    The command completed successfully.
-    
-    pcname2
-    The command completed successfully.
+```text
+pcname1
+The command completed successfully.
+
+pcname2
+The command completed successfully.
+```
 
 This makes it very easy to go back and double-check to see which computers were successfully renamed and which computers had problems.
 

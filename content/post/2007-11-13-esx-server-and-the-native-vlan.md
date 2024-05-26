@@ -19,11 +19,13 @@ It was December 2006 when I first published this article on [using NIC teams and
 
 In that previous article, I demonstrated the use of a "dummy VLAN" which was set as the native VLAN for the VLAN trunk, like so:
 
-	s3(config)#int gi0/23  
-	s3(config-if)#switchport trunk encapsulation dot1q  
-	s3(config-if)#switchport trunk allowed vlan all  
-	s3(config-if)#switchport mode trunk  
-	s3(config-if)#switchport trunk native vlan 4094
+```text
+s3(config)#int gi0/23  
+s3(config-if)#switchport trunk encapsulation dot1q  
+s3(config-if)#switchport trunk allowed vlan all  
+s3(config-if)#switchport mode trunk  
+s3(config-if)#switchport trunk native vlan 4094
+```
 
 The idea behind the dummy VLAN was this: because ESX Server needed---or so I thought---all the traffic to be tagged as it came across the VLAN trunk, creating a VLAN that is never used and setting it as the native VLAN solves our problem. Remember that the native VLAN is the VLAN whose traffic _is not_ tagged as it travels across the trunk into ESX Server or another physical switch.
 

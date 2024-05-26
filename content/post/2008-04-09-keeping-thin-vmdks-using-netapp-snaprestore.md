@@ -31,21 +31,29 @@ As a result of #2 above, then, you'll need to first prepare your source VM by ru
 
 The first step is to take a snapshot of the volume containing the already prepared VM:
 
-	snap create <vol-name> <snapshot-name>
+```text
+snap create <vol-name> <snapshot-name>
+```
 
 Next, create a new VM in VirtualCenter, but **_do not create a virtual disk for the VM._** This will create the VM configuration and associated files and the directory on the NFS datastore.
 
 Third, run a SnapRestore operation to restore both the .vmdk file and the -flat.vmdk files. You have to restore both in order for this to work; keep in mind that the .vmdk file is just a header file and the -flat.vmdk is the actual disk file. The commands would look something like this:
 
-	snap restore -t file -s <snapshot-name> -r <new filename and path> <original filename and path>
+```text
+snap restore -t file -s <snapshot-name> -r <new filename and path> <original filename and path>
+```
 
 As an example, let's say you had a VM named template01 and you wanted to clone the disks for template01 to a new VM called newvm01, and these are stored on a volume called nfsvol. After you've run Sysprep on template01, taken the Snapshot and called it base_snapshot, and created newvm01 without a virtual disk, you'd run this command:
 
-	snap restore -t file -s base_snapshot -r /vol/nfsvol/newvm01/newvm01.vmdk /vol/nfsvol/template01/template01.vmdk
+```text
+snap restore -t file -s base_snapshot -r /vol/nfsvol/newvm01/newvm01.vmdk /vol/nfsvol/template01/template01.vmdk
+```
 
 That would restore the .vmdk (header) file; then you'd restore the actual virtual disk file:
 
-	snap restore -t file -s base_snapshot -r /vol/nfsvol/newvm01/newvm01-flat.vmdk /vol/nfsvol/template01/template01-flat.vmdk
+```text
+snap restore -t file -s base_snapshot -r /vol/nfsvol/newvm01/newvm01-flat.vmdk /vol/nfsvol/template01/template01-flat.vmdk
+```
 
 Once this process is complete---and it may take some time depending upon the size of the files being restored---you should see both the `.vmdk` and the `-flat.vmdk` files listed in the Datastore Browser.
 

@@ -19,13 +19,17 @@ Having first tested [VM portability][1] from [VMware Workstation](http://www.vmw
 
 The first step was to get the virtual disk files from my [MacBook Pro](http://www.apple.com/macbookpro/) over to [ESX Server](http://www.vmware.com/products/vi/esx/). Last time, when I ran this process in reverse, I used the open source SFTP client [Cyberduck](http://cyberduck.ch/) to copy the VMDK files down from ESX Server to my laptop. That worked well, but took a bit longer than I would have liked. This time, I dropped into the OS X Terminal and used command-line SCP. The command looked something like this (typed from the same directory where the VMDK file resided):
 
-    scp ontap.vmdk esx01.example.net:/vmimages/uploads
+```bash
+scp ontap.vmdk esx01.example.net:/vmimages/uploads
+```
 
 (Full disclosure: I actually used a wildcard glob to pick up all the VMDK files, but you get the general idea.) This copied the files much more quickly than with Cyberduck. I believe this is less a comparison of Cyberduck vs. command-line SCP and more of a comparison between the SFTP and SCP protocols themselves. I intend to try the open source graphical SCP client [Fugu](http://rsug.itd.umich.edu/software/fugu/) to see if performance there supports that conclusion.
 
 In any case, once the VMDK files were up on the host, it's `vmkfstools` once again to the rescue (again, typed from the directory where the original VMDK files resided):
 
-    vmkfstools -i ontap.vmdk /vmfs/volumes/isanvol0/ontap/ontap.vmdk
+```bash
+vmkfstools -i ontap.vmdk /vmfs/volumes/isanvol0/ontap/ontap.vmdk
+```
 
 Now that the VMDK files were on the ESX Server and imported into a VMFS datastore in the right format, I had only to create a virtual machine with the right configuration and attach it to the virtual disk. I suppose I could have copied the VMX file over as well and then used `vmware-cmd` to register the virtual machine....maybe next time.
 

@@ -29,13 +29,15 @@ For the purposes of this configuration, I'm making the following assumptions:
 
 Here's the recommended port configuration for ports connecting to an ESX Server:
 
-	interface g0/1  
-	switchport trunk encapsulation dot1q  
-	switchport trunk native vlan 4094  
-	switchport mode trunk  
-	switchport trunk allowed vlan 100,200,4094  
-	switchport noneg  
-	spanning-tree portfast-trunk
+```text
+interface g0/1  
+switchport trunk encapsulation dot1q  
+switchport trunk native vlan 4094  
+switchport mode trunk  
+switchport trunk allowed vlan 100,200,4094  
+switchport noneg  
+spanning-tree portfast-trunk
+```
 
 Technically, the `switchport noneg` command won't really do anything; it disables DTP (Dynamic Trunking Protocol) but DTP isn't supported by ESX Server anyway.
 

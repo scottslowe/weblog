@@ -21,11 +21,15 @@ In my particular case, I was working on a VDI project and we wanted to be sure t
 
 To disable clipboard redirection, add the following to the .RDP file:
 
-	redirectclipboard:i:0
+```text
+redirectclipboard:i:0
+```
 
 For the ActiveX RDP control, you would use this text:
 
-	MsRdpClient.AdvancedSettings2.RedirectClipboard = FALSE
+```text
+MsRdpClient.AdvancedSettings2.RedirectClipboard = FALSE
+```
 
 I guessed on the ActiveX control configuration, but it worked. I haven't found that information documented anywhere just yet.
 

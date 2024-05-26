@@ -26,34 +26,40 @@ Link state tracking is pretty easy to configure; you define one or more upstream
 
 Here's an example. We have a Cisco in-chassis switch that has a GigabitEtherChannel port group defined as an uplink out to the outside world:
 
-	interface Port-Channel1  
-	description Uplink to network backbone  
-	switchport trunk encapsulation dot1q  
-	switchport trunk native vlan 2  
-	switchport trunk allowed vlan 2-4094  
-	switchport mode trunk  
-	link state group 1 upstream
+```text
+interface Port-Channel1  
+description Uplink to network backbone  
+switchport trunk encapsulation dot1q  
+switchport trunk native vlan 2  
+switchport trunk allowed vlan 2-4094  
+switchport mode trunk  
+link state group 1 upstream
+```
 
 Note the `link state group 1 upstream` command, which marks this port channel as an upstream port. If all the links in this port channel go down (thus making the port channel itself go down), then the switch will notify downstream ports in the same group to mark themselves as down also.
 
 The member ports of this port channel would **not** have the `link state` command present:
 
-	interface GigabitEthernet0/18  
-	description Port group member for uplink to network  
-	switchport trunk encapsulation dot1q  
-	switchport trunk native vlan 2  
-	switchport trunk allowed vlan 2-4094  
-	switchport mode trunk  
-	channel-group 1 mode on
+```text
+interface GigabitEthernet0/18  
+description Port group member for uplink to network  
+switchport trunk encapsulation dot1q  
+switchport trunk native vlan 2  
+switchport trunk allowed vlan 2-4094  
+switchport mode trunk  
+channel-group 1 mode on
+```
 
 So for the ports on the same in-chassis switch that are connecting to the servers in the chassis, we have this configuration:
 
-	interface GigabitEthernet0/10  
-	description Web server NIC  
-	switchport access vlan 2  
-	switchport mode access  
-	link state group 1 downstream  
-	spanning-tree portfast
+```text
+interface GigabitEthernet0/10  
+description Web server NIC  
+switchport access vlan 2  
+switchport mode access  
+link state group 1 downstream  
+spanning-tree portfast
+```
 
 Note the `link state group 1 downstream` command, which marks this port as a downstream port from the Port-Channel1 interface. If Port-Channel1 goes down (because all the member links in Port-Channel1 also went down), then GigabitEthernet0/10 will also go down. Because GigabitEthernet0/10 went down, the NIC teaming software running in the OS on the blade will fail the traffic over to a different NIC, presumably a NIC that connects to the redundant in-chassis switch.
 

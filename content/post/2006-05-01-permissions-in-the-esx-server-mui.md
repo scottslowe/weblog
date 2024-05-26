@@ -30,8 +30,10 @@ How do these permissions affect the VMware MUI? The permissions on the VMware co
 
 This would be accomplished using the following commands:
 
-    chown user:vmops vmachine.vmx
-    chmod g+w vmachine.vmx
+```bash
+chown user:vmops vmachine.vmx
+chmod g+w vmachine.vmx
+```
 
 Of course, you would substitute the appropriate names for "user" and "vmops", as appropriate.
 

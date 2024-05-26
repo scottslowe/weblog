@@ -18,10 +18,12 @@ As a system administrator, no doubt you've had the occasion where you've needed 
 
 Try this Log Parser command on for size:
 
-    logparser -i:evt -o:csv "SELECT TimeGenerated AS LogonDate,
-    EXTRACT_TOKEN(Strings, 0, '|') AS Account INTO filename.csv FROM 
-    \Server1\Security, \Server2\Security WHERE EventID NOT IN 
-    (541;542;543) AND EventType = 8 AND EventCategory = 2
+```text
+logparser -i:evt -o:csv "SELECT TimeGenerated AS LogonDate,
+EXTRACT_TOKEN(Strings, 0, '|') AS Account INTO filename.csv FROM 
+\Server1\Security, \Server2\Security WHERE EventID NOT IN 
+(541;542;543) AND EventType = 8 AND EventCategory = 2
+```
 
 Whoa! That's quite a command. Let's break it down just a bit:
 
@@ -37,7 +39,9 @@ Whoa! That's quite a command. Let's break it down just a bit:
 
 That's pretty cool, but it returns "logon" events by computer accounts as well, including the local computer account. To filter that down to only user accounts, we'll trot out our favorite text filtering tool and a simple regex:
 
-    grep -v -E \$$ filename.csv > filename2.csv
+```bash
+grep -v -E \$$ filename.csv > filename2.csv
+```
 
 This command returns all the lines that don't end in a dollar sign (as a computer account in Active Directory would end in a dollar sign). Make note that your particular version of `grep` may use slightly different parameters or syntax.
 

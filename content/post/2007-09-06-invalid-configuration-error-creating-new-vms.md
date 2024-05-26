@@ -16,7 +16,9 @@ wordpress_id: 525
 
 Earlier today, I was in [VirtualCenter](http://www.vmware.com/products/vi/vc/) and needed to create a new virtual machine (VM). As this VM was going to be for purely scratch purposes, I wanted to use some local storage on one of the ESX servers. There was no need for VMotion, or DRS, or HA; it was a non-critical workload. So I right-clicked on the cluster, selected "New Virtual Machine...", and started walking through the wizard to create a new VM. When prompted for storage, I selected a local datastore. Upon the end of the wizard, I clicked Finish, and was promptly greeted with an error message stating:
 
-	Invalid configuration for device '4'
+```text
+Invalid configuration for device '4'
+```
 
 Hmm...that's not a very helpful error message. Searching the web turned up [this VMTN discussion forums thread](http://www.vmware.com/community/message.jspa?messageID=688454), where apparently others have been running into this same issue. The problem appears to be linked to attempting to create a new VM within a DRS cluster, but selecting storage that is not available to all DRS cluster members (i.e., local storage or SAN storage that has not been presented to all DRS cluster members). If you select storage that all DRS members can see, then the error goes away.
 

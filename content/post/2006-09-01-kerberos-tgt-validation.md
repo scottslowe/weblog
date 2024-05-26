@@ -36,19 +36,23 @@ In some instances, however, people have tried all these things and _still_ get T
 
 Strangely enough, check the `/etc/hosts` file.  Your `/etc/hosts` file should look something like this:
 
-    #
-    # Internet host table
-    #
-    127.0.0.1       localhost
-    192.168.2.109   vserver01.example.net vserver01
+```text
+#
+# Internet host table
+#
+127.0.0.1       localhost
+192.168.2.109   vserver01.example.net vserver01
+```
 
 If your `/etc/hosts` file looks like this instead, you'll need to fix the order of the hostnames:
 
-    #
-    # Internet host table
-    #
-    127.0.0.1       localhost
-    192.168.2.109   vserver01 vserver01.example.net
+```text
+#
+# Internet host table
+#
+127.0.0.1       localhost
+192.168.2.109   vserver01 vserver01.example.net
+```
 
 See the difference? It's in the order of the names for the server's IP address. Yes, the order of the names---single label hostname vs. fully qualified domain name---will make a difference. On CentOS, switching the names so that the single label hostname is first causes passwordless Kerberized SSH logins to fail, presumably due to TGT validation problems. (Due to time constraints, I haven't been able to dial up the logging on the CentOS server to verify this for certain, but I will soon, and will post an update to this article with those findings.)
 

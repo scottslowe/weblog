@@ -17,6 +17,8 @@ Here's another incredibly simple task that one often needs to perform when using
 
 To mount an ISO file, use the following command:
 
-    mount -t iso9660 -o loop /path/to/image.iso /mount/path
+```bash
+mount -t iso9660 -o loop /path/to/image.iso /mount/path
+```
 
 I know, a very simple command and one that Linux veterans around the world have probably used a million times over. Like I said, when it's not something that you do every day, it's easy to forget it. (Especially when your brain is busy trying to process other new information...)

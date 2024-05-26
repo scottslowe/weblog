@@ -29,12 +29,16 @@ This functionality will be command-line driven, but only from advanced mode (mus
 
 To clone a file or a LUN (the command is the same in both cases):
 
-	clone start <src_path> <dst_path> -n -l
+```text
+clone start <src_path> <dst_path> -n -l
+```
 
 To check the status of a cloning process or stop a cloning process, respectively:
 
-	clone status  
-	clone stop
+```text
+clone status  
+clone stop
+```
 
 Existing commands for Snapshot-backed clones (`lun clone` or `vol clone`) will remain unchanged.
 

@@ -18,6 +18,8 @@ Like Quicksilver itself, I didn't understand the power of this plug-in at first;
 
 Having now gotten used to how it worked, and how it's configured within Quicksilver, I offer to you the URL for performing a web search against the Microsoft Support site from within Quicksilver:
 
-	qss-http://support.microsoft.com/search/default.aspx?query=***
+```text
+qss-http://support.microsoft.com/search/default.aspx?query=***
+```
 
 I have this called "Search Microsoft Support", and it will take the text you supply and perform a search against the Microsoft Support site, including the Knowledge Base. I know it seems odd to be writing about using a Macintosh application to search the Microsoft Knowledge Base, but I've found it useful. Perhaps others will as well.

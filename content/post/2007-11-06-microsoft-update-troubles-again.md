@@ -32,10 +32,14 @@ In my opinion, this bodes poorly for Microsoft. Managing patches is already a hu
 
 If by chance you were hit with this, you can uninstall WDS with one of two different commands. You can use this command:
 
-	%windir%\$ntuninstallkb917013\spuninst\spuninst /quiet /norestart
+```text
+%windir%\$ntuninstallkb917013\spuninst\spuninst /quiet /norestart
+```
 
 Or this command:
 
-	MsiExec.exe /X{E72019B8-1287-4093-BE9B-1CFA7BA1A8D2} /quiet /norestart
+```text
+MsiExec.exe /X{E72019B8-1287-4093-BE9B-1CFA7BA1A8D2} /quiet /norestart
+```
 
 Are there any readers out there who were actually affected by this issue?

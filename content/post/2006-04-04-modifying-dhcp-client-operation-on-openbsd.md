@@ -19,11 +19,15 @@ In this case, [OpenBSD](http://www.openbsd.org/) only needed to obtain the IP ad
 
 For example, to have the DHCP client only pick up IP address and subnet mask, change the "request" line in `dhclient.conf` to look something like this:
 
-    request subnet-mask, broadcast address;
+```text
+request subnet-mask, broadcast address;
+```
 
 The standard `dhclient.conf` "request" line looks something like this:
 
-    request subnet-mask, broadcast-address, time-offset, routers, domain-name, domain-name-servers, host-name, lpr-servers, ntp-servers;
+```text
+request subnet-mask, broadcast-address, time-offset, routers, domain-name, domain-name-servers, host-name, lpr-servers, ntp-servers;
+```
 
 Obviously, this list can be trimmed to pick up only the items that are needed by the server. Another neat trick is using the "prepend" statement; this allows the local client to use a value configured locally, then use the values passed down by the DHCP server. Check the man page for `dhclient.conf` for more detailed information.
 

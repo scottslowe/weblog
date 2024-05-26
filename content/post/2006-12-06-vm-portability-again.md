@@ -20,7 +20,9 @@ First, the VMDK had to be exported out of the VMFS datastore into 2GB sparse for
 
 The command for that is:
 
-    vmkfstools -i /path/to/src/vmdk /path/to/final/vmdk -d 2gbsparse
+```bash
+vmkfstools -i /path/to/src/vmdk /path/to/final/vmdk -d 2gbsparse
+```
 
 Of course, this line needs to be typed all on a single line, but you already know that. (Long-time ESX users will note that the `vmkfstools -i` listed above is the replacement for the now-deprecated `vmkfstools -e` command that was used in ESX 2.x and earlier.)
 
@@ -30,12 +32,16 @@ VMware Fusion opened the .VMX file without any major complaints and promptly boo
 
 I removed these two lines from the .VMX file:
 
-    ethernet0.networkName = "Lab"
-    ethernet0.addressType = "vpx"
+```text
+ethernet0.networkName = "Lab"
+ethernet0.addressType = "vpx"
+```
 
 And added this line:
 
-    ethernet0.connectionType = "nat"
+```text
+ethernet0.connectionType = "nat"
+```
 
 Upon rebooting the VM, no more warning messages. The VM booted up and everything seemed to work just fine. (There were some OS-specific issues, as this was a domain controller and now could no longer reach the domain, but those were to be expected in this kind of situation.)
 

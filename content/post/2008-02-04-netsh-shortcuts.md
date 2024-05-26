@@ -17,7 +17,9 @@ Reader Tom Spis read my article on [resetting DNS and WINS on DHCP clients][1] a
 
 The key command referenced in that article was this one:
 
-	netsh interface ip set wins name="Local Area Connection" source=dhcp
+```text
+netsh interface ip set wins name="Local Area Connection" source=dhcp
+```
 
 Tom points out that this command could be shortened:
 

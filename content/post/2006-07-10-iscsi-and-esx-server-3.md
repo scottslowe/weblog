@@ -38,7 +38,9 @@ Reviewing the configuration, I did find a couple of problems:
 
 ESX Server should see the storage now, but there was still no connectivity. Finally, I came across a blurb somewhere about the new firewall in ESX Server 3.0, and how it controlled not only inbound traffic, but also _outbound_ traffic. A quick trip to the service console and this command:
 
-    esxcfg-firewall -e swISCSIClient
+```bash
+esxcfg-firewall -e swISCSIClient
+```
 
 You would expect that using the VI Client to enable the software iSCSI client would also enable outbound iSCSI traffic support on the ESX firewall, but it didn't. As soon as I entered that command, the Simulator's console (where I was logged in) started showing iSCSI connection requests. This, in turn, revealed another problem---ESX Server insisted on using its own iSCSI node name instead of the node name I had assigned. That was easily and quickly corrected, and I was finally able to mount the iSCSI LUN and create a VMFS datastore.
 

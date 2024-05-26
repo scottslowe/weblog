@@ -20,15 +20,19 @@ First, from [this page](http://kubuntu.org/announcements/kde-35.php), I download
 
 After poking around with apt-get for a while, I discovered that there was one missing file---libgnokii2---that couldn't be found in the apt-get sources. I manually reviewed the apt-get sources and finally found this package in the universe section of the main Ubuntu apt-get source. I edited `/etc/apt/sources.list` to enable the other sections, then manually installed the missing file with these commands:
 
-    apt-get clean  
-    apt-get update  
-    apt-get install libgnokii2
+```bash
+apt-get clean  
+apt-get update  
+apt-get install libgnokii2
+```
 
 I then edited `/etc/apt/sources.list` again to disable the other sources and upgraded the remainder of the KDE packages:
 
-    apt-get clean  
-    apt-get update  
-    apt-get upgrade
+```bash
+apt-get clean  
+apt-get update  
+apt-get upgrade
+```
 
 This last round of `apt-get` removed a few obsolete packages and then updated the remainder of the KDE packages.
 

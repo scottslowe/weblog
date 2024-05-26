@@ -27,9 +27,11 @@ For example, right-clicking on Microsoft Entourage and selecting "Show Package C
 
 For the other applications, the files to replace are:
 
-	Microsoft Word/Contents/Resources/MSWD.icns  
-	Microsoft Excel/Contents/Resources/XCEL.icns  
-	Microsoft PowerPoint/Contents/Resources/PPT3.icns
+Microsoft Word/Contents/Resources/MSWD.icns
+
+Microsoft Excel/Contents/Resources/XCEL.icns
+
+Microsoft PowerPoint/Contents/Resources/PPT3.icns
 
 Replace each of these files, keeping the filename intact, with the new versions.
 

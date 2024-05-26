@@ -19,21 +19,21 @@ As mentioned in that earlier article, the specific information on the values of 
 
 Finding global security groups:
 
-    dsquery * "dc=example,dc=net" -scope subtree 
-    -filter "(&(objectCategory=group)(groupType=-2147483646))" 
-    -limit 0
+```text
+dsquery * "dc=example,dc=net" -scope subtree -filter "(&(objectCategory=group)(groupType=-2147483646))" -limit 0
+```
 
 Finding domain local security groups:
 
-    dsquery * "dc=example,dc=net" -scope subtree 
-    -filter "(&(objectCategory=group)(groupType=-2147483644))" 
-    -limit 0
+```text
+dsquery * "dc=example,dc=net" -scope subtree -filter "(&(objectCategory=group)(groupType=-2147483644))" -limit 0
+```
 
 Finding universal security groups:
 
-    dsquery * "dc=example,dc=net" -scope subtree 
-    -filter "(&(objectCategory=group)(groupType=-2147483640))" 
-    -limit 0
+```text
+dsquery * "dc=example,dc=net" -scope subtree -filter "(&(objectCategory=group)(groupType=-2147483640))" -limit 0
+```
 
 Note that the base DN (the "dc=example,dc=net" in our samples above) only needs to be enclosed in quotes if there are spaces in the DN; otherwise, it can specified bare (without quotes) on the command line. The LDAP filter, however, must always be enclosed in quotes.
 

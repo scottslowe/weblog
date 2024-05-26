@@ -25,25 +25,31 @@ I'm sure that you can think of more reasons, but that's enough for now. To accom
 
 Our base WMIC command is something like this:
 
-    wmic service get Caption,StartName
+```text
+wmic service get Caption,StartName
+```
 
 This command lists all services, with the caption (friendly name) and security context (local system, local service, network service, or user account). That's all well and good, but we only need those services that are running as user accounts. To do that, we'll modify the command to look like this:
 
-    wmic service where (StartName!="LocalSystem" and 
-    StartName!="NT AUTHORITY\\LocalService" and 
-    StartName!="NT AUTHORITY\\NetworkService") 
-    get Caption,StartName
+```text
+wmic service where (StartName!="LocalSystem" and 
+StartName!="NT AUTHORITY\\LocalService" and 
+StartName!="NT AUTHORITY\\NetworkService") 
+get Caption,StartName
+```
 
 Now the results include only those services running as user accounts, or (if none match), the message "No instances available." Note the double backslashes when checking for services running as LocalService or NetworkService; these are necessary on the command line.
 
 Reusing the `for /f` trick shown [here][1], we can build a more complex command to do the same thing for all computers in an OU:
 
-    for /f "tokens=1" %1 in ('dsquery computer 
-    "ou=Workstations,dc=example,dc=net" -o rdn -limit 0') do 
-    @wmic /node:%1 /failfast:on service where (StartName!="LocalSystem" 
-    and StartName!="NT AUTHORITY\\LocalService" and 
-    StartName!="NT AUTHORITY\\NetworkService") 
-    get Caption,StartName > c:\temp\svc-list-%1.txt
+```text
+for /f "tokens=1" %1 in ('dsquery computer 
+"ou=Workstations,dc=example,dc=net" -o rdn -limit 0') do 
+@wmic /node:%1 /failfast:on service where (StartName!="LocalSystem" 
+and StartName!="NT AUTHORITY\\LocalService" and 
+StartName!="NT AUTHORITY\\NetworkService") 
+get Caption,StartName > c:\temp\svc-list-%1.txt
+```
 
 This command will create a list of files, one for each computer returned by the query, each of which contains a list of services running as user accounts. One new technique shown here is the creation of a text files that have the computer names returned from the Active Directory query embedded in the filename. Note that we've also incorporated the `/failfast:on` switch, to avoid delays due to computers that are turned off, out of the office, or otherwise unreachable.
 

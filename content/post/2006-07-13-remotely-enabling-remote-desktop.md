@@ -16,18 +16,21 @@ Other than exploring a new WMIC alias here, you won't see any startling new tric
 
 In [Windows Server 2003](http://www.microsoft.com/windowsserver2003/), Microsoft added the RDTOGGLE WMIC alias. In [Windows XP](http://www.microsoft.com/windowsxp/), you had to use the Win32_TerminalServiceSetting path. In either case, this alias or path allows you to toggle the value of the Remote Desktop setting. The syntax is a bit wierd, if you ask me, but this is how it looks (the lines are wrapped here for readability, but be sure to type it all on one line):
 
-    wmic rdtoggle where AllowTSConnections="0" 
-    call SetAllowTSConnections "1"
+```text
+wmic rdtoggle where AllowTSConnections="0" call SetAllowTSConnections "1"
+```
 
 Of course, this being WMIC, we can easily add the "remote" functionality to this command with a simple switch:
 
-    wmic /node:remotepc1 rdtoggle where AllowTSConnections="0" 
-    call SetAllowTSConnections "1"
+```text
+wmic /node:remotepc1 rdtoggle where AllowTSConnections="0" call SetAllowTSConnections "1"
+```
 
 If you're running this command from a Windows Server 2003-based computer, you can use the `rdtoggle` alias even when executing the command remotely against a Windows XP-based system. In the event you need to run this on Windows XP, use this command instead:
 
-    wmic /node:remotepc1 path Win32_TerminalServiceSetting 
-    where AllowTSConnections="0" call SetAllowTSConnections "1"
+```text
+wmic /node:remotepc1 path Win32_TerminalServiceSetting where AllowTSConnections="0" call SetAllowTSConnections "1"
+```
 
 Note that this syntax (using the path instead of the alias) works equally well on either Windows Server 2003 or Windows XP.
 
@@ -39,7 +42,9 @@ Putting all this into practice, it now becomes possible to use `dsquery` to retu
 
 The Registry key to change is:
 
-    HKLM\System\CurrentControlSet\Control\Terminal Server
+```text
+HKLM\System\CurrentControlSet\Control\Terminal Server
+```
 
 A REG_DWORD value named fDenyTsConnection controls Remote Desktop; a value of 1 means that connections are denied (thus, Remote Desktop is disabled); a value of 0 means that connections are not denied (thus, Remote Desktop is enabled).
 

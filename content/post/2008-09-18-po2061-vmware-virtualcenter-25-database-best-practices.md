@@ -39,7 +39,9 @@ Bruce again shows how more memory will greatly reduce the time required to perfo
 
 To help calculate the sample size of performance statistics, use this formula:
 
-	Sample size = (number of entities) * (statistics per level)
+```text
+Sample size = (number of entities) * (statistics per level)
+```
 
 Based on the sample size, VMware has come up with some recommendations for VC DB hardware:
 

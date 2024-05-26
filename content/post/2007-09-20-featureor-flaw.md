@@ -25,8 +25,10 @@ Ah...file streams! I'd learned long ago (when reading _Inside the Windows NT Fil
 
 The situation here is that when you download a file from the Internet using Internet Explorer, IE automatically creates an alternate data stream named "Zone.Identifier". The contents of this alternate data stream are this:
 
-	[ZoneTransfer]
-	ZoneID=3
+```text
+[ZoneTransfer]
+ZoneID=3
+```
 
 I'm not sure when this behavior started (with which version of Internet Explorer and/or which version of Windows), but I do know---according to the KB article above---that as of Windows XP Service Pack 2, the presence of this alternate data stream helps Windows determine what kind of security policy to apply to the file. What does this mean? Let me walk through it with you:
 

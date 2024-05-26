@@ -27,11 +27,13 @@ The key disadvantage to using LUN clones comes as a result of an interaction bet
 
 From WAFL's perspective, a LUN is really nothing more than a single file on the file system. You can see this by browsing via CIFS or NFS to a FlexVol that contains a LUN:
 
-    [macosx:/Volumes/vol02$] slowe% ls -la
-    total 25165856
-    drwx------   1 slowe  admin        16384 Dec 31  1969 .
-    drwxrwxrwt   8 root   admin          272 May 21 11:47 ..
-    -rwx------   1 slowe  admin  12884901888 May 21 11:48 vswex02_vmfs
+```text
+[macosx:/Volumes/vol02$] slowe% ls -la
+total 25165856
+drwx------   1 slowe  admin        16384 Dec 31  1969 .
+drwxrwxrwt   8 root   admin          272 May 21 11:47 ..
+-rwx------   1 slowe  admin  12884901888 May 21 11:48 vswex02_vmfs
+```
 
 If I were to enable the `.snapshot` (or `~snapshot`) directory, we'd actually be able to see Snapshots of the LUN within that directory. In fact, this [NOW (NetApp on the Web; login required) article](http://now.netapp.com/Knowledgebase/solutionarea.asp?id=kb2130) describes mounting LUN snapshots inside the `.snapshot` (or `~snapshot`) as a way of recovering files or folders inside a snapshot. This technique is also applicable to recovering VMs from a LUN snapshot.
 

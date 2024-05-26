@@ -16,19 +16,23 @@ A quick Google search turned up [this posting](http://weblog.scifihifi.com/2006/
 
 The common error that everyone is seeing appears to be this:
 
-    2006-09-21 16:14:44.961 Cocoalicious[308] PARSE 
-    ERROR: NSError â€œError NSXMLParserErrorDomain 5â€ 
-    Domain=NSXMLParserErrorDomain Code=5
-    2006-09-21 16:18:58.210 Cocoalicious[311] NSError â€œError 
-    NSURLErrorDomain -1012â€ Domain=NSURLErrorDomain Code=-1012 
-    UserInfo={
-        NSErrorFailingURLKey = https://api.del.icio.us/v1/posts/update?; 
-        NSErrorFailingURLStringKey = â€œhttps://api.del.icio.us/v1/posts/update?â€; 
-    }
+```text
+2006-09-21 16:14:44.961 Cocoalicious[308] PARSE 
+ERROR: NSError Error NSXMLParserErrorDomain 5 
+Domain=NSXMLParserErrorDomain Code=5
+2006-09-21 16:18:58.210 Cocoalicious[311] NSError Error 
+NSURLErrorDomain -1012 Domain=NSURLErrorDomain Code=-1012 
+UserInfo={
+    NSErrorFailingURLKey = https://api.del.icio.us/v1/posts/update?; 
+    NSErrorFailingURLStringKey = https://api.del.icio.us/v1/posts/update?;
+}
+```
 
 Anyone have any idea what might be going on? I have determined, from reviewing the Console logs, that you should _not_ place a trailing slash after the URL in the Cocoalicious preferences; this causes the application to create a URL like this:
 
-    https://api.del.icio.us/v1//posts/update?
+```text
+https://api.del.icio.us/v1//posts/update?
+```
 
 Obviously, that won't work. However, even with the trailing slash not present, my installation of Cocoalicious immediately goes offline as soon as I launch it. Trashing the preferences file didn't seem to help, either.
 

@@ -22,9 +22,11 @@ Fortunately, there's a workaround for this issue which involves editing the `vpx
 
 Immediately after the `<vpxd>` line in `vpxd.cfg`, add the following lines:
 
-	<cluster>  
-	<VMOverheadGrowthLimit>5</VMOverheadGrowthLimit>  
-	</cluster>
+```xml
+<cluster>  
+<VMOverheadGrowthLimit>5</VMOverheadGrowthLimit>  
+</cluster>
+```
 
 I'm guessing that this information may not be information that VMware wants easily disseminated to the world, or that the workaround has not been fully and completely tested. So, use this information at your own risk.
 

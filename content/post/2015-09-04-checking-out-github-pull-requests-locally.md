@@ -22,9 +22,9 @@ git fetch origin pull/1234/head:pr-1234
 
 Let me break that command down a bit:
 
-- The `origin` in this case refers to the Git remote for this repository on GitHub. If you are using [the fork-and-pull method of collaborating via Git and GitHub][xref-1], then you will have multiple Git remotes---and the remote you want probably _isn't_ `origin`. For example, if you want to fetch a pull request from the original (not forked) repository, you'd want to use the name that corresponds to the Git remote for the original repository (I use `upstream` in these cases).
-- The `pull/1234/head` portion refers to the pull request on GitHub. Every pull request has a number assigned. If the pull request is #10, then the path would be `pull/10/head`. If the pull request is #9182, then the path is `pull/9182/head`.
-- The `:pr-1234` portion of the command points to the local branch into which you'd like the specified pull request to be fetched. **This branch should not already exist.** If you try to fetch into an existing branch, the command will fail, so specify the name of a branch you'd like created as part of the process.
+* The `origin` in this case refers to the Git remote for this repository on GitHub. If you are using [the fork-and-pull method of collaborating via Git and GitHub][xref-1], then you will have multiple Git remotes---and the remote you want probably _isn't_ `origin`. For example, if you want to fetch a pull request from the original (not forked) repository, you'd want to use the name that corresponds to the Git remote for the original repository (I use `upstream` in these cases).
+* The `pull/1234/head` portion refers to the pull request on GitHub. Every pull request has a number assigned. If the pull request is #10, then the path would be `pull/10/head`. If the pull request is #9182, then the path is `pull/9182/head`.
+* The `:pr-1234` portion of the command points to the local branch into which you'd like the specified pull request to be fetched. **This branch should not already exist.** If you try to fetch into an existing branch, the command will fail, so specify the name of a branch you'd like created as part of the process.
 
 Once you run the command and the fetch is successful, then you can switch to the branch with `git checkout pr-1234` (or whatever name you gave the new branch) and start reviewing the contents of the pull request. Very handy!
 

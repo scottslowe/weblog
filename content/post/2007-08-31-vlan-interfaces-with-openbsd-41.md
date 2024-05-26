@@ -20,12 +20,16 @@ I've been doing some interoperability testing with [VMware ESX Server](http://ww
 
 The command to configure a VLAN interface is simply a variation of the standard `ifconfig` command (note that I'm using a backslash to denote a line continuation, so that I can wrap lines here for readability):
 
-	ifconfig <VLAN interface name> vlan <VLAN ID> \  
-	vlandev <physical network device>
+```bash
+ifconfig <VLAN interface name> vlan <VLAN ID> \  
+vlandev <physical network device>
+```
 
 So, by example, the command I used to create a VLAN interface for VLAN ID 3 looked like this:
 
-	ifconfig vlan3 vlan 3 vlandev pcn0
+```bash
+ifconfig vlan3 vlan 3 vlandev pcn0
+```
 
 I did find that I couldn't name the VLAN interface ("vlan3", in this case) anything other than vlanX, where _X_ was a number. I don't know if this is an OpenBSD limitation, or just an error on my part. The latter is certainly a distinct possibility.
 

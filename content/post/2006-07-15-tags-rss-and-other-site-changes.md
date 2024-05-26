@@ -23,11 +23,15 @@ In addition, I've added links to search [del.icio.us](http://del.icio.us/) for r
 
 Just for easy reference, each category's RSS feed is available at the following URL:
 
-    http://blog.scottlowe.org/<category name>/feed
+```text
+http://blog.scottlowe.org/<category name>/feed
+```
 
 In addition, each tag's RSS feed is available at the following URL:
 
-    http://blog.scottlowe.org/<tag name>/feed
+```text
+http://blog.scottlowe.org/<tag name>/feed
+```
 
 By default, these URLs will return an RSS 2.0 feed. To access an RSS 0.92 feed, add "/rss" to the end of each of these URLs. There is no Atom feed for categories and tags just yet. There is an Atom 1.0 feed for the overall weblog, though.
 

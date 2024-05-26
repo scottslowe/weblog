@@ -26,10 +26,12 @@ First off, you'll need to make sure that the OpenSSH server's Kerberos configura
 
 Next, configure the `/etc/ssh/sshd_config` file (the system-wide SSH daemon configuration file) to include the following lines (note that these lines may already be present, just commented out; other lines may be present, but with different values):
 
-    KerberosAuthentication yes
-    GSSAPIAuthentication yes
-    GSSAPICleanupCredentials yes
-    UsePAM no
+```text
+KerberosAuthentication yes
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials yes
+UsePAM no
+```
 
 After these changes are made, you'll need to restart the SSH daemon.
 
@@ -37,9 +39,11 @@ After these changes are made, you'll need to restart the SSH daemon.
 
 Because the OpenSSH client configuration does not include GSSAPI authentication by default, you'll most likely need to modify your SSH client configuration. Edit the global client-side configuration file; on Mac OS X it's found as `/etc/ssh_config`. Change it to include the following lines:
 
-    Host *.example.com
-      GSSAPIAuthentication yes
-      GSSAPIDelegateCredentials yes
+```text
+Host *.example.com
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+```
 
 This limits GSSAPI authentication to only those hosts in the example.com domain. Modify the domain to be the appropriate domain for your network.
 

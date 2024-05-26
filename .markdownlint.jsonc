@@ -17,7 +17,8 @@
   // Rule details : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md004.md
   "ul-style": {
     // List style
-    "style": "consistent"
+    // "style": "consistent"
+    "style": "asterisk"
   },
   // MD005/list-indent : Inconsistent indentation for list items at the same level
   // Rule details : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md005.md
@@ -234,7 +235,8 @@
   // Rule details : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md046.md
   "code-block-style": {
     // Block style
-    "style": "consistent"
+    // "style": "consistent"
+    "style": "fenced"
   },
   // MD047/single-trailing-newline : Files should end with a single newline character
   // Rule details : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md047.md
@@ -249,15 +251,15 @@
   // Rule details : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md049.md
   "emphasis-style": {
     // Emphasis style
-    "style": "consistent"
-    // "style": "underscore"
+    // "style": "consistent"
+    "style": "underscore"
   },
   // MD050/strong-style : Strong style
   // Rule details : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md050.md
   "strong-style": {
     // Strong style
-    "style": "consistent"
-    // "style": "asterisk"
+    // "style": "consistent"
+    "style": "asterisk"
   },
   // MD051/link-fragments : Link fragments should be valid
   // Rule details : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md051.md

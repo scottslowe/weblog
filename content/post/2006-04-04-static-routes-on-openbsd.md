@@ -19,8 +19,10 @@ There are actually two solutions. The first solution involves the use of the `ho
 
 To add a static route to an interface, append a route command to the appropriate `hostname.if` file. Here's an example:
 
-    inet 192.168.254.254 255.255.255.0 NONE
-    !route add default 192.168.254.1
+```text
+inet 192.168.254.254 255.255.255.0 NONE
+!route add default 192.168.254.1
+```
 
 The key, of course, is the "!route add ..." statement. This is the piece that I needed.
 

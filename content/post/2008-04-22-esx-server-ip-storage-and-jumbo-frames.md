@@ -37,13 +37,17 @@ The exact commands and/or procedures may be different for you depending upon the
 
 Fortunately for me, the Cisco Catalyst 3560G does indeed support jumbo frames. (Naturally, you'll want to ensure that your switch supports jumbo frames.) Jumbo frames are not, however, enabled by default; they must be enabled using the following command in global configuration mode:
 
-	system mtu jumbo 9000
+```text
+system mtu jumbo 9000
+```
 
 Note that 9000 bytes seems to be the generally accepted size for jumbo frames, so that's what I used.
 
 After running this command, _you must reboot the switch._ The change doesn't take effect until a reload. Fortunately, IOS reminds you of this after you enter the command. Once the switch has rebooted, you can verify the MTU setting with this command:
 
-	show system mtu
+```text
+show system mtu
+```
 
 This should report that the system jumbo MTU size is 9000 bytes, confirming that the switch is ready for jumbo frames. Now we're prepared to configure the storage system.
 
@@ -62,19 +66,25 @@ There is no GUI in VirtualCenter for configuring jumbo frames; all of the config
 
 First, we need to set the MTU for the vSwitch. This is pretty easily accomplished using esxcfg-vswitch:
 
-	esxcfg-vswitch -m 9000 vSwitch1
+```bash
+esxcfg-vswitch -m 9000 vSwitch1
+```
 
 A quick run of `esxcfg-vswitch -l` (that's a lowercase L) will show the vSwitch's MTU is now 9000; in addition, `esxcfg-nics -l` (again, a lowercase L) will show the MTU for the NICs linked to that vSwitch are now set to 9000 as well.
 
 Second, we need to create a VMkernel interface. This step is a bit more complicated, because we need to have a port group in place already, and that port group needs to be on the vSwitch whose MTU we set previously:
 
-	esxcfg-vmknic -a -i 172.16.1.1 -n 255.255.0.0 -m 9000 IPStorage
+```bash
+esxcfg-vmknic -a -i 172.16.1.1 -n 255.255.0.0 -m 9000 IPStorage
+```
 
 This creates a port group called IPStorage on vSwitch1--the vSwitch whose MTU was previously set to 9000--and then creates a VMkernel port with an MTU of 9000 on that port group. Be sure to use an IP address that is appropriate for your network when creating the VMkernel interface.
 
 To test that everything is working so far, use the `vmkping` command:
 
-	vmkping -s 9000 172.16.1.200
+```bash
+vmkping -s 9000 172.16.1.200
+```
 
 Clearly, you'll want to substitute the IP address of your storage system in that command.
 

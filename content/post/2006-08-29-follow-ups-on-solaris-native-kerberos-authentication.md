@@ -19,7 +19,8 @@ wordpress_id: 328
 
 If you haven't read the previous articles, take a quick moment to review them before continuing:
 
-[Solaris 10 and Active Directory Integration][1]  
+[Solaris 10 and Active Directory Integration][1]
+
 [Native Kerberos Authentication with SSH][2]
 
 Initially, problems cropped up with both of these, but it seems as if the problems have been resolved.
@@ -30,9 +31,11 @@ The problem, as outlined in the original article, was that TGT validation wasn't
 
 Since that time, I have re-enabled TGT validation, and everything seems to work just fine. I believe that the problem was in the `/etc/hosts` file, since I've been seeing a fair number of comments in the various articles dealing with AD integration of non-Windows platforms. I believe that the fix is making sure that the server's fully qualified domain name is listed first in the `/etc/hosts` file, like so:
 
-    127.0.0.1       localhost localhost.localdomain
-    10.1.1.1        hostname.example.com hostname
-    <...other entries as needed...>
+```text
+127.0.0.1       localhost localhost.localdomain
+10.1.1.1        hostname.example.com hostname
+<...other entries as needed...>
+```
 
 On the line where the server's IP address is listed, make sure that the fully qualified domain name is listed first. I can't be absolutely sure that this is the fix, but this is the only thing I can think of that I did on both Linux and Solaris. I hope to perform some testing later this week and I'll post the results here.
 

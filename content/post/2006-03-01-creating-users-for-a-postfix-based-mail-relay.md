@@ -20,21 +20,29 @@ All of these examples assume that SASL is configured to use "sasldb" as the auth
 
 To create a new user, use the following syntax:
 
-    saslpasswd2 -c -u <domain> <username>
+```bash
+saslpasswd2 -c -u <domain> <username>
+```
 
 For simplicity's sake, it's easiest to make both the domain and the username in the command above the same as the domain and the username in the user's e-mail address. This will make their full username the same as their e-mail address.
 
 To change an existing user's password:
 
-    saslpasswd2 -u <domain> <username>
+```bash
+saslpasswd2 -u <domain> <username>
+```
 
 This will prompt for password and password verification. To delete an existing user:
 
-    saslpasswd2 -d -u <domain> <username>
+```bash
+saslpasswd2 -d -u <domain> <username>
+```
 
 Finally, to list the available users on the system, simply use:
 
-    sasldblistusers2
+```bash
+sasldblistusers2
+```
 
 This will list all the SASL users defined in the SASL database. Please note that the users' passwords will show up only as "userPassword", so it's not possible to see their existing passwords (at least, not without some effort).
 

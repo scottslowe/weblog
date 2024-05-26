@@ -19,11 +19,15 @@ To use this technique, you'll need `ldifde` (included with [Windows Server 2003]
 
 First, export the list of user accounts out of Active Directory using `ldifde`. The command will look something like this:
 
-    ldifde -d "CN=Users,DC=company,DC=com" -r "(objectclass=user)" -f c:\export-1.ldif
+```text
+ldifde -d "CN=Users,DC=company,DC=com" -r "(objectclass=user)" -f c:\export-1.ldif
+```
 
 This creates a file called `export-1.ldif`. Using `grep`, filter this file down to only the full distinguished names of the users:
 
-    cat export-1.ldif | grep 'dn: ' > export-2.ldif
+```bash
+cat export-1.ldif | grep 'dn: ' > export-2.ldif
+```
 
 Note that you'll need to use `type` instead of `cat` on a Win32 system. Also, on a Win32 system you'll need to use double quotes instead of single quotes in the grep command. This creates a file called `export-2.ldif`.
 
@@ -37,7 +41,9 @@ Save this modified file as `export-3.ldif`.
 
 Finally, pipe this file through to the `dsmod` program to set passwords for all the users in the file:
 
-    type export-3.ldif | dsmod user -pwd newpass1 -mustchpwd yes
+```text
+type export-3.ldif | dsmod user -pwd newpass1 -mustchpwd yes
+```
 
 Full help for the `dsmod` command line syntax is available using `dsmod /?` or `dsmod user /?`.
 

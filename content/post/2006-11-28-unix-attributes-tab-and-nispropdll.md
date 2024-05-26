@@ -21,7 +21,9 @@ It's not the "UNIX Attributes" tab that's important; it's access to those attrib
 
 One common workaround that has been mentioned is just registering the `nisprop.dll` file, using a command like this:
 
-    regsvr32 c:\windows\idmu\common\nisprop.dll
+```text
+regsvr32 c:\windows\idmu\common\nisprop.dll
+```
 
 Normally, this trick would work well. I used this trick, for example, to make Active Directory Users and Computers available to help desk personnel without having to install all the administrative tools (just copy down `dsadmin.dll` and register it). Not this time, though.
 
@@ -29,7 +31,9 @@ As Andy Loggia pointed out to me (first in the comments, and again later in a se
 
 Specifically, registering `nisprop.dll` adds the CLSID of `nisprop.dll` to the AdminPropertyPages attribute of the user-display and group-display objects in this location in Active Directory:
 
-    CN=409,CN=DisplaySpecifiers,CN=Configuration,DC=example,DC=net
+```text
+CN=409,CN=DisplaySpecifiers,CN=Configuration,DC=example,DC=net
+```
 
 (The "CN=409" would change if you are running a language other than English.) I verified this myself on my own instance of Active Directory in the lab and Andy is absolutely correct. Good work, Andy!
 

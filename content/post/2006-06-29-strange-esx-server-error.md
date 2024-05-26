@@ -19,16 +19,20 @@ At first, I tried starting the VM (which, again, was hosted on an ESX Server run
 
 From the Service Console, I used this command:
 
-    vmware-cmd /home/vmware/vsbgw01/vsbgw01.vmx start
+```bash
+vmware-cmd /home/vmware/vsbgw01/vsbgw01.vmx start
+```
 
 I received an error there, too; this error was something along the lines of:
 
-    There was an error connecting to the specified virtual machine: 
-    Unexpected response from vmware-authd: 
-    The process exited with an error:
-    Cannot change mode of /var/run/vmware to 01777: 
-    Operation not permitted
-    Failed to initialize the VMX VMDB instance
+```text
+There was an error connecting to the specified virtual machine: 
+Unexpected response from vmware-authd: 
+The process exited with an error:
+Cannot change mode of /var/run/vmware to 01777: 
+Operation not permitted
+Failed to initialize the VMX VMDB instance
+```
 
 A quick search on the Internet turned up this [VMTN community forum thread](http://www.vmware.com/community/message.jspa?messageID=388432), where I learned the problem was permissions on the `/var/run/vmware` directory. The thread has all the pertinent information to fix it, and after running the command mentioned in the thread all the VMs started up just fine---both from the Service Console command line as well as from VirtualCenter.
 

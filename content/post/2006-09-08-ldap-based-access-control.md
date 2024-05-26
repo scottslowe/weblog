@@ -25,7 +25,9 @@ OK, now you're ready to get rolling. Note: If you've configured your SSH server 
 
 Edit your `/etc/ssh/sshd_config` file and make sure that the following line is present:
 
-    UsePAM yes
+```text
+UsePAM yes
+```
 
 (This is the piece that breaks native Kerberos authentication, by the way.) SSHd will need to re-read the configuration after making this change in order for the change to take effect; restarting sshd is an easy way to do that.
 
@@ -35,22 +37,26 @@ Because PAM configurations vary from client to client, I can't give you the exac
 
 Add the following line to the top (first line) of the "account" section of the `/etc/pam.d/system-auth` file:
 
-    account   sufficient   /lib/security/$ISA/pam_ldap.so
+```text
+account   sufficient   /lib/security/$ISA/pam_ldap.so
+```
 
 You should be able to leave the rest of the file intact.
 
 ### Configure LDAP
 
-(Just as quick aside, you should be aware by now that modifying `ldap.conf` really only affects the pam\_ldap and nss\_ldap modules, not OpenLDAP itself. OpenLDAP is typically configured elsewhere.)
+(Just as quick aside, you should be aware by now that modifying `ldap.conf` really only affects the `pam_ldap` and `nss_ldap` modules, not OpenLDAP itself. OpenLDAP is typically configured elsewhere.)
 
 Make the following changes to the `/etc/ldap.conf` file:
 
-    pam_groupdn cn=GroupName,ou=OUName,dc=example,dc=net
-    pam_member_attribute member
+```text
+pam_groupdn cn=GroupName,ou=OUName,dc=example,dc=net
+pam_member_attribute member
+```
 
-These lines may already be present, and you may only have to uncomment them and substitue the correct value for the pam\_groupdn parameter. Do _NOT_ copy and paste the pam\_groupdn line as shown above; they won't work! (The pam\_member\_attribute line is fine to copy and paste.) Just put in the correct DN for the group that you'd like to use to control access to that particular host. Members of that group will be allowed access; others will be denied.
+These lines may already be present, and you may only have to uncomment them and substitue the correct value for the `pam_groupdn` parameter. Do _NOT_ copy and paste the `pam_groupdn` line as shown above; they won't work! (The `pam_member_attribute` line is fine to copy and paste.) Just put in the correct DN for the group that you'd like to use to control access to that particular host. Members of that group will be allowed access; others will be denied.
 
-If the group name includes spaces, enclose the entire DN in double quotes (i.e, pam\_groupdn "cn=Group Name,cn=Users,dc=example,dc=net").
+If the group name includes spaces, enclose the entire DN in double quotes (i.e, `pam_groupdn "cn=Group Name,cn=Users,dc=example,dc=net"`).
 
 ### Configure Active Directory
 

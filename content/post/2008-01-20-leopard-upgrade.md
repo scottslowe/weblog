@@ -25,7 +25,9 @@ So far I've only run into a couple of issues, both of them very minor:
 
 One of the first "tweaks" I reached for was the tweak to return the menu bar to a more opaque status. There are a number of sites out there providing instructions; here's the Terminal command I used:
 
-	sudo defaults write /System/Library/LaunchDaemons/com.apple.WindowServer 'EnvironmentVariables' -dict 'CI_NO_BACKGROUND_IMAGE' 0.62
+```bash
+sudo defaults write /System/Library/LaunchDaemons/com.apple.WindowServer 'EnvironmentVariables' -dict 'CI_NO_BACKGROUND_IMAGE' 0.62
+```
 
 The command worked like a champ, and my menu bar was restored to some sense of normalcy. I initially also switched the Dock to a 2-D smoked glass look, but then switched back to the default 3-D appearance. I figured I'd give the new Dock appearance a chance before just banishing it to the ether.
 

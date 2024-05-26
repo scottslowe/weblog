@@ -24,9 +24,11 @@ There is a bright spot here, though, and that's [OpenSSH](http://www.openssh.org
 
 To enable native Kerberos authentication in OpenSSH, make sure the following commands are present in the `sshd_config` file (typically found at `/etc/ssh`):
 
-    KerberosAuthentication yes
-    GSSAPIAuthentication yes
-    GSSAPICleanupCredentials yes
+```text
+KerberosAuthentication yes
+GSSAPIAuthentication yes
+GSSAPICleanupCredentials yes
+```
 
 Be sure to restart the SSH daemon after making these changes.
 

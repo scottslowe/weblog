@@ -25,10 +25,12 @@ When using `net ads join` to join the Active Directory domain, it didn't recogni
 
 When initially trying to join the Active Directory domain, `net ads join` threw this error:  
 
-	[2007/12/04 12:57:08, 0] libads/kerberos.c:create_local_private_krb5_conf_  
-	for_domain(594) create_local_private_krb5_conf_for_domain:  
-	failed to create directory /var/cache/samba/smb_krb5.  
-	Error was Permission denied
+```text
+[2007/12/04 12:57:08, 0] libads/kerberos.c:create_local_private_krb5_conf_  
+for_domain(594) create_local_private_krb5_conf_for_domain:  
+failed to create directory /var/cache/samba/smb_krb5.  
+Error was Permission denied
+```
 
 This error persisted until I manually created the `/var/cache/samba/smb_krb5` directory myself. Why this directory wasn't created automatically during the Samba installation is beyond me. Once I created that directory, the error went away, but Samba still wouldn't create the keytab or add entries to the keytab.
 

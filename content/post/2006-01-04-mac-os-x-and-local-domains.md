@@ -24,9 +24,11 @@ Basically, Mac OS X uses the `.local` TLD for Bonjour/Rendezvous services, and i
 
 Let's say that you need to integrate Mac OS X with an Active Directory domain called _company.local._ Simply create a file in `/etc/resolver` named `company.local` with the following contents:
 
-    nameserver a.b.c.d
-    nameserver w.x.y.z
-    port 53
+```text
+nameserver a.b.c.d
+nameserver w.x.y.z
+port 53
+```
 
 Obviously, replace the letters in the text above with the IP addresses of your appropriate DNS servers for the company.local Active Directory domain. Then, flush the lookupd cache with `lookupd -flushcache` and that's it!
 

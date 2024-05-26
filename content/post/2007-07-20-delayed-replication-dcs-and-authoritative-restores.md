@@ -63,15 +63,21 @@ Fortunately, you can use ADSI Edit to help you find the full DN. (Those of you t
 
 Let's look at some examples. First, let's say we need to restore a user object named "John Doe" in the Raleigh OU under the Locations OU in the domain example.com. The DN would look like this:
 
-	"cn=John Doe,ou=Raleigh,ou=Locations,dc=example,dc=com"
+```text
+"cn=John Doe,ou=Raleigh,ou=Locations,dc=example,dc=com"
+```
 
 What if the user accounts are listed with lastname then firstname, separated by a comma?
 
-	"cn=Doe\, John,ou=Raleigh,ou=Locations,dc=example,dc=com"
+```text
+"cn=Doe\, John,ou=Raleigh,ou=Locations,dc=example,dc=com"
+```
 
 What about a group?
 
-	cn=DnsAdmins,cn=Users,dc=example,dc=com
+```text
+cn=DnsAdmins,cn=Users,dc=example,dc=com
+```
 
 Note that we omit the double quotes here because there are no spaces in the DN.
 
@@ -87,7 +93,9 @@ In this case, the answer is "It depends". Upon what does it depend? The zone's r
 
 The tricky part about restoring AD-integrated DNS zones is the naming in the DN. Here's an example:
 
-	"dc=testlab.example.com,cn=MicrosoftDNS,dc=DomainDnsZones,dc=example,dc=com"
+```text
+"dc=testlab.example.com,cn=MicrosoftDNS,dc=DomainDnsZones,dc=example,dc=com"
+```
 
 This would be for the zone testlab.example.com, configured as a AD-integrated zone with a replication scope of all DNS servers in the domain, in the AD domain example.com. Key thing to note here: pay attention to the use of "dc=" at the beginning of the DN. Zones use "dc=" and _not_ "cn="! (Fortunately this is correctly represented with ADSI Edit.)
 

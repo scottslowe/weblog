@@ -18,11 +18,15 @@ Spurred to see if I could become more efficient than I am currently, I've been e
 
 It only took a few minutes of experimentation in the Terminal to come across the `mdls` command, which lists metadata for a file (or group of files). Perfect! Using `mdls`, I listed the metadata for an e-mail message, and found that it was the kMDItemProjects attribute that was used by MailTags. With that information in hand, I hacked together this quick process for listing all the projects in use across all my mailboxes:
 
-	mdls <mailbox path>/*.emlx | grep kMDItemProjects >> ~/all-projects.txt
+```bash
+mdls <mailbox path>/*.emlx | grep kMDItemProjects >> ~/all-projects.txt
+```
 
 Repeat this command for each mailbox (for example, I have a separate archive mailbox for each year). Once you've enumerated the information for all the mailboxes, then parse it down like this:
 
-	sort all-projects.txt > sorted-projects.txt
-	uniq sorted-projects.txt > unique-projects.txt
+```bash
+sort all-projects.txt > sorted-projects.txt
+uniq sorted-projects.txt > unique-projects.txt
+```
 
-Now the file "unique-projects.txt" contains all the unique project names that are in use across all your mailboxes. Very handy! Now, if only obtaining a unique list of all the MailTags keywords were as easy...
+Now the file `unique-projects.txt` contains all the unique project names that are in use across all your mailboxes. Very handy! Now, if only obtaining a unique list of all the MailTags keywords were as easy...

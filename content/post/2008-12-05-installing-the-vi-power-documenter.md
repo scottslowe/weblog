@@ -20,7 +20,9 @@ Second, copy the VIPD---specifically, the `.PS1` file which is the script itself
 
 Next, you need to add the OpenXML PowerTools---included with the VIPD download---so that PowerShell can use them. This is where it starts to get dicey. The instructions call for the use of a tool called InstallUtil, but the instructions don't provide any information on _where_ this tool is. I found a version that works in `C:\Windows\Microsoft.NET\Framework\v2.0.50727`. From a command prompt (not PowerShell, as the instructions say), change into that directory and run this command:
 
-	installutil <Full path to OpenXML Power Tools>OpenXml.PowerTools.dll
+```text
+installutil <Full path to OpenXML Power Tools>OpenXml.PowerTools.dll
+```
 
 The instructions said to add another `\OpenXml.PowerTools` to the end of that command, but I couldn't make it work that way.
 

@@ -37,21 +37,27 @@ To configure the switch for 802.1x authentication, three steps are involved:
 
 First, to enable 802.1x authentication on the switch, use the following commands in global configuration mode:
 
-    aaa new-model  
-    aaa authentication dot1x default group radius  
-    aaa authorization network default group radius  
-    dot1x system-auth-control
+```text
+aaa new-model  
+aaa authentication dot1x default group radius  
+aaa authorization network default group radius  
+dot1x system-auth-control
+```
 
 This enables 802.1x globally on the switch, but none of the interfaces are enabled for 802.1x authentication. Next, we configure the RADIUS server(s) to which the switch will pass the 802.1x authentication traffic. That's handled with these commands in global configuration mode:
 
-    radius-server host 10.1.1.254 auth-port 1645 acct-port 1646 key Password
+```text
+radius-server host 10.1.1.254 auth-port 1645 acct-port 1646 key Password
+```
 
 (This should all be on one line.) Note that the "auth-port" and "acct-port" parameters are only necessary if you are using nonstandard ports. Since Microsoft's IAS (Internet Authentication Service, which provides the RADIUS interface to Active Directory) uses both sets of standard ports (1645/1812 and 1646/1813) you won't need to specify these parameters. The "key" parameter is a shared secret key between the RADIUS client (the switch) and the RADIUS server. Obviously, you'll want to use something other than "Password".
 
 Finally, to enable 802.1x on the applicable interfaces, you'll use these commands in interface configuration mode (replace `gi0/23` with the interface you want to configure):
 
-    int gi0/23  
-    dot1x port-control auto
+```text
+int gi0/23  
+dot1x port-control auto
+```
 
 That enables 802.1x authentication on that specific port. Repeat the process for all ports that should use 802.1x authentication. Note that some ports can't be enabled for 802.1x authentication; most notably, trunk ports can't be used for 802.1x. Refer to the Cisco documentation (or the documentation from your particular vendor) for complete details on the limitations.
 

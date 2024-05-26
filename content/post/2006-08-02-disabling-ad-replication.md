@@ -16,16 +16,22 @@ Replication is bidirectional, occurring both inbound and outbound. Each of these
 
 To disable outbound replication from a particular DC, use this command:
 
-    repadmin /options <DC NAME> +DISABLE_OUTBOUND_REPL
+```text
+repadmin /options <DC NAME> +DISABLE_OUTBOUND_REPL
+```
 
 Likewise, to disable inbound replication for a particular DC, use this command:
 
-    repadmin /options <DC NAME> +DISABLE_INBOUND_REPL
+```text
+repadmin /options <DC NAME> +DISABLE_INBOUND_REPL
+```
 
 In these commands, we are _adding_ the "DISABLE_OUTBOUND_REPL" or "DISABLE_INBOUND_REPL" flag to the DC, so that running `repadmin /options` will show that flag as an option on the selected DC. To re-enable replication, then, we need to _remove_ the flag using one of the two commands:
 
-    repadmin /options <DC NAME> -DISABLE_OUTBOUND_REPL<br></br>
-    repadmin /options <DC NAME> -DISABLE_INBOUND_REPL
+```text
+repadmin /options <DC NAME> -DISABLE_OUTBOUND_REPL<br></br>
+repadmin /options <DC NAME> -DISABLE_INBOUND_REPL
+```
 
 When replication is disabled, warning events 1115 (for disabled outbound replication) or 1113 (for disabled inbound replication) from source NTDS General will be logged in the Directory Service event log during system startup. As far as I am aware, no events are regularly logged during normal operation to indicate that replication is disabled. When replication is re-enabled, informational events 1116 (for outbound replication) and 1114 (for inbound replication) are logged.
 

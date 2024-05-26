@@ -22,8 +22,10 @@ The idea of having an ESX Server create an 802.1Q trunk (even using multiple phy
 
 Today, I set out to test this interoperability. A host server running ESX Server 2.5.3 (the latest version, just released a few days ago) was connected to a Cisco Catalyst 3524XL running IOS 12.0(5). The following commands were used to configure the port to which the ESX Server was connected:
 
-    Switch(config-if): switchport mode trunk
-    Switch(config-if): switchport trunk encapsulation dot1q
+```text
+switch(config-if): switchport mode trunk
+switch(config-if): switchport trunk encapsulation dot1q
+```
 
 A quick review of the output from `sh int fa0/18 switchport` (where "fa0/18", for example, is the interface to which the ESX Server is connected) showed that the port was indeed configured and operating as an 802.1Q trunk.
 

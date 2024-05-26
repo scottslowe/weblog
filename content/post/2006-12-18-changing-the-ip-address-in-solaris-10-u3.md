@@ -21,10 +21,7 @@ It didn't work. A bit more research indicates that in Solaris 10, the operating 
 
 Upon editing `/etc/inet/ipnodes` and rebooting the server, the IP address change took effect.
 
-So, if you need to change the IP address of a server running Solaris 10, change the following files:
-
-    /etc/inet/hosts
-    /etc/inet/ipnodes
+So, if you need to change the IP address of a server running Solaris 10, make the change in both `etc/inet/hosts` as well as `/etc/inet/ipnodes`.
 
 Upon a reboot, the server will now have the new IP address.
 

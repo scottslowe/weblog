@@ -37,13 +37,17 @@ Armed with those questions, I set out to do some research. You can see some link
 
 The best way to address attack vector #1 is to explicitly disable automatic trunk negotiation on all ports that don't need to be trunks. From my research and my (relatively) limited knowledge of Cisco IOS, this command should do it:
 
-	switchport mode access
+```text
+switchport mode access
+```
 
 This explicitly forces the switchport into a state where it will not negotiate an 802.1Q VLAN trunk with another device, hence killing attack vector #1 dead in its tracks. Again, this should only be done on the ports that are _not_ connected to the ESX Servers; otherwise, you're shooting yourself in the foot. Keep in mind that uplinks to other switches, ports going out to IP phones, etc., may also need to be configured as VLAN trunks. Really, the issue is about controlling the creation of unauthorized VLAN trunks in order to control VLAN leakage. One of the CCIEs at the office mentioned a `switchport noneg` command, but I'm not familiar with that one; anyone have more details?
 
 Addressing attack vector #2 is also relatively straightforward. Since the VLAN hopping exploit takes advantage of the nature of the native VLAN (which I've discussed before [here][1]), setting the native VLAN on the trunk ports connecting to the ESX Servers to a VLAN that is not used anywhere else in the network will prevent VLAN hopping. For example:
 
-	switchport trunk native vlan 4094
+```text
+switchport trunk native vlan 4094
+```
 
 From my [NIC teaming and VLAN trunking article][2] (one of the most popular articles on the site, by the way), you'll see that I recommended at that time the creation of a VLAN that is used only as the native VLAN for 802.1Q trunks. At that time, I didn't fully understand why; now, after additional research, I understand why I needed to do that and I also recognize that the suggested configuration provides a layer of protection against VLAN hopping attacks.
 

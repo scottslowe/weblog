@@ -25,9 +25,11 @@ The stuff I found in the VMworld 2007 slides talks of using a second isolation a
 
 To make a long story not quite so long, I found that isolation response was _not_ working as expected. What happened is that other hosts in the cluster would detect the "host failure" (the isolation of my test host) and try to restart the VM before the test host detected isolation and tried to shutdown the VM. This was evidenced by these lines in `/var/log/vmkernel`:
 
-	Oct  5 13:13:36 esx02 vmkernel: 38:20:29:34.025 cpu3:1305)WARNING: NFSLock: 1883: disk is being locked by other consumer  
-	
-	Oct  5 13:13:36 esx02 vmkernel: 38:20:29:34.025 cpu3:1305)NFSLock: 2479: failed to get lock on file vswim01-flat.vmdk 0x5a1b6a0 on 192.168.31.51 (192.168.31.51)
+```text
+Oct  5 13:13:36 esx02 vmkernel: 38:20:29:34.025 cpu3:1305)WARNING: NFSLock: 1883: disk is being locked by other consumer  
+
+Oct  5 13:13:36 esx02 vmkernel: 38:20:29:34.025 cpu3:1305)NFSLock: 2479: failed to get lock on file vswim01-flat.vmdk 0x5a1b6a0 on 192.168.31.51 (192.168.31.51)
+```
 
 (Yes, I'm running my VMs on NFS. Yes, I did try iSCSI to see if the behavior was different. No, I did not try Fibre Channel. Yes, I got the same results in both cases.)
 

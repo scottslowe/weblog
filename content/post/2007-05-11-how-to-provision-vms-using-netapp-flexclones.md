@@ -50,26 +50,34 @@ Now, having said all that, and assuming that you've followed some of these guide
 
 While logged into the storage system with appropriate permissions, first take a snapshot of the FlexVol containing the LUN that has the VMFS datastore you want cloned. You can call this Snapshot something like "base\_clone\_snapshot" or similar, but be sure to use a name that makes sense to you and helps you understand the purpose of this snapshot. The command to do this would be:  
 
-    snap create fvol_master clone_base_snapshot
+```text
+snap create fvol_master clone_base_snapshot
+```
 
 This creates a Snapshot of the FlexVol "fvol_master" named "clone_base_snapshot".
 
 Next, create a FlexClone based on the Snapshot you just created:  
 
-    vol clone create fvol_clone1 -b fvol_master clone_base_snapshot
+```text
+vol clone create fvol_clone1 -b fvol_master clone_base_snapshot
+```
 
 This creates a new FlexVol named "fvol_clone1", which is based on the Snapshot named "clone_base_snapshot" in the FlexVol "fvol_master".
 
 Because this clone is an exact copy of the original flexible volume, including LUNs and LUN maps, Data ONTAP will spit out some messages about LUNs being taken offline and such. To fix this, unmap the LUN(s) in the new FlexClone and remap them with different LUN IDs:
 
-    lun unmap /vol/fvol_clone1/lun_name igroupname
-    lun map /vol/fvol_clone1/lun_name igroupname 3
+```text
+lun unmap /vol/fvol_clone1/lun_name igroupname
+lun map /vol/fvol_clone1/lun_name igroupname 3
+```
 
 Obviously, substitute the appropriate LUN ID for the "3" in the above command line. This remaps the LUN to the specified igroup with a new LUN ID and, assuming you've enable resignaturing, makes the LUN (which is a VMFS datastore) visible to ESX Server and VirtualCenter.
 
 Next, unless you want Snapshots of the FlexClone, you'll need to disable scheduled Snapshots on the FlexClone using the `snap sched` command:  
 
-    snap sched fvol_clone1 0
+```text
+snap sched fvol_clone1 0
+```
 
 This disables scheduled Snapshots, but manual Snapshots are still allowed. (To disable all Snapshots, you'd need to set the "no_snap" volume option.)
 
@@ -82,7 +90,9 @@ In order for the VMs to be usable, we must first register them. To run the comma
 
 Once logged in, you'll use the `vmware-cmd` utility to register the VMs. Let's assume that you called the FlexClone "san-lun-clone1" in VirtualCenter, and that a VM called "win1" exists on that VMFS datastore. The command to use would look something like this:
 
-    vmware-cmd -s register /vmfs/volumes/san-lun-clone1/win1/win1.vmx
+```bash
+vmware-cmd -s register /vmfs/volumes/san-lun-clone1/win1/win1.vmx
+```
 
 For each VM on the datastore that needs to be recognized by ESX (and has been properly prepared in advance, as noted above), repeat this process. With a little work, it should be fairly easy to write a script that finds all the *.vmx files on a datastore and registers them. (Anyone care to take up that challenge?)
 

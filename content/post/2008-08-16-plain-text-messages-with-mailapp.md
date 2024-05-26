@@ -16,16 +16,22 @@ wordpress_id: 825
 
 I'm not really sure where or when it started, but over the last couple of years I started taking a strong preference to plain text communications. Perhaps it's an increased amount of time spent on Usenet newsgroups (I'm **still** waiting for Panic to release a substantive update to [Unison](http://www.panic.com/unison/)!), or perhaps its due to the annoyance of HTML e-mail that include more pictures than text; I don't know. In any case, I set my e-mail client (Mac OS X's Mail.app) to use plain text by default when composing messages, and I used the "hidden" preference to show the plain text alternative for messages when it's available:
 
-	defaults write com.apple.mail PreferPlainText -bool TRUE
+```bash
+defaults write com.apple.mail PreferPlainText -bool TRUE
+```
 
 So that's all well and good, but what I've noticed is that Mail.app seems to "ignore" some of the line endings in my message. It primarily only happens in signatures; I haven't noticed it happening in the body of the message. At the same time that I adopted plain text messages, I also adopted the "standard" signature delimiter of two dashes and a space, so my signature will typically look something like this:
 
-	--  (hidden space at the end)  
-	Scott
+```text
+--  (hidden space at the end)  
+Scott
+```
 
 What happens is that Mail.app turns it into this:
 
-	-- Scott
+```text
+-- Scott
+```
 
 What in the world? Why is Mail.app playing with my signature? I've also noticed that in my longer signature---where I include my official title, phone numbers, company name, etc.---that Mail.app plays with the line endings there as well.
 

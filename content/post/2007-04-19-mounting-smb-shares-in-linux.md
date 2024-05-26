@@ -18,8 +18,9 @@ This is one of those commands that you need to know, but use it so very rarely t
 
 The command looks something like this:
 
-    mount -t smbfs -o username=User,password=Pass
-      //host.IP.addr.ess/sharename /local/mnt
+```bash
+mount -t smbfs -o username=User,password=Pass //host.IP.addr.ess/sharename /local/mnt
+```
 
 Of course, this should be typed all on a single line.
 

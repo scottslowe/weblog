@@ -30,15 +30,19 @@ There are a couple important requirements to note; these are laid out in the ref
 
 To create the dynamic multimode VIF on the Data ONTAP side, the command is pretty simple:
 
-	vif create lacp <vif name> -b ip <interface list>
+```text
+vif create lacp <vif name> -b ip <interface list>
+```
 
 On the Cisco side, the commands are very similar:
 
-	s3(config)#int port-channel1  
-	s3(config-if)#description LACP multimode VIF for netapp1  
-	s3(config-if)#int gi0/23  
-	s3(config-if)#channel-protocol lacp  
-	s3(config-if)#channel-group 1 mode active
+```text
+s3(config)#int port-channel1  
+s3(config-if)#description LACP multimode VIF for netapp1  
+s3(config-if)#int gi0/23  
+s3(config-if)#channel-protocol lacp  
+s3(config-if)#channel-group 1 mode active
+```
 
 These commands would be repeated for all physical ports that should be included in the LACP bundle. Note the differences from the earlier commands in the previous article; here we use `channel-group 1 mode active` instead of `channel-group 1 mode on`. We also added the `channel-protocol lacp` command.
 

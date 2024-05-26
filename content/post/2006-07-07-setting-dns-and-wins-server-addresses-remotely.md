@@ -23,15 +23,19 @@ This command assumes that all IP-enabled, statically assigned interfaces should 
 
 Here's the command to set the WINS server addresses:
 
-    wmic nicconfig where (IPEnabled=TRUE and DHCPEnabled=FALSE) 
-    call SetWINSServer "192.168.254.100","192.168.254.101"
+```text
+wmic nicconfig where (IPEnabled=TRUE and DHCPEnabled=FALSE) 
+call SetWINSServer "192.168.254.100","192.168.254.101"
+```
 
 To perform this command remotely, add the `/node:<PC name>` switch (this goes before `nicconfig`). To specify alternate user credentials, add `/user:<Username>` and `/password:<Password>` switches (again, before nicconfig). Note the `where` clause that limits the action to only those NICs that are IP-enabled and not using DHCP.
 
 Here's the command to set the DNS server addresses:
 
-    wmic nicconfig where (IPEnabled=TRUE and DHCPEnabled=FALSE) 
-    call SetDNSServerSearchOrder ("192.168.254.101","192.168.254.100")
+```text
+wmic nicconfig where (IPEnabled=TRUE and DHCPEnabled=FALSE) 
+call SetDNSServerSearchOrder ("192.168.254.101","192.168.254.100")
+```
 
 The syntax is slightly different here for DNS servers than above for WINS server, so don't get tripped up. Same things apply again for working against a remote node or for specifying alternate user credentials.
 

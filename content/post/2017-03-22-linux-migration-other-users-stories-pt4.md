@@ -35,10 +35,10 @@ At my previous job, I had been using an Apple MacBook Pro. I realized that 80-90
 The applications I use mostly are:
 
 1. [Emacs][link-8]
-    - It serves as my primary text editor
-    - It's also my organizer (org-mode for the win!)
-    - My primary integrated development environment (IDE) (projectile + python + magit is pretty much what I use)
-    - My primary slide/presentation editor (org-reveal + reveal.js is awesome)
+    * It serves as my primary text editor
+    * It's also my organizer (org-mode for the win!)
+    * My primary integrated development environment (IDE) (projectile + python + magit is pretty much what I use)
+    * My primary slide/presentation editor (org-reveal + reveal.js is awesome)
 2. Vim (I am a long time vim user and sometimes just revert to vim)
 3. O365 + OmniGraffle (note: I haven't really tested out the O365 equivalent on the Linux laptop, given that it is not my work. For drawings, I think LibreOffice is satisfactory, at least for now)
 

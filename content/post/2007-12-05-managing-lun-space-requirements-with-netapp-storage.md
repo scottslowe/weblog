@@ -20,31 +20,45 @@ If you've worked with Network Appliance storage before, you're probably already 
 
 I'll try to explain the commands along the way, but I would recommend you review the documentation available from the NOW site for more complete information.
 
-	vol options <volname> fractional_reserve 0
+```text
+vol options <volname> fractional_reserve 0
+```
 
 This command sets the fractional reserve to zero percent, down from the default of 100 percent. Note that fractional reserve only applies to LUNs, not to NAS storage presented via CIFS or NFS.
 
-	snap autodelete <volname> trigger snap_reserve
+```text
+snap autodelete <volname> trigger snap_reserve
+```
 
 This sets the trigger at which Data ONTAP will begin deleting Snapshots. In this case, Snapshots will start getting deleted when the snap reserve for the volume gets nearly full. The current size of the snap reserve can be viewed for a particular volume with the `snap reserve <volname>` command.
 
-	snap autodelete <volname> defer_delete none
+```text
+snap autodelete <volname> defer_delete none
+```
 
 This command instructs Data ONTAP not to exhibit any preference in the types of Snapshots that are deleted. Options for this command include "user_created" (delete user-created Snapshot copies last) or "prefix" (Snapshot copies with a specified prefix string).
 
-	snap autodelete <volname> target_free_space 10
+```text
+snap autodelete <volname> target_free_space 10
+```
 
 With this setting in place, Snapshots will be deleted until there is 10% free space in the volume.
 
-	snap autodelete <volname> on
+```text
+snap autodelete <volname> on
+```
 
 Now that the Snapshot autodelete options have been configured, this command will actually turn the functionality on.
 
-	vol options <volname> try_first snap_delete
+```text
+vol options <volname> try_first snap_delete
+```
 
 When a FlexVol runs into an issue with space, this option tells Data ONTAP to first try to delete Snapshots in order to free up space. This command works in conjunction with the next command:
 
-	vol autosize <volname> on
+```text
+vol autosize <volname> on
+```
 
 This enables Data ONTAP to automatically grow the size of a FlexVol if the need arises. This command works hand-in-hand with the previous command; Data ONTAP will first try to delete Snapshots to free up space, then grow the FlexVol according to the autosize configuration options. Between these two options---Snapshot autodelete and volume autogrow---you can reduce the fractional reserve from the default of 100 and still make sure that you don't run into problems taking Snapshots of your LUNs.
 

@@ -25,28 +25,34 @@ First, some background. I have a number of customers whose servers I manage remo
 
 So, using [OpenBSD](http://www.openbsd.org/) (then version 3.7, now version 3.8), I first added some additional IP addresses to the le1 interface by modifying the `/etc/hostname.le1` file like so:
 
-    inet 192.168.100.1 255.255.0.0
-    alias 192.168.100.2
-    alias 192.168.100.3
+```text
+inet 192.168.100.1 255.255.0.0
+alias 192.168.100.2
+alias 192.168.100.3
+```
 
 Using `ping`, I verified that the new IP addresses were responding, then proceeded to configure Stunnel to accept unencrypted connections and forward them to another host as encrypted connections. The Stunnel configuration looked something like this:
 
-    client = yes
-    [ms-wbt-server]
-    accept  = 192.168.100.2:3389
-    connect = 172.16.100.100:54321
+```text
+client = yes
+[ms-wbt-server]
+accept  = 192.168.100.2:3389
+connect = 172.16.100.100:54321
+```
 
 I also had to add "ms-wbt-server" to the `/etc/services` file with the appropriate port numbers (3389).
 
 On the other end of the tunnel, Stunnel was set up in reverse---it was configured to receive an encrypted connection on port 54321 (for example) and forward that as an unencrypted connection to the standard RDP port (3389). The Stunnel configuration looked something like this:
 
-    CApath = c:\winnt\system32\stunnel
-    cert = c:\winnt\system32\stunnel\stunnel.pem
-    client = no
-    service = SSLTunnel
-    [ms-wbt-server-s]
-    accept = 54321
-    connect = 3389
+```text
+CApath = c:\winnt\system32\stunnel
+cert = c:\winnt\system32\stunnel\stunnel.pem
+client = no
+service = SSLTunnel
+[ms-wbt-server-s]
+accept = 54321
+connect = 3389
+```
 
 Again, the "ms-wbt-server-s" (for "secure") had to be added to to the services file (on Windows boxes typically located in `C:\winnt\system32\drivers\etc`). Then I registered Stunnel to run as a service (I believe the command-line was `stunnel -s <config file name>` or similar). Upon starting the service, I verified that we now had a listening port using `netstat -an`.
 

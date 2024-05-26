@@ -19,11 +19,15 @@ I see this question popping up a lot, so I thought I'd just throw up this quick 
 
 In VMware ESX 3.5 U2 (which users should be using if at all possible, now that [it's validated by Microsoft][1]), the command to do this is vmware-vim-cmd:
 
-	vmware-vim-cmd /hostsvc/net/vswitch_setpolicy --nicteaming-policy=loadbalance_ip vSwitch1
+```bash
+vmware-vim-cmd /hostsvc/net/vswitch_setpolicy --nicteaming-policy=loadbalance_ip vSwitch1
+```
 
 This command sets the vSwitch to use "Route based on ip hash". To set the vSwitch back to "Route based on the originating virtual port ID", use this command:
 
-	vmware-vim-cmd /hostsvc/net/vswitch_setpolicy  --nicteaming-policy=loadbalance_srcid vSwitch1
+```bash
+vmware-vim-cmd /hostsvc/net/vswitch_setpolicy  --nicteaming-policy=loadbalance_srcid vSwitch1
+```
 
 Obviously, users will need to replace vSwitch1 with the appropriate vSwitch that needs to be configured. Note that this command is a bit different than in earlier versions, which used `vimsh`.
 

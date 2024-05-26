@@ -19,8 +19,9 @@ So, we need to find a way to reset these DHCP clients to revert back to DHCP for
 
 Resetting the DNS server search order on a DHCP client to use the DNS servers passed down via DHCP is pretty easy. In this sitaution, we'll modify the technique described earlier to [remotely set DNS and WINS server addresses][1]. However, instead of setting a specific DNS server, we'll essentially set the value to nothing:
 
-    wmic nicconfig where (IPEnabled=TRUE and DHCPEnabled=TRUE) 
-    call SetDNSServerSearchOrder ()
+```text
+wmic nicconfig where (IPEnabled=TRUE and DHCPEnabled=TRUE) call SetDNSServerSearchOrder ()
+```
 
 As described in earlier posts, this command uses WMIC to set an empty DNS server search order for all NICs that are both IP-enabled and DHCP-enabled. As with all other WMIC examples that have been presented here, this command is remotely executable (using the `/node:<PC name>` switch), and it can be made to work with multiple machines using either the `/node:@<filename>` syntax or using `for /f` to pipe results into the `/node` switch. All of these examples have been demonstrated already, so we won't delve into them again here. Refer to back to any of these articles for more information:
 
@@ -38,8 +39,9 @@ Netsh (network shell, available in [Windows 2000](http://www.microsoft.com/windo
 
 The problem with Netsh when being used remotely, however, is that it _won't allow_ changes to DNS or WINS servers. Specifically, the command that would be used to reset WINS servers to DHCP is this one:
 
-    netsh interface ip set wins 
-    name="Local Area Connection" source=dhcp
+```text
+netsh interface ip set wins name="Local Area Connection" source=dhcp
+```
 
 (Be sure to type this all on a single line.) This works just fine when executed locally (tested on both Windows Server 2003 and Windows XP), but refuses to work when executed remotely using the "-r" switch.
 
@@ -47,21 +49,23 @@ The trick here, then, is to find a way to spawn this command on a remote system 
 
 This WMIC command will spawn a process remotely:
 
-    wmic /node:pc01 process call create "cmd.exe"
+```text
+wmic /node:pc01 process call create "cmd.exe"
+```
 
 Using some switches for the Windows command shell (`cmd.exe`), we can build a command to launch `cmd.exe` and then issue the `netsh` command we need. This is the final result:
 
-    wmic /node:<PC name> process call create 
-    'cmd.exe /c "netsh interface ip set wins name="Local Area Connection" 
-    source=dhcp"'
+```text
+wmic /node:<PC name> process call create 'cmd.exe /c "netsh interface ip set wins name="Local Area Connection" source=dhcp"'
+```
 
-Pay close attention to the quotes---those are single quotes around the entire command line, then double quotes around the Netsh command and the name of the network adapter. As it turns out, the default behavior of `cmd.exe` is to strip off the first double quote (in this case, the one just before `netsh`) and the last double quote (just after the `source=dhcp` parameter) and leave the remaining. The single quotes are used to bind the entire command line together, so that when it is parsed first by `cmd.exe` on the local system where the command is being typed it will work correctly. I tried several different combinations of single and double quotes and this worked; you may be able to find other combinations (if so, please let me know by posting a comment to this article).
+Pay close attention to the quotes---those are single quotes around the entire command line, then double quotes around the `netsh` command and the name of the network adapter. As it turns out, the default behavior of `cmd.exe` is to strip off the first double quote (in this case, the one just before `netsh`) and the last double quote (just after the `source=dhcp` parameter) and leave the remaining. The single quotes are used to bind the entire command line together, so that when it is parsed first by `cmd.exe` on the local system where the command is being typed it will work correctly. I tried several different combinations of single and double quotes and this worked; you may be able to find other combinations (if so, please let me know by posting a comment to this article).
 
 By extension, of course, you could also use the same technique to reset the DNS servers:
 
-    wmic /node:<PC name> process call create 
-    'cmd.exe /c "netsh interface ip set dns name="Local Area Connection" 
-    source=dhcp"'
+```text
+wmic /node:<PC name> process call create 'cmd.exe /c "netsh interface ip set dns name="Local Area Connection" source=dhcp"'
+```
 
 It should go without saying, but I'll say it anyway: we can easily modify this command to act upon multiple remote computers by using an input file or by piping command results to this command. Refer to any of the linked articles above for more information and examples.
 

@@ -48,7 +48,9 @@ That's it! At this point, you should be able to telnet to the Cisco switch (or w
 
 Now, before you go any farther, add a local account to use in case the network connectivity to the RADIUS server is lost:
 
-	s1(config)#username localaccount password password123
+```text
+s1(config)#username localaccount password password123
+```
 
 (Obviously, you'll want to use a secure password!) This will ensure that if you lose network connectivity to the equipment, you can still get in through the serial console connection. Be warned: without this local account, you can be locked out of the equipment completely if the RADIUS server(s) are inaccessible!
 
