@@ -46,7 +46,9 @@ You can think of these VLAN interfaces as the equivalent of a Switched Virtual I
 
 To create the VLAN interfaces in OVS, you would use this command:
 
-    ovs-vsctl add-port <bridge name> <port name> -- set interface <port name> type=internal
+```bash
+ovs-vsctl add-port <bridge name> <port name> -- set interface <port name> type=internal
+```
 
 Note that---as far as I can tell---the VLAN interfaces need to be attached to the appropriate OVS fake bridge for that particular VLAN (more information [here][1]).
 
@@ -58,15 +60,17 @@ Once the VLAN interfaces are created, then you need to configure them within Lin
 
 Let's say you wanted to route between two VLANs, VLAN 100 and VLAN 200. If the VLAN interfaces on OVS were named `vlan100` and `vlan200`, then you might configure `/etc/network/interfaces` to include something like this:
 
-    auto vlan100
-    iface vlan100 inet static
-    address 192.168.100.1
-    netmask 255.255.255.0
+```text
+auto vlan100
+iface vlan100 inet static
+address 192.168.100.1
+netmask 255.255.255.0
     
-    auto vlan200
-    iface vlan200 inet static
-    address 192.168.200.1
-    netmask 255.255.255.0
+auto vlan200
+iface vlan200 inet static
+address 192.168.200.1
+netmask 255.255.255.0
+```
 
 These are just examples, of course; you'd need to supply the appropriate IP addresses for each VLAN involved.
 

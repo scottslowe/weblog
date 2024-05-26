@@ -38,59 +38,81 @@ Within each of these contexts, you can use the `ls` and `ll` commands to view th
 
 Here's my first example. When you first log into the VPLEX CLI, you'll get dropped into a "root context". Running `ls` here will produce output something like this:
 
-	VPlexcli:/> ls  
-	clusters data-migrations distributed-storage engines management-server  
-	monitoring notifications system-defaults
+```text
+VPlexcli:/> ls  
+clusters data-migrations distributed-storage engines management-server  
+monitoring notifications system-defaults
+```
 
 Let's take a look at a few more examples. For example, the following two sets of commands will produce the same output:
 
-	cd /clusters  
-	ll
+```text
+cd /clusters  
+ll
+```
 
 and
 
-	ll /clusters
+```text
+ll /clusters
+```
 
 Remember that specifying the context in the command is the same as changing into that context and then running the command. That is why these two commands produce the same output.
 
 To view the list of directors in a cluster:
 
-	ll /engines/*/directors
+```text
+ll /engines/*/directors
+```
 
 This is an example of using the asterisk to represent a wildcard that matches all entries in that context.
 
 Let's look at another example of two different commands that produce the same output. To view the status of the ports on a particular director in a cluster, you could use either of these two commands:
 
-	ll /engines/<engine name>/directors/<director name>/hardware/ports
+```text
+ll /engines/<engine name>/directors/<director name>/hardware/ports
+```
 
 or
 
-	cd /engines/<engine name>/directors/<director name>/hardware/ports  
-	ll
+```text
+cd /engines/<engine name>/directors/<director name>/hardware/ports  
+ll
+```
 
 By the way, if you haven't figured it out yet, you can easily get the names of the engines (or the directors) by simply running the `ll` command against the `engines` context or the `directors` context within a specific engine.
 
 But what if you wanted to see the status of the ports across multiple directors? Now you won't want to use the `cd` command. You'll want to use globbing with wildcards instead, like this:
 
-	ll /engines/**/ports
+```text
+ll /engines/**/ports
+```
 
 While the single asterisk matches anything within a context, the double asterisk matches across multiple contexts. So, in this case, it ends up matching multiple engines and directors within those engines.
 
 And if you wanted to see only some of the front-end ports on all directors:
 
-	ls /engines/**/hardware/ports/*1-FC0[0-3]
+```text
+ls /engines/**/hardware/ports/*1-FC0[0-3]
+```
 
 In some cases, you might need to set an attribute on an object within a context. For example, you might need to enable a port by setting the enabled attribute on that port to True. Here's how you would do that:
 
-	set /engines/<engine name>/directors/<director name>/hardware/ports/A0-FC00::enabled true
+```text
+set /engines/<engine name>/directors/<director name>/hardware/ports/A0-FC00::enabled true
+```
 
 If you think about it, you could easily combine some globbing to enable multiple ports at the same time:
 
-	set /engines/**/hardware/ports/A0-FC0[0-3]::enabled true
+```text
+set /engines/**/hardware/ports/A0-FC0[0-3]::enabled true
+```
 
 You can then verify the operation by using the `-t` parameter to the `ls` command, which instructs it to include attributes:
 
-	ls -t /engines/**/hardware/ports/A0-FC0[0-3]::enabled
+```text
+ls -t /engines/**/hardware/ports/A0-FC0[0-3]::enabled
+```
 
 There are many, many more examples I could share with you, but this should get you started for now. I hope to have a post up soon with a CLI guide to setting up storage volumes, extents, devices, and virtual volumes.
 

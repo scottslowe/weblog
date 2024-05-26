@@ -20,11 +20,15 @@ As part of my ongoing mission to give back to the open source community, I recen
 
 Normally, you can remove an OVS configuration setting using the `ovs-vsctl remove` command. For example, if you set a VLAN tag on an port with this command:
 
-	ovs-vsctl set port vnet0 tag=100
+```bash
+ovs-vsctl set port vnet0 tag=100
+```
 
 Then you could remove that VLAN tag with this command:
 
-	ovs-vsctl remove port vnet0 tag 100
+```bash
+ovs-vsctl remove port vnet0 tag 100
+```
 
 Note the slight syntactical difference in the two commands; the `remove` command expects four parameters.
 

@@ -43,7 +43,9 @@ What you'll find when you try this yourself is that everything works fine when t
 
 Here's how to fix that. Run this command on each of the hosts running OVS:
 
-    ovs-vsctl set bridge <bridge name> stp_enable=true
+```bash
+ovs-vsctl set bridge <bridge name> stp_enable=true
+```
 
 Yes, that's right: looping is the culprit here. Look back at the topology figure above. In the physical world, a topology like that using switches (without STP) would take down your network because of a bridging loop. The same applies here as well. In both cases (physical or virtual) you have two choices: you can either not create a full mesh topology (you could use a star topology or something if you wanted) or you run STP. It's up to you.
 

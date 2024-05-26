@@ -69,7 +69,9 @@ No special configuration is required on the NSX gateway appliance. As you probab
 
 As a side note, the NSX gateway appliances do support configuring VLAN sub-interfaces using a command like this:
 
-    add network interface <physical interface> vlan <VLAN ID>
+```bash
+add network interface <physical interface> vlan <VLAN ID>
+```
 
 Thus far, I haven't found a need to use VLAN sub-interfaces when using multiple VLANs on the outside of an NSX gateway appliance, but I did want to point out that this functionality does indeed exist.
 
@@ -79,10 +81,12 @@ This is the only moderately tricky part of the configuration. In this step, you'
 
 The command you'll want to use (yes, you _have_ to use the CLI---this functionality isn't exposed in the OpenStack Dashboard web interface) looks like this:
 
-    neutron net-create <network name> -- 
-    --router:external=True --provider:network_type l3_ext 
-    --provider:segmentation_id <VLAN ID> 
-    --provider:physical_network=<NSX gateway service UUID> --shared=True
+```bash
+neutron net-create <network name> -- 
+--router:external=True --provider:network_type l3_ext 
+--provider:segmentation_id <VLAN ID> 
+--provider:physical_network=<NSX gateway service UUID> --shared=True
+```
 
 For the most part, this command is pretty straightforward, but let's break it down nevertheless:
 
@@ -98,9 +102,11 @@ You'd repeat this command for each external network (VLAN) you want connected to
 
 For each Neutron network, you'll also need a Neutron subnet. The command to create a subnet on one of these external networks looks like this:
 
-    neutron subnet-create <network name> <CIDR>
-    --name <subnet name> --enable_dhcp=False 
-    --allocation-pool start=<starting IP address>,end=<ending IP address>
+```bash
+neutron subnet-create <network name> <CIDR>
+--name <subnet name> --enable_dhcp=False 
+--allocation-pool start=<starting IP address>,end=<ending IP address>
+```
 
 The range of IP addresses specified in the `allocation_pool` portion of the command becomes the range of addresses from this particular subnet that can be assigned as floating IPs. It is also the pool of addresses from which logical routers will pull an address when they are connected to this particular external network.
 

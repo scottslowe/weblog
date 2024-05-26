@@ -56,11 +56,15 @@ If you've read the post on running a Consul-backed Swarm cluster, then you're pr
 
 The first step, then, is to start the Swarm container on each of the individual Docker Engine hosts. This is accomplished with the following command:
 
-	docker run -d swarm join --addr=<node IP address>:2375 etcd://<etcd cluster member IP address>:2379/<path in etcd>
+```bash
+docker run -d swarm join --addr=<node IP address>:2375 etcd://<etcd cluster member IP address>:2379/<path in etcd>
+```
 
 If the Docker Engine host's IP address was 192.168.101.111, the IP address of one of the etcd cluster members was 192.168.101.101, and the path within etcd was "/swarm", then the command would look like this:
 
-	docker run -d swarm join --addr=192.168.101.111:2375 etcd://192.168.101.101:2379/swarm
+```bash
+docker run -d swarm join --addr=192.168.101.111:2375 etcd://192.168.101.101:2379/swarm
+```
 
 This will download (if needed) the small Swarm image and run it on the local Docker Engine host. If the Swarm container is, for whatever reason, unable to register itself in the etcd cluster, then it will exit (you can run `docker logs <container ID>` to get more details for troubleshooting).
 
@@ -70,11 +74,15 @@ Repeat this process on each Docker Engine host that you want to be part of the S
 
 Once you've joined all the Docker Engine hosts to the Swarm cluster (you can verify using `etcdctl ls <path in swarm>` to show that all the hosts are listed), you're ready to launch the Swarm manager container. You do that with a command like this:
 
-	docker run -d -p <Swarm port>:2375 swarm manage etcd://<etcd cluster member IP address>:2379/<path in etcd>
+```bash
+docker run -d -p <Swarm port>:2375 swarm manage etcd://<etcd cluster member IP address>:2379/<path in etcd>
+```
 
 Using the values as before (Docker Engine at 192.168.101.111, etcd at 192.168.101.101, and etcd path at "/swarm"), the command would look something like this:
 
-	docker run -d -p 8333:2375 swarm manage etcd://192.168.101.101:2379/swarm
+```bash
+docker run -d -p 8333:2375 swarm manage etcd://192.168.101.101:2379/swarm
+```
 
 Note that the Docker Swarm manager container creates a Docker Engine API endpoint listening across the network. This creates a situation where Docker Engine (which is listening on a network port) and the Swarm manager container (which also needs to listen on a network port) could come into conflict. There are, as I see it, three possible workarounds:
 
@@ -86,11 +94,15 @@ The easiest method---although this may not be the best method---is to use an alt
 
 Once you're done, you can run `docker info` against the Swarm manager endpoint, like this:
 
-	docker -H tcp://<Swarm manager IP address>:<Swarm port> info
+```bash
+docker -H tcp://<Swarm manager IP address>:<Swarm port> info
+```
 
 If the Swarm manager container was running on a host with the IP address 192.168.101.111 and listening on port 8333, then the command would be:
 
-	docker -H tcp://192.168.101.111:8333 info
+```bash
+docker -H tcp://192.168.101.111:8333 info
+```
 
 (You could set the `DOCKER_HOST` environment variable, if desired, so that you didn't have to explicity use the "-H" parameter.)
 

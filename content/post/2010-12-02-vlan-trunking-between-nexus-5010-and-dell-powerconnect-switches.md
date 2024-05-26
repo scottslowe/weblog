@@ -19,9 +19,11 @@ While standards such as 802.1Q promise easy interoperability, the devil is usual
 
 The configuration on the Cisco Nexus side was pretty straightforward (note that this was one of the first eight ports on the switch and was throttled down to 1Gbps):
 
-	interface ethernet 1/1  
-	switchport mode trunk  
-	speed 1000
+```text
+interface ethernet 1/1  
+switchport mode trunk  
+speed 1000
+```
 
 I tried replicating this same setup on the PowerConnect switches using Dell's `switchport mode trunk` command. Unfortunately, it didn't work. I kept digging around, but regardless of the configuration the `show interfaces switchport ethernet` command would always show that VLAN 1 was marked as tagged. This clearly wouldn't work; since VLAN 1 was defined as the native VLAN on the Cisco Nexus switch, it would be untagged on the Cisco side. I needed the VLAN to be untagged on the Dell side as well.
 
@@ -29,10 +31,12 @@ Quite by accident, I stumbled upon a slightly different command on the Dell: the
 
 I modified the Dell PowerConnect to use this configuration:
 
-	interface ethernet 1/g47  
-	switchport mode general  
-	switchport general allowed vlan add 1 untagged  
-	switchport general allowed vlan add 900 tagged
+```text
+interface ethernet 1/g47  
+switchport mode general  
+switchport general allowed vlan add 1 untagged  
+switchport general allowed vlan add 900 tagged
+```
 
 With this configuration, the `show interfaces switchport ethernet` command now reported that VLAN 1 was untagged, as shown in the screenshot below.
 

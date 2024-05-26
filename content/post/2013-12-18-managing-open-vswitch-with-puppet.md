@@ -25,25 +25,35 @@ The L23Network module is pretty well-documented, so I won't bother regurgitating
 
 First, let's get "the one exception" I mentioned earlier out of the way. In OVS environments, you'll often need to bring up a physical interface without assigning that interface an IP address. For example, consider a physical interface that is providing bridged connectivity to guest domains (VMs) on an OVS bridge. You'll want the interface to be up, but the interface does not need an IP address. Using the L23Network module, you can accomplish that with this piece of code in your manifest:
 
-    l23network::l3::ifconfig {'eth1': ipaddr => 'none'}
+```ruby
+l23network::l3::ifconfig {'eth1': ipaddr => 'none'}
+```
 
 Now that `eth1` is up, you could create a bridge to which to attach it with this code:
 
-    l23network::l2::bridge {'br-ex': }
+```ruby
+l23network::l2::bridge {'br-ex': }
+```
 
 And then you could actually attach `eth1` like this:
 
-    l23network::l2::port {'eth1': bridge => 'br-ex'}
+```ruby
+l23network::l2::port {'eth1': bridge => 'br-ex'}
+```
 
 You could then provide multi-VLAN bridged connectivity to guest domains via libvirt as I explained in my post on [using VLANs with libvirt and OVS][3]. (Or, if you are [using LXC with libvirt and OVS][4], you could provide multi-VLAN bridged connectivity to containers.)
 
 The L23Network module can also work with other types of interfaces, not just physical interfaces. Want to create an internal interface, perhaps to use as a tunnel endpoint for GRE tunnel as I described [here][5]? Use this snippet of Puppet code:
 
-    l23network::l2::port {'tep0': bridge => 'br-tun', type => 'internal'}
+```ruby
+l23network::l2::port {'tep0': bridge => 'br-tun', type => 'internal'}
+```
 
 You could then assign the newly-created `tep0` interface an IP address on your transport network like this:
 
-    l23network::l3::ifconfig {'tep0': ipaddr => '10.1.1.1/24'}
+```ruby
+l23network::l3::ifconfig {'tep0': ipaddr => '10.1.1.1/24'}
+```
 
 (In theory, you could also use the L23Network module to create an internal interface so as to [run host management through OVS][6], but then you could run into issues communicating with the Puppet server over the same interfaces the Puppet server is configuring.)
 

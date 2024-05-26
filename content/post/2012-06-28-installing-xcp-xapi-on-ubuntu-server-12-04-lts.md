@@ -22,8 +22,9 @@ Here are the steps that I followed to install XCP-XAPI on a system running Ubunt
 
 Before I started the installation of the XCP-XAPI packages, I first made sure that all the various networking interfaces were configured correctly and working as expected. For my particular system (a Dell Latitude E6400), this meant installing some proprietary Broadcom wireless firmware (using the `firmware-b43-lpphy-installer` package) and configuring `/etc/network/interfaces`. I also ran `apt-get update` and `apt-get upgrade` to install the latest versions of all packages. Credit goes to [this page](http://www.linuxhomenetworking.com/wiki/index.php/Quick_HOWTO_:_Ch13_:_Linux_Wireless_Networking#Debian_.2F_Ubuntu) for instructions on how to configure the wireless NIC from the CLI, with one small correction. In the `/etc/network/interfaces` file, I had to use this as the pre-up parameter (the example on the page above used "-Bw" instead of "-B"):
 
-    pre-up wpa_supplicant -B -Dwext -iwlan0  
-     -c/etc/wpa_supplicant/wpa_supplicant.conf
+```text
+pre-up wpa_supplicant -B -Dwext -iwlan0 -c/etc/wpa_supplicant/wpa_supplicant.conf
+```
 
 (Naturally you'd write that all as one line; it's broken here for readability.)
 
@@ -33,17 +34,23 @@ First, I edited `/etc/apt/sources.list` to add repositories for the XCP-XAPI pac
 
 I added these lines:
 
-	deb http://ppa.launchpad.net/ubuntu-xen-org/xcp-unstable/ubuntu precise main  
-	deb-src http://ppa.launchpad.net/ubuntu-xen-org/xcp-unstable/ubuntu precise main
+```text
+deb http://ppa.launchpad.net/ubuntu-xen-org/xcp-unstable/ubuntu precise main  
+deb-src http://ppa.launchpad.net/ubuntu-xen-org/xcp-unstable/ubuntu precise main
+```
 
 Then I ran this command:
 
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9273A937
+```bash
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9273A937
+```
 
 That was followed by:
 
-    apt-get update
-    apt-get install xcp-xapi
+```bash
+apt-get update
+apt-get install xcp-xapi
+```
 
 From there, `apt-get` started fetching and installing the necessary packages (and there are quite a few). When prompted, I selected to use OpenvSwitch as the networking backend (instead of standard Linux bridging).
 

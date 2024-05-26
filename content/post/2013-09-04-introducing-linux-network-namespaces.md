@@ -29,15 +29,21 @@ Further, I'll assume that you're either running as root, or that you will prepen
 
 Creating a network namespace is actually quite easy. Just use this command:
 
-    ip netns add <new namespace name>
+```bash
+ip netns add <new namespace name>
+```
 
 For example, let's say you wanted to create a namespace called "blue". You'd use this command:
 
-    ip netns add blue
+```bash
+ip netns add blue
+```
 
 To verify that the network namespace has been created, use this command:
 
-    ip netns list
+```bash
+ip netns list
+```
 
 You should see your network namespace listed there, ready for you to use.
 
@@ -49,23 +55,31 @@ It turns out you can only assign virtual Ethernet (veth) interfaces to a network
 
 Let's see how that's done. First, you'd create the veth pair:
 
-    ip link add veth0 type veth peer name veth1
+```bash
+ip link add veth0 type veth peer name veth1
+```
 
 I found a few sites that repeated this command to create `veth1` and link it to `veth0`, but my tests showed that both interfaces were created and linked automatically using this command listed above. Naturally, you could substitute other names for `veth0` and `veth1`, if you wanted.
 
 You can verify that the veth pair was created using this command:
 
-    ip link list
+```bash
+ip link list
+```
 
 You should see a pair of veth interfaces (using the names you assigned in the command above) listed there. Right now, they both belong to the "default" or "global" namespace, along with the physical interfaces.
 
 Let's say that you want to connect the global namespace to the blue namespace. To do that, you'll need to move one of the veth interfaces to the blue namespace using this command:
 
-    ip link set veth1 netns blue
+```bash
+ip link set veth1 netns blue
+```
 
 If you then run the `ip link list` command again, you'll see that the veth1 interface has disappeared from the list. It's now in the blue namespace, so to see it you'd need to run this command:
 
-    ip netns exec blue ip link list
+```bash
+ip netns exec blue ip link list
+```
 
 Whoa! That's a bit of a complicated command. Let's break it down:
 
@@ -81,12 +95,16 @@ When you run that command, you should see a loopback interface and the veth1 int
 
 Now that veth1 has been moved to the blue namespace, we need to actually configure that interface. Once again, we'll use the `ip netns exec` command, this time to configure the veth1 interface in the blue namespace:
 
-    ip netns exec blue ip addr add 10.1.1.1/24 dev veth1
-    ip netns exec blue ip link set dev veth1 up
+```bash
+ip netns exec blue ip addr add 10.1.1.1/24 dev veth1
+ip netns exec blue ip link set dev veth1 up
+```
 
 As before, the format this command follows is:
 
-    ip netns exec <network namespace> <command to run against that namespace>
+```bash
+ip netns exec <network namespace> <command to run against that namespace>
+```
 
 In this case, you're using the `ip addr` to assign an IP address to the veth1 interface and the `ip link` command to bring that interface up.
 
@@ -106,7 +124,9 @@ So there you go---an introduction to Linux network namespaces. It's quite likely
 
 **UPDATE:** As I discovered after publishing this post, it most certainly _is_ possible to assign various types of network interfaces to network namespaces, including physical interfaces. (I'm not sure why I ran into problems when I first wrote this post.) In any case, to assign a physical interface to a network namespace, you'd use this command:
 
-    ip link set dev <device> netns <namespace>
+```bash
+ip link set dev <device> netns <namespace>
+```
 
 Sorry for the confusion!
 
@@ -114,7 +134,9 @@ Sorry for the confusion!
 
 **UPDATE 3:** A reader contacted me to point out that it's possible to create the veth pairs _and_ assign one of the pairs to a network namespace all in one command:
 
-    ip link add veth0 type veth peer name veth1 netns blue
+```bash
+ip link add veth0 type veth peer name veth1 netns blue
+```
 
 Thanks to Rick van Rein for pointing this out!
 

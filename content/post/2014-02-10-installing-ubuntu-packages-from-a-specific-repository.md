@@ -17,15 +17,21 @@ In this article, I'll show you how to install Ubuntu packages from a specific re
 
 Normally, you'd install a package using `apt-get` like this:
 
-    apt-get install package-name
+```bash
+apt-get install package-name
+```
 
 However, when you want to install a package from a specific repository, the command syntax shifts slightly so that it looks like this instead:
 
-    apt-get install package-name/repository
+```bash
+apt-get install package-name/repository
+```
 
 So, in my particular case, I was trying to install LXC. However, I needed the alpha LXC 1.0.0 package from the `precise-backports` repository. So the command to do that looked like this:
 
-    apt-get install lxc/precise-backports
+```bash
+apt-get install lxc/precise-backports
+```
 
 Are there other useful `apt-get` tidbits like this that other readers might find particularly useful? Feel free to share in the comments below. Thanks for reading!
 

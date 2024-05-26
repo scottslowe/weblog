@@ -16,6 +16,8 @@ wordpress_id: 2129
 
 This hidden preference for Interarchy is one that I actually found out about from the Interarchy developer quite some time ago, but apparently never published anything about it. Interarchy has extensive support for [Growl](http://growl.info/), the ubiquitous Mac OS X notification system, but is configured by default to only post Growl notifications when in the background. To force Interarchy to post Growl notifications even when in the foreground, use this Terminal command to set a hidden preference:
 
-	defaults write com.nolobe.interarchy PostGrowlNotificationsInForeground -bool TRUE
+```bash
+defaults write com.nolobe.interarchy PostGrowlNotificationsInForeground -bool TRUE
+```
 
 Once you run that command, Interarchy will post Growl notifications whether in the foreground or the background, and you can customize which notifications you'd like to see from the Growl preference pane in System Preferences, as you'd expect.

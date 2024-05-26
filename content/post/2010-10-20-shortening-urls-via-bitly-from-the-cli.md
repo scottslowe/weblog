@@ -20,7 +20,9 @@ Note that in order to use this command, you'll need your bit.ly API key. Your AP
 
 Here's the command I tested (works on Mac OS X 10.6.4):
 
-	curl 'http://api.bit.ly/v3/shorten?login=<bit.ly login>&apiKey=<bit.ly API key>&longURL=<Long URL to be shortened>&format=txt'
+```bash
+curl 'http://api.bit.ly/v3/shorten?login=<bit.ly login>&apiKey=<bit.ly API key>&longURL=<Long URL to be shortened>&format=txt'
+```
 
 Note you'll need to supply appropriate values for `<bit.ly login>`, `<bit.ly API key>`, and `<Long URL to be shortened>`.
 

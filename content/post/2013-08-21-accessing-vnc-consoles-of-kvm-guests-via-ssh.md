@@ -25,13 +25,17 @@ Here are the tools you'll need to make this work:
 
 Basically, all we're going to do is use SSH port forwarding (additional information [here](http://www.debianadmin.com/howto-use-ssh-local-and-remote-port-forwarding.html)) to connect your local system to the VNC port of the guest domain on the KVM host. At its simplest level, the generic command to do local port forwarding with SSH looks something like this:
 
-    ssh <username>@<remote host IP address or DNS name> -L <local port>:<remote IP address>:<remote port>
+```bash
+ssh <username>@<remote host IP address or DNS name> -L <local port>:<remote IP address>:<remote port>
+```
 
 The idea of local port forwarding via SSH is really well-known and well-documented all over the Internet, so I won't go into a great level of detail here.
 
 Let's take the generic command above and turn it into a command that is specific to accessing the VNC console of a guest domain on a remote KVM host. Let's assume in this example that the IP address of the remote KVM host is 192.168.1.4, that your username on this remote KVM host is admin, and that there is only one guest domain running on the remote KVM host. To access that guest domain's VNC console, you'd use this command:
 
-    ssh admin@192.168.1.4 -L 5900:127.0.0.1:5900
+```bash
+ssh admin@192.168.1.4 -L 5900:127.0.0.1:5900
+```
 
 Allow me to break this command down just a bit:
 
@@ -57,11 +61,15 @@ It's a bit more complicated, but it's doable. Let's assume that our jump host is
 
 First, run this command from your local system to the jump host:
 
-    ssh user@jumphost.domain.com -L 5900:127.0.0.1:5900
+```bash
+ssh user@jumphost.domain.com -L 5900:127.0.0.1:5900
+```
 
 Next, run this command from the jump host to the remote hypervisor:
 
-    ssh user@hypervisor.domain.com -L 5900:127.0.0.1:5900 -g
+```bash
+ssh user@hypervisor.domain.com -L 5900:127.0.0.1:5900 -g
+```
 
 The `-g` parameter is important here; I couldn't make it work without adding this parameter. Your mileage may vary, of course. Once you have both sets of port forwarding established, then just point your VNC client to port 5900 of your local loopback address. Traffic gets redirected to port 5900 on the jump host's loopback address, which is in turn redirected to port 5900 on the remote hypervisor's loopback address---which is where the guest domain's console is listening. Cool, huh? If you establish multiple sessions listening on different ports, you can access multiple VMs on multiple hypervisors. Very handy!
 

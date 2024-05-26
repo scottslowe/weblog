@@ -26,14 +26,18 @@ In those posts, I discussed the use of the `fcalias` command to create aliases f
 
 To create a device alias, you'll use the `device-alias database` command in global configuration mode. Once you are in database configuration mode, you can create device aliases using the `device-alias command`, like this:
 
-	mds(config)# device-alias database  
-	mds(config-device-alias-db)# device-alias name <Friendly name> pwwn <Fibre Channel WWPN>  
-	mds(config-device-alias-db)# exit  
-	mds(config)# end
+```text
+mds(config)# device-alias database  
+mds(config-device-alias-db)# device-alias name <Friendly name> pwwn <Fibre Channel WWPN>  
+mds(config-device-alias-db)# exit  
+mds(config)# end
+```
 
 There is an additional step required after defining the device aliases. You must also commit the changes to the device alias database, like this:
 
-	mds(config)# device-alias commit
+```text
+mds(config)# device-alias commit
+```
 
 This commits the changes to the device alias database and makes the device aliases active in the switch.
 

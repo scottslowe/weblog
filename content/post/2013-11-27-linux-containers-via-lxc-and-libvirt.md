@@ -33,7 +33,9 @@ To use libvirt with an LXC container, there are a couple of basic steps:
 
 The first part, creating the container, is pretty straightforward:
 
-    lxc-create -t ubuntu -n cn-02
+```bash
+lxc-create -t ubuntu -n cn-02
+```
 
 This creates a container using the Ubuntu template and calls it `cn-01`. As you may recall from [my introductory LXC post][1], this creates the container's configuration and root filesystem in `/var/lib/lxc` by default. (I'm assuming you are using Ubuntu 12.04 LTS, as I am.)
 
@@ -41,19 +43,27 @@ Once you have the container created, you next need to get it into libvirt. Libvi
 
 Simply take this XML template and save it as something like `lxc-template.xml` or similar. Then, after you've created your container using `lxc-create` as above, you can easily take this template and turn it into a specific container configuration with only one command. For example, suppose you created a container named "cn-02" (as I did with the command I showed earlier). If you wanted to customize the XML template, just use this simple Unix/Linux command:
 
-    sed 's/REPLACE/cn-02/g' lxc-template.xml > cn-02.xml
+```bash
+sed 's/REPLACE/cn-02/g' lxc-template.xml > cn-02.xml
+```
 
 Once you have a container-specific libvirt XML configuration, then defining it in libvirt is super-easy:
 
-    virsh -c lxc:// define cn-02.xml
+```bash
+virsh -c lxc:// define cn-02.xml
+```
 
 Then start the container:
 
-    virsh -c lxc:// start cn-02
+```bash
+virsh -c lxc:// start cn-02
+```
 
 And connect to the container's console:
 
-    virsh -c lxc:// console cn-02
+```bash
+virsh -c lxc:// console cn-02
+```
 
 When you're done with the container's console, press "Ctrl-]" (that's Control and right bracket at the same time); that will return you to your host.
 

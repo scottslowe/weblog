@@ -47,7 +47,9 @@ The first step is to create the isolated OVS bridge to which the VMs will connec
 
 The command is very simple, actually:
 
-    ovs-vsctl add-br br2
+```bash
+ovs-vsctl add-br br2
+```
 
 Yes, that's it. Feel free to substitute a different name for `br2` in the command above, if you like, but just make note of the name as you'll need it later.
 
@@ -61,13 +63,17 @@ To create the GRE tunnel endpoint, I'm going to use the same technique I describ
 
 To create the internal interface, use this command:
 
-    ovs-vsctl add-port br0 tep0 -- set interface tep0 type=internal
+```bash
+ovs-vsctl add-port br0 tep0 -- set interface tep0 type=internal
+```
 
 In your environment, you'll substitute `br2` with the name of the isolated bridge you created earlier. You could also use a different name than `tep0`. Since this name is essentially for human consumption only, use what makes sense to you. Since this is a tunnel endpoint, `tep0` made sense to me.
 
 Once the internal interface is established, assign it with an IP address using `ifconfig` or `ip`, whichever you prefer. I'm still getting used to using `ip` (more on that in a future post, most likely), so I tend to use `ifconfig`, like this:
 
-    ifconfig tep0 192.168.200.20 netmask 255.255.255.0
+```bash
+ifconfig tep0 192.168.200.20 netmask 255.255.255.0
+```
 
 Obviously, you'll want to use an IP addressing scheme that makes sense for your environment. One important note: don't use the same subnet as you've assigned to other interfaces on the hypervisor, or else you can't control that the GRE tunnel will originate (or terminate) on the interface you specify. This is because the Linux routing table on the hypervisor will control how the traffic is routed. (You could use source routing, a topic I plan to discuss in a future post, but that's beyond the scope of this article.)
 
@@ -79,8 +85,10 @@ By this point, you've created the isolated bridge, established the GRE tunnel en
 
 Use this command to add a GRE interface to the isolated bridge on each hypervisor:
 
-    ovs-vsctl add-port br2 gre0 -- set interface gre0 type=gre \
-    options:remote_ip=<GRE tunnel endpoint on other hypervisor>
+```bash
+ovs-vsctl add-port br2 gre0 -- set interface gre0 type=gre \
+options:remote_ip=<GRE tunnel endpoint on other hypervisor>
+```
 
 Substitute the name of the isolated bridge you created earlier here for `br2` and feel free to use something other than `gre0` for the interface name. I think using `gre` as the base name for the GRE interfaces makes sense, but run with what makes sense to you.
 
@@ -92,20 +100,24 @@ As part of this process, I spun up an Ubuntu 12.04 server image on each hypervis
 
 Here's the output of the `route -n` command on the Ubuntu guest, to show that it has _no_ knowledge of the "external" IP subnet---it knows only about its own interfaces:
 
-    ubuntu:~ root$ route -n
-    Kernel IP routing table
-    Destination  Gateway       Genmask        Flags Metric Ref Use Iface
-    0.0.0.0      10.10.10.254  0.0.0.0        UG    100    0   0   eth0
-    10.10.10.0   0.0.0.0       255.255.255.0  U     0      0   0   eth0
+```text
+ubuntu:~ root$ route -n
+Kernel IP routing table
+Destination  Gateway       Genmask        Flags Metric Ref Use Iface
+0.0.0.0      10.10.10.254  0.0.0.0        UG    100    0   0   eth0
+10.10.10.0   0.0.0.0       255.255.255.0  U     0      0   0   eth0
+```
 
 Similarly, here's the output of the `route -n` command on the CentOS host, showing that it has _no_ knowledge of the guest's IP subnet:
 
-    centos:~ root$ route -n
-    Kernel IP routing table
-    Destination  Gateway        Genmask        Flags Metric Ref Use Iface
-    192.168.2.0  0.0.0.0        255.255.255.0  U     0      0   0   tep0
-    192.168.1.0  0.0.0.0        255.255.255.0  U     0      0   0   mgmt0
-    0.0.0.0      192.168.1.254  0.0.0.0        UG    0      0   0   mgmt0
+```text
+centos:~ root$ route -n
+Kernel IP routing table
+Destination  Gateway        Genmask        Flags Metric Ref Use Iface
+192.168.2.0  0.0.0.0        255.255.255.0  U     0      0   0   tep0
+192.168.1.0  0.0.0.0        255.255.255.0  U     0      0   0   mgmt0
+0.0.0.0      192.168.1.254  0.0.0.0        UG    0      0   0   mgmt0
+```
 
 In my case, VM1 (named `web01`) was given 10.10.10.1; VM2 (named `web02`) was given 10.10.10.2. Once I went through the steps outlined above, I was able to successfully ping VM2 from VM1, as you can see in this screenshot:
 

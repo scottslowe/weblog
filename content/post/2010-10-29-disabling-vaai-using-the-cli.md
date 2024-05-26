@@ -22,17 +22,23 @@ Given that the future of VMware vSphere is ESXi, I'm using the vSphere Managemen
 
 To disable hardware-accelerated copy, use the following command:
 
-	vicfg-advcfg --set 0 DataMover/HardwareAcceleratedMove --vihost <ESX/ESXi host to reconfigure> --server <vCenter Server> --username <vCenter Server username>
+```bash
+vicfg-advcfg --set 0 DataMover/HardwareAcceleratedMove --vihost <ESX/ESXi host to reconfigure> --server <vCenter Server> --username <vCenter Server username>
+```
 
 This will prompt for the password of the specified user account unless you've already configured some other form of authentication.
 
 To disable hardware-accelerated zero, use this command:
 
-	vicfg-advcfg --set 0 DataMover/HardwareAcceleratedInit --vihost <ESX/ESXi host to reconfigure> --server <vCenter Server> --username <vCenter Server username>
+```bash
+vicfg-advcfg --set 0 DataMover/HardwareAcceleratedInit --vihost <ESX/ESXi host to reconfigure> --server <vCenter Server> --username <vCenter Server username>
+```
 
 Finally, for the sake of completeness, here's how to disable the hardware-accelerated locking (note that RecoverPoint with array-based splitters **_does support_** this feature currently):
 
-	vicfg-advcfg --set 0 VMFS3/HardwareAcceleratedLocking --vihost <ESX/ESXi host to reconfigure> --server <vCenter Server> --username <vCenter Server username>
+```bash
+vicfg-advcfg --set 0 VMFS3/HardwareAcceleratedLocking --vihost <ESX/ESXi host to reconfigure> --server <vCenter Server> --username <vCenter Server username>
+```
 
 I'm still chasing down possible ways to restrict the use of VAAI in a more granular fashion, as using the commands above disable VAAI functionality for the entire VMware ESX/ESXi host. As soon as I have more information, I'll post it here.
 

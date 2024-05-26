@@ -29,12 +29,14 @@ Next, you'll want to ensure that name resolution is working---both from the clie
 
 Finally, you'll want to configure the `ProxyCommand` setting for the remote instances in your SSH configuration file. For example, let's say that you had a remote instance named "private1" and you wanted to run SSH connections through a bastion host called "bastion". The appropriate SSH configuration might look something like this:
 
-    Host private1
-      IdentityFile ~/.ssh/rsa_private_key
-      ProxyCommand ssh user@bastion -W %h:%p
+```text
+Host private1
+  IdentityFile ~/.ssh/rsa_private_key
+  ProxyCommand ssh user@bastion -W %h:%p
 
-    Host bastion
-      IdentityFile ~/.ssh/bastion_rsa_key
+Host bastion
+  IdentityFile ~/.ssh/bastion_rsa_key
+```
 
 With this configuration in place, when you type `ssh user@private1` SSH will establish a connection to the bastion host and then _through the bastion host_ connect to "private1", using the specified keys. The user won't see any of this; he or she will just see a shell for "private1" appear. If you dig a bit further, though (try running `who` on the remote node), you'll see the connections are coming from the bastion host, not the original SSH client. Handy, eh?
 

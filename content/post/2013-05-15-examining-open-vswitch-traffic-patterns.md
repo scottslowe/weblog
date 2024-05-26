@@ -27,20 +27,22 @@ In this first scenario let's look at a relatively simple OVS configuration, and 
 
 Let's assume that our OVS configuration looks something like this (this is the output from `ovs-vsctl show`):
 
-    bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
-        Bridge "br0"
-            Port "br0"
-                Interface "br0"
-                    type: internal
-            Port "eth0"
-                Interface "eth0"
-        Bridge "br1"
-            Port "br1"
-                Interface "br1"
-                    type: internal
-            Port "eth1"
-                Interface "eth1"
-        ovs_version: "1.7.1"
+```text
+bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
+    Bridge "br0"
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "eth0"
+            Interface "eth0"
+    Bridge "br1"
+        Port "br1"
+            Interface "br1"
+                type: internal
+        Port "eth1"
+            Interface "eth1"
+    ovs_version: "1.7.1"
+```
 
 This is a pretty simple configuration; there are two bridges, each with a single physical interface. Let's further assume, for the purposes of this scenario, that eth2 has an IP address and is working properly to communicate with other hosts on the network. The eth3 interface is shutdown.
 
@@ -56,15 +58,17 @@ The interesting point (to me, at least) about #2 above is that this _includes tr
 
 In this second scenario, our OVS configuration changes only slightly:
 
-    bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
-        Bridge "br0"
-            Port "br0"
-                Interface "br0"
-                    type: internal
-            Port "bond0"
-                Interface "eth0"
-                Interface "eth1"
-        ovs_version: "1.7.1"
+```text
+bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
+    Bridge "br0"
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "bond0"
+            Interface "eth0"
+            Interface "eth1"
+    ovs_version: "1.7.1"
+```
 
 In this case, we're now leveraging a bond that contains two physical interfaces (eth0 and eth1). (By the way, I have a write-up on [configuring OVS and bonds][1], if you need/want more information.) The eth2 interface still has an IP address assigned and is up and communicating properly. The physical eth3 interface is shutdown.
 
@@ -76,23 +80,25 @@ Let's look at another OVS configuration, the so-called "isolated bridge". This i
 
 Here's the configuration:
 
-    bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
-        Bridge "br0"
-            Port "br0"
-                Interface "br0"
-                    type: internal
-            Port "bond0"
-                Interface "eth0"
-                Interface "eth1"
-        Bridge "br-int"
-            Port "br-int"
-                Interface "br-int"
-                    type: internal
-            Port "gre0"
-                Interface "gre0"
-                    type: gre
-                    options: {remote_ip="192.168.1.100"}
-        ovs_version: "1.7.1"
+```text
+bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
+    Bridge "br0"
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "bond0"
+            Interface "eth0"
+            Interface "eth1"
+    Bridge "br-int"
+        Port "br-int"
+            Interface "br-int"
+                type: internal
+        Port "gre0"
+            Interface "gre0"
+                type: gre
+                options: {remote_ip="192.168.1.100"}
+    ovs_version: "1.7.1"
+```
 
 As with previous configurations, we'll assume that eth2 is up and operational, and eth3 is shutdown. So how does traffic get directed in this configuration?
 
@@ -110,23 +116,25 @@ Ready now? Good! The key to understanding #3 is, in my opinion, understanding th
 
 Let's keep ramping up the complexity. For this scenario, we'll use an OVS configuration that is the same as in the previous scenario:
 
-    bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
-        Bridge "br0"
-            Port "br0"
-                Interface "br0"
-                    type: internal
-            Port "bond0"
-                Interface "eth0"
-                Interface "eth1"
-        Bridge "br-int"
-            Port "br-int"
-                Interface "br-int"
-                    type: internal
-            Port "gre0"
-                Interface "gre0"
-                    type: gre
-                    options: {remote_ip="192.168.1.100"}
-        ovs_version: "1.7.1"
+```text
+bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
+    Bridge "br0"
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "bond0"
+            Interface "eth0"
+            Interface "eth1"
+    Bridge "br-int"
+        Port "br-int"
+            Interface "br-int"
+                type: internal
+        Port "gre0"
+            Interface "gre0"
+                type: gre
+                options: {remote_ip="192.168.1.100"}
+    ovs_version: "1.7.1"
+```
 
 The difference, this time, is that we'll assume that eth2 and eth3 are both shutdown. Instead, we've assigned an IP address to the br0 interface on bridge br0. OVS internal interfaces, like br0, can appear as "physical" interfaces to the Linux host, and therefore can be assigned IP addresses and used for communication. This is the approach I used in describing [how to run host management across OVS][3].
 
@@ -150,36 +158,38 @@ Let's take a look at one final scenario.
 
 In this configuration, we'll use an OVS configuration that is very similar to the configuration I showed in my post on [GRE tunnels with OVS][2]:
 
-    bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
-        Bridge "br0"
-            Port "br0"
-                Interface "br0"
-                    type: internal
-            Port "mgmt0"
-                Interface "mgmt0"
-                    type: internal
-            Port "bond0"
-                Interface "eth0"
-                Interface "eth1"
-        Bridge "br1"
-            Port "br1"
-                Interface "br1"
-                    type: internal
-            Port "tep0"
-                Interface "tep0"
-                    type: internal
-            Port "bond1"
-                Interface "eth2"
-                Interface "eth3"
-        Bridge "br-int"
-            Port "br-int"
-                Interface "br-int"
-                    type: internal
-            Port "gre0"
-                Interface "gre0"
-                    type: gre
-                    options: {remote_ip="192.168.1.100"}
-        ovs_version: "1.7.1"
+```text
+bc6b9e64-11d6-415f-a82b-5d8a61ed3fbd
+    Bridge "br0"
+        Port "br0"
+            Interface "br0"
+                type: internal
+        Port "mgmt0"
+            Interface "mgmt0"
+                type: internal
+        Port "bond0"
+            Interface "eth0"
+            Interface "eth1"
+    Bridge "br1"
+        Port "br1"
+            Interface "br1"
+                type: internal
+        Port "tep0"
+            Interface "tep0"
+                type: internal
+        Port "bond1"
+            Interface "eth2"
+            Interface "eth3"
+    Bridge "br-int"
+        Port "br-int"
+            Interface "br-int"
+                type: internal
+        Port "gre0"
+            Interface "gre0"
+                type: gre
+                options: {remote_ip="192.168.1.100"}
+    ovs_version: "1.7.1"
+```
 
 In this configuration, we have three bridges. br0 uses a bond that contains eth0 and eth1; br1 uses a bond that contains eth2 and eth3; and br-int is an isolated bridge with no physical interfaces. We have two "custom" internal interfaces, mgmt0 (on br0) and tep0 (on br1), to which IP addresses have been assigned and which are successfully communicating across the network. We'll assume that mgmt0 and tep0 are on different subnets, and that tep0 is assigned to the 192.168.1.0/24 subnet.
 

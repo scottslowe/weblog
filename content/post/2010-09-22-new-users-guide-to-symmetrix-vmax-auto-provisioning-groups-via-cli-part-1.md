@@ -32,36 +32,48 @@ OK, with that (very) basic introduction out of the way, here are some commands t
 
 To create a storage group, use this command:
 
-	symaccess -sid <Symmetrix ID> create -name <Storage group name> -type storage -devs <Device IDs>
+```text
+symaccess -sid <Symmetrix ID> create -name <Storage group name> -type storage -devs <Device IDs>
+```
 
 The device IDs are the IDs of the Symmetrix Logical Volumes you created using SYMCLI or Symmetrix Management Console (SMC).
 
 To create a port group containing one or more ports from one or more directors, use this command:
 
-	symaccess -sid <Symmetrix ID> create -name <Port group name> -type port -dirports <Director slice:Port number,Director slice:port number...>
+```text
+symaccess -sid <Symmetrix ID> create -name <Port group name> -type port -dirports <Director slice:Port number,Director slice:port number...>
+```
 
 The _Director slice:Port number_ would look something like `7e:0` for port 0 on director slice 7e (which would be in enclosure 4).
 
 To create an initiator group, I would first recommend that you create a text file containing a list of all the WWPNs for the initiators in the group, like this:
 
-	WWN:1234567890abcdef  
-	WWN:abcdef0123456789  
-	...
+```text
+WWN:1234567890abcdef  
+WWN:abcdef0123456789  
+...
+```
 
 Once you have the text file created, you can then create an initiator group using this command:
 
-	symaccess -sid <Symmetrix ID> create -name <Initiator group name> -type inititator -file <Text file of initiators>
+```text
+symaccess -sid <Symmetrix ID> create -name <Initiator group name> -type inititator -file <Text file of initiators>
+```
 
 At this point, you can run `symaccess -sid <Symmetrix ID> list` and you'll see the storage, port, and initiator groups you just created.
 
 To combine these groups into a masking view, use this command:
 
-	symaccess -sid <Symmetrix ID> create view -name <Masking view name> -storgrp <Storage group name> -portgrp <Port group name> -initgrp <Initiator group name>
+```text
+symaccess -sid <Symmetrix ID> create view -name <Masking view name> -storgrp <Storage group name> -portgrp <Port group name> -initgrp <Initiator group name>
+```
 
 This creates the masking view that contains all three objects---the storage group, the port group, and the initiator group---and automatically performs the mapping (associating devices with directors) and masking (exposing devices to hosts) operations.
 
 To get more details on the masking view once it is created, use this command:
 
-	symaccess -sid <Symmetrix ID> show view <Masking view name>
+```text
+symaccess -sid <Symmetrix ID> show view <Masking view name>
+```
 
 The output from this command will show you details on the devices in the storage group, the ports in the port group, and the initiators in the initiator group.

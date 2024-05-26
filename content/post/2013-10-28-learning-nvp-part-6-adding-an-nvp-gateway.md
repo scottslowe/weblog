@@ -51,17 +51,23 @@ Once the NVP gateway software is installed, configuring the gateway is really st
 
 Let's take a closer look at these steps. The first step is to set the password for the admin user, which you can accomplish with this command:
 
-    set user admin password
+```text
+set user admin password
+```
 
 From here, you can proceed with setting the hostname for the gateway:
 
-    set hostname <hostname>
+```text
+set hostname <hostname>
+```
 
 (So far, these commands should be pretty familiar. They are the same commands used when you set up the NVP controllers and NVP Manager.)
 
 The next step is configure network connectivity; you'll start by listing the available network interfaces with this command:
 
-    show network interfaces
+```text
+show network interfaces
+```
 
 As you've seen with the other NVP appliances, the NVP gateway software builds an Open vSwitch (OVS) bridge for each physical interface. In the case of a gateway, you'll need at least three interfaces---a management interface, a transport network interface, and an external network interface. The diagram below provides a bit more context around how these interfaces are used:
 
@@ -69,22 +75,30 @@ As you've seen with the other NVP appliances, the NVP gateway software builds an
 
 Since these interfaces have very different responsibilities, it's important that you properly configure them. Otherwise, things won't work as expected. Take the time to identify which interface listed in the `show network interfaces` output corrsponds to each function. You'll first want to establish management connectivity, so that should be the first interface to configure. Assuming that `breth0` (the bridge matching the physical `eth0` interface) is your management interface, you'll configure it using this command:
 
-    set network interface breth0 ip config static 192.168.1.12 255.255.255.0
+```text
+set network interface breth0 ip config static 192.168.1.12 255.255.255.0
+```
 
 You'll want to repeat this command for the other interfaces in the gateway, assigning appropriate IP addresses to each of them.
 
 You may also need to configure the routing for the gateway. Check the routing table(s) with this command:
 
-    show network routes
+```text
+show network routes
+```
 
 If there is no default route, you can set one using this command:
 
-    add network route 0.0.0.0 0.0.0.0 <Default gateway IP address>
+```text
+add network route 0.0.0.0 0.0.0.0 <Default gateway IP address>
+```
 
 Once the appropriate network connectivity has been established, then you can proceed with the next step: adding DNS and NTP servers. Here are the commands for this step:
 
-    add network dns-server <DNS server IP address>  
-    add network ntp-server <NTP server IP address>
+```text
+add network dns-server <DNS server IP address>  
+add network ntp-server <NTP server IP address>
+```
 
 If you accidentally fat-finger an IP address or hostname along the way, use the `remove network dns-server` or `remove network ntp-server` command to remove the incorrect entry, then re-add it correctly with the commands above.
 

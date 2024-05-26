@@ -26,15 +26,21 @@ Like some other environments, the RouterOS CLI is based on the idea of _contexts
 
 Another thing to note about the RouterOS CLI is the way it handles data structures. To see a list of VLANs in the switch, you'd use the `print` command in the appropriate context. Specifically, in this case, you run this command (I'm including the full path/context just for the sake of completeness):
 
-    /interface ethernet switch vlan print
+```text
+/interface ethernet switch vlan print
+```
 
 This would print a tabular list of entries, each with an ID (a unique identifier), the assigned VLAN ID, the ports associated with that VLAN, and various other settings. To edit any of these values, you would use the `edit` command. As an example, let's say you wanted to edit the list of ports associated with a particular VLAN. Once you'd determined the ID of the VLAN (using the output of the `print` command shown previously), you'd use the `edit` command like this:
 
-    /interface ethernet switch vlan edit 1 ports
+```text
+/interface ethernet switch vlan edit 1 ports
+```
 
 This would edit the "ports" value of the VLAN whose ID in the list (**not** the VLAN ID) is 1. The generic form of the command is this:
 
-    /interface ethernet switch vlan edit <ID> <value>
+```text
+/interface ethernet switch vlan edit <ID> <value>
+```
 
 I'll try to show some examples of this later in the post, but you'll use this type of command (in different contexts) to modify lots of settings throughout different contexts in RouterOS.
 
@@ -46,12 +52,14 @@ Just so we're all on the same page with regard to terminology, a _VLAN trunk_ is
 
 In order to set up a VLAN trunk in RouterOS, you must explicitly tell the switch to tag the appropriate VLANs on that particular port. This is done with the `/interface ethernet switch egress-vlan-tag` command. So, for example, if you wanted to tag VLANs 100, 200, and 300 on port ether20, you'd use this command (I've line-wrapped them with backslashes here, but you would enter them all on a single line):
 
-    /interface ethernet switch egress-vlan-tag add \
-    tagged-ports=ether20 vlan-id=100
-    /interface ethernet switch egress-vlan-tag add \
-    tagged-ports=ether20 vlan-id=200
-    /interface ethernet switch egress-vlan-tag add \
-    tagged-ports=ether20 vlan-id=300
+```text
+/interface ethernet switch egress-vlan-tag add \
+tagged-ports=ether20 vlan-id=100
+/interface ethernet switch egress-vlan-tag add \
+tagged-ports=ether20 vlan-id=200
+/interface ethernet switch egress-vlan-tag add \
+tagged-ports=ether20 vlan-id=300
+```
 
 This command works fine if you haven't already created an egress VLAN tag entry for the VLAN ID specified in the command. If, however, you already have an egress VLAN tag entry---perhaps because you're now adding a port to an existing entry---this command will report an error. This is one of those cases where you need to use the `edit` command, as I described above.
 
@@ -61,11 +69,15 @@ So, you'd do this:
 2. From the list, determine the ID (again, **not** the VLAN ID---this is a separate value) of the entry you need to change.
 3. Use the `edit` command, like this (you can omit the full context if you're already in that context):
 
-        /interface ethernet switch egress-vlan-tag edit <ID> tagged-ports
+    ```text
+    /interface ethernet switch egress-vlan-tag edit <ID> tagged-ports
+    ```
 
     If the ID of the entry is 5 (i.e., it's the fifth entry in the list), you'd run:
 
-        /interface ethernet switch egress-vlan-tag edit 5 tagged-ports
+    ```text
+    /interface ethernet switch egress-vlan-tag edit 5 tagged-ports
+    ```
 
 4. In the full-screen text editor, simply add the port names to the comma-delimited list on the screen. Press Ctrl-O to save and quit when you're done (or Ctrl-C if you want to exit without saving any changes).
 
@@ -81,8 +93,10 @@ In this case, you have to tell RouterOS to explicitly tag incoming traffic with 
 
 Let's say you wanted a particular port to be an access port on VLAN 200. You'd use this command (it's line-wrapped here, but you'll want to enter it all on a single line):
 
-    /interface ethernet switch ingress-vlan-translation \
-    add ports=ether20 customer-vid=0 new-customer-vid=200 sa-learning=yes
+```text
+/interface ethernet switch ingress-vlan-translation \
+add ports=ether20 customer-vid=0 new-customer-vid=200 sa-learning=yes
+```
 
 This command tells RouterOS to translate a VLAN ID of 0 on port ether20 to a VLAN ID of 200. The effective result is a port where all traffic is assigned to a particular VLAN---an access port.
 

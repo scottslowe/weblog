@@ -35,11 +35,15 @@ It's theoretically possible, based on the number of links in the port channel, t
 
 How does one tell? Good question, and one I'm glad you asked. You can tell using this command (this command assumes you are using IP-based hashing):
 
-	switch# test etherchannel load-balance interface <Port channel interface> ip <Src IP Addr> <Dst IP Addr>
+```text
+switch# test etherchannel load-balance interface <Port channel interface> ip <Src IP Addr> <Dst IP Addr>
+```
 
 So, let's say that you have an ESX/ESXi host with a VMkernel interface whose address is 172.16.5.10. Let's say that you have a storage array (NetApp FAS, EMC Celerra, etc.) that supports NFS and you want to mount two different NFS exports on two different IP addresses so that traffic from this ESX/ESXi host to the storage array. You could use the `test etherchannel load-balance` command to help you determine which address could help ensure traffic distribution across the links:
 
-	switch# test etherchannel load-balance interface Po3 ip 172.16.5.10 172.16.5.100
+```text
+switch# test etherchannel load-balance interface Po3 ip 172.16.5.10 172.16.5.100
+```
 
 For more examples of what the output would look like, take a look at [this image](/public/img/test-ethchannel-output.png). This was taken off a Cisco Catalyst 3560G running my test lab (and yes, the IP addresses have been changed to protect the innocent).
 

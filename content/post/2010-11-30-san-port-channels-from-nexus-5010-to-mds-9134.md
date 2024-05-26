@@ -28,14 +28,18 @@ To configure the MDS 9134 with a SAN port channel, use the following commands.
 
 First, create the SAN port channel with the `interface port-channel` command, like this:
 
-	mds(config)# interface port-channel 1
+```text
+mds(config)# interface port-channel 1
+```
 
 You can replace the "1" at the end of that command with any number from 1 to 256; it's just the numeric identifier for that SAN port channel. The SAN port channel number does not have to match on both ends.
 
 Once you've created the SAN port channel, then add individual interfaces with the `channel-group` command:
 
-	mds(config)# interface fc1/16  
-	mds(config-if)# channel-group 1
+```text
+mds(config)# interface fc1/16  
+mds(config-if)# channel-group 1
+```
 
 The "1" specified in the `channel-group` command has to match the number specified in the earlier `interface port-channel` command. This might seem obvious, but I wanted to point it out nevertheless.
 
@@ -47,16 +51,20 @@ When you add an interface to the SAN port channel, NX-OS reminds you to perform 
 
 The commands here are **very** similar to the MDS 9134. First, you need to create the SAN port channel using the `interface san-port-channel` command (note the slight difference in commands between the MDS and the Nexus here):
 
-	nexus(config)# interface san-port-channel 1
+```text
+nexus(config)# interface san-port-channel 1
+```
 
 As with the MDS, the number at the end simply serves as a unique identifier for the SAN port channel and can range from 1 to 256.
 
 Then add interfaces to the SAN port channel using the `channel-group` command:
 
-	nexus(config)# interface fc2/1  
-	nexus(config-if)# channel-group 1  
-	nexus(config-if)# interface fc2/2  
-	nexus(config-if)# channel-group 1
+```text
+nexus(config)# interface fc2/1  
+nexus(config-if)# channel-group 1  
+nexus(config-if)# interface fc2/2  
+nexus(config-if)# channel-group 1
+```
 
 As I've shown above, simply repeat the process for each interface you want to add to the SAN port channel. As on the MDS, NX-OS reminds you to perform a matching configuration on the opposite end of the link and then issue the `no shutdown` command.
 
@@ -64,19 +72,21 @@ As I've shown above, simply repeat the process for each interface you want to ad
 
 Once a matching configuration is performed on both ends, then you can use the `no shutdown` command (which you can abbreviate to simply `no shut`) to activate the interfaces and the SAN port channel. After activating the interfaces, a `show interface port-channel` (on the MDS) or a `show interface san-port-channel` (on the Nexus) will show you the status of the SAN port channel. Only the first few lines of output are shown below (this output is taken from the Nexus):
 
-	nexus# sh int san-port-channel 1  
-	san-port-channel 1 is trunking (Not all VSANs UP on the trunk)  
-	Hardware is Fibre Channel  
-	Port WWN is 24:01:00:05:9b:7b:0c:80  
-	Admin port mode is auto, trunk mode is on  
-	snmp link state traps are enabled  
-	Port mode is TE  
-	Port vsan is 1  
-	Speed is 4 Gbps  
-	Trunk vsans (admin allowed and active) (1)  
-	Trunk vsans (up) ()  
-	Trunk vsans (isolated) ()  
-	Trunk vsans (initializing) (1)
+```text
+nexus# sh int san-port-channel 1  
+san-port-channel 1 is trunking (Not all VSANs UP on the trunk)  
+Hardware is Fibre Channel  
+Port WWN is 24:01:00:05:9b:7b:0c:80  
+Admin port mode is auto, trunk mode is on  
+snmp link state traps are enabled  
+Port mode is TE  
+Port vsan is 1  
+Speed is 4 Gbps  
+Trunk vsans (admin allowed and active) (1)  
+Trunk vsans (up) ()  
+Trunk vsans (isolated) ()  
+Trunk vsans (initializing) (1)
+```
 
 A few useful pieces of information are available here:
 
@@ -88,19 +98,21 @@ A few useful pieces of information are available here:
 
 As it turns out, I'd cabled the connections wrong; after I fixed the connections and gave the SAN port channel a small amount of time to initialize, the output was different (this output is taken from the MDS):
 
-	nexus# sh int port-channel 1  
-	port-channel 1 is trunking  
-	Hardware is Fibre Channel  
-	Port WWN is 24:01:00:05:73:a7:72:00  
-	Admin port mode is auto, trunk mode is on  
-	snmp link state traps are enabled  
-	Port mode is TE  
-	Port vsan is 1  
-	Speed is 8 Gbps  
-	Trunk vsans (admin allowed and active) (1)  
-	Trunk vsans (up) (1)  
-	Trunk vsans (isolated) ()  
-	Trunk vsans (initializing) ()
+```text
+nexus# sh int port-channel 1  
+port-channel 1 is trunking  
+Hardware is Fibre Channel  
+Port WWN is 24:01:00:05:73:a7:72:00  
+Admin port mode is auto, trunk mode is on  
+snmp link state traps are enabled  
+Port mode is TE  
+Port vsan is 1  
+Speed is 8 Gbps  
+Trunk vsans (admin allowed and active) (1)  
+Trunk vsans (up) (1)  
+Trunk vsans (isolated) ()  
+Trunk vsans (initializing) ()
+```
 
 Now you can see that both members of the SAN port channel are active ("Speed is 8 Gbps") and that all VSANs are trunking across the SAN port channel.
 

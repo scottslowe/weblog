@@ -17,7 +17,9 @@ I mentioned on [Twitter](http://twitter.com/scott_lowe) a couple days ago that I
 
 The OpenMeta tags are really the key; using OpenMeta tags, I can set up saved searches that easily let me drill down to only certain subsets of files regardless of where on my computer those files might be stored. However, the problem that I was running into was that the Mac OS X GUI did not provide a way for me to find all _untagged_ files (obviously, the key to making tags work effectively is using tags everywhere). For that, I had to drop out to the OS X command line and use the `mdfind` command, like this:
 
-    mdfind -onlyin ~ "kOMUserTags != '*'"
+```bash
+mdfind -onlyin ~ "kOMUserTags != '*'"
+```
 
 The `kOMUserTags` is the name of the extended attribute in which OpenMeta tags are stored. This particular query finds files that don't have any OpenMeta tags. Unfortunately, there didn't seem to be any way to bring this query (and the query results) into the GUI.
 
@@ -29,7 +31,9 @@ After some further experimentation, I grew frustrated with how things were progr
 
 Let's take a look at the first one. To query on both filename _and_ one or more extended attributes, you can't use the `-name` parameter to `mdfind`. Instead, you have to use this syntax:
 
-    mdfind -onlyin ~ "(kMDItemFSName == '*.txt') && (kOMUserTags != '*')"
+```bash
+mdfind -onlyin ~ "(kMDItemFSName == '*.txt') && (kOMUserTags != '*')"
+```
 
 That query will show you all the text files that don't have any OpenMeta tags applied. Obviously, you could customize the filename specification or the particular extended attributes you wanted to search, but you get the idea.
 
@@ -45,7 +49,9 @@ Now, in a Spotlight search window (and that includes new Smart Folders), you can
 
 For example, I've already shown you the query to list all untagged files (very first example in this post) and the query to list all untagged files of a certain type (second example). Here's the query to list files that have one tag but not another tag:
 
-    mdfind -onlyin ~ "(kOMUserTags == 'Tag1') && (kOMUserTags != 'Tag2')"
+```bash
+mdfind -onlyin ~ "(kOMUserTags == 'Tag1') && (kOMUserTags != 'Tag2')"
+```
 
 You could, naturally, combine this with a filename filter to get even more specific. I hope this helps someone else out there fine tune their Spotlight searches as well!
 

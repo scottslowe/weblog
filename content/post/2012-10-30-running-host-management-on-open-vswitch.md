@@ -20,26 +20,34 @@ First, configure the LACP bundle as I describe in my post on [link aggregation a
 
 Next, create an "internal" interface that Linux will use as a Layer 3 interface. We'll do this using `ovs-vsctl`, like this:
 
-    ovs-vsctl add-port ovsbr1 mgmt0 -- set interface mgmt0 type=internal
+```bash
+ovs-vsctl add-port ovsbr1 mgmt0 -- set interface mgmt0 type=internal
+```
 
 This command adds a port called `mgmt0` to the specified bridge (`ovsbr1` in this example), and then sets the interface associated with `mgmt0` to the type "internal." I don't yet know why setting the type to internal is required, only that it's necessary if you want the interface to be usable by Linux as a Layer 3 interface.
 
 If you need the management traffic on a specific VLAN, then modify the command to specify a particular OVS fake bridge (more here on using [fake bridges with VLANs][2]):
 
-    ovs-vsctl add-port vlan100br mgmt0 -- set interface mgmt0 type=internal
+```bash
+ovs-vsctl add-port vlan100br mgmt0 -- set interface mgmt0 type=internal
+```
 
 You can also just assign the VLAN tag directly, although that configuration goes against the OVS port, not the OVS interface:
 
-    ovs-vsctl set port mgmt0 tag=100
+```bash
+ovs-vsctl set port mgmt0 tag=100
+```
 
 Once the interface is created, then configure Linux to use that interface as a Layer 3 interface with an IP address assigned. On Ubuntu 12.04 LTS, that means adding a stanza to the `/etc/network/interfaces` configuration file, like this:
 
-    auto mgmt0
-    iface mgmt0 inet static
-    address 192.168.254.100
-    netmask 255.255.255.0
-    gateway 192.168.254.254
-    dns-nameservers 192.168.254.101
+```text
+auto mgmt0
+iface mgmt0 inet static
+address 192.168.254.100
+netmask 255.255.255.0
+gateway 192.168.254.254
+dns-nameservers 192.168.254.101
+```
 
 And that's it! You can now use the IP address assigned to the `mgmt0` interface (or whatever you named it) to manage the Linux virtualization host, all while knowing that you have a bonded LACP configuration protecting you against a network link failure. I'm using this configuration on all my Ubuntu-KVM hosts in my home lab; the physical interfaces are members of LACP bonds.
 

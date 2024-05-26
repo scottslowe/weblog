@@ -27,11 +27,15 @@ The first step is to change the IP address of the Control Station. This is readi
 
 Once the Control Station's IP address has been changed, the next step would be to use the `clariion_mgmt` script. The general use of the `clariion_mgmt` script involves the use of the "modify" parameter to change the IP addresses on the back-end CLARiiON SPs. Instead of using the "modify" parameter, the only [blog post](http://whughgriffin.wordpress.com/2009/07/15/how-to-modify-the-sp-ip-addresses-for-an-emc-celerra-ns-proxy-arp-implementation/) I found on this process recommended the use of the "stop" parameter, like this:
 
-	/nasmcd/sbin/clariion_mgmt -stop
+```text
+/nasmcd/sbin/clariion_mgmt -stop
+```
 
 This command resets the IP addresses on the CLARiiON SPs back to their default IP addresses (out of the 128.221.x.x range). From there, the next step is supposed to be using the `clariion_mgmt` script again like this:
 
-	/nasmcd/sbin/clariion_mgmt -start -spa_ip _A.B.C.D_ -spb_ip _W.X.Y.Z_ -use_proxy_arp
+```text
+/nasmcd/sbin/clariion_mgmt -start -spa_ip <A.B.C.D> -spb_ip <W.X.Y.Z> -use_proxy_arp
+```
 
 If this command works---and it usually does---you're good to go. Of course, it didn't work in my case. This is where things start to get interesting. Assuming that the `clariion_mgmt -stop` command worked, you now have two SPs that are not reachable from the network. In order to change their IP addresses, you need to connect to them over the network. Obviously, you can see the problem. EMC provides two answers to this potential problem:
 
@@ -43,7 +47,9 @@ In this particular case, I was able to successfully connect to SP A using PPP ov
 
 Because the `clariion_mgmt` script didn't work, I now needed to update some configuration files on the Celerra so that it would know how to communicate with the back-end CLARiiON SPs. (The `clariion_mgmt` script does this for you.) The specific information on which files need to be modified and the changes that need to be made are found in EMC Knowledgebase articles emc196029. I found that by following all the steps _except step 6_ I was able to get the Celerra talking to the back-end CLARiiON SPs. I verified this by using the `clariion_mgmt` script again as follows:
 
-	/nasmcd/sbin/clariion_mgmt -info
+```text
+/nasmcd/sbin/clariion_mgmt -info
+```
 
 The script returned a correct proxy ARP configuration. In addition, the SPs were pingable both from the Celerra Control Station as well as across the network, and Navisphere worked as expected when accessing the SPs directly via a web browser.
 

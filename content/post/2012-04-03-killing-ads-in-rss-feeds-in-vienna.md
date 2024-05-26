@@ -28,7 +28,9 @@ Copy this now-normal folder (from which you removed the ".viennastyle" extension
 
 After you've copied the now-normal folder into the correct location, open the folder for the new style and edit the `stylesheet.css` file to include this content at the top of the file (replace `userContent.css` with the filename noted earlier, where applicable):
 
-    @import url(../userContent.css);
+```text
+@import url(../userContent.css);
+```
 
 Once all this is done, save your changes, close all files, and restart Vienna. When you re-open Vienna, select the new style that you just installed.
 

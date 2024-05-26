@@ -73,44 +73,60 @@ Let's take a look at each of these steps.
 
 To set the password for the default admin user, just use this command:
 
-    set user admin password
+```text
+set user admin password
+```
 
 You'll be prompted to supply the new password, then retype it for confirmation. Easy, right? (And pretty familiar if you've used Linux before.)
 
 Setting the hostname for the service node is equally straightforward:
 
-    set hostname <hostname>
+```text
+set hostname <hostname>
+```
 
 Now you're ready to assign IP addresses to the service node. Note that I said "IP addresses" (plural). This is because the service node needs to have connectivity on the management network (so that it can communicate with the NSX controller cluster) as well as the transport network (so that it can set up tunnels with other transport nodes, like hypervisors and gateways). Use this command to see the network interfaces that are present in the controller:
 
-    show network interfaces
+```text
+show network interfaces
+```
 
 You'll note that for each physical interface in the system, the NSX service node installation procedure created a corresponding bridge (this is actually an OVS bridge). So, for a server that has two interfaces (`eth0` and `eth1`), the installation process will automatically create `breth0` and `breth1`. Generally, you'll want to assign your IP addresses to the bridge interfaces, and not to the physical interfaces.
 
 Let's say that you wanted to assign an IP address to `breth0`, which corresponds to the physical `eth0` interface. You'd use this command:
 
-    set network interface breth0 ip config static 192.168.1.5 255.255.255.0
+```text
+set network interface breth0 ip config static 192.168.1.5 255.255.255.0
+```
 
 Naturally, you'd want to substitute the correct IP address and subnet mask in that command. Once the interface is configured, you can use the standard `ping` command to test connectivity (note, though, that you can't use any switches to ping, as they aren't supported by the streamlined NSX appliance CLI). For a service node, you'll want to assign `breth0` an IP address on the management network, and assign `breth1` an IP address on your transport network.
 
 Note that you may also need to add a default route using this command:
 
-    add network route 0.0.0.0 0.0.0.0 <Default gateway IP address>
+```text
+add network route 0.0.0.0 0.0.0.0 <Default gateway IP address>
+```
 
 Assuming connectivity is good, you're ready to add DNS and NTP servers to your configuration. Use these commands:
 
-    add network dns-server <DNS server IP address>  
-    add network ntp-server <NTP server IP address>
+```text
+add network dns-server <DNS server IP address>  
+add network ntp-server <NTP server IP address>
+```
 
 Repeat these commands as needed to add multiple DNS and/or NTP servers. If you accidentally fat finger an IP address, you can remove the incorrect IP address using the `remove` command, like this:
 
-    remove network dns-server <Incorrect DNS IP address>
+```text
+remove network dns-server <Incorrect DNS IP address>
+```
 
 Substitute `ntp-server` for `dns-server` in the above command to remove an incorrect NTP server address.
 
 To add a DNS search domain to the service node, use this command:
 
-    add network dns-search-domain <Domain name>
+```text
+add network dns-search-domain <Domain name>
+```
 
 If you are using DHCP and your appliance happened to pick up some settings from the DHCP server, you may need to use the `clear network dns-servers` and/or `clear network routes` command before you can add DNS servers or routes to the service node.
 

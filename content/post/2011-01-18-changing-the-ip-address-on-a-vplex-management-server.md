@@ -21,7 +21,9 @@ All in all, it's a pretty simple process, but the one thing that might trip you 
 
 When you are running in a VPLEX Local configuration, changing the IP address of the management server is a single-step process. From the Vplexcli, a single command is all you need:
 
-	management-server set-ip -i <IP address:Netmask> -g <Gateway IP address> -p eth3
+```text
+management-server set-ip -i <IP address:Netmask> -g <Gateway IP address> -p eth3
+```
 
 This command changes the IP address on the management server and you're done.
 
@@ -41,7 +43,9 @@ You'll then need to re-enter the Vplexcli (again, using the `vplexcli` or `telne
 
 To verify that the VPN is working properly, from the Vplexcli you can use the `vpn status` command like this:
 
-	vpn status -l <Local cluster ID> -n <Number of engines in local cluster> -c <Remote cluster ID> -e <Number of engines in remote cluster> -r <IP address of remote management server>
+```text
+vpn status -l <Local cluster ID> -n <Number of engines in local cluster> -c <Remote cluster ID> -e <Number of engines in remote cluster> -r <IP address of remote management server>
+```
 
 The output of that command should show that each director in each engine, both local and remote, is reachable.
 

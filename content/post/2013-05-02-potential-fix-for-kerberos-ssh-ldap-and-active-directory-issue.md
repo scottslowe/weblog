@@ -24,9 +24,11 @@ It's been a number of years since I dealt with this sort of integration, so I wa
 
 Fortunately, the reader contacted me a few days later with the solution. As it turns out, the problem was with SELinux. Apparently, by copying the keytab file from a Windows KDC (an Active Directory domain controller), the keytab is considered "foreign" because it doesn't have the right security context. The fix, as my reader discovered, is to use the `restorecon` command to reset the security context on the Kerberos files, like this (the last command may not be necessary):
 
-    restorecon /etc/krb5.conf
-    restorecon /etc/krb5.keytab
-    restorecon /root/.k5login
+```bash
+restorecon /etc/krb5.conf
+restorecon /etc/krb5.keytab
+restorecon /root/.k5login
+```
 
 Once the security context had been reset, the Kerberos authentication via SSH worked as expected. Thanks Tomas!
 

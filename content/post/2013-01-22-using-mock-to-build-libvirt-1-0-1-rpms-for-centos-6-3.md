@@ -34,26 +34,34 @@ The first phase in the process is to set up Mock and the environment for buildin
 
 First, activate EPEL. My preferred method for activating the EPEL repository is to download the RPM, then use `yum localinstall` to install it, like this:
 
-    wget http://fedora.mirrors.pair.com/epel/6/i386/\
-    epel-release-6-8.noarch.rpm
-    yum localinstall epel-release-6-8.noarch.rpm
+```bash
+wget http://fedora.mirrors.pair.com/epel/6/i386/\
+epel-release-6-8.noarch.rpm
+yum localinstall epel-release-6-8.noarch.rpm
+```
 
 (Note that I've line-wrapped the URL with a backslash to make it more readable. That line-wrapped command actually works just as it is in the shell as well.)
 
 Next, you'll need to install Mock and related RPM-building tools:
 
-    yum install fedora-packager
+```bash
+yum install fedora-packager
+```
 
 Third, create a dedicated user for building RPMs. I use "makerpm" as my username, but you could use something else. Just make sure that the name makes sense to you, and that the new user is a member of the `mock` group:
 
-    useradd makerpm -G mock
-    passwd makerpm
+```bash
+useradd makerpm -G mock
+passwd makerpm
+```
 
 From this point on, you'll want to be running as this user you just created, so switch to that user with `su - makerpm`. This ensures that the RPMs are built under this dedicated user account.
 
 The final step in setting up Mock and the build environment is to run the following command while running as the dedicated user you created:
 
-    rpmdev-setuptree
+```bash
+rpmdev-setuptree
+```
 
 Now you're ready to move on to the next phase: installing prerequisites into the Mock environment.
 
@@ -65,12 +73,14 @@ Fortunately, there is a workaround---and here's where those other posts on Mock 
 
 Once the RPMs are built (and they should build without any major issues, based on my testing), then use these commands to get them into the isolated Mock environment (I've line-wrapped here with backslashes for readability):
 
-    mock -r epel-6-x86_64 --init
-    mock -r epel-6-x86_64 --install \
-    ~/rpmbuild/RPMS/sanlock-lib-2.4-3.el6.x86_64.rpm \
-    ~/rpmbuild/RPM/sanlock-devel-2.4-3.el6.x86_64.rpm \
-    ~/rpmbuild/RPMS/libssh2-1.4.1-2.el6.x86_64.rpm \
-    ~/rpmbuild/RPMS/libssh2-devel-1.4.1-2.el6.x86_64.rpm
+```bash
+mock -r epel-6-x86_64 --init
+mock -r epel-6-x86_64 --install \
+~/rpmbuild/RPMS/sanlock-lib-2.4-3.el6.x86_64.rpm \
+~/rpmbuild/RPM/sanlock-devel-2.4-3.el6.x86_64.rpm \
+~/rpmbuild/RPMS/libssh2-1.4.1-2.el6.x86_64.rpm \
+~/rpmbuild/RPMS/libssh2-devel-1.4.1-2.el6.x86_64.rpm
+```
 
 This will install these packages into the Mock environment, **not onto the general Linux installation.**
 
@@ -82,16 +92,22 @@ As in my earlier post on [compiling Libvirt 1.0.1 RPMs for CentOS 6.3][3], this 
 
 First, fetch the source RPM from the libvirt HTTP server:
 
-    wget http://libvirt.org/sources/libvirt-1.0.1-1.fc17.src.rpm
+```bash
+wget http://libvirt.org/sources/libvirt-1.0.1-1.fc17.src.rpm
+```
 
 Next, move the source RPM into the `~/rpmbuild/SRPMS` directory:
 
-    mv libvirt-1.0.1-1.fc17.src.rpm ~/rpmbuild/SRPMS
+```bash
+mv libvirt-1.0.1-1.fc17.src.rpm ~/rpmbuild/SRPMS
+```
 
 Finally, run Mock to rebuild the RPMs:
 
-    mock -r epel-6-x86_64 --no_clean \
-    ~/rpmbuild/SRPMS/libvirt-1.0.1-1.fc17.src.rpm
+```bash
+mock -r epel-6-x86_64 --no_clean \
+~/rpmbuild/SRPMS/libvirt-1.0.1-1.fc17.src.rpm
+```
 
 Note that the `--no-clean` parameter is required here to prevent Mock from cleaning out the chroot and getting rid of the packages you installed into the environment earlier.
 

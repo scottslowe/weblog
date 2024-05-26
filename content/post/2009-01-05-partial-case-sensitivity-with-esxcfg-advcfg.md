@@ -21,15 +21,21 @@ OK, this isn't world-shattering news or a discovery of paramount importance, but
 
 Consider these examples. If I wanted to increase the maximum number of NFS datastores on VMware ESX, I would use this command:
 
-	esxcfg-advcfg -s 32 /NFS/MaxVolumes
+```bash
+esxcfg-advcfg -s 32 /NFS/MaxVolumes
+```
 
 This command will also work (note the capitalization, or lack thereof):
 
-	esxcfg-advcfg -s 32 /NFS/maxvolumes
+```bash
+esxcfg-advcfg -s 32 /NFS/maxvolumes
+```
 
 But this command won't work; it will report that it can't find the parameter:
 
-	esxcfg-advcfg -s 32 /nfs/maxvolumes
+```bash
+esxcfg-advcfg -s 32 /nfs/maxvolumes
+```
 
 I noticed the same behavior with a couple of other settings, so I'm reasonably confident that it's not just this one setting. It appears that `esxcfg-advcfg` only cares if the first portion of the path is properly capitalized, and the rest of the parameter is case insensitive.
 

@@ -35,11 +35,15 @@ For your Synergy server, you'll need an appropriate configuration file. You can 
 
 When you're ready, just launch the Synergy server from the OS X Terminal, like this (I'm assuming that `synergys` and its configuration file---creatively named `synergy.conf`---are stored in your home directory):
 
-    ~/synergys -c ~/synergy.conf
+```bash
+~/synergys -c ~/synergy.conf
+```
 
 Using whatever method you prefer, copy the previously-extracted `synergyc` file to your Synergy client(s). As before, it doesn't really matter too much where you put the file, just make a note of the location. Then, using the OS X Terminal, run this (as before, I'm assuming `synergyc` is in your home directory):
 
-    ~/synergyc <Name of Synergy server>
+```bash
+~/synergyc <Name of Synergy server>
+```
 
 That's it! You should now be able to use the keyboard and mouse on the Synergy server to control the Synergy client. I can verify that current builds of the Synergy client (`synergyc`) work just fine on OS X Mavericks, and I would imagine that the Synergy server would work fine as well (I just haven't had time to test it). If anyone has tested it and would like to provide feedback in the comments, I'm sure other readers would appreciate it.
 

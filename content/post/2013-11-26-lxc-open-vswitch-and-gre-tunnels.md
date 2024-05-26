@@ -36,20 +36,26 @@ My [LXC introduction post][3] covers this in a fair amount of detail, but I'll w
 
 To create the containers, you can simply use `lxc-create` to create the basic container. For example, if you are also using Ubuntu 12.04 64-bit for your testing, then creating a container with the same release and architecture would require only this command (note you might need to prepend `sudo` to this command, depending on your specific configuration):
 
-    lxc-create -t ubuntu -n <container name>
+```bash
+lxc-create -t ubuntu -n <container name>
+```
 
 Once the base container is created, you can then edit the container configuration (which is found at `/var/lib/lxc/<container name>/config` by default) to add the second interface. You'd add this text to the configuration:
 
-    lxc.network.type = veth
-    lxc.network.flags = up
-    lxc.network.veth.pair = c1eth1
-    lxc.network.ipv4 = 10.10.10.10/24
+```text
+lxc.network.type = veth
+lxc.network.flags = up
+lxc.network.veth.pair = c1eth1
+lxc.network.ipv4 = 10.10.10.10/24
+```
 
 In my specific testing, I left the container's first network interface attached to the default `lxcbr0` Linux bridge, which provides connectivity to external networks via NAT. If you wanted bridged connectivity, you'd need to set that up separately. Also, feel free to substitute a different name for `c1eth1` above; this just provides a user-recognizable name for the host-facing side of the veth pair that provides connectivity for the container.
 
 After you've created and configured the container(s) appropriately, start the container with `lxc-start -n <container name>` to ensure that it boots successfully and without any unexpected errors. Then shut it down and start it again with the console detached, like so:
 
-    lxc-start -d -n <container name>
+```bash
+lxc-start -d -n <container name>
+```
 
 Now that the container is up and running, you're ready to configure OVS.
 
@@ -59,15 +65,21 @@ If you're not familiar with connecting things with GRE tunnels using OVS, I sugg
 
 Create the OVS bridge you'll use for inter-container connectivity using `ovs-vsctl`, like this (feel free to substitute whatever name you want for "br-int" in the command below):
 
-    ovs-vsctl add-br br-int
+```bash
+ovs-vsctl add-br br-int
+```
 
 Add a GRE interface to this bridge:
 
-    ovs-vsctl add-port br-int gre0
+```bash
+ovs-vsctl add-port br-int gre0
+```
 
 Then configure the GRE interface appopriately:
 
-    set interface gre0 type=gre options:remote_ip=192.168.1.100
+```bash
+ovs-vsctl set interface gre0 type=gre options:remote_ip=192.168.1.100
+```
 
 The IP address specified above should point to a reachable interface on the remote host where the other container(s) is/are running. Also, you are welcome to use a different name for the port and interface than what I used (I used `gre0`), but be sure the port and interface match (as far as I know you can't use one name for the port and a different name for the interface).
 
@@ -85,7 +97,9 @@ To manually attach the container's veth interface to OVS, you must first identif
 
 Once you've identified the correct veth interface, simply add it to OVS with this command:
 
-    ovs-vsctl add-port br-int c1eth1
+```bash
+ovs-vsctl add-port br-int c1eth1
+```
 
 I used the `c1eth1` name in the command above; you'd substitute the correct name for the appropriate veth interface for your container(s).
 

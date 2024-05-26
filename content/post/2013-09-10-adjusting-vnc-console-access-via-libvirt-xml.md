@@ -21,19 +21,25 @@ This is something of a follow-up to my post on [using SSH to access the VNC cons
 
 However, it's possible to change this behavior. Consider the following snippet of libvirt XML code; this is responsible for setting up the VNC access to the guest domain's console:
 
-    <graphics type='vnc' port='-1' autoport='yes'/>
+```xml
+<graphics type='vnc' port='-1' autoport='yes'/>
+```
 
 This is the default configuration; it binds a VNC server for this guest domain to the host's loopback address and auto-allocates a port for VNC (the first guest gets screen 0/port 5900, the second guest gets screen 1/port 5901, etc.). With this configuration, you must use SSH and tunneling in order to gain access to the guest domain's VNC console.
 
 Now consider this libvirt XML configuration:
 
-    <graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0'/>
+```xml
+<graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0'/>
+```
 
 With this configuration in place, the VNC console for that guest domain will be available on _any_ interface on the host, but the port will still be auto-allocated (first guest domain powered on gets port 5900, second guest domain powered on gets port 5901, etc.). With this configuration, anyone with a VNC viewer on your local network can gain access to the console of the guest domain. As you might expect, you could change the `'0.0.0.0'` to a specific IP address assigned to the KVM host, and you could limit access to the VNC port via IPTables (if you so desired).
 
 If you so desired, you can password-protect the VNC console for the guest domain using this snippet of libvirt XML configuration:
 
-    <graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0' passwd='protectme'/>
+```xml
+<graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0' passwd='protectme'/>
+```
 
 Now, the user attempting to access the guest domain's VNC console must know the password specified by the `passwd` parameter in the configuration. Otherwise, this configuration is the same as the previous configuration, and can be limited/protected in a variety of ways (limited to specific interfaces and/or controlled via IPTables).
 

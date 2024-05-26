@@ -26,19 +26,25 @@ So, let's say that you want to set the VLANs that are allowed across an OVS port
 
 To set the VLAN trunks for a given port, use this command:
 
-    ovs-vsctl set port <port name> trunks=<list of VLAN IDs>
+```bash
+ovs-vsctl set port <port name> trunks=<list of VLAN IDs>
+```
 
 Obviously, you'll want to substitute the correct port name and VLAN IDs in that command. If you're unsure of the port name to use, use `ovs-vsctl show` to review the OVS configuration and determine which port(s) to configure.
 
 If you want to configure an OVS port as a VLAN access port, use this command:
 
-    ovs-vsctl set port <port name> tag=<VLAN ID>
+```bash
+ovs-vsctl set port <port name> tag=<VLAN ID>
+```
 
 Again, it should go without stating, but you'll want to substitute the correct values for your environment in the command above.
 
 Here's one more example before I provide some explanation. Let's say that you have a bond (a NIC team or a link aggregate) and you want to enable LACP on that bond. You'd run this command:
 
-    ovs-vsctl set port <port name> lacp=active
+```bash
+ovs-vsctl set port <port name> lacp=active
+```
 
 The "port name" in this case would be something like bond0, which is a bond you've created using `ovs-vsctl add-bond` command. Your physical switch must be properly configured as well in order to support LACP on the appropriate physical switch ports.
 
@@ -48,43 +54,61 @@ Oddly enough, it was [this post](http://blog.sflow.com/2010/05/configuring-open-
 
 Looking at the `ovs-vsctl` manpage (or the `--help` screen), you can see that there are several DB-related commands. Here's the generic form:
 
-    ovs-vsctl <command> <table name> <record name> <setting=value>
+```bash
+ovs-vsctl <command> <table name> <record name> <setting=value>
+```
 
 In this generic command, `<command>` would be something like set, get, or list, and the `<table name>` would be replaced by a specific OVSDB table. For example, one such table is `port`. Let's plug a specific command and a specific table into the generic form:
 
-    ovs-vsctl set port <record name> <setting=value>
+```bash
+ovs-vsctl set port <record name> <setting=value>
+```
 
 (Did something just click with you?)
 
 We could continue plugging specific items into the generic form to arrive at a command like this:
 
-    ovs-vsctl set port bond0 trunks=10,20,30,40,50
+```bash
+ovs-vsctl set port bond0 trunks=10,20,30,40,50
+```
 
 The trick, of course, is knowing what values to substitute into the command to manipulate the OVS database in the right way. Fortunately, there are a couple of commands that can help.
 
 To see all the OVS bridges and their settings, use this command:
 
-    ovs-vsctl list bridge
+```bash
+ovs-vsctl list bridge
+```
 
 To see all the OVS ports and their settings, use this command:
 
-    ovs-vsctl list port
+```bash
+ovs-vsctl list port
+```
 
 Finally, to see all the OVS interfaces and their settings, use this command:
 
-    ovs-vsctl list interface
+```bash
+ovs-vsctl list interface
+```
 
 You can add a specific record to the above commands; for example, to see the settings for a port named `bond0`:
 
-    ovs-vsctl list port bond0
+```bash
+ovs-vsctl list port bond0
+```
 
 This will show you the settings that are available for that particular record; you can then use `ovs-vsctl set` as described earlier to set the value for a setting. This is how you configure VLAN trunks (by setting the value of the trunks setting for a particular port) or enable LACP (by setting the value of the LACP setting for a particular port). These commands can be run when a record is created, like this:
 
-    ovs-vsctl add-bond br0 bond0 eth0 eth1 lacp=active trunks=10,11,12
+```bash
+ovs-vsctl add-bond br0 bond0 eth0 eth1 lacp=active trunks=10,11,12
+```
 
 Or you can run the commands after the record/object is created, like this:
 
-    ovs-vsctl set port bond0 lacp=active trunks=10,11,12
+```bash
+ovs-vsctl set port bond0 lacp=active trunks=10,11,12
+```
 
 Hopefully, this additional information and insight---which seems so simple now that I understand it---will prove helpful to others.
 

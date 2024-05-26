@@ -44,15 +44,19 @@ I'll assume that you've followed the steps outlined in [the CentOS wiki](http://
 
 The libvirt 1.0.1 source RPMs are available directly from the libvirt HTTP server, easily downloaded with `wget`:
 
-    wget http://libvirt.org/sources/libvirt-1.0.1-1.fc17.src.rpm
+```bash
+wget http://libvirt.org/sources/libvirt-1.0.1-1.fc17.src.rpm
+```
 
 You can just download the source RPM to your home directory. Before you can build a new RPM from the source RPM, though, you'll first need to install all the various prerequisites that libvirt requires. Most of them can be installed easily using `yum` with a command like this:
 
-    yum install xhtml1-dtds augeas libudev-devel \
-    libpci-access-devel yajl-devel, libpcap-devel libnl-devel \
-    avahi-devel radvd ebtables qemu-img iscsi-initiator-utils \
-    parted-devel device-mapper-devel numactl-devel netcfg-devel \
-    systemtap-sdt-devel scrub numad libblkid-devel
+```bash
+yum install xhtml1-dtds augeas libudev-devel \
+libpci-access-devel yajl-devel, libpcap-devel libnl-devel \
+avahi-devel radvd ebtables qemu-img iscsi-initiator-utils \
+parted-devel device-mapper-devel numactl-devel netcfg-devel \
+systemtap-sdt-devel scrub numad libblkid-devel
+```
 
 There are two dependencies, though---sanlock and libssh2--that require versions newer than what are available in the CentOS/EPEL repositories. For those, you'll need to recompile your own RPMs. Fortunately, this is pretty straightforward. The next two sections provide more details on getting these prerequisites handled.
 
@@ -60,20 +64,26 @@ There are two dependencies, though---sanlock and libssh2--that require versions 
 
 To build a CentOS 6.3 RPM for version 2.4 of sanlock (the minimum version needed by libvirt 1.0.1), first use `wget` to download a Fedora 17 version of the source RPM. I've wrapped the URL with a backslash for readability:
 
-    wget http://dl.fedoraproject.org/pub/fedora/linux/updates/17/SRPMS\
-    /sanlock-2.4-3.fc17.src.rpm
+```bash
+wget http://dl.fedoraproject.org/pub/fedora/linux/updates/17/SRPMS\
+/sanlock-2.4-3.fc17.src.rpm
+```
 
 Next, install an prerequisite library using `yum install libaio-devel`.
 
 Finally, use `rpmbuild` to rebuild the sanlock source RPM:
 
-    rpmbuild --rebuild sanlock-2.4-3.fc17.src.rpm
+```bash
+rpmbuild --rebuild sanlock-2.4-3.fc17.src.rpm
+```
 
 This process should proceed without any problems. The resulting RPMs that are created will be found in `~/rpmbuild/RPMS/x86_64` (assuming you are, as I am, using a 64-bit build of CentOS).
 
 Building the RPMs, however, isn't enough---you need to install them so that you can build the libvirt RPMs. So install the sanlock-devel and sanlock-lib RPMs using `yum locainstall` (do this command from the directory where the RPMs reside):
 
-    yum localinstall sanlock-devel-* sanlock-lib-*
+```bash
+yum localinstall sanlock-devel-* sanlock-lib-*
+```
 
 That should take care of the sanlock dependency.
 
@@ -81,18 +91,24 @@ That should take care of the sanlock dependency.
 
 To build a CentOS 6.3 RPM for version 1.4.1 of libssh2 (libvirt 1.0.1 requires at least version 1.3.0), first download the source RPM using `wget` (I've wrapped the URL here for readability):
 
-    wget http://dl.fedoraproject.org/pub/fedora/linux/releases\
-    /17/Everything/source/SRPMS/l/libssh2-1.4.1-2.fc17.src.rpm
+```bash
+wget http://dl.fedoraproject.org/pub/fedora/linux/releases\
+/17/Everything/source/SRPMS/l/libssh2-1.4.1-2.fc17.src.rpm
+```
 
 (That's a lowercase L in the URL just after SRPMS.)
 
 Once you have the source RPM downloaded, then just rebuild the source RPM:
 
-    rpmbuild --rebuild libssh2-1.4.1-2.fc17.src.rpm
+```bash
+rpmbuild --rebuild libssh2-1.4.1-2.fc17.src.rpm
+```
 
 Then install the resulting RPMs using `yum localinstall`:
 
-    yum localinstall libssh2-1.4.1-* libssh2-devel-*
+```bash
+yum localinstall libssh2-1.4.1-* libssh2-devel-*
+```
 
 That takes care of the last remaining dependency. You're now ready to compile the RPMs for libvirt 1.0.1.
 
@@ -100,7 +116,9 @@ That takes care of the last remaining dependency. You're now ready to compile th
 
 This part is almost anticlimactic. Just use the `rpmbuild` command:
 
-    rpmbuild --rebuild libvirt-1.0.1-1.fc17.src.rpm
+```bash
+rpmbuild --rebuild libvirt-1.0.1-1.fc17.src.rpm
+```
 
 If you've successfully installed all the necessary prerequisites, then the RPM compilation process should proceed without any issues.
 

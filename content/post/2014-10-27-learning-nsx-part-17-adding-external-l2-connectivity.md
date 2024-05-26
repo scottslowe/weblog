@@ -79,7 +79,9 @@ Only a single change is needed to `nsx.ini` in order to configure OpenStack to r
 
 Neutron recognizes L2 gateway services as _network gateways_, so all the related Neutron commands use the term `net-gateway`. You can verify that the L2 gateway service is recognized by OpenStack Neutron by running the following command with admin permissions:
 
-    neutron net-gateway-list
+```bash
+neutron net-gateway-list
+```
 
 You should see a single entry in the list, with a description that reads something like "default L2 gateway service" or similar. As long as you see that entry, you're ready to proceed! If you don't see that entry, it's time to check in NSX Manager and/or double-check your typing.
 

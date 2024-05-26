@@ -35,15 +35,21 @@ This post was written using Ubuntu 12.04.1 LTS and Open vSwitch 1.4.0 (installed
 
 The first step is to add a bridge (substitute your desired bridge name for `ovsbr1` in the following command):
 
-    ovs-vsctl add-br ovsbr1
+```bash
+ovs-vsctl add-br ovsbr1
+```
 
 Once the bridge is established, then you'll need to create a bond. This is the actual link aggregate on OVS. The syntax for adding a bond looks something like this:
 
-    ovs-vsctl add-bond <bridge name> <bond name> <list of interfaces>
+```bash
+ovs-vsctl add-bond <bridge name> <bond name> <list of interfaces>
+```
 
 So, if you wanted to add a bond to `ovsbr1` using physical interfaces `eth1` and `eth3`, your command would look something like this:
 
-    ovs-vsctl add-bond ovsbr1 bond0 eth1 eth3
+```bash
+ovs-vsctl add-bond ovsbr1 bond0 eth1 eth3
+```
 
 However, there's a problem with this configuration: by default, LACP isn't enabled on a bond. To fix this, you have two options.
 
@@ -53,94 +59,110 @@ However, there's a problem with this configuration: by default, LACP isn't enabl
 
 For option #1, you'll simply append `lacp=active` to the command to create the bond, like so:
 
-    ovs-vsctl add-bond ovsbr1 bond0 eth1 eth3 lacp=active
+```bash
+ovs-vsctl add-bond ovsbr1 bond0 eth1 eth3 lacp=active
+```
 
 For option #2, you'd use `ovs-vsctl set` to modify the properties of the bond. Here's an example:
 
-    ovs-vsctl set port bond0 lacp=active
+```bash
+ovs-vsctl set port bond0 lacp=active
+```
 
 Once the bond is created and LACP is enabled, you can check the configuration and/or status of the bond. Assuming that you've already configured your physical switch correctly, your bond should be working and passing traffic. You can use this command to see the status of the bond:
 
-    ovs-appctl bond/show <bond name>
+```bash
+ovs-appctl bond/show <bond name>
+```
 
 The output from that command will look something like this:
 
-    bond_mode: balance-slb
-    bond-hash-algorithm: balance-slb
-    bond-hash-basis: 0
-    updelay: 0 ms
-    downdelay: 0 ms
-    next rebalance: 6415 ms
-    lacp_negotiated: true
-    
-    slave eth4: enabled
-        active slave
-        may_enable: true
-    
-    slave eth3: enabled
-        may_enable: true
-    
-    slave eth1: enabled
-        may_enable: true
-    
-    slave eth2: enabled
-        may_enable: true
+```text
+bond_mode: balance-slb
+bond-hash-algorithm: balance-slb
+bond-hash-basis: 0
+updelay: 0 ms
+downdelay: 0 ms
+next rebalance: 6415 ms
+lacp_negotiated: true
+
+slave eth4: enabled
+    active slave
+    may_enable: true
+
+slave eth3: enabled
+    may_enable: true
+
+slave eth1: enabled
+    may_enable: true
+
+slave eth2: enabled
+    may_enable: true
+```
 
 This command will show more detailed LACP-specific information:
 
-    ovs-appctl lacp/show <bond name>
+```bash
+ovs-appctl lacp/show <bond name>
+```
 
 This command returns a great deal of information; here's a quick snippet:
 
-    ---- bond0 ----
-        status: active negotiated
-        sys_id: 00:22:19:bd:db:dd
-        sys_priority: 65534
-        aggregation key: 4
-        lacp_time: fast
-    
-    slave: eth1: current attached
-        port_id: 4
-        port_priority: 65535
-    
-        actor sys_id: 00:22:19:bd:db:dd
-        actor sys_priority: 65534
-        actor port_id: 4
-        actor port_priority: 65535
-        actor key: 4
-        actor state: activity timeout aggregation synchronized collecting<br></br>distributing
-    
-        partner sys_id: 00:12:f2:cc:6d:40
-        partner sys_priority: 1
-        partner port_id: 12
-        partner port_priority: 1
-        partner key: 10000
-        partner state: activity aggregation synchronized collecting<br></br>distributing
+```text
+---- bond0 ----
+    status: active negotiated
+    sys_id: 00:22:19:bd:db:dd
+    sys_priority: 65534
+    aggregation key: 4
+    lacp_time: fast
+
+slave: eth1: current attached
+    port_id: 4
+    port_priority: 65535
+
+    actor sys_id: 00:22:19:bd:db:dd
+    actor sys_priority: 65534
+    actor port_id: 4
+    actor port_priority: 65535
+    actor key: 4
+    actor state: activity timeout aggregation synchronized collecting<br></br>distributing
+
+    partner sys_id: 00:12:f2:cc:6d:40
+    partner sys_priority: 1
+    partner port_id: 12
+    partner port_priority: 1
+    partner key: 10000
+    partner state: activity aggregation synchronized collecting<br></br>distributing
+```
 
 You can also use this command to view the configuration details of the bond:
 
-    ovs-vsctl list port bond0
+```bash
+ovs-vsctl list port bond0
+```
 
 The output from this command will look something like this:
 
-    _uuid               : ae7eb7ca-e3e0-4166-bcfb-4348071799e0
-    bond_downdelay      : 0
-    bond_fake_iface     : false
-    bond_mode           : []
-    bond_updelay        : 0
-    external_ids        : {}
-    fake_bridge         : false
-    interfaces          : [9963381b-6a7d-4a8f-acf8-86150361530e,<br></br>bee2df86-ed14-456b-8f3a-25fb00fa6040, daf5ac51-4135-4e3c-a937-c62dfc4b5e9f,<br></br>fcd2d6ef-9a18-452a-9a79-1c97e5a95ef2]
-    lacp                : active
-    mac                 : []
-    name                : "bond0"
-    other_config        : {lacp-time=fast}
-    qos                 : []
-    statistics          : {}
-    status              : {}
-    tag                 : []
-    trunks              : []
-    vlan_mode           : []
+```text
+_uuid               : ae7eb7ca-e3e0-4166-bcfb-4348071799e0
+bond_downdelay      : 0
+bond_fake_iface     : false
+bond_mode           : []
+bond_updelay        : 0
+external_ids        : {}
+fake_bridge         : false
+interfaces          : [9963381b-6a7d-4a8f-acf8-86150361530e,bee2df86-ed14-456b-8f3a-25fb00fa6040,daf5ac51-4135-4e3c-a937-c62dfc4b5e9f,fcd2d6ef-9a18-452a-9a79-1c97e5a95ef2]
+lacp                : active
+mac                 : []
+name                : "bond0"
+other_config        : {lacp-time=fast}
+qos                 : []
+statistics          : {}
+status              : {}
+tag                 : []
+trunks              : []
+vlan_mode           : []
+```
 
 In learning how to use LACP with OVS, I found [this article](http://brezular.com/2011/12/04/openvswitch-playing-with-bonding-on-openvswitch/) to be extremely helpful.
 

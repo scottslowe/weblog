@@ -24,7 +24,9 @@ When you add an ESX/ESXi host to vCenter Server in the next generation of produc
 
 I haven't figured out a way to do this for ESXi yet, but for ESX you can verify the SHA1 fingerprint of the SSL certificate using this command:
 
-	openssl x509 -sha1 -in /etc/vmware/ssl/rui.crt -noout -fingerprint
+```bash
+openssl x509 -sha1 -in /etc/vmware/ssl/rui.crt -noout -fingerprint
+```
 
 This should all be on a single line; it might be wrapped here. The command will then display the SHA1 fingerprint on the SSL certificate, which you can compare to the fingerprint displayed in the vCenter Server dialog box to ensure that the two values match. (If you're really paranoid, you'll run this command at the server's physical console and not remotely. Unless, of course, you took the time to actually verify the SSH key fingerprints when you first connected via SSH, but that's an entirely different post.)
 

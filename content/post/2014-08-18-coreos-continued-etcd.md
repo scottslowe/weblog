@@ -46,17 +46,23 @@ For example, when you configure the `addr`, `peer-addr`, or `discovery` properti
 
 Like most projects these days, etcd provides a RESTful API by which you can interact with it. You can use the command-line utility `curl` to interact with etcd, using some of the techniques I outlined in this post on [interacting with RESTful APIs][3]. Here's a very simple example: using `curl` to recursively list the keys and values in a path within etcd:
 
-    curl -X GET http://10.1.1.7:4001/v2/keys/?consistent=true&recursive;=true&sorted;=false
+```bash
+curl -X GET http://10.1.1.7:4001/v2/keys/?consistent=true&recursive;=true&sorted;=false
+```
 
 If you want to store some data in etcd (let's say you wanted to store the value "10.1.1.20:80" at the key "/svclocation"), then you'd do something like this:
 
-    curl -L http://10.1.1.7:4001/v2/keys/svclocation -X PUT -d value="10.1.1.20:80"
+```bash
+curl -L http://10.1.1.7:4001/v2/keys/svclocation -X PUT -d value="10.1.1.20:80"
+```
 
 The JSON response (read [this][4] if you're unfamiliar with JSON) will provide confirmation that the key and value were set, along with some additional information.
 
 To read this value back, you'd use `curl` like this:
 
-    curl -L http://10.1.1.7:4001/v2/keys/svclocation
+```bash
+curl -L http://10.1.1.7:4001/v2/keys/svclocation
+```
 
 etcd would respond with a JSON-formatted response that provides the current value of the specified key.
 
@@ -64,15 +70,21 @@ However, to make it easier, there is a command-line client called `etcdctl` that
 
 Then, to perform the same listing of keys action as the `curl` command I provided earlier, you would run this command:
 
-    etcdctl --peers 10.1.1.7:4001 ls / --recursive
+```bash
+etcdctl --peers 10.1.1.7:4001 ls / --recursive
+```
 
 Similarly, to set a value at a particular key within etcd:
 
-    etcdctl --peers 10.1.1.7:4001 mk /svclocation 10.1.1.20:80
+```bash
+etcdctl --peers 10.1.1.7:4001 mk /svclocation 10.1.1.20:80
+```
 
 And to get a value:
 
-    etcdctl --peers 10.1.1.7:4001 get /svclocation
+```bash
+etcdctl --peers 10.1.1.7:4001 get /svclocation
+```
 
 A couple of points to note:
 

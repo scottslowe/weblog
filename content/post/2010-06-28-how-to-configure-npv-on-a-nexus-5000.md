@@ -26,30 +26,40 @@ Note that I tested these instructions on a Nexus 5010 using both NX-OS 4.1(3)N2(
 
 The first step is to enable NPV on the Nexus 5000. As far as I can tell, in order to enable NPV you must first enable FCoE using the `feature` command:
 
-	switch(config)# feature fcoe
+```text
+switch(config)# feature fcoe
+```
 
 This loads various Fibre Channel modules and makes possible other features, including NPV and NPIV. Enabling NPV erases the switch configuration and reboots the switch, so be sure you are connected via a console connection before enabling NPV with the `feature` command:
 
-	switch(config)# feature npv
+```text
+switch(config)# feature npv
+```
 
 Immediately after enabling NPV, the Nexus 5000 will reboot (you're warned and given the option to proceed or cancel). The warning indicates that the switch's configuration will be removed, but the minimally-configured switches I used in my testing retained their configuration. Granted, I hadn't performed any Fibre Channel or FCoE configurations yet, so perhaps that's the configuration to which the warning was referring.
 
 Once NPV is enabled on the switch, you can then configure Fibre Channel uplink ports as NP ports (proxy N_ports); these are also referred to as external interfaces. To configure a Fibre Channel port as an NP port, use these commands:
 
-	switch# config t  
-	switch(config)# interface fc _slot/port_  
-	switch(config-if)# switchport mode np  
-	switch(config-if)# no shut  
-	switch(config-if)# exit  
-	switch(config)# exit
+```text
+switch# config t  
+switch(config)# interface fc _slot/port_  
+switch(config-if)# switchport mode np  
+switch(config-if)# no shut  
+switch(config-if)# exit  
+switch(config)# exit
+```
 
 You should then be ready to physically connect to the upstream Fibre Channel switch, which---if you recall correctly from my earlier NPV/NPIV post---needs to be NPIV-enabled. In this particular case, I was uplinking the Nexus 5010 to an EMC-rebranded Brocade switch (a Connectrix DS-300B running Fabric OS 6.1.0). To show whether the port on the Connectrix was enabled for NPIV, I used the `portcfgshow` command:
 
-	rtp-fc-sw-01:admin> portcfgshow <port number>
+```text
+rtp-fc-sw-01:admin> portcfgshow <port number>
+```
 
 Look for the line that says "NPIV Capability"; the value should be reported as "ON". If the value is not "ON", you'll need to use the `portcfgnpivport` command to enable NPIV on the specified port, like this:
 
-	rtp-fc-sw-01:admin> portcfgnpivport <port number> 1
+```text
+rtp-fc-sw-01:admin> portcfgnpivport <port number> 1
+```
 
 The "1" at the end of that command enables NPIV; a "0" would disable NPIV for that port.
 

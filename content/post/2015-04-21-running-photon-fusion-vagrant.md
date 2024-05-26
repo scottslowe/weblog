@@ -22,15 +22,19 @@ I assume that you've already installed Vagrant, VMware Fusion, and the Vagrant p
 
 1. Install an additional Vagrant plugin that enables Vagrant to better detect and interact with Photon using this command:
 
-		vagrant plugin install vagrant-guests-photon
+    ```bash
+    vagrant plugin install vagrant-guests-photon
+    ```
 
-	If you don't install this plugin, you'll likely get a non-fatal error about Vagrant being unable to perform the networking configuration. (Review [the GitHub repository for this plugin][link-5] if you want/need more details. Also, note that [a PR against Vagrant][link-6] to eliminate the need for this plugin was opened and merged; this fix should show up in a future release of Vagrant.)
+    If you don't install this plugin, you'll likely get a non-fatal error about Vagrant being unable to perform the networking configuration. (Review [the GitHub repository for this plugin][link-5] if you want/need more details. Also, note that [a PR against Vagrant][link-6] to eliminate the need for this plugin was opened and merged; this fix should show up in a future release of Vagrant.)
 
 2. Optionally, go ahead and pull down a Vagrant box for Photon using this command:
 
-		vagrant box add vmware/photon
+    ```bash
+    vagrant box add vmware/photon
+    ```
 
-	If you decide not to pull down the box ahead of time, Vagrant will fetch the box the first time you run `vagrant up`. (I prefer to pull the box down ahead of time so that I have it in the event I'm offline when I run `vagrant up`, but your mileage may vary.)
+    If you decide not to pull down the box ahead of time, Vagrant will fetch the box the first time you run `vagrant up`. (I prefer to pull the box down ahead of time so that I have it in the event I'm offline when I run `vagrant up`, but your mileage may vary.)
 
 3. Pull down the files from the `photon` directory in my GitHub "learning-tools" repository. You can clone the entire repository (using `git clone`), fork it and clone it, download a ZIP file of the entire repository, or just download the specific files you need.
 

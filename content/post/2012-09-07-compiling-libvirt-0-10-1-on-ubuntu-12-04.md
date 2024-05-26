@@ -40,8 +40,10 @@ From there, I was able to run `libvirtd --version` or `virsh --version` to verif
 
 The one big difference between this effort and the CentOS effort earlier was that Open vSwitch was installed and working on this system, so I ran `ovs-vsctl show` to double-check the OVS configuration and operation. I noted that the system had re-created the default bridge, so I got rid of that with these two commands:
 
-    virsh net-destroy default
-    virsh net-autostart --disable default
+```bash
+virsh net-destroy default
+virsh net-autostart --disable default
+```
 
 That removed `virbr0` from the OVS configuration, leaving only the OVS bridge that I created during the KVM+Open vSwitch installation earlier.
 

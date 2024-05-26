@@ -34,9 +34,11 @@ To configure a link aggregate using LACP, use these commands:
 
 For example, if you wanted to configure port 10 on a switch for link aggregation, the commands would look something like this:
 
-    switch(config)# interface ethernet 10
-    switch(config-if-e1000-10)# link-aggregate configure key 10000
-    switch(config-if-e1000-10)# link-aggregate active
+```text
+switch(config)# interface ethernet 10
+switch(config-if-e1000-10)# link-aggregate configure key 10000
+switch(config-if-e1000-10)# link-aggregate active
+```
 
 For each additional port that should also belong in this same link aggregate bundle, you would repeat these commands and use the same key value. As I mentioned earlier, the identical key value is what tells the switch which interfaces belong in the same bundle.
 
@@ -62,10 +64,12 @@ In any case, the commands you use for VLANs are as follows:
 
 So, if you wanted to create VLAN 30, add Ethernet interface 24 to that VLAN, and configure the interface to carry both tagged and untagged traffic, the commands would look something like this:
 
-    switch(config)# vlan 30 name server-subnet
-    switch(config-vlan-30)# tagged ethernet 24
-    switch(config-vlan-30)# interface ethernet 24
-    switch(config-if-e1000-24)# dual-mode
+```text
+switch(config)# vlan 30 name server-subnet
+switch(config-vlan-30)# tagged ethernet 24
+switch(config-vlan-30)# interface ethernet 24
+switch(config-if-e1000-24)# dual-mode
+```
 
 Once the VLANs are created and the interfaces are added to the VLANs, configuring the virtualization hosts is---once again---pretty straightforward:
 

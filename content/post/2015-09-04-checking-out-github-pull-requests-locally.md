@@ -16,7 +16,9 @@ In this post, I'm going to show you how to use the Git command-line to check out
 
 The GitHub gist shows you how to modify the Git configuration for a particular repository so that when you run `git fetch` it will fetch all the pull requests for that repository as well. This is handy, but what I personally found _most_ helpful was a comment that showed the command to fetch a specific pull request. The command looks like this:
 
-    git fetch origin pull/1234/head:pr-1234
+```bash
+git fetch origin pull/1234/head:pr-1234
+```
 
 Let me break that command down a bit:
 

@@ -30,12 +30,14 @@ How to create VLANs varies between various switch types. On some switches, you'l
 
 After the VLANs have been defined, then you will need to configure the switch port connected to the router as a VLAN trunk port. This is pretty [well covered elsewhere][1], but here is a quick review of the commands (these commands assume port 15 on module 0, a Fast Ethernet port):
 
-	switch(config)# int fa0/15  
-	switch(config-if)# switchport trunk encapsulation dot1q  
-	switch(config-if)# switchport mode trunk  
-	switch(config-if)# switchport trunk allowed vlan 1,71-75  
-	switch(config-if)# exit  
-	switch(config)# exit  
+```text
+switch(config)# int fa0/15  
+switch(config-if)# switchport trunk encapsulation dot1q  
+switch(config-if)# switchport mode trunk  
+switch(config-if)# switchport trunk allowed vlan 1,71-75  
+switch(config-if)# exit  
+switch(config)# exit  
+```
 
 A couple notes about these commands:
 
@@ -49,11 +51,13 @@ At this point, the switch is configured correctly; now it's time to move to the 
 
 For each VLAN that needs to be routed, you will need to create a subinterface on the router. Creating a subinterface is pretty easy, the commands look something like this:
 
-	router(config)# int fa0/0.1  
-	router(config-if)# encapsulation dot1q 1 native  
-	router(config-if)# ip address 192.168.1.1 255.255.255.0  
-	router(config-if)# exit  
-	router(config)# exit  
+```text
+router(config)# int fa0/0.1  
+router(config-if)# encapsulation dot1q 1 native  
+router(config-if)# ip address 192.168.1.1 255.255.255.0  
+router(config-if)# exit  
+router(config)# exit  
+```
 
 As before, there are a few notes to consider about these commands:
 

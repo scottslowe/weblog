@@ -64,27 +64,39 @@ You'll use the `vicfg-vswitch` command for the majority of these tasks. Unless I
 
 To create a vSwitch, use this command:
 
-	vicfg-vswitch -h <ESXi hostname> -a <vSwitch Name>
+```bash
+vicfg-vswitch -h <ESXi hostname> -a <vSwitch Name>
+```
 
 To link a physical NIC to a vSwitch---which is necessary in order for the vSwitch to pass traffic onto the physical network or to receive traffic from the physical network---use this command:
 
-	vicfg-vswitch -h <ESXi hostname> -L <Physical NIC> <vSwitch Name>
+```bash
+vicfg-vswitch -h <ESXi hostname> -L <Physical NIC> <vSwitch Name>
+```
 
 In the event you don't have information on the physical NICs, you can use this command to list the physical NICs (that's a lowercase L in the command):
 
-	vicfg-nics -h <ESXi hostname> -l
+```bash
+vicfg-nics -h <ESXi hostname> -l
+```
 
 Conversely, if you need to unlink (remove) a physical NIC from a vSwitch, use this command:
 
-	vicfg-vswitch -h <ESXi hostname> -U <Physical NIC> <vSwitch Name>
+```bash
+vicfg-vswitch -h <ESXi hostname> -U <Physical NIC> <vSwitch Name>
+```
 
 To change the Maximum Transmission Unit (MTU) size on a vSwitch, use this command:
 
-	vicfg-vswitch -h <ESXi hostname> -m <MTU size> <vSwitch Name>
+```bash
+vicfg-vswitch -h <ESXi hostname> -m <MTU size> <vSwitch Name>
+```
 
 To delete a vSwitch, use this command:
 
-	vicfg-vswitch -h <ESXi hostname> -d <vSwitch Name>
+```bash
+vicfg-vswitch -h <ESXi hostname> -d <vSwitch Name>
+```
 
 ## Creating, Configuring, and Deleting Port Groups
 
@@ -92,19 +104,27 @@ As with virtual switches, the `vicfg-vswitch` is the command you will use to wor
 
 To create a port group, use this command:
 
-	vicfg-vswitch -h <ESXi hostname> -A <Port Group Name> <vSwitch Name>
+```bash
+vicfg-vswitch -h <ESXi hostname> -A <Port Group Name> <vSwitch Name>
+```
 
 To set the VLAN ID for a port group, use this command:
 
-	vicfg-vswitch -h <ESXi hostname> -v <VLAN ID> -p <Port Group Name> <vSwitch Name>
+```bash
+vicfg-vswitch -h <ESXi hostname> -v <VLAN> -p <Port Group Name> <vSwitch Name>
+```
 
 To delete a port group, use this command:
 
-	vicfg-vswitch -h <ESXi hostname> -D <Port Group Name> <vSwitch Name>
+```bash
+vicfg-vswitch -h <ESXi hostname> -D <Port Group Name> <vSwitch Name>
+```
 
 To view the current list of vSwitches, port groups, and uplinks, use this command (that's a lowercase L in the command):
 
-	vicfg-vswitch -h <ESXi hostname> -l
+```bash
+vicfg-vswitch -h <ESXi hostname> -l
+```
 
 ## Creating, Configuring, and Deleting VMkernel NICs
 
@@ -112,15 +132,21 @@ To work with ESXi's VMkernel NICs, you'll primarily use the `vicfg-vmknic` comma
 
 To create a new VMkernel NIC, use this command:
 
-	vicfg-vmknic -h <ESXi hostname> -a -i <VMkernel NIC IP address> -n <Subnet mask> <Port group>
+```bash
+vicfg-vmknic -h <ESXi hostname> -a -i <VMkernel NIC IP address> -n <Subnet mask> <Port group>
+```
 
 To delete a VMkernel NIC, use this command:
 
-	vicfg-vmknic -h <ESXi hostname> -d <Port group>
+```bash
+vicfg-vmknic -h <ESXi hostname> -d <Port group>
+```
 
 To enable vMotion on an already-created VMkernel NIC:
 
-	vicfg-vmknic -h <ESXi hostname> -E <Port group>
+```bash
+vicfg-vmknic -h <ESXi hostname> -E <Port group>
+```
 
 There are more networking-related tasks that you can perform from the CLI, but for a new user these commands should handle the lion's share of all the networking configuration. Good luck with your ESXi environment!
 

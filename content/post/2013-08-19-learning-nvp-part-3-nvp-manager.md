@@ -54,20 +54,28 @@ Let's take a look at the commands needed to accomplish these steps.
 
 First, setting the password for the admin user is done on NVP Manager just like it was on the NVP controllers:
 
-    set user admin password
+```text
+set user admin password
+```
 
 You'll be prompted to supply the new password, then retype it for confirmation. Next you can set the hostname, again using the same command as on the NVP controllers:
 
-    set hostname <hostname>
+```text
+set hostname <hostname>
+```
 
 As with the NVP controllers, the NVP Manager installation routine automatically installs [Open vSwitch (OVS)](http://openvswitch.org/) and creates a bridge interface for each physical interface. In my virtual NVP Manager instance, I provided only a single interface (recognized as `eth0`), so the installation created a bridge interface named `breth0`. You can assign the IP address to this bridge interface using this command:
 
-    set network interface breth0 ip config static 192.168.1.3 255.255.255.0
+```text
+set network interface breth0 ip config static 192.168.1.3 255.255.255.0
+```
 
 Naturally, you'd want to substitute the correct IP address and subnet mask in that command. Now that network connectivity has been established (you can test it with `ping`), you can add DNS and NTP servers with these commands:
 
-    add network dns-server <DNS server IP address>  
-    add network ntp-server <NTP server IP address>
+```text
+add network dns-server <DNS server IP address>  
+add network ntp-server <NTP server IP address>
+```
 
 Repeat the commands to add multiple DNS and/or NTP servers. Use `remove` instead of `add` in the above commands to remove a DNS or NTP server address (especially useful if you typed in the wrong address).
 

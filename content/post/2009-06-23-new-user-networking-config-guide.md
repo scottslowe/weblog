@@ -41,27 +41,39 @@ You'll primarily use the `esxcfg-vswitch` command for the majority of these task
 
 To create a vSwitch, use this command:
 
-	esxcfg-vswitch -a <vSwitch Name>
+```bash
+esxcfg-vswitch -a <vSwitch Name>
+```
 
 To link a physical NIC to a vSwitch---which is necessary in order for the vSwitch to pass traffic onto the physical network or to receive traffic from the physical network---use this command:
 
-	esxcfg-vswitch -L <Physical NIC> <vSwitch Name>
+```bash
+esxcfg-vswitch -L <Physical NIC> <vSwitch Name>
+```
 
 In the event you don't have information on the physical NICs, you can use this command to list the physical NICs (that's a lowercase L in the command):
 
-	esxcfg-nics -l
+```bash
+esxcfg-nics -l
+```
 
 Conversely, if you need to unlink (remove) a physical NIC from a vSwitch, use this command:
 
-	esxcfg-vswitch -U <Physical NIC> <vSwitch Name>
+```bash
+esxcfg-vswitch -U <Physical NIC> <vSwitch Name>
+```
 
 To change the Maximum Transmission Unit (MTU) size on a vSwitch, use this command:
 
-	esxcfg-vswitch -m <MTU size> <vSwitch Name>
+```bash
+esxcfg-vswitch -m <MTU size> <vSwitch Name>
+```
 
 To delete a vSwitch, use this command:
 
-	esxcfg-vswitch -d <vSwitch Name>
+```bash
+esxcfg-vswitch -d <vSwitch Name>
+```
 
 ## Creating, Configuring, and Deleting Port Groups
 
@@ -69,18 +81,26 @@ As with virtual switches, the `esxcfg-vswitch` is the command you will use to wo
 
 To create a port group, use this command:
 
-	esxcfg-vswitch -A <Port Group Name> <vSwitch Name>
+```bash
+esxcfg-vswitch -A <Port Group Name> <vSwitch Name>
+```
 
 To set the VLAN ID for a port group, use this command:
 
-	esxcfg-vswitch -v <VLAN ID> -p <Port Group Name> <vSwitch Name>
+```bash
+esxcfg-vswitch -v <VLAN ID> -p <Port Group Name> <vSwitch Name>
+```
 
 To delete a port group, use this command:
 
-	esxcfg-vswitch -D <Port Group Name> <vSwitch Name>
+```bash
+esxcfg-vswitch -D <Port Group Name> <vSwitch Name>
+```
 
 To view the current list of vSwitches, port groups, and uplinks, use this command (that's a lowercase L in the command):
 
-	esxcfg-vswitch -l
+```bash
+esxcfg-vswitch -l
+```
 
 There are more networking-related tasks that you can perform from the CLI, but for a new user these commands should handle the lion's share of all the networking configuration. Good luck!

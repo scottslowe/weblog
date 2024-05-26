@@ -25,7 +25,9 @@ OK, nothing unusual or unexpected there.
 
 Next, I'll add a pair of veth interfaces:
 
-    ip link add vmveth0 type veth peer vmveth1
+```bash
+ip link add vmveth0 type veth peer vmveth1
+```
 
 Then the output of `ip link list` looks like this (I've circled some of the output to draw your attention; again, you can click for a larger version):
 

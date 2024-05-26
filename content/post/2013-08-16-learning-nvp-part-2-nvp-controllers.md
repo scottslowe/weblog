@@ -60,38 +60,52 @@ Let's take a look at these steps in a bit more detail. The NVP controller offers
 
 To set the password for the default admin user, just use this command:
 
-    set user admin password
+```text
+set user admin password
+```
 
 You'll be prompted to supply the new password, then retype it for confirmation. Easy, right? (And pretty familiar if you've used Linux before.)
 
 Setting the hostname for the controller is equally straightforward:
 
-    set hostname <hostname>
+```text
+set hostname <hostname>
+```
 
 Now you're ready to assign an IP address to the controller. Use this command to see the network interfaces that are present in the controller:
 
-    show network interfaces
+```text
+show network interfaces
+```
 
 You'll note that for each physical interface in the system, the NVP installation procedure will create a corresponding bridge (this is actually an OVS bridge). So, for a server that has two interfaces (`eth0` and `eth1`), the installation process will automatically create `breth0` and `breth1`. Generally, you'll want to assign your IP addresses to the bridge interfaces, and not to the physical interfaces.
 
 Let's say that you wanted to assign the IP address to `breth0`, which corresponds to the physical `eth0` interface. You'd use this command:
 
-    set network interface breth0 ip config static 192.168.1.5 255.255.255.0
+```text
+set network interface breth0 ip config static 192.168.1.5 255.255.255.0
+```
 
 Naturally, you'd want to substitute the correct IP address and subnet mask in that command. Once the interface is configured, you can use the standard `ping` command to test connectivity (note, though, that you can't use any switches to ping, as they aren't supported by the streamlined NVP controller CLI).
 
 Note that you may also need to add a default route using this command:
 
-    add network route 0.0.0.0 0.0.0.0 <em><Default gateway IP address></em>
+```text
+add network route 0.0.0.0 0.0.0.0 <em><Default gateway IP address></em>
+```
 
 Assuming connectivity is good, you're ready to add DNS and NTP servers to your configuration. Use these commands:
 
-    add network dns-server <DNS server IP address>  
-    add network ntp-server <NTP server IP address>
+```text
+add network dns-server <DNS server IP address>  
+add network ntp-server <NTP server IP address>
+```
 
 Repeat these commands as needed to add multiple DNS and/or NTP servers. If you mess up and accidentally fat finger an IP address (happens to me all the time!), you can remove the incorrect IP address using the `remove` command, like this:
 
-    remove network dns-server <em><Incorrect DNS IP address></em>
+```text
+remove network dns-server <em><Incorrect DNS IP address></em>
+```
 
 Substitute `ntp-server` for `dns-server` in the above command to remove an incorrect NTP server address.
 
@@ -99,23 +113,33 @@ It's entirely possible that an NVP controller could have multiple IP addresses a
 
 First, set the IP address the controller should use for management traffic (this address should be an address assigned to one of the interfaces):
 
-    set control-cluster management-address <IP address>
+```text
+set control-cluster management-address <IP address>
+```
 
 Then tell the NVP controller which IP address to use for the switch manager role (this is the role that communicates with OVS devices; again, this should be an address already assigned to one of the controller's interfaces):
 
-    set control-cluster role switch_manager listen-ip <IP address>
+```text
+set control-cluster role switch_manager listen-ip <IP address>
+```
 
 And tell the controller which IP address to use for the API provider role (this is the role that handles northbound REST API traffic). As before, this should be an IP address assigned to one of the controller's interfaces:
 
-    set control-cluster role api_provider listen-ip <IP address>
+```text
+set control-cluster role api_provider listen-ip <IP address>
+```
 
 Once all this is done, you're ready to turn up the controller cluster using the `join control-cluster` command. For the first controller, you'll "join" it to itself. In the event the NVP controller has multiple IP addresses assigned, the IP address to use is the IP address you specified when you set the management IP address earlier. Here's the command to build a controller cluster from the **first** controller:
 
-    join control-cluster <Own IP address>
+```text
+join control-cluster <Own IP address>
+```
 
 For the **second and third** controllers in the cluster, you'll point them to the IP address of the first controller in the cluster, like this:
 
-    join control-cluster <IP address of first controller>
+```text
+join control-cluster <IP address of first controller>
+```
 
 (Side note: you can actually point the third controller to _any_ available node in the cluster. I specified the first controller here just for succinctness.)
 

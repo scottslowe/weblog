@@ -28,10 +28,12 @@ As you can see from this highly-simplified diagram, there are three basic types 
 
 For example, the management interface (in VMware ESX this is the Service Console interface, in VMware ESXi this is a separate instance of a VMkernel interface) is typically configured to connect to an access port with access to a single VLAN. In Cisco switch configurations, the interface configuration would look something like this:
 
-	interface GigabitEthernet 1/1  
-	switchport mode access  
-	switchport access vlan 27  
-	spanning-tree portfast
+```text
+interface GigabitEthernet 1/1  
+switchport mode access  
+switchport access vlan 27  
+spanning-tree portfast
+```
 
 There might be other commands present, but these are the basic recommended settings. This makes the management interfaces on an ESX/ESXi host act, look, feel, and behave just exactly like the network interfaces on pretty much every other system in the data center. Although VMware HA/DRS cluster design considerations might lead you toward certain Layer 2 boundaries, there's nothing stopping you from putting management interfaces from different VMware ESX/ESXi hosts in different Layer 3 VLANs and still conducting vMotion operations between them.
 
@@ -39,12 +41,14 @@ So, if it's not the management interfaces that are gating the practicality of vM
 
 Physical network interfaces in a VMware ESX/ESXi host that will be used for VM networking traffic are most commonly configured to act as 802.1Q VLAN trunks. For example, the Cisco switch configuration for a port connected to a network interface being used for VM networking traffic would look something like this:
 
-	interface GigabitEthernet1/10  
-	switchport trunk encapsulation dot1q  
-	switchport mode trunk  
-	switchport trunk allowed vlan 1-499  
-	switchport trunk native vlan 499  
-	spanning-tree portfast trunk
+```text
+interface GigabitEthernet1/10  
+switchport trunk encapsulation dot1q  
+switchport mode trunk  
+switchport trunk allowed vlan 1-499  
+switchport trunk native vlan 499  
+spanning-tree portfast trunk
+```
 
 As before, some commands might be missing or some additional commands might be present, but this gives you the basic configuration. In this configuration, the VM networking interfaces are actually capable of supporting multiple VLANs simultaneously. (More information on the configuration of VLANs with VMware ESX/ESXi can be found in [this aging but still very applicable article][2].)
 
@@ -52,10 +56,12 @@ In practical use what this means is that any given VMware ESX/ESXi host could ha
 
 Where in the world, then, does this Layer 2 adjacency thing keep coming from? If it's not management interfaces (it isn't), and it's not VM networking interfaces (it isn't), then what is it? It's the VMkernel interface that is configured to support vMotion. In order to vMotion a VM from one ESX/ESXi host to another, each host's vMotion-enabled VMkernel interface has to be in the same IP subnet (i.e., in the same Layer 2 VLAN or broadcast domain). Going back to Cisco switch configurations, a vMotion-enabled VMkernel port will be configured very much like a management interface:
 
-	interface GigabitEthernet 1/5  
-	switchport mode access  
-	switchport access vlan 37  
-	spanning-tree portfast
+```text
+interface GigabitEthernet 1/5  
+switchport mode access  
+switchport access vlan 37  
+spanning-tree portfast
+```
 
 This means that the vMotion-enabled VMkernel port is just an access port (no 802.1Q trunking) in a single VLAN.
 

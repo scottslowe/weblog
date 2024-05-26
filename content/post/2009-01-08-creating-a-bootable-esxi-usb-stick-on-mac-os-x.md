@@ -32,7 +32,9 @@ So, here's my guide for creating a bootable ESXi USB flash drive from Mac OS X.
 
 When the process completes---you'll know because the Terminal prompt will return---use this command to "eject" the USB flash drive and make it safe for physical removal:
 
-	diskutil eject /dev/disk1
+```bash
+diskutil eject /dev/disk1
+```
 
 Again, replace `/dev/disk1` with the appropriate device for your system.
 

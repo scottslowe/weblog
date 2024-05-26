@@ -18,12 +18,16 @@ It wasn't as much that iTunes was prompting me, as I knew why the application wa
 
 First, use the `codesign` utility (a handy little tool to verify code signatures) to see if iTunes has been modified/damaged/corrupted in some way:
 
-    codesign -v --verbose /Applications/iTunes.app
+```bash
+codesign -v --verbose /Applications/iTunes.app
+```
 
 If iTunes is fine, then you'll get a response like this:
 
-    /Applications/iTunes.app: valid on disk
-    /Applications/iTunes.app: satisfies its Designated Requirement
+```text
+/Applications/iTunes.app: valid on disk
+/Applications/iTunes.app: satisfies its Designated Requirement
+```
 
 However, if you're experiencing the same problem that I was experiencing, you'll probably get a response different than the one above. Your message will say something to the effect that iTunes is invalid on disk and is missing a required component (or something along those lines; I didn't capture a screenshot with the exact message---sorry).
 

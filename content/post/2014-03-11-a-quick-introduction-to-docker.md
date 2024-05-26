@@ -36,24 +36,32 @@ To install Docker on Ubuntu, it's a pretty straightforward process. (Note that I
 
 First, you'll want to make sure you are running at least the 3.8 kernel. (Newer versions of 12.04 LTS, such as 12.04.4, appear to be installing the 3.11 kernel by default, so you may not have to do this step.) To install the 3.8 kernel (in case you're running something older), just run these two commands and reboot:
 
-    sudo apt-get update
-    sudo apt-get install linux-image-generic-lts-raring \
-    linux-headers-generic-lts-raring
+```bash
+sudo apt-get update
+sudo apt-get install linux-image-generic-lts-raring \
+linux-headers-generic-lts-raring
+```
 
 Next, add the Docker repository key to your local Apt keychain:
 
-    sudo apt-key adv --keyserver keyserver.ubuntu.com \
-    --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+```bash
+sudo apt-key adv --keyserver keyserver.ubuntu.com \
+--recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+```
 
 Add the Docker repository to your list of repositories:
 
-    sudo sh -c "echo deb http://get.docker.io/ubuntu docker main \
-    > /etc/apt/sources.list.d/docker.list"
+```bash
+sudo sh -c "echo deb http://get.docker.io/ubuntu docker main \
+> /etc/apt/sources.list.d/docker.list"
+```
 
 Finally, install Docker with an `apt-get` combo:
 
-    sudo apt-get update
-    sudo apt-get install lxc-docker
+```bash
+sudo apt-get update
+sudo apt-get install lxc-docker
+```
 
 Note that this automatically installs LXC, but an "older" version (0.7.5). I haven't tested to see if Docker will work with the newer alpha release of LXC 1.0.0 that is available in the precise-backports repository (see [this post][2] for more information).
 
@@ -61,17 +69,23 @@ Note that this automatically installs LXC, but an "older" version (0.7.5). I hav
 
 Now that Docker is installed, you can launch a quick Docker container like this:
 
-    sudo docker run -i -t ubuntu /bin/bash
+```bash
+sudo docker run -i -t ubuntu /bin/bash
+```
 
 If everything is working, the first time you run this command it will automatically download an Ubuntu image (as specified by "ubuntu" on that command line) and create a simple Docker container that just runs the bash shell. You'll get dropped into an odd prompt that will look something like this (the numbers will change from system to system):
 
-    root@4a2f737d6e2e:/#
+```bash
+root@4a2f737d6e2e:/#
+```
 
 You're now running in an Ubuntu environment, but it's a clean environment---there are no daemons running, nothing listening on various network ports, nothing else except the bash shell. If you run `ifconfig`, you'll see that eth0 has an IP address, but that's it. When you type `exit`, the container will terminate and you'll be returned to the prompt for your host system.
 
 Now, let's take a look at what happened as a result of running that command. If you run `sudo docker images`, you will see a list of available Docker images that were downloaded to your local system. They'll all be listed as "ubuntu" in the first column, and it's the second column that will differentiate them---you'll see listings for 12.04, 12.10, 13.04, 13.10, etc. You could run a specific Ubuntu image with a command like this:
 
-    sudo docker run -i -t ubuntu:13.10 /bin/bash
+```bash
+sudo docker run -i -t ubuntu:13.10 /bin/bash
+```
 
 If you run this command, you'll note that you're launched into this new container _very_ quickly. This is one of the strengths of Docker: once an image has been downloaded, launching containers based on that image is very fast.
 
@@ -83,25 +97,27 @@ So what if you need a Docker container that _does_ need to have a daemon running
 
 To do something like that, you'll need to utilize a _Dockerfile._ A Dockerfile is a plain text file that tells Docker exactly how to construct a Docker image. (I mentioned earlier that Docker had its own DSL; this is what I'm talking about.) Here's an example Dockerfile:
 
-    FROM ubuntu:12.04
-    MAINTAINER Joe Shmoe "jshmoe@domain.com"
-    RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-    RUN apt-get update
-    RUN apt-get install -y nginx
-    EXPOSE 80
-    CMD ["nginx"]
+```dockerfile
+FROM ubuntu:12.04
+MAINTAINER Joe Shmoe "jshmoe@domain.com"
+RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install -y nginx
+EXPOSE 80
+CMD ["nginx"]
+```
 
-The syntax for a Dockerfile is `INSTRUCTION arguments`, where "INSTRUCTION" refers to commands like FROM, RUN, or CMD. Here are a few quick notes:
+The syntax for a Dockerfile is `INSTRUCTION arguments`, where "INSTRUCTION" refers to commands like `FROM`, `RUN`, or `CMD`. Here are a few quick notes:
 
-* The FROM command is what enables Docker containers to be based on other Docker containers. In this case, the Docker container is based on the Ubuntu image; specifically, the Ubuntu 12.04 image.
+* The `FROM` command is what enables Docker containers to be based on other Docker containers. In this case, the Docker container is based on the Ubuntu image; specifically, the Ubuntu 12.04 image.
 
-* The RUN commands execute various commands within the new container. You'd use RUN instructions to install packages, modify files, etc.
+* The `RUN` commands execute various commands within the new container. You'd use RUN instructions to install packages, modify files, etc.
 
-* The EXPOSE command exposes a listening port on a Docker container.
+* The `EXPOSE` command exposes a listening port on a Docker container.
 
-* The CMD instruction tells what command/daemon to run when the container launches.
+* The `CMD` instruction tells what command/daemon to run when the container launches.
 
-I don't have room here for a full Dockerfile tutorial, but Docker themselves has [a great one](http://docs.docker.com/userguide/dockerimages/#building-an-image-from-a-dockerfile). Suffice it to say that if you want anything more complex than a simple bash shell, you're probably going to need to use a Dockerfile.
+I don't have room here for a full Dockerfile tutorial, but Docker themselves have [a great one](http://docs.docker.com/userguide/dockerimages/#building-an-image-from-a-dockerfile). Suffice it to say that if you want anything more complex than a simple bash shell, you're probably going to need to use a Dockerfile.
 
 Once you have a working Dockerfile (just as a heads-up, the above example doesn't actually work---sorry), you can create a Docker image from that Dockerfile using the `docker build` command. Once you have a working image, you can then base other Docker containers on _that_ image (using the FROM instruction in a subsequent Dockerfile).
 

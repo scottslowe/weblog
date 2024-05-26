@@ -30,11 +30,15 @@ To get a version of [libvirt](http://libvirt.org/) that supports [Open vSwitch (
 
 Once you get the Ubuntu Cloud Archive working, go ahead and install libvirt:
 
-    sudo apt-get install libvirt-bin
+```bash
+sudo apt-get install libvirt-bin
+```
 
 Next, go ahead and install some prerequisite packages you'll need to get OVS installed and working:
 
-    sudo apt-get install dkms make libc6-dev
+```bash
+sudo apt-get install dkms make libc6-dev
+```
 
 Now you're ready to install OVS.
 
@@ -42,12 +46,16 @@ Now you're ready to install OVS.
 
 Once your hypervisor node has the appropriate prerequisites installed, you'll need to install an NVP-specific build of OVS. This build of OVS is identical to the open source build in every way _except_ that it includes the ability to create STT tunnels and includes some extra NVP-specific utilities for integrating OVS into NVP. For Ubuntu, this NVP-specific version of OVS is distributed as a compressed tar archive. First, you'll need to extract the files out like this:
 
-    tar -xvzf <file name>
+```bash
+tar -xvzf <file name>
+```
 
 This will extract a set of Debian packages. For ease of use, I recommend moving these files into a separate directory. Once the files are in their own directory, you would install them like this:
 
-    cd <directory where the files are stored>
-    sudo dpkg -i *.deb
+```bash
+cd <directory where the files are stored>
+sudo dpkg -i *.deb
+```
 
 Note that if you don't install the prerequisites listed above, the installation of the DKMS package (for the OVS kernel datapath) will fail. Trying to then run `apt-get install <package list>` at that point will also fail; you'll need to run `apt-get -f install`. This will "fix" the broken packages and allow the DKMS installation to proceed (which it will do automatically).
 

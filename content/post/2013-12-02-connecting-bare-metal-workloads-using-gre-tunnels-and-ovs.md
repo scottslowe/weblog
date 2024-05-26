@@ -49,18 +49,24 @@ First, you'll need to create an OVS bridge that has no physical interfaces---the
 
 To create the isolated bridge, use `ovs-vsctl`:
 
-    ovs-vsctl add-br br-int
+```bash
+ovs-vsctl add-br br-int
+```
 
 Naturally, you would substitute whatever name you'd like to use in the above command. Once you've created the bridge, then add an OVS internal interface; this internal interface will become the bare metal workload's primary network interface:
 
-    ovs-vsctl add-port br-int mgmt0 -- set interface mgmt0 type=internal
+```bash
+ovs-vsctl add-port br-int mgmt0 -- set interface mgmt0 type=internal
+```
 
 You can use a name other than `mgmt0` if you so desire. Next, configure this new OVS internal interface at the operating system level, assigning it an IP address. This IP address should be taken from a subnet "inside" the GRE tunnel, because it is only via the GRE tunnel that you'll want the workload to communicate.
 
 The following commands will take care of this part for you:
 
-    ip addr add 10.10.10.30/24 dev mgmt0
-    ip link set mgmt0 up
+```bash
+ip addr add 10.10.10.30/24 dev mgmt0
+ip link set mgmt0 up
+```
 
 The process of ensuring that the `mgmt0` interface comes up automatically when the system boots is left as an exercise for the reader (hint: use `/etc/network/interfaces`).
 
@@ -80,19 +86,27 @@ The commands for establishing the GRE tunnel have been described numerous times,
 
 First, add the GRE port to the bridge:
 
-    ovs-vsctl add-port br-int gre0
+```bash
+ovs-vsctl add-port br-int gre0
+```
 
 Next, configure the GRE interface on that port:
 
-    ovs-vsctl set interface gre0 type=gre options:remote_ip=<IP address of remote tunnel endpoint>
+```bash
+ovs-vsctl set interface gre0 type=gre options:remote_ip=<IP address of remote tunnel endpoint>
+```
 
 Let's say that you've assigned 192.168.1.10 to the transport interface on this system (the bare metal OS instance), and that the remote tunnel endpoint (which could be a host with multiple containers, or a hypervisor running VMs) has an IP address of 192.168.1.15. On the bare metal system, you'd configure the GRE interface like this:
 
-    ovs-vsctl set interface gre0 type=gre options:remote_ip=192.168.1.15
+```bash
+ovs-vsctl set interface gre0 type=gre options:remote_ip=192.168.1.15
+```
 
 On the remote tunnel endpoint, you'd configure the GRE interface like this:
 
-    ovs-vsctl set interface gre0 type=gre options:remote_ip=192.168.1.10
+```bash
+ovs-vsctl set interface gre0 type=gre options:remote_ip=192.168.1.10
+```
 
 In other words, each GRE interface points to the transport IP address on the _opposite_ end of the tunnel.
 

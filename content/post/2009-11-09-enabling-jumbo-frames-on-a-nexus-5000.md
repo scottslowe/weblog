@@ -28,22 +28,26 @@ The commands are pretty straightforward, and I've included the commands for both
 
 For NX-OS 4.1, the commands to enable jumbo frames are:
 
-	switch(config)# policy-map type network-qos jumbo  
-	switch(config-pmap-nq)# class type network-qos class-default  
-	switch(config-pmap-c-nq)# mtu 9216  
-	switch(config-pmap-c-nq)# exit  
-	switch(config-pmap-nq)# exit  
-	switch(config)# system qos  
-	switch(config-sys-qos)# service-policy type network-qos jumbo
+```text
+switch(config)# policy-map type network-qos jumbo  
+switch(config-pmap-nq)# class type network-qos class-default  
+switch(config-pmap-c-nq)# mtu 9216  
+switch(config-pmap-c-nq)# exit  
+switch(config-pmap-nq)# exit  
+switch(config)# system qos  
+switch(config-sys-qos)# service-policy type network-qos jumbo
+```
 
 Now, contrast the commands above with the following commands, which you would have used to enable jumbo frames on NX-OS 4.0:
 
-	switch(config)# policy-map jumbo  
-	switch(config-pmap)# class class-default  
-	switch(config-pmap-c)# mtu 9216  
-	switch(config-pmap-c)# exit  
-	switch(config)# system qos  
-	switch(config-system)# service-policy jumbo
+```text
+switch(config)# policy-map jumbo  
+switch(config-pmap)# class class-default  
+switch(config-pmap-c)# mtu 9216  
+switch(config-pmap-c)# exit  
+switch(config)# system qos  
+switch(config-system)# service-policy jumbo
+```
 
 The end result of these differences is this: if you upgrade NX-OS from 4.0 to 4.1, then your jumbo frames configuration will go away, and you'll need to enter the commands for version 4.1 in order to enable jumbo frame support again. This little gotcha caused me quite a headache when my NFS-based datastores suddenly went offline after the NX-OS upgrade.
 

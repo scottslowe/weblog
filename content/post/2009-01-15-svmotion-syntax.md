@@ -18,8 +18,10 @@ This is nothing earth-shattering; I just needed to record the syntax for the SVM
 
 Here's the syntax:
 
-	svmotion --datacenter=<DC Name> --url=https://<FQDN of VCMS>/sdk
-	--username=<Username on VCMS> --password=<Password> --vm=[<Source
-	datastore>] <Path to VMX file of VM>:<Destination datastore>
+```bash
+svmotion --datacenter=<DC Name> --url=https://<FQDN of VCMS>/sdk \
+--username=<Username on VCMS> --password=<Password> \
+--vm=[<Source datastore>] <Path to VMX file of VM>:<Destination datastore>
+```
 
 If any parameters have spaces in them---like the datacenter name or the path to the .VMX file---you'll need to enclose those parameters in single quotes.

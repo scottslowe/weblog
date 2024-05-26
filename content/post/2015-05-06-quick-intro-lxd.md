@@ -24,9 +24,11 @@ LXD works in conjunction with LXC and is not designed to replace or supplant LXC
 
 You can install LXD on Ubuntu 14.04 or later with a very simple set of commands:
 
-    sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
-    sudo apt-get update
-    sudo apt-get install lxd
+```bash
+sudo add-apt-repository ppa:ubuntu-lxc/lxd-stable
+sudo apt-get update
+sudo apt-get install lxd
+```
 
 That's it. You'll probably need to log out and log back in again so that the group memberships are updated (you'll need to be member of the "lxd" group to be able to interact with the lxd daemon on the back end).
 
@@ -36,21 +38,29 @@ Once LXD is installed on the system, then you're ready to start working with con
 
 To get a container image onto your system, first add a _remote_, which is a pointer to a remote repository of images. The generic command looks like this:
 
-    lxc remote add <local name> <remote URL/FQDN>
+```bash
+lxc remote add <local name> <remote URL/FQDN>
+```
 
 For example, to add the public LXD server, you'd use this command:
 
-    lxc remote add lxc-org images.linuxcontainers.org
+```bash
+lxc remote add lxc-org images.linuxcontainers.org
+```
 
 Here, `lxc-org` is the local alias (name) for the repository, and `images.linuxcontainers.org` is the URL/FQDN for the remote repository. Once you've added a remote repository in this sort of way, you can refer to this remote repository using the alias (name) you specified.
 
 Once you have an image repository available, you'd then copy an image down to your system with this command:
 
-    lxc image copy <remote name>:/path/to/image local: --alias=<image name>
+```bash
+lxc image copy <remote name>:/path/to/image local: --alias=<image name>
+```
 
 So, to copy down a 64-bit Debian Jessie image, you'd run this command:
 
-    lxc image copy lxc-org:/debian/jessie/amd64 local: --alias=jessie-amd64
+```bash
+lxc image copy lxc-org:/debian/jessie/amd64 local: --alias=jessie-amd64
+```
 
 The `local:` part here is necessary---this is what tells the `lxc` client to copy the image to your local system (in other words, both the source and destination are needed in this command).
 
@@ -58,25 +68,35 @@ Once you have an image on your system, you can run `lxc image list` again, and t
 
 With an image in place, you're ready to launch a container with a command like this:
 
-    lxc launch <image name> <container name>
+```bash
+lxc launch <image name> <container name>
+```
 
 If you had an image named "jessie-amd64", you could run a command like this:
 
-    lxc launch jessie-amd64 jessie-01
+```bash
+lxc launch jessie-amd64 jessie-01
+```
 
 Within a few seconds, you'll have a running container based on the 64-bit Debian Jessie image. Or, let's say you wanted to run a 32-bit version of Ubuntu on top of a 64-bit Ubuntu system. If your 32-bit image was called "trusty-i386", then the command to launch it might look like this:
 
-    lxc launch trusty-i386 trusty32
+```bash
+lxc launch trusty-i386 trusty32
+```
 
 Again, within a few seconds, you'll have a container running 32-bit Ubuntu "Trusty Tahr" 14.04 on your LXD-equipped host system.
 
 To get into the system, you'd run a command like this:
 
-    lxc exec <container name> <command>
+```bash
+lxc exec <container name> <command>
+```
 
 For example, to get a shell in the 32-bit Ubuntu container you launched earlier, you'd run this command:
 
-    lxc exec trusty32 /bin/bash
+```bash
+lxc exec trusty32 /bin/bash
+```
 
 This will drop you at a shell prompt inside the specified container. From there, if you ran `file /bin/ls` you'd see that `/bin/ls` is reported as a 32-bit ELF executable. Press Ctrl-D to get out of the shell (then run `file /bin/ls` and compare the output to the command you ran inside the container).
 
@@ -84,15 +104,17 @@ Done with the container? Simply run `lxc stop <container>` to stop it. Don't wor
 
 By default, these containers are _persistent_---changes made within the container persist over time (until the container is deleted with `lxc delete`). However, you can make LXD behave more like Docker by using the `--ephemeral` flag to the `lxc launch` command, like this:
 
-    lxc launch trusty-i386 trusty32 --ephemeral
+```bash
+lxc launch trusty-i386 trusty32 --ephemeral
+```
 
 When you use this flag, the container goes away as soon as you run `lxc stop <container>`.
 
 ## Initial Thoughts
 
-Although both call themselves "containers," LXD is very different from Docker or rkt. LXD is more like an "OS container" while Docker and rkt are more like "application containers." Thus, if you're coming from a VM-centric background, LXD will probably make more sense to you: it will run multiple processes and "look/feel" like a lightweight VM. Is one better than the other? Not necessarily; they're just _different._ For some use cases and users, LXD may make more sense (for example, [read][link-9] what Michael DeHaan---creator of Ansible and Cobbler---had to say about using LXC.)
+Although both call themselves "containers," LXD is very different from Docker or `rkt`. LXD is more like an "OS container" while Docker and `rkt` are more like "application containers." Thus, if you're coming from a VM-centric background, LXD will probably make more sense to you: it will run multiple processes and "look/feel" like a lightweight VM. Is one better than the other? Not necessarily; they're just _different._ For some use cases and users, LXD may make more sense (for example, [read][link-9] what Michael DeHaan---creator of Ansible and Cobbler---had to say about using LXC.)
 
-That being said, while LXC is stable LXD is still undergoing rapid development. Some features haven't been implemented yet, and the documentation is still a bit on the light side. The contributors behind LXD are going to need to really make this super-easy to use and adopt in order for them to get the same kind of mindshare that Docker (and, to a lesser extent, rkt) is getting right now.
+That being said, while LXC is stable LXD is still undergoing rapid development. Some features haven't been implemented yet, and the documentation is still a bit on the light side. The contributors behind LXD are going to need to really make this super-easy to use and adopt in order for them to get the same kind of mindshare that Docker (and, to a lesser extent, `rkt`) is getting right now.
 
 ## Additional Resources
 

@@ -23,15 +23,21 @@ I say "incorrectly" because you _are_ able to assign more than just virtual Ethe
 
 In any case, assigning other types of network interfaces to a network namespace is just like assigning veth interfaces. First, you create the network namespace:
 
-    ip netns add <new namespace name>
+```bash
+ip netns add <new namespace name>
+```
 
 Then, you'd assign the interface to the namespace:
 
-    ip link set <device name> netns <namespace name>
+```bash
+ip link set <device name> netns <namespace name>
+```
 
 For example, if you wanted to assign `eth1` to the "blue" namespace, you'd run this:
 
-    ip link set eth1 netns blue
+```bash
+ip link set eth1 netns blue
+```
 
 Please note that I haven't found a way to unassign an interface from a network namespace other than deleting the namespace entirely.
 
@@ -39,35 +45,49 @@ If you want to assign a VLAN interface to a namespace, the process is _slightly_
 
 For example, first you'd create the namespace "red":
 
-    ip netns add red
+```bash
+ip netns add red
+```
 
 Then you'd create the VLAN interface for VLAN 100 on physical interface `eth1`:
 
-    ip link add link eth1 name eth1.100 type vlan id 100
+```bash
+ip link add link eth1 name eth1.100 type vlan id 100
+```
 
 The generic form of this command is this:
 
-    ip link add link <physical device> name <VLAN device name> type vlan id <VLAN ID>
+```bash
+ip link add link <physical device> name <VLAN device name> type vlan id <VLAN ID>
+```
 
 Note that you can't use `ip netns exec` to run the command to create the VLAN interface in the network namespace directly; it won't work because the parent interface upon which the VLAN interface is based doesn't exist in the namespace. So you'll create the VLAN interface in the default namespace first, then move it over.
 
 Once the VLAN interface is created, then move it to the target namespace:
 
-    ip link set eth1.100 netns red
+```bash
+ip link set eth1.100 netns red
+```
 
 One (sort of) interesting thing I noted in my testing was that link status and IP addresses don't move between namespaces. Therefore, don't bother assigning an IP address or setting the link state of an interface before you move it to the final namespace, because you'll just have to do it again.
 
 To make the interface functional inside the target namespace, you'll use `ip netns exec` to target the specific configuration commands against the desired namespace. For example, if the VLAN interface `eth1.100` exists in the namespace "blue", you'd run these commands:
 
-    ip netns exec blue ip addr add 10.1.1.1/24 dev eth1.100
+```bash
+ip netns exec blue ip addr add 10.1.1.1/24 dev eth1.100
+```
 
 That adds the IP address to the interface in the namespace; then you'd use this command to set the link status to up:
 
-    ip netns exec blue ip link set eth1.100 up
+```bash
+ip netns exec blue ip link set eth1.100 up
+```
 
 Then you can test network connectivity with our good friend `ping` like this:
 
-    ip netns exec blue ping -c 4 10.1.1.2
+```bash
+ip netns exec blue ping -c 4 10.1.1.2
+```
 
 (Obviously, you'd want to substitute an appropriate IP address there for your specific configuration and environment.)
 

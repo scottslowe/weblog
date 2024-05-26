@@ -57,19 +57,27 @@ If you log into NSX Manager, you'll see that a new logical switch (whose name ma
 
 If you're a command-line freak, you could also get this information from the CLI. To find the subnet associated with the logical network you just created:
 
-    SUBNET_ID=$(neutron subnet-list | awk '/\ logical-net-02\ / {print $2}')
+```bash
+SUBNET_ID=$(neutron subnet-list | awk '/\ logical-net-02\ / {print $2}')
+```
 
 To list all the ports on that subnet:
 
-    neutron port-list | grep $SUBNET_ID
+```bash
+neutron port-list | grep $SUBNET_ID
+```
 
 In this case (if you've been following my examples), there is only one port on that subnet, so you can capture the ID of that port in order to get more information about the port:
 
-    PORT_ID=$(neutron port-list | grep $SUBNET_ID | awk '{print $2}')
+```bash
+PORT_ID=$(neutron port-list | grep $SUBNET_ID | awk '{print $2}')
+```
 
 To list the information associated with that specific port, paying particular attention to the `device_owner` attribute (which should show "network:dhcp"):
 
-    neutron port-show $PORT_ID
+```bash
+neutron port-show $PORT_ID
+```
 
 If you have been reading along diligently, you'll probably be able to put 2 and 2 together here to realize that the "network:dhcp" port is actually a port on OVS on the network node (which, if you'll recall, is registered as a hypervisor in VMware NSX). If you've _really_ been following my stuff closely, you'll probably also know that the OVS port is connected to a veth pair, which in turn connects to a network namespace where an instance of `dnsmasq` is running. (Want to learn more about network namespaces? See [here][1].)
 

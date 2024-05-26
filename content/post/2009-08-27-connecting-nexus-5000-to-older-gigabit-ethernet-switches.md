@@ -21,33 +21,41 @@ It's really not too complicated. In this post, I'll describe the configuration I
 
 Here's the configuration I used on the Nexus:
 
-	interface Ethernet1/3  
-	switchport mode trunk  
-	speed 1000  
-	switchport trunk native vlan 999  
-	channel-group 3 mode on
+```text
+interface Ethernet1/3  
+switchport mode trunk  
+speed 1000  
+switchport trunk native vlan 999  
+channel-group 3 mode on
+```
 
 This configuration was repeated on 2 ports for the Cisco Catalyst 3560G and on 2 more ports for the HP ProCurve 2924. Obviously, each of them used a different port channel (`channel-group 3 mode on` for the Catalyst and `channel-group 4 mode on` for the ProCurve). Remember that you have to use one of the first 8 (for a Nexus 5010) or the first 16 (for a Nexus 5020) ports because these are the only ports that support setting the speed down to Gigabit Ethernet.
 
 On the Cisco Catalyst 3560G, the configuration is almost identical:
 
-	interface GigabitEthernet1/10  
-	switchport mode trunk  
-	switchport trunk native vlan 999  
-	channel-group 2 mode on
+```text
+interface GigabitEthernet1/10  
+switchport mode trunk  
+switchport trunk native vlan 999  
+channel-group 2 mode on
+```
 
 This configuration is repeated on two ports (same as the Nexus). Note that the channel-groups don't have to match _between_ the switches, only _within_ each switch. There's no need to specify the speed here on the Catalyst, as this is already a Gigabit Ethernet port. We only need to specify the speed on the Nexus because it won't negotiate down to Gigabit Ethernet.
 
 On the HP ProCurve, the configuration is pretty understandable. First, the `trunk` command creates the port channel:
 
-	trunk 23-24 Trk1 trunk
+```text
+trunk 23-24 Trk1 trunk
+```
 
 Then, the VLAN configuration specifies the same native (untagged) VLAN on the port channel:
 
-	vlan 999  
-	name "Trunk-Native"  
-	untagged 12,14,20,A2,Trk1  
-	no ip address  
-	exit
+```text
+vlan 999  
+name "Trunk-Native"  
+untagged 12,14,20,A2,Trk1  
+no ip address  
+exit
+```
 
 Once the configuration is done, you'll need to insert RJ-45 SFPs (Cisco product number GLC-T, I believe) into the appropriate ports on the Nexus 5000 switch and then cable the switches together. If you didn't make any typos along the way, then you should be good to go!

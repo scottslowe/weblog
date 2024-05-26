@@ -25,7 +25,9 @@ In the end, what I figured out was this:
 
 With these changes in place, you can then use this command to connect to a remote host:
 
-	ssh -t <server.domain.name> screen -R
+```bash
+ssh -t <server.domain.name> screen -R
+```
 
 On the first connection, this command will create a new `screen` session. When you're done with this SSH session and want to disconnect, just detach from the `screen` session (typically using Ctrl-a d). That also disconnects the SSH session, but here's the kicker: your `screen` session is still running---as are any processes you had running in that session.
 

@@ -20,13 +20,17 @@ A couple of weeks ago I wrote about [enabling Cisco Discovery Protocol (CDP) on 
 
 Viewing CDP data from the Cisco switch is easy. From the switch's command prompt, use this command:
 
-	show cdp neighbors
+```text
+show cdp neighbors
+```
 
 This will display the CDP information that the switch has gathered. When CDP is enabled on ESX/ESXi, that will include information on which VMnics are attached to which switch ports.
 
 From the ESX side, you can use this command:
 
-	esxcfg-info | more +/CDP\ Summary
+```bash
+esxcfg-info | more +/CDP\ Summary
+```
 
 This searches for the string "CDP Summary" in the output of the `esxcfg-info` command. The output from that command will include information about the switch to which the ESX host is connected, the ports to which the NICs are connected, and associated VLANs. The screenshot below shows some of the output from this command.
 

@@ -20,7 +20,9 @@ The install was quick and painless. And that's where the fun started. MSE wanted
 
 Google turns up the [first part of the puzzle](http://all-things-pure.blogspot.com/2009/10/microsoft-security-essentials-network.html); even though your proxy support might be configured correctly for Internet Explorer (and thus most of the rest of Windows), MSE won't take those settings. Instead, you have to use `netsh`, like this:
 
-	netsh winhttp import proxy source=ie
+```bash
+netsh winhttp import proxy source=ie
+```
 
 Unfortunately, in its efforts to be "helpful," Windows 7 won't allow you to run that command without elevated privileges. All you get when you try is a nondescript error message that vaguely implies that you don't have permission. However, instead of being able to elevate that one command (a la `sudo` in the UNIX/Linux/BSD world), you have to run the entire command prompt with administrative privileges, like explained [here](http://www.blogsdna.com/2168/windows-7-how-to-open-elevated-command-prompt-with-administrator-privileges.htm) (and probably countless other places on the 'Net).
 

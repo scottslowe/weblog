@@ -50,7 +50,9 @@ You're almost done---you now have a logical network using IP addresses from a su
 
 To do static routing, you'll need the IP address assigned to the router during step 6 above. `neutron port-list` will show you the list of ports in Neutron; depending on the size of your installation, this list might be quite sizable. This command might help:
 
-    neutron port-list -c id -c fixed_ips -c device_owner | awk '/network:router_gateway/'
+```bash
+neutron port-list -c id -c fixed_ips -c device_owner | awk '/network:router_gateway/'
+```
 
 This will show you only the ports that are acting as router gateway ports. In large environments, even this list may not be short enough to know for sure which IP address is assigned to the router. For now, though, let's assume that you're able to determine the IP address assigned to the logical router on the external network.
 
