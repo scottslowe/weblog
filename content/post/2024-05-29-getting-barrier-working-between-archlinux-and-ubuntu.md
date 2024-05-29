@@ -134,7 +134,7 @@ It's worth noting that Barrier appears to no longer be maintained, and the repla
 
 > But for now, we advise sticking with Barrier v2.4.0/v2.3.4&#8230;
 
-Keep this in mind if you decide you want to try/use Barrier yourself.
+Keep this in mind if you decide you want to try/use Barrier yourself. (**UPDATE:** It's also worth noting that after having this up and running for a few days with no problems, Barrier just suddenly stopped working with "No route to host" in the Ubuntu client logs---this despite the fact that both `ping` and `ssh` worked perfectly between the two systems. I'm not sure I can recommend using Barrier, given the state of the project.)
 
 I hope this information is useful for folks. I had to spend time combing GitHub issues and spelunking through the code to assemble the information above, but there's still no guarantee that I have it all correct. If you see an error or a mistake, let me know so I can fix it! Feel free to reach out to me [on Twitter][link-6], in [the Fediverse][link-7], or via one of the many Slack communities I frequent. All constructive feedback is welcomed.
 
