@@ -1,0 +1,78 @@
+# from https://neil-clarke.com/block-the-bots-that-feed-ai-models-by-scraping-your-website/
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# from https://github.com/healsdata/ai-training-opt-out
+
+# may not work, needs more research (see https://github.com/rom1504/img2dataset/issues/48)
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+
+# AhrefsBot crawls for data for an "SEO Dataset"—one of their "products" based on this dataset is "AI Writing Tools"
+
+User-agent: AhrefsBot
+Disallow: /
+
+# from https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/
+
+User-agent: PerplexityBot
+Disallow: /
+
+# from https://netfuture.ch/2023/07/blocking-ai-crawlers-robots-txt-chatgpt/
+
+User-agent: cohere-ai
+Disallow: /
+
+# from https://claytonerrington.com/blog/robots-and-ai/
+
+User-agent: Amazonbot
+Disallow: /
+
+# from https://darkvisitors.com/
+
+User-agent: Applebot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+# from https://imho.alex-kunz.com/2024/01/25/an-update-on-friendly-crawler/
+
+User-agent: FriendlyCrawler
+Disallow: /
+
+# from https://sixcolors.com/post/2024/06/excluding-your-website-from-apples-ai-crawler/
+
+User-agent: Applebot-Extended
+Disallow: /
