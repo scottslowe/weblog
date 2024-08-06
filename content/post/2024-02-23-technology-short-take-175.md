@@ -5,7 +5,11 @@ comments: true
 date: 2024-02-23T10:00:00-06:00
 tags:
 - AWS
+- BSD
+- Cilium
 - CLI
+- Cloud
+- Encryption
 - GitHub
 - Hardware
 - Kubernetes
@@ -13,6 +17,7 @@ tags:
 - Networking
 - Security
 - Storage
+- Tetragon
 - Virtualization
 title: 'Technology Short Take 175'
 url: /2024/02/23/technology-short-take-175/
@@ -50,7 +55,7 @@ Welcome to Technology Short Take #175! Here's your weekend reading---a collectio
 
 ## Programming/Development
 
-* Although it gets a bit deep into Rego, [this article][link-4] by Jasper Van der Jeugt of Snyk explains how automatic source code location for violations---pinpointing the file, line, and column where policy violations occur.
+* Although it gets a bit deep into Rego, [this article][link-4] by Jasper Van der Jeugt of Snyk explains automatic source code location for violations---pinpointing the file, line, and column where policy violations occur.
 * Josh Collinsworth weighs in regarding LLMs and generative AI in [his essay regarding GitHub Copilot][link-13]. The experiences Josh describes with Copilot are not unique to Copilot; I've experienced the same with other LLM-based generative AI tools. The key takeaway (for me) is that generative AI doesn't make things _more_ accessible; it's actually the opposite, because you need to know enough to know whether or not the generative AI tool is actually accurate or not.
 
 ## Virtualization

@@ -9,12 +9,14 @@ tags:
 - Docker
 - EKS
 - ESXi
+- GitHub
 - Hardware
 - Kubernetes
 - Networking
 - Nginx
 - Security
 - Storage
+- Tetragon
 - Virtualization
 - VMware
 - VXLAN

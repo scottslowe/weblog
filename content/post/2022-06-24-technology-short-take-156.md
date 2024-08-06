@@ -15,6 +15,7 @@ tags:
 - Networking
 - Security
 - Storage
+- Tetragon
 - Virtualization
 title: 'Technology Short Take 156'
 url: /2022/06/24/technology-short-take-156/

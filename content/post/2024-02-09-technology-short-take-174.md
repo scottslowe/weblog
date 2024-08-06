@@ -5,10 +5,13 @@ comments: true
 date: 2024-02-09T11:30:00-06:00
 tags:
 - AWS
+- Azure
 - Cilium
 - Docker
 - Git
+- GitHub
 - Hardware
+- Kong
 - Kubernetes
 - Linux
 - Networking

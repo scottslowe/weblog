@@ -7,6 +7,8 @@ tags:
 - Apple
 - Automation
 - AWS
+- Cisco
+- DHCP
 - ESXi
 - Hardware
 - Intel

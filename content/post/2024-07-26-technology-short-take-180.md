@@ -6,17 +6,21 @@ date: 2024-07-26T08:00:00-06:00
 tags:
 - Apple
 - AWS
+- EKS
 - Git
 - Hardware
 - Intel
 - Kubernetes
 - Linux
+- Markdown
 - Networking
 - PGP
 - Security
 - Storage
+- Talos
 - Ubuntu
 - Virtualization
+- VLAN
 - Wireless
 title: 'Technology Short Take 180'
 url: /2024/07/26/technology-short-take-180/

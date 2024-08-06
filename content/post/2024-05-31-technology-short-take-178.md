@@ -5,6 +5,8 @@ comments: true
 date: 2024-05-31T06:30:00-06:00
 tags:
 - AWS
+- DNS
+- Fedora
 - Hardware
 - Kubernetes
 - Linux
