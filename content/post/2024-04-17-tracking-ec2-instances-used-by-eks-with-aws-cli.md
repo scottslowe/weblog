@@ -6,6 +6,7 @@ date: 2024-04-17T10:00:00-06:00
 tags:
 - AWS
 - CLI
+- EKS
 - Kubernetes
 title: Tracking EC2 Instances used by EKS with AWS CLI
 url: /2024/04/17/tracking-ec2-instances-used-by-eks-with-aws-cli/
