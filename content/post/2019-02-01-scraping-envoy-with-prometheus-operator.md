@@ -2,7 +2,7 @@
 author: slowe
 categories: Explanation
 comments: true
-date: 2019-02-01T22:00:00
+date: 2019-02-01T22:00:00-06:00
 tags:
 - Kubernetes
 - Prometheus
