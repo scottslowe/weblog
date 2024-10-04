@@ -16,15 +16,30 @@
   <!--Metadata-->
   {{ with .Site.Params.Author }}<meta name="author" content="{{ . }}">{{ end }}
   {{ with .Site.Title }}<meta property="og:site_name" content="{{ . }}">{{ end }}
-  {{ if eq .Permalink "/" }}
-  <meta property="og:description" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
+  {{ if not .IsPage }}
+  <!-- <meta property="og:description" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"> -->
+  <meta property="og:description" content="{{ .Site.Params.Description }}">
+  <meta property="twitter:description" content="{{ .Site.Params.Description }}">
   <meta property="og:title" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
+  <meta property="twitter:title" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/public/img/cards/site.png">
+  <meta property="twitter:image" content="/public/img/cards/site.png">
   {{ else }}
-  <meta property="og:description" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
+  <!-- <meta property="og:description" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"> -->
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+  <meta property="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
   <meta property="og:title" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
-  {{ end }}
+  <meta property="twitter:title" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
   <meta property="og:type" content="article">
-  <meta name="keywords" content="Cloud, Containers, Kubernetes, K8s, Docker, CNI, CRI-O, OCI, Linux, CLI, Networking, AWS, Security, DevOps">
+  <meta property="og:image" content="/public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png">
+  <meta property="twitter:image" content="/public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png">
+  {{ end }}
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="twitter:url" content="{{ .Permalink }}">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="blog.scottlowe.org">
+  <meta name="keywords" content="Cloud, Containers, Go, IaC, Kubernetes, K8s, Docker, CNI, CRI-O, OCI, Linux, CLI, Networking, AWS, Security, DevOps, Cilium">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/poole.css">

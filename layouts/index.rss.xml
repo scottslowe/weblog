@@ -6,7 +6,7 @@
     <link>{{ .Permalink }}</link>
     <language>en-us</language>
     <author>{{ .Site.Params.Author }}</author>
-    <rights>(C) {{ .Site.LastChange.Year }}</rights>
+    <rights>(C) 2024</rights>
     <updated>{{ .Date }}</updated>
 
     {{ range (where .Site.RegularPages "Type" "in" "post" | first $limit ) }}

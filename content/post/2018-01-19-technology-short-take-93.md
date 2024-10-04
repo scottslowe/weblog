@@ -2,7 +2,7 @@
 author: slowe
 categories: Information
 comments: true
-date: 2018-01-19
+date: 2018-01-19T09:00:00-06:00
 tags:
 - Networking
 - Hardware

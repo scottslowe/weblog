@@ -18,7 +18,7 @@
         "GitHubUser": "scottslowe",
         "TwitterUser": "scott_lowe",
         "LinkedInUser": "scottslowe",
-        "Description": "Original, technical content centered around cloud computing, Kubernetes, Linux, and networking",
+        "Description": "Original, technical content centered around cloud computing, Kubernetes, Linux, containers, and networking",
         "DateForm": "2 Jan 2006"
     },
     "blackfriday": {

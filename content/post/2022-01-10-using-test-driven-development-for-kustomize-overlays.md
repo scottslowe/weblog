@@ -2,7 +2,7 @@
 author: slowe
 categories: Tutorial
 comments: true
-date: 2022-01-10T09:00:00
+date: 2022-01-10T09:00:00-06:00
 tags:
 - CLI
 - Kubernetes

@@ -2,7 +2,7 @@
 author: slowe
 categories: News
 comments: true
-date: 2018-07-18
+date: 2018-07-18T09:00:00-06:00
 tags:
 - Spousetivities
 - VMworld2018
