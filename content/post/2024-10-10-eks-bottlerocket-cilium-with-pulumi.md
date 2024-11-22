@@ -31,7 +31,7 @@ Amazon EKS node groups support specifying an AMI type. You'll leverage this func
 
 If you modify `main.go` to add the `amiType` to the node group definition, then it should look something like this:
 
-```go 
+```go
 // Create a node group for the EKS cluster
 _, err := eks.NewNodeGroup(ctx, "node-group", &eks.NodeGroupArgs{
     amiType: pulumi.String("BOTTLEROCKET_x86_64") // Or BOTTLEROCKET_ARM_64
