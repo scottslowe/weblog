@@ -54,8 +54,7 @@ Here is link to an _awesome_ [IBM white paper](ftp://ftp.software.ibm.com/common
 
 Here's an example 12 DIMM slot Nehalem configuration:
 
-| CPU (Speed)     | Max Mem   | Bank 1    | Bank 2    |
-|                 | Speed     | Populated | Populated |
+| CPU (Speed) | Max Mem Speed | Bank 1 Populated | Bank 2 Populated |
 |-----------------|-----------|-----------|-----------|
 | X5570 (2.93GHz) | 1333 MHz  | 1333 MHz  | 1066 MHz* |
 | X5560 (2.80GHz) | 1333 MHz  | 1333 MHz  | 1066 MHz* |
@@ -69,8 +68,7 @@ Here's an example 12 DIMM slot Nehalem configuration:
 
 Here's an example 18 DIMM slot Nehalem configuration:
 
-| CPU (Speed)     | Max Mem   | Bank 1    | Bank 2    |
-|                 | Speed     | Populated | Populated |
+| CPU (Speed) | Max Mem Speed | Bank 1 Populated | Bank 2 Populated |
 |-----------------|-----------|-----------|-----------|
 | X5570 (2.93GHz) | 1333 MHz  | 1066 MHz* | 800 MHz   |
 | X5560 (2.80GHz) | 1333 MHz  | 1066 MHz* | 800 MHz   |
