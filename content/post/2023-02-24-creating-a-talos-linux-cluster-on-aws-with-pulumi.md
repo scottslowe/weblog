@@ -16,6 +16,8 @@ url: /2023/02/24/creating-a-talos-linux-cluster-on-aws-with-pulumi/
 
 [Talos Linux][link-1] is a Linux distribution purpose-built for running [Kubernetes][link-3]. The Talos web site describes Talos Linux as "secure, immutable, and minimal." All system management is done via an API; there is no SSH access, no shell, and no console. In this post, I'll share how to use [Pulumi][link-2] to automate the creation of a Talos Linux cluster on AWS.<!--more-->
 
+**NOTE:** The code for this post was updated in 2025 to reflect changes in the Talos provider. See [this updated blog post][xref-2] for more details. The GitHub repository remains unchanged, and the version of the code referenced in this post is available by viewing the "2023-post" tag.
+
 I chose to write my Pulumi program in [Go][link-5], but you could---of course---choose to write it in any language that Pulumi supports (JavaScript/TypeScript, Python, one of the .NET languages, Java, or even YAML). I've made the Pulumi program available via [this GitHub repository][link-6]. It's based on [these instructions][link-4] for standing up Talos Linux on AWS.
 
 The Pulumi program has four major sections:
@@ -79,3 +81,4 @@ I hope you've found this post helpful. If you have questions, you're welcome to 
 [link-98]: https://kubernetes.slack.com
 [link-99]: https://slack.pulumi.com
 [xref-1]: {{< relref "2023-02-08-installing-prerelease-pulumi-provider-talos.md" >}}
+[xref-2]: {{< relref "2025-09-08-creating-a-talos-linux-cluster-on-aws-with-pulumi-2025-edition.md" >}}
