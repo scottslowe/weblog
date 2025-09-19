@@ -57,8 +57,6 @@ That's all for now! I know, this one is shorter than the typical Technology Shor
 [link-9]: https://ultraethernet.org/
 [link-10]: https://www.wwt.com/blog/the-battle-of-ai-networking-ethernet-vs-infiniband
 [link-11]: https://marcusb.org/hacks/quixotic.html
-[link-12]: https://registry.terraform.io/providers/CiscoDevNet/nxos/latest/docs
-[link-13]: https://developer.cisco.com/docs/nx-os/open-nx-os-linux/#open-nx-os-linux
 [link-14]: https://blog.tjll.net/the-systemd-revolution-has-been-a-success/
 [link-28]: https://kubernetes.slack.com/
 [link-29]: https://fosstodon.org/@scottslowe
