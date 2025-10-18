@@ -25,33 +25,33 @@ Here's the Go code I concocted:
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+    "github.com/pulumi/pulumi-aws/sdk/v2/go/aws"
+    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Look up Availability Zone (AZ) information for configured region
-		desiredAzState := "available"
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        // Look up Availability Zone (AZ) information for configured region
+        desiredAzState := "available"
 
-		rawAzInfo, err := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{
-			State: &desiredAzState,
-		})
-		if err != nil {
-			return err
-		}
+        rawAzInfo, err := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{
+            State: &desiredAzState,
+        })
+        if err != nil {
+            return err
+        }
 
-		// Determine how many AZs are present
-		numOfAZs := len(rawAzInfo.Names)
+        // Determine how many AZs are present
+        numOfAZs := len(rawAzInfo.Names)
 
-		// Build a list of AZ names
-		azNames := []string{}
-		for idx := 0; idx < numOfAZs; idx++ {
-			azNames = append(azNames, rawAzInfo.Names[idx])
-		}
+        // Build a list of AZ names
+        azNames := []string{}
+        for idx := 0; idx < numOfAZs; idx++ {
+            azNames = append(azNames, rawAzInfo.Names[idx])
+        }
 
-		return nil
-	})
+        return nil
+    })
 }
 ```
 

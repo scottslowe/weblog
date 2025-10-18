@@ -25,27 +25,27 @@ First, let's look at the security group to allow SSH traffic to the bastion host
 
 ```go
 sshSecGrp, err := ec2.NewSecurityGroup(ctx, "ssh-sg", &ec2.SecurityGroupArgs{
-	Name:        pulumi.String("ssh-sg"),
+    Name:        pulumi.String("ssh-sg"),
     VpcId:       vpc.ID(),
-	Description: pulumi.String("Allows SSH traffic to bastion hosts"),
-	Ingress: ec2.SecurityGroupIngressArray{
-		ec2.SecurityGroupIngressArgs{
-			Protocol:    pulumi.String("tcp"),
-			ToPort:      pulumi.Int(22),
-			FromPort:    pulumi.Int(22),
-			Description: pulumi.String("Allow inbound TCP 22"),
-			CidrBlocks:  pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-		},
-	},
-	Egress: ec2.SecurityGroupEgressArray{
-		ec2.SecurityGroupEgressArgs{
-			Protocol:    pulumi.String("-1"),
-			ToPort:      pulumi.Int(0),
-			FromPort:    pulumi.Int(0),
-			Description: pulumi.String("Allow all outbound traffic"),
-			CidrBlocks:  pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-		},
-	},
+    Description: pulumi.String("Allows SSH traffic to bastion hosts"),
+    Ingress: ec2.SecurityGroupIngressArray{
+        ec2.SecurityGroupIngressArgs{
+            Protocol:    pulumi.String("tcp"),
+            ToPort:      pulumi.Int(22),
+            FromPort:    pulumi.Int(22),
+            Description: pulumi.String("Allow inbound TCP 22"),
+            CidrBlocks:  pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+        },
+    },
+    Egress: ec2.SecurityGroupEgressArray{
+        ec2.SecurityGroupEgressArgs{
+            Protocol:    pulumi.String("-1"),
+            ToPort:      pulumi.Int(0),
+            FromPort:    pulumi.Int(0),
+            Description: pulumi.String("Allow all outbound traffic"),
+            CidrBlocks:  pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+        },
+    },
 })
 ```
 
@@ -55,34 +55,34 @@ Now let's look at the second security group. This example will demonstrate multi
 
 ```go
 nodeSecGrp, err := ec2.NewSecurityGroup(ctx, "node-sg", &ec2.SecurityGroupArgs{
-	Name:        pulumi.String("node-sg"),
-	VpcId:       vpc.ID(),
-	Description: pulumi.String("Allows traffic between and among nodes"),
-	Ingress: ec2.SecurityGroupIngressArray{
-		ec2.SecurityGroupIngressArgs{
-			Protocol:       pulumi.String("tcp"),
-			ToPort:         pulumi.Int(22),
-			FromPort:       pulumi.Int(22),
-			Description:    pulumi.String("Allow TCP 22 from bastion hosts"),
-			SecurityGroups: pulumi.StringArray{sshSecGrp.ID()},
-		},
-		ec2.SecurityGroupIngressArgs{
-			Protocol:    pulumi.String("-1"),
-			ToPort:      pulumi.Int(0),
-			FromPort:    pulumi.Int(0),
-			Description: pulumi.String("Allow all from this security group"),
-			Self:        pulumi.Bool(true),
-		},
-	},
-	Egress: ec2.SecurityGroupEgressArray{
-		ec2.SecurityGroupEgressArgs{
-			Protocol:    pulumi.String("-1"),
-			ToPort:      pulumi.Int(0),
-			FromPort:    pulumi.Int(0),
-			Description: pulumi.String("Allow all outbound traffic"),
-			CidrBlocks:  pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-		},
-	},
+    Name:        pulumi.String("node-sg"),
+    VpcId:       vpc.ID(),
+    Description: pulumi.String("Allows traffic between and among nodes"),
+    Ingress: ec2.SecurityGroupIngressArray{
+        ec2.SecurityGroupIngressArgs{
+            Protocol:       pulumi.String("tcp"),
+            ToPort:         pulumi.Int(22),
+            FromPort:       pulumi.Int(22),
+            Description:    pulumi.String("Allow TCP 22 from bastion hosts"),
+            SecurityGroups: pulumi.StringArray{sshSecGrp.ID()},
+        },
+        ec2.SecurityGroupIngressArgs{
+            Protocol:    pulumi.String("-1"),
+            ToPort:      pulumi.Int(0),
+            FromPort:    pulumi.Int(0),
+            Description: pulumi.String("Allow all from this security group"),
+            Self:        pulumi.Bool(true),
+        },
+    },
+    Egress: ec2.SecurityGroupEgressArray{
+        ec2.SecurityGroupEgressArgs{
+            Protocol:    pulumi.String("-1"),
+            ToPort:      pulumi.Int(0),
+            FromPort:    pulumi.Int(0),
+            Description: pulumi.String("Allow all outbound traffic"),
+            CidrBlocks:  pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+        },
+    },
 })
 ```
 

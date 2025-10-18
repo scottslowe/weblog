@@ -20,17 +20,17 @@ This is a pretty simple example, so let's just jump straight to the code:
 
 ```go
 _, err := ec2.NewKeyPair(ctx, "aws-rsa-keypair", &ec2.KeyPairArgs{
-	KeyName:   pulumi.String("key-pair-name"),
-	PublicKey: pulumi.String("<ssh-key-material-here>"),
-	Tags: pulumi.StringMap{
-		"Owner":   pulumi.String("User Name"),
-		"Team":    pulumi.String("Team Name"),
-		"Purpose": pulumi.String("Public key for authenticating to AWS EC2 instances"),
-		},
-	})
-	if err != nil {
-		return err
-	}
+    KeyName:   pulumi.String("key-pair-name"),
+    PublicKey: pulumi.String("<ssh-key-material-here>"),
+    Tags: pulumi.StringMap{
+        "Owner":   pulumi.String("User Name"),
+        "Team":    pulumi.String("Team Name"),
+        "Purpose": pulumi.String("Public key for authenticating to AWS EC2 instances"),
+        },
+    })
+    if err != nil {
+        return err
+    }
 ```
 
 This code is, by and large, pretty self-explanatory. For `PublicKey`, you just need to supply the contents of the public key file (use `cat` or similar to get the contents of the file) where it shows `<ssh-key-material-here>`. Then specify an appropriate name and adjust the tags as desired. In this particular case, I'm "throwing away" the reference to the newly-created key pair (note the `_, err := ec2.NewKeyPair`; the underscore indicates I'm discarding that value) because I don't need to refer to it anywhere else. If I _did_ need to refer to it elsewhere (say, I was going to create a new key pair and launch an instance in the same Pulumi program), then I'd want to catch that return value.

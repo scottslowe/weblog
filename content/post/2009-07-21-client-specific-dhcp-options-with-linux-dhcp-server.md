@@ -27,17 +27,17 @@ If you want to set up a reservation---so that a particular DHCP client always ge
 
 ```text
 host <hostname> {  
-	hardware ethernet 00:11:22:33:44:55;  
-	fixed-address 192.168.128.200; }
+    hardware ethernet 00:11:22:33:44:55;  
+    fixed-address 192.168.128.200; }
 ```
 
 As it turns out, if you want to specify a different set of DHCP options to a client with a reservation (for example, in my situation I wanted to specify a different set of DNS servers), you just add a declaration to the client-specific section:
 
 ```text
 host <hostname> {  
-	hardware ethernet 00:11:22:33:44:55;  
-	fixed-address 192.168.128.200;  
-	option domain-name-servers 192.168.128.10; }
+    hardware ethernet 00:11:22:33:44:55;  
+    fixed-address 192.168.128.200;  
+    option domain-name-servers 192.168.128.10; }
 ```
 
 Of course, now that I know this it seems incredibly obvious. At the time that I was trying to figure this out, though, I wasn't sure exactly what the syntax would look like. So, next time you find yourself needing to change the options on a DHCP reservation on Linux, you'll know what to do!

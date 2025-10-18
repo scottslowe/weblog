@@ -52,7 +52,7 @@ As you can see from the list above, all the commands you're going to use are the
 
 * First, set the value of the VI_SERVER variable to be the fully qualified domain name of the vCenter Server computer. Use the bash `export` command to set this variable. The command looks like `export VI_SERVER=vcenter-server.domain.com`.
 
-	Setting this variable now means that none of the `vicfg-*` commands will need to have this parameter specified. Since it's likely that you'll consistently work with one specific instance of vCenter Server, then this is a pretty safe variable to set.
+    Setting this variable now means that none of the `vicfg-*` commands will need to have this parameter specified. Since it's likely that you'll consistently work with one specific instance of vCenter Server, then this is a pretty safe variable to set.
 
 * In the absence of using Active Directory integration (which is a far cleaner choice, but one which we'll reserve for a future article), set the VI_USERNAME variable to the name of the user account you'll use to authenticate against vCenter Server. Again, use the `export` command as outlined in the previous bullet.
 

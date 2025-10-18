@@ -20,11 +20,11 @@ Let's assume you are creating a new VPC using code that looks something like thi
 
 ```go
 vpc, err := ec2.NewVpc(ctx, "testvpc", &ec2.VpcArgs{
-	CidrBlock: pulumi.String("10.100.0.0/16"),
-	Tags: pulumi.StringMap {
-		"Name": pulumi.String("testvpc"),
-		k8sTag: pulumi.String("shared"),
-	},
+    CidrBlock: pulumi.String("10.100.0.0/16"),
+    Tags: pulumi.StringMap {
+        "Name": pulumi.String("testvpc"),
+        k8sTag: pulumi.String("shared"),
+    },
 })
 ```
 
@@ -34,11 +34,11 @@ If you'd like to now bring the default route table that automatically gets creat
 
 ```go
 defrt, err := ec2.NewDefaultRouteTable(ctx, "defrt", &ec2.DefaultRouteTableArgs{
-	DefaultRouteTableId: vpc.DefaultRouteTableId,
-	Tags: pulumi.StringMap {
-		"Name": pulumi.String("defrt"),
-		k8sTag: pulumi.String("shared"),
-	},
+    DefaultRouteTableId: vpc.DefaultRouteTableId,
+    Tags: pulumi.StringMap {
+        "Name": pulumi.String("defrt"),
+        k8sTag: pulumi.String("shared"),
+    },
 })
 ```
 
@@ -46,9 +46,9 @@ The [Pulumi documentation for the `ec2.DefaultRouteTable` resource][link-3] indi
 
 ```go
 route, err := ec2.NewRoute(ctx, "inet-route", &ec2.RouteArgs {
-	RouteTableId: defrt.ID(),
-	DestinationCidrBlock: pulumi.String("0.0.0.0/0"),
-	GatewayId: gw.ID(),
+    RouteTableId: defrt.ID(),
+    DestinationCidrBlock: pulumi.String("0.0.0.0/0"),
+    GatewayId: gw.ID(),
 })
 ```
 

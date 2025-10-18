@@ -19,30 +19,30 @@ Here's the example code:
 
 ```go
 elb, err := elb.NewLoadBalancer(ctx, "elb", &elb.LoadBalancerArgs{
-	NamePrefix:             pulumi.String(baseName),
-	CrossZoneLoadBalancing: pulumi.Bool(true),
-	AvailabilityZones:      pulumi.StringArray(azNames),
-	Instances:              pulumi.StringArray(cpNodeIds),
-	SecurityGroups:			pulumi.StringArray{elbSecGrp.ID()},
-	HealthCheck: &elb.LoadBalancerHealthCheckArgs{
-		HealthyThreshold:   pulumi.Int(3),
-		Interval:           pulumi.Int(30),
-		Target:             pulumi.String("SSL:6443"),
-		UnhealthyThreshold: pulumi.Int(3),
-		Timeout:            pulumi.Int(15),
-	},
-	Listeners: &elb.LoadBalancerListenerArray{
-		&elb.LoadBalancerListenerArgs{
-			InstancePort:     pulumi.Int(6443),
-			InstanceProtocol: pulumi.String("TCP"),
-			LbPort:           pulumi.Int(6443),
-			LbProtocol:       pulumi.String("TCP"),
-		},
-	},
-	Tags: pulumi.StringMap{
-		"Name": pulumi.String(fmt.Sprintf("cp-elb-%s", baseName)),
-		k8sTag: pulumi.String("shared"),
-	},
+    NamePrefix:             pulumi.String(baseName),
+    CrossZoneLoadBalancing: pulumi.Bool(true),
+    AvailabilityZones:      pulumi.StringArray(azNames),
+    Instances:              pulumi.StringArray(cpNodeIds),
+    SecurityGroups:         pulumi.StringArray{elbSecGrp.ID()},
+    HealthCheck: &elb.LoadBalancerHealthCheckArgs{
+        HealthyThreshold:   pulumi.Int(3),
+        Interval:           pulumi.Int(30),
+        Target:             pulumi.String("SSL:6443"),
+        UnhealthyThreshold: pulumi.Int(3),
+        Timeout:            pulumi.Int(15),
+    },
+    Listeners: &elb.LoadBalancerListenerArray{
+        &elb.LoadBalancerListenerArgs{
+            InstancePort:     pulumi.Int(6443),
+            InstanceProtocol: pulumi.String("TCP"),
+            LbPort:           pulumi.Int(6443),
+            LbProtocol:       pulumi.String("TCP"),
+        },
+    },
+    Tags: pulumi.StringMap{
+        "Name": pulumi.String(fmt.Sprintf("cp-elb-%s", baseName)),
+        k8sTag: pulumi.String("shared"),
+    },
 })
 ```
 

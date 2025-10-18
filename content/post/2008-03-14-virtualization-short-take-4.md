@@ -26,9 +26,9 @@ Once again, here's my take a few virtualization-related stories that have passed
 
 * A [new blog war](http://www.dabcc.com/article.aspx?id=7285) is brewing between VMware and Citrix, and this time I had nothing to do with it: VMware apparently launched the first volley in discussing the [value of ESX Server's memory overcommitment and page sharing](http://blogs.vmware.com/virtualreality/2008/03/cheap-hyperviso.html) functionality; Citrix's Roger Klorese [then responded](http://community.citrix.com/display/~rogerkl/2008/03/12/Memory+Lapse) and Simon Crosby [chimed in as well](http://community.citrix.com/pages/viewpage.action;jsessionid=aoSuPNZNwfvflXzvTI?pageId=21792124). I would completely agree with Roger's and Simon's comments, except for this one statement in Eric's original post:  
 
-	>We created and powered on 512MB Windows XP VMs **_running a light workload_** [emphasis mine] and kept adding them until the server couldnt take any more.
+    >We created and powered on 512MB Windows XP VMs **_running a light workload_** [emphasis mine] and kept adding them until the server couldnt take any more.
 
-	Since Eric stated the parameters of the test involved lightly loaded workstations, Roger's comments about heavy workloads don't apply. Besides, any engineer worth his/her weight isn't going to overcommit a production workload like that, and [this analysis](http://vmmba.com/2008/01/03/why-does-oversubscription-matter.aspx) shows that some overcommitment can produce notable financial results.
+    Since Eric stated the parameters of the test involved lightly loaded workstations, Roger's comments about heavy workloads don't apply. Besides, any engineer worth his/her weight isn't going to overcommit a production workload like that, and [this analysis](http://vmmba.com/2008/01/03/why-does-oversubscription-matter.aspx) shows that some overcommitment can produce notable financial results.
 
 * CIO Magazine recently published a [list of 10 virtualization risks hiding in your company](http://advice.cio.com/laurianne_mclaughlin/top_ten_virtualization_risks_hiding_in_your_company). It's a pretty interesting list, although it's worthwhile to note that this list was produced by a VP of Marketing for Embotics and therefore is heavily slanted toward the risks that his company's products can help mitigate.
 

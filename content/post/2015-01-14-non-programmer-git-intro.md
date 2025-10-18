@@ -52,8 +52,8 @@ I need to point out a couple of things here. First, don't conflate Git and [GitH
 In addition to making a full copy of the remote repository on the system where you run `git clone`, a link back to the original remote is also created. You can see this link by running the command `git remote -v`, which will produce output something like this:
 
 ```text
-origin	https://github.com/scottslowe/lowescott.github.io.git (fetch)
-origin	https://github.com/scottslowe/lowescott.github.io.git (push)
+origin   https://github.com/scottslowe/lowescott.github.io.git (fetch)
+origin   https://github.com/scottslowe/lowescott.github.io.git (push)
 ```
 
 This link is needed in order to allow users to collaborate. Although each Git repository is completely standalone, this link allows users to push changes to a remote repository or pull changes from a remote repository.

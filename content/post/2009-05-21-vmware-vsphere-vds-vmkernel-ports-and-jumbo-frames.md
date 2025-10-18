@@ -122,7 +122,7 @@ To finish the process from the command line:
 
 1. Type `esxcfg-vswitch -l` (that's a lowercase L) to show the current virtual switching configuration.
 
-	At the bottom of the listing you will see the dvPort IDs listed. Make a note of the dvPort ID for the VMkernel port you just created using the vSphere Client. It will be a larger number, like 266 or 139.
+    At the bottom of the listing you will see the dvPort IDs listed. Make a note of the dvPort ID for the VMkernel port you just created using the vSphere Client. It will be a larger number, like 266 or 139.
 
 2. Delete the VMkernel port you just created with the command `esxcfg-vmknic -d -s <dvSwitch Name> -v <dvPort ID>`.
 

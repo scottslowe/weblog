@@ -19,21 +19,21 @@ I've decided to discontinue the Virtualization Short Takes series and replace it
 
 And with that brief introduction, welcome to Technology Short Take #1!
 
-* You can tell just how far behind I've gotten with this sort of post when one of the items I'm mentioning was published almost three months ago. Still, one phrase in this article by Frank Denneman on [VM memory overhead](http://frankdenneman.nl/2010/05/virtual-machine-memory-overhead/) really caught my eye:  
+* You can tell just how far behind I've gotten with this sort of post when one of the items I'm mentioning was published almost three months ago. Still, one phrase in this article by Frank Denneman on [VM memory overhead](http://frankdenneman.nl/2010/05/virtual-machine-memory-overhead/) really caught my eye:
 
-	>Please be aware of the fact that memory overheads are growing with each new release of ESX, so keep this in mind when upgrading to a new version.
+    >Please be aware of the fact that memory overheads are growing with each new release of ESX, so keep this in mind when upgrading to a new version.
 
-	What does this mean? Why are VM memory overheads increasing, and is this something to be concerned over? I can certainly understand the need to add features, but is the drive to add features to the hypervisor also driving bloat and making it less efficient in some aspects?
+    What does this mean? Why are VM memory overheads increasing, and is this something to be concerned over? I can certainly understand the need to add features, but is the drive to add features to the hypervisor also driving bloat and making it less efficient in some aspects?
 
 * Duncan Epping wrote a great post about a month ago on new behavior in vSphere 4.1 with respect to [HA/DRS and flattened shares](http://www.yellow-bricks.com/2010/07/22/6283/). This behavior is yet another reason you want to make sure that you really understand what you're doing when you assign reservations, limits, and shares to your VMs and resource pools. Both Duncan and his cohort-in-crime Frank, along with a few others, have been publishing lots of resource allocation-related posts:  
 
-	[Which host is selected for an HA initiated restart?](http://www.yellow-bricks.com/2010/06/16/which-host-is-selected-for-an-ha-initiated-restart/)  
+    [Which host is selected for an HA initiated restart?](http://www.yellow-bricks.com/2010/06/16/which-host-is-selected-for-an-ha-initiated-restart/)  
 
-	[Memory reclamation, when and how?](http://frankdenneman.nl/2010/06/memory-reclaimation-when-and-how/)  
+    [Memory reclamation, when and how?](http://frankdenneman.nl/2010/06/memory-reclaimation-when-and-how/)  
 
-	[Reservations and CPU scheduling](http://frankdenneman.nl/2010/06/reservations-and-cpu-scheduling/)  
+    [Reservations and CPU scheduling](http://frankdenneman.nl/2010/06/reservations-and-cpu-scheduling/)  
 
-	[The Math Behind the DRS Stars](http://professionalvmware.com/2010/06/the-math-behind-the-drs-stars/)
+    [The Math Behind the DRS Stars](http://professionalvmware.com/2010/06/the-math-behind-the-drs-stars/)
 
 * Need to flip the paths on your datastores over to a different HBA so you can perform some SAN maintenance? Leo Raikhman has a couple of scripts that can help with [performing SAN fabric maintenance on ESX](http://blog.core-it.com.au/?p=595).
 
