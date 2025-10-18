@@ -61,17 +61,17 @@ Specifically, to create an explicit provider for AWS and specify default tags, i
 
 ```go
 awsProviderTagged, err := aws.NewProvider(ctx, "aws-provider-tagged", &aws.ProviderArgs{
-	Region: pulumi.String("us-west-2"),
-	DefaultTags: &aws.ProviderDefaultTagsArgs{
-		Tags: pulumi.StringMap{
-			"Project":      pulumi.String(ctx.Project()),
-			"Stack":        pulumi.String(ctx.Stack()),
-			"Organization": pulumi.String(ctx.Organization()),
-		},
-	},
+  Region: pulumi.String("us-west-2"),
+  DefaultTags: &aws.ProviderDefaultTagsArgs{
+    Tags: pulumi.StringMap{
+      "Project":      pulumi.String(ctx.Project()),
+      "Stack":        pulumi.String(ctx.Stack()),
+      "Organization": pulumi.String(ctx.Organization()),
+    },
+  },
 })
 if err != nil {
-	return err
+  return err
 }
 ```
 
@@ -83,13 +83,13 @@ The drawback to using an explicit provider is that you then need to tell Pulumi 
 // Create an S3 bucket; this one will not have default tags
 untaggedBucket, err := s3.NewBucket(ctx, "untagged-bucket", nil)
 if err != nil {
-	return err
+  return err
 }
 
 // Create another S3 bucket; this one will have default tags
 taggedBucket, err := s3.NewBucket(ctx, "tagged-bucket", nil, pulumi.Provider(awsProviderTagged))
 if err != nil {
-	return err
+  return err
 }
 ```
 

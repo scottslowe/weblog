@@ -79,7 +79,7 @@ To join the Linux server to Active Directory, follow these steps:
 
 1. Verify the Samba configuration. Be sure the following settings are specified in `/etc/samba/smb.conf`:  
 
-	```text
+    ```text
     workgroup = <NetBIOS name of AD domain> 
     security = ads
     realm = <DNS name of AD domain>

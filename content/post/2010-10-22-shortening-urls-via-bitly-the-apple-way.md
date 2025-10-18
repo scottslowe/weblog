@@ -27,19 +27,19 @@ First, here's the AppleScript code that wraps around the `curl` command to short
 
 ```text
 on run (input)  
-	set login to "YourUserNameHere" as string  
-	set apiKey to "YourAPIKeyHere" as string  
-	set input to (input as string)  
-	ignoring case  
-	if (((characters 1 thru 4 of input) as string) is not equal to "http") then  
-		beep  
-		return  
-	else  
-		set curlCmd to "curl --stderr /dev/null \"http://api.bit.ly/v3/shorten?login=" & login & "&apiKey=" & apiKey & "&longURL=" & input & "&format=txt\""  
-		set shortURL to (do shell script curlCmd)  
-		return shortURL  
-	end if  
-	end ignoring  
+    set login to "YourUserNameHere" as string  
+    set apiKey to "YourAPIKeyHere" as string  
+    set input to (input as string)  
+    ignoring case  
+    if (((characters 1 thru 4 of input) as string) is not equal to "http") then  
+        beep  
+        return  
+    else  
+        set curlCmd to "curl --stderr /dev/null \"http://api.bit.ly/v3/shorten?login=" & login & "&apiKey=" & apiKey & "&longURL=" & input & "&format=txt\""  
+        set shortURL to (do shell script curlCmd)  
+        return shortURL  
+    end if  
+    end ignoring  
 end run
 ```
 

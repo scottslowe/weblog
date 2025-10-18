@@ -23,13 +23,13 @@ First, the snippet. You'll need a snippet for each character (bracket, curly bra
 
 ```json
 {
-	"Brackets Wrap": {
-		"prefix": "brackwrap",
-		"body": [
-			"[$TM_SELECTED_TEXT]$0"
-		],
-		"description": "Wrap selected text in brackets and position cursor outside the closing bracket"
-	}
+    "Brackets Wrap": {
+        "prefix": "brackwrap",
+        "body": [
+            "[$TM_SELECTED_TEXT]$0"
+        ],
+        "description": "Wrap selected text in brackets and position cursor outside the closing bracket"
+    }
 }
 ```
 

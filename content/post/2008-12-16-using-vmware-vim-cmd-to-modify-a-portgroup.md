@@ -38,7 +38,7 @@ Run the command to set the active NICs first, then run the command to set the st
 
 ```bash
 vmware-vim-cmd hostsvc/net/portgroup_set --nicorderpolicy-active=vmnic0 vSwitch0 "Service Console"  
-	
+
 vmware-vim-cmd hostsvc/net/portgroup_set --nicorderpolicy-standby=vmnic1 vSwitch0 "Service Console"
 ```
 

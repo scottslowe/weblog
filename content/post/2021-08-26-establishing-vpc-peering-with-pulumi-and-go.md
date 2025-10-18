@@ -58,7 +58,7 @@ Next, I needed to set up a new AWS provider. Since creating a VPC peering relati
 
 ```go
 dstProvider, err := aws.NewProvider(ctx, "dstProvider", &aws.ProviderArgs{
-	Region: pulumi.String(dstVpcRegion),
+    Region: pulumi.String(dstVpcRegion),
 })
 ```
 
@@ -66,14 +66,14 @@ Armed with the second provider and the information from the base infrastructure 
 
 ```go
 peerConn, err := ec2.NewVpcPeeringConnection(ctx, "peering-connection", &ec2.VpcPeeringConnectionArgs{
-	PeerRegion: pulumi.String(dstVpcRegion),
-	PeerVpcId:  dstVpcId,
-	VpcId:      srcVpcId,
+    PeerRegion: pulumi.String(dstVpcRegion),
+    PeerVpcId:  dstVpcId,
+    VpcId:      srcVpcId,
 })
 
 _, err = ec2.NewVpcPeeringConnectionAccepter(ctx, "peering-acceptor", &ec2.VpcPeeringConnectionAccepterArgs{
-	VpcPeeringConnectionId: peerConn.ID(),
-	AutoAccept:             pulumi.Bool(true),
+    VpcPeeringConnectionId: peerConn.ID(),
+    AutoAccept:             pulumi.Bool(true),
 }, pulumi.Provider(dstProvider))
 ```
 
@@ -85,15 +85,15 @@ Here's the code to create the new routes (the VPC CIDRs are parameterized):
 
 ```go
 _, err = ec2.NewRoute(ctx, "src-peer-route", &ec2.RouteArgs{
-	RouteTableId:           srcPrivateRouteTbl,
-	DestinationCidrBlock:   pulumi.String(netAddrMap[dstVpcRegion]),
-	VpcPeeringConnectionId: peerConn.ID(),
+    RouteTableId:           srcPrivateRouteTbl,
+    DestinationCidrBlock:   pulumi.String(netAddrMap[dstVpcRegion]),
+    VpcPeeringConnectionId: peerConn.ID(),
 })
 
 _, err = ec2.NewRoute(ctx, "dst-peer-route", &ec2.RouteArgs{
-	RouteTableId:           dstPrivateRouteTbl,
-	DestinationCidrBlock:   pulumi.String(netAddrMap[srcVpcRegion]),
-	VpcPeeringConnectionId: peerConn.ID(),
+    RouteTableId:           dstPrivateRouteTbl,
+    DestinationCidrBlock:   pulumi.String(netAddrMap[srcVpcRegion]),
+    VpcPeeringConnectionId: peerConn.ID(),
 }, pulumi.Provider(dstProvider))
 ```
 
@@ -103,21 +103,21 @@ Similarly, referencing the security group ID gained via a StackReference to the 
 
 ```go
 _, err = ec2.NewSecurityGroupRule(ctx, "src-peer-cidr", &ec2.SecurityGroupRuleArgs{
-	Type:            pulumi.String("ingress"),
-	FromPort:        pulumi.Int(0),
-	ToPort:          pulumi.Int(65535),
-	Protocol:        pulumi.String("all"),
-	CidrBlocks:      pulumi.StringArray{pulumi.String(dstVpcCidr)},
-	SecurityGroupId: srcNodeSecGrpId,
+    Type:            pulumi.String("ingress"),
+    FromPort:        pulumi.Int(0),
+    ToPort:          pulumi.Int(65535),
+    Protocol:        pulumi.String("all"),
+    CidrBlocks:      pulumi.StringArray{pulumi.String(dstVpcCidr)},
+    SecurityGroupId: srcNodeSecGrpId,
 })
 
 _, err = ec2.NewSecurityGroupRule(ctx, "dst-peer-cidr", &ec2.SecurityGroupRuleArgs{
-	Type:            pulumi.String("ingress"),
-	FromPort:        pulumi.Int(0),
-	ToPort:          pulumi.Int(65535),
-	Protocol:        pulumi.String("all"),
-	CidrBlocks:      pulumi.StringArray{pulumi.String(srcVpcCidr)},
-	SecurityGroupId: dstNodeSecGrpId,
+    Type:            pulumi.String("ingress"),
+    FromPort:        pulumi.Int(0),
+    ToPort:          pulumi.Int(65535),
+    Protocol:        pulumi.String("all"),
+    CidrBlocks:      pulumi.StringArray{pulumi.String(srcVpcCidr)},
+    SecurityGroupId: dstNodeSecGrpId,
 }, pulumi.Provider(dstProvider))
 ```
 

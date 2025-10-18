@@ -31,12 +31,12 @@ For the purposes of this post, I'm only going to focus on step 4. After creating
 ```go
 // Use the Command provider to create or destroy the associated Docker context
 _, err = local.NewCommand(ctx, "docker-context", &local.CommandArgs{
-	Create: pulumi.Sprintf("docker context create --docker host=ssh://%s --description \"SSH-based Docker context to EC2 instance\" %s", dockerInstance.PrivateIp, regionNames[awsRegion]+"-docker"),
-	Delete: pulumi.Sprintf("docker context rm %s", regionNames[awsRegion]+"-docker"),
-	Update: pulumi.Sprintf("docker context update --docker host=ssh://%s --description \"SSH-based Docker context to EC2 instance\" %s", dockerInstance.PrivateIp, regionNames[awsRegion]+"-docker"),
+    Create: pulumi.Sprintf("docker context create --docker host=ssh://%s --description \"SSH-based Docker context to EC2 instance\" %s", dockerInstance.PrivateIp, regionNames[awsRegion]+"-docker"),
+    Delete: pulumi.Sprintf("docker context rm %s", regionNames[awsRegion]+"-docker"),
+    Update: pulumi.Sprintf("docker context update --docker host=ssh://%s --description \"SSH-based Docker context to EC2 instance\" %s", dockerInstance.PrivateIp, regionNames[awsRegion]+"-docker"),
 })
 if err != nil {
-	log.Printf("error creating local Docker context: %s", err.Error())
+    log.Printf("error creating local Docker context: %s", err.Error())
 }
 ```
 

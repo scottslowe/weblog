@@ -34,7 +34,7 @@ My thoughts this time around are pretty heavily focused on VXLAN, which continue
 
 * In case you're still unclear about the key problem that VXLAN attempts to address, this quote from Ivan Pepelnjak might help (the full article is [here](http://blog.ioshints.info/2011/09/vxlan-otv-and-lisp.html)):
 
-	>VXLAN tries to solve a very specific IaaS infrastructure problem: replace VLANs with something that might scale better. In a massive multi-tenant data center having thousands of customers, each one asking for multiple isolated IP subnets, you quickly run out of VLANs.
+    >VXLAN tries to solve a very specific IaaS infrastructure problem: replace VLANs with something that might scale better. In a massive multi-tenant data center having thousands of customers, each one asking for multiple isolated IP subnets, you quickly run out of VLANs.
 
 * Finally, you might find [this PDF](https://communities.cisco.com/docs/DOC-26426) helpful. Ignore the first 13 slides or so; they're marketing fluff, to be honest. However, the remainder of the slides have some useful information on VXLAN and how it's expected to be implemented.
 

@@ -23,9 +23,9 @@ Virtualization Short Take #19 is here, with news, headlines, and commentary on a
 
 * This [VMware KB article](http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1004082&sliceId=1&docTypeID=DT_KB_1_1&dialogID=2709533&stateId=0%200%202711273) is quite interesting; note the excerpt under the "Purpose" section of the article:  
 
-	>VMware recommends storing your swap on a VMFS3 volume, when running virtual machines on NFS storage.
+    >VMware recommends storing your swap on a VMFS3 volume, when running virtual machines on NFS storage.
 
-	So, even when running your VMs on NFS, VMware still recommends running the VM swap files on a VMFS3 volume. Very interesting, indeed. This is particularly interesting to NetApp, who---some would say rightly so---heavily pushes NFS for VMware storage.
+    So, even when running your VMs on NFS, VMware still recommends running the VM swap files on a VMFS3 volume. Very interesting, indeed. This is particularly interesting to NetApp, who---some would say rightly so---heavily pushes NFS for VMware storage.
 
 * Also from VMwarewolf, a note about [guest customization failing](http://www.vmwarewolf.com/guest-customization-fails-on-virtualcenter-25-update-2/) with VirtualCenter 2.5 Update 2. Again, anyone know if this has been addressed with Update 3?
 
@@ -41,9 +41,9 @@ Virtualization Short Take #19 is here, with news, headlines, and commentary on a
 
 * Brian Madden has a [good overview of "View Composer"](http://www.brianmadden.com/blog/BrianMadden/A-deeper-look-at-VMwares-upcoming-View-Composer-VDI-disk-image-technology-ie-multiple-VMs-sharing-the-same-disk-image) as it was described a few weeks ago at VMworld. Toward the end of the article, Brian mentions that VMware hasn't announced anything with regard to user profiles:  
 
-	>While that sounds noble, it also is a bit at odds with the longer-term vision that VMware CEO Paul Maritz outlined in the VMworld keynote, namely, that VMware wants to focus on deploying a personality to a user, not to a device. Certainly View Composer goes a long way in centrally managing desktops, but I wouldn't be surprised if VMware does more in the user personalization space in the future as well.
+    >While that sounds noble, it also is a bit at odds with the longer-term vision that VMware CEO Paul Maritz outlined in the VMworld keynote, namely, that VMware wants to focus on deploying a personality to a user, not to a device. Certainly View Composer goes a long way in centrally managing desktops, but I wouldn't be surprised if VMware does more in the user personalization space in the future as well.
 
-	As Warren Ponder points out in the comments, there are several ways to handle user profiles, and it does sound like VMware already has some irons in the fire to help address that particular concern.
+    As Warren Ponder points out in the comments, there are several ways to handle user profiles, and it does sound like VMware already has some irons in the fire to help address that particular concern.
 
 * This has been pointed out in numerous places around the web, but who can fault one more link? Mike DiPetrillo of VMware has re-created Hyper-V's [Quick Migration functionality using PowerShell](http://mikedatl.typepad.com/mikedvirtualization/2008/10/quick-migration.html). I could go somewhere with this, but I think I'll just leave it alone.
 

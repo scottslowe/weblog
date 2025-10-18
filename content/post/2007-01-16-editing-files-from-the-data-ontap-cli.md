@@ -13,7 +13,7 @@ url: /2007/01/16/editing-files-from-the-data-ontap-cli/
 wordpress_id: 402
 ---
 
-While setting up a [Network Appliance](http://www.netapp.com/) storage system today for a customer, I ran into a situation that was a bit puzzling for a moment. I needed to change the IP address on the storage system's clustered controllers, but in order to do that I needed to edit some files in the /etc directory on the root volume. Normally, that wouldn't be a big deal; I'd just mount the root volume (vol0) via CIFS or NFS from my [MacBook Pro](http://www.apple.com/macbookpro/) and go from there.
+While setting up a [Network Appliance](http://www.netapp.com/) storage system today for a customer, I ran into a situation that was a bit puzzling for a moment. I needed to change the IP address on the storage system's clustered controllers, but in order to do that I needed to edit some files in the `/etc` directory on the root volume. Normally, that wouldn't be a big deal; I'd just mount the root volume (vol0) via CIFS or NFS from my [MacBook Pro](http://www.apple.com/macbookpro/) and go from there.
 
 However, in this particular instance, the customer hadn't licensed the CIFS and NFS protocols because this storage system would be used strictly as an iSCSI target for a [VMware ESX Server](http://www.vmware.com/products/vi/esx/) deployment. That meant there would be no mounting the root volume this time. So how does one go about editing files in the Data ONTAP CLI?
 
@@ -23,7 +23,7 @@ The advanced command set includes useful commands like `ls` (to list the files i
 
 So here's how I used the advanced command set to change the IP addresses of the storage system:
 
-1. Enabled the advanced command set with `priv set advanced	.
+1. Enabled the advanced command set with `priv set advanced`.
 
 2. Displayed the current contents of the `/etc/hosts` file with `rdfile /etc/hosts`.
 

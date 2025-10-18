@@ -33,8 +33,8 @@ The first step is to look up the VPC itself. It _might_ be possible for you to s
 isDefault := true
 desiredState := "available"
 vpc, err := ec2.LookupVpc(ctx, &ec2.LookupVpcArgs{
-	Default: &isDefault,
-	State:   &desiredState,
+    Default: &isDefault,
+    State:   &desiredState,
     },
 )
 ```
@@ -44,7 +44,7 @@ Perfect; now you have the default VPC for your account in whatever region you're
 ```go
 // Look up availability zones in the desired region
 rawAzInfo, err := aws.GetAvailabilityZones(ctx, &aws.GetAvailabilityZonesArgs{
-	State: &desiredState,
+    State: &desiredState,
 })
 // Determine how many AZs are present
 numOfAZs := len(rawAzInfo.Names)
@@ -52,7 +52,7 @@ ctx.Export("numOfAZs", pulumi.Int(numOfAZs))
 // Build a list of AZ names
 azNames := make([]string, numOfAZs)
 for i := 0; i < numOfAZs; i++ {
-	azNames[i] = rawAzInfo.Names[i]
+    azNames[i] = rawAzInfo.Names[i]
 }
 ```
 
@@ -62,14 +62,14 @@ Now you have the VPC and information about the AZs (including the number of AZs 
 // Iterate through the AZs to discover subnets
 pubSubnetIds := make([]pulumi.StringInput, numOfAZs)
 for i := 0; i < numOfAZs; i++ {
-	selectedAz := azNames[i]
-	azDefault := true
-	subnet, err := ec2.LookupSubnet(ctx, &ec2.LookupSubnetArgs{
-		AvailabilityZone: &selectedAz,
-		DefaultForAz:     &azDefault,
-		VpcId:            &vpc.Id,
-	})
-	pubSubnetIds[i] = pulumi.String(subnet.Id)
+    selectedAz := azNames[i]
+    azDefault := true
+    subnet, err := ec2.LookupSubnet(ctx, &ec2.LookupSubnetArgs{
+        AvailabilityZone: &selectedAz,
+        DefaultForAz:     &azDefault,
+        VpcId:            &vpc.Id,
+    })
+    pubSubnetIds[i] = pulumi.String(subnet.Id)
 }
 ```
 
@@ -81,7 +81,7 @@ Only the security group remains before you have all the information you need to 
 // Identify default SG
 defaultSgName := "default"
 sg, err := ec2.LookupSecurityGroup(ctx, &ec2.LookupSecurityGroupArgs{
-	Name: &defaultSgName,
+    Name: &defaultSgName,
 })
 ```
 
@@ -90,14 +90,14 @@ And with all the information in hand, you're now ready to launch your EC2 instan
 ```go
 // Launch an instance
 instance, err := ec2.NewInstance(ctx, "instance", &ec2.InstanceArgs{
-	Ami:                      pulumi.String("ami-123456789"),
-	InstanceType:             pulumi.String("t3.large"),
-	KeyName:                  pulumi.String("my-keypair-name"),
-	SubnetId:                 pubSubnetIds[0],
-	VpcSecurityGroupIds:      pulumi.StringArray{sg.ID()},
-	Tags: pulumi.StringMap{
-		"Name":       pulumi.String("my-instance-name"),
-	},
+    Ami:                      pulumi.String("ami-123456789"),
+    InstanceType:             pulumi.String("t3.large"),
+    KeyName:                  pulumi.String("my-keypair-name"),
+    SubnetId:                 pubSubnetIds[0],
+    VpcSecurityGroupIds:      pulumi.StringArray{sg.ID()},
+    Tags: pulumi.StringMap{
+        "Name":       pulumi.String("my-instance-name"),
+    },
 })
 ```
 

@@ -30,9 +30,9 @@ First he tackles the question, "What is a private cloud?"
 
 * Customized for specific workloads
 
-	Ryan's first recommendation is "Build with the end in mind." He looks at how deploying the "m1.tiny" flavor would create a mismatch between CPU and RAM utilization, in that 48 vCPUs will be utilized but only a fraction of the host's RAM would be allocated. The "m1.medium" flavor (4GB RAM, 2 vCPUs) creates a more balanced workload, whereas the larger flavors imbalance utilization the other way.
+    Ryan's first recommendation is "Build with the end in mind." He looks at how deploying the "m1.tiny" flavor would create a mismatch between CPU and RAM utilization, in that 48 vCPUs will be utilized but only a fraction of the host's RAM would be allocated. The "m1.medium" flavor (4GB RAM, 2 vCPUs) creates a more balanced workload, whereas the larger flavors imbalance utilization the other way.
 
-	What this tells me is that capacity planning is just as importan with a private cloud deployment as it is with a "traditional virtualization" solution. Ryan's recommendations around capacity are:
+    What this tells me is that capacity planning is just as importan with a private cloud deployment as it is with a "traditional virtualization" solution. Ryan's recommendations around capacity are:
 
 * Don't use a disk size of 0.
 

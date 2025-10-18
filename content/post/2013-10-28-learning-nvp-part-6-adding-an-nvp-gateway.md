@@ -122,7 +122,7 @@ To add the new gateway appliance to NVP, you'll use NVP Manager (I showed you ho
 
 7. On the final screen, you'll need to establish connectivity to a transport zone. You'll want to select the appropriate interface (in my example environment, it was `breth2`) and the appropriate encapsulation protocol (STT is generally recommended for connectivity back to hypervisors). Then select the appropriate transport zone from the drop-down list. In the end, you'll have a screen that looks something like this (note that your interfaces, IP addresses, and transport zone information will likely be different):
 
-	[![Adding a gateway to NVP](/public/img/add-nvp-gateway-small.png)](/public/img/add-nvp-gateway-fullsize.png)
+    [![Adding a gateway to NVP](/public/img/add-nvp-gateway-small.png)](/public/img/add-nvp-gateway-fullsize.png)
 
 8. Click Save to finish the process. The number of gateways listed in the Summary of Transport Components box should increment by 1 in the Registered column. However, the Active column will remain unchanged---that's because there's one more step needed.
 

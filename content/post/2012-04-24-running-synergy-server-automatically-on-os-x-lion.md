@@ -28,7 +28,7 @@ number=$(ps ax | grep "[/]synergys" | wc -l)
 # Start synergys in foreground if not already running
 if [ $number -gt 0 ]
   then
-  	echo Running
+    echo Running
   else
     /usr/bin/synergys -f -c /etc/synergy.conf
 fi
