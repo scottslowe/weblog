@@ -1,6 +1,6 @@
 ---
 author: slowe
-categories: General
+categories: Information
 comments: true
 date: 2012-12-05T12:21:39Z
 slug: posts-from-the-past-december-2012
