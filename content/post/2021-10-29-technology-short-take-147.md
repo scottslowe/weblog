@@ -4,21 +4,22 @@ categories: Information
 comments: true
 date: 2021-10-29T09:00:00-06:00
 tags:
-- Networking
+- Apple
+- AWS
+- BGP
+- CAPI
+- Docker
+- Envoy
+- EVPN
 - Hardware
+- Kong
+- Kubernetes
+- macOS
+- Networking
 - Security
 - Storage
-- Virtualization
-- BGP
-- Envoy
-- Apple
-- macOS
-- Kubernetes
-- CAPI
 - Terraform
-- Kong
-- Docker
-- AWS
+- Virtualization
 - VMware
 - vSphere
 title: 'Technology Short Take 147'
