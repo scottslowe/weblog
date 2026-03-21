@@ -18,11 +18,11 @@ wordpress_id: 346
 
 The original instructions are found [here][1]. Note, however, that this post contains all the information from the original post plus a few added points found during the latest run through the steps.
 
-### Assumptions
+## Assumptions
 
 This procedure assumes that you are using [Windows Server 2003 R2](http://www.microsoft.com/windowsserver2003/default.mspx); if you are using a previous version, the LDAP attribute mapping will need to be modified to match the schema extensions found in Microsoft's Services for Unix (SfU) add-on product. This will require changes to the `ldapclient manual` command shown below, which handles the schema/attribute mapping.
 
-### Preparing Active Directory (One-Time)
+## Preparing Active Directory (One-Time)
 
 These steps only need to be performed once. Note that if you have performed any of these steps as part of authenticating Linux or Solaris to Active Directory, they do _not_ need to be performed again. Simply make note of the information used earlier and re-use that information again this time.
 
@@ -36,7 +36,7 @@ These steps only need to be performed once. Note that if you have performed any 
 
 Once these one-time steps have been completed, we can proceed to configuring the individual users that will be authenticating to Active Directory from your Solaris server(s).
 
-### Preparing Active Directory (Each User)
+## Preparing Active Directory (Each User)
 
 Each Active Directory account that will authenticate via Solaris must be configured with a uid and other UNIX attributes. This is accomplished via the new "UNIX Attributes" tab on the properties dialog box of a user account (this tab was made visible by the installation of the Server for NIS component). The attributes that must be populated are:
 
@@ -54,7 +54,7 @@ Based on my experience so far, the values for Solaris will often be very differe
 
 After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Solaris server(s) that will enable the authentication.
 
-### Preparing Active Directory (Each Solaris Server)
+## Preparing Active Directory (Each Solaris Server)
 
 These steps need to be repeated for each Solaris server that will authenticating via Kerberos to Active Directory.
 
@@ -72,15 +72,15 @@ Be sure to specify a unique output filename (so that you don't overwrite files; 
 
 Now that each Solaris server has a matching account in Active Directory, and each account has had a keytab generated for it, we're almost ready to move on to configuring the Solaris servers themselves. First, though, we need to take care of some name resolution issues.
 
-### Configuring Reverse DNS
+## Configuring Reverse DNS
 
 On the DNS server handling the reverse lookup zones for the subnet on which the Solaris server is located, add a PTR record for the Solaris server and it's IP address. This will ensure that reverse DNS lookups work as expected. Make sure that each Solaris server that will be authenticating against Active Directory has a reverse lookup record in DNS.
 
-### Configuring Solaris (Each Server)
+## Configuring Solaris (Each Server)
 
 The following steps need to be performed on each Solaris server that will authenticate against Active Directory.
 
-#### Configuring the hosts file
+### Configuring the hosts file
 
 To enable reliable TGT validation (this ensures that the Kerberos ticket returned by a KDC actually came from the KDC and not a spoofed server), you'll need to edit the hosts file. On Solaris 10, this is found in `/etc/inet/hosts` and is read-only, even for root. Edit this file (changing permissions as necessary) so that the line with the server's IP address looks something like this:
 
@@ -92,7 +92,7 @@ What we're doing here is making sure that the server's fully qualified domain na
 
 There may or may not be other entries in the file; leave those entries untouched (unless you _know_ you need to modify them).
 
-#### Configuring Kerberos
+### Configuring Kerberos
 
 Solaris keeps its Kerberos configuration in the `/etc/krb5` directory as `krb5.conf`. Edit this file using your editor of choice to look something like the one below. Depending upon how you configured Solaris during the installation, some of this configuration may already be present.
 
@@ -131,7 +131,7 @@ You can't simply copy and paste from here to the Solaris configuration file, as 
 
 Transfer the keytab generated earlier by the `ktpass.exe` utility (in our example, it was called `solarissrvr.keytab`) to the Solaris server in some secure fashion, like SFTP or SCP. Place it in the `/etc/krb5` directory as `krb5.keytab`, and make sure that only root has permissions to the file.
 
-#### Configuring LDAP
+### Configuring LDAP
 
 We'll use the native Solaris `ldapclient` utility to configure the LDAP support in Solaris. The command you'll type in looks something like this (please _don't_ copy and paste this, as it contains generic/incorrect information that won't work!):
 
@@ -181,7 +181,7 @@ svcadm restart svc:/network/ldap/client:default
 
 Use the `svcs -a | grep ldap` command to verify the exact name of the LDAP client service on your Solaris server.
 
-#### Configuring the DNS Client
+### Configuring the DNS Client
 
 You'll also need to make sure that the DNS client is enabled and running. Using `svcs -a | grep dns` will help you identify the correct service, which you can then enable with svcadm:
 
@@ -191,7 +191,7 @@ svcadm enable svc:/network/dns/client:default
 
 Test DNS resolution using either the `host` or `nslookup` commands.
 
-#### Configuring PAM
+### Configuring PAM
 
 The `/etc/pam.conf` file controls the PAM (Pluggable Authentication Mechanism) configuration on Solaris. You'll need to edit the `/etc/pam.conf` file to look something like what's shown below. I've edited away all the non-essential sections, so only change the sections listed below.
 
@@ -214,11 +214,11 @@ other   account required        pam_ldap.so.1
 
 With this configuration in place, Solaris will use Kerberos authentication and will retrieve account information via LDAP.
 
-#### Reboot the Solaris Server
+### Reboot the Solaris Server
 
 I know this sounds stupid, but even after restarting LDAP and enabling/starting/restarting the DNS client, things still didn't work for me in the lab. However, after rebooting the Solaris server, it worked like a champ. So, just in case, reboot the Solaris server after completing the configuration.
 
-### Testing the Configuration
+## Testing the Configuration
 
 Once all of the configuration steps have been completed, you can test the configuration with the following commands:
 

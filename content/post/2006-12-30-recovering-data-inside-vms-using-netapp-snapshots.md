@@ -27,7 +27,7 @@ The trick here is to take advantage of _LUN cloning_, a feature on the NetApp st
 
 There are three parts to this process. First, we configure ESX Server to recognize snapshot LUNs on the SAN (this is a one-time configuration change). Then, we take the snapshot on the NetApp storage system, create a LUN clone from the snapshot, and present that LUN clone back to the ESX servers. Finally, we manipulate the LUN clone within ESX in order to retrieve the specific data we need.
 
-### Enable Resignaturing on ESX Server
+## Enable Resignaturing on ESX Server
 
 In the ESX SAN Configuration Guide (found [here on VMware's site](http://www.vmware.com/pdf/vi3_esx_san_cfg.pdf)), there is this blurb about resignaturing:
 
@@ -47,7 +47,7 @@ After this option is set, you'll be able to present LUN clones (or other hardwar
 
 Now we're ready to move to the NetApp storage system.
 
-### Taking a Snapshot and Making a LUN Clone
+## Taking a Snapshot and Making a LUN Clone
 
 By default, snapshots are already enabled and scheduled, so unless you've modified the configuration, the NetApp storage system is already taking snapshots of the volumes that hold the LUNs where the VMware VMFS partitions (and thus the VMDK virtual disk files) are stored.
 
@@ -85,6 +85,6 @@ As you can see, this allows us to take full advantage of encapsulating the serve
 
 In future articles, I'll touch on restoring entire VMs using NetApp snapshots, as well as talk about getting consistent snapshots of the VMs.
 
-### Other Information
+## Other Information
 
 This process was performed on a Network Appliance FAS810 running Data ONTAP 7.1.1.1 and servers running VMware ESX Server (both 3.0.0 and 3.0.1) with the software iSCSI initiator. VMs running Windows Server 2003 R2 were used for testing.

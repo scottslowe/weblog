@@ -32,7 +32,7 @@ I'll accomplish this by using the UNIX interoperability tools included in [Windo
 
 OK, let's dive right in.
 
-### Configuring Solaris
+## Configuring Solaris
 
 Configuring Solaris is pretty straightforward; it's pretty much designed out of the box to use auto-mounted home directories. This is one area where Solaris shows its enterprise pedigree (that's not a knock against Linux, just an observation about Solaris).
 
@@ -53,7 +53,7 @@ svcadm -v enable svc:/system/filesystem/autofs
 
 At this point, Solaris should be ready to go. Let's look at the Linux configuration.
 
-### Configuring Linux
+## Configuring Linux
 
 The Linux configuration is only slightly more complicated than the Solaris configuration. Whereas Solaris uses `/etc/auto_master` to define the automounted filesystems, autofs on Linux uses `/etc/auto.master`, and it does not (by default, as far as I can tell) define a map for automounted home directories.
 
@@ -83,11 +83,11 @@ To further streamline any differences between Solaris and Linux, I also created 
 
 Now that Linux and Solaris are both done, let's have a look at configuring the UNIX interoperability components on Windows.
 
-### Configuring Windows (NFS, NIS, and User Name Mapping)
+## Configuring Windows (NFS, NIS, and User Name Mapping)
 
 Surprisingly enough, this part was the hardest part for me. I don't know if it was the documentation (if it can be called that) or something else, but I had a hard time with this. Hopefully the information I share here can help someone else avoid this headache.
 
-#### Configuring the Domain Controllers
+### Configuring the Domain Controllers
 
 On the domain controllers in your Active Directory domain, install the following components:
 
@@ -109,7 +109,7 @@ Once these are installed, use these steps to configure them appropriately:
 
 The DC should now be ready to go. It's time to move to the file server.
 
-#### Configuring the File Server
+### Configuring the File Server
 
 We need to install the Server for NFS component on the file server that will host our automounted home directories. The Server for NFS is found under "Other Network File and Print Services" in Add Windows Components.
 
@@ -132,7 +132,7 @@ If this mounts the NFS share without any problems, then you should be ready to r
 
 Now, upon logging in to either Solaris or Linux (I tested this via SSH), you should get dropped into `/home/<username>` (assuming that's where you configured the automounter to mount the NFS share) automatically.
 
-### How I Tested
+## How I Tested
 
 I tested this procedure using Solaris 10 6/06 and CentOS 4.3. These systems were configured for Active Directory integration and native Kerberos logons via SSH. I used Windows Server 2003 R2 Standard Edition for the NFS server, and Windows Server 2003 R2 Standard Edition for the Active Directory domain controllers. All of these systems were created as virtual machines hosted on a [VMware Virtual Infrastructure 3](http://www.vmware.com/products/vi/) server farm with servers running ESX Server 3.0.1.
 

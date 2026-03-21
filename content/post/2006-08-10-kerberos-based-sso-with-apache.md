@@ -19,7 +19,7 @@ wordpress_id: 316
 
 The key to the magic here is the [mod_auth_kerb module](http://modauthkerb.sourceforge.net/), which adds Kerberos authentication to [Apache](http://httpd.apache.org/). This module not only allows Apache to use Kerberos on the "back-end," so to speak, but also supports the SPNEGO and GSS-API stuff on the "front-end" that allow it to transparently authenticate users connecting with supported browsers, without ever prompting for a password.
 
-### Preparing Active Directory (Each Apache Server)
+## Preparing Active Directory (Each Apache Server)
 
 These steps need to be repeated for each Apache server that will authenticating via Kerberos to Active Directory.
 
@@ -39,7 +39,7 @@ It would be ideal if we could leverage the existing computer account that may ex
 
 Now we're ready to move on to configuring the Apache servers.
 
-### Configuring Apache (Each Server)
+## Configuring Apache (Each Server)
 
 Repeat these steps for each Apache server. In case I haven't already mentioned this, I'm assuming you're running Apache 2.0 on Linux, and not on some flavor of Windows.
 
@@ -73,4 +73,4 @@ If this doesn't work, go back and double-check your `ktpass.exe` command (noting
 
 Finally, note that a few other browsers also support the transparent authentication. I personally tested [Safari](http://www.apple.com/macosx/features/safari/) and [Shiira](http://hmdt-web.net/shiira/en) on Mac OS X, and both worked fine (after I had obtained a Kerberos ticket, either using the Kerberos application or `kinit` from a shell prompt). [Camino](http://www.caminobrowser.org/) didn't work, which is a bummer. I haven't tested [Firefox](http://www.mozilla.com/firefox/) yet, but I'm told that Firefox also works, although an extension may be required.
 
-Extensive credit goes to Achim Grolms for his [walk-through of using mod_auth_kerb with a Windows KDC](http://www.grolmsnet.de/kerbtut/).
+Extensive credit goes to Achim Grolms for his [walk-through of using `mod_auth_kerb` with a Windows KDC](http://www.grolmsnet.de/kerbtut/).

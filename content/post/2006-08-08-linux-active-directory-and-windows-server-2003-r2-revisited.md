@@ -24,7 +24,7 @@ The integration of (what was formerly called) Services for UNIX into [Windows Se
 
 For the most part, these instructions are reasonably similar to the instructions for pre-R2 versions of Windows.
 
-### Preparing Active Directory (One-Time)
+## Preparing Active Directory (One-Time)
 
 Based on what I've seen so far, it appears as if a partial RFC 2307-compliant schema is included by default with Windows Server 2003 R2. This means that it is no longer necessary to extend the schema to include attributes such as uid, gid, login shell, etc. However, while the schema does appear to be present by default (based on explorations using ADSI Edit), you must install the "Server for NIS" component on at least one domain controller in order to be able to actually set those attributes (and it will be necessary to set those attributes using the Active Directory Users and Computers console before logins from Linux will work).
 
@@ -36,7 +36,7 @@ Finally, you'll also need to create an account in Active Directory that will be 
 
 Each of these tasks are one-time tasks that must be accomplished before logins from Linux will work. Once they have been completed, you are ready to configure the individual users.
 
-### Preparing Active Directory (Each User)
+## Preparing Active Directory (Each User)
 
 Each Active Directory account that will authenticate via Linux must be configured with a uid and other UNIX attributes. This is accomplished via the new "UNIX Attributes" tab on the properties dialog box of a user account. Installing the "Server for NIS" component enables this new tab, as mentioned previously.
 
@@ -44,17 +44,17 @@ Each user must be given an NIS domain, but this parameter is ignored in our auth
 
 After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Linux server that will enable the authentication.
 
-### Preparing Active Directory (Each Linux Server)
+## Preparing Active Directory (Each Linux Server)
 
 Here is where it starts getting tricky. So far, nothing we've done has been unusual or terribly difficult. Things will start getting a bit more complex now.
 
 First off, you'll need to decide if you want to use _TGT validation._ I don't have the space here to fully describe this, but basically it's a check that the Kerberos Key Distribution Center (KDC---in this case, an Active Directory domain controller) is not being spoofed. It's an added level of security that ensures that all hosts involved are indeed who they say they are, which is one of the core principles of the Kerberos authentication system.
 
-#### Without TGT Validation
+### Without TGT Validation
 
 If you don't care about TGT validation, then ignore this whole section and proceed to "Preparing Each Linux Server", below. Once Linux is properly configured for Kerberos authentication and LDAP lookups, it can authenticate against Active Directory _with no further action required._ You'll note that this is in contrast to many of the instructions out there (including my [original instructions][2]), which state that you must perform additional steps. In my experience, the additional steps are only necessary if you want TGT validation, i.e., if you want the Linux server to verify the identity of the Active Directory domain controller handing out the Kerberos tickets. If you don't care about that, then you're ready to proceed with the next step.
 
-#### With TGT Validation
+### With TGT Validation
 
 For each Linux-based server that will be authenticating against Active Directory, follow the steps below.
 
@@ -72,7 +72,7 @@ Of course, you'll need to substitute the appropriate values for "fqdn" (the full
 
 If this computer account ever gets deleted from Active Directory, then Active Directory users will be unable to authenticate to Linux systems. You'll need to repeat the process---create a new computer account, run `ktpass.exe`, and copy the keytab over to the Linux server (as described below).
 
-### Preparing Each Linux Server
+## Preparing Each Linux Server
 
 Follow the steps below to configure each Linux server for authentication against Active Directory.
 
@@ -94,7 +94,7 @@ That should be it. Once you do that, you should be able to use `kinit` from a Li
 
 At this point, any PAM-aware service that is configured to use the stacked system file (such as the system-auth configuration on Red Hat-based distributions) will use Active Directory for authentication. The SSH daemon is a good one to test. Note, however, that unless you also add the pam\_mkhomedir.so module in the PAM configuration, home directories will have to be created manually (with the correct permissions and ownership set manually as well) for any Active Directory account that may log on to that server. (I generally recommend the use of pam\_mkhomedir.so in this situation.)
 
-### Caveats/Limitations/Disclaimers
+## Caveats/Limitations/Disclaimers
 
 I haven't tested this configuration on every possible distribution of Linux. This configuration was tested on CentOS 4.3 running as a virtual machine under ESX Server 3.0, authenticating against a pair of domain controllers running Windows Server 2003 R2 (which were also VMs). It should work without major modifications on most other Linux distributions, and with modifications on various other Unix operating systems. (I plan to test [OpenBSD](http://www.openbsd.org/) 3.9 and possibly Solaris 10 x86 soon.)
 

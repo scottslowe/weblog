@@ -18,7 +18,7 @@ There are two components here. First, we must find all the universal groups. Tha
 
 Second, we need to enumerate the membership of those universal groups so that we can see who or what has been placed into the membership of the groups. If the members are only other groups, all is well; if there are users as members, that needs to be documented and noted. There very well may be valid business reasons why a user and not a group is placed into a universal group---that's fine. Just document it for future reference. What we want to avoid is allowing the membership of the universal group to become too dynamic, as that will have an adverse impact on Active Directory replication.
 
-### Finding all the Universal Groups
+## Finding all the Universal Groups
 
 To find all the universal groups, we turn to the `dsquery *` command. The `dsquery group` command won't work here because it has no way of specifying to list/find only universal groups. Instead, we'll use a generic LDAP query with the `dsquery *` command to find universal groups.
 
@@ -31,7 +31,7 @@ dsquery * "dc=example,dc=net" -scope subtree \
 
 This command will return the DN of all universal groups. Note that it may be necessary to add a `-limit` parameter to allow the `dsquery` statement to return _all_ of the universal groups (the default is 100, if I recall correctly).
 
-### Enumerating Membership in Universal Groups
+## Enumerating Membership in Universal Groups
 
 Now that we have the DNs for the universal groups, we can use the `dsget group` command to show the membership for those groups, like so:
 

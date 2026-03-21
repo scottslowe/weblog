@@ -21,7 +21,7 @@ The idea behind [802.1x](http://en.wikipedia.org/wiki/802.1x) is to provide Laye
 
 The idea here is to configure 802.1x authentication on a network switch in such a way as to leverage the existing authentication infrastructure provided by Active Directory. Like it or not, Active Directory is a widely deployed directory service and leveraging it where we can will certainly provide an advantage. This process uses RADIUS to provide an interface between a Cisco Catalyst 3560G switch (the 802.1x authenticator in this scenario) and Active Directory. I could only test [Mac OS X](http://www.apple.com/macosx/) as the client (or 802.1x supplicant), but I'm confident that the configuration will work equally well with [Windows XP Professional](http://www.microsoft.com/windowsxp/).
 
-### Configuring the Cisco Catalyst 3560G
+## Configuring the Cisco Catalyst 3560G
 
 The Catalyst switch I used in this configuration was running IOS 12.2(25); please note that the commands listed here may be different in different versions of IOS.
 
@@ -63,7 +63,7 @@ That enables 802.1x authentication on that specific port. Repeat the process for
 
 Now that the switch is configured, we move on to configuring Active Directory.
 
-### Configuring Active Directory and IAS
+## Configuring Active Directory and IAS
 
 I suppose that saying we need to "configure Active Directory" isn't entirely accurate, since no configuration changes and no schema extensions are necessary to make this work. All that really needs to be done is to enable reversible password encryption (which can be done on a per-user basis) and setup Internet Authentication Service (IAS).
 
@@ -81,7 +81,7 @@ To configure IAS in this instance (once it has been installed and registered wit
 
 At this point, the IAS configuration should be complete. Now for the final step: configuring the client to use 802.1x.
 
-### Configuring the Client (Mac OS X)
+## Configuring the Client (Mac OS X)
 
 As mentioned earlier, I didn't have a physical Windows XP Professional-based machine to test with, but I did do some testing with Mac OS X. Although the software used to configure the operating system is different, the overall configuration is similar and should work without any major hitches on Windows XP.
 

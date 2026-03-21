@@ -25,7 +25,7 @@ In general, most VPNs employ technology such as [PPTP][4] or [IPSec][5]. These p
 
 While this may seem old hat to long-time Linux, Unix, or [Mac OS X][6] users, this is a relatively new concept to other platforms. Being a (fairly) new convert to Mac OS X myself, I found myself enjoying the tremendous flexibility offered by application specific VPNs. However, this functionality is certainly not limited to these platforms, and it is possible for [Windows][7] users to utilize this functionality as well.
 
-### Some Examples
+## Some Examples
 
 Here are a few examples of how you can use application specific VPNs:
 
@@ -35,7 +35,7 @@ Here are a few examples of how you can use application specific VPNs:
 
 * Remote Desktop: This is a great technique for sysadmins. Need to use Remote Desktop to manage a Windows-based server remotely, but don't want to run into security problems? Use Stunnel or OpenSSH to encrypt the RDP traffic. Stunnel, in my opinion, is particularly good here, since it's incredibly easy to use the Windows port of Stunnel to establish an SSL listener on an arbitrary high port for this very purpose.
 
-### Using Stunnel for SSL-based Application Specific VPNs
+## Using Stunnel for SSL-based Application Specific VPNs
 
 On Windows, there is no graphical user interface (GUI) for configuring Stunnel; all configuration must be done with the `stunnel.conf` configuration file. A sample `stunnel.conf` file is found below; this file listens on TCP port 1494 and forwards traffic to TCP port 3389 on the same system.  (Note that this would be a sample `stunnel.conf` file for a server-side configuration.)
 
@@ -57,7 +57,7 @@ On Mac OS X, there is a graphical utility for managing Stunnel called SSL Enable
 
 On Linux, the configuration again involves editing the `stunnel.conf` file and launching stunnel (either in the foreground or as a daemon). I'm not aware of any GUI utilities for configuring Stunnel on Linux, but that certainly doesn't mean they don't exist.
 
-### Using SSH for Application Specific VPNs
+## Using SSH for Application Specific VPNs
 
 As with Stunnel, it's also possible to use SSH to create application specific VPNs. Mac OS X comes with OpenSSH, as do most distributions of Linux and various flavors of BSD. Windows users can also find various ports of OpenSSH and utilities such as [PuTTY][13] that make it possible to use SSH for application specific VPNs as well.
 
@@ -73,7 +73,7 @@ There are a few graphical utilities on Mac OS X for managing SSH tunnels; these 
 
 Not being a regular day-to-day Linux user (not on the desktop, at least), I don't know of any SSH tunnel management applications, but I would be very surprised if they didn't exist.
 
-### Creating Site-to-Site Application Specific VPNs
+## Creating Site-to-Site Application Specific VPNs
 
 Most of the examples so far have been using SSH and/or Stunnel to connect endpoints (i.e., a single laptop or desktop computer) to a remote resource via an application specific VPN. However, it's also easily possible to create application specific site-to-site VPNs, whose purpose is to secure only a particular type of traffic between two locations.
 

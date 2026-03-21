@@ -21,7 +21,7 @@ As with the procedure for [authenticating Linux against Active Directory][1] and
 
 This procedure assumes that you are using [Windows Server 2003 R2](http://www.microsoft.com/windowsserver2003/default.mspx); if you are using a previous version, the LDAP attribute mapping will need to be modified to match the schema extensions found in Microsoft's Services for Unix (SfU) add-on product.
 
-### Preparing Active Directory (One-Time)
+## Preparing Active Directory (One-Time)
 
 These steps only need to be performed once. Note that if you have performed any of these steps as part of authenticating Linux to Active Directory, they do _not_ need to be performed again. Simply make note of the information used earlier and re-use that information again with Solaris.
 
@@ -35,7 +35,7 @@ These steps only need to be performed once. Note that if you have performed any 
 
 Once these one-time steps have been completed, we can proceed to configuring the individual users that will be authenticating to Active Directory from your Solaris server(s).
 
-### Preparing Active Directory (Each User)
+## Preparing Active Directory (Each User)
 
 Each Active Directory account that will authenticate via Solaris must be configured with a uid and other UNIX attributes. This is accomplished via the new "UNIX Attributes" tab on the properties dialog box of a user account (this tab was made visible by the installation of the Server for NIS component). The attributes that must be populated are:
 
@@ -53,7 +53,7 @@ Based on my experience so far, the values for Solaris will often be very differe
 
 After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Solaris server(s) that will enable the authentication.
 
-### Preparing Active Directory (Each Solaris Server)
+## Preparing Active Directory (Each Solaris Server)
 
 These steps need to be repeated for each Solaris server that will authenticating via Kerberos to Active Directory.
 
@@ -71,11 +71,11 @@ Be sure to specify a unique output filename (so that you don't overwrite files; 
 
 Now that each Solaris server has a matching account in Active Directory, and each account has had a keytab generated for it, we're ready to move on to configuring the Solaris servers themselves.
 
-### Configuring Solaris (Each Server)
+## Configuring Solaris (Each Server)
 
 The following steps need to be performed on each Solaris server that will authenticate against Active Directory.
 
-#### Configuring Kerberos
+### Configuring Kerberos
 
 Solaris keeps its Kerberos configuration in the `/etc/krb5` directory as `krb5.conf`. Edit this file using your editor of choice to look something like the one below. Depending upon how you configured Solaris during the installation, some of this configuration may already be present.
 
@@ -117,7 +117,7 @@ Of particular interest here is the "verify\_ap\_req\_nofail = false" parameter. 
 
 Transfer the keytab generated earlier by the `ktpass.exe` utility (in our example, it was called `solarissrvr.keytab`) to the Solaris server in some secure fashion, like SFTP or SCP. Place it in the `/etc/krb5` directory as `krb5.keytab`, and make sure that only root has permissions to the file.
 
-#### Configuring LDAP
+### Configuring LDAP
 
 We'll use the native Solaris `ldapclient` utility to configure the LDAP support in Solaris. The command you'll type in looks something like this (please _don't_ copy and paste this, as it contains generic/incorrect information that won't work!):
 
@@ -159,7 +159,7 @@ I think it's necessary at this point to restart the LDAP client service:
 
 Use the `svcs -a | grep ldap` command to verify the exact name of the LDAP client service on your Solaris server.
 
-#### Configuring PAM
+### Configuring PAM
 
 The `/etc/pam.conf` file controls the PAM (Pluggable Authentication Mechanism) configuration on Solaris. You'll need to edit the `/etc/pam.conf` file to look something like what's shown below. I've edited away all the non-essential sections, so only change the sections listed below.
 
@@ -182,7 +182,7 @@ other   account required        pam_ldap.so.1
 
 With this configuration in place, Solaris will use Kerberos authentication and will retrieve account information via LDAP.
 
-### Testing the Configuration
+## Testing the Configuration
 
 Once all of the configuration steps have been completed, you can test the configuration with the following commands:
 
@@ -194,7 +194,7 @@ If either of these tests are unsuccessful, review the log files on the Solaris s
 
 If the tests are successful, then you should now be able to authenticate on a Solaris server using your Active Directory username and password. I tested this using SSH and the X Desktop login.
 
-### How I Tested
+## How I Tested
 
 I tested this configuration using Solaris 10 x86 6/06 (the June 2006 release) running as a VM under VMware ESX Server 3.0.0. Authentication was performed against a pair of virtual servers (one hosted on ESX 3.0.0, the other on ESX 2.5.3) running Windows Server 2003 R2, Standard Edition.
 

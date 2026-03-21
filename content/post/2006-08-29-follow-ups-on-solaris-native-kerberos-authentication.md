@@ -25,7 +25,7 @@ If you haven't read the previous articles, take a quick moment to review them be
 
 Initially, problems cropped up with both of these, but it seems as if the problems have been resolved.
 
-### Solaris 10 and Active Directory Integration
+## Solaris 10 and Active Directory Integration
 
 The problem, as outlined in the original article, was that TGT validation wasn't working. The only way to make Kerberos authentication (via `pam_krb5`) to work was to disable TGT validation.
 
@@ -39,7 +39,7 @@ Since that time, I have re-enabled TGT validation, and everything seems to work 
 
 On the line where the server's IP address is listed, make sure that the fully qualified domain name is listed first. I can't be absolutely sure that this is the fix, but this is the only thing I can think of that I did on both Linux and Solaris. I hope to perform some testing later this week and I'll post the results here.
 
-### Native Kerberos Authentication
+## Native Kerberos Authentication
 
 The problem here was again the Solaris server---or so it seemed. I had (and currently have) it working with a [CentOS][2] server; I can obtain a Kerberos ticket and then transparently authenticate to the CentOS server without getting prompted for a password. With the Solaris server, though, I kept getting a "Server not found in Kerberos database" when attempting to connect. It wasn't until today that I realized that the key difference between the Linux installation and the Solaris installation was that the Solaris server was in a different DNS domain. Since my PowerBook didn't have the equivalent of an `/etc/krb5.conf` to match DNS domain names with Kerberos realms, it was trying to obtain a ticket for a realm that does not exist. More appropriately, it was contacting a Kerberos realm that did not have a matching entry with the right SPN, hence the "Server not found in Kerberos database" error.
 

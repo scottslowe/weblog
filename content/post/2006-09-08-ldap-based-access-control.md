@@ -21,7 +21,7 @@ First off, let's set some expectations. First, I performed this testing using [C
 
 OK, now you're ready to get rolling. Note: If you've configured your SSH server for native Kerberos authentication, the changes we're going to make below are going to break that. Sorry, I couldn't find any way around that.
 
-### Configure OpenSSH
+## Configure OpenSSH
 
 Edit your `/etc/ssh/sshd_config` file and make sure that the following line is present:
 
@@ -31,7 +31,7 @@ UsePAM yes
 
 (This is the piece that breaks native Kerberos authentication, by the way.) SSHd will need to re-read the configuration after making this change in order for the change to take effect; restarting sshd is an easy way to do that.
 
-### Configure PAM
+## Configure PAM
 
 Because PAM configurations vary from client to client, I can't give you the exact configuration and placement that you need. The CentOS configuration, which would be virtually identical to Red Hat/Fedora, is described below. Please be sure to adjust as needed for your particular Linux distribution (or flavor of Unix).
 
@@ -43,7 +43,7 @@ account   sufficient   /lib/security/$ISA/pam_ldap.so
 
 You should be able to leave the rest of the file intact.
 
-### Configure LDAP
+## Configure LDAP
 
 (Just as quick aside, you should be aware by now that modifying `ldap.conf` really only affects the `pam_ldap` and `nss_ldap` modules, not OpenLDAP itself. OpenLDAP is typically configured elsewhere.)
 
@@ -58,11 +58,11 @@ These lines may already be present, and you may only have to uncomment them and 
 
 If the group name includes spaces, enclose the entire DN in double quotes (i.e, `pam_groupdn "cn=Group Name,cn=Users,dc=example,dc=net"`).
 
-### Configure Active Directory
+## Configure Active Directory
 
 This part should be obvious, but be sure to create the appropriate group (making sure that the DN of the group matches what you specified in `/etc/ldap.conf` on the Linux/Unix server). Add user accounts that should be allowed access to the Linux/Unix host in question to this group (you may find it necessary or desirable to create multiple groups so that you can have fine-grained control over which hosts may be accessed by which users). The testing I performed indicated that the group did not need to be Unix-enabled in AD; your mileage may vary.
 
-### Verify and Test
+## Verify and Test
 
 To verify and test the configuration, add a user account to the appropriate group and then try to login to the Linux/Unix server via SSH. Everything should work just fine. Take the user out of the group and try again; the login should fail.
 

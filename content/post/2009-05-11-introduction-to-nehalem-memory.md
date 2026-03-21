@@ -54,31 +54,31 @@ Here is link to an _awesome_ [IBM white paper](ftp://ftp.software.ibm.com/common
 
 Here's an example 12 DIMM slot Nehalem configuration:
 
-| CPU (Speed) | Max Mem Speed | Bank 1 Populated | Bank 2 Populated |
-|-----------------|-----------|-----------|-----------|
-| X5570 (2.93GHz) | 1333 MHz  | 1333 MHz  | 1066 MHz* |
-| X5560 (2.80GHz) | 1333 MHz  | 1333 MHz  | 1066 MHz* |
-| X5550 (2.66GHz) | 1333 MHz  | 1333 MHz  | 1066 MHz* |
-| E5540 (2.53GHz) | 1066 MHz  | 1066 MHz  | 1066 MHz  |
-| E5530 (2.40GHz) | 1066 MHz  | 1066 MHz  | 1066 MHz  |
-| E5520 (2.26GHz) | 1066 MHz  | 1066 MHz  | 1066 MHz  |
-| E5506 (2.13GHz) | 800 MHz   | 800 MHz   | 800 MHz   |
-| E5504 (2.00GHz) | 800 MHz   | 800 MHz   | 800 MHz   |
-| E5502 (1.66GHz) | 800 MHz   | 800 MHz   | 800 MHz   |
+| CPU (Speed)     | Max Mem Speed | Bank 1 Populated | Bank 2 Populated |
+|-----------------|---------------|------------------|------------------|
+| X5570 (2.93GHz) | 1333 MHz      | 1333 MHz         | 1066 MHz*        |
+| X5560 (2.80GHz) | 1333 MHz      | 1333 MHz         | 1066 MHz*        |
+| X5550 (2.66GHz) | 1333 MHz      | 1333 MHz         | 1066 MHz*        |
+| E5540 (2.53GHz) | 1066 MHz      | 1066 MHz         | 1066 MHz         |
+| E5530 (2.40GHz) | 1066 MHz      | 1066 MHz         | 1066 MHz         |
+| E5520 (2.26GHz) | 1066 MHz      | 1066 MHz         | 1066 MHz         |
+| E5506 (2.13GHz) | 800 MHz       | 800 MHz          | 800 MHz          |
+| E5504 (2.00GHz) | 800 MHz       | 800 MHz          | 800 MHz          |
+| E5502 (1.66GHz) | 800 MHz       | 800 MHz          | 800 MHz          |
 
 Here's an example 18 DIMM slot Nehalem configuration:
 
-| CPU (Speed) | Max Mem Speed | Bank 1 Populated | Bank 2 Populated |
-|-----------------|-----------|-----------|-----------|
-| X5570 (2.93GHz) | 1333 MHz  | 1066 MHz* | 800 MHz   |
-| X5560 (2.80GHz) | 1333 MHz  | 1066 MHz* | 800 MHz   |
-| X5550 (2.66GHz) | 1333 MHz  | 1066 MHz* | 800 MHz   |
-| E5540 (2.53GHz) | 1066 MHz  | 1066 MHz  | 800 MHz   |
-| E5530 (2.40GHz) | 1066 MHz  | 1066 MHz  | 800 MHz   |
-| E5520 (2.26GHz) | 1066 MHz  | 1066 MHz  | 800 MHz   |
-| E5506 (2.13GHz) | 800 MHz   | 800 MHz   | 800 MHz   |
-| E5504 (2.00GHz) | 800 MHz   | 800 MHz   | 800 MHz   |
-| E5502 (1.66GHz) | 800 MHz   | 800 MHz   | 800 MHz   |
+| CPU (Speed)     | Max Mem Speed | Bank 1 Populated | Bank 2 Populated |
+|-----------------|---------------|------------------|------------------|
+| X5570 (2.93GHz) | 1333 MHz      | 1066 MHz*        | 800 MHz          |
+| X5560 (2.80GHz) | 1333 MHz      | 1066 MHz*        | 800 MHz          |
+| X5550 (2.66GHz) | 1333 MHz      | 1066 MHz*        | 800 MHz          |
+| E5540 (2.53GHz) | 1066 MHz      | 1066 MHz         | 800 MHz          |
+| E5530 (2.40GHz) | 1066 MHz      | 1066 MHz         | 800 MHz          |
+| E5520 (2.26GHz) | 1066 MHz      | 1066 MHz         | 800 MHz          |
+| E5506 (2.13GHz) | 800 MHz       | 800 MHz          | 800 MHz          |
+| E5504 (2.00GHz) | 800 MHz       | 800 MHz          | 800 MHz          |
+| E5502 (1.66GHz) | 800 MHz       | 800 MHz          | 800 MHz          |
 
 \* According to the HP Quick Spec for the BL460 G6, they are able to keep the speed at 1333 MHz with 2 DIMMS. A BIOS update is required to achieve this. This is HP specific.
 

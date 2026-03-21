@@ -302,5 +302,8 @@
   },
   // MD056/table-column-count : Table column count
   // Rule details : https://github.com/DavidAnson/markdownlint/blob/v0.33.0/doc/md056.md
-  "table-column-count": true
+  "table-column-count": true,
+  // MD059/descriptive-link-text: Link text should be descriptive
+  // Rule details: https://github.com/DavidAnson/markdownlint/blob/main/doc/md059.md
+  "descriptive-link-text": false,
 }

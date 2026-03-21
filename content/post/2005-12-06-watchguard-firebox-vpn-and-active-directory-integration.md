@@ -19,7 +19,7 @@ A short while back, I posted an article on [Cisco PIX VPN and Active Directory i
 
 As with the PIX-AD integration document, this article assumes that you have some basic knowledge of how to work with the WatchGuard Firebox series of firewalls. This article was written using version 6.2 of the WatchGuard Firebox System software and Windows Server 2003; other versions of either the firewall software or Windows should be similar.
 
-### Configuring the Firebox
+## Configuring the Firebox
 
 First, we'll need to setup the Firebox. Use the Firebox software (Policy Manager, specifically) to perform the following configuration tasks:
 
@@ -31,7 +31,7 @@ First, we'll need to setup the Firebox. Use the Firebox software (Policy Manager
 
 Once this is done, proceed with configuring PPTP-based remote user VPNs as usual. Be sure to add a rule allowing traffic to/from the pptp_users group; otherwise, VPN users will be subject to the same traffic restrictions as Internet users.
 
-### Configuring Internet Authentication Service
+## Configuring Internet Authentication Service
 
 Before doing anything else, create a new global security group in Active Directory. Call it "pptp_users", just like the name of the group on the Firebox. This is an important part of the glue that will bind the Firebox together with Active Directory.
 

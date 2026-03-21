@@ -33,7 +33,7 @@ All in all, the CentOS Atomic Host variant felt _unfinished_. It felt as if, per
 
 I'm sure that the RHEL/CentOS Atomic Host variants will get better over time, but for now I'm sticking with CoreOS.
 
-### Update
+## Update
 
 Since publishing this post, I've had the opportunity to speak with someone from Red Hat to get some additional information, and I wanted to share that here:
 

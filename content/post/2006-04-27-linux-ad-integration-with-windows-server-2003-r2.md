@@ -25,19 +25,19 @@ The integration of (what was formerly called) Services for UNIX into [Windows Se
 
 Overall, the instructions are very similar to the instructions for pre-R2 versions of Windows.
 
-### Preparing Active Directory (One-Time)
+## Preparing Active Directory (One-Time)
 
 Based on what I've seen so far, it appears as if a partial RFC 2307-compliant schema is included by default with Windows Server 2003 R2. This means that it is no longer necessary to extend the schema to include attributes such as uid, gid, login shell, etc. However, while the schema does appear to be present by default, you must install the "Server for NIS" component on at least one domain controller in order to be able to actually set those attributes (and it will be necessary to set the attributes before logins from Linux will work).
 
 You'll also need to create an account in Active Directory that will be used to bind to Active Directory for LDAP queries. This account does _not_ need any special privileges; in fact, making the account a member of Domain Guests and _not_ a member of Domain Users is perfectly fine.
 
-### Preparing Active Directory (Each User)
+## Preparing Active Directory (Each User)
 
 Each Active Directory account that will authenticate via Linux must be configured with a UID and other UNIX attributes. This is accomplished via the new "UNIX Attributes" tab on the properties dialog box of a user account. Installing the "Server for NIS" component enables this, as mentioned previously.
 
 After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Linux server that will enable the authentication.
 
-### Preparing Active Directory (Each Server)
+## Preparing Active Directory (Each Server)
 
 For each Linux-based server that will be authenticating against Active Directory, follow the steps below.
 
@@ -55,7 +55,7 @@ Of course, you'll need to substitute the appropriate values for "fqdn" (the full
 
 If you need to rebuild the Linux server for whatever reason, you'll need to delete the computer account you created and repeat this process.
 
-### Preparing Each Linux Server
+## Preparing Each Linux Server
 
 Follow the steps below to configure the Linux server for authentication against Active Directory.
 

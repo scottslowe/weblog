@@ -24,7 +24,7 @@ There are several articles posted here that discuss, in general terms, how to au
 
 Over the last week or so, I've been having to rebuild one Linux server a number of times in an effort to fix a separate problem (see this article on [NTPd problems with CentOS 4.1][4] and the [recurrence of the problem][5] with CentOS 4.2). As a result, I've had to go through the process of configuring this Linux server (and preparing Active Directory) for authentication several times, and I found that I kept having to go back to my scattered and dispersed notes to remember what had to be done. In the hopes of correcting that, I am collecting all the pertinent information I have here in this article.
 
-### Preparing Active Directory (One-Time)
+## Preparing Active Directory (One-Time)
 
 There is a one-time preparation of Active Directory that is required. In order to authenticate Linux logins against Active Directory, Active Directory's schema must be extended to include Linux-specific attributes such as home directory, UID, GID, and default shell. There are a couple of different ways to do this; I chose to use Microsoft's Services for Unix (SFU) to extend the schema. There are two reasons I chose SFU: 1) it's free; and 2) the SFU schema is being included by default in Windows Server 2003 R2.
 
@@ -34,7 +34,7 @@ You'll also need to create an account in Active Directory that will be used to b
 
 After all the user accounts have been configured, then we are ready to perform the additional tasks within Active Directory and on the Linux server that will enable the authentication.
 
-### Preparing Active Directory (Each Server)
+## Preparing Active Directory (Each Server)
 
 For each server that will be authenticating against Active Directory, follow the steps below.
 
@@ -52,7 +52,7 @@ Of course, you'll need to substitute the appropriate values for "fqdn" (the full
 
 If you need to rebuild the Linux server for whatever reason, you'll need to delete the computer account you created and repeat this process.
 
-### Preparing the Linux Server
+## Preparing the Linux Server
 
 Follow the steps below to configure the Linux server for authentication against Active Directory.
 

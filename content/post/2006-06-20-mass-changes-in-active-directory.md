@@ -19,7 +19,7 @@ I needed to create this process for a project I was working on. In this project,
 
 After a fair amount of trial and error, I finally found this solution. Hopefully, it will prove useful to someone.
 
-### Exporting the Data from Active Directory
+## Exporting the Data from Active Directory
 
 First, we need to get some raw data to work with. In this scenario, we're going to set the UPN for a group of user accounts in the same OU to match their primary e-mail address.
 
@@ -35,7 +35,7 @@ Be sure to type this command all on a single line, not wrapped as it is displaye
 
 Now we have the raw data we need, so we move on to the next step.
 
-### Manipulating the Data
+## Manipulating the Data
 
 The problem we face is that we can only use `csvde` to add new objects, not to modify existing objects. That's not what we need, so we need to convert the CSV data we have into something else. I experimented with a number of CSV-to-LDIF converters, especially [this one from Novell](http://www.novell.com/coolsolutions/tools/13658.html), but couldn't get them to work correctly. Finally, I found [Log Parser](http://www.microsoft.com/technet/scriptcenter/tools/logparser/default.mspx).
 
@@ -80,7 +80,7 @@ userPrincipalName: Bob.Smith@atlanta.example.net
 
 The dash is important, by the way. Refer to [this Microsoft article](http://www.microsoft.com/technet/prodtechnol/windows2000serv/technologies/activedirectory/howto/bulkstep.mspx) for more information and examples on using `ldifde` to modify Active Directory.
 
-### Importing the Data Back Into Active Directory
+## Importing the Data Back Into Active Directory
 
 Now, with our freshly created `output.ldf` file ready, we can import the data back into Active Directory to make the desired changes:
 

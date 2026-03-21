@@ -26,6 +26,6 @@ I did run into a few technical inaccuracies, but these are minor in scope and do
 
 Technically, the iSCSI VMkernel device can be on _any_ vSwitch; the requirement is that there is Service Console connectivity to the iSCSI target. This connectivity could be direct (on the same subnet) or routed. While following the author's guidance and placing a Service Console port group on the same vSwitch and same IP network as the iSCSI VMkernel device will most certainly work, it's not _required._ It's a very minor inaccuracy, as I said earlier, and does not substantially or materially change the validity of the material.
 
-#### Summary
+## Summary
 
 Overall, I found the book to be good reference material. Haletky covers a broad range of topics, from installation to storage and networking to disaster recovery. Anyone needing reference material for such a wide range of topics could do far worse than choosing this book.

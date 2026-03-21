@@ -16,7 +16,7 @@ In the original article on [how to make mass changes to Active Directory][1], we
 
 For ease of reference, I've arranged this article in the same way as the original article was arranged, and new information is included in each pertinent section.
 
-### Exporting the Data from Active Directory
+## Exporting the Data from Active Directory
 
 The use of `csvde` to export data out of Active Directory is great---except when the object name includes a comma in the name. Here's why.
 
@@ -52,13 +52,13 @@ To work around this problem, use [AdFind](http://www.joeware.net/win/free/tools/
 
 (A change made to the original article also notes that we can leave the "header line" intact in the output, so that Log Parser has field names to attach to the data in the output.)
 
-### Manipulating the Data
+## Manipulating the Data
 
 As noted in the changes to the original article, if we leave the "header line" from the exported output in the file, then we don't have to use generic field names in the template; instead, we can use friendly names such as "dn" or "sAMAccountName".
 
 Also, the command line for Log Parser was updated to show the correct input type (`-i:CSV` instead of `-i:TEXTLINE`). In addition, note the extra `-q:ON` and `-stats:OFF` switches, to reduce the extra output from Log Parser and remove the need to edit the file manually before importing it back into Active Directory.
 
-### Importing the Data Back Into Active Directory
+## Importing the Data Back Into Active Directory
 
 There are no major changes in this section. Only note that in multi-domain environments, it may be necessary to specify a specific domain controller (using the "-s" switch) and provide alternate credentials (using the "-b" switch).
 

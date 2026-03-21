@@ -14,17 +14,17 @@ url: /2016/08/25/meet-me-at-vmworld-2016/
 
 In years past, I published my schedule so that others could see what sessions I was attending, find times we could meet, etc. Now that I'm a VMware employee, registering for sessions is not permitted (customers first, as it should be!). However, it may still be helpful to show my schedule, so I'm listing it below. You can also [view a read-only version of my calendar here][link-1].
 
-### Saturday, August 27, 2016
+## Saturday, August 27, 2016
 
 _6:00 pm to sometime_ - vBeers at Ri Ra Irish Pub
 
-### Sunday, August 28, 2016
+## Sunday, August 28, 2016
 
 _1:30 pm to 3:15 pm_ - VMworld TAM Day Ask the Experts  
 _5:00 pm to 7:30 pm_ - Welcome reception in the Solutions Exchange  
 _7:30 pm to sometime_ - VMUG member party
 
-### Monday, August 29, 2016
+## Monday, August 29, 2016
 
 _7:45 am_ - Prayer time (see [here][xref-1])  
 _9:00 am to 10:30 am_ - General session  
@@ -33,7 +33,7 @@ _2:00 pm to 3:00 pm_ - Spotlight session with my manager, Guido Appenzeller (goo
 _3:00 pm to 4:00 pm_ - Meet the Experts (MTE) session in VMvillage  
 _7:00 pm to sometime_ - #CXIParty
 
-### Tuesday, August 30, 2016
+## Tuesday, August 30, 2016
 
 _7:45 am_ - Prayer time (see [here][xref-1])  
 _9:00 am to 10:30 am_ - General session  
@@ -44,14 +44,14 @@ _4:30 pm to 6:00 pm_ - Hall Crawl in the Solutions Exchange
 _7:00 pm to sometime_ - vExpert party  
 _8:00 pm to sometime_ - Veeam party
 
-### Wednesday, August 31, 2016
+## Wednesday, August 31, 2016
 
 _7:45 am_ - Prayer time (see [here][xref-1])  
 _9:00 am to 10:00 am_ - Customer meeting  
 _10:00 am to 11:00 am_ - Meet the Experts (MTE) session in VMvillage  
 _12:00 pm (noon) to 1:00 pm_ - Meet the Experts (MTE) session in VMvillage
 
-### Thursday, August 1, 2016
+## Thursday, August 1, 2016
 
 _7:45 am_ - Prayer time (see [here][xref-1])  
 _9:00 am to 10:00 am_ - Closing general session  
