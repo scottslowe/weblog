@@ -23,8 +23,8 @@
   <meta property="og:title" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
   <meta property="twitter:title" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/public/img/cards/site.png">
-  <meta property="twitter:image" content="/public/img/cards/site.png">
+  <meta property="og:image" content="{{ .Site.BaseURL }}/public/img/cards/site.png">
+  <meta property="twitter:image" content="{{ .Site.BaseURL }}/public/img/cards/site.png">
   {{ else }}
   <!-- <meta property="og:description" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"> -->
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
@@ -32,8 +32,8 @@
   <meta property="og:title" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
   <meta property="twitter:title" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="/public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png">
-  <meta property="twitter:image" content="/public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png">
+  <meta property="og:image" content="{{ .Site.BaseURL }}/public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png">
+  <meta property="twitter:image" content="{{ .Site.BaseURL }}/public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png">
   {{ end }}
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="twitter:url" content="{{ .Permalink }}">
