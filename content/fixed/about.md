@@ -5,6 +5,7 @@ url: /about/
 sidebar: true
 weight: "1"
 type: fixed
+layout: special
 ---
 
 ![Picture of Scott Lowe](/public/img/color-headshot-2019.jpg)
