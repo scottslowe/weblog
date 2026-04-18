@@ -20,7 +20,7 @@ title: 'Technology Short Take 188'
 url: /2025/09/19/technology-short-take-188/
 ---
 
-Welcome to Technology Short Take #188! I'm back once again with a small collection of articles and links related to a variety of data center-related technologies. I hope you find something useful!
+Welcome to Technology Short Take #188! I'm back once again with a small collection of articles and links related to a variety of data center-related technologies. I hope you find something useful!<!--more-->
 
 ## Networking
 
