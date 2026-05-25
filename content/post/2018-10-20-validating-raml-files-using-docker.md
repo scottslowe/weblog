@@ -17,12 +17,12 @@ Since I was (am) using [Visual Studio Code][link-2] as my primary text editor/de
 
 After a bit more research, I found that there was a `raml-cli` NPM package that one could use to validate RAML files from the command line. I was a bit leery of installing an NPM package on my system, so I thought, "Why not use a Docker container for this?" It will keep my system clean of excess/unnecessary packages and dependencies, and it will provide some practice with building Docker containers.
 
-A bit of work later I had this `Dockerfile` (which you can find in [my "dockerfiles" GitHub repository][link-3]):
+A bit of work later I had this `Dockerfile` (which you can find in [my "dockerfiles" GitHub repository][link-3], last updated May 2026):
 
 ```docker
-FROM node:6.14.3-alpine
+FROM node:26-alpine
 
-LABEL maintainer "Scott Lowe <scott.lowe@scottlowe.org>"
+LABEL maintainer="Scott Lowe <scott.lowe@scottlowe.org>"
 
 RUN apk add --no-cache git && \
     rm -rf /var/cache/apk/*
@@ -39,21 +39,21 @@ ENTRYPOINT ["raml"]
 CMD ["--help"]
 ```
 
-Feeding this to `docker build` results in an image of about 196MB in size, which isn't too shabby (I'd like to continue to try to shave this down even further). With this image, I can now easily validate RAML files:
+Feeding this to `docker build` results in an image of about 430MB in size, which isn't too awful (I would like to continue to try to reduce the size). With this image, I can now validate RAML files:
 
 ```sh
-docker run --rm -v $(pwd):/data raml-cli:0.1 validate orders-api.raml
+docker run --rm -v $(pwd):/data raml-cli:0.3 validate orders-api.raml
 ```
 
-And, of course, I could make this even easier with a Bash alias:
+I can make this even easier with a Bash alias:
 
 ```sh
-alias raml-cli="docker run --rm -v $(pwd):/data raml-cli:0.1"
+alias raml-cli="docker run --rm -v $(pwd):/data raml-cli:0.3"
 ```
 
-Using the alias means I can now simply run `raml-cli validate <filename.raml>`. This makes it very easy for me to validate the RAML specifications I'm writing.
+Using the alias means I can run `raml-cli validate <filename.raml>`. This command is not complex, removing any barriers to validate the RAML specifications I am writing.
 
-In the event others may find this helpful, the `Dockerfile` is on GitHub in [my "dockerfiles" repository][link-3], and I've [pushed the Docker image to Docker Hub][link-5] for anyone to pull down.
+In the event others may find this helpful, the `Dockerfile` is on GitHub in [my "dockerfiles" repository][link-3], and I have [pushed the Docker image to Docker Hub][link-5] for anyone to pull down.
 
 [link-1]: https://www.docker.com/
 [link-2]: https://code.visualstudio.com/
