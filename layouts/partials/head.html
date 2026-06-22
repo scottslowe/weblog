@@ -1,63 +1,113 @@
 <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link href="http://gmpg.org/xfn/11" rel="profile" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <!-- Enable responsiveness on mobile devices-->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
 
-  <title>
-    {{- if eq .Permalink "/" -}}
-      {{- .Site.Params.Title }} - {{ .Site.Params.Tagline -}}
+    <title>
+        {{- if eq .Permalink "/" -}} {{- .Site.Params.Title }} - {{
+        .Site.Params.Tagline -}} {{ else }} {{- .Title }} - {{
+        .Site.Params.Title }} - {{ .Site.Params.Tagline -}} {{- end -}}
+    </title>
+
+    <!--Metadata-->
+    {{ with .Site.Params.Author }}
+    <meta name="author" content="{{ . }}" />
+    {{ end }} {{ with .Site.Title }}
+    <meta property="og:site_name" content="{{ . }}" />
+    {{ end }} {{ if not .IsPage }}
+    <!-- <meta property="og:description" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"> -->
+    <meta property="og:description" content="{{ .Site.Params.Description }}" />
+    <meta
+        property="twitter:description"
+        content="{{ .Site.Params.Description }}"
+    />
+    <meta
+        property="og:title"
+        content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"
+    />
+    <meta
+        property="twitter:title"
+        content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+        property="og:image"
+        content="{{ .Site.BaseURL }}public/img/cards/site.png"
+    />
+    <meta
+        property="twitter:image"
+        content="{{ .Site.BaseURL }}public/img/cards/site.png"
+    />
     {{ else }}
-      {{- .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline -}}
-    {{- end -}}
-  </title>
+    <!-- <meta property="og:description" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"> -->
+    <meta
+        property="og:description"
+        content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
+    />
+    <meta
+        property="twitter:description"
+        content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
+    />
+    <meta
+        property="og:title"
+        content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"
+    />
+    <meta
+        property="twitter:title"
+        content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+        property="og:image"
+        content="{{ .Site.BaseURL }}public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png"
+    />
+    <meta
+        property="twitter:image"
+        content="{{ .Site.BaseURL }}public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png"
+    />
+    {{ end }}
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="twitter:url" content="{{ .Permalink }}" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="blog.scottlowe.org" />
+    <meta
+        name="keywords"
+        content="Cloud, Containers, Go, IaC, Kubernetes, K8s, Docker, CNI, CRI-O, OCI, Linux, CLI, Networking, AWS, Security, DevOps, Cilium"
+    />
 
-  <!--Metadata-->
-  {{ with .Site.Params.Author }}<meta name="author" content="{{ . }}">{{ end }}
-  {{ with .Site.Title }}<meta property="og:site_name" content="{{ . }}">{{ end }}
-  {{ if not .IsPage }}
-  <!-- <meta property="og:description" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"> -->
-  <meta property="og:description" content="{{ .Site.Params.Description }}">
-  <meta property="twitter:description" content="{{ .Site.Params.Description }}">
-  <meta property="og:title" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
-  <meta property="twitter:title" content="{{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ .Site.BaseURL }}/public/img/cards/site.png">
-  <meta property="twitter:image" content="{{ .Site.BaseURL }}/public/img/cards/site.png">
-  {{ else }}
-  <!-- <meta property="og:description" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}"> -->
-  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  <meta property="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  <meta property="og:title" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
-  <meta property="twitter:title" content="{{ .Title }} - {{ .Site.Params.Title }} - {{ .Site.Params.Tagline }}">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="{{ .Site.BaseURL }}/public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png">
-  <meta property="twitter:image" content="{{ .Site.BaseURL }}/public/img/cards/{{ with .File }}{{ .BaseFileName -}}{{ end }}.png">
-  {{ end }}
-  <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="twitter:url" content="{{ .Permalink }}">
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="blog.scottlowe.org">
-  <meta name="keywords" content="Cloud, Containers, Go, IaC, Kubernetes, K8s, Docker, CNI, CRI-O, OCI, Linux, CLI, Networking, AWS, Security, DevOps, Cilium">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/poole.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+    <link rel="stylesheet" href="/css/lanyon.css" />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400"
+    />
+    <link
+        rel="stylesheet"
+        href="/public/font-awesome/css/font-awesome.min.css"
+    />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/poole.css">
-  <link rel="stylesheet" href="/css/syntax.css">
-  <link rel="stylesheet" href="/css/lanyon.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
-  <link rel="stylesheet" href="/public/font-awesome/css/font-awesome.min.css">
+    <!--Canonical URL-->
+    <link rel="canonical" href="{{ .Permalink }}" />
 
-  <!--Canonical URL-->
-  <link rel="canonical" href="{{ .Permalink }}">
+    <!-- Icons -->
+    <link
+        rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/assets/apple-touch-icon-144-precomposed.png"
+    />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/assets/favicon.ico">
-
-  <!-- RSS -->
-  {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="alternate" type="%s" href="%s" title="%s" />` .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ printf `<link rel="feed" type="%s" href="%s" title="%s" />` .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end -}}
+    <!-- RSS -->
+    {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="alternate" type="%s" href="%s" title="%s" />
+    ` .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ printf `
+    <link rel="feed" type="%s" href="%s" title="%s" />
+    ` .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
 </head>
